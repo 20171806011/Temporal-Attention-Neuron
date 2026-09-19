@@ -1,0 +1,78 @@
+## G1-Design v2.5: REQUEST CHANGES — approval withheld
+
+I reviewed the complete governing file, its changes from v2.4, and the previous determination. The SHA-256 matches exactly:
+
+```text
+1EC92E735FB63177B4297489767DA1CBA4FFAE531436AC13219980164C671DA9
+```
+
+The substantive v2.4 amendments are largely resolved. However, **two newly added contracts still require correction before unconditional design approval**. These concern spike indexing and the leakage-test observation—not the accepted scientific hypotheses or negative-result design.
+
+### Accepted amendments
+
+- **Evaluation counts and seeds:** The 4,000 unique evaluation histories, reuse across models/delays, and evaluation seeds are now explicit. [§3.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:75)
+- **Condition-specific decisions:** The per-cell M1 floors, `FLOOR_LIMITED_COMPARISON`, prohibition on cross-cell authorization, and prohibition on naive delay pooling address the principal inferential requirements. The population-versus-finite-sample qualification is also retained. [§7.3–7.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:178)
+- **Failure classifications:** Separating the stochastic null alert from deterministic oracle correctness, and analytical codec checks from actual-spike conformance, is appropriate. [§8.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:274)
+- **Reference mathematics:** Independent calculation reproduces \(V'_2=-0.130767497954685\), the Euler benchmark, and all four Newcombe reference intervals within \(2.3\times10^{-10}\). The collision query and executable legal-value assertion are now registered. These checks validate the specification’s reference mathematics, not a G1 implementation. [§8.1–8.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:221)
+
+### 1. The spike-input contract has an outcome-relevant off-by-one conflict
+
+[§5.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:124) supplies \(s_1,\ldots,s_{100}\) to the decoders but identifies **step 101** as the excluded 10 ms endpoint.
+
+Under the registered recurrence and end-of-step timestamp convention,
+
+\[
+t(s_k)=T_{\mathrm{cue}}+kh.
+\]
+
+Therefore:
+
+- \(s_{99}\) is timestamped at **9.9 ms**: eligible.
+- \(s_{100}\) is timestamped at **10.0 ms**: excluded.
+- Step 101 would be at **10.1 ms**, outside the 100-step cue simulation.
+
+This conflicts with §3.1, §8.3, and the step numbering used by the refractory fixture.
+
+It can change results. For a legal zero-membrane encoding obtained with \(V_i=-K_i\), choose \(q=1.58\). Independent evaluation gives
+
+\[
+u_{99}=0.9958271725<1,\qquad
+u_{\mathrm{cand},99}=1.0016689008>1.
+\]
+
+The first spike occurs at step 100, exactly on the excluded deadline. The correct window observation is **silence/abstention**; including all 100 raw bits instead produces count 1.
+
+**Required correction:** retain the 100 raw integration outputs if desired, but explicitly define decoder eligibility by the registered timestamp rule. With this indexing, only \(s_1,\ldots,s_{99}\) can contribute; \(s_{100}\) must be excluded from both count and latency decoding. Update G1.6b consistently.
+
+A related numerical-label correction belongs in [§8.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:241): the refractory state is \(r_{99}=0.2\) ms **before** the final update and \(r_{100}=0.1\) ms **after** it. The required \(u_{\mathrm{readout}}=0\) conclusion remains correct.
+
+### 2. G1.3a’s sampling row does not define the joint observation its null requires
+
+The [sampling table](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md:83) specifies **“1 (Fixed query)”** and 1,000 queries for each leakage test. But \(167/288\) and \(62/243\) are the registered **joint two-role delivery probabilities** for the fixed-order, distinct-candidate control.
+
+For comparison, under the frozen uniformly selected-target generator, the corresponding single-role probability for \(N=3\) is
+
+\[
+\frac13+\frac23P(|V_i-V_j|<0.5)
+=\frac13+\frac23\frac{23}{144}
+=\frac{95}{216}\approx0.439815,
+\]
+
+not \(62/243\approx0.255144\). The frozen control distinguishes its two output channels explicitly. [Control implementation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/models.py:123)
+
+**Required correction:** specify that every leakage-test history retains the randomly selected distinct targets A/B, obtains both fixed-order control predictions, and contributes **one joint-success Bernoulli observation**. The Wilson denominator remains 1,000 independent histories—not 2,000 independent probes.
+
+One control call returning both outputs is acceptable; if that is intended, label it as one **paired-output call**, rather than one query/probe. Otherwise, register two role predictions per history and 2,000 role predictions per \(N\).
+
+Also freeze the \(N=2/N=3\) allocation of the 1,000 oracle histories; its current row specifies only their combined total.
+
+### Small corrections to carry into the governing addendum
+
+- **Query totals:** The evaluation table implies **12,000 queries per \(N\), or 24,000 per model overall**. Across eight models, that is 96,000 paired model-episodes and 192,000 role probes. The cover note’s 12,000 queries per model conflates episodes with probes.
+- **Cell dependence:** Replace “6 independent cell-specific tables” with “6 separate cell-specific tables.” Histories are independent within each cell; delay cells sharing histories are not mutually independent.
+- **Statistical routine size:** Define general \(N=\sum n_{ij}\), with \(N=2{,}000\) for evaluation and \(N=100\) for the registered known-answer cases.
+- **Status continuity:** Restore `M1_CARRIER_INSUFFICIENT`, which was removed from §7.3 in this revision, alongside the retained comparison label.
+
+**Disposition: G1-Design v2.5 not approved; G1-Executable not run; full simulation remains blocked.**
+
+No project files were modified, and neither `models_p1b.py` nor a registered fixture suite was executed. A focused governing addendum can address these bounded issues without revising the accepted erasure bound, performance floors, decoder calibration, or statistical method.

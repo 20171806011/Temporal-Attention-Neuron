@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============ Base packages ============
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tcolorbox}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+
+% ============ Page setup ============
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\setlength{\headheight}{14pt}
+
+% ============ Colors ============
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{accentlight}{HTML}{2E86AB}
+
+% ============ Section styles ============
+\titleformat{\section}{\Large\bfseries\color{accent}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{accent!85!black}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% ============ Headers / footers ============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{accent!70!black}Temporal Attention Neuron (TAN)}
+\fancyhead[R]{\small\color{accent!70!black}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{accent!50!black}\leaders\hrule height \headrulewidth\hfill}}
+
+% ============ Paragraph spacing ============
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\linespread{1.15}
+
+% ============ Graphics path ============
+\graphicspath{{figures/}}
+
+% ============ Bibliography setup ============
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% ============ hyperref (load last) ============
+\usepackage[
+    colorlinks=true,
+    linkcolor=accent,
+    citecolor=accent!80!black,
+    urlcolor=accent,
+    bookmarks=true,
+    bookmarksnumbered=true,
+    unicode=true
+]{hyperref}
+
+\hypersetup{
+    pdftitle={The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention and Spiking Neural Dynamics},
+    pdfauthor={Li Zexu},
+    pdfsubject={Spiking Neural Networks, Temporal Attention, Predictive Coding},
+    pdfkeywords={Spiking Neural Networks, Temporal Attention, Predictive Coding, Surprise Gating, Habituation, Neuromorphic Computing}
+}
+
+% ============ Custom commands ============
+\newcommand{\surprise}{{S_t}}
+\newcommand{\history}{{\mathcal{X}_t}}
+\newcommand{\attention}{{\boldsymbol{\alpha}_t}}
+\newcommand{\activation}{{A_t}}
+\newcommand{\membrane}{{h_t}}
+\newcommand{\window}{{\mathcal{X}_t}}
+
+% ============ Theorem environments ============
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\begin{document}
+
+% ============ Title block ============
+\begin{center}
+    {\LARGE\bfseries\color{accent} The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention and Spiking Neural Dynamics\par}
+    \vspace{0.8em}
+    {\small Li Zexu\par}
+    \vspace{0.1em}
+    {\footnotesize University of Leeds, School of Physics and Astronomy\par}
+    \vspace{0.3em}
+    {\footnotesize July 2026\par}
+\end{center}
+\vspace{0.5em}
+\hrule height 0.4pt
+\vspace{0.8em}
+
+% ============ Abstract ============
+\input{sections/abstract}
+
+\vspace{0.8em}
+
+% ============ Sections ============
+\input{sections/introduction}
+\input{sections/related_work}
+\input{sections/model}
+\input{sections/experiments}
+\input{sections/analysis}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% ============ Bibliography ============
+\bibliography{reference}
+
+\end{document}

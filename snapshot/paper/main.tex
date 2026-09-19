@@ -1,0 +1,308 @@
+% ======================================================================
+% TAN-I: The Computational Boundary of Scalar Temporal Attention
+% A Mechanistic Analysis of the Temporal Attention Neuron
+% (independent mechanistic paper; built exclusively from the frozen
+% TAN-I research archive; no new experiments were performed)
+% ======================================================================
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{cleveref}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\usepackage[authoryear,round]{natbib}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{float}
+
+\graphicspath{{figures/}}
+\tolerance=2000
+\emergencystretch=2em
+\hfuzz=3pt
+
+\title{\bf The Computational Boundary of Scalar Temporal Attention:\\
+A Mechanistic Analysis of the Temporal Attention Neuron}
+
+\author{Li Zexu\\
+School of Physics and Astronomy, University of Leeds\\
+\textit{Correspondence: [correspondence email pending submission]}}
+
+\date{Final Revised Manuscript (September 2026)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{Background.} When attention-like temporal weighting is
+compressed into a single dynamical unit, its true computational
+capabilities---as opposed to its architectural resemblance to
+attention---remain unclear. \textbf{Methods.} We analyse the Temporal
+Attention Neuron (TAN), a scalar-input spiking neuron with a windowed,
+surprise-gated, Boltzmann-style temporal weighting kernel, using four
+frozen experimental programmes: a natural state-collision test of the
+Markovianity of its membrane potential (Phase 1); event-locked response
+geometry measured by effective rank, log-trace and spectra of pooled
+response covariances (Phase 2); a retrieval-cue temporal distractor task
+(Probe 1); and an identifiability audit of query-conditioned binding
+(Probe 2), with pre-registered gates, counterfactuals and calibration
+audits throughout. \textbf{Results.} TAN is history-dependent and its
+scalar membrane potential is not a sufficient state; surprise-gated
+attention reorganizes the event-locked local response geometry relative
+to uniform temporal integration, although the shared-coordinate geometry
+shows no TAN-specific advantage over LIF.  Probe 1 provides constrained,
+seed-attenuated evidence of target-relevant retrieval relative to the
+no-attention control.  Probe 2 fails every routing gate: with the frozen
+kernel the query enters attention as a common multiplicative surprise
+factor, so changing the query never changes which historical item is
+selected (counterfactual attention-argmax flip rate 0.000).
+\textbf{Conclusions.} Scalar temporal attention provides dynamic,
+surprise-conditioned saliency weighting, but not genuine
+query-conditioned content-addressable routing; temporal memory,
+attention-like weighting, routing and binding are distinct computational
+properties.
+\end{abstract}
+
+\noindent\textbf{Keywords:} temporal attention; spiking neuron;
+non-Markovian dynamics; state sufficiency; effective rank; mechanistic
+identifiability; routing; binding
+
+\input{sections/introduction}
+\input{sections/background}
+\input{sections/model}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/limitations}
+\input{sections/conclusion}
+
+% ---------------- figures ----------------
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.78\textwidth]{fig1_architecture.pdf}
+  \caption{The frozen TAN architecture and information flow.  The window
+  $\mathcal{X}_t$ of the last $W=5$ scalar inputs defines the local mean
+  $\mu_t$ and the rectified surprise $S_t$; logits
+  $E_{t,i}=\beta W_q W_k S_t x_i$ share the scalar multiplier $S_t$;
+  softmax weights $\alpha$ form the context $C_t$; the gate
+  $A_t=\tanh(S_t)C_t$ drives the membrane, with spike/\allowbreak{}reset readout.
+  Schematic; no data.}
+  \label{fig:architecture}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig2_state_sufficiency.pdf}
+  \caption{Phase 1, natural state collisions (frozen experiment figure
+  \texttt{fig22\_\allowbreak{}natural\_\allowbreak{}collision.pdf}, four panels).  (a) A
+  representative collision pair: membrane potentials meet within
+  $\delta=10^{-4}$ at $t=9$ and bifurcate at the identical probe $t=10$
+  (continuous branch); (b) history-conditional attention and gate at the
+  probe; (c) one-step divergence $K$ of all collision pairs on log--log
+  axes for B1--B4 (B1 lies exactly on the contraction line
+  $\Delta\tilde h_T = \lambda \Delta h_{T-1}$); (d) attention divergence
+  (Jensen--Shannon) vs.\ synaptic-current gap.  Full statistics in
+  Table~\ref{tab:phase1} and the archive report.}
+  \label{fig:phase1}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig3_geometry.pdf}
+  \caption{Phase 2, event-locked geometry of Full TAN in the full frame
+  $z_F$ (frozen experiment figure \texttt{fig24\_\allowbreak{}eventlocked.pdf}, four
+  panels): (a) event-locked surprise $S_t$ and gated current $A_t$; (b)
+  response effective rank $d_G(\tau)$ and velocity rank $d_D(\tau)$ with
+  quiet reference; (c) fluctuation scale
+  $\log\operatorname{Tr}\,C(\tau)$; (d) event ($\tau=0$) vs.\ quiet
+  eigenvalue spectrum.  Effective rank is a covariance statistic, not an
+  intrinsic dimension.}
+  \label{fig:geometry}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\textwidth]{fig4a_rank_recovery.pdf}
+    \caption{Expansion--recovery profiles $\Delta d_D(\tau)$ and
+    $\Delta\log\operatorname{Tr}(\tau)$ for B1--B4 and the input control
+    (frozen \texttt{fig25\_\allowbreak{}recovery.pdf}; frames: solid $z_C$, dashed
+    $z_F$, dotted $z_U$).}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.49\textwidth}
+    \includegraphics[width=\textwidth]{fig4b_spectra.pdf}
+    \caption{Quiet vs.\ event eigenvalue spectra for B4 and B3 in $z_F$
+    (frozen \texttt{fig26\_\allowbreak{}spectra.pdf}).  Event-locked expansion adds
+    and amplifies directions within the response covariance; see
+    Table~\ref{tab:phase2}.}
+  \end{subfigure}
+  \caption{Phase 2, model comparison in effective rank and scale.  B4
+  exceeds B3 in the matched full frame $z_F$ with disjoint event
+  confidence intervals and amplitude-control-robust contrasts; in the
+  shared frame $z_C$ B4 does not exceed B1.}
+  \label{fig:rank}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.92\textwidth]{fig5_probe1.pdf}
+  \caption{Probe 1 (frozen three-seed data; values from the amended
+  audit documents \texttt{audit\_\allowbreak{}v3\_\allowbreak{}amended/POOLED\_\allowbreak{}PROBE1\_\allowbreak{}V3.md} and
+  \texttt{audit\_\allowbreak{}v3\_\allowbreak{}amended/PER\_\allowbreak{}SEED\_\allowbreak{}AUDIT.md}): (a) pooled balanced
+  three-class accuracy, clean vs.\ distractor conditions, means over
+  three seeds; (b) per-seed distractor-condition accuracy (dots: seeds;
+  large dot: mean).  B2 is the strongest fixed-position memory baseline;
+  B4 exceeds B3 in the distractor condition (pooled $+0.0570$, 95\% CI
+  $[+0.0387,+0.0758]$) with seed-attenuated absolute elevation; B3 has
+  lo-blind cells (one invalid for interpretation).}
+  \label{fig:probe1}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.96\textwidth]{fig6_probe2.pdf}
+  \caption{Probe 2 identifiability audit (values from the frozen audit
+  documents \texttt{AUDIT\_\allowbreak{}REPORT.md} / \texttt{AUDIT\_\allowbreak{}OUTPUT.txt}):
+  (a) linear-readout shortcuts of B2 (0.779) and B3 (0.709) against the
+  0.58 red line; (b) B4 attention hit rate 0.511 (CI
+  $[0.481,0.542]$; split $q{=}A$: 0.000, $q{=}B$: 1.000) against the
+  0.50 requirement; (c) target/\allowbreak{}distractor contrast $R=0.034$ (required
+  $\geq 2$) and query-conditioned JSD $0.0002$ (permutation $p=0.92$).
+  Audit status: TERMINATED / AUDIT\_\allowbreak{}FAILED (identifiability boundary).}
+  \label{fig:probe2}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.82\textwidth]{fig7_mechanism.pdf}
+  \caption{Scalar-kernel mechanism: with $E_{t,i}=\gamma_t x_i$ the
+  query enters only through the common scalar $\gamma_t \propto S_t$, so
+  $\arg\max_i E_{t,i}=\arg\max_i x_i$: the query changes attention
+  sharpness, never the winner among history taps.  Schematic; no data.}
+  \label{fig:mechanism}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig8_summary.pdf}
+  \caption{Mechanistic decomposition established by the frozen
+  experiments: history dependence and surprise-conditioned weighting are
+  established; dynamic amplification is supported; query-conditioned
+  routing is structurally excluded by the scalar kernel; semantic
+  binding is not implemented.  Schematic; no data.}
+  \label{fig:summary}
+\end{figure}
+
+% ---------------- tables ----------------
+\begin{table}[t]
+  \centering
+  \caption{Frozen TAN parameters (Section~\ref{sec:model-def}).}
+  \input{tables/tab_params}
+  \label{tab:params}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Phase 1: one-step continuous-branch amplification $K$ on
+  natural collision pairs (1{,}500 per model).  B1 is exactly
+  contracting ($K=\lambda=0.5$, max deviation $1.8\times10^{-8}$);
+  post-reset Markov violation rate is 0\%, 0.6\%, 33.1\%, 32.2\% for
+  B1--B4.  Source: \texttt{natural\_\allowbreak{}collision\_\allowbreak{}summary.csv} (frozen).}
+  \input{tables/tab_phase1}
+  \label{tab:phase1}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Phase 2: event velocity effective rank $d_D$ (mean over
+  $\tau\in\{0,1,2\}$, 374 pooled events), raw/\allowbreak{}stratified/\allowbreak{}residualised
+  amplitude controls, event log-trace, and recovery times.  Sources:
+  \texttt{effective\_\allowbreak{}dimension\_\allowbreak{}summary.csv} and
+  \texttt{effective\_\allowbreak{}dimension\_\allowbreak{}velocity\_\allowbreak{}eventvalues.csv} (frozen).
+  The C0 quiet reference is NaN by policy (zero variance).}
+  \input{tables/tab_phase2}
+  \label{tab:phase2}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Probe 1 v3: per-seed balanced three-class accuracy with
+  amended-audit statuses (24 cells; source:
+  \texttt{audit\_\allowbreak{}v3\_\allowbreak{}amended/PER\_\allowbreak{}SEED\_\allowbreak{}AUDIT.md}, frozen).  B3
+  20260906 clean $= 0.470$ is marked INVALID\_\allowbreak{}FOR\_\allowbreak{}INTERPRETATION
+  (lo-blind); at-chance collapsed cells are PASS\_\allowbreak{}WITH\_\allowbreak{}FLAG.}
+  \input{tables/tab_probe1}
+  \label{tab:probe1}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Probe 2 identifiability audit summary (frozen).  Status:
+  TERMINATED / AUDIT\_\allowbreak{}FAILED: a mechanistic identifiability boundary,
+  not an incomplete experiment.}
+  \input{tables/tab_probe2}
+  \label{tab:probe2}
+\end{table}
+
+\begin{table}[t]
+  \centering
+  \caption{Claim ledger of this paper (evidence levels follow the frozen
+  archive claim ledger, \texttt{docs/CLAIM\_\allowbreak{}LEDGER.md}).}
+  \input{tables/tab_claims}
+  \label{tab:claims}
+\end{table}
+
+\newpage
+\section*{Data and Code Availability}
+The frozen research archive accompanying this paper contains all
+experiment scripts, seeds, logs, tables, figures and audit documents:
+Phase 1 (\texttt{code/experiments/natural\_\allowbreak{}collision.py}), Phase 2
+(\texttt{code/experiments/effective\_\allowbreak{}dimension.py}), Probe 1
+(\texttt{code/experiments/temporal\_\allowbreak{}distractor.py}), Probe 2
+(\texttt{code/\allowbreak{}experiments/\allowbreak{}probe2/\allowbreak{}identifiability/\allowbreak{}}), model reference
+(\texttt{code/\allowbreak{}model/\allowbreak{}tan.py}), archive index
+(\texttt{code/RESEARCH\_\allowbreak{}ARCHIVE\_\allowbreak{}INDEX.md}) and reproducibility ledger
+(\texttt{docs/REPRODUCIBILITY\_\allowbreak{}LEDGER.md}).  Figures~2--6 reproduce
+frozen experiment figures or are drawn from frozen result documents; no
+new experiment was performed for this paper.
+
+\section*{Reproducibility Statement}
+All experiments use deterministic seeds and frozen parameters; audit
+statuses (including Probe 2 = TERMINATED / AUDIT\_\allowbreak{}FAILED) are archived;
+no post-hoc tuning was performed; per-seed tables and the archive
+integrity statement are provided (\texttt{audit\_\allowbreak{}v3\_\allowbreak{}amended/},
+\texttt{docs/\allowbreak{}}).  The PDF is built with the command in
+\texttt{paper/\allowbreak{}Makefile} (equivalently: \texttt{pdflatex main.tex;
+bibtex main; pdflatex main.tex; pdflatex main.tex}).
+
+\section*{Conflict of Interest}
+The author declares no competing interests.
+
+\section*{Acknowledgements}
+The author thanks the reviewers of the archived research programme for
+insisting on identifiability audits and on the separation of claims
+documented in this paper.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+% ---------------- supplementary ----------------
+\appendix
+\input{supplementary/S1_equations}
+\input{supplementary/S2_phase1_collisions}
+\input{supplementary/S3_phase2_methodology}
+\input{supplementary/S4_probe1_perseed}
+\input{supplementary/S5_probe1_amended_audit}
+\input{supplementary/S6_probe2_full_audit}
+\input{supplementary/S7_probe2_precheck}
+\input{supplementary/S8_reproducibility}
+
+\end{document}

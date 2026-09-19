@@ -1,0 +1,29 @@
+% S1: detailed equations
+\section{Supplementary S1: Detailed TAN equations and conventions}
+
+The frozen model used in every experiment of this paper:
+
+\begin{align}
+  \mathcal{X}_t &= [x_{t-W+1},\dots,x_t], & W &= 5,\\
+  \mu_t &= \tfrac1W \textstyle\sum_i x_{t-W+i}, & x_t &\in \mathbb{R},\\
+  S_t &= [x_t - \mu_t - \varepsilon]_+, & \varepsilon &= 0,\\
+  Q_t &= W_q S_t,\quad K_{t,i}=W_k x_{t-W+i},\quad V_{t,i}=W_v x_{t-W+i},
+    & W_q&=2.0,\; W_k=W_v=1.0,\\
+  E_{t,i} &= Q_t K_{t,i}, & &\\
+  \alpha_{t,i} &= \frac{\exp(\beta E_{t,i})}{\sum_{j=1}^W
+    \exp(\beta E_{t,j}) + 10^{-9}}, & \beta &= 1.0,\\
+  C_t &= \textstyle\sum_i \alpha_{t,i} V_{t,i}, & &\\
+  A_t &= \tanh(S_t)\,C_t, & &\\
+  h_t &= \lambda h_{t-1} + A_t, & \lambda &= 0.5,\\
+  y_t &= \mathbb{1}[h_t > \theta],\quad h_t \leftarrow 0 \text{ if }
+    y_t = 1, & \theta &= 0.5 .
+\end{align}
+
+Conventions: the window includes the current input $x_t$; the receptive
+field is zero-padded at trial onset (stimulus onset after silence); the
+initial membrane potential is $h_0 = 0$; surprise is computed with
+$\mu_t$ over the window including $x_t$; a spike occurs when the
+pre-reset potential exceeds $\theta$ strictly, followed by reset.  The
+vectorised experiment implementations were parity-checked against the
+scalar reference implementation \texttt{code/model/tan.py} (worst deviation in
+$h$: $1.5\times10^{-10}$; spike agreement exact).

@@ -1,0 +1,102 @@
+\enlargethispage{3\baselineskip}
+\section{Claim Ledger and Reproducibility Statement}
+\label{sec:ledger}
+
+This closing section grades every claim of the paper (Table~\ref{tab:claims})
+and states the reproducibility conditions under which every number in the
+preceding sections can be regenerated.
+
+\subsection{The claim ledger}
+\label{sec:claims}
+
+Levels: \textsc{established} (deterministic / analytical / numerical
+evidence, with exact statistics), \textsc{supported} (statistical support
+without a closed-form theorem), \textsc{rejected} (explicitly negated by
+experiment), \textsc{unknown} (insufficient evidence in this programme).
+\clearpage
+
+\begin{table}[p]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.88}
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{@{}c>{\raggedright\arraybackslash}p{3.8cm}>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{3.0cm}@{}}
+\toprule
+\# & Claim & Level & Frozen evidence & Anti-false-positive guard \\
+\midrule
+C1 & The scalar TAN has memory: its state is not Markov-sufficient &
+\textsc{established} & $N=160{,}000$; $K$ mean: $0.5$/$4.47\mathrm{e}3$/$1.235\mathrm{e}4$/$2.047\mathrm{e}4$; median: $0.5$/$896$/$1.37\mathrm{e}3$/$2.95\mathrm{e}3$; post-reset $0$/$0.6$/$33.1$/$32.2\%$
+& gate-closed collapse to $0.5$; resync $n=843$ \\
+C2 & Positive-scalar saliency is order-locked (Theorem 5.1) &
+\textsc{established} & FlipRate $0.000$; Probe-2 \textsc{terminated}/\textsc{audit\_failed} & domain-conditional statement (AM1) \\
+C3 & Attention reorganizes event-locked geometry without adding selectivity &
+\textsc{established} & $d_D$ $2.089$ vs $1.484$; $\Delta\log\mathrm{Tr}=1.355$ nats; B4 $\not>$ B1 shared-frame & effective rank $\neq$ intrinsic dimension \\
+C4 & Nonmonotone tuning is opponent-structural; attention is gain / operating-range modulation &
+\textsc{established} & Theorem 4.1; C1 peak $x^*=1.00$ ($h_E=0.200$); C2--C4 no strict maxima; predictions $4/4$ & C1 has zero attention (necessity counterexample) \\
+C5 & Competition does not route &
+\textsc{established} & six layouts $\times$ two variants FlipRate $0.000$; query-sensitive magnitudes only & kernel-before-dynamics argument \\
+C6 & $d=2$ is minimal for continuous query direction under dot-product; flip law $\theta/\pi$ &
+\textsc{established} & 132/132 isotropic conditions (140 checks total); $F_d=\tfrac12$ across $d=2,3,4,8$; ordering ladder $1/2/M(M-1)/M!$ & $F_d$ retained as negative control; dimension controls \\
+C7 & The running neuron realizes counterfactual routing &
+\textsc{established} & margins $+0.2587\to-0.1559$; $Q^*=3.7071$; ensemble $0.4425$ vs $0.4445$ & probe-below-winner; $\omega$-sweep structure; AM2 normalization \\
+C8 & Key--value decoupling yields soft, pairing-sensitive binding &
+\textsc{established} & $T=-0.4129$; $T_{\mathrm{swap}}=-T$ ($10^{-12}$); $D=1.74$/$1.84$ & value-swap antisymmetry; baselines ($0.0844$ sharpening drift) \\
+C9 & The WTA limit delivers exactly; routing $\perp$ discreteness &
+\textsc{established} & $\gamma$ ladder: $D\to0$ only at $\infty$; flip rate flat $0.444527$; E-I root $\gamma^*=5.098015$ & finite-$\gamma$ positivity; AM5 cancellation zero flagged \\
+C10 & Exact delivery does not imply composition (single-head bottleneck) &
+\textsc{established} & M0 $E_{\mathrm{comp}}=|V_A|>0$; $V_A=0$ trap caught by joint audit & three-error joint audit \\
+C11 & Parallel binding plus one combiner composes; binding $\perp$ combiner error &
+\textsc{established} & M2 errors $0$ (S1--S3, $+$/$-$); both-routed cov.\ $22.03\%$ ($22.07\%$ bench), $E_{\mathrm{comp}}|\text{both}\equiv0$; bench $1.116/2.001$, MC $1.108/1.976$; 8 CFs pass & separation test; swap suite; M1 structurally undefined \\
+C12 & Biological readings (columns, phase, dendritic subunits) are organizational analogies &
+\textsc{supported} (as mappings) & qualitative correspondence only & explicitly denied equivalence (rejected if read as identity) \\
+C13 & 1D metric compatibility is sufficient for content addressing; 2D rotation not necessary &
+\textsc{established} & 60,000 trials (420,000 evals); C1/C2 acc $100.00\%$; metric $\equiv$ 2D argmax; signed scalar $0/6{,}705$ on intermediate key & G1.1--G1.4 suites; chance derivation ($16.67\%$); leakage audit \\
+C14 & Continuous dynamical carrier \& spiking readout audit (Phase P1-B) &
+\textsc{bounded / insufficient} & 96,000 episodes (192,000 queries); 6/6 cells at mutual floor (M1 joint delivery $2.75\%$--$2.90\% < 80\%/40\%$); TOST 90\% CIs bounded; spiking $E_{\mathrm{comp}}\in[2.21, 2.57]$; abstention $82.1\%$--$83.0\%$ & pre-registered prerequisite floor rule; TOST equivalence bounds; G1.5 subthreshold collision theorem (res $<10^{-10}$); H3 deferred; model-specific insufficiency \\
+\bottomrule
+\end{tabular}
+\caption{Master claim ledger. Levels follow \S2.5's frozen discipline; every \textsc{established} row carries its exact statistic and the audit that protects it.}
+\label{tab:claims}
+\end{table}
+\clearpage
+
+\subsection{Reproducibility statement}
+\label{sec:repro}
+\enlargethispage{3\baselineskip}
+
+\emph{Archives.} All quantitative statements of this paper are read from
+the frozen archives: the TAN-I dossier, collision and geometry logs, the
+Probe-1 amended audit, the Probe-2 identifiability archive, the TAN-II
+sprint registry 4.1--4.3-A (pre-registrations, amendments AM1--AM6,
+deterministic scripts, and machine-readable summaries), the Phase~P1-A
+address identifiability archive (60,000 trials, 420,000 evaluations),
+and the Phase~P1-B dynamical carrier audit dossier (Protocol~V2.6
+\texttt{07D58A2D\dots}, 12-fixture G1 suite, 96,000 episodes, confirmatory manifest
+\texttt{08EC79B9\dots}). No frozen file was modified for this manuscript; the manuscript's numbers were extracted, not recomputed.
+
+\emph{Determinism.} Every experiment is deterministic under the fixed
+seeds $20260904$, $20260905$, $20260906$ ($N=10^4$ per seed where Monte
+Carlo applies) with no random-state drift; analytic benchmarks are
+deterministic $2001^2$ quadratures of the frozen model; structural
+identities are asserted at $10^{-12}$; the environment is Python 3.12
+with NumPy/SciPy/Matplotlib only. Each sprint script records its own
+SHA-256 in its output summary.
+
+\emph{Pre-registration and amendments.} Every rung's predictions were
+frozen before its run. Six discrepancies were found---AM1 (the E4(iii)
+closed-form value), AM2 (the unnormalized-control expectation), AM3
+(corrected fixed-point constants), AM4 (the E-I drive-transfer value),
+AM5 (the readout-softness monotonicity and its cancellation zero), AM6
+(the canonical routing margins)---and all six were handled by the frozen
+protocol: stop, independently recompute, record the cause in a dated
+amendment that preserves the original prediction verbatim, then continue.
+None altered a model, query, seed, or threshold; the originals remain in
+the archive.
+
+\emph{Open problems (explicitly not claimed).} General symbolic
+reasoning; multi-distractor ($N>2$) generalization; necessity (versus
+sufficiency) of the tested mechanisms; nested or multi-operand
+composition; internal composition dynamics (Hypothesis~H3, formally deferred);
+learned representations; and any biological equivalence (C12). These are the
+next rungs of the programme, and the paper's boundary map is offered as the
+instrument for auditing them.

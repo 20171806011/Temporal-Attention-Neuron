@@ -1,0 +1,287 @@
+{
+ "prereg": "docs/TANII_SPRINT4_2C_PREREGISTRATION.md",
+ "params": {
+  "omega": 0.4,
+  "c": 2.0,
+  "qA": 3.0,
+  "qB": 4.0,
+  "vA": 5.0,
+  "vB": 9.0,
+  "hist": [
+   1.0,
+   0.0,
+   2.0,
+   0.0
+  ],
+  "seeds": [
+   20260904,
+   20260905,
+   20260906
+  ],
+  "N_H": 10000,
+  "crit_p": 0.002,
+  "crit_m": 0.01
+ },
+ "checks": [
+  {
+   "name": "M2 winner: A at Q=3, B at Q=4 (routing from 4.2-B)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 C_events(Q=3)=6.742691, C_events(Q=4)=7.155595",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 T = C(3)-C(4) = -0.412904 (winner-aligned: A(5)->B(9))",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 output closer to bound value at both queries",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 swap control: T_swap = +0.412904",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 swap antisymmetry T_swap == -T (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 softness D(Q=3)=1.7427, D(Q=4)=1.8444 (soft binding)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 hard-binding gap: D > 0 at both queries",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 drive-level transfer keeps direction (-0.258552)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E drive transfer: direction INVERTED by inhibition (+0.0985)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M4 (scalar E-I) drive baseline matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M0: winner B at both queries (no routing, no counterfactual binding)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M0 sharpening-only transfer -0.084443",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 transfer magnitude exceeds M0 sharpening baseline",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M1 sign counterfactual: C(+1)=8.8936, C(-1)=5.1064 (near-hard binding, D=0.1064)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M1 degenerate binding is HARDER than M2 (D_M1 < D_M2)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2unnorm: attention collapses to probe (v=0), no value transfer",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "position invariance: 12 layouts identical C_events (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: E|T| = 0.400435",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: E|T||flip = 0.465523",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: E|T||noflip = 0.348347",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: flip rate = 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: E[T] = 0 (symmetry)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "quadrature audit: sign-matched alignment | flip == 1 (theorem)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E|T| = 0.39770 vs 0.400435",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E|T||flip = 0.46851 vs 0.465523",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E|T||noflip = 0.34084 vs 0.348347",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: flip rate = 0.44540 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: alignment|flip = 1.00000 (>= 0.999)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E[T] = 0.00747 vs 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E|T| = 0.39671 vs 0.400435",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E|T||flip = 0.46242 vs 0.465523",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E|T||noflip = 0.34371 vs 0.348347",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: flip rate = 0.44650 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: alignment|flip = 1.00000 (>= 0.999)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E[T] = -0.00158 vs 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E|T| = 0.40210 vs 0.400435",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E|T||flip = 0.47118 vs 0.465523",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E|T||noflip = 0.34876 vs 0.348347",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: flip rate = 0.43570 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: alignment|flip = 1.00000 (>= 0.999)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E[T] = 0.00617 vs 0",
+   "status": "PASS",
+   "detail": ""
+  }
+ ],
+ "canonical": {
+  "T": -0.41290387972976283,
+  "T_swap": 0.4129038797297637,
+  "D3": 1.7426911979137634,
+  "D4": 1.8444049223564738,
+  "drive_M2": [
+   4.630402186403108,
+   4.888953583621044
+  ],
+  "drive_M5": [
+   1.16000482069148,
+   0.92330437545733
+  ],
+  "drive_M4": [
+   -0.08690012974873551,
+   -0.00044520370904175063
+  ],
+  "M1_CE": [
+   8.893612025692537,
+   5.106387974307462
+  ]
+ },
+ "mc": {
+  "20260904": {
+   "absT": 0.39770217873582986,
+   "absT_flip": 0.46850740831213583,
+   "absT_noflip": 0.34083840438803564,
+   "flip": 0.4454,
+   "align": 1.0,
+   "ET": 0.007474809980994387
+  },
+  "20260905": {
+   "absT": 0.3967141164870451,
+   "absT_flip": 0.46241538293411194,
+   "absT_noflip": 0.34371390787166045,
+   "flip": 0.4465,
+   "align": 1.0,
+   "ET": -0.001582254190887183
+  },
+  "20260906": {
+   "absT": 0.4020979659265571,
+   "absT_flip": 0.47117740352367266,
+   "absT_noflip": 0.3487612461656795,
+   "flip": 0.4357,
+   "align": 1.0,
+   "ET": 0.006174893379639843
+  }
+ },
+ "n_fail": 0,
+ "script_sha256": "5d55652500be0949aaeeec9497a579d07d341aa449339301cc38238e4e21a6a2"
+}

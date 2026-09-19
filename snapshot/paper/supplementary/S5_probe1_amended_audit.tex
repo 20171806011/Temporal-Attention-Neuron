@@ -1,0 +1,38 @@
+% S5
+\section{Supplementary S5: Probe 1 amended-audit methodology}
+
+The three-seed Probe-1 run was blocked before pooling by two
+pre-registered audit-statistic gates.  Per the frozen-data rule (never
+re-run or modify the experiment), the audit statistics were amended and
+re-applied to the frozen three-seed data only; no experiment parameter
+changed.  The deterministic reproduction of the frozen pipeline was
+verified against the frozen per-seed numbers (maximum deviation
+$4.7\times10^{-4}$, which equals the 3-decimal rounding of the frozen
+table).
+
+\textbf{A1 -- shuffle audit.} The fixed gate on the mean over ten
+shuffles of the shuffled-label balanced accuracy (threshold 0.37) was
+abolished: L-BFGS on permuted labels
+has a heavy-tailed overfit distribution (n=1500: 25-shuffle mean 0.346,
+sd 0.079; at n=4000 the mean-of-10 sd is $\approx 0.025$; the offending
+B2 seed-3 value 0.378 was $\approx +1.1\sigma$ noise, not leakage).  The
+amended audit uses an empirical permutation null (100 label
+permutations per seed $\times$ model, refit each time) and classifies
+each cell PASS / PASS\_\allowbreak{}WITH\_\allowbreak{}QC\_\allowbreak{}LIMITATION /
+INVALID\_\allowbreak{}FOR\_\allowbreak{}INTERPRETATION from the null mean and a z-score.
+
+\textbf{A2 -- class-coverage audit.} A never-predicted class no longer
+blocks the run.  At-chance cells with a missing class are
+PASS\_\allowbreak{}WITH\_\allowbreak{}FLAG (collapse expected; excluded from claims); above-chance
+cells with a missing class ($\geq 20$ true samples) are
+INVALID\_\allowbreak{}FOR\_\allowbreak{}INTERPRETATION; a pattern persistent in $\geq 2/3$ seeds
+sets a model-level flag.  B3's lo-blindness occurred in 1/3 seeds by the
+overall criterion (seed 1 overall; seed 3 clean cell), so no persistent
+model-level flag is set; the affected cells carry their own statuses.
+
+\textbf{Statuses.} 24-cell table in Table~\ref{tab:probe1}; all shuffle
+statuses PASS; B3 20260906 clean INVALID\_\allowbreak{}FOR\_\allowbreak{}INTERPRETATION; B1
+at-chance cells PASS\_\allowbreak{}WITH\_\allowbreak{}FLAG.  Pooling was performed after the
+amended table and preserves per-seed detail, the B3 caveat and the B4
+seed-3 attenuation.  Machine-readable audit decisions:
+(\texttt{audit\_\allowbreak{}v3\_\allowbreak{}amended/MACHINE\_\allowbreak{}READABLE\_\allowbreak{}AUDIT.json}).

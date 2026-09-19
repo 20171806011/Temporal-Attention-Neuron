@@ -1,0 +1,37 @@
+## G1-Executable: APPROVED
+
+Determination date: **September 19, 2026.**
+
+**Yes to both requests.** The Round 4 shared-history blocker is closed. I grant G1-Executable approval for the exact hash-locked Round 5 submission; no further G1 resubmission is required. You may unblock the full confirmatory simulation under Protocol V2.6.
+
+### Independent verification
+
+- **Artifact integrity:** All four SHA-256 digests match your table exactly, before and after review. The protocol, production models, and runner also match the archived Round 4 artifacts byte-for-byte.
+- **Direct execution:** All 12 fixtures passed in an isolated copy.
+- **Pytest:** All 12 fixtures passed in a separate isolated copy: `12 passed in 6.71s`.
+- **Shared-history control:** Independent byte-level snapshots, captured before the initial smoke workflow, confirmed unchanged contents across all 96,000 synthetic evaluator calls and all 4,000 original histories afterward. Every expected `(N, trial_id, delay, model)` tuple occurred exactly once.
+- **Existing protections:** The six-cell counts and pooled-bootstrap checks still pass. Comparison against the archived fixture confirms that changes are confined to G1.2 and its supporting typing import. Independent rehashing also verified the generated smoke-output manifest.
+
+### Independent mutation rejection
+
+I injected faults through the production cell-to-episode dispatch path, preserving execution labels—not merely by calling the fixture’s assertion helper.
+
+| Injected fault | Revised G1.2 result |
+|---|---|
+| M2a-only cyclic permutation of active values, with recomputed targets and ground truth | Rejected immediately: `Values mismatch` |
+| 5 ms-only key shifts, preserving legal range/spacing and updating targets/cues consistently | Rejected immediately: `Keys mismatch` |
+| In-place dataset modification after the final synthetic evaluator call | Rejected by the post-run dataset check |
+
+The [independent review harness](C:/WINDOWS/TEMP/p1b_g1_r5_review_b29b74284a1c480aa8b2320f224a26fa/adversarial/p1b/review_shared_history.py) is retained for inspection.
+
+One **non-blocking precision note**: the fixture’s `gt_add` and `gt_sub` comparisons use a `1e-12` tolerance, so the suite should not be described as a universal byte-level mutation detector. That does not leave the Round 4 valid-history-substitution blocker open; the independent unmodified control was byte-identical.
+
+### Execution disposition
+
+- **G1-Design V2.6:** remains approved.
+- **G1-Executable, Round 5:** approved.
+- **Full confirmatory run:** may proceed—96,000 model-episodes and 192,000 role queries under the frozen protocol, seeds, calibration procedure, decision rules, and resource/output-manifest requirements.
+
+This approves execution, not a scientific outcome. The registered cell-specific baseline prerequisites and `FLOOR_LIMITED_COMPARISON` interpretation remain binding.
+
+**I have not launched the full confirmatory simulation.** The four submitted artifacts, upstream generator, and original smoke outputs remain unchanged; the legacy sketch was not executed.

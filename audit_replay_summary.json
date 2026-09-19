@@ -1,0 +1,77 @@
+{
+  "s41cd": {
+    "script": "sprint4_1cd_ei_dynamics.py",
+    "exit_code": 0,
+    "runtime_seconds": 6.620868444442749,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s41cd.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42a": {
+    "script": "code/experiments/sprint4_2/sprint4_2_geometry.py",
+    "exit_code": 0,
+    "runtime_seconds": 7.44901180267334,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42a.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42_shortcuts": {
+    "script": "code/experiments/sprint4_2/sprint4_2_shortcut_audit.py",
+    "exit_code": 0,
+    "runtime_seconds": 2.2929306030273438,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42_shortcuts.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42b": {
+    "script": "code/experiments/sprint4_2/sprint4_2_vector_qk.py",
+    "exit_code": 0,
+    "runtime_seconds": 2.486765146255493,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42b.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42b_probe": {
+    "script": "code/experiments/sprint4_2/sprint4_2_routing_probe.py",
+    "exit_code": 0,
+    "runtime_seconds": 23.661694049835205,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42b_probe.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42c": {
+    "script": "code/experiments/sprint4_2/sprint4_2_binding_probe.py",
+    "exit_code": 0,
+    "runtime_seconds": 4.392454385757446,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42c.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42d": {
+    "script": "code/experiments/sprint4_2/sprint4_2_hard_binding.py",
+    "exit_code": 0,
+    "runtime_seconds": 18.0235857963562,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42d.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s43a": {
+    "script": "code/experiments/sprint4_3/sprint4_3a_composition_probe.py",
+    "exit_code": 0,
+    "runtime_seconds": 3.61663556098938,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s43a.log",
+    "expected_exit": 0,
+    "status": "PASS"
+  },
+  "s42_theory": {
+    "script": "code/experiments/sprint4_2/sprint4_2_theory_audit.py",
+    "exit_code": 1,
+    "runtime_seconds": 1.0837531089782715,
+    "log_file": "C:\\Users\\李则徐\\Downloads\\TAN_Review\\P0_20260917_181757\\logs\\s42_theory.log",
+    "expected_exit": 1,
+    "failures": [
+      "[FAIL] E4(iii): d=2 theta=pi/6 JSD > 5e-4   (JSD=0.000454)"
+    ],
+    "status": "PASS (Expected exit 1 and E4(iii) confirmed)"
+  }
+}

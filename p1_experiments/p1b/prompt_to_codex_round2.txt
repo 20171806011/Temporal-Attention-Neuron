@@ -1,0 +1,84 @@
+Hello Codex!
+
+Thank you for your exceptionally rigorous, mathematically grounded, and incisive review of P1-B v1.0. Your static audit of the preliminary scaffold, dimensional consistency checks, causal localization critique, and statistical stopping rule recommendations are 100% accepted and incorporated.
+
+In response to your findings, we have drafted and committed:
+C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL_V2.md
+
+Here is how every single blocking item from your review has been addressed:
+
+================================================================================
+1. Formal Disclosure & Deprecation of Preliminary Scaffold (Finding A)
+================================================================================
+- We formally disclose that `models_p1b.py` was an initial exploratory sketch.
+- Your static audit is entirely correct: it leaked query during encoding, omitted values from dynamics, contained no-op ablations, decoupled Model 4 from the neuron, and produced a silent subthreshold neuron under defaults.
+- ACTION: `models_p1b.py` is formally designated as an unvalidated non-conforming artifact. No simulations were run, no outputs inspected, and it will be completely rebuilt from scratch only after G1-Design approval.
+
+================================================================================
+2. Dimensionally Consistent Physical Dynamics & Metric Score Alignment (Finding B & Source Correction)
+================================================================================
+- Score kernel is strictly locked to quadratic distance: S(q, k) = -(q - k)^2, matching P1-A frozen models.py (line 296).
+- Replaced mixed current/voltage equations with a normalized, dimensionless leaky integrate-and-fire formulation:
+    tau_A * dA/dt = -A(t) + alpha * Novelty(t)
+    tau_m * du/dt = -(u(t) - u_rest) + g_A * A(t) * I_content(t) + I_query(t) + I_bias
+- Physical state space is strictly instantaneous: x(t) = [u(t), A(t)]^T. No historical traces of u(t) or A(t) are retained by the neuron or exposed to decoders.
+- Pre-reset and post-reset potentials are correctly treated as instantaneous pre/post observation phases of the single physical membrane state variable u(t).
+
+================================================================================
+3. Causal Streaming Schedule & Temporal Independence (Finding E)
+================================================================================
+- Strict physical presentation timeline:
+  - Event duration T_event = 10.0 ms, ISI = 10.0 ms. Total encoding duration T_enc = N * 20.0 ms.
+  - Query cues (q_A, q_B) and operation cue arrive strictly at T_cue = T_enc + tau_delay, with tau_delay in {0, 5, 10} ms.
+  - Query current I_query(t) is strictly 0.0 during encoding (t <= T_enc). Target identity cannot be inferred from presentation timing.
+
+================================================================================
+4. Separation of Hypotheses & Linear State Collision Test (Finding C)
+================================================================================
+- Formally separated into three rungs:
+  - H1 (Retention): Values recoverable from neural state x(T_enc) after inputs cease.
+  - H2 (Addressing/Binding): Injected query selectively releases requested operand.
+  - H3 (Internal Composition): Neural state computes V_A +/- V_B internally before readout.
+- Distinct pathways:
+  - Pathway A (Transport): Readout decodes V_A, V_B; external algebraic node combines them.
+  - Pathway B (Internal Composition): Circuit represents composed result internally; decoder only reads final scalar.
+- Linear state collision test integrated into G1.5: testing Delta V_1 = delta, Delta V_2 = -(w_1/w_2)*delta leaving membrane state identical.
+
+================================================================================
+5. Full Factorial Causal Interventions & Drive Matching (Finding D)
+================================================================================
+- Replaced single ablation with full 2x2 factorial:
+  - M1: Intact continuous dynamic TAN
+  - M2a: Memory-clamped control (u clamped to u_rest post-event)
+  - M2b: Gating-clamped control (A clamped to drive-matched constant A_0 = mean(A_M1))
+  - M2c: Full-state reset control (both u and A clamped to rest)
+  - M3: External history buffer removal control (100% candidate array access stripped)
+  - M4: Spiking channel carrier (strictly spike-communicated operands)
+
+================================================================================
+6. Spike Channel Contract & 10 ms Deadline Alignment (Finding F)
+================================================================================
+- Primary deadline unified strictly at 10.0 ms (20.0 ms retained for secondary characterization).
+- Absolute refractory period: tau_ref = 2.0 ms -> maximum spike budget N_max = 5 spikes in 10 ms.
+- Evaluates both Rate/Count code (6 quantization levels over [-3, 3]) and Latency/Time-to-First-Spike code (20 bins over [-3, 3]).
+- Decoder receives strictly 1D binary array s(t) in {0, 1} with zero access to membrane voltage or raw values.
+
+================================================================================
+7. Statistically Rigorous Stopping Rules (Section 2)
+================================================================================
+- Revised Stop Rule 1: Formally requires Two One-Sided Tests (TOST) equivalence with margin Delta_equiv = 0.005 (0.5 percentage points):
+    CI_90%(Acc_M1 - Acc_M2a) subset of (-0.005, +0.005)
+  conditioned on M1 passing baseline validity (> chance + 0.50).
+- Revised Stop Rule 2: Evaluates unconditional composition error E_comp under 10 ms deadline:
+    Demonstrated Success: UCB_95%(E_comp) < 0.05
+    Demonstrated Failure: LCB_95%(E_comp) >= 0.05
+
+================================================================================
+8. Two-Stage Authorization Boundary (G1-Design vs G1-Executable)
+================================================================================
+- We strictly adhere to your two-stage boundary:
+  - Phase 1: G1-Design approval of P1B_PRE_REGISTRATION_PROTOCOL_V2.md.
+  - Phase 2: Implementation and execution of G1 executable fixtures (`test_p1b_g1_fixtures.py`).
+  - Full-scale simulation remains strictly blocked until G1-Executable review.
+
+Please review P1B_PRE_REGISTRATION_PROTOCOL_V2.md and provide your G1-Design determination.

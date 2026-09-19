@@ -1,0 +1,716 @@
+{
+ "prereg": "docs/TANII_SPRINT4_3A_PREREGISTRATION.md",
+ "params": {
+  "omega": 0.4,
+  "c": 2.0,
+  "q1": 4.5,
+  "q2": 5.3,
+  "q_legacy": [
+   3.0,
+   4.0
+  ],
+  "seeds": [
+   20260904,
+   20260905,
+   20260906
+  ],
+  "N_H": 10000,
+  "lo": 0.3,
+  "hi": 2.5,
+  "grid_n": 2001,
+  "tol_margin": 0.001,
+  "tol_exact": 1e-12,
+  "crit_p": 0.002,
+  "crit_m": 0.01,
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "matplotlib": "3.9.2"
+ },
+ "canonical": {
+  "S1_+": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": 9.0,
+   "C1": 5.0,
+   "C2": 9.0,
+   "y_m1": 9.0,
+   "y_m2": 14.0,
+   "errors": {
+    "E_bindA_M0": 4.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 5.0,
+    "E_comp_M1": 5.0,
+    "E_comp_M2": 0.0
+   }
+  },
+  "S1_-": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": 9.0,
+   "C1": 5.0,
+   "C2": 9.0,
+   "y_m1": 9.0,
+   "y_m2": -4.0,
+   "errors": {
+    "E_bindA_M0": 4.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 13.0,
+    "E_comp_M1": 13.0,
+    "E_comp_M2": 0.0
+   }
+  },
+  "S2_+": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": -2.0,
+   "C1": 7.0,
+   "C2": -2.0,
+   "y_m1": -2.0,
+   "y_m2": 5.0,
+   "errors": {
+    "E_bindA_M0": 9.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 7.0,
+    "E_comp_M1": 7.0,
+    "E_comp_M2": 0.0
+   }
+  },
+  "S2_-": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": -2.0,
+   "C1": 7.0,
+   "C2": -2.0,
+   "y_m1": -2.0,
+   "y_m2": 9.0,
+   "errors": {
+    "E_bindA_M0": 9.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 11.0,
+    "E_comp_M1": 11.0,
+    "E_comp_M2": 0.0
+   }
+  },
+  "S3_+": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": 6.0,
+   "C1": 2.0,
+   "C2": 6.0,
+   "y_m1": 6.0,
+   "y_m2": 8.0,
+   "errors": {
+    "E_bindA_M0": 4.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 2.0,
+    "E_comp_M1": 2.0,
+    "E_comp_M2": 0.0
+   }
+  },
+  "S3_-": {
+   "mu": 2.56,
+   "E1": [
+    3.879828649839245,
+    3.669197603512042
+   ],
+   "E2": [
+    5.217780914808653,
+    5.4796594382183414
+   ],
+   "C0": 6.0,
+   "C1": 2.0,
+   "C2": 6.0,
+   "y_m1": 6.0,
+   "y_m2": -4.0,
+   "errors": {
+    "E_bindA_M0": 4.0,
+    "E_bindB_M0": 0.0,
+    "E_bindA_M1": 0.0,
+    "E_bindB_M1": 0.0,
+    "E_bindA_M2": 0.0,
+    "E_bindB_M2": 0.0,
+    "E_comp_M0": 10.0,
+    "E_comp_M1": 10.0,
+    "E_comp_M2": 0.0
+   }
+  }
+ },
+ "margins": {
+  "mA": 0.21063104632720275,
+  "mB": 0.2618785234096883,
+  "frozen": [
+   0.210631046,
+   0.261878523
+  ]
+ },
+ "counterfactuals": {
+  "1_query_swap": {
+   "status": "PASS",
+   "y_plus": 14.0,
+   "y_minus": 4.0
+  },
+  "2_value_swap": {
+   "status": "PASS",
+   "y_plus": 14.0,
+   "y_minus": 4.0,
+   "channels": [
+    9.0,
+    5.0
+   ]
+  },
+  "3_key_swap": {
+   "status": "PASS",
+   "y_plus": 14.0,
+   "y_minus": 4.0
+  },
+  "4_channel_output_swap": {
+   "status": "PASS",
+   "y_plus": 14.0,
+   "y_minus": 4.0
+  },
+  "5_am5_trap": {
+   "status": "PASS",
+   "M0": {
+    "E_comp": 0.0,
+    "E_bindA": 5.0
+   }
+  },
+  "6_binding_preserving": {
+   "status": "PASS",
+   "y_shift": 18.0,
+   "legacy": {
+    "3.0": [
+     "A",
+     5.0
+    ],
+    "4.0": [
+     "B",
+     9.0
+    ]
+   }
+  },
+  "7_binding_breaking": {
+   "status": "PASS",
+   "E_bindB": 4.0,
+   "E_comp": 4.0
+  },
+  "8_relational": {
+   "status": "PASS",
+   "ys": {
+    "S1": [
+     14.0,
+     -4.0
+    ],
+    "S2": [
+     5.0,
+     9.0
+    ],
+    "S3": [
+     8.0,
+     -4.0
+    ]
+   }
+  }
+ },
+ "benchmarks": {
+  "rA": 0.49975012493753124,
+  "rB": 0.49975012493753124,
+  "P_both": 0.220725219599096,
+  "P_one": 0.5580498106768704,
+  "E_comp_plus": 1.1160996213537409,
+  "E_comp_minus": 2.000999500249875
+ },
+ "mc": {
+  "20260904": {
+   "rA": 0.5044,
+   "rB": 0.4915,
+   "P_both": 0.2188,
+   "P_one": 0.5583,
+   "E_plus": 1.120449115073101,
+   "E_minus": 1.9892876705017262,
+   "E_plus_both": 0.0,
+   "E_minus_both": 0.0,
+   "max_E_both": 0.0
+  },
+  "20260905": {
+   "rA": 0.5025,
+   "rB": 0.4988,
+   "P_both": 0.2258,
+   "P_one": 0.5497,
+   "E_plus": 1.0746057601817207,
+   "E_minus": 1.9596252074453135,
+   "E_plus_both": 0.0,
+   "E_minus_both": 0.0,
+   "max_E_both": 0.0
+  },
+  "20260906": {
+   "rA": 0.4997,
+   "rB": 0.5009,
+   "P_both": 0.2162,
+   "P_one": 0.5682,
+   "E_plus": 1.1279599091578654,
+   "E_minus": 1.9787654239456107,
+   "E_plus_both": 0.0,
+   "E_minus_both": 0.0,
+   "max_E_both": 0.0
+  }
+ },
+ "swap_pass": {
+  "status": "PASS"
+ },
+ "position_maxdiff": 0.0,
+ "checks": [
+  {
+   "name": "geometry: channel-1 margin vs exact closed form +0.210631046 (AM6; hand prereg value 0.2118, deviation 0.00117 recorded)",
+   "status": "PASS",
+   "detail": "exact=0.210631046"
+  },
+  {
+   "name": "geometry: channel-2 margin vs exact closed form +0.261878523 (AM6; hand prereg value 0.2637, deviation 0.00184 recorded)",
+   "status": "PASS",
+   "detail": "exact=0.261878523"
+  },
+  {
+   "name": "geometry: mu = 2.56 (canonical dual window)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M0 E_comp = |C0 - f| = 5.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 +: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M0 E_comp = |C0 - f| = 13.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S1 -: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M0 E_comp = |C0 - f| = 7.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 +: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M0 E_comp = |C0 - f| = 11.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S2 -: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M0 E_comp = |C0 - f| = 2.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 +: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M0 E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M0 E_bind,A = |VB-VA|",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M0 E_comp = |C0 - f| = 10.0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M0 composition FAIL (E_comp > 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M1 E_bind,A = E_bind,B = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M1 scalar projection E_comp = |VB - f| (STRUCTURALLY_UNDEFINED control)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "canon S3 -: M2 E_bind = 0 AND E_comp = 0 (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "position randomization: 6 orderings bitwise invariant (1e-12)",
+   "status": "PASS",
+   "detail": "maxdiff=0.000e+00"
+  },
+  {
+   "name": "leakage: Q ∩ V = ∅ (canonical scenario sets)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "leakage: query slots have value 0 and are not candidates (structural)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "CF1 query swap: + invariant, - antisymmetric",
+   "status": "PASS",
+   "detail": "y+=14.0, y-=4.0"
+  },
+  {
+   "name": "CF2 value swap: + invariant (commutative) & channel outputs swap; - antisymmetric",
+   "status": "PASS",
+   "detail": "C=(9.0,5.0) y-=4.0"
+  },
+  {
+   "name": "CF3 key swap: + invariant, - antisymmetric",
+   "status": "PASS",
+   "detail": "y+=14.0, y-=4.0"
+  },
+  {
+   "name": "CF4 channel-output swap: + invariant, - antisymmetric",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "CF5 AM5 trap: M0 E_comp=0 but E_bind,A>0 -> COMPOSITION FAIL (joint audit catches); M2 genuine PASS",
+   "status": "PASS",
+   "detail": "E_bindA_M0=5.0"
+  },
+  {
+   "name": "CF6 binding-preserving: value shift keeps E=0 and tracks f; legacy single-query 3.0->A / 4.0->B",
+   "status": "PASS",
+   "detail": "y=18.0, legacy={3.0: ('A', 5.0), 4.0: ('B', 9.0)}"
+  },
+  {
+   "name": "CF7 binding-breaking: channel 2 mis-routes -> E_bind,B = 4 and E_comp = 4 (Routing -> Wrong Operand -> Composition Error)",
+   "status": "PASS",
+   "detail": "E_bindB=4.0, E_comp=4.0"
+  },
+  {
+   "name": "CF8 composition-sensitive relational: y = f exactly across scenarios; subtraction distinguishes relations",
+   "status": "PASS",
+   "detail": "ys={'S1': (14.0, -4.0), 'S2': (5.0, 9.0), 'S3': (8.0, -4.0)}"
+  },
+  {
+   "name": "MC 20260904: separation test E_comp|both-routed = 0 EXACT (max over histories <= 1e-12)",
+   "status": "PASS",
+   "detail": "max=0.000e+00"
+  },
+  {
+   "name": "MC 20260904: rA = 0.50440 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: rB = 0.49150 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: P_both = 0.21880 vs bench 0.22073",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E[E_comp+] = 1.12045 vs bench 1.11610",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E[E_comp-] = 1.98929 vs bench 2.00100",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260904: E[E_comp] > 0 (binding-limited) and E[E_comp|both] = 0 (combiner zero-error)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: separation test E_comp|both-routed = 0 EXACT (max over histories <= 1e-12)",
+   "status": "PASS",
+   "detail": "max=0.000e+00"
+  },
+  {
+   "name": "MC 20260905: rA = 0.50250 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: rB = 0.49880 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: P_both = 0.22580 vs bench 0.22073",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E[E_comp+] = 1.07461 vs bench 1.11610",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E[E_comp-] = 1.95963 vs bench 2.00100",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260905: E[E_comp] > 0 (binding-limited) and E[E_comp|both] = 0 (combiner zero-error)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: separation test E_comp|both-routed = 0 EXACT (max over histories <= 1e-12)",
+   "status": "PASS",
+   "detail": "max=0.000e+00"
+  },
+  {
+   "name": "MC 20260906: rA = 0.49970 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: rB = 0.50090 vs bench 0.49975",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: P_both = 0.21620 vs bench 0.22073",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E[E_comp+] = 1.12796 vs bench 1.11610",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E[E_comp-] = 1.97877 vs bench 2.00100",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC 20260906: E[E_comp] > 0 (binding-limited) and E[E_comp|both] = 0 (combiner zero-error)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC query-order randomization: per-history + invariant and - antisymmetric (exact)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "shortcut audit: all leakage controls hold",
+   "status": "PASS",
+   "detail": ""
+  }
+ ],
+ "n_fail": 0,
+ "script_sha256": "8155552b8a22e69566c0246d677eacb3b0d45452c6603dc976533cd1fc77bcf0"
+}

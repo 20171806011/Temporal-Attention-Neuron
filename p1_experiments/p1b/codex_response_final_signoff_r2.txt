@@ -1,0 +1,24 @@
+**Yes. I grant unconditional scientific sign-off for the formal closure of Phase P1-B under frozen Protocol V2.6.**
+
+Determination date: **September 19, 2026.**
+
+This approval applies to the [Revision 2 closure report](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md), whose independently verified SHA-256 is:
+
+```text
+30FB900809F8B639EAD1AAF7B2F7F4FCCDED102D3315F8239233C31AA97EB07E
+```
+
+My read-only recheck confirms:
+
+- The corrected `task_generator.py` digest on line 31 matches both the actual upstream file and the frozen P1-A baseline manifest.
+- All eight artifact-hash entries and both output-manifest entries match the on-disk files.
+- All six M1 comparison rows and all 16 spike-channel rows match the frozen JSON, including confidence intervals at six decimals, reported means, and registered decisions.
+- Calibration coefficients, protocol version, and confirmatory execution totals match.
+
+**The sole outstanding provenance finding is closed.** G1-Design and G1-Executable approvals remain in force; G2 and final scientific closure are approved, with no outstanding review conditions.
+
+The endorsed determination remains:
+
+> Phase P1-B completed under frozen Protocol V2.6. M1 failed the baseline delivery prerequisite in every registered condition, rendering all M1–M2a comparisons floor-limited and leaving memory redundancy unestablished. Both specified spiking readouts met the registered criterion for demonstrated limitation of the tested end-to-end implementations. These findings establish model-specific insufficiency, not a universal biological impossibility result or a demonstrated requirement for population coding. H3 remains deferred.
+
+No further corrections or confirmatory simulations are required for this closure. I did not modify any files or rerun the simulation during this recheck.

@@ -1,0 +1,697 @@
+{
+  "protocol_version": "2.6",
+  "is_smoke": true,
+  "total_episodes_simulated": 480,
+  "total_role_queries": 960,
+  "calibration": {
+    "A_0": 0.061886726,
+    "g_dec": 0.132630817,
+    "b_dec": -0.026816484
+  },
+  "cell_results": {
+    "N2_delay0ms": {
+      "N": 2,
+      "delay": 0.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.1,
+      "target_floor": 0.8,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 1,
+        "n10": 0,
+        "n01": 0,
+        "n00": 9
+      },
+      "theta_L_90": -0.2243090231958188,
+      "theta_U_90": 0.2243090231958188,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.1000 < 0.80). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.268104712451072,
+          "lcb_95": 1.8174701426309512,
+          "ucb_95": 2.7063282057986506,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.0532716773134885,
+          "lcb_95": 1.6460334052996124,
+          "ucb_95": 2.5073278589348695,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7592905634907179,
+          "std_e_comp": 0.7916651436956874
+        },
+        "M2a": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2b": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7582287625813962,
+          "std_e_comp": 0.7943002991313988
+        },
+        "M2c": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2d": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.268104712451072,
+          "std_e_comp": 0.7429305795890284
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.0532716773134885,
+          "std_e_comp": 0.6926387858519247
+        }
+      }
+    },
+    "N2_delay5ms": {
+      "N": 2,
+      "delay": 5.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.1,
+      "target_floor": 0.8,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 1,
+        "n10": 0,
+        "n01": 0,
+        "n00": 9
+      },
+      "theta_L_90": -0.2243090231958188,
+      "theta_U_90": 0.2243090231958188,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.1000 < 0.80). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.268104712451072,
+          "lcb_95": 1.8174701426309512,
+          "ucb_95": 2.7063282057986506,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.0832716773134887,
+          "lcb_95": 1.6826494981989761,
+          "ucb_95": 2.5282890126397666,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7588848362181408,
+          "std_e_comp": 0.793023977358609
+        },
+        "M2a": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2b": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7585305577229327,
+          "std_e_comp": 0.7943693888294643
+        },
+        "M2c": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2d": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.268104712451072,
+          "std_e_comp": 0.7429305795890284
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.0832716773134887,
+          "std_e_comp": 0.6875608130485721
+        }
+      }
+    },
+    "N2_delay10ms": {
+      "N": 2,
+      "delay": 10.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.1,
+      "target_floor": 0.8,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 1,
+        "n10": 0,
+        "n01": 0,
+        "n00": 9
+      },
+      "theta_L_90": -0.2243090231958188,
+      "theta_U_90": 0.2243090231958188,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.1000 < 0.80). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.268104712451072,
+          "lcb_95": 1.8174701426309512,
+          "ucb_95": 2.7063282057986506,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.0832716773134887,
+          "lcb_95": 1.6826494981989761,
+          "ucb_95": 2.5282890126397666,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7588272153785636,
+          "std_e_comp": 0.7935431068490034
+        },
+        "M2a": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2b": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7585653700596513,
+          "std_e_comp": 0.7944349740531406
+        },
+        "M2c": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M2d": {
+          "delivery_acc_A": 0.3,
+          "delivery_acc_B": 0.3,
+          "delivery_acc_overall": 0.3,
+          "joint_delivery_acc": 0.1,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 1.7583701591393974,
+          "std_e_comp": 0.7949404749511267
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.268104712451072,
+          "std_e_comp": 0.7429305795890284
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.8,
+          "mean_e_comp": 2.0832716773134887,
+          "std_e_comp": 0.6875608130485721
+        }
+      }
+    },
+    "N3_delay0ms": {
+      "N": 3,
+      "delay": 0.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.0,
+      "target_floor": 0.4,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 0,
+        "n10": 0,
+        "n01": 0,
+        "n00": 10
+      },
+      "theta_L_90": -0.21294197008340698,
+      "theta_U_90": 0.21294197008340698,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.0000 < 0.40). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.7333455818843264,
+          "lcb_95": 2.063296255499843,
+          "ucb_95": 3.417626172971617,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.208283152368189,
+          "lcb_95": 1.7822870007703777,
+          "ucb_95": 2.5292334770214717,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1881398703006885,
+          "std_e_comp": 0.6148675045789737
+        },
+        "M2a": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2b": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1874641482441715,
+          "std_e_comp": 0.6142632353623235
+        },
+        "M2c": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2d": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.7333455818843264,
+          "std_e_comp": 1.08433110135558
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.208283152368189,
+          "std_e_comp": 0.626433746014428
+        }
+      }
+    },
+    "N3_delay5ms": {
+      "N": 3,
+      "delay": 5.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.0,
+      "target_floor": 0.4,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 0,
+        "n10": 0,
+        "n01": 0,
+        "n00": 10
+      },
+      "theta_L_90": -0.21294197008340698,
+      "theta_U_90": 0.21294197008340698,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.0000 < 0.40). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.7333455818843264,
+          "lcb_95": 2.063296255499843,
+          "ucb_95": 3.417626172971617,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.208283152368189,
+          "lcb_95": 1.7822870007703777,
+          "ucb_95": 2.5292334770214717,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1877072324422384,
+          "std_e_comp": 0.6146372969842973
+        },
+        "M2a": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2b": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.187297758028253,
+          "std_e_comp": 0.6141549512541852
+        },
+        "M2c": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2d": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.7333455818843264,
+          "std_e_comp": 1.08433110135558
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.208283152368189,
+          "std_e_comp": 0.626433746014428
+        }
+      }
+    },
+    "N3_delay10ms": {
+      "N": 3,
+      "delay": 10.0,
+      "n_trials": 10,
+      "m1_joint_acc": 0.0,
+      "target_floor": 0.4,
+      "m1_passed_floor": false,
+      "table_2x2_m1_m2a": {
+        "n11": 0,
+        "n10": 0,
+        "n01": 0,
+        "n00": 10
+      },
+      "theta_L_90": -0.21294197008340698,
+      "theta_U_90": 0.21294197008340698,
+      "in_equivalence_margin": false,
+      "decision": "FLOOR_LIMITED_COMPARISON",
+      "status_flag": "M1_CARRIER_INSUFFICIENT",
+      "redundancy_inferred": false,
+      "decision_text": "M1 failed baseline floor (0.0000 < 0.40). Registered as FLOOR_LIMITED_COMPARISON; memory redundancy NOT inferred.",
+      "spike_channel": {
+        "M4_Count": {
+          "mean_e_comp": 2.7333455818843264,
+          "lcb_95": 2.063296255499843,
+          "ucb_95": 3.417626172971617,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        },
+        "M4_Latency": {
+          "mean_e_comp": 2.208283152368189,
+          "lcb_95": 1.7822870007703777,
+          "ucb_95": 2.5292334770214717,
+          "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+        }
+      },
+      "model_summaries": {
+        "M0": {
+          "delivery_acc_A": 1.0,
+          "delivery_acc_B": 1.0,
+          "delivery_acc_overall": 1.0,
+          "joint_delivery_acc": 1.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 0.0,
+          "std_e_comp": 0.0
+        },
+        "M1": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.187444825442909,
+          "std_e_comp": 0.6143809963877702
+        },
+        "M2a": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2b": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1874457686874327,
+          "std_e_comp": 0.6141577578082023
+        },
+        "M2c": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M2d": {
+          "delivery_acc_A": 0.2,
+          "delivery_acc_B": 0.1,
+          "delivery_acc_overall": 0.15,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.0,
+          "mean_e_comp": 2.1872915784702407,
+          "std_e_comp": 0.6140580034901958
+        },
+        "M4_Count": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.7333455818843264,
+          "std_e_comp": 1.08433110135558
+        },
+        "M4_Latency": {
+          "delivery_acc_A": 0.1,
+          "delivery_acc_B": 0.0,
+          "delivery_acc_overall": 0.05,
+          "joint_delivery_acc": 0.0,
+          "abstention_rate": 0.9,
+          "mean_e_comp": 2.208283152368189,
+          "std_e_comp": 0.626433746014428
+        }
+      }
+    }
+  },
+  "pooled_bootstrap_across_delays": {
+    "N2": {
+      "M4_Count": {
+        "mean_e_comp_pooled": 2.268104712451072,
+        "lcb_95": 1.8174701426309512,
+        "ucb_95": 2.7063282057986497,
+        "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+      },
+      "M4_Latency": {
+        "mean_e_comp_pooled": 2.073271677313488,
+        "lcb_95": 1.6722430588121355,
+        "ucb_95": 2.5243434555080966,
+        "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+      }
+    },
+    "N3": {
+      "M4_Count": {
+        "mean_e_comp_pooled": 2.733345581884326,
+        "lcb_95": 2.0632962554998433,
+        "ucb_95": 3.417626172971616,
+        "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+      },
+      "M4_Latency": {
+        "mean_e_comp_pooled": 2.208283152368189,
+        "lcb_95": 1.782287000770378,
+        "ucb_95": 2.5292334770214713,
+        "decision": "DEMONSTRATED_CHANNEL_LIMITATION"
+      }
+    }
+  }
+}

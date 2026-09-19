@@ -1,0 +1,39 @@
+% S7
+\section{Supplementary S7: Probe 2 theoretical precheck}
+
+\textbf{Statement.} With the frozen attention kernel
+$E_{t,i} = \beta W_q W_k\, S_t\, x_i$ and scalar surprise
+$S_t \in \mathbb{R}$, for any fixed history and any query identity $q$
+that enters only through $S_t$:
+
+\begin{enumerate}
+  \item if $S_t > 0$, then
+    $\arg\max_i E_{t,i} = \arg\max_i x_i$ (history ranking is amplitude
+    driven);
+  \item the ratio $E_{t,i}/E_{t,j} = x_i/x_j$ is independent of the
+    query identity;
+  \item changing $q$ changes only the common scale $\gamma_t \propto
+    S_t$, i.e.\ attention sharpness, and cannot change which history
+    item is selected;
+  \item consequently $\alpha(X,q{=}A) = \alpha(X,q{=}B)$ in relative
+    ordering for identical history $X$; counterfactual argmax flip rate
+    is predicted to be zero.
+\end{enumerate}
+
+\textbf{Proof sketch.} At a fixed time step, $\gamma_t = \beta W_q W_k
+S_t$ multiplies every tap; softmax is invariant to common positive
+scaling of logits only up to temperature -- the weights are
+$\alpha_i \propto \exp(\gamma_t x_i)$.  For $\gamma_t > 0$, $\alpha$
+orders by $x_i$; for $\gamma_t \leq 0$ (gate closed) all logits vanish
+and $\alpha$ is uniform.  Query identity changes $S_t$ through
+$x_t(q)$ and $\mu_t$, hence $\gamma_t$; it never enters per-tap terms.
+The counterfactual test of the audit (identical history, $q = A \to B$,
+argmax flip rate $= 0.000$) confirms the prediction empirically.
+Consequence: surprise-conditioned weighting
+$\neq$ query-conditioned routing, independent of the scalar encoding
+chosen, while the frozen kernel is unchanged.
+
+\textbf{Boundary of the claim.} This is a statement about the frozen
+kernel $E_{t,i} \propto S_t x_i$ with scalar $S_t$; kernels in which the
+query enters per-tap (e.g.\ metric or 2-D representations) are outside
+its scope and are not analysed here.

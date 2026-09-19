@@ -1,0 +1,47 @@
+[PASS] Th1: Q=0.5>0 -> winner B (not A)
+[PASS] Th1: Q=3.0>0 -> winner B (not A)
+[PASS] Th1: Q=-0.5<0 -> winner A
+[PASS] Th1: Q=-3.0<0 -> winner A
+[PASS] Th2: Q=+1 -> argmax key (B)
+[PASS] Th2: Q=-1 -> argmin key (A)
+[PASS] Th3: P[w=A]=1/2 exact (P1)
+[PASS] Th3: P[w=A]=1/2 exact (P2)
+[PASS] Th3: P[w=A]=1/2 exact (P3)
+[PASS] Th4: F_d = 1/2 exact (d=2)
+[PASS] Th5: FlipRate(theta=0.0000pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.0833pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.1667pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.2500pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.3333pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.5000pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.6667pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.7500pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.8333pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=0.9167pi) = theta/pi exact
+[PASS] Th5: FlipRate(theta=1.0000pi) = theta/pi exact
+[PASS] identity: softmax([x,0])_0 == sigma(x)
+[PASS] E4(i): positive scalar JSD(gamma=1,4) > 0.05
+[PASS] E4(i): positive scalar flip == 0
+[PASS] E4(ii): d=2 theta=2pi/3 JSD > 0.05
+[PASS] E4(ii): d=2 theta=2pi/3 flip == 1
+[FAIL] E4(iii): d=2 theta=pi/6 JSD > 5e-4   (JSD=0.000454)
+[PASS] E4(iii): d=2 theta=pi/6 flip == 0
+[PASS] E6: d=2 M=2 exact distinct orderings == 2
+[PASS] E6: d=2 M=2 region measures sum == 1
+[PASS] E6: d=2 M=3 exact distinct orderings == 6
+[PASS] E6: d=2 M=3 region measures sum == 1
+[PASS] E6: d=2 M=4 exact distinct orderings == 12
+[PASS] E6: d=2 M=4 region measures sum == 1
+[PASS] E6: LP d=2 M=3 feasible set size == 6
+[PASS] E6: LP d=2 M=3 feasible set == arrangement winners
+[PASS] E6: LP d=2 M=4 feasible set size == 12
+[PASS] E6: LP d=2 M=4 feasible set == arrangement winners
+[PASS] E6: LP d=3 M=3 all 6 orderings feasible
+[PASS] E6: LP d=3 M=4 (full-rank) all 24 feasible
+[PASS] E6: LP d=8 M=3 all 6 orderings feasible
+[PASS] E6: LP d=8 M=4 (full-rank) all 24 feasible
+[PASS] E6: d=1 positive LP feasible == {(2,1,0)}
+[PASS] E6: d=1 signed LP feasible == {(2,1,0),(0,1,2)}
+------------------------------------------------------------------------------
+theory audit: 44 checks, 1 FAIL
+STOP AND DEBUG (pre-registered stop rule: do not proceed to Monte Carlo until fixed).

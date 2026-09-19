@@ -1,0 +1,36 @@
+Hello Codex!
+
+We present the updated P1-B Pre-Registration Protocol (Version 2.5) for formal G1-Design Approval:
+File: C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md
+SHA-256: 1EC92E735FB63177B4297489767DA1CBA4FFAE531436AC13219980164C671DA9
+
+Every single remaining requirement from your G1-Design v2.4 determination has been resolved and codified in the governing specification:
+
+1. Sampling Plan and Seeds Fully Frozen (§3.2):
+   - Added compact Authoritative Sampling Plan Table (§3.2):
+     * Confirmatory Evaluation: N=2 has 2,000 unique histories (seed `2026091920`); N=3 has 2,000 unique histories (seed `2026091930`).
+     * Each history evaluated under all 3 delays (0, 5, 10 ms) with 2 independent probes (Role A & B), yielding 12,000 queries per model.
+     * Identical 12,000 episodes shared across all 8 models (96,000 total episode simulations).
+     * G1.3 Leakage Test (Null): 1,000 independent histories for N=2 (seed `2026091912`) and 1,000 for N=3 (seed `2026091913`). Independent sampling unit = independent history trial tuple.
+     * G1.3 Clean Oracle Task Check: 1,000 histories (seed `2026091914`), requiring perfect ground truth recovery.
+
+2. Condition-Specific Baseline Prerequisite & Newcombe Equivalence Decisions (§7.3, §7.4):
+   - Confirmatory evaluation is conducted strictly across the 6 primary condition cells c = (N, tau_delay).
+   - Cell baseline prerequisite: In each cell c, Model M1 must achieve JointDeliveryAcc >= 0.80 (N=2) or >= 0.40 (N=3) before equivalence can be interpreted as functional redundancy.
+   - If M1 fails its floor in cell c, that cell is registered as `FLOOR_LIMITED_COMPARISON`.
+   - A pooled baseline pass CANNOT authorize an equivalence/redundancy conclusion in a below-floor delay cell.
+   - Strict prohibition on naive delay pooling: Because delays evaluate the same 2,000 histories, they are repeated measures and must NOT be pooled into a naive N=6000 Newcombe table. Confirmatory TOST is conducted strictly on the 6 independent cell-specific 2x2 tables (n=2,000 independent histories per cell).
+   - Proposition 6.1 (7/12 bound) is explicitly affirmed as a population bound and predicted insufficiency, not a deterministic cap on every finite-sample proportion.
+
+3. Failure Classifications and Concrete Fixture Contracts (§8.1, §8.2, §8.5):
+   - G1.3 split into:
+     * G1.3a: Query-blind null consistency within Wilson 95% CI -> `[Stochastic Alert]`.
+     * G1.3b: Clean oracle achieving 100.0% accuracy (E_mae == 0.0) -> `[Deterministic]` implementation failure.
+   - G1.6 split into:
+     * G1.6a: Analytical quantizer reference benchmarks (0.3333 and 0.1000) verified -> `[Deterministic]`.
+     * G1.6b: End-to-end actual-spike conformance: decoders consume strictly binary threshold spikes {s_n} in {0, 1}^100, strict timestamp boundary (step 101 excluded), silence fallback, zero analog bypass -> `[Deterministic]`.
+   - Concrete fixtures registered in Annex:
+     * §8.1: Exact Linear Subthreshold State Collision Fixture: slots (0, 1), keys 1.8, 2.2, w=0.1, V_1(H)=-1.5, V_2(H)=0.0, V_1(H')=+1.0, V_2(H') approx -0.130767498, query q=1.8. Deterministic assertions: c_2 != 0, executable legal bounds assertion -3 <= V_2(H') <= 3, zero spikes throughout, state match ||z(H) - z(H')||_infty < 10^-10, target separation 2.5 > 1.0.
+     * §8.2: Concrete Reachable Refractory Readout Fixture: V_1 = -K_1 = -1.8, cue q=1.8 at 100 ms, spike at step 81 (t=8.1 ms), remaining refractory r=0.1 ms > 0 at deadline step 100. Deterministic assertion: r > 0, u_readout == 0.0 (asserting stale candidate 1.002514 is NOT emitted).
+
+Please review Protocol Version 2.5 and state your determination for formal G1-Design Approval.

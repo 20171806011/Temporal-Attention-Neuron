@@ -1,0 +1,83 @@
+% ================== 2. Related concepts / background ==================
+\section{Related Concepts and Theoretical Background}\label{sec:background}
+
+\subsection{Temporal memory and state sufficiency}\label{sec:bkg-state}
+
+A dynamical system is Markovian in a state variable if that variable
+summarizes all information from the past that is relevant to the future.
+For leaky integrate-and-fire (LIF) neurons
+\citep{lapicque1907,abbott1999,burkitt2006}, driven by an external
+scalar input, the membrane potential together with the input history
+constitutes the state; with a fixed input schedule the membrane potential
+alone is a sufficient statistic in the sense that identical potentials
+with identical future inputs produce identical futures.  Working-memory
+models at the population level instead maintain content through
+attractor or delay activity \citep{goldmanrakic1995,durstewitz2000,
+compte2000,hopfield1982}, while recurrent sequence models exhibit
+temporal state through hidden dynamics \citep{elman1990,maass2002,
+jaeger2001}.  For a single neuron, whether history enters the transition
+law at all, and whether the scalar potential remains a sufficient
+projection, is an empirical question that a state-collision experiment
+can answer directly: two histories that lead to (nearly) identical
+membrane potentials are injected with an identical probe; if the
+next-state potentials diverge, the scalar potential is not a sufficient
+state and the projection onto it is not a consistent (lumpable)
+reduction \citep{kemeny1960}.
+
+\subsection{Attention as input-dependent weighting}\label{sec:bkg-attn}
+
+Attention in sequence models computes a normalized, input-dependent
+weighting of values by query--key compatibility
+\citep{vaswani2017,bahdanau2015}; the weights form a Gibbs distribution,
+connecting such weighting to statistical mechanics
+\citep{jaynes1957,gibbs1902}.  In sensory neuroscience, saliency
+weighting describes bottom-up prominence of inputs
+\citep{koch1985,itti1998}, and normalization models describe
+input-dependent gain \citep{reynolds2009}.  Neuromodulatory gain control
+offers a biological analogue of input-conditioned modulation
+\citep{astonjones2005,yudayan2005}.  Predictive-coding accounts treat
+deviation-from-expectation signals as the driver of cortical gain
+\citep{rao1999,srinivasan1982,friston2005,keller2018,bastos2012}, and
+single-cell asymmetric response properties are natural substrates for
+such deviations \citep{laughlin1981}.  TAN instantiates input-dependent
+weighting as a surprise-scaled, Boltzmann-style reweighting of its own
+temporal window; the key theoretical property we later exploit is that
+the surprise variable is a scalar that multiplies every window entry
+uniformly.
+
+\subsection{Routing and content-addressable selection}\label{sec:bkg-routing}
+
+Routing is the ability to direct information from a selected source to a
+consumer based on control signals.  Classical proposals in vision route
+attended locations into an invariant representation
+\citep{olshausen1993}, mixture-of-experts models route inputs to experts
+through a gating network \citep{jacobs1991,shazeer2017,fedus2022}, and
+mechanistic analyses of transformers interpret attention heads as
+content-addressable key--value lookups that implement induction and
+copying behaviour \citep{elhage2021,olsson2022}.  Binding -- linking a
+selected content to a role or query -- has been associated with
+feature-integration \citep{treisman1980}, correlation/synchrony
+\citep{von_der_malsburg1995,von_der_malsburg1986,singer1995,fries2005},
+and, in cellular terms, with dendritic and circuit mechanisms
+\citep{london2005,larkum2013,spruston2008}.  An important interpretive
+caution applies to all of these literatures: observed weight values are
+not by themselves demonstrations of routing or explanation
+\citep{jainwallace2019,serranosmith2019,wiegreffe2019}; a weighting
+mechanism must be shown to change \emph{which content} is selected as a
+function of a control signal, not merely how strongly a fixed content is
+weighted.
+
+\subsection{Mechanistic identifiability}\label{sec:bkg-ident}
+
+When a task can be solved through unintended shortcuts -- fixed
+positional memory, amplitude cues, or query--label correlations -- a
+measured advantage of one architecture over another cannot be attributed
+to the mechanism under study.  Mechanistic identifiability requires that
+(i) simpler storage/integration mechanisms cannot solve the task through
+linear readouts, (ii) the mechanism of interest is observable (e.g.\ the
+attention weights themselves), and (iii) counterfactual manipulations
+(permuting positions, values, queries) change the mechanism in the
+direction predicted by the scientific claim.  This paper applies this
+audit discipline to every layer of the hierarchy above; negative audit
+outcomes are treated as mechanistic results, not as experimental
+failures.

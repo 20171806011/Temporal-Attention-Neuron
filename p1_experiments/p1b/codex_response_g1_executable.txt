@@ -1,0 +1,66 @@
+## G1-Executable: REQUEST CHANGES — approval withheld
+
+Determination date: September 19, 2026.
+
+All three submitted SHA-256 hashes match exactly. I independently reran `python -B test_p1b_g1_fixtures.py`; it exited successfully and reproduced your results, including the approximately 1.6-minute runtime extrapolation. The upstream generator and static-model hashes also match the frozen P1-A manifest.
+
+However, **the passing suite does not establish full conformance to Protocol v2.6**. I found one definite implementation error and several material gaps in the executable verification.
+
+### Findings requiring closure
+
+1. **G1.8 — Bootstrap endpoints violate the frozen specification.**
+
+   [The implementation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b_v2.py:455) selects zero-based indices `50` and `1950` when `B=2000`: the **51st and 1951st** sorted replicates. [Protocol §7.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:220) explicitly requires the **50th and 1950th**, corresponding to indices `49` and `1949`.
+
+   Using the fixture’s synthetic-data construction with the registered seed and `B=2000`, I obtained:
+
+   - Required interval: `[0.0483786782303, 0.0533890029703]`
+   - Implemented interval: `[0.0483852222288, 0.0533964014935]`
+
+   This is not merely formatting: a synthetic threshold-crossing example changes the limitation decision at `0.05`. Correct the indexing and add an exact known-answer test at the registered replicate count. The present bounds-only test even passes when bootstrap output is replaced with the constant interval `(0.0, 0.1)`.
+
+2. **G1.2/G1.8 — Confirmatory scheduling and decision enforcement are not demonstrated.**
+
+   [G1.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:97) generates just one history per \(N\) and checks candidate counts. It does not verify the complete sampling plan, shared histories across models/delays, or independent role probing.
+
+   [The decision test](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:403) assigns `m1_acc = 0.58` and evaluates a local `if`; it does not exercise a production decision function.
+
+   The submission needs an auditable runner/evaluator with integration tests enforcing the six cell-specific tables, baseline prerequisites, strict equivalence margin, abstention-aware delivery, unconditional composition error, and history-preserving pooled bootstrap. Neither those guarantees nor the 96,000/192,000 execution counts follow from the present tests.
+
+3. **G1.4 — Registered calibration is never exercised.**
+
+   [The factorial fixture](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:216) substitutes `A_0_test = 0.25`. The suite imports the calibration function but never calls it. I confirmed that the entire suite still passes when calibration is replaced in memory with a function that raises immediately.
+
+   Verify the actual seeded 500-history calibration, 1,000 OLS observations, `167/167/166` delay allocation, encoding-average definition, and frozen coefficients shared across ablations. Complete the event-offset assertions for \(u,r,A\), including every active event, and the registered residual-driving-force logging.
+
+4. **G1.3a — The asserted leakage criterion is not Wilson-interval containment.**
+
+   The suite computes and prints Wilson intervals, but [asserts fixed absolute-deviation limits](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:146) of `0.045` and `0.040`.
+
+   For example, **540/1,000 successes at \(N=2\)** passes the current guard, although its Wilson interval is approximately `[0.509015, 0.570679]`, excluding the registered null `0.579861`.
+
+   Assert the specified containment directly and retain its stochastic-alert classification. Your observed seeded results do satisfy containment; this finding concerns the guard, not evidence of leakage in those runs.
+
+5. **G1.6/G1.7 — Important fixtures can pass with the relevant implementation broken.**
+
+   [G1.7](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:364) tests a separately written Euler recurrence. It still passes when the production `euler_step` is replaced with a raising stub. The production routine passed my independent numerical check, but the registered fixture does not protect that behavior.
+
+   [G1.6b](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:335) verifies boundary exclusion and silence, not non-silent reconstruction. The entire suite still passed after I replaced non-silent count and latency predictions with `12345.0` in memory.
+
+   Add production-path numerical checks, positive actual-spike decoding cases, and an explicit raw spike-count-cap assertion.
+
+6. **G1.9 — Resource and output-provenance requirements remain unverified.**
+
+   [The benchmark](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:420) times M1 encoding plus one role using wall-clock time. It does not cover both roles, analysis/output work, CPU-time accounting, peak RAM, or output-manifest generation and verification.
+
+   The timing is encouraging, but it does not close the registered resource/provenance gate. Supply a representative end-to-end smoke benchmark and demonstrate the SHA-256 output-manifest workflow without launching the full confirmatory run.
+
+### Formal disposition
+
+- **G1-Design v2.6: remains APPROVED** for the locked protocol.
+- **G1-Executable: NOT APPROVED; changes required.**
+- **Full 96,000-episode confirmatory simulation: remains blocked.**
+
+These findings require implementation and validation corrections, not a scientific redesign. Resubmit the corrected executable artifacts with new hashes, the expanded fixture report, frozen calibration outputs, and runner/provenance evidence.
+
+No project files were modified. The legacy sketch and full confirmatory simulation were not executed.

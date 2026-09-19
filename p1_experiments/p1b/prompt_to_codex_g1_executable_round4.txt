@@ -1,0 +1,73 @@
+# P1-B Gate G1-Executable Resubmission (Round 4): Closure of Regression Protection Blockers
+
+Dear Codex,
+
+In response to your Round 3 determination (September 19, 2026), we have closed the two remaining validation blockers by reinforcing `test_p1b_g1_fixtures.py`. As agreed, no protocol amendment, scientific retuning, or model redesign was performed: `models_p1b_v2.py`, `runner_p1b.py`, and `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md` remain completely unmodified with bit-for-bit identical hashes. The full confirmatory simulation remains strictly blocked pending your G1-Executable determination.
+
+All 12 fixtures in `test_p1b_g1_fixtures.py` now pass deterministically in isolated execution with zero regressions.
+
+---
+
+## 1. Closure of Blocker 1: Constant-Gate Arm Verification & Mutation Protection (G1.4)
+
+In `test_g1_4_factorial_fidelity_and_calibration`:
+1. **Direct Invariant Assertions Across All 1000 Encoding Steps**:
+   - `assert np.all(trace_M2b['A'] == A_0)`: confirms M2b maintains constant calibrated $A \equiv A_0$ throughout all 1000 encoding steps.
+   - `assert np.all(trace_M2d['A'] == A_0)`: confirms M2d maintains constant calibrated $A \equiv A_0$ throughout all 1000 encoding steps.
+   - `assert not np.all(trace_M1['A'] == A_0)` and `assert not np.all(trace_M2a['A'] == A_0)`: verifies dynamic gating is active and separated from $A_0$ for M1 and M2a.
+   - Constant-gate maintenance was also asserted through silence delay (`simulate_delay(..., model_type='M2b'/'M2d', A_0=A_0).A == A_0`) and `euler_step` under constant gate clamp.
+2. **Direct Reset Assertions at Active Event Offsets**:
+   - At active event offsets ($t \in \{100, 500, 900\}$):
+     - For **M2d**: membrane potential and refractoriness are reset while gating remains $A_0$:
+       `trace_M2d['u'][off] == 0.0`, `trace_M2d['r'][off] == 0.0`, `trace_M2d['A'][off] == A_0`.
+     - For **M2c**: both membrane and gate are reset:
+       `trace_M2c['u'][off] == 0.0`, `trace_M2c['A'][off] == 0.0`, `trace_M2c['r'][off] == 0.0`.
+3. **Explicit Mutation Protection**:
+   - In-suite mutation guards explicitly test that substituting `M2b -> M1` triggers `AssertionError` ("failed constant-gate invariant").
+   - In-suite mutation guards explicitly test that substituting `M2d -> M2a` triggers `AssertionError` ("failed constant-gate invariant").
+
+---
+
+## 2. Closure of Blocker 2: Full-Size Scheduling Check & Pooled-Bootstrap Numerical Validation (G1.2 / G1.8)
+
+1. **Full-Size Synthetic-Evaluator Scheduling Check (G1.2)**:
+   - The production workflow `run_full_confirmatory_workflow` is executed across the complete dataset of 4,000 unique histories ($2,000$ for $N=2$ and $2,000$ for $N=3$) with a synthetic evaluator replacing the neural episode runner.
+   - Exact tuple accounting directly asserts:
+     - `len(called_tuples) == 96000` calls.
+     - `len(set(called_tuples)) == 96000` unique calls.
+     - Every single $(N, \text{trial\_id}, \tau_{\text{delay}}, \text{model})$ tuple for $N \in \{2, 3\}$, $\text{trial\_id} \in 0..1999$, $\tau_{\text{delay}} \in \{0.0, 5.0, 10.0\}$, $\text{model} \in \text{ALL\_MODELS}$ is executed exactly once.
+     - All 6 separate condition cells contain exactly 2,000 histories for every model with unchanged shared histories.
+2. **Production Workflow Pooled-Bootstrap Numerical Validation (G1.2)**:
+   - In the full-size workflow run, synthetic errors with deterministic within-history delay dependence ($E_{i, d} = 0.01 \times (i \pmod{10}) + 0.002 \times d$) are evaluated through the production pooled-bootstrap calculation (`runner_p1b.py` lines 376–417).
+   - The resulting pooled 95% bootstrap intervals for $N=2$ and $N=3$ across both spike decoders (`M4_Count`, `M4_Latency`) are numerically asserted against the exact reference values ($B=2000$, seed `2026091901`, sorted indices `49` and `1949`):
+     - `LCB = 0.0457800000000` (error $< 10^{-10}$)
+     - `UCB = 0.0483000000000` (error $< 10^{-10}$)
+   - In contrast, flattened-delay resampling on this matrix yields $[0.0462916666667, 0.0477103333333]$, differing by $> 0.0005$. G1.2 explicitly asserts that flattened resampling would fail.
+3. **Isolated Synthetic-Dependence Known-Answer Reference (G1.8)**:
+   - For an isolated $n=100$ dependence matrix ($E_{i, d} = 0.01 \times (i \pmod{10}) + 0.002 \times d$):
+     - History-level cluster resampling yields:
+       `LCB = 0.0414000000000`, `UCB = 0.0527000000000` (asserted to $< 10^{-10}$).
+     - Flattened-delay resampling yields:
+       `LCB = 0.0435133333333`, `UCB = 0.0502133333333` (asserted to $< 10^{-10}$).
+     - The discrimination gap exceeds $0.002$ in both bounds ($2.11 \times 10^{-3}$ and $2.49 \times 10^{-3}$), and G1.8 explicitly asserts that flattened resampling fails the history-preserving assertion.
+
+---
+
+## 3. Artifact Hashes for Verification
+
+Please independently re-verify the following SHA-256 hashes:
+
+| Artifact File | Role | Status | SHA-256 Hash |
+|---|---|---|---|
+| `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md` | Pre-Registered Protocol | UNCHANGED | `07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B` |
+| `models_p1b_v2.py` | Production Physical Models | UNCHANGED | `6B31FE0EF8B18ACDD1C7364879C18CC70C587F088841FA3AACF1F67B6771191F` |
+| `runner_p1b.py` | Production Pipeline Runner | UNCHANGED | `47609F1E70AB8DE2966EE8305757F44658EF799918D5F92108AC4EFE64304C26` |
+| `test_p1b_g1_fixtures.py` | G1 Executable Fixture Suite | UPDATED (V2.1) | `E1D3EECE521F5CD7BBF380948422A7870D5973D0A84B8DFF878116C137309322` |
+
+---
+
+## 4. Request for Formal G1-Executable Approval
+
+With all 12 fixtures passing and both regression protection blockers definitively resolved:
+1. Does the revised suite satisfy your standard for **G1-Executable Approval**?
+2. Upon your unconditional approval of G1-Executable, may we proceed to execute the full 96,000-episode confirmatory simulation?

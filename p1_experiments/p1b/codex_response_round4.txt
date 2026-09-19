@@ -1,0 +1,187 @@
+## G1-Design v2.2: REQUEST CHANGES — approval withheld
+
+The fixed episode mapping, independent repeated probes, endpoint renaming, and scoped codec-reference statement are accepted. The scope and factorial design do not need another redesign.
+
+However, v2.2 still contains an overextended proposition, incorrect null-based validity claims, and a collision fixture that does not establish its stated approximate-delivery boundary. These affect what the executable gates would certify.
+
+I reviewed the complete local file. **No files were changed, and no models or fixtures were run.**
+
+### 1. Proposition 6.1 must be restricted to events entering with zero gate
+
+The [proposition](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:123) currently states that **any** event with \(K_i\le1.4\) produces \(A(t)=0\).
+
+That is false when an earlier event has opened the gate. During a subsequent zero-novelty event,
+
+\[
+A(t)=A(t_i)e^{-(t-t_i)/\tau_A}.
+\]
+
+If \(A(t_i)>0\), the gate remains positive, and the later event’s value can enter the membrane through \(A(t)(K_i+V_i)\).
+
+The correct statement is:
+
+> Under M1’s initialization and no-bypass input contract, the first active event is erased whenever its key is at or below 1.4. More generally, this applies to an event that begins with \(A(t_i)=0\) and receives zero novelty throughout its presentation.
+
+The \(7/12\) population bound survives this correction because its argument concerns the **first active event**. Its assumptions must retain independent values, uniformly selected distinct requests, and no alternative access to the erased value.
+
+Also, the separated-key generator is reflection-symmetric about 1.4; separation conditioning does not preserve an exactly uniform marginal key density. Symmetry is sufficient for the required probability \(1/2\).
+
+Please call this a **model-specific information-erasure bound**, not an inherent physical limitation of all surprise-gated leaky carriers.
+
+### 2. Both proposed validity floors are below the corresponding registered query-blind nulls
+
+The [null and floor section](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:145) correctly gives the \(N=2\) delivery null, but still uses the old identity-based null for \(N=3\).
+
+For the same fixed-order, distinct-candidate control used by the [frozen implementation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/models.py:123), under independent uniform values and uniformly requested distinct ordered targets:
+
+| Condition | Query-blind joint **delivery** probability | Proposed floor |
+|---|---:|---:|
+| \(N=2\) | \(167/288\approx0.57986\) | 0.50 |
+| \(N=3\) | \(62/243\approx0.25514\) | 0.25 |
+
+For completeness, the \(N=3\) calculation follows by enumerating the six possible ordered requests. Writing
+
+\[
+p=P(|V_1-V_2|<0.5)=\frac{23}{144},
+\]
+
+and
+
+\[
+r=P(|V_1-V_2|<0.5,\ |V_2-V_3|<0.5)
+=\frac{67}{2592},
+\]
+
+gives
+
+\[
+P_{\mathrm{blind},3}=\frac{1+3p+2r}{6}
+=\frac{62}{243}.
+\]
+
+These are analytical calculations, not simulations.
+
+**Neither floor establishes performance above this registered null.** G1.3 must also use the appropriate \(N\)-specific null rather than applying \(167/288\) indiscriminately.
+
+There is a separate scope issue: v2.1 required 0.80/0.40; v2.2 lowers those thresholds after the erasure bound was identified, while §6 commits not to lower thresholds to hide the result. A prospective amendment is possible, but it changes the question being validated.
+
+Two defensible choices are:
+
+- Preserve the earlier performance criterion and register the predicted insufficiency of M1.
+- Explicitly register a lower-performance mechanistic audit, without describing its floors as superiority to the current query-blind control.
+
+If a different memoryless null is intended, define and derive it separately. Do not substitute one null for another through the phrase “pure chance.”
+
+### 3. The collision fixture uses incorrect weights and compares the wrong value separation
+
+There are two independent problems in the [collision annex](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:174).
+
+**First, the stated \(c_i\) is not the exact coefficient of the registered Euler recurrence.**
+
+For step size \(h\), no spikes, and the specified old-state update,
+
+\[
+u_{n+1}
+=\lambda u_n+\frac{h g_A}{\tau_m}A_n(K_i+w_VV_i),
+\qquad
+\lambda=1-\frac{h}{\tau_m}.
+\]
+
+The value coefficient at encoding completion is
+
+\[
+c_i=
+\frac{h g_Aw_V}{\tau_m}
+\sum_{n\in\mathcal E_i}
+A_n\lambda^{N_T-1-n},
+\]
+
+where \(\mathcal E_i\) contains the integration steps belonging to event \(i\), and \(N_T=T_{\mathrm{enc}}/h\).
+
+An ordinary event-average gate multiplied by one exponential is not this discrete coefficient. It cannot support a machine-precision collision assertion without an additional derivation.
+
+**Second, the relevant separation is between the same requested operand in two histories.**
+
+The fixture changes
+
+\[
+V_1=-1.5 \quad\longrightarrow\quad V'_1=-1.0.
+\]
+
+Their \(0.50\)-tolerance acceptance intervals overlap. For example, the identical output \(-1.25\) succeeds for both histories.
+
+The fact that \(V_1\) and \(V_2\) differ by 3 **within one history** is irrelevant to this particular collision argument.
+
+Required correction:
+
+- Freeze the event positions and compute coefficients from the actual registered recurrence.
+- Construct histories \(H,H'\) with identical full state but
+  \[
+  |V_j(H)-V_j(H')|>1
+  \]
+  for the same requested target \(j\).
+- Verify legal value bounds and the no-spike assumption over both entire encoding trajectories.
+- If retaining a smaller perturbation, label it an exact non-injectivity demonstration only—not a proof of failure at tolerance 0.50.
+
+A candidate construction could use \(\Delta V_1=1.5\), with the compensating second-value perturbation computed from the exact coefficients. It still needs its bounds and subthreshold conditions established before being frozen.
+
+### 4. Decoder timing and silence semantics remain inconsistent
+
+The [timeline](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:73) permits observations strictly within the half-open window, while the [analog decoder](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:99) reads \(u(T_{\mathrm{cue}}+10\text{ ms})\), its excluded endpoint.
+
+This does not necessarily add elapsed latency, but it leaves the permitted observable and reset phase undefined. Specify either:
+
+- the left-limit/pre-reset analog observation at the deadline, explicitly authorized for the analog path; or
+- the last included discrete sample.
+
+Then define its correspondence to `u_cand`, reset processing, and excluded boundary spikes.
+
+The affine equation itself is now clear. Keep it exactly that equation: \(q\) is listed as an allowed decoder input but is not used by the formula. Remove that extra permission or explicitly state that the decoder does not use it.
+
+The [spike decoder rules](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:106) also need reconciliation:
+
+- The six-level count code associates count zero with the first reconstruction, \(-2.5\).
+- The common silence rule instead assigns zero spikes to fallback \(0\) and abstention.
+
+Choose one policy. If count zero is abstention, describe the actual count channel as having five valid delivery symbols plus abstention—not six valid midpoint reconstructions.
+
+Finally, abstention can always count as failed **delivery**, but the ordinary absolute-error formula need not be positive on every abstained trial. State the rule precisely:
+
+> Abstention is unsuccessful delivery; the registered fallback is retained when calculating unconditional MAE; abstention rate is reported separately.
+
+Do not imply that MAE itself contains an additional failure penalty unless such a penalty is explicitly defined.
+
+### 5. G1.7 must validate the solver actually used by the carrier
+
+The model equations in [§2.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:35) still prescribe Euler updates. The revised [accuracy gate](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:181) tests RK4.
+
+The RK4 benchmark is acceptable as a reference check, but passing it does not validate the Euler carrier.
+
+Choose and document one arrangement:
+
+- **Euler carrier:** validate its actual recurrence against analytical cases with first-order error expectations; use RK4 as an independent reference.
+- **RK4 carrier:** amend the carrier integration specification, including coupled gate updates and hybrid-event handling.
+
+Use the full-precision analytical expression \(0.5(1-e^{-0.5})\), not the printed eight-decimal approximation, for refinement tests. Also define behavior when refinement reaches the floating-point error floor.
+
+### 6. A few claimed implementation details are still absent from the governing file
+
+These should be closed in the same amendment:
+
+- **Calibration seed:** `2026091999` appears in your message but not in v2.2. Add it, together with the calibration \(N\)/delay mixture, role pooling, and exact averaging convention for \(A_0\).
+- **Paired interval:** [§7.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:155) does not operationally define \(\hat\phi\), its boundary cases, or where continuity correction enters. “Discordant pair correlation” is not enough to implement the algorithm.
+- **Statistical edge cases:** include known-answer tables with constant marginals and entirely concordant mixed outcomes. If raw sample correlation is inserted into the displayed formula, the balanced table \(n_{11}=n_{00}=50,\ n_{10}=n_{01}=0\) gives a degenerate interval \([0,0]\). Verify the intended corrected procedure rather than letting finite agreement automatically certify population equivalence.
+- **Bootstrap:** freeze the interval construction, not only its confidence level, seed, and replicate count. Preserve both probes from a history together in resampling.
+- **Causal wording:** the intervention resets both \(u\) and \(r\). The permitted conclusion must name that joint intervention unless the irrelevance of the refractory reset has been established.
+
+## Disposition
+
+**G1-Design: not approved. G1-Executable: not run. Full simulation: still blocked.**
+
+The next revision should correct the proposition, null/floor interpretation, and fixture oracle—not add models or search for settings that make M1 pass. A negative-boundary audit remains a valid scientific outcome.
+
+The \(7/12\) result is retained under its original assumptions. What is not accepted is its extension to every low-key event or to surprise-gated carriers generally.
+
+Reviewed SHA-256:
+
+`1bcddd72cf1fdcebc59ee5a20d99c6a77c213859719a4956160757d9161a0053`

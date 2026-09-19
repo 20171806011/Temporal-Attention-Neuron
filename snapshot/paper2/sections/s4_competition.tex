@@ -1,0 +1,164 @@
+% ==========================================================================
+% Paper 2 — Section 4: Competition Without Routing. The E-I Necessity
+% Counterexample (TAN-II Sprint 4.1, frozen).
+% ==========================================================================
+\section{Competition Without Routing: The E-I Necessity Counterexample}
+\label{sec:competition}
+
+The first candidate degree of freedom above scalar saliency is opponent
+competition: an excitatory--inhibitory microcircuit with Dale's sign
+discipline. This section reports the frozen Sprint 4.1
+ablation ladder C1$\to$C2$\to$C3$\to$C4 and its two outcomes: opponent
+topology suffices, by an analytic open-set theorem, for nonmonotonic
+selective tuning---\emph{without any attention at all}; and it does
+nothing whatsoever to the routing boundary.
+
+\subsection{The opponent mechanism and its open-set theorem}
+\label{sec:opponent}
+
+Consider the static opponent readout on a scalar input $x\in[0,x_{\max}]$,
+\begin{equation}
+R(x)=[w_E x-\theta_E]_+ - g\,[w_I x-\theta_I]_+,
+\qquad w_E,w_I,\theta_E,\theta_I,g\ge0,
+\label{eq:opponent}
+\end{equation}
+the instantaneous (pre-leak) form of the two-cell circuit used in §4.3.
+Its three regimes have slopes $0$ (silence, $x<\theta_E/w_E$),
+$w_E>0$ (excitation only), and $w_E-g\,w_I$ (both active). The frozen
+inequalities single out the regime in which the second slope is negative.
+
+\begin{theorem}[E-I nonmonotonicity]
+\label{thm:EI}
+Let
+$U=\{(w_E,w_I,\theta_E,\theta_I,g):\ \theta_E/w_E<\theta_I/w_I<x_{\max},
+\ g\,w_I>w_E\}$. For every parameter point in the open set $U$, the
+readout \eqref{eq:opponent} has a strict local maximum at
+$x^*=\theta_I/w_I$: the left slope is $w_E>0$ and the right slope is
+$w_E-g\,w_I<0$. The maximum is strict and persists under the leaky
+embedding $h^*(x)=R(x)/(1-\lambda)$ with $0\le\lambda<1$.
+\end{theorem}
+
+\begin{proof}
+On $(\theta_E/w_E,\theta_I/w_I)$ only the first branch is active, so
+$R(x)=w_E x-\theta_E$ with slope $w_E>0$; on
+$(\theta_I/w_I,x_{\max})$ both branches are active and
+$R(x)=(w_E-g w_I)x-\theta_E+g\theta_I$ with slope $w_E-g w_I<0$ by the
+second inequality of $U$. Continuity at $x^*$ follows from
+$[w_I x^*-\theta_I]_+=0$, so $R$ is a continuous, piecewise-linear map that
+rises into $x^*$ and falls away from it: a strict local maximum. Division
+by the positive constant $1-\lambda$ preserves the sign of every slope.
+\end{proof}
+
+With the frozen constants $(w_E,w_I,\theta_E,\theta_I,g)=
+(0.5,1.0,0.4,1.0,0.8)$ the conditions read
+$0.8<1.0<3.0$ and $0.8\cdot1.0>0.5$, the peak sits at $x^*=1.00$ with
+height $h_E^*=0.200$, and the leaky slopes are $+1.0$ and $-0.6$
+(rising slope $w_E/(1-\lambda)$, falling slope
+$(w_E-g w_I)/(1-\lambda)$, $\lambda=0.5$).
+
+\begin{remark}
+The theorem is the paper's first necessity counterexample: it certifies
+that a local tuning peak exists in a configuration with \emph{zero
+attention}, zero surprise gating, and zero temporal organization. Any
+later observation of nonmonotone selectivity inside an attended
+configuration therefore \emph{cannot} be attributed to attention unless
+the attended rungs change the peak itself.
+\end{remark}
+
+\subsection{The C1--C4 ablation ladder: what attention actually adds}
+\label{sec:ladder41}
+
+The frozen four-rung ladder instantiates the operator O1 of §2.4 inside
+the conditional fixed-point readout of Lemma~\ref{lem:state}: C1, the
+static E-I LIF (drives $[w_E x_t-\theta_E]_+$, $[w_I x_t-\theta_I]_+$, no
+surprise, no window attention); C2, the \TAN{} with surprise gating and
+forced uniform attention ($\alpha_i\equiv1/W$); C3, asymmetric attention
+(E-branch attends, I-branch integrates uniformly); C4, the full classical
+E-I \TAN{} (both branches with independent surprise and attention). The
+pre-registered monotonicity criterion P1 (finite-difference sign flip plus
+curvature, tolerances $10^{-3}$/$2\times10^{-3}$/$5\times10^{-3}$, spike
+adjacency excluded) was applied to the conditional fixed point
+$h_E^*(x^*)$ over the probe range $x^*\in[0.2,3.0]$ (57 points,
+$\delta=0.05$), and every prediction was frozen before the run.
+
+The frozen verdicts: C1 \textbf{PASS} (peak at $x^*=1.00$, height
+$0.200$, prominence $0.100$, curvature $-0.11$, post-peak suppression slope
+$-0.600$ with $R^2=1.0$, maximal suppression $1.200$); C2 \textbf{FAIL}
+(climb-then-plateau: maximum $0.5595$ at $x^*=1.80$ decaying only to
+$0.5344$ at $3.0$, a $0.025$ plateau modulation below the curvature
+tolerance); C3 \textbf{FAIL} (monotone climb to $3.8897$ at $3.0$, spike
+onset $2.60$, $15.8\%$ of the scan in the spiking regime); C4
+\textbf{FAIL} (monotone climb to $1.3592$ at $3.0$, subthreshold
+throughout). The episodic-protocol cross-checks reproduce every verdict,
+and the six-layout robustness sweep reproduces them layout by layout
+(C1 PASS, C2--C4 FAIL everywhere). The prediction table was hit $4/4$.
+
+The causal reading is forced by the ladder and is one of the paper's
+central re-definitions. \emph{Nonmonotone selectivity comes from the
+opponent threshold structure (C1), not from attention:} the attended rungs
+C2--C4 do not produce a single strict peak under the frozen criteria.
+What attention demonstrably does at each rung is gain and operating-range
+modulation: the surprise gate rectifies and saturates (C1's negative
+inhibitory tail disappears, replaced by the C2 plateau); E-only attention
+amplifies gain until the unit enters the spiking regime (C3); and
+symmetric E/I attention re-reads the probe through the inhibitory branch
+and pulls the net response back into the subthreshold band (C4). Attention
+is thus a \emph{dynamic gain and operating-point regulator} in this
+substrate---not a source of selectivity, and not a router.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig2_competition}
+\caption{Competition without routing (Sprint 4.1). (a) The C1--C4
+conditional-fixed-point tuning curves: only the static opponent model C1
+exhibits a strict local maximum ($x^*=1.00$, $h_E=0.200$); the attended
+rungs C2--C4 only reshape gain. (b) Conditional fixed-context phase
+planes: the conditional nullclines are the constant lines
+$h_E=h_E^*$, $h_I=h_I^*$; they are \emph{not} an autonomous two-dimensional
+portrait. (c) The counterfactual flip rate is exactly $0.000$ across all
+six layouts and both variants.}
+\label{fig:competition}
+\end{figure}
+
+\subsection{Conditional phase planes, honestly labeled}
+\label{sec:phaseplanes}
+
+For completeness the frozen sprint also froze the conditional vector
+fields: for a frozen history context $X^*$ and a frozen probe $x^*$ the
+drives $A_E(X^*,x^*)$, $A_I(X^*,x^*)$ are constants, so the subthreshold
+flow is the affine contraction
+$h_a(t)=\lambda_a h_a(t-1)+B_a(X^*,x^*)$ with conditional fixed points
+$h_E^*=B_E/(1-\lambda_E)$, $h_I^*=B_I/(1-\lambda_I)$ and conditional
+nullclines that are the \emph{constant lines} $h_E=h_E^*$,
+$h_I=h_I^*$. Every figure in the frozen archive labels these
+``Conditional Fixed-Context Phase Plane'' and states explicitly that they
+are \emph{not} an autonomous two-dimensional phase portrait; different
+probe values translate the affine field rather than deform an intrinsic
+topology, and any probe whose fixed point crosses the spike threshold is
+flagged as a spiking regime. No claim of two-dimensional autonomous
+dynamics is made anywhere in this paper.
+
+\subsection{The routing boundary survives competition}
+\label{sec:flip41}
+
+The counterfactual criterion P2 (fixed history, queries $Q_A=3.0$,
+$Q_B=4.0$, winner = attention argmax over history candidates, two
+variants) was run across all six event layouts. The frozen outcome is
+$\mathrm{FlipRate}\equiv0.000$ in every layout, every variant, and every
+attended model (C3, C4; C1/C2 have no candidate structure and were
+pre-registered as not applicable), while the response magnitude is
+query-sensitive ($\Delta R=+1.827$ for C3, $+0.281$ for C4). The spike
+threshold sweep ($\theta_{\mathrm{sp}}\in\{0.5,1.0,3.0,6.0\}$) documents
+the spiking onsets (e.g.\ C3 at $2.60$ for the default $3.0$; C2/C3/C4 at
+$1.25/1.05/1.05$ for the TAN-I threshold $0.5$) and shows that the
+monotonicity verdicts live entirely in the subthreshold region and are
+threshold-robust. The structural reason for the flat zero is recorded for
+later use: the winner is decided by the kernel's argmax \emph{before} any
+E-I dynamics, and opponent competition acts on the scalar aggregate
+$C=\sum_i\alpha_i v_i$, which cannot reorder candidates. The boundary to
+be crossed is therefore not dynamical but representational, which is
+precisely what the next rung changes.
+
+\[
+\boxed{\ \text{E-I Competition}\ \not\Rightarrow\ \text{Content Routing}\ }
+\]

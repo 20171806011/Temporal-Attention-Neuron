@@ -1,0 +1,110 @@
+% ==========================================================================
+% Paper 2 — Section 3: From State to Geometry. Representation Without
+% Selectivity (TAN-I Phase 1 and Phase 2, frozen).
+% ==========================================================================
+\section{From State to Geometry: Representation Without Selectivity}
+\label{sec:geometry}
+
+This section records the two frozen TAN-I results that anchor the bottom of
+the ladder: the scalar \TAN{} has genuine \emph{memory} (its state is not
+Markov-sufficient), and its attention genuinely \emph{reorganizes} the
+event-locked response geometry---yet neither property grants the unit any
+content selectivity. The numbers are quoted verbatim from the frozen TAN-I
+archive; the section proves nothing new and re-runs nothing.
+
+\subsection{The state question: memory as non-Markovianity}
+\label{sec:state}
+
+The natural-collision experiment of TAN-I Phase~1 asks whether the pair
+$(h_t,X_t)$ can be reduced to $h_t$: whether two histories that produce the
+same instantaneous membrane potential are thereafter indistinguishable.
+Over $N=160{,}000$ simulated histories, four model variants---B1 (leaky
+integrate-and-fire), B2 (LIF with a fixed delay line), B3 (\TAN{} without
+attention, $\alpha_i\equiv1/W$), B4 (the full scalar \TAN{})---and the input
+control C0 were scanned for \emph{natural collisions}: pairs of histories
+whose membrane states coincide while their window contexts differ. For each
+pair a state-separation statistic $K$ measures how far the two futures
+diverge under the identical future input.
+
+The frozen summary is: mean $K$ is $0.5$ \emph{exactly} for B1 (maximum
+deviation $1.8\times10^{-8}$, the Markov bound), $4.47\times10^{3}$
+[95\% CI $3.26$--$5.92\times10^{3}$] for B2, $1.235\times10^{4}$
+[$7.78\times10^{3}$--$1.83\times10^{4}$] for B3, and
+$2.047\times10^{4}$ [$1.12$--$3.57\times10^{4}$] for B4 (with corresponding
+medians of $0.5$, $895.5$, $1369.1$, and $2947.7$), with
+$1{,}500$ pairs analysed per model; the fraction of pairs exceeding the
+Markov scale $K>10^{3}$ is $0\%$ / $46.7\%$ / $56.7\%$ / $73.7\%$, and
+the post-reset Markov-violation rate is $0\%$ / $0.6\%$ / $33.1\%$ /
+$32.2\%$. Two controls certify the attribution: with the surprise gate
+closed, the B4 median collapses to the Markov value $0.5$ (the memory lives
+in the gated context, not in the leak), and a re-synchronisation test on
+$n=843$ fully resynchronised pairs shows the LIF remaining synchronised
+while the \TAN{} variants re-bifurcate. The state-separation statistic
+correlates with the input-driven activity difference
+(Pearson $r(\mathrm{JSD},\Delta A)=0.87$--$0.89$, $p<10^{-300}$).
+
+We state the frozen consequence as a lemma.
+
+\begin{lemma}[State insufficiency of the scalar TAN]
+\label{lem:state}
+The projection $\pi:(h_t,X_t)\mapsto h_t$ is not lumpable for the frozen
+scalar TAN (B4): there exist histories $X_t\neq X'_t$ with
+$h_t=h'_t$ whose conditional futures differ. Equivalently, the effective
+state of the unit includes history content beyond the membrane potential;
+the system must be treated as history-dependent throughout, and every
+``phase portrait'' constructed below is conditional on a frozen history
+context.
+\end{lemma}
+
+Lemma~\ref{lem:state} certifies the first rung: the substrate has memory
+(primitive P1 of §2.2). It also licenses the conditional-vector-field
+methodology used in §4: nothing downstream may pretend the scalar unit is
+an autonomous low-dimensional system.
+
+\subsection{The geometry question: event-locked effective dimension}
+\label{sec:effdim}
+
+TAN-I Phase~2 asked the next question in ladder order: granted memory and
+saliency weighting, does attention \emph{reorganize} the unit's response
+space? The frozen protocol locks the response to an event and measures an
+effective response dimension $d_D$ of the event-locked fluctuation
+covariance, together with its log-trace $\log\operatorname{Tr}$ as a scale
+statistic (seeds 20260904--06, $T=5{,}000$, $n=374$ events). The frozen
+event-velocity values are: B4 (full \TAN{}) at its content-rich frame zF
+reaches $d_D=2.089$ [95\% CI $1.87$--$2.30$], versus B3 (no attention)
+$d_D=1.484$ [$1.42$--$1.53$]; the plain LIF B1 and the input control C0
+sit at $1.674$ and $1.055$. The amplitude-control ladder (raw /
+stratified / residual) gives B4-zF $2.089$ / $2.250$ / $2.280$, and the
+B4$-$B3 contrast survives all three amplitude controls
+($+0.605$ / $+0.742$ / $+0.782$). In scale units the event log-trace is
+$3.58$ nats for B4-zF versus $2.48$ nats for B3-zF (absolute difference
+$+1.09$ nats); the frozen audit's paired delta statistic is
+$\Delta\log\operatorname{Tr}(\mathrm{B4}-\mathrm{B3},\mathrm{zF})
+=1.355$ nats. The effect peaks at lag $\tau\approx4$--$6$ (content-rich
+windows, peak $d_D\approx2.89$), not at the first pulse, and decays with
+an e-folding time $\tau_e=5.4$ [$4.6$--$6.3$] for B4 versus $8.5$
+[$6.1$--$10.6$] for B3: attention sharpens and \emph{shortens} the
+event-locked response.
+
+One negative control is decisive for the ladder. In the shared frame where
+B1 and B4 are compared on equal footing, B4 is \emph{not} above B1---the
+attention gain is a reorganization relative to the attentionless \TAN{},
+not a dimension premium over the bare LIF. We carry this asymmetry forward:
+it is the first instance of the paper's rule that a geometric change must
+not be read as a capability change without a boundary test.
+
+\subsection{Interpretation discipline: effective rank is not intrinsic
+dimension}
+\label{sec:discipline}
+
+The frozen archive is explicit about what Phase~2 does \emph{not} license.
+$d_D$, the log-trace, and the spectra are estimator-level descriptions of
+local fluctuation covariance; they are \emph{not} intrinsic manifold
+dimensions, and no capacity conclusion follows from them. Attention
+reshapes the event-locked response geometry---it does not, by that fact,
+select content. The correct summary of the bottom two rungs is therefore:
+memory (Lemma~\ref{lem:state}) and saliency weighting are realized, their
+joint effect on the response space is real and measurable, and
+\emph{selectivity is absent}: nothing in §3 reorders any candidate under
+any query. The wall that separates this state of affairs from routing is
+the subject of §4--§5.

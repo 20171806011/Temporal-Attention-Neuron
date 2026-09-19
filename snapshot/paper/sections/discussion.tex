@@ -1,0 +1,101 @@
+% ============================ 6. Discussion =============================
+\section{Discussion}\label{sec:discussion}
+
+\subsection{What scalar temporal attention does compute}
+\label{sec:disc-what}
+
+Taken together, the frozen results characterize TAN as
+\begin{equation*}
+  \boxed{\text{prediction-error gating} \;+\;
+    \text{history dependence} \;+\;
+    \text{scalar temporal saliency weighting}.}
+\end{equation*}
+The state-collision experiments establish history dependence and show it
+to be conditional on surprise: in gate-closed episodes the dynamics
+collapse to exact LIF contraction, and in gate-open episodes the
+windowed context is re-coupled into the membrane through an
+attention-weighted current.  The geometry experiments show that this
+re-coupling has an observable, event-locked signature in the effective
+rank and covariance scale of the response representation, and that
+adaptive attention adds structure beyond uniform temporal integration in
+the frame that contains the attention coordinates.  The retrieval
+experiment provides constrained evidence that such structure can support
+target-relevant readout in content-rich windows, relative to the
+no-attention control, in a task whose fixed-position layout
+structurally favours a passive delay line (B2).
+
+\subsection{What scalar temporal attention does not compute}
+\label{sec:disc-whatnot}
+
+The same body of evidence shows what the minimal kernel does not
+provide.  In the shared observable coordinates, TAN does not possess a
+higher effective rank of event responses than LIF; effective-rank
+expansion is generic to history-carrying units.  On a fixed-position
+retrieval task, a passive delay line outperforms attention variants.
+And in the identifiability audit, the scalar kernel failed every
+routing gate: attention focus did not follow the query, the
+target/distractor contrast was inverted, and holding history fixed while
+switching the query never changed which history tap was attended.  The
+architecture therefore does not implement content-addressable
+$Q$--$K$ routing, and semantic binding is not established by any result
+in this paper.
+
+\subsection{Why attention weighting is not routing}\label{sec:disc-why}
+
+The mechanistic reason is the factorization of Section~\ref{sec:model-scalar}:
+with a scalar surprise $S_t$, attention logits are a common scalar times
+the window values, so their \emph{relative ordering} is a property of the
+input amplitudes alone.  A query that enters only through $S_t$ can
+modulate how sharply the distribution concentrates -- a gain-like,
+saliency-like operation -- but cannot determine \emph{which} historical
+item is selected.  Weighting strength and content selection are
+therefore different operations, consistent with the interpretive
+literature on attention weights in general \citep{jainwallace2019,
+serranosmith2019,wiegreffe2019}: observed weights can be read as
+explanations or routing decisions only if the mechanism is shown to
+change selected content under a control signal.
+
+\subsection{Representation complexity is not computational selectivity}
+\label{sec:disc-complexity}
+
+A recurrent theme across phases is that richer state structure does not
+by itself confer selective computation.  Phase~2 showed representational
+reorganization in attention-bearing coordinates; Probe~1 showed that a
+fixed memory baseline can outperform attention on a storage-aligned
+task; Probe~2 showed that a scalar weighting mechanism with nontrivial
+history dependence cannot select content by query.  These results
+caution against inferring computational capability from state or
+representation complexity alone \citep{chungabbott2021,gaoganguli2015},
+and against treating dimensionality-like statistics as intrinsic
+capacity measures \citep{facco2017}.  We make no complexity theorem here;
+the empirical point is that the layers of the hierarchy in
+Section~\ref{sec:intro} must each be verified directly.
+
+\subsection{Relation to dynamical systems}\label{sec:disc-dyn}
+
+From a dynamical-systems perspective, TAN is a non-autonomous,
+input-driven map whose contraction is conditional on a prediction-error
+gate: leaky decay guarantees boundedness \citep{lohmiller1998,
+strogatz2014}, while windowed updates make the effective state
+higher-dimensional and the one-step divergence of near-colliding states
+reflect the local expansion of the driven map.  Reset re-bifurcation
+shows that the spiking readout does not erase the windowed memory,
+connecting the single-neuron setting to delay- and
+attractor-based memory accounts \citep{compte2000,durstewitz2000,
+elman1990}.  Standard nonlinear time-series tools (embedding, effective
+dimension) \citep{takens1981,grassberger1983,kennel1992,facco2017,
+bandt2002} motivated our observable choices, but we report only
+estimator-level statistics (effective rank, log-trace, spectra) with the
+caveats stated in Section~\ref{sec:limitations}.
+
+\subsection{Implications for multi-neuron architectures}\label{sec:disc-org}
+
+The mechanistic boundary of the scalar kernel identifies what an
+organizing principle would need to add: a mechanism in which a query can
+change the \emph{relative} compatibility of candidate memories.
+Candidate organizational directions -- distinct from the present results
+-- include multiple dendritic compartments \citep{london2005,larkum2013,
+spruston2008}, opponent/excitatory--inhibitory circuits, lateral
+inhibition and competitive microcircuits, and phase- or synchrony-based
+binding \citep{von_der_malsburg1995,singer1995,fries2005}.  All such
+directions are future hypotheses; none is tested or claimed here.

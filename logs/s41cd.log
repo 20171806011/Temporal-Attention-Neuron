@@ -1,0 +1,52 @@
+==================================================================================================
+TAN-II Sprint 4.1-C/D automated audit (pre-registration: docs/TANII_SPRINT4_1CD_THEORY.md)
+==================================================================================================
+grid: x* in [0.2, 3.0] step 0.05 (57 points); default spike threshold 3.0; script sha256 324548198e50f604...
+--------------------------------------------------------------------------------------------------
+model P1(fp)      P1(epis)    spike onset SI       x_peak    FWHM      suppr slope  pred->obs
+C1   PASS        PASS        -           -1.500   1.00      -         -0.600       PASS->PASS HIT
+C2   FAIL        FAIL        -           1.000    -         -         -            FAIL->FAIL HIT
+C3   FAIL        FAIL        2.60        1.000    -         -         -            FAIL->FAIL HIT
+C4   FAIL        FAIL        -           1.000    -         -         -            FAIL->FAIL HIT
+--------------------------------------------------------------------------------------------------
+P1 detail on the fp curve:
+  C1: verdict PASS; valid: x=1.00, h=0.2000, prom=0.1000
+      inconclusive: none; spike fraction 0.000; episodic verdict PASS
+  C2: verdict FAIL; valid: none
+      inconclusive: none; spike fraction 0.000; episodic verdict FAIL
+  C3: verdict FAIL; valid: none
+      inconclusive: none; spike fraction 0.158; episodic verdict FAIL
+  C4: verdict FAIL; valid: none
+      inconclusive: none; spike fraction 0.000; episodic verdict FAIL
+--------------------------------------------------------------------------------------------------
+P2 counterfactual argmax flip (Q_A=3.0 vs Q_B=4.0, 6 layouts):
+  L01 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L01 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  L02 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L02 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  L03 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L03 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  L12 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L12 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  L13 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L13 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  L23 C3: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+1.8270
+  L23 C4: flip(history)=0 flip(full-window)=0 winner@QA=B winner@QB=B dR=+0.2806
+  aggregate FlipRate(history) = 0.0000; FlipRate(full-window) = 0.0000
+  (C1/C2: pre-registered N/A - no attention candidate space)
+--------------------------------------------------------------------------------------------------
+Spike-threshold sweep (fp >= threshold): onset x* per model
+  th_sp=0.5: C1->- C2->1.25 C3->1.05 C4->1.05
+  th_sp=1.0: C1->- C2->- C3->1.35 C4->1.45
+  th_sp=3.0: C1->- C2->- C3->2.60 C4->-
+  th_sp=6.0: C1->- C2->- C3->- C4->-
+--------------------------------------------------------------------------------------------------
+P1 robustness across 6 layouts (fp curves):
+  L01: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+  L02: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+  L03: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+  L12: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+  L13: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+  L23: C1:PASS C2:FAIL C3:FAIL C4:FAIL
+==================================================================================================
+outputs written to: C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\s41cd

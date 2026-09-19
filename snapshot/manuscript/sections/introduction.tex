@@ -1,0 +1,39 @@
+\section{Introduction}\label{sec:intro}
+
+\subsection{Background and the Dual-Track Dilemma}
+
+Contemporary computational science and artificial intelligence are unfolding along two rather distinct trajectories. On the one hand, at the macroscopic level of cognitive and engineering applications, Transformer architectures built upon self-attention have attracted widespread attention~\cite{vaswani2017,brown2020,lin2022survey}. Large language models, multimodal generative systems, and related models exhibit powerful long-sequence modeling and context-representation capabilities. However, their operation relies on highly abstract spatial-algebraic mappings and substantial computational resources, and they do not naturally incorporate the continuous-time dynamics and event-driven spike transmission that characterize biological nervous systems~\cite{hassabis2017,markram2015}.
+
+On the other hand, at the microscopic, biophysically constrained level, spiking neural networks are often regarded as a third generation of neural network models~\cite{maass1997}. Classic formulations such as the leaky integrate-and-fire (LIF) neuron and Hodgkin--Huxley models offer relatively clear physical interpretability and metabolic efficiency~\cite{gerstner2014}. Nevertheless, many traditional neuron models are built upon ordinary differential equations with largely Markovian dynamics---the current state depends only on the immediately preceding state and the present input---which can limit their ability to capture complex temporal patterns and long-range temporal dependencies~\cite{eshraghian2021}. In noisy environments, conventional LIF networks tend to accumulate signal amplitude passively and may therefore suffer from noise integration, making it difficult for them to spontaneously exhibit higher-level sensory gating behavior~\cite{davies2018,frenkel2023}.
+
+In summary, deep learning at the macroscopic scale has acquired non-Markovian mechanisms (such as attention) for handling temporal dependencies, yet it operates with relatively few biophysical constraints. Conversely, microscopic computational neuroscience adheres more strictly to physical principles but still faces challenges when attempting to reproduce advanced temporal prediction or adaptive functions within minimal models. This situation prompts the question of whether there exists a way to combine the strengths of both perspectives.
+
+\subsection{The Core Research Question}
+
+This leads to an important question: can the attention and prediction mechanisms underlying the Transformer architecture be reformulated as a biologically interpretable neuronal computation at the single-cell level, rather than merely serving as specialized engineering solutions for tasks such as natural language processing?
+
+Predictive coding theory in cognitive neuroscience suggests that the brain does not merely passively respond to external stimuli; rather, it actively infers the causes of sensory inputs by continuously minimizing the prediction error (or ``surprise'') between internal expectations and incoming sensory signals~\cite{friston2010,keller2018,rao1999,friston2017}. This process---computing errors based on past experience and adaptively allocating processing resources---bears a formal resemblance to the query-key-value attention matching logic employed by Transformers. The free-energy framework has been extended into a general principle of active inference, formalising the brain as a self-evidencing system that minimises variational free energy across perception, action, and learning~\cite{friston2017}.
+
+Building on these observations, the present study explores a minimalist approach: taking the temporal attention logic and nonlinear processing ideas from Transformers and mapping them onto the dynamics of a single neuron. Our hypothesis is that, by doing so, it may be possible to introduce a local non-Markovian memory window into a neuron while still respecting core biophysical constraints (such as a leak term and a threshold-spike mechanism), and to then examine whether simple, adaptive behaviors can emerge from this combination.
+
+\subsection{Contributions}
+
+To examine this hypothesis, this paper proposes the Temporal Attention Neuron (TAN), a model that incorporates a temporal attention mechanism and asymmetric rectification into the dynamics of a conventional spiking neuron. On top of the membrane potential equation used in LIF neurons ($h_t = \lambda h_{t-1} + A_t$), TAN defines a deviation-from-history signal based on a local temporal window, and employs a query-key-value structure together with nonlinear gating to generate the dynamic synaptic current $A_t$. This design endows a single neuron with a current computation that depends on both historical statistics and the local deviation signal, effectively blending a Markovian physical substrate with a non-Markovian temporal receptive field.
+
+The contributions of this paper are:
+
+\begin{enumerate}[label=(\arabic*), leftmargin=2.5em, itemsep=0.2em]
+    \item \textbf{A minimalist single-neuron attention model.} We formulate TAN, a single-neuron architecture that combines temporal surprise, QKV-like contextual weighting, and spike generation. To our knowledge, this represents an early and minimal formulation of such a combination at the single-neuron level. The model adds only five scalar parameters to LIF, requires no backpropagation, and operates with $O(W)$ complexity per step.
+
+    \item \textbf{Emergent dynamics at two scales.} We show that habituation, sparse sensory gating under noise, and adaptive niche localization emerge from the dynamics of this system---at both the single-neuron level (\S\ref{sec:emergent-single}) and the single-agent level (\S\ref{sec:emergent-agent})---without any hard-coded adaptation module or pre-programmed navigation algorithm.
+
+    \item \textbf{Systematic experimental evaluation.} Across 50 random seeds, TAN achieves lower error than LIF on the two stochastic tasks with very large effect sizes ($p<10^{-30}$, $|d|>5$); on the two deterministic tasks, trajectories are identical across seeds and no statistical test is applicable, but TAN still achieves lower final error. TAN matches trained RNN and GRU baselines on three of four tasks \textit{without any training}; ablation results are consistent with a functional specialization of the three internal modules; and parameter sweeps show relatively broad plateaus on TAN's unique parameters ($\lambda$, $\beta$) (\S\ref{sec:evaluation}).
+
+    \item \textbf{Dynamical and information-theoretic analysis.} A fixed-point proof shows that the zero-membrane state is an attracting fixed point under sustained constant input, providing a dynamical mechanism for habituation; a 2D state-space projection shows that trajectories converge toward the origin under constant and stationary input; and a three-layer information cascade $I(z; S) \to I(z; A) \to I(z; y)$ shows that mutual information between noise and the spike output is lower than between noise and the internal current, consistent with information loss introduced by the downstream nonlinear gating and spike-generation stages (\S\ref{sec:dynamics}).
+
+    \item \textbf{Theoretical connection.} We note that TAN's attention weights take the form of a Gibbs distribution, providing a connection between the softmax operation and statistical mechanics~\cite{jaynes1957,boltzmann1868,gibbs1902,bahri2020}. This suggests a possible link between QKV-like temporal weighting and deviation-driven gating as computational principles, though we do not claim formal mathematical equivalence between TAN and a Transformer.
+\end{enumerate}
+
+% ============================================================
+% 2. Related Work
+% ============================================================

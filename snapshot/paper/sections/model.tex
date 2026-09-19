@@ -1,0 +1,117 @@
+% ======================== 3. The TAN model ============================
+\section{The Temporal Attention Neuron}\label{sec:model}
+
+\subsection{Definition}\label{sec:model-def}
+
+TAN is a discrete-time single-neuron model.  At time $t$ the neuron
+maintains a temporal receptive field over the last $W$ inputs,
+\begin{equation}
+  \mathcal{X}_t = [\,x_{t-W+1},\,x_{t-W+2},\,\dots,\,x_t\,],
+\end{equation}
+with $x_t \in \mathbb{R}$ a scalar input.  The local mean
+\begin{equation}
+  \mu_t = \frac{1}{W}\sum_{i=1}^{W} x_{t-W+i}
+\end{equation}
+defines the rectified surprise (prediction-error-like deviation),
+\begin{equation}
+  S_t = [\,x_t - \mu_t - \varepsilon\,]_+,
+\end{equation}
+where $[\cdot]_+$ denotes rectification and $\varepsilon \geq 0$ is a
+noise tolerance.  A query, key and value are obtained by linear maps of
+the surprise and of the window,
+\begin{equation}
+  Q_t = W_q S_t, \qquad K_{t,i} = W_k\,x_{t-W+i}, \qquad
+  V_{t,i} = W_v\,x_{t-W+i},
+\end{equation}
+and Boltzmann attention logits and weights are
+\begin{equation}
+  E_{t,i} = Q_t K_{t,i}, \qquad
+  \alpha_{t,i} = \frac{\exp(\beta E_{t,i})}
+  {\sum_{j=1}^{W}\exp(\beta E_{t,j}) + 10^{-9}} .
+\end{equation}
+The attention-weighted context is
+\begin{equation}
+  C_t = \sum_{i=1}^{W} \alpha_{t,i} V_{t,i},
+\end{equation}
+and the gated synaptic current is
+\begin{equation}
+  A_t = \tanh(S_t)\,C_t .
+\end{equation}
+The membrane potential evolves as
+\begin{equation}
+  h_t = \lambda\, h_{t-1} + A_t ,
+\end{equation}
+with the spiking readout
+\begin{equation}
+  y_t = \Theta(h_t - \theta), \qquad h_t \leftarrow 0 \text{ if }
+  y_t = 1 .
+\end{equation}
+The frozen parameters used throughout this paper are
+$W = 5$, $\lambda = 0.5$, $\theta = 0.5$, $W_q = 2.0$, $W_k = W_v = 1.0$,
+$\beta = 1.0$, $\varepsilon = 0.0$, with the $10^{-9}$ softmax offset.
+The receptive field is zero-padded at trial onset and $h_0 = 0$.  The
+architecture and information flow are summarized in
+Figure~\ref{fig:architecture}.  All model parameters, conventions and
+implementation parity checks are recorded in the frozen research archive
+accompanying this paper (see Data and Code Availability), and the
+reference implementation is \texttt{code/model/tan.py} in that archive.
+
+\subsection{Effective state and projection}\label{sec:model-state}
+
+Because the input stream is scalar and the receptive field is a finite
+window, the natural state of TAN is the pair
+\begin{equation}
+  \mathbf{s}_t = (h_t, \bar{X}_t), \qquad
+  \bar{X}_t = (x_{t-W+2},\dots,x_t),
+\end{equation}
+together with the readout convention, and the scalar membrane potential
+is the projection $\pi(h,\bar X) = h$.  Whether $\pi$ is a sufficient
+(lumpable) reduction is an empirical question that Phase~1
+(Section~\ref{sec:methods-phase1}) addresses with a natural-collision
+protocol: if two histories with $\pi$-identical states
+($h_{T-1}^{(A)} \approx h_{T-1}^{(B)}$) can be driven apart by one
+identical probe, the transition law depends on more than $h$ and the
+projection is not lumpable \citep{kemeny1960}.
+
+\subsection{Surprise-gated temporal weighting is scalar}\label{sec:model-scalar}
+
+A structural property of the frozen kernel is central to this paper.
+At a fixed time step the attention logits factorize as
+\begin{equation}
+  E_{t,i} = \beta W_q W_k\, S_t \, x_{t-W+i}
+  = \gamma_t\, x_{t-W+i},
+  \qquad \gamma_t = \beta W_q W_k S_t \in \mathbb{R},
+\end{equation}
+that is, a common scalar $\gamma_t$ times the window values.  Whenever
+$S_t > 0$ (hence $\gamma_t > 0$),
+\begin{equation}
+  \arg\max_i E_{t,i} = \arg\max_i x_{t-W+i},
+\end{equation}
+so the attention ranking of history entries is determined by their
+amplitudes, and the current surprise only sets a common temperature.  A
+query that enters the model \emph{only through} $S_t$ can therefore
+change attention sharpness but not the relative ordering of historical
+entries.  This factorization is the theoretical precheck behind
+Probe~2 (Section~\ref{sec:methods-probe2}): with the frozen kernel,
+query-conditioned reordering of history is structurally excluded as long
+as the query acts only through the scalar surprise.
+
+\subsection{Comparison models}\label{sec:model-compare}
+
+Four models share the same spiking readout ($\theta = 0.5$,
+$\lambda = 0.5$, reset on spike) and the same scalar input:
+\begin{itemize}
+\item \textbf{B1 (LIF):} $h_t = \lambda h_{t-1} + x_t$; no window use.
+\item \textbf{B2 (LIF + fixed delay line):} $h_t = \lambda h_{t-1}
+  + \mathbf{w}^{\top}\mathcal{X}_t$ with fixed recency weights
+  $w_i = i/\sum_j j$; passive, position-invariant linear memory.
+\item \textbf{B3 (TAN without attention):} uniform weights
+  $\alpha_{t,i} = 1/W$, so $C_t = \mu_t$; surprise gating retained.
+\item \textbf{B4 (Full TAN):} the model of
+  Section~\ref{sec:model-def}.
+\end{itemize}
+A no-dynamics control (\textbf{C0}) consists of input-derived features
+only.  All implementations are equation-identical to the reference model
+code; vectorised experiment implementations are parity-checked against
+the scalar reference implementation (worst deviation $1.5\times10^{-10}$
+in $h$; spike agreement exact).

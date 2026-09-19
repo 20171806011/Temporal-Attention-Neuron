@@ -1,0 +1,149 @@
+% ==========================================================================
+% Paper 2 — Section 7: Binding and Readout Discreteness. The First
+% Orthogonal Axis (TAN-II Sprint 4.2-D, frozen).
+% ==========================================================================
+\section{Binding and Readout Discreteness: The First Orthogonal Axis}
+\label{sec:wta}
+
+Section 6 ended at a structural wall: softmax weighting keeps every
+candidate weight strictly positive, so the attended value is always a
+convex mixture and exact delivery is impossible at any finite temperature
+(Proposition~\ref{prop:mixing}). This section adds the single degree of
+freedom that crosses the wall---operator O4, the readout selection family
+$\alpha_i(\gamma)=\operatorname{softmax}_i(\gamma\cdot\mathrm{logit}_i)$
+with $\gamma\in[1,\infty]$, whose $\gamma=\infty$ limit is the one-hot
+winner-take-all (WTA)---and records what the frozen Sprint 4.2-D found:
+exactness lives \emph{only} in the discrete limit, and the sharpening
+ladder leaves routing statistics exactly untouched. The latter fact is the
+paper's first orthogonal axis.
+
+\subsection{The sharpening ladder}
+\label{sec:gammaladder}
+
+The frozen audit swept $\gamma\in\{1,2,5,10,100,\infty\}$ on the canonical
+binding history of §6 ($V_A=5$, $V_B=9$, queries $3.0$/$4.0$), with
+$\gamma=1$ reproducing the Sprint 4.2-C model exactly (continuity check).
+Three families of quantities were pre-registered and all checks ($77/77$)
+passed:
+
+\begin{itemize}
+\item \emph{Softness decays but survives every finite gain.} The
+event-normalized softness distance falls monotonically,
+$D_{\mathrm{ev}}(3):\ 1.7427\to1.4938\to0.8609\to0.2798\to
+2.3\times10^{-11}$, and is strictly positive at every finite $\gamma$
+(softmax strict positivity), while $D=0$ holds exactly at $\gamma=\infty$:
+exact value delivery is a property of the one-hot limit alone.
+\item \emph{Transfers converge to the bound values.}
+$T_{\mathrm{ev}}$ runs $-0.4129\to-0.8156\to-1.8814\to-3.0251\to
+-3.999999\to-4$ and $T_{\mathrm{full}}$ likewise ends at $-4$: the readout
+converges to the selected value at both queries, and the value-swap
+antisymmetry $T_{\mathrm{swap}}=-T$ is verified at \emph{every} rung to
+$10^{-12}$.
+\item \emph{The routing statistics are exactly flat.} The event-winner
+flip rate is $0.444527$ at every $\gamma$ (quadrature, $\gamma$-invariant)
+and the winners are (A,B) throughout: sharpening changes \emph{how
+discretely} the winner is delivered, never \emph{which} winner is
+selected.
+\item \emph{The no-routing controls deliver nothing under hard
+selection.} At $\gamma=\infty$ the single-winner model M0 reads the
+constant winner ($9,9$ on the event candidates) and, on the full window,
+the probe slot wins and delivers its zero value ($0,0$); the sign control
+M1 delivers $(9,5)$ on the event candidates but $(0,0)$ on the full
+window; the unnormalized control likewise collapses. Hard selection is
+not a repair for missing routing.
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig4_binding}
+\caption{Decoupling binding from discreteness (Sprints 4.2-C/D). (a) The
+soft-binding readout transfers winner-aligned value and the value-swap
+counterfactual is exactly antisymmetric ($T_{\mathrm{swap}}=-T$ to
+$10^{-12}$), while the softness distance stays positive. (b) The WTA
+sharpening ladder: the softness collapses to zero only in the one-hot
+limit, while the routing flip rate stays exactly flat ($0.444527$)---the
+first orthogonal axis, routing selectivity $\perp$ readout discreteness.}
+\label{fig:binding}
+\end{figure}
+
+\begin{proposition}[Argmax invariance under sharpening]
+\label{prop:sharpinv}
+For every $\gamma>0$,
+\[
+\operatorname{argmax}_i\operatorname{softmax}_i(\gamma e_i)=
+\operatorname{argmax}_i e_i .
+\]
+Consequently all argmax-level routing statistics---winners, flip rates,
+and swap antisymmetries---are invariant along the sharpening ladder, while
+the readout discreteness changes from fully soft ($\gamma=1$) to fully
+discrete ($\gamma=\infty$).
+\end{proposition}
+
+Proposition~\ref{prop:sharpinv} together with the measured flatness of the
+flip rate formalizes the first orthogonal axis of the paper:
+\emph{routing selectivity $\perp$ readout discreteness}. A model's ability
+to reorder candidates and its ability to deliver a symbol are independent
+organizational degrees of freedom; no amount of sharpening buys routing,
+and no amount of routing buys discreteness.
+
+\subsection{The E-I pathway crossing}
+\label{sec:pathway}
+
+The transmission audit of §6 found the E-I circuit inverting the
+value-transfer direction at $\gamma=1$ ($+0.2367$; Amendment AM4). The
+frozen ladder resolves that inversion: the drive transfer runs
+$+0.2367\to+0.2516\to+0.0157\to-1.0541\to-3.8034\to-3.8674$, crossing zero
+at the pre-registered bisection root $\gamma^*=5.098015$ where the net drive transfer
+changes sign ($T_{\mathrm{drive}}=0$), thereby restoring the positive value-transfer
+direction for all $\gamma > \gamma^*$, and settling at
+the hard limits $A_E(\infty,3)=1.1134$, $A_E(\infty,4)=4.9809$. The
+mechanism is transparent in the frozen outputs: once WTA pins the
+inhibitory branch to its own winner (value $5$ at both queries), the
+inhibitory term stops re-reading the increasing value channel, and the
+excitatory branch's transfer ($5\to9$) re-dominates. The precise statement
+carried forward is the one frozen in §6: E-I organization does not
+implement binding; it \emph{reshapes the effective value-transfer pathway
+after} query-conditioned routing---and WTA changes which pathway shape is
+realized.
+
+\subsection{The single-head bottleneck}
+\label{sec:bottleneck}
+
+The last frozen result of the section is a bottleneck, stated here as the
+bridge to composition.
+
+\begin{proposition}[Single-head bottleneck]
+\label{prop:singlehead}
+A single attention head with a scalar readout delivers, at each instant, one scalar mixture
+$y = \sum_i \alpha_i v_i$ of candidate values. While a single head can evaluate symmetric
+scalar pooling functions over candidates (for example, uniform weighting yielding the arithmetic
+mean $\frac{1}{2}(V_A+V_B)$, which downstream scaling can map to $V_A+V_B$), its scalar output
+channel cannot simultaneously deliver two distinct, independently bound operands $(V_A, V_B)$
+to downstream general or non-symmetric algebra (e.g., $V_A - V_B$). At $\gamma=\infty$, the readout
+collapses to a single discrete symbol $v_{\mathrm{winner}}$. Hence exact delivery of \emph{one}
+bound value does not provide general two-operand composition: $\text{Exact Delivery}\not\Rightarrow
+\text{Composition}$.
+\end{proposition}
+
+The identifiability audit already anticipated the trap this bottleneck
+creates. With $V_A=0$, the single-winner model's composition error
+vanishes ($|V_B-(0+V_B)|=0$) although its binding error does not
+($E_{\mathrm{bind},A}=|V_B|>0$): the three-error joint audit of §2.5 flags
+the configuration as \textsc{composition fail} and only the dual-channel
+model passes the same configuration genuinely ($E_{\mathrm{bind}}=0$ and
+$E_{\mathrm{comp}}=0$). This zero-value trap is retained as one of the
+eight counterfactuals of §8.
+
+\subsection{Honest notes on exactness}
+\label{sec:notes7}
+
+Two caveats are frozen with the results and repeated here. First, the
+full-window softness $D_{\mathrm{full}}(3)$ is \emph{not} monotone: it
+overshoots and crosses zero at $\gamma\approx1.1978$---a cancellation
+artifact in which the residual value of the loser compensates the mass
+lost to the silent slots, while the event-normalized softness remains
+$\approx1.5$ (frozen Amendment AM5). That zero is not hard binding and is
+reported as such. Second, exactness belongs to the limit: every finite
+$\gamma$ is soft, so ``hard binding'' is realized here as the
+$\gamma=\infty$ limit of a frozen mechanism family, not as a finite
+parameter setting. Both caveats carry into the claim ledger of §10.

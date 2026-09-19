@@ -1,0 +1,16 @@
+\begingroup\setlength{\tabcolsep}{8pt}\small\begin{tabular}{@{}llcl@{}}
+\toprule
+parameter & value & symbol & note \\
+\midrule
+window length & 5 & $W$ & receptive field \\
+leak & 0.5 & $\lambda$ & membrane decay \\
+threshold & 0.5 & $\theta$ & spike threshold \\
+query weight & 2.0 & $W_q$ & linear map \\
+key weight & 1.0 & $W_k$ & linear map \\
+value weight & 1.0 & $W_v$ & linear map \\
+inverse temperature & 1.0 & $\beta$ & softmax \\
+noise tolerance & 0.0 & $\varepsilon$ & dead zone \\
+softmax offset & $10^{-9}$ & --- & denominator \\
+reset rule & $h_t\!\leftarrow\!0$ & --- & after spike \\
+\bottomrule
+\end{tabular}\endgroup

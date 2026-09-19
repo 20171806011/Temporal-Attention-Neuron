@@ -1,0 +1,69 @@
+{
+ "1_query_swap": {
+  "status": "PASS",
+  "y_plus": 14.0,
+  "y_minus": 4.0
+ },
+ "2_value_swap": {
+  "status": "PASS",
+  "y_plus": 14.0,
+  "y_minus": 4.0,
+  "channels": [
+   9.0,
+   5.0
+  ]
+ },
+ "3_key_swap": {
+  "status": "PASS",
+  "y_plus": 14.0,
+  "y_minus": 4.0
+ },
+ "4_channel_output_swap": {
+  "status": "PASS",
+  "y_plus": 14.0,
+  "y_minus": 4.0
+ },
+ "5_am5_trap": {
+  "status": "PASS",
+  "M0": {
+   "E_comp": 0.0,
+   "E_bindA": 5.0
+  }
+ },
+ "6_binding_preserving": {
+  "status": "PASS",
+  "y_shift": 18.0,
+  "legacy": {
+   "3.0": [
+    "A",
+    5.0
+   ],
+   "4.0": [
+    "B",
+    9.0
+   ]
+  }
+ },
+ "7_binding_breaking": {
+  "status": "PASS",
+  "E_bindB": 4.0,
+  "E_comp": 4.0
+ },
+ "8_relational": {
+  "status": "PASS",
+  "ys": {
+   "S1": [
+    14.0,
+    -4.0
+   ],
+   "S2": [
+    5.0,
+    9.0
+   ],
+   "S3": [
+    8.0,
+    -4.0
+   ]
+  }
+ }
+}

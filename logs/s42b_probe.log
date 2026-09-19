@@ -1,0 +1,18 @@
+============================================================================================
+TAN-II Sprint 4.2-B v1 randomized routing probe
+============================================================================================
+MC flip rates vs frozen benchmarks:
+  M0      : bench 0.000000 | MC 0.000000 +- 0.000000
+  M1      : bench 1.000000 | MC 1.000000 +- 0.000000
+  M2      : bench 0.444527 | MC 0.442533 +- 0.004853
+  M2unnorm: bench 0.000000 | MC 0.000000 +- 0.000000
+  M3d3    : bench 0.054937 | MC 0.054267 +- 0.000634
+  M3d4    : bench 0.028391 | MC 0.028367 +- 0.001109
+  M3d8    : bench 0.017159 | MC 0.017800 +- 0.001233
+  M4      : bench 0.000000 | MC 0.000000 +- 0.000000
+  M5E     : bench 0.444527 | MC 0.442533 +- 0.004853
+  M5I     : bench 0.405772 | MC 0.404833 +- 0.001914
+--------------------------------------------------------------------------------------------
+checks: 48 | FAIL: 0
+ALL PROBE CHECKS PASS: ensemble FlipRate_CF matches frozen benchmarks for all models; vector-QK (M2/M5-E) realizes query-conditioned winner flips; scalar models do not; unnormalized control is exactly 0 (AM2).
+outputs written to: C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\s42b_probe

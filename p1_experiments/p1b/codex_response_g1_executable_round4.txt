@@ -1,0 +1,45 @@
+## G1-Executable: REQUEST CHANGES — one validation gap remains
+
+Determination date: **September 19, 2026.**
+
+I independently rehashed all four artifacts before and after review: **every SHA-256 digest matches your table exactly**. The protocol, models, and runner also match the archived Round 3 submission.
+
+All 12 fixtures passed in an isolated copy, both through direct execution and through pytest. However, the claimed protection of **unchanged shared histories** is not yet implemented.
+
+### Corrections verified and accepted
+
+- **G1.4:** The constant-gate and event-offset assertions pass. Independently substituting `M2b → M1` or `M2d → M2a` now fails G1.4. The previously rejected reset substitutions remain rejected. Additional checks confirmed constant gating through encoding, all registered delays, and both cue probes.
+- **Pooled bootstrap:** The production workflow reproduces `[0.0457800000000, 0.0483000000000]` for both \(N\) levels and both spike decoders. An independent integer-sum calculation reproduced your history-level and flattened reference intervals at both sample sizes. Replacing production history-level resampling with flattened-delay resampling now fails G1.2.
+- **Scheduling:** The synthetic workflow executes all 96,000 expected tuples exactly once. My separate content-aware check also confirmed that the **unmodified implementation** preserves shared histories.
+
+### Remaining blocker: G1.2 checks history labels, not history contents
+
+The [synthetic evaluator](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:170) records only `(N, trial_id, delay, model)` and derives its response from `trial_id`. It never checks the actual history supplied.
+
+The subsequent [“unchanged shared histories” section](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:212) checks only result counts. Its `base_dataset` variable is unused.
+
+I tested the consequence with an in-memory mutation at the production cell evaluator:
+
+- Only **M2a** received a cyclic permutation of the active operand values.
+- Corresponding targets and arithmetic ground truth were recomputed, leaving a valid but different history.
+- `N`, trial IDs, keys, masks, event positions, delays, and model labels were preserved.
+
+**All 12 submitted fixtures still passed.** The mutation affected 12,000 synthetic calls and 170 small-sample neural calls. Thus, the suite accepts a violation of the registered shared-history requirement underlying the M1–M2a paired comparison.
+
+The [isolated reproducer](C:/WINDOWS/TEMP/p1b_g1_r4_review_602b58c5025d422ea6f15e8be3f2216e/review_pairing.py) is retained for inspection.
+
+This is a regression-protection gap—not evidence that the frozen production runner currently changes histories.
+
+### Required closure
+
+Within G1.2:
+
+1. Capture immutable, content-level snapshots keyed by `(N, trial_id)` before running the workflow.
+2. At **every synthetic evaluator call**, compare the supplied keys, values, mask, event positions, query/target mapping, and ground truth against the original snapshot. Also verify the original datasets remain unchanged afterward.
+3. Demonstrate that a model-specific or delay-specific history substitution fails even when all tuple labels and counts remain correct.
+
+Only fixture changes and an updated fixture hash are requested. No protocol amendment, scientific retuning, or production-model redesign is needed.
+
+**Formal disposition:** G1-Design V2.6 remains approved. G1-Executable approval is withheld, so the full 96,000-episode confirmatory simulation remains blocked.
+
+All submitted artifacts, the generator, and your original smoke outputs remain unchanged. Neither the full confirmatory neural simulation nor the legacy sketch was executed.

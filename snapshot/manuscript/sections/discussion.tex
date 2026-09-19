@@ -1,0 +1,41 @@
+\section{Discussion}\label{sec:discussion}
+
+The results of the preceding sections carry implications for future cross-disciplinary modelling. This section discusses three broader themes: the Transformer-to-neuron connection, the biological interpretation, and the spike-sparsity implications.
+
+\subsection{Transformer-to-Neuron Connection}
+
+TAN implements a QKV-like temporal weighting mechanism at the single-neuron level. The attention weights $\alpha_{t,i}$ take the form of a Gibbs distribution over the compatibility scores $E_{t,i}$, providing a connection between the softmax operation and statistical mechanics~\cite{jaynes1957,boltzmann1868,gibbs1902,bahri2020}. The query-key-value structure, which in Transformers is implemented by separate matrix multiplications across network layers, is in TAN implemented by the deviation signal (query) interacting with the history window (key/value) through a Boltzmann-weighted compatibility calculation.
+
+We do not claim that TAN is mathematically equivalent to a Transformer or that it constitutes a formal isomorphic reduction. Rather, TAN provides a minimal dynamical analogue of selected computational operations found in Transformer attention, reformulated at the single-neuron scale. This connection suggests that the success of attention mechanisms in deep learning may reflect computational principles that can also be instantiated in biophysically constrained dynamical systems. It also opens the possibility of implementing attention-like computation on neuromorphic hardware using local operations rather than dense matrix multiplications, although a net energy advantage cannot be established without hardware-level energy measurements.
+
+\subsection{Biological Interpretation}
+
+The asymmetric rectification $S_t' = \max(0, S_t - \tau)$ provides a computational analogue of asymmetric response or gating. In biological systems, chemical transmitter concentrations have no ``negative absolute value'', and the opening of ion channels is direction-dependent~\cite{kandel2000}. We do not claim that this nonlinearity is the biological mechanism of receptor asymmetry; rather, it is a computational analogue that serves a similar functional purpose. The ablation study (\S\ref{sec:evaluation}) showed that removing this rectification causes failure: when the agent overshoots the optimal niche and the light starts to dim, the deviation $S_t$ becomes a large negative number, which without nonlinear clipping is treated as a fresh ``large surprise'' causing paradoxical hyper-excitability precisely when the agent should be quiescent.
+
+In the macroscopic Transformer architecture, every self-attention layer is followed by a feed-forward network (FFN) equipped with a nonlinear activation function such as ReLU or GELU~\cite{vaswani2017,lin2022survey}. The ablation result is consistent with the interpretation that the FFN nonlinearity in Transformers is not merely a computational convenience but is needed to transform bidirectional deviation signals into unidirectional adaptive responses.
+
+\subsection{Spike Sparsity and Potential Energy Implications}
+
+TAN is spike-sparse: it fires fewer spikes than LIF under the tested conditions. In biological nervous systems, action potentials are metabolically expensive, accounting for a significant fraction of the total metabolic budget of grey matter~\cite{attwell2001}. The experiments of \S\ref{sec:emergent-single}--\S\ref{sec:emergent-agent} showed that the LIF neuron, although cheap per operation, produces dense spike streams under sustained stimulation or environmental noise. TAN shifts computational effort to the internal attention integration and achieves sparser spiking.
+
+However, a net energy advantage of TAN cannot be established without hardware-level energy measurements. TAN introduces additional internal computation (window storage, QKV operations, attention, gating) that may offset the savings from reduced spiking. The spike-sparsity results are consistent with the broader principle---central to the free-energy framework---that biological brains may minimise surprise to reduce metabolic cost~\cite{friston2010,sengupta2010}, but this consistency does not constitute proof of an energy advantage.
+
+\subsection{Comparison with Trained Models: The Value of Inductive Bias}
+
+The baseline comparison (\S6.2) showed that a Simple RNN trained via imitation learning can match TAN's performance on all four tasks, while a GRU can even exceed TAN on the open-loop noise task. The RNN and GRU baselines are distillation baselines: they were trained to imitate a TAN-generated expert trajectory, not as independent general-purpose trained models. A sceptical reader might conclude that TAN is therefore unnecessary---\textit{just train an RNN instead}. We offer three observations.
+
+First, the RNN's competence is \textit{acquired} through 200 epochs of gradient descent on a TAN-generated expert trajectory. TAN's competence is \textit{native}---it emerges from the model's inductive bias without any training. In a neuromorphic deployment scenario where online adaptation to a new environment is required, TAN can be deployed as-is, while the RNN would require retraining on a new expert demonstration.
+
+Second, the GRU's failure on Task D (closed-loop noisy navigation) is consistent with a distribution-shift problem under closed-loop deployment, although the present experiments do not establish this explanation causally. TAN, by contrast, has no trained policy to overfit---its behaviour emerges online from the dynamical interaction between its attention/gating mechanism and the environmental signal.
+
+Third, the fact that a Simple RNN can be trained to mimic TAN suggests that TAN's input--output mapping is learnable. This indicates that TAN's policy is a clear, simple target for distillation. TAN can serve as a teacher for training recurrent networks, with the trained network inheriting TAN's adaptive behaviour while gaining the ability to scale to larger input dimensions.
+
+\subsection{Connecting Biological and Computational Modelling}
+
+This study focuses on a concrete exercise in mathematical miniaturisation. The results suggest that the core operations of the Transformer architecture---attentional querying and nonlinear rectification---can be combined with the dynamics of a single neuron via a deviation signal and a thermodynamic partition function. This suggests a possible link between QKV-like temporal weighting and deviation-driven gating as computational principles that may span both silicon-based digital networks and carbon-based biological cells. However, we do not claim to have proven this link; the connection is suggestive, not formal.
+
+Miniaturising the statistical algorithms of large models and combining them with physical laws may provide computational neuroscience with new analytical tools, and may offer fresh references for developing future neuromorphic hardware that possesses native environmental adaptability~\cite{roy2019,frenkel2023}.
+
+% ============================================================
+% 9. Limitations and Future Work
+% ============================================================

@@ -1,0 +1,557 @@
+{
+ "prereg": "docs/TANII_SPRINT4_2D_PREREGISTRATION.md",
+ "params": {
+  "omega": 0.4,
+  "c": 2.0,
+  "qA": 3.0,
+  "qB": 4.0,
+  "vA": 5.0,
+  "vB": 9.0,
+  "gammas": [
+   1.0,
+   2.0,
+   5.0,
+   10.0,
+   100.0
+  ],
+  "seeds": [
+   20260904,
+   20260905,
+   20260906
+  ],
+  "N_H": 10000
+ },
+ "checks": [
+  {
+   "name": "M2 g=1.0: winner (A,B) invariant",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: C_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: D_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: D_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: T_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: T_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=1.0: swap antisymmetry exact (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: winner (A,B) invariant",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: C_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: D_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: D_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: T_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: T_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: swap antisymmetry exact (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: D_events monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=2.0: D_full(Q=4) monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: winner (A,B) invariant",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: C_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: D_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: D_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: T_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: T_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: swap antisymmetry exact (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: D_events monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=5.0: D_full(Q=4) monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: winner (A,B) invariant",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: C_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: D_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: D_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: T_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: T_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: swap antisymmetry exact (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: D_events monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=10.0: D_full(Q=4) monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: winner (A,B) invariant",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: C_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: T_events matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: T_full matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: swap antisymmetry exact (1e-12)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: D_events monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100.0: D_full(Q=4) monotone non-increasing (AM5)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "AM5: D_full(Q=3) overshoot shape (1.0 -> 2.0 -> 5.0 up, 10.0 down)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "AM5: C_full(Q=3) crosses V_A at gamma=1.197762904 (cancellation artifact, not hard binding)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=inf: C_full = (5, 9) exact",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=inf: C_events = (5, 9) exact (event-WTA)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=inf: D = 0 (hard binding only in the discrete limit)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=inf: T = -4 exact",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2 g=100: D strictly positive (finite sharpening is soft)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=1.0: T_drive matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=2.0: T_drive matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=5.0: T_drive matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=10.0: T_drive matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=100.0: T_drive matches frozen",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E g=inf: hard drives (1.113437, 4.980861), T_drive = -3.867424",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E: T_drive positive at g=1 (4.2-C inversion) and negative at g=inf (direction restored)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M5-E: gamma* crossing = 5.098014585 (bisection)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M0 g=inf Q=3.0: event-WTA = 9, full-WTA = 0 (probe wins)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M0 g=inf Q=4.0: event-WTA = 9, full-WTA = 0 (probe wins)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M1 g=inf: event-WTA = (9, 5) exact; full-WTA = (0, 0)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2unnorm g=inf Q=3.0: event-WTA = 9, full-WTA = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "M2unnorm g=inf Q=4.0: event-WTA = 9, full-WTA = 0",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble: flip rate invariant = 0.444527 (quadrature)",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=1.0: E|T_full| = 0.586346",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=2.0: E|T_full| = 1.042547",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=5.0: E|T_full| = 1.815325",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=10.0: E|T_full| = 2.406862",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=100.0: E|T_full| = 2.990795",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "ensemble quadrature g=inf: E|T_full| = 3.019684",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260904: E|T_full| = 2.96073 vs 2.990795",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260904: flip rate = 0.44540 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260905: E|T_full| = 2.97088 vs 2.990795",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260905: flip rate = 0.44650 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260906: E|T_full| = 2.97045 vs 2.990795",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=100 seed 20260906: flip rate = 0.43570 vs 0.444527",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=inf seed 20260904: E|T_full| = 2.99320 vs 3.019684",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=inf seed 20260905: E|T_full| = 3.00190 vs 3.019684",
+   "status": "PASS",
+   "detail": ""
+  },
+  {
+   "name": "MC g=inf seed 20260906: E|T_full| = 3.00430 vs 3.019684",
+   "status": "PASS",
+   "detail": ""
+  }
+ ],
+ "ladder": {
+  "gamma_cross3": 1.1977629038494597,
+  "M2_ladder": {
+   "1.0": {
+    "cfull": [
+     4.8905500425407,
+     4.943193255050957
+    ],
+    "dev": [
+     1.7426911979137634,
+     1.8444049223564738
+    ],
+    "dfull": [
+     0.10944995745929997,
+     4.056806744949043
+    ],
+    "tev": -0.41290387972976283,
+    "tfull": -0.052643212510257165,
+    "winner": [
+     "A",
+     "B"
+    ],
+    "tsw": 0.4129038797297637
+   },
+   "2.0": {
+    "cfull": [
+     5.242302770206788,
+     5.267513725259844
+    ],
+    "dev": [
+     1.493761630492199,
+     1.6906819787503382
+    ],
+    "dfull": [
+     0.2423027702067877,
+     3.7324862747401557
+    ],
+    "tev": -0.8155563907574628,
+    "tfull": -0.025210955053056594,
+    "winner": [
+     "A",
+     "B"
+    ],
+    "tsw": 0.815556390757461
+   },
+   "5.0": {
+    "cfull": [
+     5.479412437460321,
+     6.178172922126432
+    ],
+    "dev": [
+     0.8608996204481443,
+     1.2576669427773925
+    ],
+    "dfull": [
+     0.47941243746032125,
+     2.821827077873568
+    ],
+    "tev": -1.8814334367744632,
+    "tfull": -0.6987604846661108,
+    "winner": [
+     "A",
+     "B"
+    ],
+    "tsw": 1.8814334367744632
+   },
+   "10.0": {
+    "cfull": [
+     5.241440963544973,
+     7.463915625550292
+    ],
+    "dev": [
+     0.27980791195899624,
+     0.6951025502684747
+    ],
+    "dfull": [
+     0.24144096354497258,
+     1.5360843744497084
+    ],
+    "tev": -3.025089537772529,
+    "tfull": -2.222474662005319,
+    "winner": [
+     "A",
+     "B"
+    ],
+    "tsw": 3.0250895377725273
+   },
+   "100.0": {
+    "cfull": [
+     5.000000000023174,
+     8.99999930238721
+    ],
+    "dev": [
+     2.3174351326815668e-11,
+     6.775929168867378e-07
+    ],
+    "dfull": [
+     2.3174351326815668e-11,
+     6.976127906455076e-07
+    ],
+    "tev": -3.9999993223839088,
+    "tfull": -3.999999302364035,
+    "winner": [
+     "A",
+     "B"
+    ],
+    "tsw": 3.999999322383908
+   }
+  },
+  "M2_hard": {
+   "cfull": [
+    5.0,
+    9.0
+   ],
+   "cev": [
+    5.0,
+    9.0
+   ]
+  },
+  "M5_ladder": {
+   "1.0": 0.2367004452341499,
+   "2.0": 0.25158375970896873,
+   "5.0": 0.015700161413765734,
+   "10.0": -1.0540929038640816,
+   "100.0": -3.803430109488302
+  },
+  "M5_hard": [
+   1.1134370496518762,
+   4.980861034745127
+  ],
+  "gamma_star": 5.098014584971555,
+  "mc": {
+   "100": [
+    2.9607311809055425,
+    2.9708827393836925,
+    2.9704541986188264
+   ],
+   "inf": [
+    2.9932,
+    3.0019,
+    3.0043
+   ]
+  }
+ },
+ "n_fail": 0,
+ "script_sha256": "e5178f7713386518d4ad4032bd917efe0b9858c66fd147ca4da5c269df749d90"
+}

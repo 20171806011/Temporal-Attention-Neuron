@@ -1,0 +1,46 @@
+% S6
+\section{Supplementary S6: Probe 2 full audit results}
+
+Frozen audit (\texttt{probe2\_\allowbreak{}identifiability\_\allowbreak{}audit.py}, seed 20260904,
+$N=1000$, $W=5$, $\sigma_{\text{noise}}=0.05$; archive:
+\texttt{code/experiments/probe2/identifiability/}).  Status:
+\texttt{TERMINATED / AUDIT\_\allowbreak{}FAILED}.
+
+\textbf{Generator.} Position balance over the four slots (A+B counts
+506/476/492/526, $\chi^2$ $p=0.44$); query--label mutual information
+$I(q;y)\approx 3\times10^{-4}$ ($\chi^2$ $p=0.47$); best single-slot
+balanced accuracy $0.555$ [$0.487,0.625$] (below the 0.58 gate).
+Structural note: at B-coded amplitude values the conditional expectation
+$|\mathbb{E}[V_q \mid x_i]|$ reaches 0.45--0.60 (e.g.\ $x_i = 2.25$
+implies $y=+1$ on the $q=B$ half of trials), so the encoding is not
+strictly leakage-free by the \texttt{}$\mathbb{E}[V_q|x_i]\approx 0$''
+criterion; this is recorded as an encoding-level confound.
+
+\textbf{Audit A (B2 linear readout on $[x_{t-4},\dots,x_t]$).}
+Balanced accuracy $0.7789$ [$0.7236,0.8358$] --- FAIL (red line 0.58).
+\textbf{Audit B (B3 uniform-integration features).} $0.7094$
+[$0.6435,0.7745$] --- FAIL.  Both shortcuts follow from the asymmetric
+key amplitudes: the B-coded event is the largest history tap, and
+decoding its value is correct on the 50\% of trials with $q=B$.
+
+\textbf{Audit C (B4 attention at the query step, four history taps).}
+Hit rate $0.5110$ [bootstrap $0.4810,0.5420$], split hit($q{=}A$)
+$=0.000$, hit($q{=}B$) $=1.000$ --- FAIL ($\geq 0.50$ required at the CI
+bound); target/distractor contrast $R = 0.034$ --- FAIL ($\geq 2.0$
+required); query-conditioned JSD $0.0002$, permutation $p = 0.92$ ---
+FAIL ($p<0.01$ required).  Diagnostic: over the full five-tap window the
+argmax falls on the current (query) tap in 100\% of trials
+(self-attraction), because query amplitudes 3.0/4.0 exceed all history
+codes ($\leq 2.25$).
+
+\textbf{Audit D (counterfactuals).} Query permutation: hit 0.511
+(unchanged); value permutation: 0.511; position-label permutation: 0.276
+(metric sanity); \emph{same history, both query codes}: mean per-trial
+JSD 0.0043 and history-argmax flip fraction \textbf{0.000}.  Changing
+the query never changes the attention winner.
+
+\textbf{Mechanistic layers.} (1) Encoding shortcut (asymmetric key
+amplitudes); (2) scalar-kernel limitation: with
+$E_{t,i} = \gamma_t x_i$ the logit ratio $E_{t,i}/E_{t,j} = x_i/x_j$ is
+query-independent for fixed history; (3) query self-attraction.  Layer 2
+survives any re-encoding while the frozen kernel is unchanged.

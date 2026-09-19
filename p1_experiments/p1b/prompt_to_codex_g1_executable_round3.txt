@@ -1,0 +1,103 @@
+Hello Codex!
+
+We present the updated P1-B Executable Implementation and Validation Suite for formal G1-Executable Approval:
+
+1. Code Artifacts & Cryptographic Locks:
+   - Governing Protocol: `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md`
+     SHA-256: `07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B`
+   - Carrier Model Implementation: `models_p1b_v2.py`
+     SHA-256: `6B31FE0EF8B18ACDD1C7364879C18CC70C587F088841FA3AACF1F67B6771191F`
+   - Production Evaluation Runner: `runner_p1b.py`
+     SHA-256: `47609F1E70AB8DE2966EE8305757F44658EF799918D5F92108AC4EFE64304C26`
+   - Expanded Fixture Test Suite: `test_p1b_g1_fixtures.py`
+     SHA-256: `2840331D21191FD845CD3073C19F415F42312124012AF201202C5418B1BF221F`
+
+2. Systematic Resolution of All 4 Approval Blockers:
+
+   - Blocker 1 (G1.2/G1.8 Workflow Orchestration & Testing):
+     * Implemented `run_full_confirmatory_workflow` in `runner_p1b.py` orchestrating all 6 separate cells across all 8 models.
+     * Enforced pairwise history uniqueness across all 2,000 trial IDs and candidate key vectors for both N=2 and N=3.
+     * Implemented history-preserving, delay-pooled cluster bootstrap resampling at the history index level (B=2000, seed 2026091901, indices 49 and 1949).
+     * Scheduled 6-cell dry run integration test executed and passed: all 6 separate cell reports and pooled bootstrap intervals returned.
+
+   - Blocker 2 (G1.6b Production Actual-Spike Decoding & Cap):
+     * Replaced locally copied evaluation with direct calls to production `simulate_cue_and_readout`.
+     * Tested positive reconstructions for Counts 1 through 5 and multiple latency bins:
+       q = 1.65 -> Count 1: v_hat_cnt = -2.0, v_hat_lat = +2.55
+       q = 3.50 -> Count 2: v_hat_cnt = -1.0, v_hat_lat = -1.05
+       q = 7.00 -> Count 3: v_hat_cnt =  0.0, v_hat_lat = -1.95
+       q = 15.0 -> Count 4: v_hat_cnt = +1.0, v_hat_lat = -2.55
+       q = 40.0 -> Count 5: v_hat_cnt = +2.0, v_hat_lat = -2.85
+     * Boundary spike exclusion (q = 1.58 -> raw spike step 100 excluded -> silence/abstention fallback 0.0) verified.
+     * Inter-spike intervals verified >= 20 steps (2.0 ms).
+     * Stress tests under extreme drives (q = 100, 200, 500) confirm production spike counts are strictly capped at <= 5.
+     * Any in-memory mutation to 12345.0 now fails the test immediately.
+
+   - Blocker 3 (G1.4 Factorial Interventions Strictly Distinguished):
+     * Tested multi-event history with active events at slots 0, 2, 4.
+     * Check A: Asserted M2a preserves gating identically to M1 across all 1000 steps (||A_M1 - A_M2a||_inf == 0.0). In-memory substitution of M2c for M2a fails immediately.
+     * Check B: Asserted M2a clamps membrane u = 0, r = 0 at all active event offsets.
+     * Check C: Asserted positive membrane retention during post-event ISI for M1 (u > 0.10) and M2b (u > 0.05). In-memory substitution of M2d for M2b fails immediately.
+     * Check D: Distinct gating separation between M2a and M2c (max diff in ISI > 0.15).
+     * Check E: Distinct membrane separation between M2b and M2d (max diff in ISI > 0.05).
+     * Actual seeded calibration executed (A_0 = 0.061886726, g_dec = 0.132630817, b_dec = -0.026816484), residual driving force logged: max |Delta I_syn| = 0.406884.
+
+   - Blocker 4 (G1.9 Complete Pipeline Accounting, Peak RAM & Manifest Tamper Detection):
+     * Timed the complete end-to-end pipeline: evaluation + cell analysis + bootstrap + serialization + manifest generation.
+     * Measured CPU time: 1.60 ms per model-episode. Projected total CPU hours for 96,000 episodes = 0.043 hours (<< 2.0 h).
+     * Measured hardware peak RAM (`peak_wset`): 81.5 MB (<< 2,000 MB).
+     * Implemented independent re-hashing in `verify_manifest`.
+     * Executed active tamper-detection test: modified summary on disk, confirmed verifier returned False, reverted file, confirmed verifier returned True.
+     * Smoke output artifacts retained in `p1_experiments/p1b/smoke_artifacts/`.
+
+3. Execution Output of `python test_p1b_g1_fixtures.py`:
+======================================================================
+STARTING P1-B G1 EXECUTABLE FIXTURE VALIDATION SUITE (EXPANDED V2)
+======================================================================
+[G1.0] Verifying Governance & Provenance...
+  -> PASS: Protocol V2.6 SHA-256 confirmed: 07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B
+[G1.1] Verifying State Closure & Concrete Refractory Readout Fixture...
+  -> PASS: Concrete Reachable Refractory Fixture verified (spikes=[81], u_readout=0.0)
+[G1.2] Verifying Complete Confirmatory Workflow Orchestration & History Uniqueness...
+  -> PASS: Confirmatory workflow orchestration, history uniqueness, 6 cell tables & pooled bootstrap confirmed.
+[G1.3a] Executing Leakage Audit (Query-Blind Null)...
+  N=2: observed = 0.5860, analytical null = 0.5799, Wilson 95% CI = [0.5552, 0.6161]
+  N=3: observed = 0.2550, analytical null = 0.2551, Wilson 95% CI = [0.2290, 0.2829]
+  -> PASS: Wilson-interval containment confirmed for both N=2 and N=3.
+[G1.3b] Verifying Task Solvability with Clean Oracle...
+  -> PASS: Clean Oracle achieved 100.0% delivery accuracy (2000/2000).
+[G1.4] Executing Actual Seeded Calibration & Strict Factorial Distinctions...
+  Calibrated A_0 = 0.061886726, g_dec = 0.132630817, b_dec = -0.026816484
+  Residual driving force max |Delta I_syn| = 0.406884
+  -> PASS: Factorial interventions strictly distinguished (gate preservation and membrane retention verified).
+[G1.5] Verifying Exact Linear Subthreshold State Collision Fixture...
+  -> PASS: Collision fixture verified (c2=1.761006e-05, V2'=-0.130767498, ||diff||_inf=2.03e-20)
+[G1.6a] Verifying Analytical Codec Benchmarks...
+  -> PASS: Ideal quantizer references verified (6-bin: 0.3333, 20-bin: 0.1000)
+[G1.6b] Verifying Production-Path Actual-Spike Decoding & Cap (Rejecting Stub Mutations)...
+  -> PASS: Production actual-spike decoding (Counts 1..5, Latency bins, silence, cap <= 5) verified.
+[G1.7] Verifying Euler Numerical Accuracy via Production euler_step...
+  -> PASS: Production euler_step error = 7.622963e-04 (< 1e-3), ratio = 2.0055 (>= 1.8)
+[G1.8] Verifying CRAN Newcombe Tables, Bootstrap Known-Answer & Decision Logic...
+  Counts (50,0,0,50): [-0.016230441, 0.016230441] err < 1e-9
+  Counts (100,0,0,0): [-0.026342721, 0.026342721] err < 1e-9
+  Counts (0,0,0,100): [-0.026342721, 0.026342721] err < 1e-9
+  Counts (0,50,50,0): [-0.162304408, 0.162304408] err < 1e-9
+  Bootstrap Known-Answer at B=2000: [0.0483786782303, 0.0533890029703] exact match!
+  -> PASS: CRAN tables, exact bootstrap known-answer, and production decision logic verified.
+[G1.9] Executing End-to-End Benchmark, Hardware Peak RAM & Manifest Tamper Detection...
+  Executed 480 model-episodes (960 role queries)
+  Wall time: 0.798s, CPU time: 0.766s
+  CPU time per model-episode: 1.60 ms
+  Projected CPU hours for 96,000 episodes: 0.043 hours (<= 2.0 h)
+  Projected wall time: 2.7 minutes
+  Peak RAM: 81.5 MB (<= 2,000 MB)
+  SHA-256 output manifest verified: True
+  Tamper detection test passed: True
+  Smoke artifacts retained in: p1_experiments/p1b/smoke_artifacts
+  -> PASS: Budget, CPU/RAM accounting, manifest verification, and tamper detection confirmed.
+======================================================================
+ALL 12 G1 FIXTURES PASSED: 100% DETERMINISTIC AND STOCHASTIC CONFORMANCE
+======================================================================
+
+We request your formal G1-Executable Approval to proceed to the full confirmatory simulation.

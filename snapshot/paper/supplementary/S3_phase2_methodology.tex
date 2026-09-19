@@ -1,0 +1,48 @@
+% S3
+\section{Supplementary S3: Phase 2 methodology}
+
+\textbf{Observables and frames.} Response trajectories are embedded as
+$z_U = [\mu, S, x]$ (input-only control C0), $z_C = [h,\mu,S,A]$
+(models B1--B4; for B1, $A:=x_t$ is a recorded null convention) and
+$z_F = [h,\mu,S,A,\alpha_1,\dots,\alpha_5,C]$ (B3/B4 only; for B3,
+$\alpha_i \equiv 1/5$ and $C = \mu$ by definition -- a degenerate but
+not noise-filled coordinate set).
+
+\textbf{Standardisation and pooling.} Coordinates are globally
+$Z$-scored per seed (post-burn-in statistics); coordinates with
+$\sigma < 10^{-12}$ are treated as constant and set to zero (counted,
+never noise-filled).  No full covariance whitening is applied.  Because
+per-seed $Z$-scoring assigns arbitrary per-seed levels, quiet blocks and
+the raw-state secondary matrices are centred per seed before cross-seed
+pooling; $\Delta z$ and velocity quantities cancel those levels by
+construction, so all decision variables are unaffected (estimator note
+recorded in the archive log).
+
+\textbf{Event-locked geometry.} Episodes are onset-aligned,
+$\tau \in [-6,30]$; only events with a clean five-step pre-window are
+kept (374 pooled events across three seeds).  Primary response:
+$\Delta z_{e,\tau} = z'_{e,\tau} - \bar z'_{e,\mathrm{pre}}$;
+velocity $v_{e,\tau} = z'_{e,\tau+1}-z'_{e,\tau}$ (same-event adjacent
+increments).  Effective rank $d = \mathrm{Tr}^2/\mathrm{Tr}^2$ of the
+pooled covariance at fixed $\tau$; $\log\mathrm{Tr}$ and eigenvalue
+spectra always accompany $d$ (PR is scale-invariant and cannot detect
+pure amplification).  NaN policy: $n < 30$ or
+$\mathrm{Tr} \le 10^{-12}$ returns NaN (never 1).  Amplitude controls:
+raw pooled; median-split stratification with pooled-within covariance;
+per-coordinate linear residualisation on $\log_{10}$ amplitude.
+
+\textbf{Quiet reference and recovery.} Quiet samples lie $\geq 12$
+steps from any pulse (mutual spacing $\geq 12$).  Recovery is estimated
+on isolated events (next onset beyond $\tau = 30$): $\tau_{1/2}$ on
+$d_D$ and $\tau_{e\text{-fold}}$ from a linear fit of
+$\log\mathrm{Tr}(\tau)$ (requires $\geq 0.3$ nats drop), with event
+bootstrap 95\% CIs.
+
+\textbf{Decision gates (pre-registered).} Event value = mean over
+$\tau \in \{0,1,2\}$; stable expansion $\Delta d_D \geq 0.5$ with CI
+excluding 0.  Outcome A (TAN-specific rank expansion beyond controls)
+requires the full-frame B4 $>$ B3 contrast \emph{and} a shared-frame
+B4 $>$ B1 contrast; outcome B (scale/amplification channel) requires
+$\Delta\log\mathrm{Tr}(\mathrm{B4}) - \Delta\log\mathrm{Tr}(\mathrm{B3})
+\geq 0.2$ nats; the archived gate fell to D (by exclusion) because the
+shared-frame B4 vs.\ B1 leg failed -- recorded, not retuned.

@@ -1,0 +1,46 @@
+% S2
+\section{Supplementary S2: Phase 1 collision analysis details}
+
+\textbf{Stimulus pool.} $N = 160{,}000$ histories of length $T-1 = 9$
+($4\times40{,}000$ per stimulus family: Gaussian white noise, random
+step, ramp, sine), seed 20260726.
+
+\textbf{Collision ensembles (per model).} Pairs with both potentials in
+the subthreshold band $(0.05,\theta)$ at $t=9$ and
+$|h_9^A - h_9^B| < \delta = 10^{-4}$: B1 92{,}600 pairs, B2 19{,}234,
+B3 1{,}633{,}844, B4 1{,}427{,}817; 1{,}500 analysed per model.  The
+band excludes reset-induced $h=0$ coincidences by construction.
+
+\textbf{One-step probe.} An identical probe
+$x^*\sim\mathcal{U}(0.5,3.0)$ was injected at $t=10$; divergence was
+measured on the continuous branch ($u_{10} = \lambda h_9 + A_{10}$)
+because the threshold/reset is a readout discontinuity shared by all
+four models.  Post-reset divergence and spike-outcome classes are
+tabulated separately.
+
+\textbf{Key statistics (frozen).} Mean $K$: B1 $0.5000000$ (exact),
+B2 $4.47\times10^3$ [$3.26,5.92$], B3 $1.235\times10^4$
+[$7.78,1.83$], B4 $2.047\times10^4$ [$1.12,3.57$] (95\% bootstrap).
+$K>10^3$ in 0/46.7/56.7/73.7\% of pairs.  Gate-closed collisions
+($S_{10}=0$, both sides): $K = 0.5$ exactly.  Probe outcomes
+(none/one/both spiked): B1 0/0/100\%; B2 0.1/0.5/99.4\%; B3
+38.9/7.1/54.1\%; B4 33.3/8.6/58.1\%; post-reset violations 0/0.6/33.1/
+32.2\%.  Correlations (B4): Pearson $r(\mathrm{JSD},\Delta A)=0.870$
+(all pairs) and 0.894 (both gates open), $p<10^{-300}$;
+$r(\Delta A,\Delta\tilde h)=1.000$.  Cross-model log-$K$ comparisons:
+B4 vs.\ B3 $p=1.3\times10^{-32}$ (median ratio 2.15), B4 vs.\ B2
+$p=1.3\times10^{-63}$ (3.29), B2 vs.\ B1 $p<10^{-300}$.
+
+\textbf{Reset re-bifurcation.} $n=843$ pairs in which all four models
+double-spike at $t=10$ (identical observable state $h_{10}=0$) continue
+with identical inputs: B1 gap $\equiv 0$ (machine-exact); B2 re-diverges
+on the continuous branch ($\langle|\Delta u|\rangle = 0.115$ at
+$t=11$) and returns to zero after the window flush ($t=14$); B3/B4
+re-divergence decays but $\sim$25\% of pairs retain gaps $>10^{-3}$ at
+$t=18$.
+
+\textbf{Interpretation.} The projection $\pi:(h,\bar X)\mapsto h$ is not
+lumpable: on surprise-open fibres the next-state map is context-valued.
+History dependence is shared by all window-carrying models (B2, B3, B4);
+attention modulates its magnitude and the gate makes it conditional on
+prediction error.

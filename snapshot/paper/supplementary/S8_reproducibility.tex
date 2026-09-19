@@ -1,0 +1,41 @@
+% S8
+\section{Supplementary S8: Reproducibility details}
+
+Environment used to generate all archived results: Python 3.12.7,
+numpy 1.26.4, scipy 1.13.1, matplotlib 3.9.2.  Only numpy/\allowbreak{}scipy/\allowbreak{}
+matplotlib are used by the experiment code.  Fixed seeds and sample
+sizes: Phase 1 -- global seed 20260726, $N = 160{,}000$ histories;
+Phase 2 -- seeds 20260904/\allowbreak{}05/\allowbreak{}06, $T = 5000$ per seed, 374 pooled
+events; Probe 1 v3 -- seeds 20260904/\allowbreak{}05/\allowbreak{}06, train 4000/\allowbreak{}test 2000 per
+seed (pooled test $n = 6000$); Probe 2 -- seed 20260904, $N = 1000$.
+
+Archive layout (all paths relative to the repository root):
+experiment scripts under \texttt{code/\allowbreak{}experiments/\allowbreak{}}; analysis scripts under
+\texttt{code/\allowbreak{}analysis/\allowbreak{}}; model reference \texttt{code/\allowbreak{}model/\allowbreak{}tan.py}; figures under
+\texttt{results/\allowbreak{}figures/\allowbreak{}} (mirrored to \texttt{manuscript/\allowbreak{}figures/\allowbreak{}}); tables under
+\texttt{results/\allowbreak{}tables/\allowbreak{}} (mirrored to \texttt{data/\allowbreak{}experiment\_\allowbreak{}\allowbreak{}results/\allowbreak{}}); NPZ
+ensembles under \texttt{data/\allowbreak{}experiment\_\allowbreak{}\allowbreak{}results/\allowbreak{}}; logs under
+\texttt{results/\allowbreak{}logs/\allowbreak{}}; Probe-1 amended audit under \texttt{audit\_\allowbreak{}\allowbreak{}v3\_\allowbreak{}\allowbreak{}amended/\allowbreak{}};
+Probe-2 archive under
+\texttt{code/\allowbreak{}experiments/\allowbreak{}probe2/\allowbreak{}identifiability/\allowbreak{}}; documentation under
+\texttt{docs/\allowbreak{}} (\texttt{TAN\_\allowbreak{}\allowbreak{}RESEARCH\_\allowbreak{}\allowbreak{}DOSSIER.md}, \texttt{CLAIM\_\allowbreak{}\allowbreak{}LEDGER.md},
+\texttt{REPRODUCIBILITY\_\allowbreak{}\allowbreak{}LEDGER.md}, \texttt{NEXT\_\allowbreak{}\allowbreak{}AGENT\_\allowbreak{}\allowbreak{}BRIEF.md},
+\texttt{ARCHIVE\_\allowbreak{}\allowbreak{}INTEGRITY.md}, \texttt{PHASE4\_\allowbreak{}\allowbreak{}COMPLETION\_\allowbreak{}\allowbreak{}REPORT.md}); archive index
+\texttt{code/\allowbreak{}RESEARCH\_\allowbreak{}\allowbreak{}ARCHIVE\_\allowbreak{}\allowbreak{}INDEX.md}.
+
+Reproduction commands (recorded runtimes are from the archive logs):
+Phase 1: \texttt{python code/\allowbreak{}experiments/\allowbreak{}natural\_\allowbreak{}\allowbreak{}collision.py} ($\sim$21--36
+s); Phase 2: \texttt{python code/\allowbreak{}experiments/\allowbreak{}effective\_\allowbreak{}\allowbreak{}dimension.py} (54 s)
+and \texttt{python code/\allowbreak{}analysis/\allowbreak{}effective\_\allowbreak{}\allowbreak{}dimension\_\allowbreak{}\allowbreak{}velocity\_\allowbreak{}\allowbreak{}ampcontrol.py}
+(22 s); Probe-1 amended audit:
+\texttt{python code/\allowbreak{}analysis/\allowbreak{}probe1\_\allowbreak{}\allowbreak{}v3\_\allowbreak{}\allowbreak{}amended\_\allowbreak{}\allowbreak{}audit.py} ($\sim$130 s);
+Probe-2 audit: \texttt{python code/\allowbreak{}experiments/\allowbreak{}probe2/\allowbreak{}identifiability/\allowbreak{}
+probe2\_\allowbreak{}\allowbreak{}identifiability\_\allowbreak{}\allowbreak{}audit.py} ($< 1$ s; import path note in the
+archive README).  This paper's figures/\allowbreak{}tables were regenerated from
+frozen result files by \texttt{paper/\allowbreak{}scripts/\allowbreak{}make\_\allowbreak{}\allowbreak{}figs\_\allowbreak{}\allowbreak{}tables.py}; no
+experiment was re-run for this paper.
+
+Hash record: only the Probe-2 audit script carries a recorded SHA-256
+(\texttt{AABF8EBBB81E911E\allowbreak{}69117591F84E4F83\allowbreak{}6CF59CF8C1B505DE\allowbreak{}53A8B7C1A88143C7});
+all other file hashes are marked NOT RECORDED in
+\texttt{docs/\allowbreak{}REPRODUCIBILITY\_\allowbreak{}\allowbreak{}LEDGER.md} (no hashes were fabricated).

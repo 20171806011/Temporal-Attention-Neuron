@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "review_stage": "P0 Reworked Baseline",
+    "timestamp": "2026-09-17",
+    "verdict": "P0_NUMERICAL_VERIFIED_VISUAL_QA_PENDING (NOT_READY_FOR_SUBMISSION)",
+    "numerical_checks_status": "PASSED",
+    "visual_qa_status": "PENDING (Paper layout, table formatting, and visual QA pending subsequent review)",
+    "original_archive_integrity": "100% BIT-FOR-BIT IDENTICAL (368/368 files verified bidirectionally)"
+  },
+  "A01_query_rotation": {
+    "Q=3": {
+      "SE": 1.8,
+      "theta_code_rad": 0.7200000000000001,
+      "margin_code": 0.25874272434782375,
+      "winner_code": "A",
+      "theta_literal_rad": 0.2880000000000001,
+      "margin_literal": 0.7055409798984686,
+      "winner_literal": "A"
+    },
+    "Q=4": {
+      "SE": 2.6,
+      "theta_code_rad": 1.04,
+      "margin_code": -0.15591013339559723,
+      "winner_code": "B",
+      "theta_literal_rad": 0.4160000000000001,
+      "margin_literal": 0.8425586282240349,
+      "winner_literal": "A"
+    }
+  },
+  "A02_phase2_branch": {
+    "b4f_dD_delta": 1.0889181171833777,
+    "b4f_dD_event_ci_lo": 1.8739313854528932,
+    "stable": true,
+    "cond_A": {
+      "value": false,
+      "dD_ci_separation": true,
+      "b4c_gt_b1c": false,
+      "b4c_gt_c0": true
+    },
+    "cond_B": {
+      "value": false,
+      "not_b4f_gt_b3f": false
+    },
+    "cond_C": {
+      "value": false,
+      "b4c_b1c_diff_lt_0p5": true,
+      "b4c_c0_diff_lt_0p5": false
+    },
+    "outcome": "D",
+    "event_logtrace_diff": 1.0944630964687843,
+    "delta_logtrace_diff": 1.3546742092890227
+  },
+  "A03_statistics": {
+    "K_stats": {
+      "lif": {
+        "K_mean": 0.49999999998692396,
+        "K_median": 0.5,
+        "K_ci_lo": 0.49999999995989547,
+        "K_ci_hi": 0.5000000000012153
+      },
+      "buf": {
+        "K_mean": 4469.536488699887,
+        "K_median": 895.5295701937501,
+        "K_ci_lo": 3255.463520374933,
+        "K_ci_hi": 5922.162022735968
+      },
+      "noattn": {
+        "K_mean": 12347.886006979705,
+        "K_median": 1369.0795083917906,
+        "K_ci_lo": 7781.353224185125,
+        "K_ci_hi": 18326.542340151016
+      },
+      "tan": {
+        "K_mean": 20465.855578030823,
+        "K_median": 2947.7244296990257,
+        "K_ci_lo": 11163.1334250851,
+        "K_ci_hi": 35709.186567060984
+      }
+    },
+    "K_statistics_verified": true,
+    "JSD_full_window": {
+      "M0": 0.009462258981394814,
+      "M2": 0.008726529101299096
+    },
+    "E3_stats": {
+      "total_checks_count": 140,
+      "isotropic_conditions_count": 132,
+      "control_conditions_count": 8,
+      "max_single_seed_diff": 0.009266666666666645,
+      "max_mean_across_seeds_diff": 0.00466666666666669,
+      "sample_thetas_theta_over_pi": [
+        0.0,
+        0.0833,
+        0.1667,
+        0.25,
+        0.3333,
+        0.5
+      ]
+    },
+    "Probe1_samples": {
+      "trials_per_seed": 2000,
+      "num_seeds": 3,
+      "total_test_trials": 6000,
+      "derived_distractor_per_seed": 999,
+      "derived_distractor_total": 2997
+    },
+    "Composition_43A": {
+      "total_histories": 30000,
+      "both_routed_total": 6608,
+      "both_routed_coverage_fraction": 0.22026666666666667,
+      "both_routed_per_seed": {
+        "20260904": 2188,
+        "20260905": 2258,
+        "20260906": 2162
+      },
+      "error_plus_both": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "error_minus_both": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mc_empirical_unconditional_plus_per_seed": [
+        1.120449115073101,
+        1.0746057601817207,
+        1.1279599091578654
+      ],
+      "mc_empirical_unconditional_minus_per_seed": [
+        1.9892876705017262,
+        1.9596252074453135,
+        1.9787654239456107
+      ],
+      "mc_pooled_mean_plus": 1.107671594804229,
+      "mc_pooled_mean_minus": 1.97589276729755,
+      "quadrature_benchmark_unconditional_plus": 1.1160996213537409,
+      "quadrature_benchmark_unconditional_minus": 2.000999500249875,
+      "quadrature_benchmark_P_both": 0.220725219599096
+    }
+  },
+  "A04_composition_carrier_ast": {
+    "run_history_analysis": {
+      "found": true,
+      "has_membrane_potential_h": false,
+      "has_spike_or_reset": false,
+      "direct_arithmetic_found": true
+    },
+    "ast_shortcut_kwargs": {
+      "Q_cap_V_canonical": "EXPRESSION",
+      "query_slots_value_zero": true,
+      "query_not_candidate": true,
+      "equal_norm_keys": true,
+      "positions_randomized": true,
+      "amplitudes_randomized": true
+    },
+    "direct_check_true_calls": [
+      "leakage: query slots have value 0 and are not candidates (structural)"
+    ],
+    "answers": {
+      "hardcoded_true_count_shortcut": 5,
+      "direct_check_true_count": 1,
+      "q1_depends_on_membrane_update": false,
+      "q2_passes_through_spike_reset": false,
+      "q3_is_static_retriever_plus_arithmetic": true,
+      "q4_hardcoded_true_checks_count": 6,
+      "q5_nature_of_proof": "Operator-level constructive sufficiency under controlled conditions; NOT online neural implementation, NOT learned generalization."
+    }
+  },
+  "A05_softmax_conventions": {
+    "sum_s42b": 1.0,
+    "sum_tan": 0.9999999990273425,
+    "diff_tan_s42b": 9.460626726465193e-10,
+    "overflow_has_nan": true
+  },
+  "replay_suite_11_json_diff": {
+    "total_pairs_checked": 11,
+    "all_byte_for_byte_identical": true,
+    "verified_json_files": [
+      "s41cd/sprint4_1cd_summary.json",
+      "s42a/sprint4_2_summary.json",
+      "s42_shortcuts/sprint4_2_shortcut_summary.json",
+      "s42b/sprint4_2b_summary.json",
+      "s42b_probe/sprint4_2b_probe_summary.json",
+      "s42c/sprint4_2c_summary.json",
+      "s42d/sprint4_2d_summary.json",
+      "s43a/audit_summary.json",
+      "s43a/canonical_results.json",
+      "s43a/counterfactual_results.json",
+      "s43a/monte_carlo_results.json"
+    ]
+  }
+}

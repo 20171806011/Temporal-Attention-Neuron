@@ -1,0 +1,38 @@
+Hello Codex!
+
+Following your formal sign-off and closure of Phase P1-A, we have successfully finalized, typeset, and frozen both scientific manuscripts (Paper 1 and Paper 2, exactly 28 pages each, with full mathematical proofs and 420,000-evaluation empirical statistics integrated into Section 5 and Claim Ledger C13). The baseline research archive (368 files) remains 100% bit-for-bit identical and untouched.
+
+We are now officially initiating Phase P1-B: Dynamical Computational Carrier Investigation & Neural State Audit.
+
+As established in RESEARCH_AUDIT_AND_PLAN_2026-09-17.md (Section 10.1), P1-A established the operator-level mathematical sufficiency of 1D metric compatibility under hard selection. However, it evaluated this using an external argmax and an external algebraic combiner node.
+
+The central research question of P1-B is:
+"Where does the computation actually take place in a dynamical neuron model? Do the continuous dynamical states of the Temporal Attention Neuron—specifically subthreshold membrane potential h(t), adaptive gating conductance A(t), and discrete spike trains s(t)—causally carry, bind, and compose relational operands, or does the neuron act merely as a passive temporal buffer while all relational computation is performed by external circuits?"
+
+We have drafted the formal pre-registration protocol in:
+C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL.md
+
+Key highlights of the P1-B protocol:
+
+1. Explicit Physical 5-Port Architecture:
+   - C(t): Raw content / event input current (K_t, V_t, S_t)
+   - A(t): Gating conductance modulated by surprise
+   - h_pre(t): Pre-reset continuous subthreshold membrane potential
+   - h_post(t): Post-reset membrane state
+   - s(t) in {0, 1}: Discrete binary action potential
+
+2. Standardized 5-Model Comparison Family:
+   - Model 0: Static Operator Ceiling Reference (P1-A validated metric retrieval + algebraic combiner)
+   - Model 1: Continuous Dynamic TAN Carrier (full subthreshold leaky integration + dynamic surprise gating)
+   - Model 2: Memory-Ablated Dynamic Control (h(t) clamped to rest after each event; tests if memory is in membrane physics or external input queuing)
+   - Model 3: Gating-Ablated Dynamic Control (A(t) clamped to constant A_0; tests causal necessity of surprise gating)
+   - Model 4: Discrete Spike Train Readout Model (evaluates whether continuous values V in [-3, 3] can be decoded from binary spike trains over realistic integration windows Delta t, or if an unmodeled continuous analog port is required)
+
+3. Readout Latency & Temporal Stability Suite:
+   - Query cue presented at delay tau in {0, 1, 2} timesteps following target event offset, strictly restricted to events remaining within memory window W=5.
+
+4. Hard Stopping Criteria:
+   - Stop Rule 1 (Dynamical Redundancy): If Model 1 matches Model 0 within equivalence tolerance (|Delta Acc| < 0.005) and Model 2 (memory clamp) shows no performance degradation, terminate claims of "dynamical neural necessity" and classify TAN-II strictly as an operator-level algorithm.
+   - Stop Rule 2 (Spike Decoding Bottleneck): If Model 4 fails to deliver continuous values with composition error E_comp < 0.05 under bounded biological latency (Delta t <= 10 ms), explicitly register the analog-to-digital translation boundary as an external decoder dependency.
+
+Please review P1B_PRE_REGISTRATION_PROTOCOL.md and provide your adversarial critique, suggested amendments, and required G1 validation gates before any code implementation or simulation begins.

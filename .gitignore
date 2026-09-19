@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+
+# LaTeX build intermediates (keep .tex, .bib, .bbl, .pdf)
+*.aux
+*.out
+*.toc
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+texput.log
+snapshot/**/*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Explicitly keep audit logs
+!logs/*.log

@@ -1,0 +1,81 @@
+% =========================== 1. Introduction ===========================
+\section{Introduction}\label{sec:intro}
+
+Attention has become a general computational primitive.  In machine
+learning, content-based weighting over key--value pairs underlies
+sequence transduction \citep{vaswani2017,bahdanau2015,luong2015},
+pretrained language models \citep{devlin2019,brown2020} and is studied
+mechanistically as a form of information routing
+\citep{elhage2021,olsson2022}.  In neuroscience, attention-like gain and
+selection have been modelled at the level of normalization
+\citep{reynolds2009}, saliency \citep{koch1985,itti1998} and dynamic
+routing of information \citep{olshausen1993}, while binding has classically
+been associated with temporal correlation and synchrony
+\citep{von_der_malsburg1995,von_der_malsburg1986,singer1995,treisman1980}.
+
+Most of these mechanisms are studied at the population or network level.
+This raises a more primitive question that is rarely asked: \emph{what
+happens if attention-like temporal weighting is compressed into a single
+dynamical unit?}  A single neuron is a scalar dynamical system with a
+leaky membrane potential; classical integrate-and-fire dynamics
+\citep{lapicque1907,abbott1999,hodgkin1952,burkitt2006,gerstner2014} have
+no mechanism for query-dependent selection of stored content.  Whether a
+minimal single-neuron architecture can nevertheless exhibit
+history-dependent computation, and where its mechanistic boundary lies,
+is an open question about the nature of attention as a computational
+primitive rather than about a specific benchmark.
+
+The Temporal Attention Neuron (TAN) provides a minimal laboratory for
+this question.  TAN is a discrete-time single neuron that combines (i) a
+temporal receptive field over the recent input stream, (ii) a
+surprise-gated, Boltzmann-style weighting of that window -- an
+attention-like saliency kernel -- and (iii) leaky spiking membrane
+dynamics.  The presence of attention-like weighting inside a dynamical
+unit does not, however, guarantee that the unit can \emph{route}
+information: weighting strength is not content selection.
+
+The purpose of this paper is therefore not to propose a better neuron,
+but to perform a mechanistic decomposition of one minimal construction.
+We ask, in sequence, four nested questions.  (i) \emph{State}: does
+temporal history become part of the effective state, so that the scalar
+membrane potential alone is insufficient?  (ii) \emph{Geometry}: does
+attention-like weighting reorganize the local, event-locked response
+geometry relative to uniform temporal integration?  (iii)
+\emph{Computation}: does this history contribute to target-relevant
+retrieval in a controlled temporal task?  (iv) \emph{Identifiability}:
+does the scalar attention kernel actually implement query-conditioned
+routing, i.e.\ a query determining which stored event is read out?
+
+These capabilities form a hierarchy that must be verified layer by
+layer:
+\begin{equation*}
+  \text{memory} \;\rightarrow\; \text{weighting} \;\rightarrow\;
+  \text{routing} \;\rightarrow\; \text{binding}.
+\end{equation*}
+Each arrow is a separate computational claim.  The experiments reported
+here establish the first two layers for TAN, provide limited evidence on
+the third, and show that the fourth is not implemented by the current
+scalar kernel.  The central thesis is:
+
+\begin{quote}
+\emph{A minimal temporal-attention neuron can acquire history-dependent,
+non-Markovian dynamics and can reorganize event-locked response geometry
+through surprise-gated temporal weighting; however, its scalar attention
+kernel does not provide genuine query-conditioned content-addressable
+routing.  Temporal memory, attention-like saliency weighting, routing
+and semantic binding are therefore distinct computational capabilities,
+not interchangeable consequences of increasing representational
+complexity.}
+\end{quote}
+
+The remainder of the paper is organized as follows.
+Section~\ref{sec:background} positions TAN with respect to state
+sufficiency, input-dependent weighting, routing and mechanistic
+identifiability.  Section~\ref{sec:model} gives the frozen model
+definition.  Section~\ref{sec:methods} describes the experimental
+program (state-sufficiency collisions, event-locked geometry, a temporal
+distractor task, and an identifiability audit).  Section~\ref{sec:results}
+reports results; Section~\ref{sec:discussion} interprets them;
+Section~\ref{sec:limitations} lists limitations;
+Section~\ref{sec:conclusion} concludes with the conceptual separation
+that this paper establishes.

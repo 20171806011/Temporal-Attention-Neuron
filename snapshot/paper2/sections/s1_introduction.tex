@@ -1,0 +1,183 @@
+% ==========================================================================
+% Paper 2 — Section 1: Introduction. The Conflation Problem and the
+% Architectural Stance.
+% All quantitative statements in this section are forward pointers to the
+% frozen archives; the numbers themselves are stated and sourced in the
+% sections that own them (§3–§8).
+% ==========================================================================
+\section{Introduction: The Conflation Problem and the Architectural Stance}
+\label{sec:intro}
+
+\subsection{The conflation problem}
+\label{sec:conflation}
+
+A striking feature of the modern literature on attention, memory, and
+relational computation is that its central vocabulary is used
+interchangeably across levels that are causally distinct. A network that is
+``attentive'' is described as routing information; a unit whose output is a
+weighted mixture of stored items is described as binding them; a system that
+can retrieve two stored values is described as composing them. Underneath
+this vocabulary sits a chain of five primitives---\emph{memory},
+\emph{saliency weighting}, \emph{content routing}, \emph{semantic binding},
+and \emph{composition}---each of which imposes its own, strictly stronger,
+requirement on the substrate that realizes it. When these are conflated, the
+classic inferential error follows: observing the \emph{lower} primitive,
+together with rich nonlinear dynamics, is taken as evidence for the
+\emph{higher} one. Four examples of the conflation recur in our own field of
+view: (a) \emph{history dependence $\Rightarrow$ attention routing}---a
+non-Markovian hidden state does not imply that a query can reorder candidate
+preferences; (b) \emph{attention weighting $\Rightarrow$ semantic
+binding}---a softmax mixture over stored items delivers a convex combination,
+not a bound symbol; (c) \emph{sharpening $\Rightarrow$ selection}---any finite
+temperature keeps every candidate weight strictly positive, so sharpening
+approaches, but never achieves, discrete delivery; and (d) \emph{retrieval
+$\Rightarrow$ composition}---delivering two values into a pair is not the
+same as applying a deterministic algebraic relation to them.
+
+This is not merely a semantic complaint. End-to-end training of monolithic
+networks makes the conflation unfalsifiable in practice: every stage of a
+black-box system co-varies under optimization, so post hoc attribution of a
+capability to a mechanism is, in general, impossible \citep{fodor1988,
+lake2017,lake2018}. The binding problem of classical neuroscience is the
+canonical instance: synchrony, assembly formation, and indexing have all been
+proposed as binding mechanisms \citep{von1995,singer1999}, yet a demonstration
+that a candidate mechanism \emph{binds}, as opposed to merely re-weights, is
+rarely separated from the demonstration that it \emph{routes}. What the field
+lacks is not more powerful models but a \emph{boundary map}: for each rung of
+the primitive ladder, the minimal structural condition under which the
+primitive becomes observable in a dynamical substrate, and a falsifiable test
+that separates it from the rungs below.
+
+\subsection{Thesis and methodological stance}
+\label{sec:stance}
+
+The thesis of this paper is architectural rather than dynamical:
+
+\begin{quote}
+\emph{Computational capability is constrained not only by nonlinear
+dynamics, but by the organizational degrees of freedom available to the
+dynamics.}
+\end{quote}
+
+More dynamics---richer nonlinearities, larger state spaces, longer memory
+windows---does not, by itself, produce new computational primitives. It
+provides a richer \emph{stage}; the primitives are provided by the
+\emph{topological organization} of the computation. To make the thesis
+testable we adopt two disciplines that run through the entire study.
+
+\emph{Radical minimalism.} The substrate is a single dynamical unit---the
+Temporal Attention Neuron (\TAN) of the frozen TAN-I archive---a leaky,
+spiking neuron whose input current is a surprise-gated, temporally attended
+mixture of its recent inputs (§2.3). It is deliberately the smallest system
+in which the conflation (a)--(d) can be exhibited, because every confound
+that a larger network would introduce (depth, width, training, shared
+substrates) is absent by construction.
+
+\emph{The single-degree-of-freedom ladder.} Each step of the study changes
+exactly one organizational degree of freedom and leaves the frozen dynamics,
+window, gates, and readouts untouched (§2.4). After each step, the new
+configuration is audited by counterfactual experiments---identical histories
+with only the query changed---and by negative-control chains in which the
+preceding rung of the ladder is shown to fail the same test (§2.5). A rung is
+claimed only if the audit passes under the joint criteria, never from a
+single scalar error.
+
+We state the resulting scope preemptively. This paper does not propose a
+network that beats any benchmark; it proposes a \emph{constraint map} for
+dynamical computation. Its results are \emph{sufficiency} statements within
+one explicitly frozen mechanism family, not necessity statements about
+brains or about all possible machines; and negative results are reported
+with the same status as positive ones. Readers expecting accuracy tables
+will find boundary tables instead; that is the intended product.
+
+\subsection{Why a single neuron is the right test bed}
+\label{sec:testbed}
+
+The TAN-I programme established the bottom two rungs of the ladder inside
+this substrate, and---decisively---located the first wall above them. In
+brief (full numbers and protocols in §3--§5): the scalar TAN is
+historically dependent and its membrane potential is not a sufficient
+Markov state (Phase 1: $N=160{,}000$ collision experiments; state
+insufficiency lemma), so \emph{memory} is realized. Its surprise-gated
+attention reshapes the event-locked response geometry of the system
+(Phase 2: effective rank $d_D\approx2.089$ under attention versus
+$\approx1.484$ without), so \emph{saliency weighting} is realized and is
+geometrically effective. Yet two negative probes froze the boundary:
+a temporal distractor task showed no robustness premium attributable to
+attention, and a formal binding audit---the query-conditioned
+identifiability audit, archived as \textsc{terminated /
+audit\_failed}---recorded a counterfactual argmax flip rate of exactly
+$0.000$: the scalar kernel $E_{t,i}=\beta W_qW_k\,S_t\,x_i$ can rescale
+candidate logits but can never reorder them, because its ``query'' is the
+non-negative scalar surprise cone $\mathcal{Q}_+=[0,\infty)$. Scalar
+saliency, in other words, lies \emph{below} routing on the ladder, and the
+gap is provable rather than empirical (the order-conservation theorem,
+§5). The TAN therefore leaves us exactly where a mechanism study should
+start: at a wall, with a clean statement of which side each frozen result
+belongs to.
+
+\subsection{Contributions and roadmap}
+\label{sec:contrib}
+
+The present paper (TAN-II, sprints 4.1--4.3-A) ascends the ladder one degree
+of freedom at a time and reports the following results.
+
+\begin{enumerate}
+\item \textbf{Competition without routing (§4).} Adding
+excitatory--inhibitory opponent topology to the frozen neuron produces
+nonmonotonic selective tuning by analytic construction---the E-I
+nonmonotonicity theorem---and the static opponent control shows the peak
+exists with \emph{no} attention at all ($x^*=1.00$, $h_E=0.200$), severing
+the attribution of local tuning to attention. Attention is thereby redefined
+as dynamic gain and operating-range modulation. Across six layouts the
+counterfactual flip rate remains exactly $0.000$:
+$\text{Competition}\not\Rightarrow\text{Routing}$.
+\item \textbf{The geometric boundary of routing (§5).} Two-dimensional
+vector query--key interaction unlocks routing capacity with an exact law,
+$\mathrm{FlipRate}_{\mathrm{CF}}(\theta)=\theta/\pi$ (132/132 Monte Carlo
+conditions; winner measures $1/2$; the winner-variation statistic $F_d=1/2$
+constant across $d\in\{2,3,4,8\}$ as a negative control). In the running
+neuron, changing only the query from $3$ to $4$ on a fixed history flips the
+attention winner with margins $+0.2587\to-0.1559$ (closed-form crossing
+$Q^*=3.7071$; ensemble flip rate $0.4425$ vs.\ quadrature benchmark
+$0.4445$), and key normalization is shown to be a mechanistic enabler, not a
+cosmetic control.
+\item \textbf{From routing to binding, and to exactness (§6--§7).}
+Key--value decoupling yields soft binding whose value-transfer is
+winner-aligned and provably pairing-sensitive ($T_{\mathrm{swap}}=-T$ to
+$10^{-12}$), with a softness distance $D\approx1.7$--$1.8$ inherited from
+softmax convexity. The winner-take-all limit $\gamma\to\infty$ achieves
+exact, lossless delivery while the routing statistics
+($\mathrm{FlipRate}\approx0.4445$) remain exactly flat across the entire
+sharpening ladder---the first orthogonal axis:
+\emph{routing selectivity $\perp$ readout discreteness}.
+\item \textbf{From binding to composition (§8).} A single head is a
+bottleneck: it delivers one scalar symbol per instant and cannot simultaneously
+deliver two distinct bound operands to general downstream algebra, so binding
+alone cannot compose general arithmetic ($\text{Binding}\not\Rightarrow\text{Composition}$;
+the three-error joint audit catches the $V_A=0$ accidental-zero trap). Two parallel channels
+plus one minimal two-input algebraic node achieve composition with
+\emph{zero} error conditioned on correct binding, over $3\times10^4$
+Monte Carlo histories ($E[E_{\mathrm{comp}}|\text{both-routed}]\equiv0$,
+$\max=0$), while all unconditional error is attributable to upstream
+routing---the second orthogonal axis:
+\emph{binding fidelity $\perp$ combiner error}.
+\end{enumerate}
+
+These results assemble into the unified mechanistic ladder of §9 and the
+graded claim ledger of §10. The through-line of the paper is that each rung
+corresponds to one \emph{named} organizational degree of freedom---opponent
+topology, vector interaction, key--value decoupling, discrete selection,
+parallel channels, and an algebraic node---and that each rung can be
+assigned a falsifiable boundary test. More dynamics did not have to be
+added at any step; organization did.
+
+The remainder of the paper is organized as follows. §2 gives the formal
+framework: axiomatic definitions of the five primitives, the frozen
+baseline model, the catalog of extension operators, and the audit
+methodology. §3 records the state and geometry baseline inherited from
+TAN-I. §4–§8 present the five rungs and their audits in ladder order.
+§9 assembles the master table, discusses the biological reading of each
+degree of freedom (opponent microcircuits, oscillatory phase, dendritic
+subunits, axonal threshold integration), and states the general discussion.
+§10 closes with the claim ledger and the reproducibility statement.

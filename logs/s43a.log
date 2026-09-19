@@ -1,0 +1,13 @@
+============================================================================================
+TAN-II Sprint 4.3-A audit summary (frozen prereg + GO directive)
+============================================================================================
+checks: 79 | FAIL: 0
+margins: mA=0.210631 (frozen 0.210631046) | mB=0.261879 (frozen 0.261878523)
+counterfactuals: 1_query_swap: PASS | 2_value_swap: PASS | 3_key_swap: PASS | 4_channel_output_swap: PASS | 5_am5_trap: PASS | 6_binding_preserving: PASS | 7_binding_breaking: PASS | 8_relational: PASS
+benchmarks: rA=0.49975 rB=0.49975 P_both=0.22073 E_comp+=1.11610 E_comp-=2.00100
+MC 20260904: rA=0.50440 rB=0.49150 E_comp+=1.12045 E_comp-=1.98929 maxE|both=0.000e+00
+MC 20260905: rA=0.50250 rB=0.49880 E_comp+=1.07461 E_comp-=1.95963 maxE|both=0.000e+00
+MC 20260906: rA=0.49970 rB=0.50090 E_comp+=1.12796 E_comp-=1.97877 maxE|both=0.000e+00
+--------------------------------------------------------------------------------------------
+ALL CHECKS PASS: Binding + minimal combiner => Composition (canonical exact); M0/M1 FAIL composition (structural); separation test exact.
+outputs written to: C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\s43a

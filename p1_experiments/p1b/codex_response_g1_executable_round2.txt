@@ -1,0 +1,70 @@
+## G1-Executable: REQUEST CHANGES — approval withheld
+
+Determination date: September 19, 2026.
+
+All four submitted SHA-256 hashes match exactly. I independently ran `python -B test_p1b_g1_fixtures.py`; all 12 fixtures passed and reproduced the reported calibration and statistical results.
+
+However, **the expanded suite still does not establish complete executable conformance to Protocol V2.6**. Several prior findings are only partially closed.
+
+### Corrections accepted
+
+- **Finding 1:** Bootstrap indexing is corrected to `49` and `1949`, and the registered known-answer interval reproduces.
+- **Finding 4:** Both leakage tests now assert Wilson-interval containment directly.
+- **Finding 5, Euler portion:** G1.7 exercises production `euler_step` and detects an injected failure.
+- **Finding 3, calibration portion:** Independent instrumentation confirms 250 histories per \(N\), delay allocation `167/167/166`, 1,000 OLS observations, and unchanged shared starting states for independent role probes. Independent gate averaging and centered-form OLS reproduce:
+  
+  ```text
+  A_0   =  0.06188672587424413
+  g_dec =  0.1326308169898006
+  b_dec = -0.02681648355488859
+  ```
+
+- **Finding 2, cell-level decision portion:** The production evaluator passes independent synthetic checks of both baseline floors, strict equivalence boundaries, channel-decision thresholds, abstention handling, and delivery tolerance.
+
+These corrections are present in the [model/statistical implementation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b_v2.py:320), [updated fixtures](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:146), and [cell decision function](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/runner_p1b.py:231).
+
+### Remaining approval blockers
+
+1. **G1.2/G1.8 — The complete confirmatory workflow remains unimplemented and untested.**
+
+   The submitted runner provides dataset generation, single-episode evaluation, single-cell evaluation, and a smoke benchmark. It does **not** orchestrate all six confirmatory cells or assemble/report the history-preserving, delay-pooled bootstrap required by [Protocol §7.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:216).
+
+   The [G1.2 fixture](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:107) calculates execution totals from list lengths; it does not exercise a scheduler. **It still passes when the datasets contain only two distinct histories, each repeated 2,000 times.** The unmodified generator does produce 4,000 distinct histories—this counterexample demonstrates missing validation, not actual duplication.
+
+   Required closure: supply a locked orchestration path and integration tests covering exact scheduled identities/counts, shared histories across models/delays, six separate tables, and pooled history-level resampling. A counting dry run and small six-cell smoke test can establish this without launching confirmation.
+
+2. **G1.6b — Positive decoding tests still bypass the production decoder.**
+
+   The [positive count and latency cases](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:388) evaluate locally copied dictionaries and formulas. The purported physical count-cap check evaluates `math.ceil(99 / 20)`, rather than checking production-generated spikes.
+
+   I replaced every non-silent production count and latency prediction with `12345.0`, in memory. **All 12 submitted fixtures still passed.** The mutation affected 937 non-silent calls for each decoder.
+
+   Required closure: test positive reconstructions through production decoding, check the actual raw/eligible spike count and refractory spacing, and retain boundary/silence cases. Any out-of-domain drive stress tests should be identified explicitly.
+
+3. **G1.4 — Factorial-fidelity assertions do not distinguish the intended interventions.**
+
+   Calibration now works, but the [trace assertions](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:249) do not establish that M2a preserves gating or that M2b retains membrane state.
+
+   In memory, I substituted M2c’s full-state reset for M2a and M2d’s membrane reset for M2b. **G1.4 still passed.**
+
+   Required closure: assert gate preservation for M2a and positive retention behavior for M1/M2b, using fixtures where retained and reset states observably differ. The current implementation passed my additional spot checks; the submitted regression protection remains incomplete.
+
+4. **G1.9 — Neither end-to-end resource accounting nor output-integrity verification is established.**
+
+   The [benchmark](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/runner_p1b.py:324) times episode evaluation only. It makes no cell-analysis or bootstrap calls, and stops timing before output serialization. Its “peak RAM” is `max(start_rss, end_rss)`, not a measured process peak.
+
+   The [manifest workflow](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/runner_p1b.py:356) writes a two-field smoke summary, compares the manifest against a previously computed digest, and deletes both files. It never rehashes the referenced output during verification.
+
+   In a virtual-filesystem fault injection, I changed the output after its initial hash was computed. **The output no longer matched the manifest, yet `manifest_verified` remained `True`.**
+
+   Required closure: benchmark the complete evaluation–analysis–serialization path, measure genuine peak memory, retain auditable output artifacts, and independently rehash manifest-referenced files. Add a tamper-detection test. No resource overrun was demonstrated; the registered guarantee remains unverified.
+
+### Formal disposition
+
+- **G1-Design V2.6: remains APPROVED.**
+- **G1-Executable: NOT APPROVED; the four blockers above require closure.**
+- **Full confirmatory simulation: remains blocked.**
+
+These are implementation and validation corrections, not a request to redesign or retune the frozen experiment.
+
+All four locked artifacts remain unchanged after review. Fault injections were in memory only. The legacy sketch and full confirmatory simulation were not executed.

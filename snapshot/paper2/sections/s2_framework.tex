@@ -1,0 +1,282 @@
+% ==========================================================================
+% Paper 2 — Section 2: Formal Framework. Five Primitives, the Frozen
+% Baseline, the Extension-Operator Catalog, and the Audit Methodology.
+% ==========================================================================
+\section{Formal Framework: Five Primitives and the Frozen Baseline}
+\label{sec:framework}
+
+This section fixes the definitions that the remainder of the paper uses
+without further negotiation: the five computational primitives (§2.2), the
+frozen dynamical baseline they are tested against (§2.3), the catalog of
+single-degree-of-freedom extensions that ascend the ladder (§2.4), and the
+audit methodology by which every rung is either established or rejected
+(§2.5). All quantitative constants in this section are taken verbatim from
+the frozen archives (TAN-I and TAN-II sprints 4.1--4.3-A); none are free.
+
+\subsection{Notation and conventions}
+\label{sec:notation}
+
+Time is discrete, $t\in\mathbb{N}$. Inputs are scalar amplitudes
+$x_t\in\mathbb{R}$; the temporal window is the ordered $W$-tuple
+$X_t=(x_{t-W+1},\ldots,x_t)$ with zero padding at onset. We write
+$[z]_+=\max(z,0)$ for rectification, $\Theta(\cdot)$ for the Heaviside
+step, $\sigma(z)=1/(1+e^{-z})$ for the logistic function, and
+$\operatorname{softmax}_i(\bm e)$ for the normalized exponential map.
+In Sprint~4.2-B/C/D the standard max-stabilized form
+$\alpha_i=\exp(e_i-\max_k e_k)/\sum_j\exp(e_j-\max_k e_k)$ is evaluated
+directly without offset ($\sum_i\alpha_i=1.0$ exactly), whereas the baseline
+model implementation (\texttt{tan.py}) added a numerical stabilizer
+$\delta=10^{-9}$ to the denominator. Alternative mappings that induce exact
+sparsity without infinite gain, such as sparsemax \citep{martins2016}, are
+discussed as theoretical comparisons. Candidate sets are always
+finite. A \emph{counterfactual pair} is a pair of experimental conditions
+that share the identical history content and differ only in the query; a
+\emph{negative-control chain} is a sequence of models $M_0,M_1,M_2$ in which
+each model adds exactly one organizational degree of freedom and the
+preceding model is required to fail the criterion that the following model
+is required to pass.
+
+\subsection{The five primitives, operationally defined}
+\label{sec:primitives}
+
+The paper's object is the chain
+$\text{Memory}\to\text{Saliency}\to\text{Routing}\to\text{Binding}\to
+\text{Composition}$. Each primitive is defined by an operational criterion
+that a frozen experiment can pass or fail; the criteria are the ones
+actually used in the audits of §4--§8. The chain is constructive: in the
+mechanism family tested here, each later primitive presupposes the earlier
+ones, while the central negative results of this paper show that none of
+the reverse implications holds.
+
+\begin{description}[style=nextline,leftmargin=2em]
+\item[P1 --- Memory.] \emph{Definition.} A system has memory relative to a candidate
+state variable if its future evolution depends causally on aspects of the input history
+that are not recoverable from that candidate state. \emph{Criterion} (TAN-I Phase 1, §3):
+the one-dimensional scalar membrane potential $h_t$ is not state-sufficient; the projection
+$(h_t,X_t)\mapsto h_t$ is not lumpable. Two histories with equal membrane potentials but
+different window contexts produce different downstream trajectories (quantified by pairwise
+separation $K$ and post-reset divergence). This demonstrates state non-sufficiency of scalar $h_t$;
+it does not imply that the complete Markovian state $(h_t, X_t)$ violates Markovianity, nor
+that Markovian dynamics imply state-space contraction.
+\item[P2 --- Saliency weighting.] \emph{Definition.} A system performs saliency weighting
+if its readout over a fixed candidate set preserves relative ranking across all active query
+levels. Under standard continuous softmax (whose support is everywhere strictly positive,
+in contrast to sparse activation functions such as sparsemax \citep{martins2016}), the defining
+signature of scalar modulation is not support-set invariance, but rather \emph{ranking invariance}:
+for all $S>0$, the induced ordering of attention weights $\alpha(Q)$ is strictly invariant,
+and $\operatorname{argmax}_i\alpha_i(Q)$ is independent of query content. \emph{Criterion:}
+Rank-1 kernel factorizability $E(Q, K) = q(Q)\cdot k(K)$ is a sufficient condition ensuring
+that positive scalar query modulation acts purely as a monotonic gain on logit differences,
+\item[P3 --- Content routing.] \emph{Definition.} A system routes if there
+exist queries $Q_A,Q_B$ and a fixed history such that
+$\operatorname{argmax}_i R(Q_A,K_i)\neq\operatorname{argmax}_i R(Q_B,K_i)$.
+In multi-candidate memory ($N\ge3$), true content addressing requires selective
+identifiability: for every candidate key $K_t$, there exists a query making $K_t$ the
+unique maximum. While separable dot-product kernels $E(Q, K) = Q K$ in $\mathbb{R}$
+can at most invert global order between the extreme elements without addressing intermediate keys
+(Proposition~\ref{prop:scalar_impossible}), metric compatibility kernels $E(Q, K) = -(Q-K)^2$
+achieve universal addressability even in $d=1$ (Proposition~\ref{prop:metric_suff}).
+\emph{Criterion:} the counterfactual flip rate
+$\mathrm{FlipRate}_{\mathrm{CF}}$ is nonzero on a fixed-history ensemble;
+capacity (the geometric existence of flips) and realization (the running
+model actually flipping) are reported separately (\S\ref{sec:routing}).
+\item[P4 --- Semantic binding.] \emph{Definition.} A system binds if
+role/address (key) and content entity (value) are decoupled and the output
+transmits the value of the \emph{selected} key, following the
+(key,value) association rather than key identity, position, or amplitude.
+\emph{Criterion:} the value-swap counterfactual is antisymmetric,
+$T_{\mathrm{swap}}=-T$ exactly, and the softness distance
+$D=|C-v_{\mathrm{winner}}|$ is measured; hard binding is the limit $D=0$.
+\item[P5 --- Composition.] \emph{Definition.} A system composes if it applies
+a deterministic algebraic relation $f$ to at least two independently
+retrieved bound values, $y=f(V_A,V_B)$. \emph{Criterion:} the three-error
+joint audit of §2.5 (binding errors and composition error simultaneously
+$\approx0$) together with the counterfactual suite of §8 (query swap, value
+swap, key swap, channel-output swap, the zero-value trap, and the
+binding-preserving, binding-breaking, and relational controls); conditioned
+on correct binding the composition error must be exactly zero (the
+binding--combiner separation test).
+\end{description}
+
+\subsection{The frozen baseline: the scalar Temporal Attention Neuron}
+\label{sec:baseline}
+
+The substrate is the TAN-I Temporal Attention Neuron, frozen before this
+study and never retrained or retuned here. Its computation chain is
+
+\begin{align}
+\mu_t &= \frac{1}{W}\sum_{k=0}^{W-1} x_{t-k}, \qquad
+S_t=[x_t-\mu_t-\varepsilon]_+,
+\label{eq:surprise}\\
+E_{t,i}&=\beta\,W_q W_k\,S_t\,x_{t-i}, \qquad
+\alpha_{t,i}=\frac{\exp(E_{t,i})}{\sum_j\exp(E_{t,j})+\delta},
+\label{eq:kernel}\\
+C_t&=\sum_i \alpha_{t,i}\,x_{t-i}, \qquad
+A_t=\tanh(S_t)\,C_t,
+\label{eq:context}\\
+h_t&=\lambda\,h_{t-1}+A_t, \qquad
+y_t=\Theta(h_t-\theta_{\mathrm{sp}}), \qquad
+h_t\leftarrow 0\ \text{on spike}.
+\label{eq:membrane}
+\end{align}
+
+Three properties of this chain carry the whole study and must be kept in
+view. (i) The query of the kernel \eqref{eq:kernel} is the non-negative
+scalar surprise $S_t$ (rectified by \eqref{eq:surprise} and multiplied by
+positive constants), so the query domain is the closed cone
+$\mathcal{Q}_+=[0,\infty)$; the kernel is therefore of the separable form
+(query scalar)$\times$(key scalar), which pins the attention argmax to the
+key magnitudes regardless of the query---this is the exact content of the
+order-conservation theorem (§5) and the reason TAN-I froze at
+$\mathrm{FlipRate}=0.000$. (ii) The readout \eqref{eq:context} is a convex
+combination, so the delivered ``value'' is always a mixture; discreteness is
+not available to this substrate until a selection operator is added
+(§7). (iii) The membrane update \eqref{eq:membrane} contains the discrete
+spike-and-reset map; the system is piecewise discontinuous and must not be
+treated as a smooth autonomous dynamical system (§4's conditional phase
+planes are labeled accordingly).
+
+Table~\ref{tab:params} is the frozen parameter inventory. Provenance
+columns refer to the frozen archive; the TAN-II ladder re-freezes the TAN-I
+values wherever it does not add a new degree of freedom, and every deviation
+is pre-registered (for example, the default spike threshold of the E-I
+stages is $\theta_{\mathrm{sp}}=3.0$, chosen pre-run to keep the tuning
+criterion decisive, with the TAN-I value $0.5$ retained in the threshold
+sweep).
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{@{}lp{4.9cm}p{2.6cm}l@{}}
+\toprule
+Symbol & Frozen value & Meaning & Provenance \\
+\midrule
+$W$ & $5$ & temporal window & TAN-I \\
+$\lambda$ & $0.5$ & membrane leak & TAN-I \\
+$\theta_{\mathrm{sp}}$ & $0.5$ (TAN-I); $3.0$ default in TAN-II (sweep
+$\{0.5,1.0,3.0,6.0\}$) & spike threshold & TAN-I / 4.1 \\
+$\varepsilon,\varepsilon_I$ & $0,\,0.3$ & surprise dead zones & TAN-I / 4.1 \\
+$\beta, W_q, W_k$ & $1.0,\,2.0,\,1.0$ & kernel constants
+($c=\beta W_q W_k=2.0$) & TAN-I \\
+$\delta$ & $10^{-9}$ & softmax offset & TAN-I \\
+$(w_{EI},w_{IE},w_{II})$ & $(0.8,1.0,0.2)$ & Dale-signed couplings & 4.1 \\
+$(w_E,w_I,\theta_E,\theta_I)$ & $(0.5,1.0,0.4,1.0)$ & static opponent
+thresholds (C1) & 4.1 \\
+$\omega$ & $0.4$ & query-direction rotation & 4.2-B \\
+$(Q_A,Q_B)$ & $(3.0,4.0)$ & counterfactual queries (single-query) & TAN-I/4.2 \\
+$(Q_1,Q_2)$ & $(4.5,5.3)$ & dual-query window & 4.3-A \\
+$(V_A,V_B)$ scenarios & $(5,9)$, $(7,-2)$, $(2,6)$ & canonical values & 4.2-C/4.3-A \\
+$\gamma$ ladder & $\{1,2,5,10,100,\infty\}$ & WTA sharpening & 4.2-D \\
+Seeds / $N$ / grid & $20260904$--$06$; $10^4$; $2001^2$ & Monte Carlo /
+quadrature & 4.2--4.3 \\
+\bottomrule
+\end{tabular}
+\caption{Frozen parameter inventory. All values are pre-registered; the
+provenance column names the frozen sprint. The spike threshold column shows
+the two frozen conventions and the sweep that audits their consequences.}
+\label{tab:params}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig1_taxonomy}
+\caption{The conceptual taxonomy and the frozen TAN architecture.
+(a) The five primitives of §2.2 as a constructive chain. (b) The frozen
+TAN-I computation chain (§2.3). (c) The degenerate geometry of the scalar
+kernel: the non-negative query cone $\mathcal{Q}_+$ leaves the candidate
+ordering locked to the key magnitudes (Theorem 5.1).}
+\label{fig:taxonomy}
+\end{figure}
+
+\subsection{The catalog of extension operators}
+\label{sec:operators}
+
+Each rung of the ladder is one of the following operators, applied to the
+baseline and left unchanged afterwards. No rung changes anything except the
+named operator.
+
+\begin{description}[style=nextline,leftmargin=2em]
+\item[O1 --- Opponent competition (Sprint 4.1).] Two cells with membrane
+potentials
+$h_E(t)=\lambda_E h_E(t-1)+A_E(t)-w_{EI}A_I(t)$ and
+$h_I(t)=\lambda_I h_I(t-1)+w_{IE}A_E(t)-w_{II}A_I(t)$, where $A_E,A_I$ are
+the per-branch drives (attention-gated contexts in the attended models;
+static thresholded currents $[w_E x_t-\theta_E]_+$, $[w_I x_t-\theta_I]_+$
+in the static control C1) and all couplings obey Dale's sign structure
+$w_{ab}\ge0$. The four-model ablation ladder C1$\to$C2$\to$C3$\to$C4 of
+§4 instantiates this operator.
+\item[O2 --- Vector query--key interaction (Sprint 4.2-B).] Keys are
+embedded as unit vectors $\hat\varphi_d(x)=p_d(x)/\|p_d(x)\|$ with
+$p_d(x)=(x,x^2,\ldots,x^d)$ and $\hat\varphi_d(0)=0$; the query is the
+rotating vector $Q_t=c\,S_t\,\hat u(\theta_t)$ with angle $\theta_t=\omega S_t$ and
+$\hat u(\theta)=(\cos\theta,\sin\theta,0,\ldots)$; the kernel becomes
+$E_{t,i}=Q_t^{\top}K_i$. Only the representation changes: window, surprise
+gate, dynamics, and readouts are frozen.
+\item[O3 --- Key--value decoupling (Sprint 4.2-C).] Each slot carries a
+pair $(k_i,v_i)$: keys drive the attention, values are transmitted,
+$C_t=\sum_i\alpha_{t,i}v_i$. Query slots carry $v=0$ and are never
+candidates.
+\item[O4 --- Readout discreteness (Sprint 4.2-D).] The selection function
+$\alpha_i(\gamma)=\operatorname{softmax}_i(\gamma\cdot\mathrm{logit}_i)$
+with $\gamma\in[1,\infty]$; $\gamma=\infty$ is the one-hot
+winner-take-all.
+\item[O5 --- Parallel channels and the combiner (Sprint 4.3-A).] The
+frozen window is replaced by the dual-query window $[A,0,B,Q_1,Q_2]$ with
+$(Q_1,Q_2)=(4.5,5.3)$ (the direction-targeting derivation is frozen in the
+pre-registration); channel $c\in\{1,2\}$ is keyed to slot $3+c$ with the
+shared window mean, and a two-input node computes $y=f(\hat C_1,\hat C_2)$
+with $f\in\{+,-\}$.
+\end{description}
+
+\subsection{Audit methodology and discipline}
+\label{sec:audit}
+
+Every rung is established or rejected by the following machinery, which is
+itself part of the frozen protocol and is reported in §10 together with the
+claim ledger.
+
+\emph{Counterfactual suites.} A result is claimed only if it survives the
+counterfactual manipulations of its rung: query swap, value swap, key swap,
+channel-output swap, position randomization, amplitude randomization, the
+single-query controls, and the leakage checks ($Q\cap V=\varnothing$;
+queries are never candidates; equal-norm keys). Subtraction provides the
+non-commutative operator whose swap responses are antisymmetric, addition
+the commutative one whose swap responses are invariant---both predictions
+are tested, so that correct commutative behavior can never be scored as a
+false negative.
+
+\emph{The three-error joint audit.} Composition success requires
+$E_{\mathrm{bind},A}\approx0$ \emph{and} $E_{\mathrm{bind},B}\approx0$
+\emph{and} $E_{\mathrm{comp}}=|y-f(V_A,V_B)|\approx0$ simultaneously. The
+joint requirement exists to exclude the accidental-zero class of false
+positives exemplified by the $V_A=0$ trap of §8, in which the composition
+error vanishes while a binding error remains.
+
+\emph{Negative-control chains and orthogonal axes.} Each positive claim is
+paired with the demonstration that the previous rung fails the same
+criterion ($M_0$ fails composition, $M_1$ binds but does not compose,
+$M_2$ composes). Two orthogonal axes are formalized from these chains:
+\emph{routing selectivity $\perp$ readout discreteness} (§7: the WTA ladder
+changes discreteness while the flip rate stays exactly flat) and
+\emph{binding fidelity $\perp$ combiner error} (§8: the combiner adds zero
+error conditioned on correct binding).
+
+\emph{Statuses and stop rules.} Every check receives an explicit
+\PassFailInconclusive{}. Discrepancies with frozen predictions trigger the
+stop-and-debug procedure: stop, independently recompute, record the cause in
+a dated amendment that preserves the original prediction verbatim, and only
+then continue. The six amendments of this programme (AM1--AM6: the E4(iii)
+closed-form value, the unnormalized-control expectation, the corrected
+fixed-point constants, the E-I drive-transfer value, the readout-softness
+monotonicity, and the canonical routing margins) are all recorded this way;
+none altered a model, query, seed, or threshold.
+
+\emph{Determinism and statistical criteria.} All experiments are
+deterministic under the fixed seeds $20260904$--$20260906$ ($N=10^4$ per
+seed); analytic benchmarks are deterministic $2001^2$ quadratures computed
+from the frozen model. Probability estimates are accepted when
+$|\hat p-p_{\mathrm{bench}}|\le3\,\mathrm{SE}+0.002$ and mean-value
+estimates when $|\hat m-m_{\mathrm{bench}}|\le3\,\mathrm{SE}_{\mathrm{mean}}
++0.01$; structural identities (swap antisymmetry, position invariance,
+conditioned composition error) are asserted at machine precision
+($10^{-12}$).

@@ -1,0 +1,169 @@
+% ==========================================================================
+% Paper 2 — Section 9: The Unified Mechanistic Ladder & General Discussion.
+% ==========================================================================
+\section{The Unified Mechanistic Ladder and General Discussion}
+\label{sec:ladder}
+
+The eight preceding sections assembled one rung at a time. This section
+assembles the whole: the master table of the ladder (§9.1), the two
+orthogonal axes as the paper's conceptual residue (§9.2), the biological
+reading of each organizational degree of freedom---explicitly as a mapping
+of \emph{degrees of freedom}, not as an equivalence claim (§9.3)---and the
+general discussion (§9.4).
+
+\subsection{The master table}
+\label{sec:master}
+
+Table~\ref{tab:ladder} compresses the ladder. Each row names the single
+added organizational degree of freedom, the primitive it certifies, the
+boundary wall the frozen audits located at that rung, and the decisive
+experiment. Two reading rules apply. First, the walls are results, not
+footnotes: every $\not\Rightarrow$ in the table is backed by an exact
+number (a zero flip rate, a positive softness distance, a positive binding
+error). Second, the ladder is constructive in the tested family and
+\emph{sufficient}, not necessary: the paper claims that these degrees of
+freedom suffice here, never that they are the only possible ones.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{1.4cm}p{2.7cm}p{3.0cm}p{3.2cm}p{3.2cm}@{}}
+\toprule
+Rung & Added DOF & Certified primitive & Boundary wall (frozen) &
+Decisive audit \\
+\midrule
+L0 & (frozen baseline) & Memory & --- & Collision $K$: B1 $0.5$ exact vs B4
+$2.047\times10^{4}$; post-reset $0$ vs $32.2\%$ \\
+L1 & surprise-gated window & Saliency weighting & Order-locked:
+$\operatorname{argmax}$ query-invariant & FlipRate $0.000$; Probe-2
+\textsc{terminated} / \textsc{audit\_failed} \\
+L2 & (measurement rung) & Geometric reorganization & Effective rank
+$\neq$ intrinsic dimension; no selectivity & $d_D$ $2.089$ vs $1.484$;
+shared-frame B4 $\not>$ B1 \\
+L3 & O1 opponent competition & Nonmonotone selective tuning &
+$\text{Competition}\not\Rightarrow\text{Routing}$ & Theorem 4.1; C1 peak
+$x^*=1.00$; six layouts FlipRate $0.000$ \\
+L4 & O2 vector Q-K & Content routing &
+representation-family-dependent & Flip law $\theta/\pi$ (132/132);
+$+0.2587\to-0.1559$; $0.4425$ vs $0.4445$; AM2 \\
+L5 & O3 K-V + O4 WTA & Binding; exact delivery &
+softmax mixing barrier; exactness only in the discrete limit &
+$T_{\mathrm{swap}}=-T$ ($10^{-12}$); $\gamma$ ladder $D\to0$; flat
+flip rate $0.4445$ \\
+L6 & O5 parallel channels + combiner & Composition &
+$\text{Binding}\not\Rightarrow\text{Composition}$; unconditional error
+$=$ routing error & M0/M1/M2 chain; 8 counterfactuals;
+$E_{\mathrm{comp}}|\text{both-routed}\equiv0$ \\
+\bottomrule
+\end{tabular}
+\caption{The unified mechanistic ladder. Each row is one frozen sprint;
+the walls are the paper's negative results, each with its exact
+statistic.}
+\label{tab:ladder}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.72\textwidth]{fig6_ladder}
+\caption{The unified mechanistic ladder of dynamical computation. Each
+rung names the single added organizational degree of freedom and, in
+italics, the boundary wall located at that rung by the frozen audits.}
+\label{fig:ladder}
+\end{figure}
+
+\subsection{The two orthogonal axes}
+\label{sec:axes}
+
+The ladder's most transferable residue is a pair of orthogonal axes that
+the audits forced into view.
+
+\emph{Axis 1: routing selectivity $\perp$ readout discreteness} (§7).
+Sharpening from soft mixing to one-hot selection changes \emph{how} a
+winner is delivered, never \emph{which} winner is selected: the flip rate
+is exactly flat ($0.444527$) across the entire WTA ladder, while the
+softness distance collapses from $1.74$ to $0$. A model's reordering
+capacity and its symbol-delivery capacity are independent purchases.
+
+\emph{Axis 2: binding fidelity $\perp$ combiner error} (§8). The combiner
+contributes exactly zero error conditioned on correct operand delivery
+(measured maximum $0.0\mathrm{e}0$ over $3\times10^4$ histories), while
+the unconditional composition error is entirely the propagation of
+upstream routing errors. A model's ability to compose and its ability to
+bind are independent purchases, separated by the operand-delivery step.
+
+Together the axes state the paper's architectural thesis in measurable
+form: capability in this substrate is organized along \emph{named,
+independent} degrees of freedom, so that no single scalar (accuracy, loss,
+rank, sharpness) can stand in for any of them---each rung owns its own
+audit, and the audits are the ladder.
+
+\enlargethispage{2\baselineskip}
+\subsection{Biological reading: degrees of freedom, not equivalences}
+\label{sec:bio}
+
+The paper's organizational degrees of freedom have natural biological
+counterparts, and the blueprint fixes the mapping to be read strictly as
+an analogy between \emph{kinds of organization}, never as a claim that the
+tested neuron is any particular biological circuit.
+
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+\item \emph{Opponent competition (L3).} The E-I microcircuit is the
+canonical organizational motif of cortical columns
+\citep{mountcastle1997}, where fast-spiking parvalbumin-positive
+interneurons provide the subtractive inhibition whose functional
+signature---nonmonotone, band-pass selectivity---Theorem 4.1 derives from
+two inequalities alone \citep{amari1977}.
+\item \emph{The two-dimensional query direction (L4).} A minimal
+continuous direction space over candidate content is what oscillatory
+phase (a circular variable) provides to relational codes
+\citep{singer1999}; the paper's content is not that phase \emph{is}
+$\mathbb{R}^2$, but that a connected one-dimensional query manifold is the
+minimal geometry in which query-conditioned reordering becomes continuous.
+\item \emph{Parallel binding channels (L5--L6).} Independent nonlinear
+channels converging on a common readout are the organizational signature
+of dendritic computation: apical and basal compartments of pyramidal
+neurons integrate separate streams before somatic output
+\citep{london2005,poirazi2003}. The paper's dual-channel-plus-combiner
+architecture is the minimal abstraction of exactly that arrangement, and
+the axon initial segment's threshold integration is the natural candidate
+for the two-input algebraic node.
+\end{itemize}
+
+The caution inherited from the frozen discipline: these are candidate
+physical realizations of non-factorizable organization, not established
+identities, and none of the tested numbers transfers to biology by
+construction (§8.6).
+
+\subsection{General discussion}
+\label{sec:discussion}
+
+\emph{More dynamics does not imply more computational primitives.} The
+temporal memory window $W=5$ was held strictly constant throughout the ladder:
+each rung does not enlarge temporal buffer capacity, but systematically introduces
+distinct \emph{organizational degrees of freedom}---a second sign of coupling
+(E-I opponent units), a second query dimension ($S^1$ rotation), a split between
+keys and values, a sharp selection map, a second channel, and one algebraic
+combiner. These additions reflect how attention and memory structures function
+as fast-weight programming and energy-based associative retrieval
+\citep{schlag2021,ramsauer2020}. Every rung's effect is certified by a
+counterfactual that the previous rung fails. Nonlinear dynamics is
+the stage on which computation happens; the primitives are the topology
+erected on it.
+
+Three questions delimit the honest reach of the work. First,
+\emph{necessity}: the paper establishes sufficiency chains inside one
+frozen family; it does not rule out other mechanisms that route, bind, or
+compose. Second, \emph{generality}: every boundary wall is certified at
+frozen parameters, frozen queries, and two to four candidates; scaling
+audits (more distractors, nested operators, learned embeddings) are
+explicitly out of scope and listed in §10. Third, \emph{composition's
+open end}: the combiner tested is a single two-input algebraic node; what
+minimal organization suffices for multi-operand or nested composition is
+the natural next rung, and the paper leaves it unclaimed.
+
+What the paper does claim, and defends with exact numbers, is a boundary
+map: for each rung from memory to composition, the minimal organizational
+condition under which the primitive appears in this substrate, and the
+exact statistic at which the previous rung stops. That map, not any single
+model, is the intended contribution.

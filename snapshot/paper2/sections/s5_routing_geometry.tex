@@ -1,0 +1,292 @@
+% ==========================================================================
+% Paper 2 — Section 5: The Geometric Boundary of Routing. Hyperplane
+% Bisection in d=2 (TAN-II Sprints 4.2-A / 4.2-B, frozen).
+% ==========================================================================
+\section{The Geometric Boundary of Routing: Hyperplane Bisection in
+\texorpdfstring{$d=2$}{d=2}}
+\label{sec:routing}
+
+Section 4 closed the dynamical avenue: opponent competition reshapes
+tuning and gain but cannot reorder candidates, because ordering is decided
+by the kernel before any downstream dynamics. The boundary is therefore
+representational, and this section crosses it with the minimal
+representational change---operator O2 of §2.4, the vector query--key
+interaction. The section proceeds in four parts: the exact theorem that
+explains why the scalar lineage was locked (the order-conservation
+theorem); the pure geometry of hyperplane bisection and its exact flip
+law $\mathrm{FlipRate}_{\mathrm{CF}}(\theta)=\theta/\pi$; the
+ordering-capacity ladder that generalizes the flip law beyond two
+candidates; and the realization of all of this inside the running neuron
+(Sprint 4.2-B), including the shortcut audits that certify the flips are
+not artifacts.
+
+\subsection{The order-conservation theorem}
+\label{sec:orderconservation}
+
+\begin{theorem}[Order conservation of the separable scalar kernel]
+\label{thm:order}
+Let $d=1$, $K_A\neq K_B$, and let the query domain $D\subseteq\mathbb{R}$
+intersect at most one sign class of $\mathbb{R}\setminus\{0\}$. Then the
+winner of the dot-product kernel $E_i(Q)=QK_i$ is constant on $D$:
+$w(Q)=\operatorname{argmax}_i K_i$ for $D\subseteq(0,\infty)$ and
+$w(Q)=\operatorname{argmin}_i K_i$ for $D\subseteq(-\infty,0)$. In
+particular, for the frozen TAN kernel $E_{t,i}=\beta W_qW_kS_tx_i$ the
+query $q_t=\beta W_qW_kS_t$ lies in the closed cone $\mathcal{Q}_+=
+[0,\infty)$, so $\operatorname{argmax}_i E_{t,i}=\operatorname{argmax}_i
+x_i$ for every active query, and the counterfactual flip rate is exactly
+zero.
+\end{theorem}
+
+\begin{proof}
+$QK_A>QK_B\iff (Q>0 \wedge K_A>K_B)\vee(Q<0\wedge K_A<K_B)$, so the winner
+is constant on each sign class and changes only when the query crosses
+zero. The \TAN{} query never does: $S_t=[x_t-\mu_t-\varepsilon]_+\ge0$ and
+$\beta,W_q,W_k>0$.
+\end{proof}
+
+Theorem~\ref{thm:order} is the paper's sharpest statement of the wall that
+Sprint 4.2-A had to audit, and it is deliberately \emph{domain-conditional}:
+a signed scalar query ($D=\{+1,-1\}$) \emph{can} flip the winner, but only
+by the degenerate global reversal $w(-1)=\operatorname{argmin}_iK_i$, a
+one-bit, order-locked capacity (flip rates confined to $\{0,1\}$). The
+correct universal claim is therefore never ``one-dimensional attention
+cannot route'' but: \emph{within the positive-query scalar family inherited
+from TAN-I, candidate ordering is query-invariant}. This scoping is frozen
+as Amendment AM1 of the programme and is used verbatim here.
+
+\subsection{Hyperplane bisection and the flip law}
+\label{sec:bisection}
+
+Fix two candidates $K_A,K_B\in\mathbb{R}^d$ ($d\ge2$) with
+$\Delta K=K_A-K_B\neq0$, and sample the query isotropically,
+$Q\sim\mathrm{Unif}(S^{d-1})$. The decision boundary
+$\mathcal{H}_0=\{Q:Q^{\top}\Delta K=0\}$ is a hyperplane through the
+origin, i.e.\ a great $(d-2)$-sphere on $S^{d-1}$, so it bisects the query
+sphere into two open hemispheres of equal measure---\emph{regardless of the
+candidate norms}, because the boundary is homogeneous.
+
+\begin{proposition}[Equal bisection]
+\label{prop:bisection}
+For any $K_A\neq K_B$ and isotropic $Q$ on $S^{d-1}$,
+$\Pr_Q[w(Q)=A]=\Pr_Q[w(Q)=B]=\tfrac12$.
+\end{proposition}
+
+\begin{proof}
+$\Pr[Q^{\top}\Delta K>0]=\Pr[Q\cdot\hat u>0]$ with
+$\hat u=\Delta K/\|\Delta K\|$; the projection of a uniform unit vector
+onto a fixed axis is symmetric about zero.
+\end{proof}
+
+\begin{corollary}[Dimension-independent winner variation]
+\label{cor:fd}
+For i.i.d.\ queries $Q_1,Q_2$,
+$F_d=\Pr[w(Q_1)\neq w(Q_2)]=2\cdot\tfrac12\cdot\tfrac12=\tfrac12$ for
+every $d\ge2$; the same holds for the signed scalar ($d=1$, uniform on
+$\{\pm1\}$), while the positive scalar lineage gives $F_d=0$. The Monte
+Carlo estimates freeze at $0.4996/0.4997/0.5033/0.4998$ for
+$d=2,3,4,8$: \emph{higher dimension does not mean stronger routing}, and
+$F_d$ is retained in this paper only as a negative control, never as a
+transition statistic.
+\end{corollary}
+
+The counterfactual quantity that \emph{does} carry the geometry is the flip
+rate of a fixed query pair over randomized histories. Let the history be
+isotropic, $\Delta K\sim\mathrm{Unif}(S^{d-1})$, and fix two queries
+$Q_A,Q_B\in S^{d-1}$ with angular separation
+$\theta=\arccos(Q_A^{\top}Q_B)\in[0,\pi]$.
+
+\begin{proposition}[The flip law]
+\label{prop:fliplaw}
+$\mathrm{FlipRate}_{\mathrm{CF}}(\theta)
+=\Pr_{\Delta K}\bigl[w(Q_A)\neq w(Q_B)\bigr]=\theta/\pi$.
+\end{proposition}
+
+\begin{proof}
+Rotate so that $Q_A=e_1$, $Q_B=\cos\theta\,e_1+\sin\theta\,e_2$. A flip
+occurs iff $(\Delta K_1)\bigl(\cos\theta\,\Delta K_1+\sin\theta\,\Delta
+K_2\bigr)<0$. Writing $\Delta K_1=r\cos\phi$, $\Delta K_2=r\sin\phi$, the
+marginal law of $(\Delta K_1,\Delta K_2)$ is rotationally symmetric in the
+$(1,2)$-plane, so $\phi$ is uniform on $[0,2\pi)$, and the event is
+$\cos\phi\cos(\phi-\theta)<0$, the union of two arcs of angular width
+$\theta$: total measure $2\theta$ out of $2\pi$.
+\end{proof}
+
+The frozen verification is exact at both levels. Analytically, a
+root-decomposition of the indicator reproduces $\theta/\pi$ on the full
+11-point angle grid (endpoints $0\to0$, $\pi\to1$) at machine precision,
+independently of the closed form (connecting to the classical random
+hyperplane flip law of \citet{charikar2002}); and the Monte Carlo
+audit---$d\in\{2,3,4,8\}\times11$ angles $\times3$ seeds, $132/132$
+conditions, maximum deviation across 3-seed averages $0.004667$ (maximum
+single-seed absolute deviation $0.009267$; grid parameter recorded as
+$\theta/\pi$)---agrees with the curve point by point. The
+degenerate endpoints of the scalar lineage sit exactly where the theorem
+predicts: the signed scalar realizes only $\{0,1\}$ (queries equal or
+opposite), the positive scalar only $\{0\}$. The transition recorded in
+this section is therefore not ``$d=1\to d=2$ increases flips'' but the
+topological change $S^{0}\to S^{1}$: the query-direction manifold becomes
+connected, and the flip rate becomes a continuous function
+$\theta/\pi\in[0,1]$ of a continuous query angle.
+
+\subsection{The ordering-capacity ladder}
+\label{sec:capacity}
+
+The pairwise flip law extends to a capacity statement over $M$ candidates.
+For $M$ keys in general position, the achievable orderings of
+$(Q^{\top}K_1,\ldots,Q^{\top}K_M)$ as $Q$ ranges over the query domain are
+the cells of the central arrangement of the $C(M,2)$ difference
+hyperplanes. Frozen exact computations (arrangement enumeration, linear
+programming existence, and a $200{,}000$-angle dense sampling cross-check)
+establish the ladder:
+
+\begin{center}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+$M$ & positive scalar & signed scalar & $d=2$ & $d=3,8$ \\
+\midrule
+2 & 1 & 2 & 2 & 2 \\
+3 & 1 & 2 & 6 & 6 \\
+4 & 1 & 2 & 12 & 24 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent i.e.\ $1$ / $2$ / $M(M-1)$ / $M!$ (the last for $M\le d+1$ in
+general position). Two facts anchor the paper's reading. First, the signed
+scalar is stuck at two orderings for \emph{every} $M$: its ``routing'' is
+the global reversal of a fixed magnitude order, never a content address.
+Second, $d=2$ already realizes \emph{all} $3!=6$ orderings of three
+candidates, so $d=2$ is the minimal dimension for a connected,
+rotationally symmetric continuous query-direction manifold---the statement
+this paper is willing to make, with the qualifier that it concerns the
+tested positive-scalar lineage and the tested query--key family. Higher
+ambient dimension adds nothing to this pairwise or three-candidate
+capacity.
+
+\subsection{Realization in the running neuron (Sprint 4.2-B)}
+\label{sec:realization}
+
+The geometry is only half of the rung; the frozen programme demands that
+the running model actually flip, under the iron gate that \emph{only the
+representation changes} (window, surprise gate, membrane, readout all
+frozen). Sprint 4.2-B does exactly this with operator O2
+($\hat\varphi_2$ keys, rotating query $c\,S_t\hat u(\omega S_t)$,
+$\omega=0.4$), and its deterministic canonical audit closed every
+pre-registered prediction:
+
+\begin{itemize}
+\item \emph{Counterfactual winner flip.} Fixed history
+$[1,0,2,0]$, only the query changes $3\to4$: the attention winner flips
+$A\to B$ with energy margins $+0.2587427\to-0.1559101$; the crossing
+$Q^*=3.7071$ matches the closed form and the winner-vs-query scan
+(A for $Q\le3.70$, B for $Q\ge3.75$).
+\item \emph{No amplitude-code leakage.} The probe slot's energy
+($3.1078$ at $Q=3$; $4.9890$ at $Q=4$) stays \emph{below} the winning
+event at both queries, in direct contrast to the scalar lineage, whose
+probe dominates the window ($10.8$/$20.8$).
+\item \emph{The JSD conjunction.} In a 2-candidate geometric toy example,
+the scalar trap exhibits JSD$=0.0751$ with zero flip (query changes
+sharpness, not order), while the vector model exhibits JSD$=0.0647$ with
+a winner flip. In the full 5-slot window ($[1,0,2,0,Q]$), the canonical
+distribution shifts yield full-window JSDs of $0.009462$ (M0) and $0.008727$ (M2).
+\item \emph{Normalization is a mechanistic enabler.} With raw magnitude
+keys the kernel reads
+$(x_A-x_B)[\cos\theta+(x_A+x_B)\sin\theta]$, whose sign is fixed in the
+query range: the unnormalized control has flip rate exactly $0$ (frozen
+Amendment AM2), while the normalized model reaches $0.4425$ on the
+randomized ensemble against the $0.4445$ quadrature benchmark
+(3 seeds $\times10^4$, all within criterion).
+\item \emph{Structure, not luck.} The sweep over
+$\omega\in\{0.2,\allowbreak0.4,\allowbreak\pi/2,\allowbreak\pi\}$ yields
+winners $(A,A)$, $(A,B)$, $(B,B)$, $(A,B)$: the flip exists exactly when
+the query direction sweeps across the decision boundary, with the
+closed-form crossings in place.
+\item \emph{Dimension controls.} In this mechanism family, increasing the
+ambient embedding dimension beyond the minimal 2-D query subspace did not
+increase routing capacity and, under the tested finite
+candidate/query configuration, \emph{reduced} the observed flip rate
+(ensemble benchmarks $0.0549$/$0.0284$/$0.0172$ for $d=3,4,8$; canonical
+flips absent). The cause is a representation--candidate geometry
+mismatch---the key-difference vector leaves the 2-D query subspace and the
+attention mass is absorbed by the silent slots---not a ``curse of
+dimensionality''.
+\end{itemize}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.66\textwidth]{fig3_phase}\hfill
+\includegraphics[width=0.32\textwidth]{fig3d_realization}
+\caption{The geometric boundary of routing. (a)--(c) The pure geometry
+(Sprint 4.2-A): the signed scalar ray realizes only the degenerate flip
+rates $\{0,1\}$; in $d=2$ the decision hyperplane bisects the query sphere;
+and the Monte Carlo flip rates sit on the analytic curve
+$\mathrm{FlipRate}_{\mathrm{CF}}(\theta)=\theta/\pi$ (132/132 conditions,
+$d\in\{2,3,4,8\}$). (d) The realization in the running neuron
+(Sprint 4.2-B): on the fixed history $[1,0,2,0]$, changing only the query
+flips the attention winner at the closed-form crossing $Q^*=3.7071$, with
+margins $+0.2587\to-0.1559$.}
+\label{fig:phase}
+\end{figure}
+
+\subsection{Sufficiency of 1D Metric Compatibility and the Multi-Candidate Address Identifiability Boundary}
+\label{sec:metric_sufficiency}
+
+The analysis in \S\ref{sec:orderconservation}--\ref{sec:bisection} demonstrated that within the scalar dot-product family inherited from TAN-I, candidate ordering is invariant under positive queries, and that two-dimensional rotation ($S^1$) unlocks counterfactual winner flips. This raises a fundamental theoretical and architectural question: \emph{is multidimensional representation strictly necessary for single-neuron content addressing, or was the scalar failure an artifact of separable dot-product multiplication ($E(q, k) = q \cdot k$)?}
+
+To resolve this question definitively, we established two formal propositions and executed a comprehensive multi-candidate address identifiability audit (60,000 synthetic histories, 420,000 model evaluations across 7 model architectures and 6 conditions).
+
+\begin{proposition}[1D Metric Sufficiency under Hard Selection]
+\label{prop:metric_suff}
+Let $\{k_1, k_2, \dots, k_N\} \subset \mathbb{R}$ be a set of $N \ge 2$ distinct scalar keys. Define the scalar distance compatibility kernel by $E(q, k) = -(q - k)^2$. Then for any target key $k_t$, setting the query to $q = k_t$ uniquely selects $k_t$ under hard argmax routing:
+\begin{equation}
+\operatorname{argmax}_{i \in \{1,\dots,N\}} E(k_t, k_i) = t.
+\end{equation}
+Furthermore, the selection margin is strictly positive: $\Delta E = \min_{i \ne t} (k_i - k_t)^2 > 0$.
+\end{proposition}
+
+\begin{proposition}[Impossibility of Scalar Intermediate Addressing]
+\label{prop:scalar_impossible}
+Let $N \ge 3$ and let $k_{(1)} < k_{(2)} < \dots < k_{(N)}$ be ordered distinct scalar keys. For any generalized scalar multiplication kernel of the form $E(q, k) = \alpha(q) \cdot k$ where $\alpha: \mathbb{R} \to \mathbb{R}$ is an arbitrary scalar function:
+\begin{enumerate}[label=(\roman*)]
+\item If $\alpha(q) > 0$, $\operatorname{argmax}_i E(q, k_i) = k_{(N)}$;
+\item If $\alpha(q) < 0$, $\operatorname{argmax}_i E(q, k_i) = k_{(1)}$;
+\item If $\alpha(q) = 0$, $E(q, k_i) \equiv 0$ for all $i$ (tie across all candidates).
+\end{enumerate}
+In all cases, any intermediate key $k_{(j)}$ with $1 < j < N$ cannot be selected as the unique maximum for any query $q \in \mathbb{R}$.
+\end{proposition}
+
+\begin{proof}
+Direct from linearity: for any non-zero $\alpha(q)$, multiplication by $\alpha(q)$ either strictly preserves ($\alpha > 0$) or strictly reverses ($\alpha < 0$) the order of the keys. An intermediate element in a strictly ordered sequence can never become the maximum under order-preserving or order-reversing bijections.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig7_p1a_identifiability}
+\caption{Address identifiability and the multi-candidate routing boundary (420,000 model evaluations). (a) On $N=3$ candidates (Condition C2), intermediate keys cannot be addressed by scalar multiplier kernels: SignedScalar achieves exactly $0/6{,}705$ hits ($0.0\%$), whereas 1D Metric Attention achieves $100.00\%$ hit rate, identical to 2D Vector-QK on $S^1$. (b) Dual-channel both-routed accuracy across clean ($N=2, 3$), noise-perturbed ($\sigma \in \{0.01, 0.05\}$), and out-of-distribution amplitude ranges (C5, C6). (c) Soft addition readout error on C2: hard routing accuracy is $100\%$ for both 1D Metric and 2D Vector-QK, but soft readout reveals residual leakage governed by kernel curvature ($0.4247$ vs.\ $0.9463$).}
+\label{fig:p1a_identifiability}
+\end{figure}
+
+The empirical consequences of Propositions~\ref{prop:metric_suff} and \ref{prop:scalar_impossible} were verified across 6 experimental conditions (Figure~\ref{fig:p1a_identifiability}):
+\begin{itemize}
+\item \emph{Empirical refutation of 2D necessity:} On Condition C1 ($N=2$) and Condition C2 ($N=3$), the 1D Metric Attention model achieves $100.00\%$ both-routed accuracy with zero hard addition error, exactly matching the 2D Vector-QK model on $S^1$ across all 60,000 trials. This proves that 2D orthogonal rotation is \emph{not} mathematically necessary for content addressing: a 1D scalar distance metric is sufficient.
+\item \emph{Empirical confirmation of the intermediate-key barrier:} In Condition C2 ($N=3$, 10,000 trials $\times$ 2 query channels), exactly $6{,}705$ channel queries targeted the intermediate key ($k_{(1)} < k_{\text{target}} < k_{(3)}$). In exact agreement with Proposition~\ref{prop:scalar_impossible}, the SignedScalar kernel achieved \textbf{exactly $0$ hits out of $6{,}705$ queries ($0.00\%$ hit rate)}, whereas 1D Metric Attention and 2D Vector-QK achieved $6{,}705/6{,}705$ ($100.00\%$).
+\item \emph{Demarcation of Historical 4.2-B:} The static control model \textsc{Hist4.2-B} achieved only $13.68\%$ both-routed accuracy on C2 (middle-key channel hit rate $36.78\%$, near the $33.33\%$ blind chance level). This demonstrates that the winner flips observed in historical Sprint 4.2-B were fixed counterfactual switches between two pre-tuned surprise amplitudes, rather than true content-addressable memory retrieval.
+\item \emph{Soft readout error bounds:} Under soft softmax readout, the addition error on C2 differs between 1D Metric ($0.4247$) and 2D Vector-QK ($0.9463$). For a distance metric kernel, the soft error is strictly bounded by the minimum key separation $\delta$ and temperature $\gamma$:
+\begin{equation}
+|\hat{v}_{\mathrm{soft}} - v_t| \le M \frac{(N-1)e^{-\gamma\delta^2}}{1 + (N-1)e^{-\gamma\delta^2}}, \qquad M = \max_{i\ne t}|v_i - v_t|.
+\end{equation}
+\end{itemize}
+
+\subsection{What this section does and does not establish}
+\label{sec:scope5}
+
+The scoped claim is: \emph{within the tested positive-scalar lineage, $d=2$
+is the minimal dimension for continuous query-direction freedom under dot-product kernels, and the
+running neuron realizes the resulting query-conditioned reordering
+(Level-2 realized routing)}. However, moving from dot-product ranking to 1D distance metric compatibility ($E = -(q-k)^2$) restores full multi-candidate content addressability without requiring higher-dimensional rotation. It is \emph{not} claimed that $d=2$ routes in
+every representation family (the $d=3,4,8$ controls show the opposite for
+the tested maps), nor that any flip constitutes semantic binding---that
+requires the key--value decoupling of the next section---nor that anything
+resembling a thermodynamic phase transition has been located: the
+transition language used here is the minimal-integer-dimensional geometric
+transition, not an order-parameter limit.

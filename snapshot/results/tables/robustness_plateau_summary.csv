@@ -1,0 +1,17 @@
+param,task,metric,n_values,best_value,best_mean,plateau_start,plateau_end,plateau_width_fraction,pass_50pct
+lambda,A,hab_ratio,9,0.4,0.0,0.4,0.9,0.6666666666666666,True
+lambda,B,false_spike_rate,9,0.1,0.1825,0.1,0.5,0.5555555555555556,True
+lambda,C,final_err,9,0.1,5.999999999999972,0.1,0.9,1.0,True
+lambda,D,final_err,9,0.5,12.416810098509844,0.1,0.7,0.7777777777777778,True
+beta,A,hab_ratio,7,1.0,0.0,1.0,10.0,0.5714285714285714,True
+beta,B,false_spike_rate,7,0.1,0.1875,0.1,2.0,0.7142857142857143,True
+beta,C,final_err,7,0.1,5.999999999999972,0.1,10.0,1.0,True
+beta,D,final_err,7,1.0,12.416810098509844,0.1,1.0,0.5714285714285714,True
+W,A,hab_ratio,8,5.0,0.0,5.0,30.0,0.75,True
+W,B,false_spike_rate,8,2.0,0.13625,2.0,2.0,0.125,False
+W,C,final_err,8,3.0,5.999999999999957,3.0,5.0,0.25,False
+W,D,final_err,8,5.0,12.416810098509844,5.0,5.0,0.125,False
+theta,A,hab_ratio,7,0.1,0.0,0.1,0.5,0.5714285714285714,True
+theta,B,false_spike_rate,7,1.5,0.0175,1.5,1.5,0.14285714285714285,False
+theta,C,final_err,7,0.1,5.999999999999972,0.1,0.7,0.7142857142857143,True
+theta,D,final_err,7,0.7,12.022619280203969,0.5,0.7,0.2857142857142857,False

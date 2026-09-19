@@ -1,0 +1,95 @@
+## G1-Design v2.3: REQUEST CHANGES — approval withheld
+
+I accept the main mathematical corrections. However, the governing file still leaves a reachable decoder case undefined, does not fully freeze calibration, and drops an earlier prerequisite for interpreting equivalence. These prevent unconditional G1-Design approval.
+
+I reviewed the complete local protocol, the Round 4 findings, the frozen generator, and the referenced statistical source. No project files were changed, and I did not run the P1-B model or fixture suite. The numerical checks below are independent evaluations of the stated equations.
+
+### Accepted corrections
+
+- **Information-erasure bound and performance floors:** The first-active-event restriction supports the \(7/12\) population bound under the specified clean, reflection-symmetric generator. Preserving 0.80/0.40 and registering predicted M1 insufficiency is appropriate. Both corrected query-blind probabilities are accepted. See [§6–7.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:126).
+- **Collision mathematics:** The discrete coefficient and separation of the *same requested operand across histories* are correct. The claimed numerical state residual remains something the eventual fixture must verify. See [§8.1](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:185).
+- **Euler benchmark:** Independent closed-form evaluation gives error \(7.622962875\times10^{-4}\) at \(h=0.1\), with refinement ratio \(2.005453834\). Thus the revised tolerances are compatible with the stated recurrence. This accepts the benchmark specification—not an implementation. See [§8.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:198).
+- **Newcombe formula:** The \(\psi\) branches and square-and-add limits match the retrieved CRAN `contingencytables` 3.1.0 source, including its Wilson-score dependency—source commit `b70c570d6df289af07211d9c67a160def12be02e`.
+- **Silence and causal wording:** Five valid count symbols plus abstention, unconditional fallback-based MAE, and naming the joint membrane/refractory intervention are accepted.
+
+### 1. The deadline readout is undefined during refractoriness
+
+Your selected pre-reset observation time is acceptable. The remaining problem is that [§2.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:37) defines `u_cand` only when \(r_n=0\), while [§5.1](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:95) requires it unconditionally at the final cue step.
+
+This is reachable under legal inputs:
+
+- Choose event values \(V_i=-K_i\). Encoding then leaves \(u=0,r=0\).
+- For a requested key \(q=1.8\), before the first spike,
+  \[
+  u_k=1.8(1-0.99^k).
+  \]
+- \(u_{80}=0.9944582<1\), while \(u_{81}=1.0025136>1\): the spike occurs at 8.1 ms.
+- Only 19 steps remain before the deadline. The neuron is still refractory at 10 ms, and the final step does not calculate `u_cand`.
+
+**Required amendment:** make the readout a total function. A physically consistent convention would be:
+
+```text
+u_readout = u_reset if r_before_final_step > 0 else u_cand_final_step
+```
+
+Explicitly freeze that convention—or another justified observable—and add this reachable case to G1. A stale candidate from the preceding spike must not silently become the deadline observation.
+
+### 2. The baseline prerequisite for equivalence interpretation has disappeared
+
+[v2.2 §7.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md:153) explicitly halted equivalence evaluation when M1 failed its baseline. [v2.3 §7.3–7.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:155) registers insufficiency but no longer specifies that prerequisite.
+
+Why this matters: if both models fail every one of 1,000 paired trials, the specified Newcombe procedure gives approximately
+
+\[
+CI_{90\%}(d)=[-0.002698243,\,+0.002698243],
+\]
+
+which passes the \(\pm0.005\) equivalence criterion.
+
+That is not a defect in the interval formula. It demonstrates that equivalent delivery scores can occur when neither system delivers anything successfully.
+
+**Required amendment:** either restore the baseline prerequisite for the confirmatory ablation conclusion, or explicitly preregister below-floor comparisons as **floor-limited comparisons**, without inferring preservation or redundancy of a functioning memory mechanism. State the decision separately for the relevant \(N\)/delay conditions.
+
+Keep `M1_CARRIER_INSUFFICIENT`. Also retain the distinction between a population prediction and a deterministic assertion about every finite sample.
+
+### 3. Calibration and bootstrap construction are still not fully frozen
+
+[§8.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:209) fixes the seed, balanced \(N\)-mixture, and role pooling, but leaves consequential choices unresolved:
+
+- **Delay allocation:** Are all 500 histories evaluated at all three delays, or does each receive one assigned delay? With two roles, these produce 3,000 versus 1,000 decoder observations.
+- **Within-history gate average:** What exactly is \(\bar A_{\mathrm{M1},k}\)? Encoding-only samples, active-event samples, or encoding plus delay and cue give different \(A_0\).
+- **Regression population:** Explicitly identify the training traces as M1 traces, if intended, and specify observation weighting before sharing the fitted coefficients across ablations.
+
+Similarly, [§7.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:175) now correctly preserves both probes, but “central 95% bootstrap” still does not uniquely distinguish, for example, a percentile interval from a basic bootstrap interval.
+
+**Required amendment:** define the averaging indices, delay allocation, regression rows/weights, and bootstrap endpoint construction. Specify whether inference is condition-specific; if repeated delays are pooled, define how their shared episode dependence is preserved.
+
+### 4. The implementation annex remains incomplete
+
+The current [§8](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:183) ends after calibration. Several previously requested fixture contracts are still absent:
+
+- **Collision fixture:** Freeze event positions and the requested target/query, or explicitly require enumeration of all legal position pairs. Include assertions for \(c_2\ne0\), legal compensated values, and absence of spikes throughout both histories. For illustration, slots \((0,1)\) give \(V'_2\approx-0.130767498\), whereas slots \((0,4)\) give \(V'_2\approx-0.000400745\). The construction works, but these are different fixtures.
+- **Statistical known-answer cases:** Register expected outputs and tolerances, not just the method name. Independent evaluations at \(\alpha=0.10\), with counts ordered \((n_{11},n_{10},n_{01},n_{00})\), include:
+
+  | Counts | Expected 90% interval |
+  |---|---|
+  | \((50,0,0,50)\) | \([-0.016230441,\,+0.016230441]\) |
+  | \((100,0,0,0)\) | \([-0.026342721,\,+0.026342721]\) |
+  | \((0,0,0,100)\) | \([-0.026342721,\,+0.026342721]\) |
+  | \((0,50,50,0)\) | \([-0.162304408,\,+0.162304408]\) |
+
+- **G1 coverage:** Restore an authoritative G1.0–G1.9 checklist, or explicitly incorporate a versioned checklist with overrides. In particular, preserve the leakage checks, actual-spike conformance checks, and budget/reproducibility requirements. Freeze sample sizes/seeds and distinguish stochastic alerts from deterministic assertion failures.
+
+One accompanying labeling correction: [§5.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md:117) may retain \(1/3\) as a **hypothetical six-bin midpoint-quantizer reference**, but “\(M=6\) (Count)” no longer describes the actual five-valid-symbol count codebook.
+
+### Disposition
+
+**G1-Design v2.3: not approved. G1-Executable: not run. Full simulation: remains blocked.**
+
+A focused governing addendum can close these items. The accepted scope, erasure bound, performance floors, coefficient derivation, and statistical formula do not need another conceptual redesign.
+
+Reviewed SHA-256:
+
+```text
+ffdfc17453a7f5711b4967346c8185008ad136c3f253aff86baf6dc931535a62
+```

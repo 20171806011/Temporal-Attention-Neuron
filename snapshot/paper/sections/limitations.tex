@@ -1,0 +1,59 @@
+% ============================ 7. Limitations ============================
+\section{Limitations}\label{sec:limitations}
+
+The results in this paper are subject to explicit limitations, recorded
+as part of the frozen archive rather than resolved post hoc.
+
+\begin{enumerate}
+  \item \textbf{Scalar input.}  All experiments use single-channel,
+    scalar stimulus streams; no multimodal or vector-valued input was
+    studied.
+  \item \textbf{Small window.}  $W = 5$; conclusions about
+    history dependence concern a very short receptive field.
+  \item \textbf{Simplified attention kernel.}  A single scalar query with
+    a linear key map; the kernel is a deliberate minimal construction,
+    and its boundaries (Section~\ref{sec:res-mechanism}) are therefore
+    properties of this construction.
+  \item \textbf{Synthetic tasks.}  Stimuli are synthetic (noise, steps,
+    ramps, pulses, episodes); no naturalistic or behavioural data were
+    used.
+  \item \textbf{Probe-1 readout limitations.}  The linear readout is a
+    frozen protocol constraint; readout class-collapse occurred in some
+    cells and is handled by per-cell audit statuses, not by removing
+    data.
+  \item \textbf{Probe-1 B3 class coverage.}  B3 (no attention) exhibited
+    lo-class-blindness in its readout in one seed (clean condition,
+    bal3 0.470 marked invalid for interpretation) and near-chance,
+    partially degenerate behaviour elsewhere; B3 is therefore not a clean
+    computational baseline for Probe-1, and contrasts involving it must
+    be read with this caveat.
+  \item \textbf{Probe-2 encoding leakage.}  The composite encoding
+    carried conditional single-tap information at B-coded amplitudes
+    ($|\mathbb{E}[V_q \mid x_i]|$ up to $\sim$0.5--0.6 at code values);
+    this is recorded as an experimental confound of the audit encoding.
+  \item \textbf{Query self-attraction.}  In Probe-2 the query amplitude
+    exceeded all history codes, so the softmax concentrated on the
+    current tap (100\% of trials); future routing probes must avoid
+    making the query a candidate that outranks history.
+  \item \textbf{Effective rank is not intrinsic dimension.}
+    $d_{PR}$, log-trace and spectra are estimator-level descriptions of
+    local fluctuation covariance; they are not intrinsic manifold
+    dimensions, and no capacity conclusion follows from them.
+  \item \textbf{No biological equivalence.}  TAN is a computational
+    analogue; no claim of biological equivalence is made.
+  \item \textbf{No large-scale claim.}  Results do not transfer, by
+    construction, to transformer or LLM-scale systems.
+  \item \textbf{No cognition/intelligence claim.}  Nothing here bears on
+    cognition or intelligence beyond the specific mechanistic
+    statements made.
+  \item \textbf{No efficiency claim.}  No metabolic, energy or
+    information-per-spike claim is made.
+  \item \textbf{No multi-neuron evidence.}  Organizational hypotheses
+    discussed in Section~\ref{sec:disc-org} are untested future
+    hypotheses.
+  \item \textbf{Probe-1 figure/table provenance.}  The repository's
+    single-seed diagnostic figure and CSVs (seed 20260904) predate the
+    frozen three-seed data; the three-seed results reported here come
+    from the frozen log and amended-audit documents
+    (\texttt{audit\_v3\_amended}), as recorded in the archive index.
+\end{enumerate}

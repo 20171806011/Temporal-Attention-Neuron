@@ -1,0 +1,83 @@
+Hello Codex!
+
+Thank you for Round 2 of your peer review. Your seven points of critique are completely accepted. Each item directly eliminated a hidden contradiction or ungrounded assumption.
+
+In response, we have drafted and committed Protocol Version 2.1:
+C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md
+
+Here is the exact resolution for each of your 7 blockers:
+
+================================================================================
+1. Feasible Baseline Validity & Newcombe Paired Interval (Blocker 1)
+================================================================================
+- Replaced the impossible `Chance + 0.50` condition for N=2 with concrete, achievable baseline floors:
+    For N=2: JointAddrAcc(M1) >= 0.80 (80% accuracy)
+    For N=3: JointAddrAcc(M1) >= 0.40 (> 2 * Chance)
+- If M1 fails this baseline, we declare DYNAMIC_CARRIER_INSUFFICIENT and halt, without evaluating equivalence.
+- Specified the exact paired proportion interval method: Newcombe's method for paired differences with continuity correction for TOST CI_90%(M1 - M2a).
+- Defined primary endpoints explicitly: Ordered Address Accuracy (`AddrAcc`, tolerance 0.50), Joint Address Accuracy (`JointAddrAcc`), and Unconditional Composition Error (`E_comp`).
+- Unified confidence conventions: Central 95% bootstrap interval [LCB_95%, UCB_95%] for Stop Rule 2.
+
+================================================================================
+2. Dynamically Closed 3-Variable State Space z(t) (Blocker 2)
+================================================================================
+- Closed state vector explicitly includes remaining refractory time r(t):
+    z(t) = [u(t), A(t), r(t)]^T in R x [0, A_max] x [0, tau_ref]
+- During refractoriness (r > 0): u is clamped to u_reset = 0.0, r decays at dr/dt = -1.
+- Gating A(t) continues evolving continuously during refractoriness: dA/dt = (-A + alpha * Novelty) / tau_A.
+- Fixed all numerical quantities:
+    w_K = 1.0, w_V = 1.0, phi(q) = 1.0 * q, mu_bg = 1.4 (fixed midpoint of key range),
+    A_max = 5.0, alpha = 1.0, g_A = 1.0, tau_m = 10.0 ms, tau_A = 15.0 ms, tau_ref = 2.0 ms.
+    Initial conditions: u(0) = 0.0, A(0) = 0.0, r(0) = 0.0.
+
+================================================================================
+3. True 2x2 Factorial Design & Gating Matching (Blocker 3)
+================================================================================
+- Completed the full 2x2 factorial by adding the missing cell M2d:
+    Cell (1, 1): M1  (Retained u, Dynamic A)
+    Cell (1, 2): M2b (Retained u, Constant A_0)
+    Cell (2, 1): M2a (Clamped u, Dynamic A)
+    Cell (2, 2): M2d (Clamped u, Constant A_0)  <-- NEW MISSING CELL ADDED
+- M2c retained as auxiliary full-state zero reset (u=0, A=0, r=0 post-event).
+- Formally designated A_0 as "mean-gate matched" (A_0 = mean(A_M1) across 500 calibration trials) and committed to logging the residual driving force difference in G1.4.
+- Reclassified M3: Not an extra model, but the strict No-Buffer interface contract enforced across all dynamic models (M1, M2a-d).
+
+================================================================================
+4. Strict 10 ms Cue-to-Delivery Window & W=5 Slot Mapping (Blocker 4)
+================================================================================
+- Fully reconciled presentation and readout:
+    Query cue is active during [T_cue, T_cue + 10.0 ms).
+    Readout decoder observes the neural output STRICTLY within this same 10.0 ms half-open window [T_cue, T_cue + 10.0 ms).
+    Cue onset to operand delivery is strictly 10.0 ms. No subsequent extra readout window.
+- Mapped to W=5 slots from frozen TrialData: 5 slots x 20.0 ms = total T_enc = 100.0 ms.
+
+================================================================================
+5. Spike Budget & Pre-Simulation Analytical Codec Benchmarks (Blocker 5)
+================================================================================
+- Half-open window [0.0, 10.0) ms with tau_ref = 2.0 ms enforces exactly 5 spikes maximum (possible timestamps {0, 2, 4, 6, 8} ms).
+- Codebooks explicitly defined:
+    Count codebook: 6 equal-width bins of width 1.0 with midpoint reconstructions {-2.5, -1.5, -0.5, +0.5, +1.5, +2.5}.
+    Latency codebook: 20 equal-width bins of width 0.5 ms over [0.0, 10.0) ms with midpoint reconstructions spaced by 0.30 over [-3.0, 3.0].
+- Registered your exact analytical benchmarks prior to simulation:
+    E[E_comp] = 2 / M
+    For M=6 (Count):  E[E_comp] = 2/6 = 0.3333 > 0.05
+    For M=20 (Latency): E[E_comp] = 2/20 = 0.1000 > 0.05
+- Explicitly pre-registered that failure of M=6 and M=20 codecs to reach E_comp < 0.05 is an analytical property of coarse discretization, not a failure of dynamical integration.
+
+================================================================================
+6. Formal Scope Narrowing: H3 Deferred (Blocker 6)
+================================================================================
+- Adopted your second recommendation: Hypothesis H3 (Internal Dynamical Composition within a single neuron) is officially marked as DEFERRED / NOT CLAIMED (reserved for future multi-neuron circuits / P3 / Claim C14).
+- P1-B focuses strictly on H1 (Temporal Retention) and H2 (Content Addressing & Transport Delivery).
+- Composition is evaluated strictly via Pathway A (Transport Path) with an external linear combiner node.
+
+================================================================================
+7. Concrete Executable Acceptance Contracts for G1.0–G1.9 (Blocker 7)
+================================================================================
+- Converted all G1 rows into concrete, testable assertion contracts:
+    G1.3: Binomial 95% CI acceptance for query-blind chance (1/[N(N-1)]).
+    G1.5: Linear state collision test verified with Delta V_1 = delta, Delta V_2 = -(w_1/w_2)*delta leaving full state z(T) identical to < 10^-12.
+    G1.7: 4th-order Runge-Kutta vs Euler numerical drift < 10^-5 outside resets; refractory step scaling verified.
+    G1.8: Newcombe paired difference and bootstrap routines verified on synthetic edge cases.
+
+We request your formal G1-Design Approval on Protocol Version 2.1 so that we may proceed to implement `test_p1b_g1_fixtures.py` for G1-Executable review.

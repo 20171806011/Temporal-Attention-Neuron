@@ -1,0 +1,54 @@
+% ============================ 8. Conclusion =============================
+\section{Conclusions}\label{sec:conclusion}
+
+We set out to determine what computational structure and limitations
+emerge when attention-like temporal weighting is compressed into a
+minimal spiking dynamical unit, and to test, layer by layer, whether
+temporal memory, attention-like weighting, routing and semantic binding
+are distinct capabilities.  The frozen experiments support the following
+conclusions, each with the evidence level stated:
+
+\begin{itemize}
+  \item \textbf{History dependence is established (Phase 1).}  The
+    scalar membrane potential is not a sufficient state for TAN or for
+    any window-carrying variant; the projection onto $h$ is not a
+    lumpable reduction.  History dependence is a property of retained
+    context, not of attention alone, and it is conditionally gated by
+    prediction error.
+  \item \textbf{Attention reorganizes local response geometry (Phase 2,
+    supported with caveats).}  In the matched full representation, Full
+    TAN shows higher effective rank and covariance scale in
+    event-locked responses than the uniform-attention control, robustly
+    across amplitude controls; this is a statement about local
+    fluctuation geometry, not intrinsic dimensionality, and the shared
+    observable frame shows no TAN-specific advantage over LIF.
+  \item \textbf{Retrieval evidence is limited (Probe 1).}  Full TAN
+    shows evidence of improved target-relevant retrieval under
+    content-rich temporal context relative to the no-attention control,
+    partially replicated across seeds, while a fixed delay line remains
+    the strongest fixed-position memory baseline.
+  \item \textbf{Query-conditioned routing is not implemented (Probe 2).}
+    The scalar kernel fails the routing identifiability audit; changing
+    the query while holding history fixed never changes which history
+    tap is attended.  This is a mechanistic identifiability result, kept
+    in full as \texttt{TERMINATED / AUDIT\_FAILED} in the archive.
+\end{itemize}
+
+The experiments therefore separate temporal memory, attention-like
+saliency weighting, routing, and semantic binding as distinct
+computational properties:
+\begin{equation*}
+  \boxed{\;
+  \text{Memory} \;\neq\; \text{Weighting} \;\neq\;
+  \text{Routing} \;\neq\; \text{Binding}
+  \;},
+\end{equation*}
+and the mechanistic boundary of the current kernel can be stated
+precisely: \emph{a minimal scalar temporal-attention mechanism can
+generate history-dependent dynamics and dynamically reorganize
+event-locked response structure, while remaining fundamentally limited
+in its ability to perform query-conditioned content selection.}
+Whether organizational extensions -- dendritic compartments,
+opponent circuits, lateral or phase-based competition -- lift this
+boundary is the legitimate next question (TAN-II); it is not answered,
+and not claimed, by the present paper.

@@ -1,0 +1,32 @@
+**Not yet for this exact closure document.** I accept the revised scientific interpretation, but one provenance error still prevents unconditional sign-off.
+
+Determination date: **September 19, 2026.**
+
+The recheck confirms:
+
+- The closure-report and manifest digests match the values you supplied.
+- All **16 spike-channel intervals**—12 cell-specific and four delay-pooled—match the frozen JSON at six decimals, including the ten previously incorrect rows. Their means and decisions also match.
+- All six M1 comparison rows match the JSON.
+- The scientific scope corrections and the \(A_0\), abstention, and unconditional-error labels address the prior findings.
+
+### One remaining blocker
+
+[Line 31 of the closure report](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md:31) marks an incorrect SHA-256 for `task_generator.py` as “Verified”:
+
+```text
+Reported:
+4FB25DAA420E40A29C5791E0DC4731D79EAEB546FDDC55B11EB881FA54E818F2
+
+Actual:
+674CF9F49F5CD7F4975B87D29CD413E801FE40BD10FC56B966E663C9E6FC989D
+```
+
+I confirmed the runner resolves to `p1_experiments/task_generator.py` and independently hashed that file using two utilities. Its actual digest matches the [frozen P1-A baseline manifest](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/P1A_FINAL_BASELINE_MANIFEST.md:43). This supports a **report transcription error, not generator drift**. All seven other artifact-hash entries in the closure report match.
+
+### Formal disposition
+
+**Scientific conclusions: accepted. Prior G1 approvals and numerical-result acceptance: unchanged. Unconditional closure-package sign-off: withheld pending this single provenance correction.**
+
+Correct the generator digest in the report and issue the revised report’s SHA-256. No protocol, code, output, or manifest changes—and no further confirmatory simulation—are required to resolve this finding.
+
+I did not modify any files or rerun the simulation during this recheck.

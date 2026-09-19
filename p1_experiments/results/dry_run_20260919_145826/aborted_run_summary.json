@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "run_id": "dry_run_20260919_145826",
+    "dry_run": true,
+    "python_version": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+    "cpu_count_logical": 12,
+    "total_system_ram_gb": 15.83,
+    "execution_start_utc": "2026-09-19T13:58:26.954552+00:00",
+    "code_sha256": {
+      "task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+      "models.py": "3762cfb8627e7574dfbcbdc8db2470489471ad247832d03fa2dae916ce3f23e5",
+      "oracle_and_evaluator.py": "13392549dcbddf5d6acb05721a57873714d2ca1a84e2ed712d1b8b5fe10d6fe3",
+      "run_p1a_experiment.py": "ba72c4eaa66e736dd467a831a2fd4ce023bdca5859a507edc1e71e0ebf12e508"
+    },
+    "status": "RUNNING"
+  },
+  "status": "ABORTED",
+  "error_type": "AssertionError",
+  "error_message": "ScalarMetric recomputed add error non-zero: 8.881784197001252e-16",
+  "timestamp_utc": "2026-09-19T13:58:27.838213+00:00"
+}

@@ -1,0 +1,166 @@
+## G1-Design determination: REQUEST CHANGES — approval still withheld
+
+The revised scope, three-variable state inventory, completed factorial, mean-gate matching terminology, and H3 deferral are accepted. Those points do not need another redesign.
+
+However, the actual [v2.1 file](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md) still contains an invalid address metric, unresolved experimental alternatives, an unspecified analog decoder, and a numerical acceptance criterion that can reject correct implementations. I cannot authorize implementation against those definitions.
+
+This was read-only. No files were changed, and no models or fixtures were executed. The calculations below are analytical, not simulation results.
+
+### 1. `AddrAcc` measures approximate value delivery—not ordered address correctness
+
+The [endpoint definition](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:133) counts success when
+
+\[
+|\hat V-V_{\mathrm{target}}|<0.50.
+\]
+
+That does not establish which object was selected. For example, swapping outputs for two distinct objects with values \(0.10\) and \(0.20\) gives two successful value estimates under this tolerance, despite both addresses being wrong.
+
+The justification “half of minimum key-value spacing” is also incorrect. The [frozen generator](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/task_generator.py:39) imposes minimum **key** separation \(0.05\); independently sampled values have **no minimum separation**.
+
+Consequently, the ordered-identity chance rate \(1/[N(N-1)]\) cannot be attached to this endpoint. As an analytical example, a query-blind control returning two distinct candidate values in fixed order has, for \(N=2\),
+
+\[
+P(\text{both value estimates within }0.5)
+=\frac12+\frac12P(|V_1-V_2|<0.5)
+=\frac{167}{288}\approx0.5799,
+\]
+
+rather than \(0.5\), under the independent uniform value distribution.
+
+**Required correction:**
+
+- Rename these endpoints `DeliveryAcc` and `JointDeliveryAcc`, and derive the null behavior of the explicitly registered query-blind control.
+- If ordered address correctness remains a claim, specify a separate legitimate identity output and scoring rule. Do not manufacture identity using evaluator-held candidate values.
+- Remove the nonexistent spacing justification. The \(0.50\) delivery tolerance may remain as a declared practical tolerance, but needs its own rationale.
+- If silence is classified as abstention, it must count as failed delivery even when the fallback value \(0\) happens to be numerically close to the target. Keep it in the denominator and unconditional composition loss.
+
+The proposed 0.80/0.40 floors are numerically feasible, but their interpretation must follow the corrected endpoint—not the old address-chance calculation.
+
+### 2. The actual experiment and analog readout are still not uniquely specified
+
+Two consequential alternatives remain in the [schedule](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:65):
+
+- Events occupy the initial \(N\) slots **“or”** preserve random `TrialData` positions.
+- Query B uses an independent repeated trial **“or”** follows query A sequentially.
+
+These are different experiments. Packing events changes retention ages. Repeating an episode gives B a fresh encoding; sequential interrogation exposes B to state changes caused by A.
+
+**Freeze one primary convention for each.** Preserving `TrialData.event_positions` and `mask` is the direct way to maintain the frozen temporal inputs. Independent repeated probes and sequential interrogation may both be studied, but only as separately registered conditions with distinct resource and latency accounting. Also state whether \(W=5\) denotes a fixed episode or a rolling eligibility horizon.
+
+More importantly, **the analog decoder for M1 and M2a–d is still absent**. The file specifies spike codebooks, but not the function producing \(\hat V\) for the continuous-carrier comparison.
+
+Before implementation, specify:
+
+- the exact decoder function or frozen calibration procedure;
+- permitted inputs—\(u\), \(A\), \(r\), query information, or another declared subset;
+- measurement time and pre-/post-reset phase;
+- whether any within-window accumulation is allowed and counted as decoder state;
+- identical decoder use across the primary ablation comparisons.
+
+Without this, `JointDeliveryAcc(M1)` is not computable from the protocol without the implementer making a substantive scientific choice.
+
+Finally, [M2a and M2d](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:91) reset both \(u\) and \(r\). Describe the intervention accordingly, preserve \(r\) for a strictly \(u\)-only intervention, or establish that resetting \(r\) is immaterial under the registered timing. The permitted causal conclusion must match the actual intervention.
+
+### 3. G1.7’s Euler–RK4 agreement requirement is not a valid general accuracy gate
+
+The [numerical gate](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:171) requires Euler/RK4 agreement below \(10^{-5}\) at the stated step sizes.
+
+Consider a valid, smooth, entirely subthreshold query response:
+
+\[
+\dot u=\frac{-u+0.5}{10},\qquad u(0)=0.
+\]
+
+At \(t=5\) ms,
+
+\[
+u_{\mathrm{exact}}
+=0.5(1-e^{-0.5})
+\approx0.19673467,
+\]
+
+whereas Euler with \(h=0.05\) ms gives
+
+\[
+u_{\mathrm{Euler}}
+=0.5(1-0.995^{100})
+\approx0.19711478.
+\]
+
+Their difference is approximately \(3.8\times10^{-4}\). RK4 at \(0.1\) ms is very close to the exact value here. Thus correct implementations already disagree substantially more than \(10^{-5}\), without any reset discontinuity.
+
+**Required correction:** compare each solver with an analytical reference using method-appropriate error bounds, and separately test refinement/convergence. Freeze the norm, comparison times, and event-time tolerances. Do not require different-order methods to agree beyond the accuracy supported by their registered steps.
+
+Also freeze event timestamps and boundary handling: the recurrence records spikes at \(t+\Delta t\), so a spike recorded exactly at the decode window’s right endpoint must be excluded from the half-open window.
+
+### 4. The codec expectation has again been promoted into a broader impossibility claim
+
+The conditional benchmark in [§5.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:120) is correct:
+
+> Independent uniform operands, independently encoded by equal-bin midpoint quantizers, have population composition MAE \(2/M\).
+
+But the following conclusion—“both codecs mathematically cannot achieve \(E_{\mathrm{comp}}<0.05\)”—does not follow in that unrestricted form.
+
+Three distinctions matter:
+
+- A population expectation is not a deterministic lower bound on every finite-sample mean.
+- Actual neuronal spikes are not automatically the outputs of independent nearest-midpoint quantizers.
+- The latency decoder’s silence-to-zero fallback changes the actual decoding/error process; zero is not one of its twenty midpoint reconstructions.
+
+**Use this narrower conclusion:**
+
+> For the ideal independent midpoint-quantizer reference under independent uniform operands, population composition MAE is \(1/3\) for six bins and \(0.10\) for twenty bins. These are reference predictions, not universal lower bounds for the neuronal implementation or its finite-sample results.
+
+Keep the codec calibration separate from the end-to-end neural test. The latter must consume actual neuronal outputs, not a value-to-code oracle.
+
+### 5. The remaining fixture specifications need a compact implementation annex
+
+These are bounded completion items, not requests for a larger experiment:
+
+| Item | What must be frozen |
+|---|---|
+| **G1.5 collision fixture** | Concrete legal histories, perturbation size, and effective temporal coefficients. The relevant weights include gating and leak; they are not simply \(w_K=w_V=1\). Require a no-spike regime and distinguish continuous-time coefficients from those of the discrete recurrence. |
+| **G1.8 paired interval** | Your message specifies continuity correction, but the file only says “Newcombe method.” Identify the exact variant/formula and expected results for named paired \(2\times2\) tables. |
+| **Bootstrap** | Interval construction, resampling unit, replicate count, and RNG seed. |
+| **Calibration** | Seeds, \(N\)-mixture, slot distribution, averaging across the 500 histories, and whether \(A_0\) is global or condition-specific. |
+| **Fixture records** | Inputs, expected outputs/states, observed traces, tolerances, failure classifications, and hashes. Distinguish deterministic assertion failures from stochastic leakage alerts. |
+
+For the collision fixture, identical neural state with different target values establishes non-injectivity. If it is also intended to demonstrate failure at tolerance \(0.50\), choose target values whose acceptance intervals do not overlap; an arbitrarily small perturbation does not establish that approximate-delivery boundary.
+
+## A useful negative result already follows from the registered equations
+
+This is **not** an additional reason to reject the experiment. It is a result worth preregistering.
+
+From the [input and gating equations](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md:52):
+
+- Initially \(A=0\).
+- If the first active event has \(K\le1.4\), its novelty is zero.
+- Therefore \(A=0\) throughout that event, and \(A(K+V)=0\).
+- Its value never enters the declared neural state.
+
+Under the intended no-bypass readout, later queries cannot recover information that was never written.
+
+There is a stronger population implication for the clean, in-domain \(N=2\) generator. Its symmetric key distribution makes the first active key fall at or below 1.4 with probability \(1/2\). Both events are requested when \(N=2\). An entirely unobserved independent \(V\sim U[-3,3]\) can be estimated within \(0.50\) with probability at most \(1/6\).
+
+Consequently, even granting perfect performance everywhere else,
+
+\[
+P(\text{joint delivery success})
+\le \frac12\cdot1+\frac12\cdot\frac16
+=\frac7{12}\approx0.5833.
+\]
+
+This is a population upper bound under the stated generator and no-bypass assumptions—not a claim about every finite sample. It already places the registered 0.80 population target beyond this particular M1 encoder.
+
+Record this as a **gating-induced information-erasure boundary of M1**, not a universal limitation of neural carriers. Do not change the gate or lower the success floor merely to avoid the predicted negative result.
+
+## Authorization
+
+**G1-Design v2.1: not approved.** Fixture implementation and full simulation remain unapproved under the agreed two-stage process.
+
+A focused correction annex addressing the five blocks above should be sufficient for the next design review; no expansion of the model family is needed. In particular, preserve the legitimate negative prediction while fixing the scoring and fixture definitions.
+
+Reviewed SHA-256:
+
+`c32eb13d028029cffba13331b0150ac9109659f196fc30f3251df7ba0d598e95`

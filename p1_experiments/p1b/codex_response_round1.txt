@@ -1,0 +1,259 @@
+## Verdict: REQUEST CHANGES — no P1-B implementation or simulation sign-off yet
+
+The research question is appropriate, but **v1.0 does not yet distinguish neural storage, neural binding, neural composition, and computation in the surrounding circuitry**. Its stopping rules could therefore produce conclusions stronger than the experiment supports.
+
+I reviewed the actual protocol, Section 10.1 of the research plan, the frozen P1-A specifications and generator, and an existing P1-B implementation scaffold. This was read-only: **no files were changed, and no models, tests, or simulations were executed**. The three P1-A source/specification files I hash-checked match the closure manifest; this was not a new audit of all 368 files or the manuscripts.
+
+### 1. Blocking findings and required amendments
+
+#### A. An existing scaffold already violates the proposed causal contract
+
+The directory contains [models_p1b.py](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b.py:87). Its presence does not establish that simulations have run, but it must be disclosed as pre-existing, unvalidated implementation.
+
+Static inspection identifies four decisive problems:
+
+- **Model 1 does not receive raw content as specified.** Its [input construction](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b.py:115) computes `drive = -abs(query - keys[active_idx])` externally during event presentation. The query is therefore available during encoding, rather than arriving only at the registered later cue time.
+- **Model 1 never uses `values` in its dynamics.** Changing values while holding keys and query fixed cannot change its membrane, gate, or spike traces. This architecture cannot demonstrate value retention or binding.
+- **The two ablations are currently no-ops.** [Model 2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b.py:182) calls the parent simulation and returns its trace without clamping anything. [Model 3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b.py:195) stores `A_0` but never uses it in the recurrence.
+- **Model 4 is a standalone value codec**, not a readout of the dynamic neuron: its [encoder](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/models_p1b.py:213) receives an explicit value and manufactures spikes.
+
+There is also an analytically identifiable silent-neuron configuration: under Model 1’s defaults, the drive is nonpositive, the membrane starts at −70 mV, and threshold is −50 mV. The default update cannot depolarize the membrane to threshold. A resulting absence of spikes would be an implementation/calibration outcome, not evidence of a biological decoding limitation.
+
+**Amendment:** preserve and identify this scaffold, disclose whether any outputs have been inspected, and prohibit treating it as a conforming implementation or a passed validation gate.
+
+#### B. Five recorded signals are not yet a closed physical architecture
+
+The [five-port specification](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL.md:26) leaves several essential interfaces undefined:
+
+- How are three features \((K,V,S)\) encoded into one current?
+- Through which physical input do \(q_A,q_B\), operand roles, and the operation cue arrive?
+- Is surprise supplied externally or computed internally? If computed, where is that computation’s state?
+- Which signals can the decoder observe, and at which times?
+- Is the claimed system one neuron, two parallel carriers, or a neuron plus stateful external modules?
+
+The membrane equation also mixes incompatible declared quantities: if \(C(t)\) is current and \(E_{\mathrm{rev}}\) is voltage, \(C(t)-E_{\mathrm{rev}}\) is undefined dimensionally. A conductance-based membrane model uses a voltage driving force, for example
+
+\[
+C_m\dot h=-g_L(h-E_L)+\sum_j g_j(t)(E_j-h)+I_{\mathrm{bias}}.
+\]
+
+Alternatively, use an explicitly normalized current-based model. These are different commitments and should not be interchanged implicitly. ([neuronaldynamics.epfl.ch](https://neuronaldynamics.epfl.ch/online/Ch3.S1.html))
+
+**Required amendment:** add an input/state/output/readout-access inventory, units, encoding equations, initial conditions, parameter bounds, threshold/reset ordering, and refractory rules. In an integrate-and-fire model, pre-reset and post-reset voltage are two observations of the same evolving membrane state—not two independent memory stores. ([neuronaldynamics.epfl.ch](https://neuronaldynamics.epfl.ch/online/Ch1.S3.html))
+
+Keep the five signals for instrumentation, but do not make all five available to every decoder. In particular, access to a complete historical voltage trace is an external storage resource.
+
+#### C. Separate “carrying operands” from “performing composition”
+
+I recommend registering three distinct hypotheses:
+
+1. **Retention:** past values remain recoverable from the declared neural state after their inputs disappear.
+2. **Binding/addressing:** a subsequently delivered query selects the value associated with the requested key.
+3. **Composition:** the declared neural dynamics produce the requested function of the operands.
+
+A successful experiment on one does not establish the others.
+
+Define two separate evaluation paths:
+
+- **Transport path:** decode \(\hat V_A,\hat V_B\) from declared neural outputs and combine them externally. This tests neural delivery of operands.
+- **Internal-composition path:** the neural system must already encode the composed result before a fixed, registered output decoder reads it. The decoder may interpret the output code, but may not select operands or calculate their sum/difference.
+
+This distinction follows directly from the original [Section 10.1 dependency audit](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/snapshot/docs/RESEARCH_AUDIT_AND_PLAN_2026-09-17.md:267).
+
+Also, **one-dimensional metric compatibility does not establish one-dimensional memory sufficiency**. P1-A’s [evaluator](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/models.py:33) retains the candidate arrays and retrieves values from them.
+
+An illustrative analytical fixture for a proposed linear-value, subthreshold carrier is
+
+\[
+h(T)=b+\sum_i w_iV_i.
+\]
+
+With fixed keys and surprise, perturbations satisfying
+
+\[
+\Delta V_1=\delta,\qquad
+\Delta V_2=-\frac{w_1}{w_2}\delta
+\]
+
+leave the final membrane value unchanged while changing a requested operand. If all other persistent states also match, a later identical query cannot distinguish those histories.
+
+This is a useful collision test—not a universal impossibility theorem for nonlinear neural encodings. The amendment must specify the actual storage-and-query mechanism or explicitly register the expected representational limitation.
+
+#### D. The ablations do not support the proposed localization claim
+
+The assertion in [Model 2’s causal interpretation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL.md:53)—that unchanged performance proves memory resides *entirely* in external queuing—is invalid.
+
+Resetting \(h\) leaves possible information in:
+
+- \(A(t)\);
+- synaptic/input filters and encoder state;
+- refractory/adaptive variables;
+- historical spike records;
+- decoder accumulators;
+- external candidate buffers.
+
+An ineffective or mistimed intervention is another explanation.
+
+**Required controls:**
+
+- A small **\(h\)-retained/reset × \(A\)-dynamic/reset-or-clamped factorial**, with precise intervention timing.
+- An **external-history-access removal** control, explicitly required by the original plan.
+- A **complete declared-state reset** condition.
+- Sham interventions and at least one matched-state transplantation/rescue test.
+- Frozen readouts for the primary intervention comparison; retraining after ablation, if studied, must be a separate compensation experiment.
+
+For Model 3, choose \(A_0\) using independent calibration and register a drive-matching criterion. Otherwise, performance changes can reflect altered input gain rather than surprise-specific retention. A shuffled-surprise control can help separate surprise alignment from generic time-varying gain.
+
+Even a valid deterioration after membrane reset establishes a contribution to the tested endpoint; it does not, by itself, locate arithmetic in the membrane.
+
+#### E. The temporal task is not specified by the frozen generator
+
+The frozen [TrialData contract](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/task_generator.py:18) provides a five-slot history and separate query cues. It does not provide a physical presentation schedule or a surprise time series.
+
+A versioned streaming adapter therefore needs to define:
+
+- event duration, spacing, and milliseconds per “timestep”;
+- query onset and operation-cue onset;
+- whether blanks and queries advance \(W\);
+- whether eligibility is evaluated at query onset or answer time;
+- how two requests interact with the same evolving state.
+
+**A specific shortcut risk:** presenting a cue immediately after whichever event was chosen as the target can reveal target identity through timing. Include a genuinely post-cued condition in which the encoding history is identical across alternative requests and the query is unavailable during encoding.
+
+Distinguish three quantities:
+
+\[
+\text{target age},\qquad
+\text{query delay},\qquad
+\text{query-to-answer latency}.
+\]
+
+Do not pool them under “latency.” Predeclare feasible in-window conditions and score evicted-target probes separately. A hard \(W=5\) eligibility rule also must not be mistaken for a sharp physical forgetting boundary in a leaky state.
+
+#### F. The spike test needs a channel contract, not just a time window
+
+There is an immediate specification conflict:
+
+- Your request sets the primary bound at **10 ms**.
+- The file’s [Stop Rule 2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL.md:84) uses **50 ms**.
+- The registered tested windows are only **5, 10, and 20 ms**.
+
+I recommend amending the primary deadline to 10 ms, consistent with your request, and labeling 20 ms as secondary characterization. Specify whether the bound applies per operand or to the complete operation, including any serial decoding and buffering.
+
+Before execution, freeze:
+
+- count code versus timing code;
+- spike-time resolution, separately from integration timestep;
+- refractory interval and spike budget;
+- timing jitter/noise assumptions;
+- signed-value representation;
+- decoder structure, fitting data, and allowed inputs;
+- handling of silence, saturation, and missed deadlines.
+
+Timing codes cannot be dismissed by failure of a count code: experimentally, first-spike timing can distinguish stimuli that produce similar spike counts. This supports testing the distinction, not assuming that TAN will meet the proposed deadline. ([authors.library.caltech.edu](https://authors.library.caltech.edu/records/sa23b-wj235))
+
+The existing codec illustrates the problem: counts 0–10 produce only 11 decoded levels over \([-3,3]\), spaced by 0.6, with worst-case single-value quantization error 0.3. That is a limitation of that particular codec, derivable without simulation—not a general spike-train impossibility result.
+
+Conversely, arbitrarily precise continuous spike timestamps must not become an undeclared infinite-precision analog resource.
+
+### 2. Replace both stopping rules
+
+#### Revised Stop Rule 1: scoped dynamical redundancy
+
+First define `Acc`. I recommend reporting separately:
+
+- ordered address correctness, where actually observable;
+- both operand-delivery errors;
+- unconditional composition error;
+- a registered joint-success endpoint;
+- abstention, gate coverage, and deadline failure.
+
+Do not infer an unobserved winner by matching output against evaluator-held candidate values. Addition alone is also insufficient to establish role binding: swapping operands preserves their sum.
+
+For the proposed accuracy margin, require an appropriate paired equivalence analysis, for example
+
+\[
+CI_{90\%}(\mathrm{Acc}_1-\mathrm{Acc}_0)
+\subset(-0.005,0.005),
+\]
+
+and a separately registered comparison of Model 2 against Model 1. Here, 0.005 means **0.5 percentage points**. A small point difference or nonsignificant difference is not an equivalence result; the conventional TOST procedure tests both registered equivalence boundaries. ([pure.tue.nl](https://pure.tue.nl/ws/files/80918653/lakeequi2017.pdf))
+
+Require meaningful intact-model performance, valid interventions, and analysis of every primary condition—not only a pooled average.
+
+**Permitted conclusion:**
+
+> Within the registered tasks, delays, readout, and equivalence margins, the specified membrane-memory intervention had no practically meaningful effect.
+
+**Not permitted from that comparison alone:**
+
+> All memory is external, or neural dynamics are universally unnecessary.
+
+An external-computation classification additionally requires a demonstrated dependency path through the external components. If code inspection already shows that the output bypasses neural state, that classification needs no large simulation.
+
+Also register the complementary outcome: failure of Model 1 to approach the reference means the proposed dynamic implementation has not demonstrated sufficiency. It must not escape interpretation merely because Stop Rule 1’s antecedent is false.
+
+#### Revised Stop Rule 2: registered spike-channel limitation
+
+Define, for example,
+
+\[
+e_{\mathrm{comp},i}
+=\left|\hat y_i-(V_{A,i}\pm V_{B,i})\right|,
+\qquad
+E_{\mathrm{comp}}=\operatorname{mean}_i e_{\mathrm{comp},i},
+\]
+
+in original value units, unconditionally. Report operand errors and tail/joint-success measures alongside the mean so cancellation and rare large failures remain visible.
+
+For the registered deadline and decoder family, distinguish:
+
+- **Demonstrated success:** an appropriate upper confidence bound lies below 0.05.
+- **Demonstrated failure:** an appropriate lower bound is at or above 0.05.
+- **Inconclusive:** uncertainty crosses the threshold.
+
+Failure to demonstrate success should stop a positive bounded-latency claim. It does **not** prove that every spike code fails or that an analog port is necessary.
+
+**Permitted conclusion:**
+
+> The registered single-neuron spike code and decoder did not demonstrate the required fidelity within 10 ms.
+
+If a separately validated analog implementation succeeds, add:
+
+> The demonstrated implementation currently depends on continuous readout.
+
+Replace “exact” with the registered finite-error criterion throughout. Approximation below 0.05 is not exact real-number delivery.
+
+### 3. Required G1 validation gates
+
+There must be two authorization boundaries:
+
+1. **G1-design:** approve the complete specification before further implementation.
+2. **G1-executable:** after separate authorization, implement and run only the registered validation fixtures. Full simulation remains blocked until their review.
+
+Executable gates cannot honestly be marked passed before their tests exist.
+
+| Gate | Required evidence and acceptance criterion |
+|---|---|
+| **G1.0 — Registration and provenance** | Resolve 10/50 ms; disclose the existing scaffold and any prior result exposure; freeze hypotheses, permitted claims, parameters, decoder, amendments, and artifact identities. |
+| **G1.1 — Physical and information interfaces** | Dimensionally consistent equations; explicit raw-event, surprise, query, and operation encoding; complete persistent-state inventory; per-model readout permissions; no undeclared history or future-query access. |
+| **G1.2 — Streaming task identifiability** | Independent legal oracle achieves 100% on noiseless, distinct-key fixtures; hand-checked timelines cover both requests, all delays, and eviction. Invalid schedules are rejected independently of model performance. |
+| **G1.3 — Shortcut and leakage detection** | Query swap, value swap, key–value reassignment, position permutation, zero/equal-value traps, query-only and query-blind controls. Deliberately injected value/label leakage must be detected. For uniformly requested distinct ordered targets, query-blind identity chance is \(1/[N(N-1)]\)—not necessarily the chance for numerical addition. |
+| **G1.4 — Intervention fidelity** | Trace assertions establish that clamps modify the recurrence before downstream consequences, not merely the saved trace. Constant-gate traces equal the registered constant. Positive-control dynamics respond to interventions; no-op ablations are rejected. |
+| **G1.5 — Carrier and composition accounting** | State-collision, history-access removal, and transplantation/rescue fixtures have explicit predictions. Decoder and combiner dependencies are inspectable. Transport success cannot automatically set an internal-composition success flag. |
+| **G1.6 — Spike-channel conformance** | Model 4 consumes actual registered neuronal spikes. Known-pattern decoder tests pass; spike budget, timing precision, refractory constraints, silence, saturation, and total latency are audited. No raw-value or voltage bypass is available. |
+| **G1.7 — Numerical correctness** | Analytic no-input decay and constant-input cases, gate transients, threshold crossing, reset ordering, and event boundaries agree within frozen tolerances. Timestep refinement changes endpoints by less than a registered numerical-error budget well below 0.05. |
+| **G1.8 — Statistical specification** | Freeze sample sizes/seeds, calibration/test separation, paired comparisons, equivalence margins for accuracy and error, primary conditions, uncertainty methods, and multiplicity policy. Methods must behave sensibly at 0%/100% accuracy; a degenerate all-success bootstrap is not evidence of zero population uncertainty. |
+| **G1.9 — Reproducibility and budget** | Save sufficient inputs, interventions, port traces, decoder outputs, and scoring records for independent recomputation. Preserve counterfactual grouping and failure denominators. Enforce the inherited ≤2 CPU-hour and ≤2 GB limits, with isolated outputs and overwrite protection. |
+
+These extend the original [G1 identifiability requirements](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/snapshot/docs/RESEARCH_AUDIT_AND_PLAN_2026-09-17.md:253) and [resource/stop conditions](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/snapshot/docs/RESEARCH_AUDIT_AND_PLAN_2026-09-17.md:389).
+
+**Crucially, G1 validates the experiment—not TAN’s success.** A correctly implemented model that cannot retain, bind, compose, or communicate the operands is a valid negative result. A model that never receives values, a no-op intervention, or a decoder that reads the answer is an invalid implementation.
+
+### Final disposition
+
+**P1-B v1.0 remains unapproved.** The next deliverable should be a protocol amendment resolving the interfaces, streaming schedule, causal controls, readout/composition boundary, statistical decision rules, and pre-existing-code disclosure—not a performance run.
+
+One smaller source-identity correction should accompany it: the frozen P1-A implementation uses \(-(q-k)^2\), while the draft uses \(-|q-k|\). These preserve hard nearest-key ordering, but they are not identical score functions and must not be silently substituted in soft or dynamical comparisons. See the [frozen metric implementation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/models.py:296).
+
+This review does not reopen P1-A’s operator-level result. It establishes what additional evidence is required before that result can support a claim about a dynamical neural carrier.

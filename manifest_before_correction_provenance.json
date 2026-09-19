@@ -1,0 +1,98 @@
+{
+  "provenance_metadata": {
+    "title": "Historical Script Hash Provenance and Correction Ledger",
+    "review_baseline": "P0 Rework Baseline (2026-09-17)",
+    "workspace": "C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757",
+    "original_archive": "C:/Users/李则徐/Downloads/TAN_Final_Submission/TAN_Final_Submission",
+    "summary": "Records the provenance of all 9 historical script SHA-256 hashes found in original research documentation, clarifies the root cause of the earlier 16-character truncation padding defect, and verifies bit-for-bit identity against the frozen source archive."
+  },
+  "root_cause_explanation": {
+    "defect_description": "In an earlier audit iteration, 8 of 9 historical hashes were reported as mismatches or warnings.",
+    "mechanism": "Certain legacy console logs and markdown summaries displayed short 16-character hexadecimal hash prefixes (e.g. 324548198e50f604...). A flawed automated parsing script padded these truncated 16-character prefixes with synthetic hex characters to create 64-character strings, instead of extracting the authentic full-length SHA-256 hashes from the primary JSON summary and reproducibility ledger files.",
+    "resolution": "All 9 full 64-character SHA-256 hashes were extracted directly from the authoritative machine-readable summary files (results/sprint4_1cd/sprint4_1cd_summary.json, results/sprint4_2/sprint4_2*_summary.json, results/sprint4_3/audit_summary.json) and docs/REPRODUCIBILITY_LEDGER.md. All 9 hashes are 100% bit-for-bit identical to the frozen source code.",
+    "current_status": "9/9 verified matches, 0 mismatches, 0 warnings."
+  },
+  "records": [
+    {
+      "relative_path": "sprint4_1cd_ei_dynamics.py",
+      "short_prefix_16hex": "324548198e50f604",
+      "authentic_sha256": "324548198e50f6045052337c53b444bb9949d01a61b9605c0c926b3007eeaf84",
+      "source_artifact": "results/sprint4_1cd/sprint4_1cd_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "324548198e50f6045052337c53b444bb9949d01a61b9605c0c926b3007eeaf84",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/probe2/identifiability/probe2_identifiability_audit.py",
+      "short_prefix_16hex": "aabf8ebbb81e911e",
+      "authentic_sha256": "aabf8ebbb81e911e69117591f84e4f836cf59cf8c1b505de53a8b7c1a88143c7",
+      "source_artifact": "docs/REPRODUCIBILITY_LEDGER.md (line 71) & code/experiments/probe2/identifiability/README.md (line 11)",
+      "source_field": "script_sha256 / SHA-256 field",
+      "current_archive_sha256": "aabf8ebbb81e911e69117591f84e4f836cf59cf8c1b505de53a8b7c1a88143c7",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_geometry.py",
+      "short_prefix_16hex": "cfb201a9ba26ecab",
+      "authentic_sha256": "cfb201a9ba26ecabea293f146da4f5dbf220aeb0499da988439eb8be256d9ea4",
+      "source_artifact": "results/sprint4_2/sprint4_2_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "cfb201a9ba26ecabea293f146da4f5dbf220aeb0499da988439eb8be256d9ea4",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_shortcut_audit.py",
+      "short_prefix_16hex": "5cdac1369597bde5",
+      "authentic_sha256": "5cdac1369597bde583436d7d3dd22dbf075ed124943e743461080b35b37d43f2",
+      "source_artifact": "results/sprint4_2/sprint4_2_shortcut_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "5cdac1369597bde583436d7d3dd22dbf075ed124943e743461080b35b37d43f2",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_vector_qk.py",
+      "short_prefix_16hex": "3328362c8e956ff6",
+      "authentic_sha256": "3328362c8e956ff65f93f22c2c3b9f93d22678a07084210e9781864980bbbfcf",
+      "source_artifact": "results/sprint4_2/sprint4_2b_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "3328362c8e956ff65f93f22c2c3b9f93d22678a07084210e9781864980bbbfcf",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_routing_probe.py",
+      "short_prefix_16hex": "8f0982c971018f1e",
+      "authentic_sha256": "8f0982c971018f1e8580f54cea69bcb02c965c0825a6a01e534f3e993c2e728f",
+      "source_artifact": "results/sprint4_2/sprint4_2b_probe_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "8f0982c971018f1e8580f54cea69bcb02c965c0825a6a01e534f3e993c2e728f",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_binding_probe.py",
+      "short_prefix_16hex": "5d55652500be0949",
+      "authentic_sha256": "5d55652500be0949aaeeec9497a579d07d341aa449339301cc38238e4e21a6a2",
+      "source_artifact": "results/sprint4_2/sprint4_2c_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "5d55652500be0949aaeeec9497a579d07d341aa449339301cc38238e4e21a6a2",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_2/sprint4_2_hard_binding.py",
+      "short_prefix_16hex": "e5178f7713386518",
+      "authentic_sha256": "e5178f7713386518d4ad4032bd917efe0b9858c66fd147ca4da5c269df749d90",
+      "source_artifact": "results/sprint4_2/sprint4_2d_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "e5178f7713386518d4ad4032bd917efe0b9858c66fd147ca4da5c269df749d90",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    },
+    {
+      "relative_path": "code/experiments/sprint4_3/sprint4_3a_composition_probe.py",
+      "short_prefix_16hex": "8155552b8a22e695",
+      "authentic_sha256": "8155552b8a22e69566c0246d677eacb3b0d45452c6603dc976533cd1fc77bcf0",
+      "source_artifact": "results/sprint4_3/audit_summary.json",
+      "source_field": "script_sha256",
+      "current_archive_sha256": "8155552b8a22e69566c0246d677eacb3b0d45452c6603dc976533cd1fc77bcf0",
+      "match_status": "BIT_FOR_BIT_MATCH"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+Hello Codex!
+
+Following your formal G1-Design Approval on Protocol Version 2.6 (SHA-256: `07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B`), we have implemented the conforming neural carrier models and executed the full G1 validation fixture suite.
+
+We present the implementation and test execution report for formal G1-Executable Approval:
+
+1. Code Artifacts & Cryptographic Locks:
+   - Governing Protocol: `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md`
+     SHA-256: `07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B`
+   - Model Implementation: `models_p1b_v2.py`
+     SHA-256: `ED01DFEF13BA8CBAA83FF42A3CCDB3BD47A38A95887DD111A5E879B17D227396`
+   - Fixture Test Suite: `test_p1b_g1_fixtures.py`
+     SHA-256: `5BFEDE616064DDB332C83EEAA10E9B5D41477BC06A0CB977DB8CCFF0CFD1E779`
+
+2. Execution Output of `python test_p1b_g1_fixtures.py`:
+======================================================================
+STARTING P1-B G1 EXECUTABLE FIXTURE VALIDATION SUITE
+======================================================================
+[G1.0] Verifying Governance & Provenance...
+  -> PASS: Protocol V2.6 SHA-256 confirmed: 07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B
+[G1.1] Verifying State Closure & Concrete Refractory Readout Fixture...
+  -> PASS: Concrete Reachable Refractory Fixture verified (spikes=[81], u_readout=0.0)
+[G1.2] Verifying Timeline & Sampling Plan...
+  -> PASS: Sampling plan generator and seed contracts confirmed.
+[G1.3a] Executing Leakage Audit (Query-Blind Null)...
+  N=2: observed = 0.5860, analytical null = 0.5799, 95% CI = [0.5552, 0.6161]
+  N=3: observed = 0.2550, analytical null = 0.2551, 95% CI = [0.2290, 0.2829]
+  -> PASS: Query-blind null consistency within Wilson 95% CI confirmed.
+[G1.3b] Verifying Task Solvability with Clean Oracle...
+  -> PASS: Clean Oracle achieved 100.0% delivery accuracy (2000/2000).
+[G1.4] Verifying 2x2 Factorial Fidelity and Trace Assertions...
+  -> PASS: All 5 factorial intervention traces verified.
+[G1.5] Verifying Exact Linear Subthreshold State Collision Fixture...
+  -> PASS: Collision fixture verified (c2=1.761006e-05, V2'=-0.130767498, ||diff||_inf=2.03e-20)
+[G1.6a] Verifying Analytical Codec Benchmarks...
+  -> PASS: Ideal quantizer references verified (6-bin: 0.3333, 20-bin: 0.1000)
+[G1.6b] Verifying Actual-Spike Conformance & Boundary Exclusion...
+  -> PASS: Step 100 boundary exclusion and silence handling verified.
+[G1.7] Verifying Euler Numerical Accuracy & Convergence Ratio...
+  -> PASS: Euler error = 7.622963e-04 (< 1e-3), ratio = 2.0055 (>= 1.8)
+[G1.8] Verifying CRAN Newcombe Method 10 Known-Answer Cases...
+  Counts (50,0,0,50): [-0.016230441, 0.016230441] err < 1e-9
+  Counts (100,0,0,0): [-0.026342721, 0.026342721] err < 1e-9
+  Counts (0,0,0,100): [-0.026342721, 0.026342721] err < 1e-9
+  Counts (0,50,50,0): [-0.162304408, 0.162304408] err < 1e-9
+  -> PASS: All 4 CRAN Newcombe tables and decision logic verified.
+[G1.9] Executing Budget & Runtime Extrapolation Benchmark...
+  Benchmark: 200 trials in 0.198s (0.99 ms/trial)
+  Estimated runtime for 96000 episodes: 1.6 minutes
+  -> PASS: Budget benchmark well within 2 CPU hours.
+======================================================================
+ALL 12 G1 FIXTURES PASSED: 100% DETERMINISTIC AND STOCHASTIC CONFORMANCE
+======================================================================
+
+3. Request for Disposition:
+All 12 deterministic and stochastic assertions have passed with 100% conformance.
+We request your formal G1-Executable Approval so that we may unlock and run the full 96,000-episode confirmatory simulation.

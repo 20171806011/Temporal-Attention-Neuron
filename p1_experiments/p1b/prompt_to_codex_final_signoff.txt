@@ -1,0 +1,39 @@
+# Phase P1-B Final Scientific Closure: Request for Unconditional Sign-Off
+
+Dear Codex,
+
+In response to your audit determination of September 19, 2026, we have recorded all required scope corrections, reporting precisions, and exact 6-decimal confidence intervals in the authoritative closure document:
+
+**`P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md`**  
+SHA-256 Digest: `CE653531F50D1047292E10382893B40F4EEEF23734559C43CCD6F5B0E5BD23B3`
+
+---
+
+## 1. Summary of Incorporated Audit Corrections
+
+1. **Endorsed Consensus Statement Adopted Verbatim**:
+   > "Phase P1-B completed under frozen Protocol V2.6. M1 failed the baseline delivery prerequisite in every registered condition, rendering all M1–M2a comparisons floor-limited and leaving memory redundancy unestablished. Both specified spiking readouts met the registered criterion for demonstrated limitation of the tested end-to-end implementations. These findings establish model-specific insufficiency, not a universal biological impossibility result or a demonstrated requirement for population coding. H3 remains deferred."
+
+2. **Scope Corrections on Redundancy and Carrier Dynamics**:
+   - Replaced "conclusively rejected" with **"memory redundancy is not established"**, noting that mutual failure at floor prevents authorizing confirmatory equivalence.
+   - Clarified that the observed carrier insufficiency is strictly **model-specific to M1 dynamics** under Protocol V2.6, rather than a universal mathematical impossibility proof for all dynamical systems.
+   - Clarified that `DEMONSTRATED_CHANNEL_LIMITATION` applies to the tested single-unit point-process decoders operating on this carrier under Pathway A, without isolating discretization as the sole bottleneck or demonstrating a universal requirement for population coding.
+
+3. **Reporting Precisions**:
+   - Included all ten cell-level 95% bootstrap intervals directly from the hash-locked JSON to 6 decimal places (e.g. N=2, 5ms M4_Count `[2.392478, 2.500591]`, Latency `[2.242402, 2.331462]`, etc.).
+   - Explicitly identified $A_0 = 0.061886726$ as the calibrated constant gate parameter for M2b/M2d, noting that M1 evolves dynamically from $A(0)=0.0$.
+   - Clarified that $82.1\% - 83.0\%$ represents **episode-level abstention**, whereas individual-query silence was $57.15\% - 58.60\%$.
+   - Clarified that reported $E_{\text{comp}}$ values are **unconditional** means including silence fallbacks, while noting conditional non-silent means ($2.9829 - 3.1685$ for Count, $2.5165 - 2.6207$ for Latency).
+
+4. **Cryptographic Manifest Re-Verification**:
+   - The manifest file `manifest.sha256` has been confirmed on disk with SHA-256 digest:
+     `08EC79B93C44150FC8E4251E15AC31DD3FF327D428D5849D0312009BEB16A667`
+   - Matching your independent calculation byte-for-byte.
+
+---
+
+## 2. Request for Unconditional Scientific Sign-Off
+
+With all audit corrections, precision labels, and exact intervals recorded in `P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md`:
+
+Do you grant **unconditional scientific sign-off** for the formal closure of **Phase P1-B**?

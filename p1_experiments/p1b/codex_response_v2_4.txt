@@ -1,0 +1,61 @@
+## G1-Design v2.4: REQUEST CHANGES — approval withheld
+
+The main mathematical corrections are accepted. However, the hash-verified governing file does not yet close every requirement from the v2.3 determination. The remaining issues concern the sampling plan, condition-specific decisions, and executable-gate contracts—not a redesign of the accepted model or hypotheses.
+
+I reviewed the complete [v2.4 protocol](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:1). Its SHA-256 matches your submission exactly:
+
+```text
+AA2CBDDF0DF5D989837B0DB0D803370BFB805E791EEC9EF141876B49F7C804E6
+```
+
+No project files were changed. I did not execute `models_p1b.py`, the G1 fixture suite, or a P1-B experiment. Numerical checks were independent evaluations of the specified formulas.
+
+### Accepted corrections
+
+- **Total deadline readout:** The refractory branch now resolves the undefined-candidate problem. For the stated \(q=1.8\) example, the final step is refractory and the registered observation is correctly \(u_{\mathrm{readout}}=0\), not the earlier threshold-crossing candidate. Query exclusion from the affine decoder is explicit. [§5.1](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:95)
+
+- **Baseline prerequisite:** The 0.80/0.40 floors, `M1_CARRIER_INSUFFICIENT`, and `FLOOR_LIMITED_COMPARISON` are retained. The prohibition on interpreting below-floor equivalence as preservation of functioning memory is appropriate. The permitted conclusion correctly names the joint membrane/refractory intervention. [§7.3–7.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:158)
+
+- **Calibration and bootstrap construction:** The encoding-step definition of \(A_0\), 1,000 equally weighted M1 training pairs, shared frozen decoder, percentile endpoints, and episode-cluster resampling across pooled delays address the corresponding methodological questions. [§4–5.1](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:83), [§7.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:180)
+
+- **Numerical reference contracts:** Independent calculation gives \(V'_2=-0.130767497954685\), consistent with the collision specification. All four Newcombe intervals reproduce their printed references within \(2.3\times10^{-10}\), comfortably inside the registered tolerance. The Euler benchmark and corrected hypothetical-quantizer labels are also accepted. These validate the reference mathematics, not an implementation. [§8.1–8.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:193), [§5.3](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:122)
+
+### Remaining requirements
+
+**1. Freeze evaluation and leakage-test sample sizes and seeds.**
+
+The file specifies 500 calibration histories and 2,000 bootstrap replicates, but neither is the evaluation sample size. It still does not specify the evaluation-history counts/seeds or the stochastic G1.3 fixture counts/seeds. This was an explicit requirement in the [v2.3 determination](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/codex_response_g1_design_approval.txt:81).
+
+Add a compact sampling table—or explicitly incorporate a versioned manifest—covering:
+
+- Number of unique evaluation histories per \(N\) and their seeds.
+- Reuse of those histories across models and delays.
+- G1.3 sample sizes/seeds and its independent sampling unit.
+
+These choices affect interval precision and equivalence decisions; the resource-budget row does not substitute for them.
+
+**2. Apply the baseline prerequisite and equivalence decision to explicitly identified conditions.**
+
+The condition-specific and pooled language in §7.5 governs the **spike-channel bootstrap**. Sections 7.3–7.4 still do not explicitly say whether the baseline prerequisite and Newcombe equivalence decision apply per \((N,\tau_{\mathrm{delay}})\) cell or to pooled results. [§7.3–7.5](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:158)
+
+Freeze the rule so that:
+
+- Each confirmatory cell uses that cell’s M1 baseline performance and paired M1/M2a joint-delivery outcomes.
+- A pooled baseline pass cannot authorize a redundancy conclusion in a below-floor delay cell.
+- Any pooled equivalence analysis is separately specified; repeated delays from one history must not simply become independent rows in a Newcombe table.
+
+The \(7/12\) result remains a population bound and predicted insufficiency, not a deterministic cap on every finite-sample proportion.
+
+**3. Complete the restored checklist’s failure classifications and concrete fixture contracts.**
+
+The [authoritative checklist](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md:229) still needs three bounded corrections:
+
+- **G1.3:** The entire row is labeled `[Stochastic Alert]`, including “Oracle achieves 100%.” Separate them: the query-blind CI check is a stochastic alert; a clean-oracle error is a deterministic implementation/task failure.
+- **G1.6:** Analytical quantizer checks and a five-spike cap do not establish actual-spike conformance. Explicitly require the end-to-end decoder to consume the threshold-generated binary spike outputs, with timestamp, boundary, silence, and no-analog-bypass checks.
+- **Concrete regression fixtures:** Your submission names the \(V_i=-K_i,\ q=1.8\) refractory case and collision query \(q=K_1=1.8\), but the governing annex does not explicitly register those fixtures. Add them, together with an executable legal-value-bounds assertion for the compensated collision history. The total-readout equation and collision construction themselves are accepted.
+
+### Disposition
+
+**G1-Design: not yet approved. G1-Executable: not run. Full simulation: remains blocked.**
+
+A short, versioned governing addendum can close these remaining items. The accepted erasure bound, performance floors, decoder equation, collision coefficients, and statistical reference formulas do not need another conceptual revision.

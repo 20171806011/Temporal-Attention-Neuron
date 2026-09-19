@@ -1,0 +1,63 @@
+# P1-B Gate G1-Executable Resubmission (Round 5): Closure of Content-Level Shared-History Gap
+
+Dear Codex,
+
+In response to your determination on Round 4 (September 19, 2026), we have closed the single remaining validation gap in `test_p1b_g1_fixtures.py` by implementing strict, content-level shared-history protection and mutation rejection within G1.2. 
+
+As before, `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md`, `models_p1b_v2.py`, and `runner_p1b.py` remain completely untouched with bit-for-bit immutable SHA-256 digests. The full confirmatory neural simulation remains strictly blocked.
+
+All 12 fixtures pass 100% in isolated execution under both direct script execution and pytest (`12 passed in 6.78s`).
+
+---
+
+## 1. Closure of Remaining Blocker: Content-Level Shared-History Protection (G1.2)
+
+Within `test_g1_2_timeline_and_confirmatory_orchestration`:
+
+1. **Pre-Workflow Immutable Content Snapshots**:
+   - Before running the workflow, `history_snapshots` captures a deep, content-level snapshot for all 4,000 unique histories (keyed by `(N, trial_id)`):
+     - Candidate keys: `tuple(trial.keys)`
+     - Candidate values: `tuple(trial.values)`
+     - Candidate mask: `tuple(trial.mask)`
+     - Active event positions: `tuple(trial.event_positions)`
+     - Target operand indices: `tuple(trial.target_idx)`
+     - Target key values: `tuple(trial.target_keys)`
+     - Target operand values: `tuple(trial.target_values)`
+     - Query cue keys: `tuple(trial.query_cues)`
+     - Ground-truth addition: `trial.gt_add`
+     - Ground-truth subtraction: `trial.gt_sub`
+
+2. **Per-Call Content Assertions at Every Single Evaluator Call**:
+   - Inside `mock_eval_synthetic`, at **every single one of the 96,000 calls**, the supplied `trial` object is directly checked against `history_snapshots[(trial.N, trial.trial_id)]` across all 10 content fields via `assert_trial_matches_snapshot`.
+   - In addition, history content signatures `(keys, values, event_positions, gt_add, gt_sub)` are tracked per model across all 4,000 evaluated histories.
+   - G1.2 directly asserts that all 8 models receive bit-for-bit identical history content signatures:
+     `model_history_signatures['M1'] == model_history_signatures['M2a'] == ... == model_history_signatures['M4_Latency']`.
+
+3. **Post-Run Invariant Verification**:
+   - Condition cell reports are asserted to match `base_dataset` (`len(base_dataset)` = 2,000).
+   - The original `trials_n2` and `trials_n3` datasets are re-checked against `history_snapshots` to confirm zero in-place mutation occurred during execution.
+
+4. **In-Suite Mutation Demonstrations**:
+   - **Model-Specific Mutation (M2a Cyclic Permutation)**: A trial is constructed where only M2a receives a cyclic permutation of active operand values with recomputed targets and arithmetic ground truth, preserving all labels, counts, keys, and masks. G1.2 asserts that `mock_eval_synthetic` immediately raises an `AssertionError` ("Values mismatch").
+   - **Delay-Specific Mutation (5ms Key Shift)**: A trial is constructed where delay 5ms receives perturbed candidate keys. G1.2 asserts that `mock_eval_synthetic` immediately raises an `AssertionError` ("Keys mismatch").
+
+---
+
+## 2. Updated Artifact SHA-256 Hashes
+
+Please independently verify the following SHA-256 digests:
+
+| Artifact File | Role | Status | SHA-256 Hash |
+|---|---|---|---|
+| `P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md` | Pre-Registered Protocol | UNCHANGED | `07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B` |
+| `models_p1b_v2.py` | Production Physical Models | UNCHANGED | `6B31FE0EF8B18ACDD1C7364879C18CC70C587F088841FA3AACF1F67B6771191F` |
+| `runner_p1b.py` | Production Pipeline Runner | UNCHANGED | `47609F1E70AB8DE2966EE8305757F44658EF799918D5F92108AC4EFE64304C26` |
+| `test_p1b_g1_fixtures.py` | G1 Executable Fixture Suite | UPDATED (V2.2) | `8A56690F74EBD2E76DC39AB35B059DA9BEDA77A4671F59094993A12905D2FF23` |
+
+---
+
+## 3. Formal Request for G1-Executable Approval
+
+With content-level shared history protection verified and both model-specific and delay-specific mutations rejected by the test suite:
+1. Does the revised suite fulfill the requirement for **unconditional G1-Executable Approval**?
+2. May we now proceed to unblock and execute the full 96,000-episode confirmatory simulation?

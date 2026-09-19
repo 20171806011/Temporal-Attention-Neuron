@@ -1,0 +1,42 @@
+## G1-Design v2.6: APPROVED
+
+**Determination date: September 19, 2026.**
+
+I approve [Protocol Version 2.6](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:1) as the governing P1-B design specification. I reviewed the complete document, compared it against v2.5 and the previous determination, and independently checked the reference arithmetic.
+
+The file’s SHA-256 matches your submission exactly:
+
+```text
+07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B
+```
+
+All required v2.5 corrections are incorporated. **I find no remaining G1-Design blockers.**
+
+### Closure of the v2.5 findings
+
+1. **Spike-input contract and deadline boundary — resolved.**  
+   The timestamp convention consistently makes only \(s_1,\ldots,s_{99}\) eligible. Both decoders exclude \(s_{100}\), and silence produces abstention with fallback \(\hat V=0\). Independent calculation confirms that, from the specified zero-membrane state with \(q=1.58\), \(u_{99}=0.995827172513\) and the step-100 candidate is \(1.001668900788\): the only spike is correctly excluded. [§5.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:126)
+
+2. **Refractory readout labeling — resolved.**  
+   The fixture correctly distinguishes \(r_{99}=0.2\) ms before the final update from \(r_{100}=0.1\) ms afterward. The final-step refractory branch gives \(u_{\mathrm{readout}}=0\); it does not expose the earlier threshold-crossing candidate. [§8.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:249)
+
+3. **Leakage observation and oracle allocation — resolved.**  
+   G1.3a now uses one joint-success Bernoulli observation per history, with **1,000 independent observations per \(N\)**—not 2,000 independent role observations. Both registered joint null probabilities reproduce analytically. G1.3b explicitly allocates 500 histories to each \(N\), fixes seed `2026091914`, and requires exact recovery over 2,000 role predictions. The stochastic-alert versus deterministic-failure distinction is retained. [Sampling plan](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:76), [G1 checklist](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:282)
+
+4. **Execution accounting — resolved.**  
+   The totals are internally consistent: 12,000 role queries per \(N\) per model; 24,000 per model overall; 96,000 paired model-episodes and 192,000 role queries across eight models. [§3.2](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:89)
+
+5. **Statistical sizing, dependence, and status continuity — resolved.**  
+   The six tables are correctly described as separate, with shared-history delay dependence preserved. \(N_{\mathrm{table}}=\sum n_{ij}\) now covers both evaluation and known-answer cases. Cell-specific baseline prerequisites, the prohibition on cross-cell authorization, and both `M1_CARRIER_INSUFFICIENT` and `FLOOR_LIMITED_COMPARISON` remain explicit. [§6](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:155), [§7.3–7.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:186)
+
+Independent recalculation also reproduces the compensated collision value \(V'_2=-0.130767497954685\), the Euler error and refinement ratio, and all four Newcombe reference intervals within \(2.3\times10^{-10}\). These confirm the specification’s reference arithmetic—not an executable implementation. [§8.1–8.4](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md:229)
+
+### Formal disposition
+
+- **G1-Design: APPROVED** for the exact v2.6 artifact identified above.
+- **G1-Executable: NOT RUN; acceptance pending.**
+- **Full confirmatory simulation: remains blocked pending G1-Executable approval.**
+
+No further design amendment is required to close the v2.5 findings. The existing non-conforming `models_p1b.py` remains barred from execution; this determination approves the specification, not that sketch.
+
+No project files were modified, and no project model or registered G1 fixture suite was executed.

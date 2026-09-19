@@ -1,0 +1,210 @@
+## G1-Design determination: REQUEST CHANGES — approval withheld
+
+V2 resolves several important points, but **it is not yet sufficiently consistent or complete to authorize fixture implementation**. The remaining issues include mathematical contradictions, an incomplete factorial, undeclared dynamical state, and undefined implementation choices.
+
+This is not a requirement that TAN succeed. A well-specified experiment expected to produce a negative result is acceptable; the protocol must first define exactly what will be implemented, measured, and interpreted.
+
+I reviewed the complete [V2 protocol](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md). No files were changed, and no fixtures, models, or simulations were executed.
+
+### Accepted revisions
+
+I accept the following at the specification level:
+
+- The disclosure and non-conforming designation of the preliminary scaffold.
+- Quadratic metric alignment for the P1-A reference.
+- Replacement of the mixed current/voltage expression with normalized equations.
+- Post-cue separation as a design requirement.
+- Separation of H1, H2, and H3, and of transport from internal composition.
+- The two-stage authorization boundary.
+- TOST-based equivalence and confidence-bound-based fidelity decisions **in principle**, subject to the corrections below.
+
+These accepted items do not need another conceptual rewrite.
+
+## Remaining sign-off blockers
+
+### 1. The baseline-validity condition is impossible for \(N=2\)
+
+The [validity condition](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:147) requires
+
+\[
+\operatorname{Acc}>\operatorname{Chance}+0.50.
+\]
+
+Using the protocol’s ordered-pair chance definition,
+
+\[
+\operatorname{Chance}(N=2)=\frac{1}{2(2-1)}=0.5,
+\]
+
+so the requirement becomes **\(\operatorname{Acc}>1\)**. No model can satisfy it.
+
+Required corrections:
+
+- Define `Acc` precisely: ordered address correctness, operand delivery, or joint success are different endpoints.
+- Replace this condition with a feasible, registered performance floor or an M0-relative noninferiority criterion.
+- Specify operand-error tolerances, abstention/deadline handling, and whether equivalence must hold separately in every primary condition.
+- Specify the actual paired-proportion interval method. Merely listing “Wilson intervals” does not define an interval for the paired difference; that requires accounting for the joint outcomes. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/9839354/))
+- Freeze fixture sample sizes/seeds and the statistical methods’ boundary-case behavior.
+
+The \(\pm0.005\) margin and conventional 90% interval containment are acceptable as a TOST framework, but they do not supply the missing endpoint or sampling design. ([europepmc.org](https://europepmc.org/article/MED/28736600))
+
+Also align Stop Rule 2’s confidence conventions: **one-sided 95% bounds** and the endpoints of a **central 95% interval** are not interchangeable. Success, failure, and inconclusive must use the same registered bounds.
+
+### 2. The stated two-variable state is not dynamically closed
+
+The [state inventory](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:33) says only \([u,A]\) exists, but the firing rule uses `t_last_spike` and a refractory hold.
+
+Two units can have identical \(u,A\) while differing in remaining refractory time. The same subsequent input can then produce different responses. Therefore, **\([u,A]\) alone does not determine future evolution** under the registered rules.
+
+Required correction: include a refractory state, for example
+
+\[
+\mathbf z(t)=[u(t),A(t),r(t)]^\top,
+\]
+
+where \(r\) is remaining refractory time. Specify its initialization, evolution, and treatment in every intervention. A “full-state reset” must address this state too.
+
+The following implementation-defining quantities are also still unspecified:
+
+- \(w_K,w_V,\mu_{\mathrm{bg}},A_{\max}\), and \(\phi(q)\);
+- initial \(A\);
+- novelty outside event presentation;
+- whether \(\mu_{\mathrm{bg}}\) is fixed or updated online;
+- how the stated \(A_{\max}\) bound is enforced or guaranteed;
+- whether \(A\) continues evolving during refractory periods;
+- the analog decoder and its calibration procedure.
+
+These must be fixed numerically or through an explicit, independently calibrated selection procedure before implementation. If the background estimate evolves online, its state must also be declared.
+
+### 3. The proposed comparison family is not the stated \(2\times2\) factorial
+
+In the [model table](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:103), the two proposed factors are:
+
+- membrane retained versus post-event reset;
+- gate dynamic versus constant \(A_0\).
+
+Their four cells are:
+
+| Membrane condition | Dynamic gate | Constant \(A_0\) |
+|---|---|---|
+| Retained | M1 | M2b |
+| Post-event reset | M2a | **Missing** |
+
+M2c does not fill the missing cell: resetting \(A\) to zero after events is not the same intervention as maintaining \(A(t)\equiv A_0\).
+
+**Required correction:** add the missing cell and retain full-state reset as a separate control, or stop describing the present family as a full factorial.
+
+Two additional corrections are necessary:
+
+- **M3 duplicates M1’s declared access condition.** Both have no candidate-buffer access. M3 can instead be an interface-invariance/leakage fixture, but it is not an additional history-removal contrast unless a distinct buffer-enabled parent is specified.
+- **Mean-gate matching is not automatically drive matching.** In general,
+  \[
+  \int A(t)I_{\mathrm{content}}(t)\,dt
+  \ne
+  \bar A\int I_{\mathrm{content}}(t)\,dt.
+  \]
+  Here, gate and current both depend on the keys. Either call the control “mean-gate matched” and limit the attribution, or specify an independent calibration criterion for the claimed drive match, including residual mismatch reporting.
+
+### 4. The 10 ms deadline still conflicts with the presentation schedule
+
+The [timeline](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:70) specifies:
+
+1. Query presentation lasting 10 ms.
+2. A 5 or 10 ms readout window **following** that presentation.
+
+Consequently, readout completes **15 or 20 ms after cue onset**, not within 10 ms.
+
+Choose one explicit convention:
+
+- Record and decode within \([T_{\mathrm{cue}},T_{\mathrm{cue}}+10\text{ ms})\) for a genuine 10 ms cue-to-delivery deadline; or
+- Retain the subsequent readout window and report the longer end-to-end latency.
+
+The protocol must also reconcile **10 ms per operand** in §6 with **composition under 10 ms** in §7. Parallel channels, sequential queries, and external operand buffering have different latency and resource costs.
+
+Finally, the \(W=5\) contract has disappeared. The [frozen generator](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/task_generator.py:76) places candidates into five slots; V2 schedules only \(N\) event slots. That is a task-adapter change, not automatically an identical temporal input.
+
+Specify the mapping, target ages, eligibility convention, and whether eviction testing is retained or explicitly deferred. Note that \(T_{\mathrm{enc}}\) includes the final 10 ms ISI: zero post-encoding delay is therefore not zero delay from the final event’s offset.
+
+### 5. The spike budget and decoder codebooks need correction
+
+The [spike contract](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:122) contains an arithmetic error:
+
+\[
+\left\lfloor10/2\right\rfloor+1=6,
+\]
+
+not five.
+
+Five spikes can be a consistent budget for a half-open 10 ms window with a minimum 2 ms interspike interval. Freeze the interval endpoints, initial refractory eligibility, and whether the rule is \(>\tau_{\mathrm{ref}}\) or \(\ge\tau_{\mathrm{ref}}\).
+
+The codebooks also need exact definitions:
+
+- Six equally spaced reconstruction values **including** −3 and 3 have spacing \(6/5=1.2\).
+- Six equal-width bins of width 1 are another valid choice, with midpoint reconstructions \(-2.5,-1.5,\ldots,2.5\).
+
+Specify which is intended.
+
+For the latency decoder, explicitly enforce the 0.5 ms quantization. A 100-element array sampled at 0.1 ms exposes finer timing than the claimed 20-bin code unless the decoder is restricted accordingly. Define no-spike handling and prohibit use of later spikes for a first-spike-only decoder.
+
+There is also an important **analytical benchmark to register before simulation**. For independent \(V_A,V_B\sim U[-3,3]\), independently encoded by equal-bin midpoint quantizers with \(M\) bins, the quantization errors are independent uniforms of width \(6/M\), giving
+
+\[
+\mathbb E\!\left[|e_A\pm e_B|\right]=\frac{2}{M}.
+\]
+
+Thus this ideal codec benchmark gives:
+
+- \(M=6:\ E_{\mathrm{comp}}=1/3\);
+- \(M=20:\ E_{\mathrm{comp}}=0.10\).
+
+These are calculations for that specified codec—not simulations and not universal bounds on all spike codes or joint-composition circuits. Both coarse codes may legitimately remain registered boundary controls, but their expected failure must not be interpreted as evidence against membrane computation.
+
+### 6. H3 is separated conceptually but still lacks a circuit specification
+
+[Pathway B](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:95) introduces a “two-channel / two-neuron circuit,” while the specified dynamics describe one unit with a unary query current \(\phi(q)\).
+
+Missing are:
+
+- the exact number of units and total state budget;
+- assignment of \(q_A,q_B\) to inputs;
+- inter-unit coupling equations;
+- how `Op` changes neural evolution;
+- the output state and fixed decoder;
+- treatment of any first-operand storage.
+
+There is no operation-dependent term in the supplied unit equations. Therefore, H3 is currently a hypothesis without a fully specified implementation.
+
+Two acceptable amendments are available:
+
+1. Specify the complete circuit and decoder; or
+2. Mark H3 **deferred / not tested**, and seek approval for a narrower H1/H2 carrier audit.
+
+For H2, also clarify that the quadratic metric belongs to M0 unless a dynamic implementation is actually supplied. Merely locking the reference score does not cause the additive query-current model to implement that metric.
+
+### 7. Several G1 rows remain objectives rather than executable acceptance contracts
+
+The [gate table](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md:158) needs the following corrections:
+
+- **G1.3:** A sampled query-blind control need not equal theoretical chance exactly. Specify a finite-sample acceptance/alert rule. State which 100% trap assertions apply to the oracle and harness, versus which are scientific outcomes for TAN.
+- **G1.5:** Match the **complete declared state**, not only membrane voltage. Specify the collision construction’s valid domain, nonzero denominator, subthreshold/no-reset assumptions, and numerical tolerance.
+- **G1.6:** Do not make a desired scientific failure the general conformance criterion. Any asserted impossibility must name the code, decoder, distribution, loss, and assumptions.
+- **G1.7:** Specify the integration method, comparison norm, physical comparison times, and separate continuous-state versus spike-event tolerances. A blanket \(10^{-6}\) “drift” requirement across threshold/reset discontinuities is not an adequate numerical contract.
+- **G1.7 additionally:** A 2 ms refractory period is 20 steps at 0.1 ms but 40 steps at 0.05 ms. Refinement must preserve physical timing and decoder resolution.
+- **G1.8–G1.9:** Freeze fixture cases/counts/seeds, uncertainty procedures, and the required trace/output schema—not just the names of methods and the existence of SHA-256 logging.
+
+A valid TAN failure must remain reportable. It must not force protocol changes simply because an oracle-success assertion was incorrectly applied to the candidate model.
+
+## Authorization disposition
+
+Answers to the four sign-off questions are:
+
+1. **Initial scaffold violations:** disclosure is accepted; replacement-design closure is incomplete.
+2. **Factorial localization:** not yet valid as the stated \(2\times2\) design.
+3. **TOST and 10 ms contract:** acceptable principles, but the present threshold, timing, and decoder specifications are not approvable.
+4. **Fixture implementation:** **not authorized by this review**. Full simulation remains blocked.
+
+The next deliverable should be a focused V2.1 amendment or specification annex resolving these items. It need not add more models or pursue a positive result; explicitly narrowing the audit and registering expected negative boundaries is acceptable.
+
+This determination applies to V2 SHA-256:
+
+`e1fe7d60395dfd9b84d2688d08da4c38b1d62d2e99d8a00095ceb7bc8f9d2e8b`

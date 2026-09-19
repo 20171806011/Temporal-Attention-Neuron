@@ -1,0 +1,123 @@
+% ==========================================================================
+% Paper 2 — Section 6: From Routing to Binding. Representation Decoupling
+% (TAN-II Sprint 4.2-C, frozen).
+% ==========================================================================
+\section{From Routing to Binding: Representation Decoupling}
+\label{sec:binding}
+
+Routing changes \emph{which} candidate is selected; binding additionally
+requires that the selected candidate's \emph{content} be transmitted, and
+that the transmission follow the (key, value) association rather than key
+identity, position, or amplitude. The minimal degree of freedom that
+separates the two is operator O3 of §2.4: each slot now carries a pair
+$(k_i,v_i)$, keys drive the attention, values are transmitted, and the
+query slots carry $v=0$ and are never candidates. This section reports the
+frozen Sprint 4.2-C audits and states the structural obstruction---the
+softmax mixing barrier---that forces the next rung.
+
+\subsection{The binding probe}
+\label{sec:probe6}
+
+The frozen canonical history is $[A=(1,5),\,0,\,B=(2,9),\,0]$ (keys
+inherited from §5, values $V_A=5$, $V_B=9$), the counterfactual queries are
+the heritage pair $(3.0,4.0)$, and the readout is the attended value
+$C=\sum_i\alpha_i v_i$, with the events-only normalization
+$C_{\mathrm{ev}}=(\alpha_Av_A+\alpha_Bv_B)/(\alpha_A+\alpha_B)$ reported
+alongside. Three quantities are pre-registered: the binding errors
+$E_{\mathrm{bind},A}=|\hat C_1-V_A|$, $E_{\mathrm{bind},B}=|\hat
+C_2-V_B|$; the counterfactual transfer
+$T=C_{\mathrm{ev}}(Q_A)-C_{\mathrm{ev}}(Q_B)$; and the softness distance
+$D=|C_{\mathrm{ev}}-v_{\mathrm{winner}}|$. The value-swap control
+$(1,9),(2,5)$ is the identifiability instrument: a system that transmits
+the \emph{selected} value must satisfy $T_{\mathrm{swap}}=-T$ exactly,
+while a system that merely reads fixed magnitudes cannot.
+
+\subsection{Soft binding, exactly pairing-sensitive}
+\label{sec:softresults}
+
+The frozen deterministic results are:
+
+\begin{itemize}
+\item \emph{Winner-aligned transfer.} $C_{\mathrm{ev}}(3)=6.7427$ and
+$C_{\mathrm{ev}}(4)=7.1556$: the readout moves toward the selected value at
+both queries ($6.7427$ closer to $V_A=5$ than to $9$; $7.1556$ closer to
+$V_B=9$ than to $5$), with $T=-0.4129$ carrying the sign of
+$v_{\mathrm{winner}}(Q_A)-v_{\mathrm{winner}}(Q_B)$.
+\item \emph{Exact value-swap antisymmetry.} $T_{\mathrm{swap}}=+0.4129$,
+with $T_{\mathrm{swap}}=-T$ verified to $10^{-12}$: the output follows the
+(key,value) association, not the key identity and not the amplitude.
+\item \emph{The softness is real.} $D=1.7427$ at $Q=3$ and $1.8444$ at
+$Q=4$: the delivered value is a convex mixture of both candidates, not the
+bound symbol.
+\item \emph{The baselines separate routing from sharpening.} The scalar
+model (winner always $B$) shows only a sharpening drift
+$T_{\mathrm{M0}}=-0.0844$, five times smaller than the routing model's
+transfer; the sign control M1 ($s=\pm1$) binds \emph{harder} on this
+history ($D_{\mathrm{M1}}=0.1064$, energies spread widely) yet remains the
+degenerate order-locked reversal of §5; and the unnormalized control
+collapses onto the probe slot and transmits nothing (Amendment AM2).
+\item \emph{Ensemble.} Over randomized keys (values fixed by identity,
+positions randomized) the transfer magnitude averages $0.4004$
+(quadrature benchmark; Monte Carlo $0.3977$, $0.3967$, $0.4021$), with
+$E[|T|\mid\text{flip}]=0.4655$ versus $E[|T|\mid\text{no flip}]=0.3483$
+and the sign-matched alignment on flips exactly $1$---the latter a
+theorem-level check (the event-normalized share is a logistic function of
+the logit difference), reported as such rather than as a discovery.
+\end{itemize}
+
+\subsection{The softmax mixing barrier}
+\label{sec:mixingbarrier}
+
+The softness distance is not a numerical shortfall; it is a structural
+consequence of the readout.
+
+\begin{proposition}[Softmax mixing barrier]
+\label{prop:mixing}
+Let $V_A \neq V_B$ be distinct candidate values. At any finite sharpening $\gamma<\infty$,
+the attention weights satisfy $\alpha_i>0$ for every candidate with finite logits.
+Under the event-normalized readout $C_{\mathrm{ev}} = (\alpha_A V_A + \alpha_B V_B)/(\alpha_A + \alpha_B)$
+(with $\alpha_A+\alpha_B>0$), $C_{\mathrm{ev}}$ lies in the strict relative interior of the segment
+connecting $V_A$ and $V_B$: $C_{\mathrm{ev}} = \lambda V_A + (1-\lambda)V_B$ with
+$\lambda = \alpha_A/(\alpha_A+\alpha_B) \in (0, 1)$. Consequently, the softness distance satisfies
+\begin{equation}
+D_{\mathrm{ev}} = \min(|C_{\mathrm{ev}}-V_A|,\, |C_{\mathrm{ev}}-V_B|) = \min(\lambda, 1-\lambda)|V_A - V_B| > 0.
+\end{equation}
+Exact value delivery ($D_{\mathrm{ev}}=0$) strictly requires a discrete selection step that sets the
+losing weight to zero: continuous softmax weighting over distinct candidates, at any finite temperature,
+cannot deliver an isolated bound symbol.
+\end{proposition}
+
+\begin{remark}[Cancellation artifacts in unnormalized full-window readouts]
+\label{rem:cancellation}
+When unnormalized full-window readouts $C_{\mathrm{full}} = \sum_{i=1}^W \alpha_i v_i$ are evaluated over
+sequences containing silent background slots ($v_{\mathrm{silent}}=0$), the active candidate weights sum to
+$\sum_{i\in\mathrm{events}}\alpha_i < 1$. This dilution allows $C_{\mathrm{full}}$ to pass through $V_A$
+at an intermediate temperature ($\gamma \approx 1.198$, documented in Amendment~AM5), yielding a spurious
+zero $|C_{\mathrm{full}} - V_A| = 0$. This zero is a cancellation artifact of background dilution, not hard
+symbolic binding; under the event-normalized readout $C_{\mathrm{ev}}$, softness remains $D_{\mathrm{ev}} \approx 1.5 > 0$.
+\end{remark}
+
+Proposition~\ref{prop:mixing} converts the measured
+$D\approx1.7$--$1.8$ from a ``performance'' observation into a boundary
+statement of the same rank as Theorem~\ref{thm:order}: \emph{soft attention
+$\neq$ exact value selection}. It also explains the one honest inversion
+found in the frozen transmission audits: through the excitatory branch
+alone the drive transfer keeps the value-aligned direction
+($-0.2586$), but through the full E-I circuit the inhibitory branch
+re-reads the same value channel and subtracts it, inverting the net
+transfer ($+0.2367$; frozen Amendment AM4 corrects the numeric prediction,
+the direction statement is unchanged). E-I organization therefore does not
+implement binding; it \emph{reshapes the value-transfer pathway after
+query-conditioned routing}---an observation carried into §7, where the
+selection step is added.
+
+\subsection{Status of the rung}
+\label{sec:status6}
+
+The frozen verdicts read: binding at the readout level is \emph{soft but
+genuine} (winner-aligned, pairing-sensitive to $10^{-12}$, baselines
+separated), and exact delivery is \emph{not} achieved (the mixing barrier,
+$D>0$). Routing and binding are now experimentally decoupled: §5 supplies
+the reordering, this section supplies the value channel, and the missing
+ingredient---discrete selection---is the single degree of freedom added in
+§7.

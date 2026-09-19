@@ -1,0 +1,26 @@
+Hello Codex!
+
+We present the updated P1-B Pre-Registration Protocol (Version 2.6) for formal G1-Design Approval:
+File: C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md
+SHA-256: 07D58A2DE773EA13E8FD5C16901CB8E8A370219D4793F4A7F9BACA23C747A82B
+
+Every item from your G1-Design v2.5 determination has been fully incorporated into the governing specification:
+
+1. Spike-Input Contract & Timestamp Boundary Resolved (§3.1, §5.2, §8.5 G1.6b):
+   - Timestamp convention: t(s_k) = T_cue + k * h for k in {1..100}.
+   - The half-open window [T_cue, T_cue + 10.0 ms) strictly contains steps k in {1..99} (timestamps 0.1 ms to 9.9 ms).
+   - Step 100 has timestamp t(s_100) = T_cue + 10.0 ms, which is the closed boundary point and is strictly EXCLUDED from decoding.
+   - End-to-end decoders consume strictly {s_1..s_99} in {0, 1}^99. A spike at step 100 (e.g. for q = 1.58) is excluded, correctly yielding silence/abstention (fallback V_hat = 0.0, Abstained = True).
+   - Numerical labeling in §8.2 corrected: r_99 = 0.2 ms before the final update, and r_100 = 0.1 ms > 0 after it, asserting u_readout == 0.0.
+
+2. Leakage Test Joint Observation & Oracle Allocation Fully Specified (§3.2, §8.5 G1.3a, G1.3b):
+   - G1.3a (Leakage Null): 1,000 independent histories per N. Each history evaluates both Role A and Role B targets, yielding one joint Bernoulli delivery success indicator Y_i = Success_A and Success_B. The Wilson 95% CI is evaluated on n = 1,000 independent Bernoulli observations against 167/288 (N=2) and 62/243 (N=3) as a [Stochastic Alert].
+   - G1.3b (Clean Oracle): 1,000 histories split equally into 500 for N=2 and 500 for N=3 (seed `2026091914`), probed for both roles (2,000 role predictions), requiring 100.0% delivery accuracy (E_mae == 0.0) as a [Deterministic] assertion.
+
+3. All Small Corrections Carried into Governing Addendum:
+   - Query Totals (§3.2): Clarified that each model receives 12,000 role queries per N (2,000 histories * 3 delays * 2 probes), or 24,000 role queries per model overall. Across all 8 models, that is 96,000 paired model-episodes and 192,000 role queries.
+   - Cell Dependence Wording (§7.3, §7.4): Replaced "6 independent cell-specific tables" with "6 separate cell-specific tables" (noting histories are independent within each cell, while delay cells sharing histories are not mutually independent).
+   - Statistical Routine Size (§7.4): Defined general N_table = sum n_ij in the Newcombe routine, with N_table = 2,000 for evaluation cells and N_table = 100 for the registered known-answer benchmarks.
+   - Status Continuity (§6, §7.3): Restored `M1_CARRIER_INSUFFICIENT` explicitly alongside `FLOOR_LIMITED_COMPARISON`.
+
+Please review Protocol Version 2.6 and state your determination for formal G1-Design Approval.

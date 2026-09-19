@@ -1,0 +1,63 @@
+## G1-Executable: REQUEST CHANGES — approval withheld
+
+Determination date: **September 19, 2026.**
+
+All four submitted SHA-256 hashes match exactly. I independently ran `python -B -u test_p1b_g1_fixtures.py` in an isolated copy; **all 12 fixtures passed**, reproducing your calibration and statistical results.
+
+The implementation has materially improved. However, **two consequential mutations still pass the entire submitted suite**. Under the fixture-based acceptance standard used in the previous reviews, two validation blockers remain.
+
+### Corrections accepted
+
+- **Production spike decoding:** Independently replacing either non-silent decoder output with `12345.0` now fails G1.6b. Raw step-100 exclusion, both silence flags, and extreme-drive spike counts also passed independent checks.
+- **Previously identified reset substitutions:** M2a → M2c and M2b → M2d now fail G1.4.
+- **Orchestration implementation:** A full-size scheduling dry run—with the neural evaluator replaced by synthetic outputs—verified all **96,000 distinct `(N, history, delay, model)` calls exactly once**, unchanged shared histories, and six separate tables containing 2,000 histories each.
+- **Pooled-bootstrap implementation:** The unmodified runner matched an independent history-level calculation within approximately `2.8e-17`.
+- **Resource accounting and manifest verification:** The isolated smoke run measured **0.844 CPU seconds**, **82.7 MiB peak working set**, and projected **0.047 CPU hours** for 96,000 model-episodes. Independent manifest verification and the on-disk tamper test passed. These are smoke measurements and projections, not measurements of the full confirmatory simulation.
+
+### Remaining blocker 1 — G1.4 does not verify the constant-gate arms
+
+The [factorial fixture](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:276) checks gate preservation, membrane retention, and differences between models. It does **not** directly assert that M2b and M2d maintain the calibrated constant `A_0`.
+
+I made these substitutions in memory:
+
+```text
+M2b → M1
+M2d → M2a
+```
+
+This removes the constant-gate intervention from both factorial arms. **All 12 fixtures still passed.** The retention and separation assertions therefore do not establish the complete registered 2×2 design.
+
+Required closure:
+
+- Assert `A == A_0` throughout every recorded encoding step for **both M2b and M2d**.
+- Directly assert M2d’s `u/r` resets and M2c’s `u/A/r` resets at every active event offset.
+- Confirm that the substitutions above fail the revised suite.
+
+Importantly, **the unmodified production implementation passed my independent constant-gate checks**, including encoding, delay, and both cue probes. This finding concerns missing regression protection, not demonstrated incorrect production dynamics.
+
+### Remaining blocker 2 — G1.2/G1.8 does not numerically validate pooled resampling
+
+The [pooled-bootstrap assertions](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/test_p1b_g1_fixtures.py:157) check field presence and `LCB <= UCB`. They do not establish history-preserving resampling.
+
+I changed the [production pooled-bootstrap calculation](C:/Users/李则徐/Downloads/TAN_Review/P0_20260917_181757/p1_experiments/p1b/runner_p1b.py:389), in memory, to resample flattened history–delay observations independently instead of resampling complete history rows. **All 12 fixtures still passed.**
+
+The existing bootstrap known-answer test exercises `bootstrap_percentile_ci`; it does not cover this separately implemented pooled path.
+
+Required closure:
+
+- Exercise the production workflow with deterministic synthetic errors having meaningful within-history dependence across delays.
+- Compare its pooled interval numerically against an independent reference using seed `2026091901`, `B=2000`, and sorted indices `49` and `1949`.
+- Ensure flattened-delay resampling fails.
+- Add the full-size, synthetic-evaluator scheduling check to the locked suite so exact identities and counts are tested, not only calculated from list lengths.
+
+Again, **the unmodified pooled implementation passed my independent reference calculation**. The remaining problem is that the submitted suite accepts a violation of the registered resampling scheme.
+
+### Formal disposition
+
+- **G1-Design V2.6:** remains approved.
+- **G1-Executable:** not yet approved; the two validation blockers above require closure.
+- **Full confirmatory simulation:** remains blocked.
+
+No protocol amendment, scientific retuning, or model redesign is requested. These findings can be addressed through fixture changes and an updated fixture hash.
+
+All four locked artifacts and your original smoke artifacts remain unchanged. Fault injections were confined to memory and isolated temporary outputs; neither the legacy sketch nor the full confirmatory neural simulation was executed.

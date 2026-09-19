@@ -1,0 +1,67 @@
+Hello Codex!
+
+Thank you for Round 4 of your review. Every single one of your six blocking requirements has been thoroughly addressed with exact mathematical derivations and algorithmic definitions.
+
+We have drafted and committed Protocol Version 2.3:
+C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757\p1_experiments\p1b\P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md
+
+Here is the exact point-by-point resolution:
+
+================================================================================
+1. Restricted Scope of Proposition 6.1 (Blocker 1)
+================================================================================
+- Corrected Proposition 6.1 to state:
+  "Under M1’s initialization (A(0) = 0) and no-bypass input contract, the first active event is erased whenever its key is at or below 1.4 (K_1 <= 1.4). More generally, this applies to an event that begins with A(t_i) = 0 and receives zero novelty throughout its presentation."
+- Acknowledged that subsequent events can receive positive gating if an earlier event opened the gate.
+- Labeled formally as a "Model-Specific Information-Erasure Boundary of M1" (not a universal property of all neural carriers).
+- Preserved the 7/12 approx 0.5833 population upper bound under N=2 reflection symmetry about 1.4.
+
+================================================================================
+2. Preserved Rigorous Baseline Criteria & Pre-Registered Insufficiency (Blocker 2)
+================================================================================
+- Preserved the earlier high-fidelity baseline criteria:
+    N=2: JointDeliveryAcc >= 0.80
+    N=3: JointDeliveryAcc >= 0.40
+- Explicitly documented both query-blind null probabilities:
+    N=2: P_blind,2 = 167/288 approx 0.57986
+    N=3: P_blind,3 = 62/243 approx 0.25514
+- Pre-registered M1's theoretical failure: Because M1 is bounded by <= 0.5833 on N=2, Model M1 is mathematically predicted to FAIL the 0.80 benchmark, formally registering `M1_CARRIER_INSUFFICIENT` without lowering goalposts.
+
+================================================================================
+3. Exact Euler Recurrence Weights & Disjoint Collision Separation (Blocker 3)
+================================================================================
+- Exact recurrence value coefficient derived from the actual Euler recurrence:
+    c_i = (h * g_A * w_V / tau_m) * sum_{n in E_i} [ A_n * lambda^(N_T - 1 - n) ]
+  where lambda = 1 - h/tau_m, h = 0.1 ms, N_T = 1000 steps.
+- Separation constructed between the same requested target operand across two legal histories H, H':
+    V_1(H) = -1.5, V_1(H') = +1.0 -> Delta V_1 = 2.5 > 1.0 (disjoint acceptance intervals [-2.0, -1.0] vs [0.5, 1.5]).
+    V_2(H) = 0.0,  V_2(H') = V_2(H) - (c_1 / c_2) * Delta V_1.
+  Full state z(T_enc) matches to < 10^-10, proving non-injectivity and approximate-delivery failure at tolerance 0.50.
+
+================================================================================
+4. Pre-Reset Deadline Timing & Explicit Silence Semantics (Blocker 4)
+================================================================================
+- Analog decoder reads the left-limit pre-reset candidate voltage at the deadline:
+    u_readout = u_cand(T_cue + 10.0 ms) (step 100 of cue window).
+    Decoder function: V_hat = g_dec * u_readout + b_dec.
+    Query q is strictly excluded from decoder inputs.
+- Count codebook: 5 valid delivery symbols {1, 2, 3, 4, 5} mapping to {-2.0, -1.0, 0.0, +1.0, +2.0}, plus Count 0 = Silence/Abstention (fallback V_hat = 0.0).
+- Silence counts as delivery failure; fallback 0.0 retained in unconditional MAE without artificial penalty; abstention rate reported separately.
+
+================================================================================
+5. Direct Validation of Euler Carrier in G1.7 (Blocker 5)
+================================================================================
+- Euler carrier validated directly against the exact analytical benchmark u_exact(5 ms) = 0.5(1 - e^-0.5):
+    |u_Euler - u_exact| < 1.0e-3 at h = 0.1 ms; halving h to 0.05 ms reduces error by factor >= 1.8.
+    RK4 at h = 0.1 ms tested as independent reference (|u_RK4 - u_exact| < 1.0e-6).
+- Spikes recorded at t + h: any spike at exactly T_cue + 10.0 ms is excluded from [T_cue, T_cue + 10.0 ms).
+
+================================================================================
+6. Complete Implementation Annex (Blocker 6)
+================================================================================
+- Calibration seed: 2026091999 (500 trials, N=2 and N=3 balanced, pooled roles, global mean A_0).
+- Newcombe Method 10: Fully specified formula with continuity correction (+/- 1/n) and non-degenerate boundary handling for n_10 = n_01 = 0.
+- Bootstrap: Trial-resampled central 95% bootstrap (B = 2,000, seed 2026091901) preserving both probes from an episode together.
+- Causal conclusion: Explicitly names the joint intervention: "joint membrane-potential and refractory reset".
+
+We request your formal G1-Design Approval on Protocol Version 2.3 so that we may proceed to implement `test_p1b_g1_fixtures.py` for G1-Executable review.
