@@ -1,5 +1,7 @@
 # P1-A Address Identifiability and Computational Carrier Scientific Report
 
+> **Status (corrected 2026-09-27):** This is the superseded Run 1 report (6 models, 360,000 evaluations), kept for the record. The authoritative P1-A report is `results/run_p1a_rev2/P1A_SCIENTIFIC_REPORT.md` (7 models, 420,000 evaluations). Figures in Sections 1, 3 and 4 that contradicted this file's own table have been corrected; see `ERRATA.md` ERR-17.
+
 **Execution Date:** 2026-09-19 14:25:20  
 **Protocol Basis:** `RESEARCH_AUDIT_AND_PLAN_2026-09-17.md` Section 9 & Codex Handover Protocol  
 **Pre-registered Seeds:** 10 seeds (`2026091700`–`2026091709`), 1,000 trials per seed per condition  
@@ -15,17 +17,17 @@ P1-A resolves the critical open question from Sprint 4.3-A: *Does the model sele
 1. **Positive Scalar Kernel is Completely Address-Incapable:**
    - Achieves only **0.00% both-routed accuracy** on Condition C2 (N=3), because score $c S K_i$ strictly maximizes the largest key amplitude regardless of which key is requested.
 2. **Signed Scalar Kernel Fails on Intermediate Keys:**
-   - On N=2, signed scalar achieves 100.0% accuracy (by inverting between min and max keys).
-   - On N=3, however, its both-routed accuracy collapses to **27.64%** and its middle-key accuracy is **0.00%**! A signed scalar product can only ever select extreme values (min or max), proving it cannot support generalized associative memory.
+   - On N=2, signed scalar achieves 52.14% both-routed accuracy: its sign threshold is fixed at q=1.4, so both channels are correct only when the two keys straddle 1.4 (5,214/10,000 trials).
+   - On N=3, however, its both-routed accuracy collapses to **25.81%** and its middle-key channel hit rate is **0.00%** (0/6,705). A signed scalar product can only select the minimum or maximum key, so it cannot address an intermediate key.
 3. **Frozen S-Rotation (4.2-B Baseline) is Address-Blind:**
-   - Achieves only **16.66% both-routed accuracy** on N=3 (matching the chance level $1/(3\times 2) = 16.67%$). This confirms that 4.2-B's winner flip was a fixed counterfactual switch across two predefined surprise amplitudes, not content-addressable routing.
-4. **1D Scalar Metric Attention is Completely Sufficient for Content Addressing:**
+   - Achieves only **6.55% both-routed accuracy** on N=3, below the query-blind chance level $1/(3\times 2) = 16.67%$ (QueryBlindControl: 17.20%). This confirms that 4.2-B's winner flip was a fixed counterfactual switch across two predefined surprise amplitudes, not content-addressable routing.
+4. **1D Scalar Metric Attention is Sufficient for Content Addressing in this Task:**
    - Achieves **100.00% both-routed accuracy** and **0.0000 binding/algebraic error** on zero-noise N=2 and N=3, with **100.00% middle-key accuracy**.
-   - **Scientific Impact:** Disproves the conjecture that 2D orthogonal rotation is universally necessary for content addressing. A 1D metric compatibility kernel (distance $- (q - k)^2$) achieves perfect associative addressing.
-5. **2D Vector-QK Attention Performs Equidistantly Well:**
+   - **Scientific Impact:** Inconsistent with the conjecture that 2D orthogonal rotation is necessary for content addressing in this synthetic task. A 1D metric compatibility kernel (distance $- (q - k)^2$) selects the queried key in every zero-noise trial.
+5. **2D Vector-QK Attention Performs Equally Well:**
    - Achieves **100.00% both-routed accuracy** under zero noise, matching the scalar metric model.
 6. **Noise and Out-of-Distribution Robustness:**
-   - Under query observation noise (sigma=0.01 and 0.05) and OOD amplitude domains ([0.05, 0.3] and [2.5, 3.5]), both Metric Attention and Vector-QK maintain high routing coverage (>95% under low noise), gracefully degrading without catastrophic breakdown.
+   - Under query observation noise (relative sigma=0.01 and 0.05; query-noise SD = 0.022 and 0.11), both Metric Attention and Vector-QK reach 98.76% and 79.86% both-routed accuracy respectively. In the OOD amplitude domains ([0.05, 0.3] and [2.5, 3.5]) both reach 100.00%.
 
 ---
 
@@ -74,12 +76,12 @@ P1-A resolves the critical open question from Sprint 4.3-A: *Does the model sele
 
 ## 3. G1 Identifiability Gate Verification
 - **Oracle Soundness:** Verified 100.0% accuracy on N=2 and N=3 zero-noise calibration trials.
-- **Leakage Check:** QueryBlindControl scored 16.71% both-routed accuracy, strictly bounded by theoretical chance (16.67% + 5.0% threshold). No task information leaks.
+- **Leakage Check:** No G1 artifact records the 16.71% originally quoted here. The frozen rev2 G1 report (`results/run_p1a_rev2/g1_gate_report.json`) gives QueryBlindControl 17.20% both-routed accuracy (172/1,000; 95% CI 14.99–19.66%), below the chance + 5% threshold of 21.67%.
 - **Adversarial Query/Value Swaps:** Confirmed that address-aware models invert output signs under query swap and track values under value swap.
 
 ---
 
 ## 4. Scientific Recommendations for Codex & Antigravity Joint Sign-off
-1. **Acknowledge 1D Metric Sufficiency:** The paper's narrative must not claim that 2D vector representations are necessary for single-neuron content addressing; 1D metric attention achieves identical performance.
-2. **Permanent Closure of Scalar Product Routing:** Positive and signed scalar dot products are definitively incapable of addressing intermediate keys in memory arrays.
-3. **Prerequisite Met for Transition:** With G1 passed and address identifiability established, P1-A is fully verified and ready for formal sign-off.
+1. **Acknowledge 1D Metric Sufficiency:** The paper's narrative must not claim that 2D vector representations are necessary for single-neuron content addressing; 1D metric attention makes identical hard routing decisions.
+2. **Permanent Closure of Scalar Product Routing:** Positive and signed scalar dot products cannot address intermediate keys (Proposition 2).
+3. **Prerequisite Met for Transition:** With G1 passed and address identifiability established, P1-A is verified and ready for formal sign-off.

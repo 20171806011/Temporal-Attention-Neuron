@@ -1,172 +1,89 @@
-# Temporal Attention Neuron (TAN): Complete Research Programme
+# Temporal Attention Neuron (TAN)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
-[![Status: Final Revised Manuscripts](https://img.shields.io/badge/Status-Final%20Revised%20Manuscripts-success.svg)]()
-[![Repository: Unified Monorepo](https://img.shields.io/badge/Repository-Unified%20Research%20Suite-blueviolet.svg)]()
+An independent undergraduate research project by **Li Zexu** (BSc Physics, University of Leeds).
 
-> **Author**: Li Zexu  
-> **Affiliation**: School of Physics and Astronomy, University of Leeds  
-> **Official Repository**: [https://github.com/20171806011/Temporal-Attention-Neuron](https://github.com/20171806011/Temporal-Attention-Neuron)  
-> *(Note: The earlier repository `20171806011/-TAN-` has been formally deprecated and archived. All official code, data, experiments, and publications across the entire research lifecycle are consolidated in this repository).*
+**Status:** exploratory work. The manuscripts in this repository are **unpublished, have not been peer-reviewed, and are not ready for submission** (see `ERRATA.md`, ERR-16 and ERR-18–ERR-20). All results come from simulations of small, hand-designed models; no biological data are used.
+
+**Use of AI tools:** implementation, internal audits and much of the manuscript drafting were done with extensive help from AI coding agents (OpenAI Codex, Google Antigravity). The author takes responsibility for the content. Where this repository says "audited", it means internally audited by the author with these tools, not independently reviewed.
+
+The earlier repository `20171806011/-TAN-` is archived; this repository replaces it.
 
 ---
 
-## 🧭 Complete Scientific Research Lineage & Roadmap
+## Question
 
-This unified repository provides end-to-end provenance across all three evolutionary phases of the **Temporal Attention Neuron (TAN)** project:
+Which minimal mechanisms let a single spiking unit, or a small circuit, **select**, **hold** and **combine** continuous values?
+
+TAN is a scalar-input spiking neuron. A rectified surprise signal, $S_t = [x_t - \mu_t - \varepsilon]_+$ (where $\mu_t$ is the mean of a five-step input window), gates a softmax weighting over that window.
+
+## What was found
+
+The results below are sufficiency results within one hand-designed model family. Several of them follow directly from the model's definition and are best read as worked examples, not as new neural mechanisms.
+
+1. **TAN-I** (manuscript 1; `release/TAN_I_Mechanistic_Analysis.pdf`, 28 pages).
+   - Across 160,000 simulated histories, distinct histories reached the same membrane potential (within a numerical tolerance of $10^{-4}$) and then diverged; 1,500 such pairs were analysed per model, with a mean expansion factor of about $2.05\times10^4$ for the full model. The membrane potential alone is therefore not a sufficient state. This is expected for a model with a finite input window; the full state (potential plus window) is still Markovian.
+   - Probe-2: with a positive scalar attention kernel, the counterfactual winner-flip rate was 0.000 over 1,000 trials (JSD 0.0002, permutation $p = 0.92$). The general statement is Theorem 5.1 of manuscript 2: a positive scalar kernel preserves the order of the scores, so it cannot route by content.
+   - Probe-1 (distractor task): limited support only. In the distractor condition, the full model's balanced accuracy (mean over three seeds) was 0.389, against 0.337 for the version without attention; the difference computed on the pooled trials was +0.057 (95% CI +0.039 to +0.076). The full model was close to chance in one seed, and a simple buffer baseline scored 0.843.
+2. **TAN-II** (manuscript 2; `release/TAN_II_Minimal_Architectural_Ladder.pdf`, 28 pages).
+   - A stepwise set of additions (opponent competition, two-dimensional query–key rotation, key–value binding, winner-take-all readout, and a combiner) is sufficient for routing, binding and composition in this model family.
+   - The composition stage uses hand-written arithmetic nodes. Its zero combiner error holds only when both channels are routed correctly (6,608 of 30,000 histories, 22%).
+3. **Phase P1-A** (60,000 trials; 7 models; 420,000 evaluations; results in `p1_experiments/results/run_p1a_rev2/`).
+   - A one-dimensional distance kernel, $-(q-k)^2$, selected the queried key in every noise-free trial under hard (argmax) selection, including middle keys.
+   - It made the same routing decisions as the two-dimensional model at every noise level tested: 98.76% of trials had both channels correct at relative noise $\sigma = 0.01$, and 79.86% at $\sigma = 0.05$ (the query-noise SD is $2.2\sigma$).
+   - This corrected the earlier assumption that two dimensions were needed.
+   - Signed scalar dot-product kernels never selected a middle key (0 of 6,705 middle-key queries).
+4. **Phase P1-B** (internally pre-registered, Protocol V2.6; 96,000 episodes).
+   - The pre-registration derived a population bound of 7/12 (about 58%) on two-item joint delivery for the baseline carrier, so it was predicted to miss the 80% floor.
+   - It delivered both stored values in 2.75–2.90% of episodes, and both pre-registered floors (80% and 40%) failed.
+   - Because the carrier failed, the planned comparison of readouts is floor-limited and **inconclusive**.
+   - Single-unit spiking decoders had composition errors of 2.25–2.53 (cell means), a limitation of this readout channel.
+   - One hand-built pair of histories (fixture G1.5) reaches the same subthreshold state, showing that the subthreshold map is not one-to-one. It is a single constructed example, not a general erasure result.
+   - Final report: `p1_experiments/p1b/P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md`.
+5. **Stage 1 prototype** (exploratory; `snapshot/manuscript/`).
+   - A single TAN neuron drove a one-dimensional phototaxis agent. Over 50 seeds it stopped about 13 units from the light peak, against about 38 for an LIF-driven agent.
+   - The motor rule only ever moves the agent forward, so the agent stops near the peak; it cannot hover around it, and the manuscript's *E. coli* analogy does not hold.
+   - The baselines were LIF, adaptive LIF, and Elman RNN / GRU networks (hidden size 8) trained once, by imitation, on a seed-0 TAN trajectory. The LIF threshold was set by hand. No other spiking-network or Transformer baseline was run. This is a demonstration, not evidence of an advantage.
+
+## Known issues
+
+- The manuscripts were **not** edited in the 2026-09-27 corrections. Their remaining problems (numbers that do not match the data, an equation that does not match the code, and overstated wording) are listed in `ERRATA.md`: ERR-18 (manuscript 2), ERR-19 (manuscript 1 and the Stage 1 manuscript) and ERR-20 (frozen snapshot documents and the release manifest).
+- The manuscripts do not yet contain an AI-use statement.
+- Older documents in `snapshot/` and `release/`, and the Stage 1 manuscript, use stronger language ("proves", "certified", "breakthrough", "publication-ready", "fusion of Transformer attention and SNNs") than the evidence supports. Where they disagree with this README or `ERRATA.md`, this README and `ERRATA.md` apply.
+- The P1-A documents mixed figures from a superseded first run with the final (rev2) data. This has been corrected (ERR-17). Hash-locked P1-A files were not edited; their remaining small inconsistencies are listed in ERR-17. The files at the top level of `p1_experiments/results/` are first-run outputs; use `p1_experiments/results/run_p1a_rev2/`.
+- `manifest_after.json` is a historical record of the 2026-09-19 tree and no longer matches the repository. `scripts/generate_manifest_after.py` compares against the original local review archive, so it cannot be run from a clone.
+- Related work is not yet covered properly. Missing areas include the Neural Engineering Framework (Eliasmith and Anderson), synaptic theories of working memory (Mongillo et al., 2008) and spiking Transformer models (for example Spikformer).
+
+## Repository layout
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 1: Initial Formulation & Baseline Experiments (The Original TAN Neuron)                   │
-│ • Model: TANNeuronAblation (LIF + surprise gating + temporal self-attention kernel)              │
-│ • Experiments: Habituation, noise gating, phototaxis navigation, 5-model baselines, ablations   │
-│ • Paper: The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention & SNNs     │
-│ • Artifacts: snapshot/code/  |  snapshot/manuscript/  |  snapshot/data/  |  results/fig01-fig21 │
-└────────────────────────────────┬────────────────────────────────────────────────────────────────┘
-                                 │
-                                 ▼
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 2: Mechanistic Boundary Analysis (TAN-I Deep Dive)                                        │
-│ • Phase 1: Natural state collisions (membrane potential h_t is not Markov-sufficient)          │
-│ • Phase 2: Event-locked response geometry & effective dimension analysis (d_D)                 │
-│ • Probe-1 & Probe-2: Proving scalar dot-product attention is order-locked & cannot route       │
-│ • Paper 1: The Computational Boundary of Scalar Temporal Attention (Strictly 28 pages)          │
-│ • Artifacts: snapshot/paper/  |  release/TAN_I_Mechanistic_Analysis.pdf                        │
-└────────────────────────────────┬────────────────────────────────────────────────────────────────┘
-                                 │
-                                 ▼
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 3: Relational Computation & Minimal Architectural Ladder (TAN-II & Phase P1)              │
-│ • Sprint Ladder: E-I opponent competition → 2D vector QK → KV binding → WTA → parallel combiner │
-│ • Phase P1-A: 1D metric compatibility sufficiency & intermediate addressing barrier (60k trials)│
-│ • Phase P1-B: Continuous dynamical carrier & spiking readout audit (96k episodes, Protocol V2.6)│
-│ • Paper 2: The Minimal Architectural Ladder for Relational Computation (Strictly 28 pages)      │
-│ • Artifacts: p1_experiments/  |  snapshot/paper2/  |  release/TAN_II_...pdf                    │
-└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+release/          compiled TAN-I and TAN-II PDFs (28 pages each) and the release manifest
+snapshot/         Stage 1 code and manuscript (code/, manuscript/); TAN-I and TAN-II LaTeX
+                  sources (paper/, paper2/); data (data/); figures fig01–fig27 (results/figures/)
+p1_experiments/   Phase P1-A code, protocols and reports (top level; final results in
+                  results/run_p1a_rev2/) and Phase P1-B (p1b/)
+s41cd/ … s43a/    TAN-II sprint reproduction scripts
+scripts/          audit, ledger and manifest scripts
+CURRENT_RESEARCH_STATE.md, RESEARCH_CHRONOLOGY.md, ERRATA.md, MASTER_CLAIM_LEDGER.csv, FINDINGS.csv
 ```
 
----
+## Reproduction
 
-## 📚 Publications & Manuscripts
+Requirements: Python 3.10+ with `numpy scipy matplotlib pandas pypdf pytest`, plus `torch` for the Stage 1 RNN/GRU baselines. A TeX distribution is needed only to rebuild the PDFs.
 
-The repository hosts all manuscripts corresponding to each research phase:
-
-1. **Stage 1 (Initial Paper)**:  
-   *The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention and Spiking Neural Dynamics*  
-   - LaTeX Source: [`snapshot/manuscript/`](snapshot/manuscript/)  
-   - Core Theme: Original single-neuron model fusing temporal attention, local surprise rectification, and spiking dynamics.
-
-2. **Stage 2 (Paper 1 — TAN-I Mechanistic Analysis)**:  
-   *The Computational Boundary of Scalar Temporal Attention: A Mechanistic Analysis of the Temporal Attention Neuron*  
-   - PDF: [`release/TAN_I_Mechanistic_Analysis.pdf`](release/TAN_I_Mechanistic_Analysis.pdf) *(Strictly 28 pages, 0 `??`, fully audited)*  
-   - LaTeX Source: [`snapshot/paper/`](snapshot/paper/)  
-   - Core Theme: Mathematical boundary proofs, natural state collisions, and order-locking under scalar attention kernels.
-
-3. **Stage 3 (Paper 2 — TAN-II Minimal Architectural Ladder)**:  
-   *The Minimal Architectural Ladder for Relational Computation: From Temporal Saliency to Binding and Composition in a Dynamical Neuron Model*  
-   - PDF: [`release/TAN_II_Minimal_Architectural_Ladder.pdf`](release/TAN_II_Minimal_Architectural_Ladder.pdf) *(Strictly 28 pages, 0 `??`, fully audited)*  
-   - LaTeX Source: [`snapshot/paper2/`](snapshot/paper2/)  
-   - Core Theme: Constructive ascent along named organizational degrees of freedom, integrating the certified Phase P1-A and Phase P1-B audits.
-
----
-
-## 🔬 Core Code Modules & Directory Layout
-
-```
-Temporal-Attention-Neuron/
-├── README.md                           # [This file] Complete research lineage and reproduction guide
-│
-├── release/                            # Final compiled manuscripts and cryptographic manifest
-│   ├── TAN_I_Mechanistic_Analysis.pdf  # Final revised Paper 1 (28 pages)
-│   ├── TAN_II_Minimal_Architectural_Ladder.pdf # Final revised Paper 2 (28 pages)
-│   └── FINAL_MANUSCRIPT_RELEASE_MANIFEST.md    # Cryptographic hashes and release records
-│
-├── snapshot/                           # Complete baseline and manuscript working trees
-│   ├── code/                           # STAGE 1: Original TAN implementation
-│   │   ├── model/                      # Core models: tan.py, lif.py, baselines.py
-│   │   ├── experiments/                # Experiments: habituation, statistical_validation, ablation, etc.
-│   │   └── analysis/                   # Analysis tools: statistics, plotting, mutual_information
-│   ├── manuscript/                     # STAGE 1: Original TAN manuscript LaTeX sources
-│   ├── paper/                          # STAGE 2: Revised Paper 1 LaTeX sources and figures
-│   ├── paper2/                         # STAGE 3: Revised Paper 2 LaTeX sources and figures
-│   ├── data/                           # Raw experimental datasets (.csv, .npz)
-│   ├── results/                        # Generated figures (fig01–fig27) and statistical tables
-│   └── scripts/                        # Automation scripts (run_all_experiments, compile_pdf)
-│
-├── p1_experiments/                     # STAGE 3: Phase P1 breakthrough experimental suites
-│   ├── p1a/                            # Phase P1-A: 1D metric compatibility (60,000 trials, 420,000 evals)
-│   └── p1b/                            # Phase P1-B: Protocol V2.6 ODE carrier & spiking audit (96,000 episodes)
-│
-├── s41cd/ ... s43a/                    # STAGE 3: TAN-II Sprint reproduction suites (4.1 to 4.3-A)
-│
-├── scripts/                            # Independent verification and QA test suites
-│   ├── qa_pdf.py                       # Paper 1 layout, references, and text QA validator
-│   ├── qa_paper2.py                    # Paper 2 layout, references, and text QA validator
-│   └── generate_manifest_after.py      # Bidirectional cryptographic hash integrity verifier
-│
-├── MASTER_CLAIM_LEDGER.csv             # Full claim ledger across all rungs and audits
-├── CURRENT_RESEARCH_STATE.md           # Research state audit and boundary matrix
-├── RESEARCH_CHRONOLOGY.md              # Complete 25-round experimental chronology
-└── ERRATA.md                           # Technical errata and amendment history
-```
-
----
-
-## 🧪 Scientific Highlights & Breakthrough Findings
-
-### 1. The Original TAN Neuron (Stage 1)
-- Combines a local deviation surprise signal $S_t = \max(0, x_t - \operatorname{mean}(H_t) - \tau_{\text{noise}})$ with QKV temporal attention over a history buffer $W$.
-- Demonstrates sensory habituation, noise-gated stimulus response, and adaptive phototaxis navigation without synaptic weight updates.
-- 50-seed statistical validation against LIF, adaptive-LIF, RNN, SNN, and Transformer baselines.
-
-### 2. State Collisions & Saliency Locking (Stage 2 / TAN-I)
-- **Theorem (Natural State Collisions)**: Constructive pairs of distinct input histories collapse to identical membrane potentials $h_t$ before diverging, proving that $h_t$ is not Markov-sufficient and establishing genuine temporal memory.
-- **Probe-1 & Probe-2**: Proves that scalar positive attention kernels are order-locked ($\mathrm{FlipRate} \equiv 0.000$), demonstrating the mathematical impossibility of query-conditioned routing in scalar substrates.
-
-### 3. The Relational Ladder & Phase P1 (Stage 3 / TAN-II)
-- **Orthogonal Axis 1**: Routing Selectivity $\perp$ Readout Discreteness ($\gamma \to \infty$ WTA limit delivers lossless symbols while flip rates stay invariant at $0.4445$).
-- **Orthogonal Axis 2**: Binding Fidelity $\perp$ Combiner Error (conditioned on correct binding, algebraic combiner error is identically $0.0\mathrm{e}0$).
-- **Proposition 5.3 (*1D Metric Sufficiency*)**: Proves 1D distance compatibility $k(q, k_i) = -|q - k_i|$ achieves $100.00\%$ routing identical to 2D vector rotation under hard selection.
-- **Proposition 5.4 (*Intermediate Addressing Impossibility*)**: Demonstrates the $0/6{,}705$ ($0.00\%$) intermediate key addressing barrier under monotonic scalar dot products.
-- **Phase P1-B Carrier Audit**: Confirmatory audit across 96,000 episodes under Protocol V2.6 proves analytical subthreshold collisions (residual $< 10^{-10}$), baseline floor failure ($2.75\%$--$2.90\% < 80\%/40\%$, *memory redundancy unestablished*), and single-unit spiking channel breakdown ($E_{\text{comp}} > 2.2$).
-
----
-
-## ⚡ Reproduction & Verification
-
-### Prerequisites
-- Python 3.10+ (`pip install numpy scipy matplotlib pandas pypdf pytest`)
-- TeX distribution (MiKTeX or TeXLive) for LaTeX compilation
-
-### Running Stage 1 Original Experiments
 ```bash
-# Execute full Stage 1–5 pipeline
-bash snapshot/scripts/run_all_experiments.sh
-# or on Windows:
-snapshot\scripts\run_all_experiments.bat
-```
+# Stage 1 experiments (writes to snapshot/results/)
+bash snapshot/scripts/run_all_experiments.sh      # Windows: snapshot\scripts\run_all_experiments.bat
 
-### Running Automated QA Validators
-```bash
-# Verify Paper 1 (Strictly 28 pages, 0 ??, 13/13 required checks)
-python snapshot/paper/scripts/qa_pdf.py
-
-# Verify Paper 2 (Strictly 28 pages, 0 ??, references [1]-[13] verified)
-python snapshot/paper2/scripts/qa_paper2.py
-
-# Verify bidirectional cryptographic hash match against baseline archive
-python scripts/generate_manifest_after.py
-```
-
-### Running Phase P1-B Confirmatory Suite
-```bash
+# Phase P1-B fixture tests (12 tests)
 python -m pytest p1_experiments/p1b/test_p1b_g1_fixtures.py
+
+# Manuscript layout and wording checks (each must run from the directory shown)
+(cd snapshot && python paper/scripts/qa_pdf.py)
+(cd snapshot/paper2 && python scripts/qa_paper2.py)
 ```
 
----
+Several files are checked against recorded SHA-256 hashes. `.gitattributes` fixes their line endings so that these checks pass on every platform. On a Windows clone made before 2026-09-27, the P1-B test G1.0 fails for this reason only.
 
-## 📄 License & Attribution
+## Licence
 
-All models, experimental scripts, datasets, and manuscript sources are authored by **Li Zexu** (School of Physics and Astronomy, University of Leeds, 2026).  
-Released for academic review and open scientific replication under the **MIT License**.
+MIT; see `LICENSE`.

@@ -4,7 +4,7 @@ import os
 rows = [
     {
         'id': 'A01',
-        'evidence': 'paper2/sections/s2_framework.tex:199, docs/TANII_SPRINT4_2B_PREREGISTRATION.md:38 vs :63, code/experiments/sprint4_2/sprint4_2_vector_qk.py:97, :123',
+        'evidence': 'paper2/sections/s2_framework.tex:211-212 (fixed), docs/TANII_SPRINT4_2B_PREREGISTRATION.md:38 (frozen verbatim) vs :63, code/experiments/sprint4_2/sprint4_2_vector_qk.py:97, :123',
         'severity': 'P0 BLOCKER',
         'handling': 'Independent numerical verification of both definitions. Text corrected in paper2 (u(theta)=(cos theta, sin theta), Q=cS*u(omega S)); errata documented; frozen code verified.',
         'status': 'RESOLVED'
@@ -67,7 +67,7 @@ rows = [
     },
     {
         'id': 'A04-3',
-        'evidence': 'paper2/sections/s4_opponent.tex, docs/TANII_SPRINT4_2_THEORY.md',
+        'evidence': 'paper2/sections/s2_framework.tex:66, paper2/sections/s5_routing_geometry.tex:253, docs/TANII_SPRINT4_2_THEORY.md',
         'severity': 'P0 BLOCKER',
         'handling': 'Narrowed scalar sorting theorem: handled S=0 and ties; order invariance does not universally imply rank-1 kernel factorizability without additional regularity assumptions.',
         'status': 'RESOLVED'
@@ -109,7 +109,7 @@ rows = [
     },
     {
         'id': 'A07',
-        'evidence': 'paper/main.tex, paper2/main.tex, paper/main.pdf (28 pp), paper2/main.pdf (26 pp)',
+        'evidence': 'paper/main.tex, paper2/main.tex, paper/main.pdf (28 pp), paper2/main.pdf (28 pp)',
         'severity': 'P0 BLOCKER',
         'handling': 'Compiled both manuscripts without error (exit code 0). Formally flagged VISUAL_QA_NOT_COMPLETED due to lack of rendered visual image inspection in headless environment; ruled NOT READY FOR SUBMISSION pending human visual sign-off.',
         'status': 'PARTIALLY_RESOLVED (VISUAL_QA_PENDING / NOT_READY_FOR_SUBMISSION)'

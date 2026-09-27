@@ -14,7 +14,7 @@ The P0 phase has established a verified, reproducible, and mathematically consis
 3. `RESEARCH_CHRONOLOGY.md`: 25-round reconstructed research timeline and amendment classification.
 4. `manifest_before.json`: 368-entry baseline manifest with SHA-256 hashes and historical records.
 5. `manifest_after.json`: Final post-execution manifest verifying source integrity and logging derived artifacts.
-6. `MASTER_CLAIM_LEDGER.csv`: 10-claim master ledger mapping claims to evidence, counterexamples, and allowed wordings.
+6. `MASTER_CLAIM_LEDGER.csv`: 11-claim master ledger mapping claims to evidence, counterexamples, and allowed wordings.
 7. `FINDINGS.csv`: Granular registry of issues A01–A07 with severity, handling, and resolution status.
 8. `ERRATA.md`: Detailed scientific errata documenting original vs revised formulations and rationales.
 9. `NUMERICAL_CHECKS.json`: Consolidated machine-readable results of independent numerical verifications.
@@ -30,14 +30,14 @@ In addition, all independent check scripts are preserved in `scripts/`, replay l
 |---|---|---|---|---|
 | **CLM-01** | Phase 1 Membrane Sufficiency | CONFIRMED | **RETAINED (QUALIFIED)** | Membrane potential $h$ alone is insufficient state for TAN; history dependence is provided by the temporal window buffer. Complete state $(h_t, X_t)$ remains Markovian. Input domain $[0.0, 3.0]$. |
 | **CLM-02** | Phase 2 Response Geometry | OUTCOME: D | **[AMENDED IN REWORK] DOWNGRADED (QUALIFIED)** | Stop condition decoupled from intrinsic dimension; local covariance divergence event-locked against quiet baseline ($B4 - B3 = 1.0945$ nats). Outcome D was an unhandled classification combination (`UNCLASSIFIED_MIXED_CASE`). Does not support higher intrinsic dimension. |
-| **CLM-03** | Probe-1 Distractor Retrieval | CLAIMED_SUPERIOR | **[SUPERSEDED / DOWNGRADED IN REWORK] LIMITED SUPPORT** | Discarded unqualified superiority claim. B2 delay-line buffer is a strong baseline ($\approx 0.843$ vs B4 $\approx 0.849$). Advantage is conditional on specific distractor cues; Outcome B represents generic dynamical advantage. |
-| **CLM-04** | Probe-2 Positive Scalar Routing | AUDIT_FAILED | **[TERMINATED / REFUTED IN REWORK] CLOSED BOUNDARY** | Positive scalar kernel is monotonically constrained by amplitude; cannot perform content routing (0 flips, Theorem 5.1). Permanently closed negative boundary. |
+| **CLM-03** | Probe-1 Distractor Retrieval | CLAIMED_SUPERIOR | **[SUPERSEDED / DOWNGRADED IN REWORK] LIMITED SUPPORT** | Discarded unqualified superiority claim. B2 delay-line buffer is a strong baseline ($\approx 0.843$ vs B4 $\approx 0.389$, distractor condition); B4's advantage is only relative to the compromised B3 baseline (B4 0.389 vs B3 0.337). The single-seed pre-registered gate returned Outcome A; the amended 3-seed audit downgrades this to LIMITED SUPPORT. |
+| **CLM-04** | Probe-2 Positive Scalar Routing | AUDIT_FAILED | **[TERMINATED / REFUTED IN REWORK] CLOSED BOUNDARY** | Positive scalar kernel is monotonically constrained by amplitude; cannot perform content routing (0 flips; cf. Paper 2, Theorem 5.1). Permanently closed negative boundary. |
 | **CLM-05** | Sprint 4.1 Opponent Tuning | CLAIMED_BREAKTHROUGH | **[AMENDED IN REWORK] ESTABLISHED TUNING / NEGATIVE ROUTING** | Opponent structure establishes non-monotonic tuning peaks; does NOT break scalar sorting barrier (flip rate = 0 across 6 layouts). |
-| **CLM-06** | Sprint 4.2-A Query Geometry | THEORETICALLY_PROVEN | **RETAINED (REDUCED SCOPE)** | Dot-product angular flip follows $\theta/\pi$ on $S^1$ (Charikar 2002); minimal 2D sufficiency verified. 132 isotropic conditions + 8 controls (140 total checks); max deviation $0.004667$. Does not prove 2D is necessary across all attention families. |
+| **CLM-06** | Sprint 4.2-A Query Geometry | THEORETICALLY_PROVEN | **RETAINED (REDUCED SCOPE)** | Dot-product angular flip follows $\theta/\pi$ on $S^1$ (Charikar 2002); minimal 2D sufficiency verified. 132 isotropic conditions + 8 controls (140 total checks); max deviation $0.004667$ (3-seed average; single-seed max 0.009267). Does not prove 2D is necessary across all attention families. |
 | **CLM-07** | Sprint 4.2-B Vector QK Flips | CONFIRMED | **RETAINED (TYPO RESOLVED)** | Normalized vector QK produces counterfactual winner flips ($Q=3 \to A, Q=4 \to B$); paper typo (double $\omega$) corrected. Flip rate must not be conflated with address correctness. |
-| **CLM-08** | Sprint 4.2-C Soft Value Binding | CONFIRMED | **RETAINED (BOUNDED)** | KV decoupling transmits bound continuous values via event-normalized readout ($D_{\text{ev}} \approx 1.5$). Soft blending obstacle prevents exact discrete value delivery under finite gain. |
-| **CLM-09** | Sprint 4.2-D WTA Limit | CONFIRMED | **RETAINED (CONSTRUCTIVE)** | One-hot argmax selection delivers exact values conditioned on correct upstream routing; does not repair mis-routing. $\gamma^* = 5.098015$ crossing root restores E-dominant routing. |
-| **CLM-10** | Sprint 4.3-A Composition | CLAIMED_COMPOSITION | **[SUPERSEDED / DOWNGRADED IN REWORK] CONSTRUCTIVE OPERATOR SUFFICIENCY** | Constructive operator sufficiency of static retrieval plus explicit arithmetic node ($y = C_1 \pm C_2$). Conditioned on correct dual routing ($6,608 / 30,000 = 22.03\%$ coverage), error is $0.0$; unconditional quadrature benchmarks are $1.116$ (add) / $2.001$ (sub), matching 30k MC empirical means $1.108$ / $1.976$. Does not prove online neural dynamics or learned generalization. |
+| **CLM-08** | Sprint 4.2-C Soft Value Binding | CONFIRMED | **RETAINED (BOUNDED)** | KV decoupling transmits bound continuous values via event-normalized readout ($D_{\text{ev}} = 1.7427 / 1.8444$). Soft blending obstacle prevents exact discrete value delivery under finite gain. |
+| **CLM-09** | Sprint 4.2-D WTA Limit | CONFIRMED | **RETAINED (CONSTRUCTIVE)** | One-hot argmax selection delivers exact values conditioned on correct upstream routing; does not repair mis-routing. $\gamma^* = 5.098015$ is the crossing root above which the net E-I drive transfer is value-aligned again (negative $T_{\text{drive}}$); routing winners are unchanged. |
+| **CLM-10** | Sprint 4.3-A Composition | CLAIMED_COMPOSITION | **[SUPERSEDED / DOWNGRADED IN REWORK] CONSTRUCTIVE OPERATOR SUFFICIENCY** | Constructive operator sufficiency of static retrieval plus explicit arithmetic node ($y = C_1 \pm C_2$). Conditioned on correct dual routing ($6,608 / 30,000 = 22.03\%$ coverage), error is $0.0$; unconditional quadrature benchmarks are $1.116$ (add) / $2.001$ (sub); the 30k MC empirical means are $1.108$ / $1.976$ (pooled $z = -1.0$ / $-2.0$, so the subtraction mean sits about two standard errors below its benchmark). Does not prove online neural dynamics or learned generalization. |
 
 ---
 
@@ -58,7 +58,7 @@ Following direct verification against foundational literature:
 
 - **Status:** **NOT READY FOR SUBMISSION**.
 - **Blockers:**
-  1. Author and correspondence details contain placeholders (`[email placeholder --- see archive metadata]`).
+  1. Author and correspondence details contain placeholders (`[correspondence email pending submission]`).
   2. Full-page visual layout inspection (`VISUAL_QA_NOT_COMPLETED`) has not been conducted due to automated image rendering constraints.
   3. Related work and introduction sections must incorporate Charikar (2002), Martins & Astudillo (2016), Schlag et al. (2021), and Ramsauer et al. (2020) to frame contributions accurately.
 - **Guidance:** Manuscripts in `snapshot/paper/` and `snapshot/paper2/` serve as internal, audited reference baselines. Submission actions require explicit user authorization.

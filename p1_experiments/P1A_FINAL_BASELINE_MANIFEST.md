@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary & Closure Verdict
 
-Following 5 rounds of rigorous multi-agent methodological review, pre-registration specification locking, failure-mode fixture testing, and full-scale execution across 60,000 trials (420,000 model evaluations), the P1-A experiment has achieved 100% verification across all G1 identifiability gates, resource budgets, and post-write lossless recomputation audits.
+Following 5 rounds of rigorous multi-agent methodological review, pre-registration specification locking, failure-mode fixture testing, and full-scale execution across 60,000 trials (420,000 model evaluations), the P1-A experiment has passed verification across all G1 identifiability gates, resource budgets, and post-write lossless recomputation audits.
 
 Codex issued the formal closure sign-off:
 > **“最终裁决：本次正式重放验收通过；同意确立为 P1-A 的可信研究基线；同意在‘静态地址可识别性与检索算子边界’的限定范围内正式收口。”**
@@ -25,7 +25,7 @@ All artifacts in `results/run_p1a_rev2/` are now permanently frozen as the bench
 During the final sign-off review, two precise methodological points were verified and recorded:
 
 1. **Intermediate-Key Channel Query Denominator:**
-   In Condition C2 ($N=3$, 10,000 trials $\times$ 2 channels = 20,000 channel queries), exactly **6,705** queries specifically targeted the intermediate (middle) key ($k_{\text{min}} < k_{\text{target}} < k_{\text{max}}$). The `SignedScalarKernel` model achieved exactly **0 hits out of 6,705 queries** (**0.00% hit rate**). (The preliminary dry-run text had referenced an approximate sample figure of 6,676; 6,705 is the exact unrounded integer denominator in the full dataset).
+   In Condition C2 ($N=3$, 10,000 trials $\times$ 2 channels = 20,000 channel queries), exactly **6,705** queries specifically targeted the intermediate (middle) key ($k_{\text{min}} < k_{\text{target}} < k_{\text{max}}$). The `SignedScalarKernel` model achieved exactly **0 hits out of 6,705 queries** (**0.00% hit rate**). (An earlier closure note, `feedback_to_codex_final_closure.txt`, cited 6,676; that figure matches no data file. 6,705 is the count in `trial_inputs.csv.gz`. Corrected 2026-09-27, ERRATA ERR-17.)
 
 2. **Original Source Archive Cleanliness:**
    The original research repository (`C:\Users\李则徐\Downloads\TAN_Final_Submission\TAN_Final_Submission`) contains exactly **368 controlled non-cache files**, verified 100% bit-for-bit identical with zero missing, zero untracked, and zero modified files. The 39 pre-existing `__pycache__` files dated 2026-09-17 are deliberately excluded by cache-ignore rules.
@@ -47,7 +47,7 @@ All code was executed under strict SHA-256 hash verification matching Codex's ex
 | `THEORETICAL_PROPOSITION_1D_METRIC.md` | `19138da1a5b64eb70f9bc1e97b98c9481c0cbe16661d0c4aa86c9f79be20df94` | 7,234 | Formal propositions & soft bound |
 | `test_audit_failure_modes.py` | `fdccdf1575bda77271a8234eb9472c90752cbee0aa34f8f878ba36e2f99d133f` | 6,691 | 5 audit failure-mode injection tests |
 
-### 3.2 Certified Frozen Output Artifacts (`results/run_p1a_rev2/`)
+### 3.2 Verified Frozen Output Artifacts (`results/run_p1a_rev2/`)
 
 | File Name | SHA-256 Checksum | Size (Bytes) | Contents & Description |
 |---|---|---|---|
@@ -73,17 +73,19 @@ All code was executed under strict SHA-256 hash verification matching Codex's ex
 | | Hard Add Error | 0.0000 | 1.9982 | 0.9526 | 0.7957 | 1.6139 | **0.0000** | **0.0000** |
 | **C2 ($N=3$, clean)** | Both-Routed Acc | 17.20% | 0.00% | 25.81% | 13.68% | 6.55% | **100.00%** | **100.00%** |
 | | Middle Key Hit | 33.75% | 0.00% | **0.00% (0/6,705)** | 36.78% | 18.43% | **100.00%** | **100.00%** |
-| | Soft Add Error | 2.1963 | 3.5186 | 2.6393 | 3.0134 | 3.2929 | **0.4247** | **0.9463** |
-| **C3 ($\sigma=0.01$)** | Both-Routed Acc | 17.20% | 0.00% | 25.56% | 13.56% | 6.47% | **98.76%** | **98.76%** |
-| | Middle Key Hit | 33.75% | 0.00% | 0.00% | 36.63% | 18.23% | **99.11%** | **99.11%** |
-| **C4 ($\sigma=0.05$)** | Both-Routed Acc | 17.20% | 0.00% | 24.67% | 13.20% | 6.30% | **79.86%** | **79.86%** |
-| | Middle Key Hit | 33.75% | 0.00% | 0.00% | 35.85% | 17.66% | **83.46%** | **83.46%** |
-| **C5 (OOD Low)** | Both-Routed Acc | 17.20% | 0.00% | 0.00% | 0.00% | 3.56% | **100.00%** | **100.00%** |
-| **C6 (OOD High)** | Both-Routed Acc | 17.20% | 0.00% | 0.00% | 10.74% | 3.79% | **100.00%** | **100.00%** |
+| | Soft Add Error | 1.1685 | 2.4149 | 1.4593 | 1.2760 | 1.3203 | **0.4247** | **0.9463** |
+| **C3 ($\sigma=0.01$)** | Both-Routed Acc | 16.99% | 0.00% | 25.96% | 14.27% | 7.17% | **98.76%** | **98.76%** |
+| | Middle Key Hit | 33.82% | 0.00% | 0.00% | 35.90% | 19.51% | **99.11%** | **99.11%** |
+| **C4 ($\sigma=0.05$)** | Both-Routed Acc | 16.99% | 0.00% | 25.51% | 14.27% | 7.17% | **79.86%** | **79.86%** |
+| | Middle Key Hit | 33.82% | 0.00% | 0.00% | 35.90% | 19.51% | **83.46%** | **83.46%** |
+| **C5 (OOD Low)** | Both-Routed Acc | 16.34% | 0.00% | 0.00% | 0.00% | 0.00% | **100.00%** | **100.00%** |
+| **C6 (OOD High)** | Both-Routed Acc | 16.95% | 0.00% | 0.00% | 0.00% | 0.61% | **100.00%** | **100.00%** |
+
+*Corrected 2026-09-27: the C2 soft-add-error row and all C3–C6 cells now match `results/run_p1a_rev2/condition_summary.csv`; the earlier values matched no data file (C3 and C4 share histories, so query-independent models must score identically in both). $\sigma$ is relative: the query-noise SD is $2.2\sigma$ (`task_generator.py`). See `ERRATA.md` ERR-17.*
 
 ### 4.2 Verified Core Scientific Facts
-1. **Sufficiency of 1D Metric Compatibility:** Scalar metric attention (`score = -(q - k)^2`) achieves 100.00% both-routed accuracy on C1 and C2, with 100.00% middle-key hit rate. Hard argmax routing is mathematically identical to 2D Vector-QK on $S^1$, disproving the conjecture that 2D rotation is universally necessary for content addressing.
-2. **Definitive Failure of Scalar Dot-Products on Intermediate Keys:** Signed scalar kernel achieves exactly 0/6,705 middle key hits (0.00%). A scalar multiplier cannot make an intermediate key the unique maximum.
+1. **Sufficiency of 1D Metric Compatibility:** Scalar metric attention (`score = -(q - k)^2`) achieves 100.00% both-routed accuracy on C1 and C2, with 100.00% middle-key hit rate. Hard argmax routing decisions are identical to 2D Vector-QK on $S^1$ in all 60,000 trials, which is inconsistent with the conjecture that 2D rotation is necessary for content addressing in this task.
+2. **Failure of Scalar Dot-Products on Intermediate Keys:** Signed scalar kernel achieves exactly 0/6,705 middle key hits (0.00%). A scalar multiplier cannot make an intermediate key the unique maximum.
 3. **Historical 4.2-B Demarcation:** Sprint 4.2-B static control achieves only 13.68% accuracy on C2 (middle key hit rate 36.78%), confirming that historical winner flips were fixed counterfactual switches rather than semantic content addressing.
 4. **Hard Routing vs. Soft Readout Distinction:** On C2 noiseless, while hard routing accuracy is 100.00% for both, soft addition error differs (ScalarMetric: 0.4247, VectorQK: 0.9463), bounded by kernel curvature and softmax temperature.
 

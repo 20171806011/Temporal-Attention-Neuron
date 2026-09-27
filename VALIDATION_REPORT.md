@@ -90,25 +90,25 @@ All checks were executed via independent Python scripts reading directly from th
   - Spike / reset integration: **NOT PRESENT**.
   - Arithmetic execution: **DIRECT EXPLICIT NODE** (`C1 + C2` / `C1 - C2`).
   - AST analysis via `check_composition_carrier.py` parses the AST tree and identifies all 5 `True` keyword arguments in `shortcut = dict(...)` (lines 92, 107, 137, 153, 179) plus 1 direct positional `True` call at line 198 (`check("...", True)`).
-- Verdict: Proves constructive sufficiency of static retriever + explicit arithmetic node under controlled conditions. Does NOT demonstrate online neural dynamics or learned generalization.
+- Verdict: Shows constructive sufficiency of static retriever + explicit arithmetic node under controlled conditions. Does NOT demonstrate online neural dynamics or learned generalization.
 
 ---
 
 ## 3. Program Execution Checks & Bit-for-Bit Replay Suite
 
-The 9 TAN-II scripts were executed in the isolated review directory `snapshot/` with explicit `--outdir` flags and `PYTHONDONTWRITEBYTECODE=1`:
+The 9 TAN-II scripts were executed in the isolated review directory `snapshot/` with explicit `--outdir` flags and `PYTHONDONTWRITEBYTECODE=1`. Runtimes below are from `audit_replay_summary.json` (corrected 2026-09-27; earlier values in this table matched no log):
 
 | Job Name | Script Path | Expected Exit | Actual Exit | Runtime (s) | Status / Verdict |
 |---|---|---|---|---|---|
-| **s41cd** | `sprint4_1cd_ei_dynamics.py` | 0 | 0 | 13.30s | PASS: C1 non-monotonic peak verified; 0 flips in discrete dynamics |
-| **s42a** | `code/experiments/sprint4_2/sprint4_2_geometry.py` | 0 | 0 | 7.58s | PASS: 316 PASS, 1 PROTOCOL-FAIL / NUMERICAL-PASS (E4-iii) |
-| **s42_shortcuts** | `code/experiments/sprint4_2/sprint4_2_shortcut_audit.py` | 0 | 0 | 1.92s | PASS: 36/36 shortcut checks PASS |
-| **s42b** | `code/experiments/sprint4_2/sprint4_2_vector_qk.py` | 0 | 0 | 2.30s | PASS: 27/27 canonical checks PASS; Q=3/4 flips verified |
-| **s42b_probe** | `code/experiments/sprint4_2/sprint4_2_routing_probe.py` | 0 | 0 | 22.30s | PASS: 48/48 routing checks PASS |
-| **s42c** | `code/experiments/sprint4_2/sprint4_2_binding_probe.py` | 0 | 0 | 3.77s | PASS: 42/42 binding checks PASS; soft blending verified |
-| **s42d** | `code/experiments/sprint4_2/sprint4_2_hard_binding.py` | 0 | 0 | 18.14s | PASS: 77/77 hard binding checks PASS; $\gamma^* = 5.098015$ verified |
-| **s43a** | `code/experiments/sprint4_3/sprint4_3a_composition_probe.py` | 0 | 0 | 6.50s | PASS: 79/79 composition checks PASS; coverage recorded |
-| **s42_theory** | `code/experiments/sprint4_2/sprint4_2_theory_audit.py` | 1 | 1 | 6.43s | PASS: Exact expected exit=1; 1 failure: `[FAIL] E4(iii)` |
+| **s41cd** | `sprint4_1cd_ei_dynamics.py` | 0 | 0 | 6.62s | PASS: C1 non-monotonic peak verified; 0 flips in discrete dynamics |
+| **s42a** | `code/experiments/sprint4_2/sprint4_2_geometry.py` | 0 | 0 | 7.45s | PASS: 316 PASS, 1 PROTOCOL-FAIL / NUMERICAL-PASS (E4-iii) |
+| **s42_shortcuts** | `code/experiments/sprint4_2/sprint4_2_shortcut_audit.py` | 0 | 0 | 2.29s | PASS: 36/36 shortcut checks PASS (count from `sprint4_2_shortcut_checks.csv`; the log records only "ALL SHORTCUT-AUDIT CHECKS PASS") |
+| **s42b** | `code/experiments/sprint4_2/sprint4_2_vector_qk.py` | 0 | 0 | 2.49s | PASS: 27/27 canonical checks PASS; Q=3/4 flips verified |
+| **s42b_probe** | `code/experiments/sprint4_2/sprint4_2_routing_probe.py` | 0 | 0 | 23.66s | PASS: 48/48 routing checks PASS |
+| **s42c** | `code/experiments/sprint4_2/sprint4_2_binding_probe.py` | 0 | 0 | 4.39s | PASS: 42/42 binding checks PASS; soft blending verified |
+| **s42d** | `code/experiments/sprint4_2/sprint4_2_hard_binding.py` | 0 | 0 | 18.02s | PASS: 77/77 hard binding checks PASS; $\gamma^* = 5.098015$ verified |
+| **s43a** | `code/experiments/sprint4_3/sprint4_3a_composition_probe.py` | 0 | 0 | 3.62s | PASS: 79/79 composition checks PASS; coverage recorded |
+| **s42_theory** | `code/experiments/sprint4_2/sprint4_2_theory_audit.py` | 1 | 1 | 1.08s | PASS: Exact expected exit=1; 1 failure: `[FAIL] E4(iii)` |
 
 ### Replay Output Byte-Level Integrity Verification
 The script `run_audit_replay.py` systematically compared all 11 replay-generated JSON files against their corresponding original JSON files in `snapshot/results/`.
@@ -136,10 +136,10 @@ All independent check scripts (`check_a01_query_rotation.py`, `check_a02_phase2_
 ## 5. LaTeX Compilation and Manuscript Status
 
 - **Paper 1 (`paper/`):** 28 pages. Compiles cleanly with `pdflatex` (exit code 0). Header updated to Draft v0.2.
-- **Paper 2 (`paper2/`):** 26 pages. Compiles cleanly with `pdflatex` + `bibtex` (exit code 0). All citations (`charikar2002`, `martins2016`, `schlag2021`, `ramsauer2020`) resolved. Draft header updated.
+- **Paper 2 (`paper2/`):** 28 pages (corrected 2026-09-27; `qa_paper2.py` asserts 28). Compiles cleanly with `pdflatex` + `bibtex` (exit code 0). All citations (`charikar2002`, `martins2016`, `schlag2021`, `ramsauer2020`) resolved. Draft header updated.
 - **Visual QA:** `VISUAL_QA_NOT_COMPLETED` due to local rendering inspection constraints.
 - **Final Submission Readiness Verdict:** **NOT READY FOR SUBMISSION**.
   - Author correspondence contains unresolved placeholders.
   - Full-page visual typesetting and overflow QA has not been manually verified.
-  - Manuscripts are certified as rigorously audited internal research technical baselines.
+  - Manuscripts are internally audited research drafts (audited by the author with AI tools, not independently reviewed); remaining manuscript issues are listed in `ERRATA.md` ERR-18–ERR-20.
 

@@ -1,8 +1,8 @@
 # P0 Review Workspace: Temporal Attention Neuron (TAN)
 
-**Review Directory:** `C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757`  
+**Review Directory:** the repository root (originally `P0_20260917_181757` on the author's machine)  
 **Review Timestamp:** 2026-09-17  
-**Original Source Path:** `C:\Users\李则徐\Downloads\TAN_Final_Submission\TAN_Final_Submission` (368 files, 100% frozen)  
+**Original Source Archive:** `TAN_Final_Submission` (368 files; kept outside this repository; mirrored in `snapshot/`, where 337/368 files still match `manifest_before.json`)  
 **Execution Environment:** Python 3.12.7, NumPy 1.26.4, SciPy 1.13.1, Matplotlib 3.9.2, MiKTeX 24.1.0  
 
 ---
@@ -10,13 +10,13 @@
 ## 1. Directory Structure and Deliverables
 
 ```
-P0_20260917_181757/
+Temporal-Attention-Neuron/
 ├── REVIEW_README.md              # [This file] Workspace guide, layout, and instructions
 ├── P0_REWORK_REPORT.md           # Point-by-point resolution report for user audit critique
 ├── CURRENT_RESEARCH_STATE.md     # Comprehensive state audit, artifact inventory, and boundary matrix
 ├── RESEARCH_CHRONOLOGY.md        # Reconstructed 25-round timeline, Sept 4 vs Sept 8-9 analysis, amendments
-├── ERRATA.md                     # Complete errata for issues A01–A07 with original/revised text & rationales
-├── MASTER_CLAIM_LEDGER.csv       # Unified master claim ledger (10 claims, evidence, counterexamples, wording)
+├── ERRATA.md                     # Errata ERR-01–ERR-16, post-review ERR-17–ERR-20, AM1–AM6 (FINDINGS ids A01–A07)
+├── MASTER_CLAIM_LEDGER.csv       # Unified master claim ledger (11 claims, evidence, counterexamples, wording)
 ├── FINDINGS.csv                  # Itemized findings registry (ID, evidence, severity, handling, status)
 ├── NUMERICAL_CHECKS.json         # Machine-readable JSON of all independent numerical verifications
 ├── VALIDATION_REPORT.md          # Multi-dimensional validation (numerical, replay, literature, LaTeX, QA)
@@ -32,7 +32,11 @@ P0_20260917_181757/
 │   ├── check_a05_softmax.py            # Numerical check of A05 (max-stabilized vs denominator offsets)
 │   ├── check_composition_carrier.py   # AST/data-flow analysis of Sprint 4.3-A computation carrier (AST call visitor)
 │   ├── run_audit_replay.py             # Replay runner for 8 TAN-II scripts + theory audit (exit 1) + 11-file JSON diff
-│   └── generate_manifest_after.py      # Bidirectional manifest verification & generator
+│   ├── generate_findings.py            # Writes FINDINGS.csv
+│   ├── generate_master_claim_ledger.py # Writes MASTER_CLAIM_LEDGER.csv
+│   ├── generate_numerical_checks.py    # Writes NUMERICAL_CHECKS.json
+│   ├── update_manifest_before.py       # Historical-hash correction for manifest_before.json
+│   └── generate_manifest_after.py      # Bidirectional manifest verification & generator (hardcoded local paths; see §3)
 ├── logs/                         # Detailed execution logs from the replay suite
 │   ├── s41cd.log                       # Opponent dynamics execution log (exit 0)
 │   ├── s42a.log                        # Vector QK geometry log (exit 0)
@@ -43,9 +47,9 @@ P0_20260917_181757/
 │   ├── s42d.log                        # Hard binding WTA probe log (exit 0)
 │   ├── s43a.log                        # Composition probe log (exit 0)
 │   └── s42_theory.log                  # Theory audit log (exit 1, E4(iii) failure confirmed)
-└── snapshot/                     # Isolated working copy of source archive
+└── snapshot/                     # Full copy of the source archive (code, data, docs, Stage 1 manuscript) with revised paper/ and paper2/
     ├── paper/                          # Revised Paper 1 LaTeX files and recompiled PDF (28 pages)
-    └── paper2/                         # Revised Paper 2 LaTeX files and recompiled PDF (26 pages)
+    └── paper2/                         # Revised Paper 2 LaTeX files and recompiled PDF (28 pages)
 ```
 
 ---
@@ -59,7 +63,7 @@ P0_20260917_181757/
 5. **A05 (Softmax Conventions):** Resolved. Sprint 4.2-B code uses standard max-subtracted softmax without offset; base `tan.py` uses denominator offset $10^{-9}$. Text corrected.
 6. **A06 (Timeline):** Resolved. Sept 4 dates in TAN-II files explained by template copying from TAN-I; actual execution occurred Sept 8–9. Unsourced times marked `UNKNOWN`. Detailed AM1–AM6 technical amendments.
 7. **A07 (Submission Readiness):** Resolved. Marked `PARTIALLY_RESOLVED (VISUAL_QA_PENDING / NOT_READY_FOR_SUBMISSION)` due to lack of rendered page image inspection; placeholders documented; ruled **NOT READY FOR SUBMISSION**.
-8. **Computation Carrier:** Carrier analysis via AST proves that Sprint 4.3-A composition is a constructive operator demonstration ($y = C_1 \pm C_2$) operating on statically retrieved values, bypassing membrane potential updates ($h$) and spike integration.
+8. **Computation Carrier:** Carrier analysis via AST shows that Sprint 4.3-A composition is a constructive operator demonstration ($y = C_1 \pm C_2$) operating on statically retrieved values, bypassing membrane potential updates ($h$) and spike integration.
 
 ---
 
@@ -67,7 +71,7 @@ P0_20260917_181757/
 
 From PowerShell:
 ```powershell
-Set-Location "C:\Users\李则徐\Downloads\TAN_Review\P0_20260917_181757"
+Set-Location <repository root>
 
 # 1. Run all independent checks (including error fixtures)
 python -X utf8 -B scripts/check_a01_query_rotation.py
@@ -80,6 +84,8 @@ python -X utf8 -B scripts/check_composition_carrier.py
 python -X utf8 -B scripts/run_audit_replay.py
 
 # 3. Verify bidirectional file integrity and update manifest
+#    (only on the author's machine: src_dir and rev_dir are hardcoded at generate_manifest_after.py:22-23;
+#     the committed manifest_after.json is the 2026-09-19 record and predates the 2026-09-27 corrections)
 python -X utf8 -B scripts/generate_manifest_after.py
 ```
 

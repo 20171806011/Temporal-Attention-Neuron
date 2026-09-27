@@ -1,0 +1,28 @@
+# Line endings for hash-checked files.
+# The recorded SHA-256 values were taken on Windows, where the hand-written code and
+# protocols had LF endings and the files written by the experiment scripts had CRLF
+# endings. Pinning each group lets the recorded hashes verify on every platform,
+# whatever core.autocrlf is set to. The stored content is unchanged.
+
+# LF: P1-A and P1-B code and pre-registered protocols
+p1_experiments/run_p1a_experiment.py                      text eol=lf
+p1_experiments/task_generator.py                          text eol=lf
+p1_experiments/models.py                                  text eol=lf
+p1_experiments/oracle_and_evaluator.py                    text eol=lf
+p1_experiments/test_audit_failure_modes.py                text eol=lf
+p1_experiments/REPLAY_PROTOCOL_AMENDMENT_1.md             text eol=lf
+p1_experiments/THEORETICAL_PROPOSITION_1D_METRIC.md       text eol=lf
+p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md  text eol=lf
+p1_experiments/p1b/models_p1b_v2.py                       text eol=lf
+p1_experiments/p1b/runner_p1b.py                          text eol=lf
+p1_experiments/p1b/test_p1b_g1_fixtures.py                text eol=lf
+
+# CRLF: output files written by the P1-A (rev2) and P1-B runs
+p1_experiments/results/run_p1a_rev2/*.csv                 text eol=crlf
+p1_experiments/results/run_p1a_rev2/*.json                text eol=crlf
+p1_experiments/results/run_p1a_rev2/*.md                  text eol=crlf
+p1_experiments/p1b/summary_p1b.json                       text eol=crlf
+p1_experiments/p1b/condition_summary.csv                  text eol=crlf
+p1_experiments/p1b/manifest.sha256                        text eol=crlf
+p1_experiments/p1b/smoke_artifacts/*.json                 text eol=crlf
+p1_experiments/p1b/smoke_artifacts/*.csv                  text eol=crlf

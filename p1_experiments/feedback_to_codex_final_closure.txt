@@ -71,7 +71,7 @@
    - QueryBlindControl                     : 双路正确率  17.20% | 中间键通道命中率 33.75%
    - PositiveScalarKernel                  : 双路正确率   0.00% | 中间键通道命中率   0.00%
    - SignedScalarKernel                    : 双路正确率  25.81% | 中间键通道命中率   0.00%！
-     【实测确证】：在全部 6,676 次请求中间键的通道查询中，带符号标量核命中数为绝对的 0！
+     【实测确证】：在全部 6,705 次请求中间键的通道查询中 [2026-09-27 更正：原文误作 6,676，该数字与任何数据文件都不符]，带符号标量核命中数为绝对的 0！
    - HistoricalSprint4_2_KernelStaticControl: 双路正确率  13.68% | 中间键通道命中率 36.78%
    - FrozenSRotationHarmonicReference      : 双路正确率   6.55% | 中间键通道命中率 18.43%
    - ScalarMetricAttention                 : 双路正确率 100.00% | 中间键通道命中率 100.00% | 软加法误差 0.4247

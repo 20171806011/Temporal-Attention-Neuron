@@ -117,4 +117,4 @@ Evaluated via Pathway A transport with registered limitation threshold $E_{\text
 - **Gate G1-Design**: 100% APPROVED.
 - **Gate G1-Executable**: 100% APPROVED.
 - **Gate G2 (Confirmatory Simulation & Independent Audit)**: **PASSED & APPROVED**.
-- **Phase P1-B**: Concluded with full cryptographic reproducibility and certified consensus between Antigravity and Codex CLI.
+- **Phase P1-B**: Concluded with full cryptographic reproducibility and agreement between Antigravity and Codex CLI (internal AI-assisted review, not independent certification; wording corrected 2026-09-27).

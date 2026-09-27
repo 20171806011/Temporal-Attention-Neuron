@@ -19,21 +19,21 @@ Following the formal audit verdict (`P0_REWORK_REQUIRED`), this rework was execu
 - **Defect in Prior Delivery:** 9 "historical hashes" in `manifest_before.json` failed verification against current hashes because they contained truncated 16-character prefixes padded with random hex bytes.
 - **Root Cause Analysis:** A flawed helper script parsed truncated 16-hex short hashes from legacy log summaries and padded them to 64 hex characters.
 - **Remediation Action:** Located the authentic 64-character SHA-256 historical hashes recorded across original project files (e.g. `docs/REPRODUCIBILITY_LEDGER.md:71`, `results/sprint4_1cd/sprint4_1cd_summary.json`, `results/sprint4_2/sprint4_2*_summary.json`, `results/sprint4_3/audit_summary.json`). Documented full provenance and root cause in `manifest_before_correction_provenance.json`.
-- **Verification Result:** All 9 entries in `manifest_before.json` now contain full, verified 64-character SHA-256 hashes with exact source file citations. Comparing `historical_sha256` to `current_sha256` yields **100% bit-for-bit match (0 warnings, 0 mismatches)**.
+- **Verification Result:** All 9 entries in `manifest_before.json` now contain full, verified 64-character SHA-256 hashes with exact source file citations. Comparing `historical_hash_if_available` to `current_sha256` yields **100% bit-for-bit match (0 warnings, 0 mismatches)**.
 
 ---
 
 ### 2. True Bidirectional Manifest Integrity Check (Critique Item 2)
 - **Defect in Prior Delivery:** `generate_manifest_after.py` only checked whether files in the manifest existed in the folder, failing to detect untracked or newly introduced files, and crashed on Windows path separator mismatches.
 - **Remediation Action:** Rewrote `scripts/generate_manifest_after.py` to perform a rigorous two-way bidirectional verification:
-  1. **Baseline $\to$ Source:** Every file in the 368-file source baseline must exist in `snapshot/` with an identical SHA-256 hash (0 missing, 0 modified).
+  1. **Baseline $\to$ Source:** Every file in the 368-file source baseline must exist in the external source archive (`src_dir`, hardcoded at `generate_manifest_after.py:22`) with an identical SHA-256 hash (0 missing, 0 modified). The script does not check `snapshot/`.
   2. **Source $\to$ Baseline:** Every file in `snapshot/` must belong to the baseline unless explicitly registered as a derived artifact (0 untracked files).
   3. **Path Normalization:** Path separators normalized across platforms using `os.path.sep` and POSIX forward slashes.
 - **Verification Result:** Ran `python scripts/generate_manifest_after.py`. Output verified:
   - Original archive: **368/368 files bit-for-bit identical**.
   - Missing source files: **0**.
   - Untracked source files: **0**.
-  - Total tracked entries in `manifest_after.json`: **438** (368 frozen originals + 70 review deliverables and logs).
+  - Total tracked entries in `manifest_after.json`: **438** (368 frozen originals + 70 review deliverables and logs). *[Corrected 2026-09-27: the committed `manifest_after.json` has 586 entries (345 FROZEN_SNAPSHOT_MATCH, 72 P0_DELIVERABLE, 66 DERIVED_REVIEW_ARTIFACT, 44 DERIVED_REVISED_COPY, 39 REPLAY_OUTPUT_DATA, 11 INDEPENDENT_VERIFICATION_SCRIPT, 9 EXECUTION_LOG); it was regenerated after this report was written.]*
 
 ---
 
@@ -66,7 +66,7 @@ Following the formal audit verdict (`P0_REWORK_REQUIRED`), this rework was execu
   - Master ledger invented speculative statuses like `AUDIT_SUPERIOR`.
 - **Remediation Actions:**
   1. **Phase 1 Membrane Leak:** Verified in `natural_collision.py:95` as `lambda_leak = 0.5`. Updated across `RESEARCH_CHRONOLOGY.md`, `MASTER_CLAIM_LEDGER.csv`, `ERRATA.md`, and `CURRENT_RESEARCH_STATE.md`.
-  2. **$\gamma^*$ Definition:** Formally defined $\gamma^* = 5.09801533$ as the bisection root where net E-I drive transfer changes sign ($T_{\text{drive}} = 0$), restoring excitatory-dominant routing.
+  2. **$\gamma^*$ Definition:** Formally defined $\gamma^* = 5.098014585$ as the bisection root where net E-I drive transfer changes sign ($T_{\text{drive}} = 0$); above it the drive transfer is value-aligned again (routing winners are unchanged).
    3. **Technical Amendments AM1–AM6:**
       - AM1: E4(iii) theory failure retained ($d=2, \theta=\pi/6$, JSD $> 5\times 10^{-4}$ vs $0.000454$).
       - AM2: Unnormalized key control prediction error; correct expectation is zero flips (unnormalized keys yield $\mathrm{FlipRate}=0.0$ exact; normalization is essential enabler).
@@ -96,7 +96,7 @@ Following the formal audit verdict (`P0_REWORK_REQUIRED`), this rework was execu
   5. `s10_ledger.tex`:
      - Table 1: Updated for C1 ($K$ mean $0.5/4470/12348/20466$, median $0.5/896/1369/2948$), C6 (132 isotropic conditions / 140 total checks), C9 ($\gamma^* = 5.098015$ crossing root), C11 ($22.03\%$ coverage, benchmarks vs MC).
 - **Compilation Verification:** Recompiled both manuscripts cleanly:
-  - `paper2/main.pdf`: 27 pages (revised copy; original 2026-09-09 draft was 25 pages), clean exit code 0.
+  - `paper2/main.pdf`: 28 pages (revised copy; original 2026-09-09 draft was 25 pages), clean exit code 0. *[Corrected 2026-09-27 from 27.]*
   - `paper/main.pdf`: 28 pages, clean exit code 0.
 
 ---
@@ -126,7 +126,7 @@ Following the formal audit verdict (`P0_REWORK_REQUIRED`), this rework was execu
   - In `FINDINGS.csv`, A07 is formally recorded as:  
     `PARTIALLY_RESOLVED (VISUAL_QA_PENDING / NOT_READY_FOR_SUBMISSION)`
   - In `CURRENT_RESEARCH_STATE.md`, `VALIDATION_REPORT.md`, and `P0_HANDOFF.md`, it is explicitly declared:
-    - Manuscripts compile cleanly to 28 pages and 26 pages.
+    - Manuscripts compile cleanly to 28 pages and 28 pages.
     - Automated text tools cannot perform visual rendering inspection of layout/figures.
     - Author correspondence contains unresolved placeholders.
     - **Final Verdict: The manuscripts are NOT READY FOR SUBMISSION.**
