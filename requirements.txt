@@ -1,0 +1,18 @@
+# Temporal Attention Neuron (TAN) Environment Dependencies
+# Tested with Python 3.10, 3.11, 3.12
+
+# Core scientific computation & numerical methods
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Document & PDF QA verification
+pypdf>=3.0.0
+
+# Testing & validation suite
+pytest>=7.0.0
+
+# Optional: Deep learning baselines for Stage 1 (RNN / GRU comparisons)
+# Only required if executing snapshot/scripts/run_all_experiments with PyTorch baselines
+torch>=2.0.0
