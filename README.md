@@ -21,9 +21,7 @@ This repository contains the complete, reproducible research lineage—from the 
 
 ---
 
-## 👤 Author & Research Contributions
-
-All theoretical formulations, computational models, experimental architectures, and manuscripts in this repository were conceived, designed, and authored by **Li Zexu**:
+## 💡 Core Research Contributions
 
 ### 1. Conceptualization & Mathematical Formulation
 * **The TAN Paradigm**: Conceived the integration of continuous-time biological leaky integration with dynamic, sliding-window temporal self-attention.
@@ -37,9 +35,6 @@ All theoretical formulations, computational models, experimental architectures, 
 * **Large-Scale Empirical Verification**:
   * **Phase P1-A (60,000 trials, 420,000 evaluations)**: Discovered that 1D metric compatibility $-(q - k)^2$ is mathematically and empirically sufficient for 100% hard key selection, proving that higher-dimensional vector spaces are not strictly required for 1D selective addressing.
   * **Phase P1-B (96,000 episodes)**: Designed and executed the continuous dynamical carrier and spiking readout stress-testing suite, empirically characterizing the capacity limits of single-unit channels and establishing the necessity of distributed multi-channel circuits for multi-item binding.
-
-### 3. Academic Manuscripts
-* **Sole Lead Author** of all three comprehensive research manuscripts detailing the theoretical derivation, mechanistic limits, and architectural expansion of the TAN framework.
 
 ---
 
