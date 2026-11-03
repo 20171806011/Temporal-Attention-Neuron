@@ -1,203 +1,131 @@
-# Temporal Attention Neuron (TAN): Complete Research Programme
+# Temporal Attention Neuron (TAN)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Status: Final Revised Manuscripts](https://img.shields.io/badge/Status-Complete%20Research%20Suite-success.svg)]()
-[![Repository: Unified Monorepo](https://img.shields.io/badge/Repository-Unified%20Research%20Monorepo-blueviolet.svg)]()
+**History sensitivity, static addressing, and the limits of recoverable memory**
 
-> **Author**: **Li Zexu** (School of Physics and Astronomy, University of Leeds)  
-> **Official Repository**: [https://github.com/20171806011/Temporal-Attention-Neuron](https://github.com/20171806011/Temporal-Attention-Neuron)  
-> *(Note: The legacy repository `20171806011/-TAN-` has been formally deprecated and archived. All official code, experimental data, analytical benchmarks, and publication manuscripts across the entire research lifecycle are consolidated in this repository).*
+TAN studies what a dynamical unit can compute when leaky membrane dynamics receive a surprise-gated, attention-weighted summary of recent inputs. The project now includes model implementations, analytical results, controlled experiments, negative results, and a traceable scientific archive.
 
----
+**Author:** Li Zexu. Original model and research programme by the author; subsequent analysis, implementation, computational checks, and manuscript preparation include AI assistance.
 
-## 🌟 Overview & Core Question
+**Latest update — 3 November 2026:** the evidence synthesis now includes a verified **clean-only response collision**, alongside static-addressing positives, a controlled training-composition improvement, and a comparison with an ordinary adaptive baseline. These results distinguish information present in internal state from information recoverable through the task's permitted output.
 
-**How can minimal biological and dynamical mechanisms enable single spiking units, or compact neural circuits, to select, hold, and combine continuous representations across time?**
+**最新成果：** 无干扰输入也可出现跨类别响应碰撞，其中一组不需要 reset；改变训练组成可改善固定读出的 clean 表现，但不能消除这种精确碰撞。静态寻址、动态存储和任务解码是不同能力，不能互相替代。
 
-The **Temporal Attention Neuron (TAN)** is a bio-inspired computational framework that unifies the temporal expressiveness of Transformer self-attention with the continuous-time dynamics of Leaky Integrate-and-Fire (LIF) spiking neurons. By coupling a rectified surprise gating signal $S_t = [x_t - \mu_t - \varepsilon]_+$ with dynamic sliding-window attention, TAN achieves sensory habituation, noise filtering, and closed-loop adaptive navigation **without requiring synaptic weight updates**.
+## Start here
 
-This repository contains the complete, reproducible research lineage—from the initial single-neuron prototype through exhaustive mechanistic boundary analysis to the multi-channel relational computation ladder.
+- **[Latest research paper — PDF][paper-pdf]**: *Temporal Attention Neurons: Separating History Sensitivity, Addressing, and Recoverable Memory* (10-page research draft).
+- **[Paper source, build instructions, and evidence index][paper-home]**: Markdown, generated LaTeX, and claim-to-source links.
+- **[Clean-only collision supplement][clean-map]**: theory, saved results, new verification code, and scope.
+- **[Completed research snapshot][snapshot]**: all 680 screened scientific files, with an inventory and checksums.
 
----
+The latest paper and archive are published on research branches. The links above pin exact commits, so they remain usable from this README without assuming those files have been merged into `main`. The manuscripts are research drafts; repository publication and computational checking are not peer review.
 
-## 💡 Core Research Contributions
+## What the current evidence establishes
 
-### 1. Conceptualization & Mathematical Formulation
-* **The TAN Paradigm**: Conceived the integration of continuous-time biological leaky integration with dynamic, sliding-window temporal self-attention.
-* **Rectified Surprise Gating**: Formulated the local deviation novelty signal $S_t = \max(0, x_t - \operatorname{mean}(H_t) - \varepsilon)$, enabling the neuron to autonomously gate information flow without gradient-based weight updates.
-* **Mechanistic Boundary Theory (TAN-I)**: Discovered and mathematically formulated the *Natural State Collision* phenomenon—proving that the membrane potential $h_t$ is not Markov-sufficient, and establishing that the neuron retains rich historical trajectory memory.
-* **Relational Architectural Ladder (TAN-II)**: Constructed the conceptual ladder charting the necessary architectural transitions from temporal saliency filtering to opponent E-I competition, vector-space metric addressing, Winner-Take-All symbol selection, and algebraic composition.
+| Result | Evidence | What it means—and its boundary |
+|:--|:--|:--|
+| **Static metric addressing works** | In the noiseless three-key P1A Rev2 condition, metric and vector-QK methods each identify **6,705/6,705** intermediate-key queries; the signed scalar-product method identifies **0/6,705**. | A scalar distance score can address an available key–value array. It does not implement dynamic writing or compressed storage. Noisy conditions have lower success. [P1A review][p1a-review] |
+| **Clean-only response collisions exist** | Four exact-real collision brackets are verified separately for historical and stabilized softmax. A cross-label pair has no target/query reset. The new checker passes **5,482 checks**, including 64 fixed trajectories / 896 updates. | No decoder of the stipulated response can classify **every** allowed clean input correctly. This is not a one-third average-accuracy ceiling or a claim about arbitrary neuronal architectures. [Proof and verification][clean-map] |
+| **Training composition contributes to weak clean scores** | Three fixed historical seeds, six fits: mean balanced accuracy rises from **32.5881% to 38.1199%**, a **5.5318 percentage-point** gain. Conditional paired 95% interval: **[3.3391, 7.6080] points**. | Improvement concerns a fixed linear readout, including train-only normalization. It remains modest, is uneven across classes, and does not repair exact response collisions. [Training control][training] |
+| **Stored content can remain inaccessible** | In the separate distractor-swap audit, **545/545** native TAN pairs have identical complete permitted responses despite different target labels and ordered windows. | The collision concerns the output contract, not equality of complete internal state. The constructed family is not an estimate of population failure frequency. [Native response audit][response-audit] |
+| **The adaptive-baseline comparison reveals a tradeoff** | Under independent noise, TAN/adaptive balanced accuracy is **99.9512% / 93.3105%**; under AR(0.9), **96.6797% / 97.7051%**. | TAN has fewer false alarms but more misses and longer delay under correlated noise. Calibration matches one pooled current statistic, not total resources or energy. [v11 comparison][v11] |
+| **Modified dynamics can rescue a restricted task** | In the eight-stage series, a gate-timescale change reduces sensor-only composition error from **0.270803 to 0.008093** on 4,096 held-out histories. | The successful system also uses modified gate drive, known keys/timing, two analog samples, a bounded target domain, and a known-equation inverse. It is not original P1B success or general retrieval. [Eight-stage study][eight-stage] |
 
-### 2. Algorithmic Implementation & Experimental Design
-* **Model Implementation**: Developed the foundational TAN codebase (`tan.py`, `lif.py`), along with comparative biological and neural baselines (LIF, Adaptive LIF, RNN, GRU).
-* **Sensorimotor Benchmarks**: Designed the 50-seed phototaxis navigation and sensory habituation task suites, demonstrating autonomous gradient ascent and noise suppression.
-* **Large-Scale Empirical Verification**:
-  * **Phase P1-A (60,000 trials, 420,000 evaluations)**: Discovered that 1D metric compatibility $-(q - k)^2$ is mathematically and empirically sufficient for 100% hard key selection, proving that higher-dimensional vector spaces are not strictly required for 1D selective addressing.
-  * **Phase P1-B (96,000 episodes)**: Designed and executed the continuous dynamical carrier and spiking readout stress-testing suite, empirically characterizing the capacity limits of single-unit channels and establishing the necessity of distributed multi-channel circuits for multi-item binding.
+### Why the clean-only result matters
 
----
+For the fixed W5 task, the only nonzero inputs are target `x5=a` and independent cue `x9=b`. The decoder observes five **pre-reset** candidate voltages and five spike indicators, not the raw cue or window. Its entire response factors through `T=u9`:
 
-## 🧭 Complete Scientific Research Lineage
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 1: Initial Formulation & Sensorimotor Dynamics (The Original TAN Neuron)                 │
-│ • Model: TAN (LIF dynamics + surprise rectification + temporal self-attention kernel)           │
-│ • Experiments: Sensory habituation, noise gating, closed-loop phototaxis (50-seed benchmarks)   │
-│ • Manuscript: The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention & SNNs│
-│ • Artifacts: snapshot/code/  |  snapshot/manuscript/  |  snapshot/data/  |  snapshot/results/   │
-└────────────────────────────────┬────────────────────────────────────────────────────────────────┘
-                                 │
-                                 ▼
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 2: Mechanistic Boundary Analysis (TAN-I Deep Dive)                                        │
-│ • Geometry: Natural state collisions (membrane potential h_t exhibits non-Markovian memory)     │
-│ • Proof: Order-locking theorem of positive scalar kernels (FlipRate ≡ 0.000, JSD analysis)      │
-│ • Empirical: Event-locked response geometry, effective dimensionality, and distractor audits    │
-│ • Manuscript 1: The Computational Boundary of Scalar Temporal Attention (Strictly 28 pages)     │
-│ • Artifacts: snapshot/paper/  |  release/TAN_I_Mechanistic_Analysis.pdf                        │
-└────────────────────────────────┬────────────────────────────────────────────────────────────────┘
-                                 │
-                                 ▼
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ Stage 3: Relational Computation & Minimal Architectural Ladder (TAN-II & Phase P1)              │
-│ • Sprint Ladder: E-I opponent competition → 2D vector QK → KV binding → WTA → parallel combiner │
-│ • Phase P1-A: 1D metric compatibility sufficiency & intermediate addressing barrier (60k trials)│
-│ • Phase P1-B: Continuous dynamical carrier & spiking readout characterization (96k episodes)   │
-│ • Manuscript 2: The Minimal Architectural Ladder for Relational Computation (Strictly 28 pages) │
-│ • Artifacts: p1_experiments/  |  snapshot/paper2/  |  release/TAN_II_...pdf                    │
-└─────────────────────────────────────────────────────────────────────────────────────────────────┘
+```text
+F(a,b) = (T, R(T)/2, R(T)/4, R(T)/8, R(T)/16, 1[T>1/2], 0, 0, 0, 0)
+R(z)   = z if z <= 1/2, otherwise 0
 ```
 
----
+A low-class target `a=0.75, b=1` and a high-class target `a=1.0625` with a cue near `0.9406837741` can produce the same complete response, without either target/query reset. The targets lie outside the classes' overlapping amplitude range. Equality is proved at an **IVT-defined real root**, not inferred from rounding two floating-point outputs. The cue varies across the pair, as the task permits; supplying the exact cue separately adds an observation resource.
 
-## 🔬 Key Scientific Discoveries & Insights
+Native exponential attention is sensitive to higher moments of the window distribution, but pooling can still lose target position. Higher-moment sensitivity is an analytical property, not by itself evidence of better task performance. Likewise, membrane alone can be an insufficient state description while the full `(membrane, ordered window)` system remains Markovian.
 
-### 1. Stage 1: Dynamic Sensory Gating Without Synaptic Plasticity
-* Integrates a local sliding window $W=5$ with surprise rectification $S_t = \max(0, x_t - \mu_t - \varepsilon)$ to dynamically modulate attention weights.
-* Achieves rapid habituation to repetitive stimuli and robust noise filtering without synaptic weight modification.
-* Successfully drives closed-loop phototaxis navigation in simulated sensory environments, significantly outperforming standard LIF baselines across 50 independent runs.
+## Research lineage and earlier papers
 
-### 2. Stage 2: Non-Markovian Memory & Theoretical Boundaries (TAN-I)
-* **Natural State Collisions**: In 160,000 simulated histories, distinct input sequences reach identical membrane potentials $h_t$ (within numerical tolerance $10^{-4}$) and subsequently diverge by a mean expansion factor of $2.05 \times 10^4$. This mathematically proves that $h_t$ alone is not Markov-sufficient, demonstrating that the full state $(h_t, H_t)$ preserves genuine temporal trajectory information.
-* **Scalar Kernel Boundary**: Proves both analytically and empirically (Theorem 5.1; 1,000 counterfactual trials, FlipRate $\equiv 0.000$) that positive scalar attention kernels preserve the rank order of input scores, establishing the constructive motivation for multi-channel and metric addressing.
+| Collection | Role | Entry point |
+|:--|:--|:--|
+| Initial TAN model and behavioural studies | Surprise gating, temporal weighting, habituation and simulated navigation; inspect baseline limitations before interpreting advantages. | [Original package](snapshot/README.md), [model code](snapshot/code/model/) |
+| TAN-I | State sufficiency, response geometry, distractor retrieval and scalar-kernel routing limits. | [PDF](release/TAN_I_Mechanistic_Analysis.pdf), [LaTeX](snapshot/paper/) |
+| TAN-II and sprint studies | Constructive routing/binding/composition mechanisms with explicitly added resources. Sufficiency does not establish necessity. | [PDF](release/TAN_II_Minimal_Architectural_Ladder.pdf), [LaTeX](snapshot/paper2/) |
+| P1A Rev2 | Authoritative static-address experiment; use Rev2 rather than the superseded first run. | [Results](p1_experiments/results/run_p1a_rev2/), [baseline manifest](p1_experiments/P1A_FINAL_BASELINE_MANIFEST.md) |
+| P1B | Frozen carrier/readout study. All registered carrier cells are `FLOOR_LIMITED_COMPARISON`; memory redundancy is not established. | [Closure report](p1_experiments/p1b/P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md) |
+| November research archive | Native audits, modified-carrier controls, exploratory constructions, and clean-training results. | [680-file snapshot][snapshot] |
+| Current synthesis and clean-map supplement | Integrates the results while separating model variants, tasks, and observation contracts. | [Latest paper and evidence][paper-home] |
 
-### 3. Stage 3: The Relational Architecture Ladder (TAN-II & Phase P1)
-* **1D Metric Compatibility Sufficiency (Phase P1-A)**: Across 60,000 empirical trials and 420,000 evaluations, demonstrated that a 1D metric distance kernel $-(q - k)^2$ under hard selection achieves 100% accuracy in selecting target keys—including intermediate keys—matching 2D vector rotation performance while requiring only a single scalar dimension.
-* **Scalar Addressing Barrier**: Proved that monotonic dot-product attention cannot isolate intermediate keys ($0/6{,}705$ selections), rigorously delineating the boundary between monotonic scoring and metric compatibility.
-* **Dynamical Carrier & Readout Limits (Phase P1-B)**: Conducted 96,000 adversarial test episodes evaluating continuous subthreshold carriers and single-unit spiking decoders, revealing the precise geometric operating conditions of single units and demonstrating why robust compositional binding naturally favors distributed multi-channel circuits.
+Earlier documents retain their historical wording and conclusions. The current synthesis explains later qualifications; it does not turn repeated reporting of the same experiment into additional evidence. The root [research-state record](CURRENT_RESEARCH_STATE.md), [chronology](RESEARCH_CHRONOLOGY.md), and [errata](ERRATA.md) remain useful historical records, not automatically the latest status of every study.
 
----
+## Evidence, verification, and reproducibility
 
-## 📚 Publications & Manuscripts
+The screened snapshot contains **680 scientific files** totaling **383,445,961 uncompressed bytes**. Its exact ZIP is **189,164,458 bytes**, stored as three ordered parts with reconstruction instructions in the [archive directory][archive].
 
-The repository hosts full LaTeX sources and publication-grade precompiled PDFs:
+```text
+ZIP SHA-256:
+ca8a2ae51b4e8f18ab341fa483ca9970a7a3077c5d4e4013e5df13a9811b6167
+```
 
-1. **Stage 1 Manuscript**:  
-   *The Temporal Attention Neuron: A Minimalist Fusion of Transformer Attention and Spiking Neural Dynamics*  
-   - LaTeX Source: [`snapshot/manuscript/`](snapshot/manuscript/)
-2. **Stage 2 Manuscript (Paper 1 — TAN-I Mechanistic Analysis)**:  
-   *The Computational Boundary of Scalar Temporal Attention: A Mechanistic Analysis of the Temporal Attention Neuron*  
-   - Precompiled PDF: [`release/TAN_I_Mechanistic_Analysis.pdf`](release/TAN_I_Mechanistic_Analysis.pdf) *(28 pages, complete citations, audited)*  
-   - LaTeX Source: [`snapshot/paper/`](snapshot/paper/)
-3. **Stage 3 Manuscript (Paper 2 — TAN-II Minimal Architectural Ladder)**:  
-   *The Minimal Architectural Ladder for Relational Computation: From Temporal Saliency to Binding and Composition in a Dynamical Neuron Model*  
-   - Precompiled PDF: [`release/TAN_II_Minimal_Architectural_Ladder.pdf`](release/TAN_II_Minimal_Architectural_Ladder.pdf) *(28 pages, complete citations, audited)*  
-   - LaTeX Source: [`snapshot/paper2/`](snapshot/paper2/)
+The later clean-map supplement is a **separate archive**, not one of those 680 files. Its provenance and selected source hashes are published with the supplement. A matching hash establishes file identity; it does not validate the experiment or prove a theorem.
 
----
+Evidence levels are stated explicitly:
 
-## 🚀 Quickstart & Reproduction Guide
+- **Analytical results** apply to specified equations, supports, resets, precision conventions, and readouts.
+- **Executed local studies** retain inputs, outputs, protocols, and source provenance. Separately written checkers strengthen computational confidence, but are not independent human replication.
+- **Exploratory Chat-sandbox studies** concern changed conceptual architectures. Same-agent reruns are not external replication or proof of original TAN performance.
+- **Publication checks** verify source identity, selected arithmetic, and document builds. They do not rerun the entire research programme.
 
-All experiments, models, and test fixtures are fully reproducible out of the box.
+### Inspect and check the current publication
 
-### 1. Environment Setup
-
-Python 3.10, 3.11, or 3.12 is recommended. Install dependencies via `requirements.txt`:
+The following selects the exact paper revision used by this README:
 
 ```bash
 git clone https://github.com/20171806011/Temporal-Attention-Neuron.git
 cd Temporal-Attention-Neuron
-pip install -r requirements.txt
+git fetch origin research/tan-evidence-paper-2026-11-03
+git switch --detach 007d0b4ebe8208aa95e8a70c1175b9bdc2c8373f
+
+python3 papers/tan-evidence-2026/clean-map/verify_independent.py
+python3 papers/tan-evidence-2026/validate_evidence.py
 ```
 
-> [!TIP]
-> **Cross-Platform Compatibility**: Repository files are tracked with `.gitattributes` to enforce uniform LF line endings. All cryptographic SHA-256 fixture checks pass identically on Windows, Linux, and macOS.
+These two checkers use the Python standard library. The first recomputes exact collision brackets and fixed scalar trajectories; the second verifies the snapshot, source hashes, and selected saved-result arithmetic. At the linked revision they pass **5,482** and **774** checks respectively. They do not fit a classifier or estimate new task accuracy.
 
-### 2. Running the Test Suites
-
-Execute the Phase P1-B automated fixture tests (12 tests covering analytical collisions, metric routing, and ODE trajectories):
+To rebuild the paper, install Pandoc and a LaTeX distribution, then run:
 
 ```bash
-python -m pytest p1_experiments/p1b/test_p1b_g1_fixtures.py
+bash papers/tan-evidence-2026/build.sh
 ```
 
-### 3. Running Manuscript Quality & Verification Audits
+For historical experiments, consult each package's protocol and dependency record. The root [requirements.txt](requirements.txt) is a broad environment description, not a lockfile for every archived study. Different studies record different Python/NumPy/SciPy versions. Historical and current public-file manifests have different purposes; publication edits and some historical hash guards require the documented replay procedure. Run experiments in a disposable copy because some scripts overwrite evidence beside their source. See the [publication and reproduction notes][publication-notes].
 
-Both compiled manuscripts feature automated text, citation, and layout QA validators:
+## Repository map
 
-```bash
-# Verify Paper 1 (Strictly 28 pages, 0 missing refs, all structural checks pass)
-cd snapshot && python paper/scripts/qa_pdf.py && cd ..
+| Path | Contents |
+|:--|:--|
+| `snapshot/code/`, `snapshot/data/`, `snapshot/results/` | Earlier implementations, data, figures, and results |
+| `snapshot/manuscript/`, `snapshot/paper/`, `snapshot/paper2/` | Historical manuscript sources |
+| `p1_experiments/` | P1A/P1B protocols, implementations, fixtures, and saved results |
+| `s41cd/` through `s43a/` | Sprint studies and computational checks |
+| `release/` | Earlier compiled manuscript releases |
+| `scripts/` | Repository audit and verification utilities |
+| [`research/completed-tan-2026-11-03/`][snapshot] | Screened 680-file publication on the research branch |
+| [`papers/tan-evidence-2026/`][paper-home] | Current synthesis, source ledger, validation, and clean-map supplement on the research branch |
 
-# Verify Paper 2 (Strictly 28 pages, 0 ??, all citations [1]-[13] verified)
-cd snapshot/paper2 && python scripts/qa_paper2.py && cd ..
-```
+## Attribution and scope
 
-### 4. Running Stage 1 Experiments
+The original TAN model and research programme are credited to **Li Zexu**. AI-assisted work includes later analysis, experiment implementation, computational checking, and writing; it should not be described as independent human peer review. The current results do not establish universal task superiority, biological implementation, physical energy savings, or a general impossibility theorem for single neurons. Proposed architectures remain proposals unless their implementation and results are supplied.
 
-Reproduce the original Stage 1 baseline benchmarks and generate figures:
+Code is distributed under the [MIT License](LICENSE); retain applicable source notices. For scientific attribution, cite the relevant manuscript revision and exact evidence commit, and distinguish original results from later checks. No DOI or journal acceptance is asserted here.
 
-```bash
-# On Linux / macOS:
-bash snapshot/scripts/run_all_experiments.sh
-
-# On Windows:
-snapshot\scripts\run_all_experiments.bat
-```
-
-> [!NOTE]
-> PyTorch is only needed if executing the deep-learning baseline comparisons (RNN/GRU) in Stage 1; all core TAN neuron dynamics and theoretical benchmarks execute purely on standard `numpy` and `scipy`.
-
----
-
-## 📂 Repository Directory Layout
-
-```
-Temporal-Attention-Neuron/
-├── README.md                           # [This file] Complete research lineage and reproduction guide
-├── requirements.txt                    # Python environment requirements
-├── LICENSE                             # MIT License
-│
-├── release/                            # Precompiled manuscripts and release manifests
-│   ├── TAN_I_Mechanistic_Analysis.pdf  # Paper 1 (28 pages, complete)
-│   ├── TAN_II_Minimal_Architectural_Ladder.pdf # Paper 2 (28 pages, complete)
-│   └── FINAL_MANUSCRIPT_RELEASE_MANIFEST.md
-│
-├── snapshot/                           # Working trees for Stage 1 & Stage 2
-│   ├── code/                           # Core models (tan.py, lif.py, baselines.py) and experiments
-│   ├── manuscript/                     # Stage 1 initial paper LaTeX sources
-│   ├── paper/                          # Stage 2 revised Paper 1 LaTeX sources and figures
-│   ├── paper2/                         # Stage 3 revised Paper 2 LaTeX sources and figures
-│   ├── data/                           # Experimental data records (.csv, .npz)
-│   └── results/                        # Generated figures (fig01–fig27)
-│
-├── p1_experiments/                     # Stage 3: Phase P1 experimental suites
-│   ├── results/run_p1a_rev2/           # Phase P1-A final verified data (60,000 trials)
-│   └── p1b/                            # Phase P1-B protocol, ODE carrier, and fixture suites
-│
-├── s41cd/ ... s43a/                    # Stage 3 TAN-II Sprint reproduction suites
-├── scripts/                            # Verification tools, QA scripts, and ledger generators
-├── CURRENT_RESEARCH_STATE.md           # Research state audit and boundary matrix
-├── RESEARCH_CHRONOLOGY.md              # Complete experimental chronology
-└── ERRATA.md                           # Technical errata and amendment history
-```
-
----
-
-## 📄 License & Open Science Attribution
-
-* **Author**: Li Zexu (School of Physics and Astronomy, University of Leeds, 2026).
-* **License**: Released under the [MIT License](LICENSE) for open academic study, replication, and scientific expansion.
-* **Computational Tooling**: Implementation verification, regression testing harnesses, and documentation consistency checks were assisted by AI coding agents (OpenAI Codex, Google Antigravity) under the author's direct theoretical guidance and review.
+[paper-pdf]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/007d0b4ebe8208aa95e8a70c1175b9bdc2c8373f/papers/tan-evidence-2026/manuscript.pdf
+[paper-home]: https://github.com/20171806011/Temporal-Attention-Neuron/tree/007d0b4ebe8208aa95e8a70c1175b9bdc2c8373f/papers/tan-evidence-2026
+[clean-map]: https://github.com/20171806011/Temporal-Attention-Neuron/tree/007d0b4ebe8208aa95e8a70c1175b9bdc2c8373f/papers/tan-evidence-2026/clean-map
+[snapshot]: https://github.com/20171806011/Temporal-Attention-Neuron/tree/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03
+[archive]: https://github.com/20171806011/Temporal-Attention-Neuron/tree/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/archive
+[p1a-review]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/audit-v11/tan_audit/project_reassessment_v8/P1A_EVIDENCE_REVIEW.md
+[training]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/local-clean-training-v1/REPORT.md
+[response-audit]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/audit-v11/tan_audit/project_reassessment_v8/REPORT.md
+[v11]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/audit-v11/tan_audit/gate_mechanism_v11/REPORT.md
+[eight-stage]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/native-eight-stage/EXPERIMENT_SERIES_SUMMARY.md
+[publication-notes]: https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/audit-v11/PUBLICATION_NOTES.md
