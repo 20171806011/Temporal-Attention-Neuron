@@ -1,0 +1,108 @@
+{
+  "selected": {
+    "DEND": {
+      "loss": "CE",
+      "lr": 0.03,
+      "min_accuracy": 1.0,
+      "mean_accuracy": 1.0,
+      "mean_rate_error": 0.0386962890625
+    },
+    "POINT": {
+      "loss": "CE",
+      "lr": 0.003,
+      "min_accuracy": 0.8203125,
+      "mean_accuracy": 0.8640625,
+      "mean_rate_error": 0.089013671875
+    }
+  },
+  "candidates": {
+    "DEND": [
+      {
+        "loss": "CE",
+        "lr": 0.003,
+        "min_accuracy": 0.75,
+        "mean_accuracy": 0.95,
+        "mean_rate_error": 0.0431884765625
+      },
+      {
+        "loss": "CE",
+        "lr": 0.01,
+        "min_accuracy": 0.984375,
+        "mean_accuracy": 0.996875,
+        "mean_rate_error": 0.0397705078125
+      },
+      {
+        "loss": "CE",
+        "lr": 0.03,
+        "min_accuracy": 1.0,
+        "mean_accuracy": 1.0,
+        "mean_rate_error": 0.0386962890625
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.003,
+        "min_accuracy": 0.4453125,
+        "mean_accuracy": 0.88125,
+        "mean_rate_error": 0.03115234375
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.01,
+        "min_accuracy": 0.9921875,
+        "mean_accuracy": 0.9984375,
+        "mean_rate_error": 0.0146728515625
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.03,
+        "min_accuracy": 0.9921875,
+        "mean_accuracy": 0.9984375,
+        "mean_rate_error": 0.01710205078125
+      }
+    ],
+    "POINT": [
+      {
+        "loss": "CE",
+        "lr": 0.003,
+        "min_accuracy": 0.8203125,
+        "mean_accuracy": 0.8640625,
+        "mean_rate_error": 0.089013671875
+      },
+      {
+        "loss": "CE",
+        "lr": 0.01,
+        "min_accuracy": 0.7109375,
+        "mean_accuracy": 0.884375,
+        "mean_rate_error": 0.08116455078125
+      },
+      {
+        "loss": "CE",
+        "lr": 0.03,
+        "min_accuracy": 0.0625,
+        "mean_accuracy": 0.6875,
+        "mean_rate_error": 0.13162841796875
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.003,
+        "min_accuracy": 0.0,
+        "mean_accuracy": 0.253125,
+        "mean_rate_error": 0.099658203125
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.01,
+        "min_accuracy": 0.2890625,
+        "mean_accuracy": 0.571875,
+        "mean_rate_error": 0.0781982421875
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.03,
+        "min_accuracy": 0.203125,
+        "mean_accuracy": 0.46875,
+        "mean_rate_error": 0.081884765625
+      }
+    ]
+  }
+}
