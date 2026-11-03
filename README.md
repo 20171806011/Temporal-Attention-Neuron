@@ -6,18 +6,34 @@ TAN studies what a dynamical unit can compute when leaky membrane dynamics recei
 
 **Author:** Li Zexu. Original model and research programme by the author; subsequent analysis, implementation, computational checks, and manuscript preparation include AI assistance.
 
-**Latest update — 3 November 2026:** the evidence synthesis now includes a verified **clean-only response collision**, alongside static-addressing positives, a controlled training-composition improvement, and a comparison with an ordinary adaptive baseline. These results distinguish information present in internal state from information recoverable through the task's permitted output.
+**Latest update — 3 November 2026:** this cumulative research branch includes the original programme, the 680-file screened snapshot, the evidence manuscript and clean-map supplement, and all five dendritic-population studies. [The complete research index](research/README.md) distinguishes completed experiments, frozen evidence and the current limits.
 
-**最新成果：** 无干扰输入也可出现跨类别响应碰撞，其中一组不需要 reset；改变训练组成可改善固定读出的 clean 表现，但不能消除这种精确碰撞。静态寻址、动态存储和任务解码是不同能力，不能互相替代。
+**最新成果：** 主线保留 clean 响应碰撞、静态寻址和训练组成对照。独立的多神经元研究 V1–V5 已完成：V5 在固定 RATE／0.01 配置下重现 delayed XOR 差异，但各结构独立选择配置后的主要比较区间跨零，未满足预定稳定性判据。这不证明两种结构等价，也不支持一般性的结构排序。
 
 ## Start here
 
+- **[All research, including V1–V5](research/README.md)**: protocols, code, candidates, data, checkpoints, per-seed results and integrity manifests.
+- **[Latest population-study report](research/dendritic-population-v5/REPORT.md)** and **[中文概览](research/dendritic-population-v5/README.md)**: fixed-recipe replication and configuration-transfer uncertainty; separate from the TAN mainline manuscript.
 - **[Latest research paper — PDF][paper-pdf]**: *Temporal Attention Neurons: Separating History Sensitivity, Addressing, and Recoverable Memory* (10-page research draft).
 - **[Paper source, build instructions, and evidence index][paper-home]**: Markdown, generated LaTeX, and claim-to-source links.
 - **[Clean-only collision supplement][clean-map]**: theory, saved results, new verification code, and scope.
 - **[Completed research snapshot][snapshot]**: all 680 screened scientific files, with an inventory and checksums.
 
-The latest paper and archive are published on research branches. The links above pin exact commits, so they remain usable from this README without assuming those files have been merged into `main`. The manuscripts are research drafts; repository publication and computational checking are not peer review.
+The paper, archive and V1–V5 are collected on `research/all-results-2026-11-03`; original phase commits and branches remain available. The paper and archive links pin exact commits. This publication does not merge into `main`. The manuscripts are research drafts; repository publication and computational checking are not peer review.
+
+## Dendritic-population V1–V5
+
+These studies retain native hard spikes and count readout while comparing dendritic compartments with point-neuron controls. They are a separate experimental line, not a new result silently added to the mainline paper.
+
+| Study | Completed result and scope | Evidence |
+|:--|:--|:--|
+| V1 | Initial matched-state circuit study; the ordinary point-neuron control remained competitive and performed better under the tested noise. | [Report](research/dendritic-population-v1/REPORT.md) |
+| V2 | Learning recurrent connectivity with SPSA did not reliably solve delayed XOR; failures and all candidates are retained. | [Report](research/dendritic-population-v2/REPORT.md) |
+| V3 | Both structures learned sustained channel identity under surrogate BPTT, establishing a working native-spike training/readout chain for that simple task. | [Report with correction appendix](research/dendritic-population-v3/REPORT_WITH_APPENDIX.md) |
+| V4 | Task ladder and recurrence controls; a delayed-XOR difference appeared under the shared RATE/.01 recipe. Retrained no-cross-cell controls did not establish recurrence necessity on the tested memory level. | [Report](research/dendritic-population-v4/REPORT.md) |
+| V5 | With 200 updates and 10 new seed pairs, fixed RATE/.01 reproduced a difference. After equal independent searches, the primary DEND-minus-POINT difference was +19.20 pp, 95% seed-pair interval [−11.39,+49.41]; the stability criterion failed. | [Report](research/dendritic-population-v5/REPORT.md), [all seed results](research/dendritic-population-v5/TABLES.md) |
+
+V5 retained 120 training trajectories and 24,000 updates. Failures were not discarded and test data did not select recipes. Its verification replays 61,440 model-episodes, but the primary statistical unit remains 10 trained seed pairs. These are internal workflow checks, not external replication. No subsequent phase or recurrence ablation was started after the stability gate failed.
 
 ## What the current evidence establishes
 
@@ -111,6 +127,8 @@ For historical experiments, consult each package's protocol and dependency recor
 | `scripts/` | Repository audit and verification utilities |
 | [`research/completed-tan-2026-11-03/`][snapshot] | Screened 680-file publication on the research branch |
 | [`papers/tan-evidence-2026/`][paper-home] | Current synthesis, source ledger, validation, and clean-map supplement on the research branch |
+| `research/dendritic-population-v1/` through `research/dendritic-population-v5/` | Frozen population-study protocols, full numerical artifacts and reports |
+| [`research/PUBLICATION_MANIFEST.json`](research/PUBLICATION_MANIFEST.json) | Publication inventory and original phase revisions |
 
 ## Attribution and scope
 
