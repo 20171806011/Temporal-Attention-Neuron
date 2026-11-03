@@ -1,0 +1,367 @@
+{
+  "A_CE_paired_controls": [
+    {
+      "arm": "DEND",
+      "lr": 0.01,
+      "method": "SPSA",
+      "updates": 100,
+      "accuracy": [
+        0.2890625,
+        0.0,
+        0.3359375,
+        0.2890625,
+        0.0
+      ],
+      "coverage": [
+        0.2890625,
+        0.0,
+        0.6640625,
+        0.7265625,
+        0.046875
+      ]
+    },
+    {
+      "arm": "DEND",
+      "lr": 0.01,
+      "method": "ADAM",
+      "updates": 100,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "arm": "DEND",
+      "lr": 0.01,
+      "method": "ADAM",
+      "updates": 200,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.875
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.921875
+      ]
+    },
+    {
+      "arm": "DEND",
+      "lr": 0.03,
+      "method": "SPSA",
+      "updates": 100,
+      "accuracy": [
+        0.0078125,
+        0.0,
+        0.0234375,
+        0.34375,
+        0.0
+      ],
+      "coverage": [
+        0.09375,
+        0.0,
+        0.046875,
+        0.703125,
+        0.0
+      ]
+    },
+    {
+      "arm": "DEND",
+      "lr": 0.03,
+      "method": "ADAM",
+      "updates": 100,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "arm": "DEND",
+      "lr": 0.03,
+      "method": "ADAM",
+      "updates": 200,
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ],
+      "coverage": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.01,
+      "method": "SPSA",
+      "updates": 100,
+      "accuracy": [
+        0.3671875,
+        0.109375,
+        0.4375,
+        0.28125,
+        0.4921875
+      ],
+      "coverage": [
+        0.609375,
+        0.125,
+        0.609375,
+        0.7109375,
+        0.953125
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.01,
+      "method": "ADAM",
+      "updates": 100,
+      "accuracy": [
+        0.7890625,
+        0.75,
+        0.921875,
+        0.4453125,
+        0.0234375
+      ],
+      "coverage": [
+        0.9453125,
+        0.890625,
+        0.96875,
+        0.6015625,
+        0.0625
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.01,
+      "method": "ADAM",
+      "updates": 200,
+      "accuracy": [
+        0.9609375,
+        0.984375,
+        0.953125,
+        0.9609375,
+        0.0859375
+      ],
+      "coverage": [
+        0.9921875,
+        1.0,
+        0.9765625,
+        0.9921875,
+        0.0859375
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.03,
+      "method": "SPSA",
+      "updates": 100,
+      "accuracy": [
+        0.3984375,
+        0.0234375,
+        0.1015625,
+        0.375,
+        0.46875
+      ],
+      "coverage": [
+        0.875,
+        0.03125,
+        0.1640625,
+        0.640625,
+        0.921875
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.03,
+      "method": "ADAM",
+      "updates": 100,
+      "accuracy": [
+        0.9765625,
+        0.7578125,
+        0.9453125,
+        0.8984375,
+        0.4296875
+      ],
+      "coverage": [
+        1.0,
+        0.9765625,
+        0.9921875,
+        0.9609375,
+        0.9375
+      ]
+    },
+    {
+      "arm": "POINT",
+      "lr": 0.03,
+      "method": "ADAM",
+      "updates": 200,
+      "accuracy": [
+        0.890625,
+        0.9296875,
+        1.0,
+        1.0,
+        0.921875
+      ],
+      "coverage": [
+        0.96875,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "costs": [
+    {
+      "stage": "A",
+      "arm": "DEND",
+      "method": "ADAM",
+      "trajectories": 20,
+      "updates": 4000,
+      "forward_passes": 4000,
+      "backward_passes": 4000,
+      "forward_matrix_MAC_terms": 1916928000,
+      "backward_matrix_MAC_terms": 2949120000,
+      "seconds": 16.093949829995836
+    },
+    {
+      "stage": "A",
+      "arm": "DEND",
+      "method": "SPSA",
+      "trajectories": 10,
+      "updates": 1000,
+      "forward_passes": 2000,
+      "backward_passes": 0,
+      "forward_matrix_MAC_terms": 958464000,
+      "backward_matrix_MAC_terms": 0,
+      "seconds": 3.6522665029988275
+    },
+    {
+      "stage": "A",
+      "arm": "POINT",
+      "method": "ADAM",
+      "trajectories": 20,
+      "updates": 4000,
+      "forward_passes": 4000,
+      "backward_passes": 4000,
+      "forward_matrix_MAC_terms": 1916928000,
+      "backward_matrix_MAC_terms": 2949120000,
+      "seconds": 16.837889492002432
+    },
+    {
+      "stage": "A",
+      "arm": "POINT",
+      "method": "SPSA",
+      "trajectories": 10,
+      "updates": 1000,
+      "forward_passes": 2000,
+      "backward_passes": 0,
+      "forward_matrix_MAC_terms": 958464000,
+      "backward_matrix_MAC_terms": 0,
+      "seconds": 3.849415103006322
+    },
+    {
+      "stage": "B",
+      "arm": "DEND",
+      "method": "ADAM",
+      "trajectories": 20,
+      "updates": 4000,
+      "forward_passes": 4000,
+      "backward_passes": 4000,
+      "forward_matrix_MAC_terms": 1916928000,
+      "backward_matrix_MAC_terms": 2949120000,
+      "seconds": 15.14168071899985
+    },
+    {
+      "stage": "B",
+      "arm": "POINT",
+      "method": "ADAM",
+      "trajectories": 20,
+      "updates": 4000,
+      "forward_passes": 4000,
+      "backward_passes": 4000,
+      "forward_matrix_MAC_terms": 1916928000,
+      "backward_matrix_MAC_terms": 2949120000,
+      "seconds": 15.936472851986764
+    },
+    {
+      "stage": "C",
+      "arm": "DEND",
+      "method": "ADAM",
+      "trajectories": 5,
+      "updates": 1000,
+      "forward_passes": 1000,
+      "backward_passes": 1000,
+      "forward_matrix_MAC_terms": 479232000,
+      "backward_matrix_MAC_terms": 737280000,
+      "seconds": 3.850851169001544
+    },
+    {
+      "stage": "C",
+      "arm": "POINT",
+      "method": "ADAM",
+      "trajectories": 5,
+      "updates": 1000,
+      "forward_passes": 1000,
+      "backward_passes": 1000,
+      "forward_matrix_MAC_terms": 479232000,
+      "backward_matrix_MAC_terms": 737280000,
+      "seconds": 4.003162371001963
+    },
+    {
+      "stage": "R",
+      "arm": "DEND",
+      "method": "ADAM",
+      "trajectories": 15,
+      "updates": 3000,
+      "forward_passes": 3000,
+      "backward_passes": 3000,
+      "forward_matrix_MAC_terms": 1437696000,
+      "backward_matrix_MAC_terms": 2211840000,
+      "seconds": 12.344967679000547
+    },
+    {
+      "stage": "R",
+      "arm": "POINT",
+      "method": "ADAM",
+      "trajectories": 15,
+      "updates": 3000,
+      "forward_passes": 3000,
+      "backward_passes": 3000,
+      "forward_matrix_MAC_terms": 1437696000,
+      "backward_matrix_MAC_terms": 2211840000,
+      "seconds": 13.021519392008486
+    }
+  ],
+  "notes": "A100/A200 deduplicated by trajectory trace. MAC terms omit scalar nonlinearities, resets, biases, loss, clipping and Adam arithmetic; not full compute or energy equality."
+}
