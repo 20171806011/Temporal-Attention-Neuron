@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,bm}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage[margin=1in]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage{enumitem}
+\emergencystretch=1.5em
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\setlength{\bibsep}{0.5pt}
+\renewcommand{\bibfont}{\footnotesize}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black]{hyperref}
+
+\newcommand{\TAN}{\textsc{Tan}}
+\newcommand{\WTA}{\textsc{Wta}}
+\newcommand{\eg}{\emph{e.g.}}
+\newcommand{\ie}{\emph{i.e.}}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\PassFailInconclusive}[1]{\textsc{pass}/\textsc{fail}/\textsc{inconclusive}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\title{\bf The Minimal Architectural Ladder for Relational Computation:\\[0.5ex]
+From Temporal Saliency to Binding and Composition\\in a Dynamical Neuron Model}
+\author{Li Zexu\\
+School of Physics and Astronomy, University of Leeds\\
+\texttt{correspondence: [correspondence email pending submission]}}
+\date{Final Revised Manuscript (September 2026)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Modern computational neuroscience and deep learning routinely conflate five
+distinct computational primitives---memory, saliency weighting, content
+routing, semantic binding, and composition---and infer the emergence of the
+higher ones from increases in dynamical complexity alone. This paper replaces
+that inference with a constructive question: given a fixed dynamical substrate,
+which minimal organizational degree of freedom must be added to ascend from one
+primitive to the next? We answer the question inside a single dynamical unit,
+the Temporal Attention Neuron (\TAN), whose scalar-input, scalar-gate
+surprise-weighted kernel was previously frozen (TAN-I) as a system that is
+historically dependent, geometrically responsive, and yet provably incapable of
+query-conditioned routing. Proceeding one degree of freedom at a time and
+auditing every step with counterfactual suites and negative-control chains, we
+establish six principal results. (i) Excitatory--inhibitory opponent topology suffices
+for nonmonotonic selective tuning but not for routing
+($\text{Competition}\not\Rightarrow\text{Routing}$; six layouts,
+$\mathrm{FlipRate}\equiv0.000$). (ii) Two-dimensional vector query--key
+interaction unlocks routing capacity with an exact geometric law,
+$\mathrm{FlipRate}_{\mathrm{CF}}(\theta)=\theta/\pi$ (132/132 Monte Carlo
+conditions), and realizes counterfactual winner flips in the running neuron
+(fixed history, query $3\to4$: margin $+0.2587\to-0.1559$; ensemble
+$0.4425$ vs.\ benchmark $0.4445$). (iii) Key--value decoupling yields soft
+binding, and the winner-take-all limit ($\gamma\to\infty$) yields exact,
+lossless delivery while leaving routing statistics unchanged---the first
+orthogonal axis: \emph{routing selectivity $\perp$ readout discreteness}.
+(iv) A single head cannot simultaneously deliver two distinct bound operands to downstream algebra ($\text{Binding}\not\Rightarrow
+\text{Composition}$); while a single head can evaluate symmetric pooling functions, two parallel channels plus one minimal two-input
+algebraic node are required to achieve zero composition error conditioned on correct binding,
+with all unconditional error attributable to upstream routing---the second
+orthogonal axis: \emph{binding fidelity $\perp$ combiner error}.
+(v) Auditing address identifiability in multi-candidate retrieval ($N=3$, 60,000 trials, 420,000 model evaluations) proves that scalar dot-product kernels mathematically cannot address intermediate keys ($0/6{,}705$ hits, $0.00\%$), whereas a one-dimensional metric distance kernel achieves $100.00\%$ routing identical to two-dimensional vector rotation under hard selection, proving that metric compatibility rather than multidimensional rotation is the true mathematical boundary of content addressing.
+(vi) A pre-registered confirmatory audit of continuous dynamical carriers and discrete spiking readouts (Phase~P1-B, 96,000 episodes, 192,000 queries) certifies that subthreshold inputs undergo analytical state collisions erasing history, baseline dynamical carriers fail prerequisite delivery floors ($2.75\%$--$2.90\%$ joint accuracy), rendering memory comparisons floor-limited with memory redundancy unestablished, and single-unit spiking readouts exhibit severe transmission breakdown ($E_{\text{comp}} \in [2.21, 2.57]$, $82\%$ abstention), certifying model-specific carrier insufficiency and point-process transmission limits while deferring internal composition dynamics. The result is
+a unified, stepwise mechanistic ladder of relational computation and an
+explicit map of the walls that separate its rungs.
+\end{abstract}
+
+\input{sections/s1_introduction}
+\input{sections/s2_framework}
+\input{sections/s3_state_geometry}
+\input{sections/s4_competition}
+\input{sections/s5_routing_geometry}
+\input{sections/s6_binding}
+\input{sections/s7_wta}
+\input{sections/s8_composition}
+\input{sections/s9_ladder}
+\input{sections/s10_ledger}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

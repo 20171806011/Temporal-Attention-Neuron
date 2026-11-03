@@ -1,0 +1,18 @@
+{
+  "source_delivery": "Supplied source text; not original archive bytes",
+  "transformation": "HTML entity decoding only for executable Python copy; verbatim transmitted Python retained",
+  "transmitted_sha256": "d79ee361cb03c8b882d3c46fb879d86c7b81a56315acaf412d969f6c1b5aa0b2",
+  "executable_sha256": "eb2598bb88677e855ffe216926b2f38ec954e992ef7b2c9101ed69fee41e8009",
+  "frozen_model_sha256": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+  "imported_dependencies": [
+    "stdlib fractions pathlib csv hashlib importlib.util itertools json math platform sys",
+    "installed numpy scipy",
+    "frozen models_p1b_v2.py copied unchanged; imports math numpy dataclasses typing scipy.stats.norm"
+  ],
+  "missing_sources": [
+    "reviewer timescale-retention-protocol.md",
+    "reviewer nonlinear-heldout-protocol.md",
+    "nonlinear-heldout executable source (only protocol supplied)"
+  ],
+  "scope": "timescale executable and two supplied protocols available for audit; other stages remain unseen"
+}

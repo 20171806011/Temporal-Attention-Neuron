@@ -1,0 +1,66 @@
+{
+  "prediction_rows_checked": 14166,
+  "metrics_cells_checked": 46,
+  "input_records_checked": 1554,
+  "original_iid_histories": 512,
+  "adversarial_histories": 18,
+  "noise_arrays_reproduced": true,
+  "max_metric_delta": 0.0,
+  "raw_bounds_checked": 3180,
+  "max_bound_excess": 4.218847493575595e-14,
+  "exact_query_and_precision_records_checked": 2084,
+  "precision_summary": {
+    "iid_clean_float64": {
+      "n": 1536,
+      "max_raw_error": 8.881784197001252e-15,
+      "max_exact_bound": 1.6553088959961234e-14,
+      "max_readout_rounding": 4.851022239248795e-15,
+      "statuses": {
+        "VALID": 1536
+      }
+    },
+    "iid_float32": {
+      "n": 512,
+      "max_raw_error": 3.963985287347427e-06,
+      "max_exact_bound": 0.00029370283342531044,
+      "max_readout_rounding": 1.6924041119636968e-06,
+      "statuses": {
+        "VALID": 512
+      }
+    },
+    "adversarial_clean_float64": {
+      "n": 18,
+      "max_raw_error": 4.440892098500626e-16,
+      "max_exact_bound": 5.151434834258941e-14,
+      "max_readout_rounding": 3.552713678800217e-15,
+      "statuses": {
+        "VALID": 18
+      }
+    },
+    "adversarial_float32": {
+      "n": 18,
+      "max_raw_error": 4.440892098500626e-16,
+      "max_exact_bound": 0.000572204604105675,
+      "max_readout_rounding": 1.144409725384321e-05,
+      "statuses": {
+        "RANGE_EXCEEDED": 16,
+        "VALID": 2
+      }
+    }
+  },
+  "max_independent_state_relative_delta": 6.024936233146774e-13,
+  "max_leak_identity_residual": 4.218847493575595e-14,
+  "modified_native_checks": 34,
+  "max_modified_state_residual": 8.271161533457416e-15,
+  "max_modified_readout_residual": 2.7755575615628914e-16,
+  "query_interface_only_two_state_numbers_and_q": true,
+  "primary_outputs_modified": false,
+  "source_hashes": {
+    "PREREGISTRATION.md": "d1a76b593ef6887a4750847f144a8006cb671e18cbb35a0bada94af0e999b9f6",
+    "run_interpolation.py": "762215bb69b67235c9db2876da2ea818ce19da70e7418d6d8729b23984704d46",
+    "inputs.jsonl": "7b65ce7549e6cd17d375cbf9c786a04eb32d3158bd2a489989567e5b97dc3f0e",
+    "noise.json": "24f98f8696d50d608052bda2f9acd6de6970446a5277145a7ee52d9c0b9c5d85",
+    "predictions.jsonl": "e9f710c08c5a24a25e41391941a8e8909dcd12498a23d760b3b4b07262806701",
+    "results.json": "76da9377a0601ebd5517caa7c27fb4004996d31fed178e8345d587687d7f723b"
+  }
+}

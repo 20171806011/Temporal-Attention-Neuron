@@ -1,0 +1,1243 @@
+{
+  "status": "COMPLETED",
+  "started_utc": "2026-11-02T22:49:11.847368+00:00",
+  "completed_utc": "2026-11-02T22:49:31.170361+00:00",
+  "execution_command": [
+    "tan_audit/gate_mechanism_v11/run_gate_mechanism.py"
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "protocol_sha256": "1d4a98c9c4b26583b3ab7d388659c4144c585756deebb29214137fdab600d362",
+  "primary_script_sha256": "e5435b9f48875dda21d20712d89b2b48fa8620e5b12c4073e592ab5d0544eb87",
+  "audited_v9_helper_sha256": "bd08b8aeef0ebdef4f69bba1e4efb8d9d4cb916800c0660f60c2bfd59c0e017f",
+  "selected_native_models": [
+    "TAN"
+  ],
+  "repository": "Temporal-Attention-Neuron",
+  "repository_provenance": {
+    "available": true,
+    "commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+    "status": ""
+  },
+  "repository_status_unchanged": true,
+  "ledger_fields": [
+    "history_id",
+    "regime",
+    "condition",
+    "S",
+    "arm",
+    "detector_positive",
+    "preonset_alarm",
+    "first_onset_delay_capped",
+    "total_count",
+    "onset_count",
+    "late_count",
+    "R",
+    "sum_abs_input",
+    "sum_input_squared",
+    "sum_noise_squared",
+    "sum_abs_current",
+    "sum_current_squared",
+    "sum_candidate_squared",
+    "peak_abs_current",
+    "peak_candidate",
+    "peak_abs_candidate",
+    "peak_membrane",
+    "peak_abs_membrane",
+    "aux_state_peak_abs"
+  ],
+  "paired_ledger_fields": [
+    "history_id",
+    "regime",
+    "arm",
+    "D_step",
+    "D_catch",
+    "BA_contribution",
+    "preonset_alarm",
+    "step_capped_latency",
+    "step_hit",
+    "conditional_hit_latency"
+  ],
+  "metric_names": [
+    "iid__TAN__TPR",
+    "iid__TAN__FPR",
+    "iid__TAN__specificity",
+    "iid__TAN__BA",
+    "iid__TAN__preonset_alarm",
+    "iid__TAN__capped_latency",
+    "iid__TAN__delay_p0",
+    "iid__TAN__delay_p1",
+    "iid__TAN__delay_p2",
+    "iid__TAN__delay_p3",
+    "iid__TAN__delay_p4",
+    "iid__TAN__delay_p5",
+    "iid__TAN__hit_by_0",
+    "iid__TAN__hit_by_1",
+    "iid__TAN__hit_by_2",
+    "iid__TAN__hit_by_3",
+    "iid__TAN__hit_by_4",
+    "iid__TAN__step__total_count",
+    "iid__TAN__step__onset_count",
+    "iid__TAN__step__late_count",
+    "iid__TAN__step__R",
+    "iid__TAN__step__noisy_minus_clean_R",
+    "iid__TAN__step__sum_abs_current",
+    "iid__TAN__step__sum_current_squared",
+    "iid__TAN__step__sum_candidate_squared",
+    "iid__TAN__step__peak_abs_current",
+    "iid__TAN__step__peak_candidate",
+    "iid__TAN__step__peak_abs_candidate",
+    "iid__TAN__step__peak_membrane",
+    "iid__TAN__step__peak_abs_membrane",
+    "iid__TAN__step__aux_state_peak_abs",
+    "iid__TAN__catch__total_count",
+    "iid__TAN__catch__onset_count",
+    "iid__TAN__catch__late_count",
+    "iid__TAN__catch__R",
+    "iid__TAN__catch__noisy_minus_clean_R",
+    "iid__TAN__catch__sum_abs_current",
+    "iid__TAN__catch__sum_current_squared",
+    "iid__TAN__catch__sum_candidate_squared",
+    "iid__TAN__catch__peak_abs_current",
+    "iid__TAN__catch__peak_candidate",
+    "iid__TAN__catch__peak_abs_candidate",
+    "iid__TAN__catch__peak_membrane",
+    "iid__TAN__catch__peak_abs_membrane",
+    "iid__TAN__catch__aux_state_peak_abs",
+    "iid__ADAPT__TPR",
+    "iid__ADAPT__FPR",
+    "iid__ADAPT__specificity",
+    "iid__ADAPT__BA",
+    "iid__ADAPT__preonset_alarm",
+    "iid__ADAPT__capped_latency",
+    "iid__ADAPT__delay_p0",
+    "iid__ADAPT__delay_p1",
+    "iid__ADAPT__delay_p2",
+    "iid__ADAPT__delay_p3",
+    "iid__ADAPT__delay_p4",
+    "iid__ADAPT__delay_p5",
+    "iid__ADAPT__hit_by_0",
+    "iid__ADAPT__hit_by_1",
+    "iid__ADAPT__hit_by_2",
+    "iid__ADAPT__hit_by_3",
+    "iid__ADAPT__hit_by_4",
+    "iid__ADAPT__step__total_count",
+    "iid__ADAPT__step__onset_count",
+    "iid__ADAPT__step__late_count",
+    "iid__ADAPT__step__R",
+    "iid__ADAPT__step__noisy_minus_clean_R",
+    "iid__ADAPT__step__sum_abs_current",
+    "iid__ADAPT__step__sum_current_squared",
+    "iid__ADAPT__step__sum_candidate_squared",
+    "iid__ADAPT__step__peak_abs_current",
+    "iid__ADAPT__step__peak_candidate",
+    "iid__ADAPT__step__peak_abs_candidate",
+    "iid__ADAPT__step__peak_membrane",
+    "iid__ADAPT__step__peak_abs_membrane",
+    "iid__ADAPT__step__aux_state_peak_abs",
+    "iid__ADAPT__catch__total_count",
+    "iid__ADAPT__catch__onset_count",
+    "iid__ADAPT__catch__late_count",
+    "iid__ADAPT__catch__R",
+    "iid__ADAPT__catch__noisy_minus_clean_R",
+    "iid__ADAPT__catch__sum_abs_current",
+    "iid__ADAPT__catch__sum_current_squared",
+    "iid__ADAPT__catch__sum_candidate_squared",
+    "iid__ADAPT__catch__peak_abs_current",
+    "iid__ADAPT__catch__peak_candidate",
+    "iid__ADAPT__catch__peak_abs_candidate",
+    "iid__ADAPT__catch__peak_membrane",
+    "iid__ADAPT__catch__peak_abs_membrane",
+    "iid__ADAPT__catch__aux_state_peak_abs",
+    "input__iid__step__sum_abs_input",
+    "input__iid__step__sum_input_squared",
+    "input__iid__catch__sum_abs_input",
+    "input__iid__catch__sum_input_squared",
+    "input__iid__sum_noise_squared",
+    "ar09__TAN__TPR",
+    "ar09__TAN__FPR",
+    "ar09__TAN__specificity",
+    "ar09__TAN__BA",
+    "ar09__TAN__preonset_alarm",
+    "ar09__TAN__capped_latency",
+    "ar09__TAN__delay_p0",
+    "ar09__TAN__delay_p1",
+    "ar09__TAN__delay_p2",
+    "ar09__TAN__delay_p3",
+    "ar09__TAN__delay_p4",
+    "ar09__TAN__delay_p5",
+    "ar09__TAN__hit_by_0",
+    "ar09__TAN__hit_by_1",
+    "ar09__TAN__hit_by_2",
+    "ar09__TAN__hit_by_3",
+    "ar09__TAN__hit_by_4",
+    "ar09__TAN__step__total_count",
+    "ar09__TAN__step__onset_count",
+    "ar09__TAN__step__late_count",
+    "ar09__TAN__step__R",
+    "ar09__TAN__step__noisy_minus_clean_R",
+    "ar09__TAN__step__sum_abs_current",
+    "ar09__TAN__step__sum_current_squared",
+    "ar09__TAN__step__sum_candidate_squared",
+    "ar09__TAN__step__peak_abs_current",
+    "ar09__TAN__step__peak_candidate",
+    "ar09__TAN__step__peak_abs_candidate",
+    "ar09__TAN__step__peak_membrane",
+    "ar09__TAN__step__peak_abs_membrane",
+    "ar09__TAN__step__aux_state_peak_abs",
+    "ar09__TAN__catch__total_count",
+    "ar09__TAN__catch__onset_count",
+    "ar09__TAN__catch__late_count",
+    "ar09__TAN__catch__R",
+    "ar09__TAN__catch__noisy_minus_clean_R",
+    "ar09__TAN__catch__sum_abs_current",
+    "ar09__TAN__catch__sum_current_squared",
+    "ar09__TAN__catch__sum_candidate_squared",
+    "ar09__TAN__catch__peak_abs_current",
+    "ar09__TAN__catch__peak_candidate",
+    "ar09__TAN__catch__peak_abs_candidate",
+    "ar09__TAN__catch__peak_membrane",
+    "ar09__TAN__catch__peak_abs_membrane",
+    "ar09__TAN__catch__aux_state_peak_abs",
+    "ar09__ADAPT__TPR",
+    "ar09__ADAPT__FPR",
+    "ar09__ADAPT__specificity",
+    "ar09__ADAPT__BA",
+    "ar09__ADAPT__preonset_alarm",
+    "ar09__ADAPT__capped_latency",
+    "ar09__ADAPT__delay_p0",
+    "ar09__ADAPT__delay_p1",
+    "ar09__ADAPT__delay_p2",
+    "ar09__ADAPT__delay_p3",
+    "ar09__ADAPT__delay_p4",
+    "ar09__ADAPT__delay_p5",
+    "ar09__ADAPT__hit_by_0",
+    "ar09__ADAPT__hit_by_1",
+    "ar09__ADAPT__hit_by_2",
+    "ar09__ADAPT__hit_by_3",
+    "ar09__ADAPT__hit_by_4",
+    "ar09__ADAPT__step__total_count",
+    "ar09__ADAPT__step__onset_count",
+    "ar09__ADAPT__step__late_count",
+    "ar09__ADAPT__step__R",
+    "ar09__ADAPT__step__noisy_minus_clean_R",
+    "ar09__ADAPT__step__sum_abs_current",
+    "ar09__ADAPT__step__sum_current_squared",
+    "ar09__ADAPT__step__sum_candidate_squared",
+    "ar09__ADAPT__step__peak_abs_current",
+    "ar09__ADAPT__step__peak_candidate",
+    "ar09__ADAPT__step__peak_abs_candidate",
+    "ar09__ADAPT__step__peak_membrane",
+    "ar09__ADAPT__step__peak_abs_membrane",
+    "ar09__ADAPT__step__aux_state_peak_abs",
+    "ar09__ADAPT__catch__total_count",
+    "ar09__ADAPT__catch__onset_count",
+    "ar09__ADAPT__catch__late_count",
+    "ar09__ADAPT__catch__R",
+    "ar09__ADAPT__catch__noisy_minus_clean_R",
+    "ar09__ADAPT__catch__sum_abs_current",
+    "ar09__ADAPT__catch__sum_current_squared",
+    "ar09__ADAPT__catch__sum_candidate_squared",
+    "ar09__ADAPT__catch__peak_abs_current",
+    "ar09__ADAPT__catch__peak_candidate",
+    "ar09__ADAPT__catch__peak_abs_candidate",
+    "ar09__ADAPT__catch__peak_membrane",
+    "ar09__ADAPT__catch__peak_abs_membrane",
+    "ar09__ADAPT__catch__aux_state_peak_abs",
+    "input__ar09__step__sum_abs_input",
+    "input__ar09__step__sum_input_squared",
+    "input__ar09__catch__sum_abs_input",
+    "input__ar09__catch__sum_input_squared",
+    "input__ar09__sum_noise_squared",
+    "contrast__Delta_AR",
+    "contrast__Interaction",
+    "contrast__Delta_iid",
+    "contrast__iid__TPR_gap",
+    "contrast__iid__FPR_gap",
+    "contrast__iid__capped_latency_gap",
+    "contrast__iid__preonset_alarm_gap",
+    "contrast__iid__step_R_gap",
+    "contrast__iid__balanced_current_L1_gap",
+    "contrast__ar09__TPR_gap",
+    "contrast__ar09__FPR_gap",
+    "contrast__ar09__capped_latency_gap",
+    "contrast__ar09__preonset_alarm_gap",
+    "contrast__ar09__step_R_gap",
+    "contrast__ar09__balanced_current_L1_gap",
+    "contrast__input_AR_minus_iid_noise_squared",
+    "contrast__input_AR_minus_iid_step_squared",
+    "contrast__input_AR_minus_iid_catch_squared",
+    "iid__TAN__conditional_hit_latency",
+    "iid__ADAPT__conditional_hit_latency",
+    "ar09__TAN__conditional_hit_latency",
+    "ar09__ADAPT__conditional_hit_latency"
+  ],
+  "primary_contrasts": [
+    "Delta_AR",
+    "Interaction"
+  ],
+  "trajectory_axes": "history, regime, class, time[, history_slot]",
+  "condition_order": [
+    "step",
+    "catch"
+  ],
+  "S": [
+    1,
+    0
+  ],
+  "regime_order": [
+    "iid",
+    "ar09"
+  ],
+  "float_tolerance": 1e-12,
+  "files": {
+    "SOURCE_GUARD.json": {
+      "sha256": "891b39a3fe69f6e379902901b8cd1540e5e0d15170614dd71a781c3c1dc8c0ac",
+      "bytes": 5728
+    },
+    "CALIBRATION_FROZEN.json": {
+      "sha256": "0d8868ceb36e54d4946ac08cf146a79f6327a5131c370563241d71abe7200e27",
+      "bytes": 1031
+    },
+    "clean_checks.json": {
+      "sha256": "f728cf6add72da27ff0af66165a600605abd06791ce845f5ad5cb1aea85997d2",
+      "bytes": 734
+    },
+    "history_metric_samples.npz": {
+      "sha256": "5ab29c8654341b5647a8d3b5aa63ce977a08cdccaeec585899d8bc3f535b9a72",
+      "bytes": 618735
+    },
+    "bootstrap_draws.npy": {
+      "sha256": "c272f3667b2ca3b45b9f42fc447e1eb36d422827ecea329ec27b8941bee0ae1d",
+      "bytes": 16384128
+    },
+    "bootstrap_metrics.npz": {
+      "sha256": "9968e415b32238e2142e3c9ff7f2ef9e6a692a599b6fb6e81945791230f7cfb9",
+      "bytes": 1752049
+    },
+    "bootstrap_metrics.csv": {
+      "sha256": "269c9e67cc9ffaac181f27272611ea1acdba1d87258e1be9f65443fb6a6e72d8",
+      "bytes": 6434610
+    },
+    "bootstrap_primary_contrasts.csv": {
+      "sha256": "b1db9dc53823481bad5f5db42725eee4676c4b24c4abb259a951e9928d672261",
+      "bytes": 67206
+    },
+    "metric_summary.json": {
+      "sha256": "54a99a44d050dee4c7946f70ba5884a6158f067be23a8e7e1381a3ede8ee4cd3",
+      "bytes": 55711
+    },
+    "primary_results.json": {
+      "sha256": "6a4f1b568933d2f6a824320abd1cd2770602f159d6ff246382d0bb06271e635a",
+      "bytes": 4910
+    },
+    "repo_status_before.json": {
+      "sha256": "fbe1ce9edb205853e8d0e35eded61c8b0d6c413b10f48b58526f7463604b0e93",
+      "bytes": 96
+    },
+    "repo_status_after.json": {
+      "sha256": "fbe1ce9edb205853e8d0e35eded61c8b0d6c413b10f48b58526f7463604b0e93",
+      "bytes": 96
+    },
+    "run.log": {
+      "sha256": "29416fc61da9f005436a18472f30e6653dfe52eec95dbb4061fb10e18475a30e",
+      "bytes": 2550
+    },
+    "train_inputs.npz": {
+      "sha256": "d3a7a3f821e7687f876df0c0857bb383eccf206fb7836767296d34bf19e7131f",
+      "bytes": 545349
+    },
+    "TRAIN_INPUTS_FROZEN.json": {
+      "sha256": "7ef7baee4a3b12109cdb62a94812a5a2b69c11f57597f30802c9563f8087f88d",
+      "bytes": 1585
+    },
+    "train_trajectories.npz": {
+      "sha256": "382f6ae022a5fd9d20e1eec2959acf7d32cb1aa77b09baf41c40346808cd31a6",
+      "bytes": 9224173
+    },
+    "train_ledger.csv": {
+      "sha256": "a76fc93fe396aea42793687f17925e63d061db1a44da9a2e8a0d7ec2101cd0a1",
+      "bytes": 538311
+    },
+    "train_paired_history_metrics.csv": {
+      "sha256": "97f66388522306c37c8abdfd8e49059b9700ce95b92a62c7bfa99391ff0f16b9",
+      "bytes": 30622
+    },
+    "test_inputs.npz": {
+      "sha256": "0a8824c5eb2f232722349e021c86aa239e0312b03caced61b3bd84450887d65f",
+      "bytes": 2621685
+    },
+    "TEST_INPUTS_FROZEN.json": {
+      "sha256": "f188cc51f71c83d5cab9a0887aca7ec1ee1730a4160178d7529a0b925d676ad6",
+      "bytes": 1876
+    },
+    "test_trajectories.npz": {
+      "sha256": "52bb67ea163ccfba7c3802e11f20493c8a02cc2c1ae3798be56e53ddd4c26561",
+      "bytes": 35476512
+    },
+    "test_ledger.csv": {
+      "sha256": "422e14f2b1ca6162dc8feed1c7c4865dee1877cdede504a91a1b57f6f8530979",
+      "bytes": 2160273
+    },
+    "test_paired_history_metrics.csv": {
+      "sha256": "e3fc99f89e7c1f54e0d3b0c5853914bdbde3c24df66be2a4ef472a528d1714b9",
+      "bytes": 124637
+    },
+    "clean_inputs.npz": {
+      "sha256": "ddfc0bf0f7059d5d37e55c4de4ce969a2b6995bf6e4fbf38f2183d3b06f89b81",
+      "bytes": 1410
+    },
+    "CLEAN_INPUTS_FROZEN.json": {
+      "sha256": "531a3415a2bd27390d32bd94a64102e56aef5cf299508976d53775a88372e880",
+      "bytes": 1557
+    },
+    "clean_trajectories.npz": {
+      "sha256": "3a4fe96e7657558b589ccb116202cd274aefa3cc907aad240986758b0227bc99",
+      "bytes": 9217
+    },
+    "clean_ledger.csv": {
+      "sha256": "e3b28cff743fed2a7d682e22d2490fea44f838f651bde6646e7077d0224e96a0",
+      "bytes": 945
+    },
+    "clean_paired_history_metrics.csv": {
+      "sha256": "8331e1e296a13c08e3c51b45664d3e0951884551cbf299437527d50491e006dc",
+      "bytes": 182
+    }
+  },
+  "npz_schema": {
+    "history_metric_samples.npz": {
+      "metric_names": {
+        "shape": [
+          208
+        ],
+        "dtype": "<U42"
+      },
+      "values": {
+        "shape": [
+          1024,
+          208
+        ],
+        "dtype": "float64"
+      },
+      "conditional_names": {
+        "shape": [
+          4
+        ],
+        "dtype": "<U36"
+      },
+      "conditional_numerators": {
+        "shape": [
+          1024,
+          4
+        ],
+        "dtype": "float64"
+      },
+      "conditional_denominators": {
+        "shape": [
+          1024,
+          4
+        ],
+        "dtype": "float64"
+      }
+    },
+    "bootstrap_metrics.npz": {
+      "metric_names": {
+        "shape": [
+          212
+        ],
+        "dtype": "<U42"
+      },
+      "values": {
+        "shape": [
+          2000,
+          212
+        ],
+        "dtype": "float64"
+      }
+    },
+    "train_inputs.npz": {
+      "noise": {
+        "shape": [
+          512,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          512
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U3"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      }
+    },
+    "train_trajectories.npz": {
+      "history_ids": {
+        "shape": [
+          512
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U3"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      },
+      "TAN__current": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          512,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          512,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          512,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__reference": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_signed_contrast": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_magnitude": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__current": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__candidate": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__membrane": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__spikes": {
+        "shape": [
+          512,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      }
+    },
+    "test_inputs.npz": {
+      "noise": {
+        "shape": [
+          1024,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U4"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      },
+      "Z": {
+        "shape": [
+          1024,
+          60
+        ],
+        "dtype": "float64"
+      }
+    },
+    "test_trajectories.npz": {
+      "history_ids": {
+        "shape": [
+          1024
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U4"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      },
+      "TAN__current": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__reference": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_signed_contrast": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_magnitude": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__current": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__candidate": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__membrane": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__spikes": {
+        "shape": [
+          1024,
+          2,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      }
+    },
+    "clean_inputs.npz": {
+      "noise": {
+        "shape": [
+          1,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U5"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      }
+    },
+    "clean_trajectories.npz": {
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "regimes": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U5"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      },
+      "TAN__current": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          1,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          1,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          1,
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__reference": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_signed_contrast": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__unscaled_magnitude": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__current": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__candidate": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__membrane": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "ADAPT__spikes": {
+        "shape": [
+          1,
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      }
+    }
+  }
+}

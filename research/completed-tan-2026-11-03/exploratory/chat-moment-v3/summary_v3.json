@@ -1,0 +1,610 @@
+{
+  "certificate_workspace": {
+    "caution": "Maximum seen operand size, not total peak heap or a fixed-bit physical implementation.",
+    "max_instrumented_denominator_bits": 326,
+    "max_instrumented_numerator_bits": 315,
+    "rational_interval_samples_instrumented": 368613
+  },
+  "conditions": [
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 7.212149771188065e-08,
+        "exact": "153364999923970880540044033129/2126481074154217072607517153876246528"
+      },
+      "max_other_retention_error": {
+        "decimal": 9.247833249238679e-08,
+        "exact": "468827051911432692955661/5069588078375315766660757996040"
+      },
+      "method": "certified_moments",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "certified_explicit_table",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "exact_rational_moments_same_noisy_observation",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 4,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 25,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 8.864910013865092e-06,
+        "exact": "6371692863/718754375739224"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.1282913434162225e-05,
+        "exact": "62798807471247697294142046479701/5565832604999562465984307347744358400"
+      },
+      "method": "certified_moments",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.5,
+            "exact": "-1/2"
+          },
+          "label": "B",
+          "missing": false,
+          "requested": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          }
+        },
+        {
+          "committed": null,
+          "label": "C",
+          "missing": true,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        }
+      ],
+      "read_attempts": 25,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 8,
+      "rejected_events": [
+        {
+          "event": 4,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 6,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 7,
+          "reason": "candidate_spectrum_uncertified"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_spectrum_uncertified"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_answered_reads": 25,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.3333333333333333
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "certified_explicit_table",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "exact_rational_moments_same_noisy_observation",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 6,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "method": "certified_moments",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.25,
+            "exact": "-1/4"
+          },
+          "label": "C",
+          "missing": false,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 6,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.5
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "certified_explicit_table",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_budget_and_read_checks_passed": true,
+      "all_refusal_snapshots_identical": true,
+      "answered_reads": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "exact_rational_moments_same_noisy_observation",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "read_attempts": 29,
+      "read_coverage_committed_keys": 1.0,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_answered_reads": 29,
+      "requested_read_attempts": 34,
+      "write_coverage": 0.75
+    }
+  ],
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "scope": "Conceptual scalar-key memory; not original TAN, P1-B, or v11 reproduction. No Codex.",
+  "spec_sha256": "12969e0af938064554551688f1e2743ef4fc0d91cf92306438b6fa940a574a3a"
+}

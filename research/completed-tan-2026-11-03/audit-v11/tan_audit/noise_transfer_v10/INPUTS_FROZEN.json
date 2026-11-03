@@ -1,0 +1,104 @@
+{
+  "time_utc": "2026-11-02T22:20:57.340747+00:00",
+  "native_models_evaluated_yet": false,
+  "noise_seed": 2026110240,
+  "n_histories": 2048,
+  "fresh_inputs_sha256": "9ea84952c119b8083e93d0ca7265e3cbc9d0927cb022a11cb9ade0b2c7bbfc15",
+  "clean_inputs_sha256": "2aa909cfeb5875d5d23320ac615dea76348f652f47020c107d3e9af9336a0805",
+  "fresh_array_manifest": {
+    "noise": {
+      "shape": [
+        2048,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "13b9dfbc2cd7f14c5c287639ad19979aa58507d38323b01cfc1e4825f84ff4a3"
+    },
+    "base": {
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "waveforms": {
+      "shape": [
+        2048,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "2bc752ac058c1b2d05f8b9e478d249e6d47ee35dbe0797a5b67472642f23a324"
+    },
+    "history_ids": {
+      "shape": [
+        2048
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "5ccf19f4f2c0424bb9636387a42e899d136172cb5e410c08d271cedf5925f25d"
+    },
+    "conditions": {
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "97a5570dba6f367200a7456895c316d4a333e9bc8de5790b533cb51efbac6db0"
+    },
+    "S": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "4cbbd8ca5215b8d161aec181a74b694f4e24b001d5b081dc0030ed797a8973e0"
+    }
+  },
+  "clean_array_manifest": {
+    "noise": {
+      "shape": [
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+    },
+    "base": {
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "waveforms": {
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "history_ids": {
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    "conditions": {
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "97a5570dba6f367200a7456895c316d4a333e9bc8de5790b533cb51efbac6db0"
+    },
+    "S": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "4cbbd8ca5215b8d161aec181a74b694f4e24b001d5b081dc0030ed797a8973e0"
+    }
+  }
+}

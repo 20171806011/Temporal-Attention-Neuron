@@ -1,0 +1,1140 @@
+{
+  "status": "COMPLETED",
+  "started_utc": "2026-11-02T22:20:57.190659+00:00",
+  "completed_utc": "2026-11-02T22:21:11.980002+00:00",
+  "execution_command": [
+    "tan_audit/noise_transfer_v10/run_noise_transfer.py"
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "protocol_sha256": "14ef73c1418b4dcea2a5a55de20391e3a8c82925bef70741ee3033ebcbfca179",
+  "primary_script_sha256": "039442feb8590ffc2e9684cbe319687060fea6ff0468b0ab0430f0cbaf964e9c",
+  "audited_v9_helper_sha256": "bd08b8aeef0ebdef4f69bba1e4efb8d9d4cb916800c0660f60c2bfd59c0e017f",
+  "repository": "Temporal-Attention-Neuron",
+  "repository_provenance": {
+    "available": true,
+    "commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+    "status": ""
+  },
+  "repository_status_unchanged": true,
+  "conditions": [
+    "step",
+    "catch"
+  ],
+  "S": [
+    1,
+    0
+  ],
+  "arms": [
+    "TAN",
+    "LIF",
+    "LIF_THINNED",
+    "ZERO_OUTPUT"
+  ],
+  "metric_order": [
+    "C_H",
+    "C_H_given_S",
+    "C_I_signal",
+    "C_U_deletion",
+    "C_I_path",
+    "D_H",
+    "D_H_given_S",
+    "D_I_signal",
+    "D_U_deletion",
+    "D_I_path",
+    "Delta_signal",
+    "Delta_path",
+    "Delta_deletion"
+  ],
+  "ledger_fields": [
+    "history_id",
+    "condition",
+    "S",
+    "arm",
+    "underlying_model",
+    "underlying_onset_count",
+    "count_type",
+    "P_C0",
+    "P_C1",
+    "P_C2",
+    "P_C3",
+    "P_C4",
+    "P_C5",
+    "P_D1",
+    "observed_total_count",
+    "observed_onset_count",
+    "observed_late_count",
+    "R",
+    "generated_total_count",
+    "generated_onset_count",
+    "generated_late_count",
+    "sum_abs_current",
+    "sum_current_squared",
+    "sum_candidate_squared",
+    "peak_abs_current",
+    "peak_candidate",
+    "peak_abs_candidate",
+    "peak_membrane",
+    "peak_abs_membrane"
+  ],
+  "trajectory_axes": "history, condition, time[, history_slot]",
+  "law_axes": "history, condition, alphabet_value",
+  "underlying_count_zero_output_sentinel": -1,
+  "float_tolerance": 1e-12,
+  "files": {
+    "SOURCE_GUARD.json": {
+      "sha256": "b5d8d7c3b30b3b74794db2385fa0973f0d32f37974cd8e8f35933266dc3e530d",
+      "bytes": 5625
+    },
+    "fresh_inputs.npz": {
+      "sha256": "9ea84952c119b8083e93d0ca7265e3cbc9d0927cb022a11cb9ade0b2c7bbfc15",
+      "bytes": 2177130
+    },
+    "clean_inputs.npz": {
+      "sha256": "2aa909cfeb5875d5d23320ac615dea76348f652f47020c107d3e9af9336a0805",
+      "bytes": 1206
+    },
+    "INPUTS_FROZEN.json": {
+      "sha256": "d02c9879f00ee9842b610cbf9a37af0d5a264fc8d7ba78f3ea6d35f476f589f0",
+      "bytes": 2649
+    },
+    "thinning_kernel.npz": {
+      "sha256": "71c0b63035cd70887b827dd421830d2ffe922caaf550f80635d63e59a0efe537",
+      "bytes": 1172
+    },
+    "clean_trajectories.npz": {
+      "sha256": "6c12bddc3918e297d909f74eeebf6da97ea0e610ae0364153cf1b94aff9cf5cf",
+      "bytes": 6371
+    },
+    "clean_laws.npz": {
+      "sha256": "f44045c7c915dff0ebbb6bd21c76b6f2bf5ac7e4908642a074713a3cf883b20c",
+      "bytes": 2770
+    },
+    "clean_ledger.csv": {
+      "sha256": "be20215070770644f7d4f808289d81abbf7dbcf9c0e4cfd9b0a3cb1e60471501",
+      "bytes": 1507
+    },
+    "clean_pmfs.npz": {
+      "sha256": "1c0a8266c1cfeb3815d3a999a0b4ba17cface5a284f5c26574bcaf52664c198a",
+      "bytes": 3654
+    },
+    "clean_results.json": {
+      "sha256": "3f98f3f2c0b9ed58ae8882ee7ef83da6754ca107896c5c8d3746f01bb15c648c",
+      "bytes": 3124
+    },
+    "fresh_trajectories.npz": {
+      "sha256": "eb02e3de30d3c7f8b6c888b0b8a1a2b9a3375234d922ff9f2a184ba1fef8caa8",
+      "bytes": 32806326
+    },
+    "fresh_laws.npz": {
+      "sha256": "85060747094650db26559044e42406c14c595e6e91a2cb80a0e266a44a5b041c",
+      "bytes": 15743
+    },
+    "fresh_ledger.csv": {
+      "sha256": "95aef37582d861b23ad33c7c1386341aa3ee134c77ff6d3b7d15607f09e4a709",
+      "bytes": 3550499
+    },
+    "point_pmfs.npz": {
+      "sha256": "7ea0b8dbf3ece359881f54df72ae311fe02bece73d3df2df3762981a72a46bdf",
+      "bytes": 3794
+    },
+    "point_information.csv": {
+      "sha256": "5add797d2c1505b602690fec159bb8651e612ced499ab46a209d55008bd49534",
+      "bytes": 896
+    },
+    "population_certificate.json": {
+      "sha256": "7f9489835f3b1ae5907b4dc456cba8847e0eb4db27f5c67b28b5a252b66b3911",
+      "bytes": 2352
+    },
+    "bootstrap_draws.npy": {
+      "sha256": "3c1a09a6c133a32001664ba69c6ac280c146ec1df0133bbe11de69978db34e0d",
+      "bytes": 32768128
+    },
+    "bootstrap_metrics.npz": {
+      "sha256": "41817a11ce8d6478ee89e73b99cdc1a57805643f7c04791fbe99fa99821748ec",
+      "bytes": 327048
+    },
+    "bootstrap_pmfs.npz": {
+      "sha256": "a33c74530c716280146b09320ba696d5dea80530ea6917581b48322990b1d615",
+      "bytes": 137573
+    },
+    "bootstrap_metrics.csv": {
+      "sha256": "ecf23fa4e3a46c268cdc0af6ea55329f32e91510fdaa8500e198043571341506",
+      "bytes": 1483935
+    },
+    "bootstrap_summary.json": {
+      "sha256": "f9d330daa73e3ca3ac0bef54f7bdbbe458df9d399d9a149914d25b4679940e0d",
+      "bytes": 12002
+    },
+    "primary_results.json": {
+      "sha256": "07a4ee2239307f8d6e5558e86ec70935a4ae04d5baac119042d7251b429f84d7",
+      "bytes": 29101
+    },
+    "repo_status_before.json": {
+      "sha256": "fbe1ce9edb205853e8d0e35eded61c8b0d6c413b10f48b58526f7463604b0e93",
+      "bytes": 96
+    },
+    "repo_status_after.json": {
+      "sha256": "fbe1ce9edb205853e8d0e35eded61c8b0d6c413b10f48b58526f7463604b0e93",
+      "bytes": 96
+    },
+    "run.log": {
+      "sha256": "b768568a71d3e16a5f8c41e36f3c6098019a3adf408d18c11ed0a4b8a5ea7120",
+      "bytes": 3543
+    }
+  },
+  "npz_schema": {
+    "fresh_inputs.npz": {
+      "noise": {
+        "shape": [
+          2048,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          2048
+        ],
+        "dtype": "int64"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      }
+    },
+    "clean_inputs.npz": {
+      "noise": {
+        "shape": [
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "S": {
+        "shape": [
+          2
+        ],
+        "dtype": "int64"
+      }
+    },
+    "thinning_kernel.npz": {
+      "count_kernel": {
+        "shape": [
+          6,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "decision_success": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "count_kernel_entropy": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "decision_kernel_entropy": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      }
+    },
+    "clean_trajectories.npz": {
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "LIF__current": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__candidate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__exact_class_membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF__exact_class_spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__current": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      }
+    },
+    "clean_laws.npz": {
+      "TAN__underlying_count": {
+        "shape": [
+          1,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "TAN__count_pmf": {
+        "shape": [
+          1,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__decision_pmf": {
+        "shape": [
+          1,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__underlying_count": {
+        "shape": [
+          1,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "LIF__count_pmf": {
+        "shape": [
+          1,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__decision_pmf": {
+        "shape": [
+          1,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__underlying_count": {
+        "shape": [
+          1,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "LIF_THINNED__count_pmf": {
+        "shape": [
+          1,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__decision_pmf": {
+        "shape": [
+          1,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__underlying_count": {
+        "shape": [
+          1,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "ZERO_OUTPUT__count_pmf": {
+        "shape": [
+          1,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__decision_pmf": {
+        "shape": [
+          1,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      }
+    },
+    "clean_pmfs.npz": {
+      "TAN__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "TAN__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      }
+    },
+    "fresh_trajectories.npz": {
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "history_ids": {
+        "shape": [
+          2048
+        ],
+        "dtype": "int64"
+      },
+      "LIF__current": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__candidate": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__membrane": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__exact_class_membrane": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__spikes": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF__exact_class_spikes": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__current": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          2048,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          2048,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          2048,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          2048,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      }
+    },
+    "fresh_laws.npz": {
+      "TAN__underlying_count": {
+        "shape": [
+          2048,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "TAN__count_pmf": {
+        "shape": [
+          2048,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__decision_pmf": {
+        "shape": [
+          2048,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__underlying_count": {
+        "shape": [
+          2048,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "LIF__count_pmf": {
+        "shape": [
+          2048,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__decision_pmf": {
+        "shape": [
+          2048,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__underlying_count": {
+        "shape": [
+          2048,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "LIF_THINNED__count_pmf": {
+        "shape": [
+          2048,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__decision_pmf": {
+        "shape": [
+          2048,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__underlying_count": {
+        "shape": [
+          2048,
+          2
+        ],
+        "dtype": "int64"
+      },
+      "ZERO_OUTPUT__count_pmf": {
+        "shape": [
+          2048,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__decision_pmf": {
+        "shape": [
+          2048,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      }
+    },
+    "point_pmfs.npz": {
+      "TAN__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "TAN__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__C_conditional": {
+        "shape": [
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__C_marginal": {
+        "shape": [
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__D_conditional": {
+        "shape": [
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__D_marginal": {
+        "shape": [
+          2
+        ],
+        "dtype": "float64"
+      }
+    },
+    "bootstrap_metrics.npz": {
+      "metric_names": {
+        "shape": [
+          13
+        ],
+        "dtype": "<U14"
+      },
+      "TAN": {
+        "shape": [
+          2000,
+          13
+        ],
+        "dtype": "float64"
+      },
+      "LIF": {
+        "shape": [
+          2000,
+          13
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED": {
+        "shape": [
+          2000,
+          13
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT": {
+        "shape": [
+          2000,
+          13
+        ],
+        "dtype": "float64"
+      }
+    },
+    "bootstrap_pmfs.npz": {
+      "TAN__C_conditional": {
+        "shape": [
+          2000,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "TAN__D_conditional": {
+        "shape": [
+          2000,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF__C_conditional": {
+        "shape": [
+          2000,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF__D_conditional": {
+        "shape": [
+          2000,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__C_conditional": {
+        "shape": [
+          2000,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__D_conditional": {
+        "shape": [
+          2000,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__C_conditional": {
+        "shape": [
+          2000,
+          2,
+          6
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__D_conditional": {
+        "shape": [
+          2000,
+          2,
+          2
+        ],
+        "dtype": "float64"
+      }
+    }
+  }
+}

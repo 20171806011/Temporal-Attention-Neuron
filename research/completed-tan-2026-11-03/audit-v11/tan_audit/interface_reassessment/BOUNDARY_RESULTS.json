@@ -1,0 +1,459 @@
+{
+  "status": "PASS",
+  "analysis_plan_sha256": "8e0f71c73850097c6373ff3c1d312e5a2b74e4448f669cd0f0b185ca24213c68",
+  "amendment_sha256": "39334648f9260fd86796c05d8e6ba10e44a589ae7a43e545fe02e6e5178e3d80",
+  "script_sha256": "ac81d140e6dbc89b9f9d76f4dc6ede5332bf707ddf42bbe8fe77adcca288d3aa",
+  "source_sha256": {
+    "p1_experiments/p1b/models_p1b_v2.py": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+    "p1_experiments/p1b/runner_p1b.py": "47609f1e70ab8de2966ee8305757f44658ef799918d5f92108ac4efe64304c26",
+    "p1_experiments/task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+    "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md": "07d58a2de773ea13e8fd5c16901cb8e8a370219d4793f4a7f9baca23c747a82b",
+    "p1_experiments/p1b/summary_p1b.json": "c5a7d84c0d705453237d563b0f8fe54812c41505b7cce0543c019a08868abbe8"
+  },
+  "calibration": {
+    "A_0": 0.06188672587424413,
+    "g_dec": 0.1326308169898006,
+    "b_dec": -0.02681648355488859
+  },
+  "histories": 6,
+  "pairs": 3,
+  "physical_carriers": [
+    "M1",
+    "M2a",
+    "M2b",
+    "M2c",
+    "M2d"
+  ],
+  "runner_models": [
+    "M0",
+    "M1",
+    "M2a",
+    "M2b",
+    "M2c",
+    "M2d",
+    "M4_Count",
+    "M4_Latency"
+  ],
+  "delays": [
+    0,
+    5,
+    10
+  ],
+  "runner_episodes": 144,
+  "role_outputs": 288,
+  "physical_recorded_euler_calls": 52500,
+  "runner_recheck_euler_calls": 157500,
+  "total_actual_euler_calls": 210000,
+  "npz_arrays": 306,
+  "exact_pair_proofs": [
+    {
+      "pair": [
+        "low_A",
+        "low_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": true,
+      "same_query_paths": true,
+      "target_linf_gap": "9/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": "9/10",
+      "classification": "FULL_REGISTERED_DRIVE_COLLISION"
+    },
+    {
+      "pair": [
+        "primed_A",
+        "primed_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": true,
+      "same_query_paths": true,
+      "target_linf_gap": "9/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": "9/10",
+      "classification": "FULL_REGISTERED_DRIVE_COLLISION"
+    },
+    {
+      "pair": [
+        "positive_A",
+        "positive_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": false,
+      "same_query_paths": true,
+      "target_linf_gap": "8/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": null,
+      "classification": "PROJECTED_CONTENT_EQUALITY_ONLY"
+    }
+  ],
+  "actual_pair_checks": [
+    {
+      "pair": [
+        "low_A",
+        "low_B"
+      ],
+      "expected_full_input_collision": true,
+      "details": [
+        {
+          "carrier": "M1",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M1",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M1",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        }
+      ]
+    },
+    {
+      "pair": [
+        "primed_A",
+        "primed_B"
+      ],
+      "expected_full_input_collision": true,
+      "details": [
+        {
+          "carrier": "M1",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M1",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M1",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2a",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2b",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2c",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        },
+        {
+          "carrier": "M2d",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": true,
+          "full_calls_including_states_and_parameters_equal": true
+        }
+      ]
+    },
+    {
+      "pair": [
+        "positive_A",
+        "positive_B"
+      ],
+      "expected_full_input_collision": false,
+      "details": [
+        {
+          "carrier": "M1",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M1",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M1",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2a",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2a",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2a",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2b",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2b",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2b",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2c",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2c",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2c",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2d",
+          "delay": 0.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2d",
+          "delay": 5.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        },
+        {
+          "carrier": "M2d",
+          "delay": 10.0,
+          "content_equal": true,
+          "novelty_equal": false,
+          "full_calls_including_states_and_parameters_equal": false
+        }
+      ]
+    }
+  ],
+  "primed_positive_gate_checks": [
+    {
+      "slot": 2,
+      "gate_at_onset": 0.039339733464011976,
+      "minimum_gate": 0.020287911393650715,
+      "content_current": 2.3,
+      "minimum_synaptic_product": 0.04666219620539664,
+      "all_gate_and_content_strictly_positive": true
+    },
+    {
+      "slot": 4,
+      "gate_at_onset": 0.0027091631255203794,
+      "minimum_gate": 0.0013971437170967034,
+      "content_current": 0.5,
+      "minimum_synaptic_product": 0.0006985718585483517,
+      "all_gate_and_content_strictly_positive": true
+    }
+  ],
+  "full_interface_positive_novelty_collision": "RULED_OUT_IN_IDEAL_ARITHMETIC; only ULP-scale value-sum rounding ambiguity in binary64",
+  "upstream_raw_arrays_equal_in_collision_pairs": false,
+  "model_M0_distinguishes_collision_pairs": true,
+  "source_files_unchanged": true,
+  "limitations": [
+    "Constructed collisions are not prevalence estimates.",
+    "Input information loss is at registered drive transduction, not entire Python API or original window-based TAN.",
+    "Positive branch is injective; zero/one low event is query-identifiable from full waveform.",
+    "State/readout insufficiency is separate from input-path ambiguity."
+  ],
+  "wall_seconds": 2.9424886679998963
+}

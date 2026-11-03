@@ -1,0 +1,169 @@
+{
+  "input_id": "uncalibrated_capture_collision",
+  "base_id": "uncalibrated_capture_collision",
+  "group": "adversarial",
+  "variant": "original",
+  "arm": "FAST10",
+  "targets": [
+    0.0,
+    2.0
+  ],
+  "queries": [
+    2.0,
+    1.2679353174535417
+  ],
+  "predictions": [
+    0.0,
+    0.0
+  ],
+  "raw_predictions": [
+    0.0,
+    0.0
+  ],
+  "valid": true,
+  "status": "VALID",
+  "numerical_boundary_roundoff": false,
+  "capture_state": [
+    1.2679353174535417,
+    0.0,
+    0.0
+  ],
+  "capture_errors": [
+    -0.7320646825464583,
+    0.0
+  ],
+  "final_state": [
+    1.2679353174535417,
+    0.0,
+    0.0
+  ],
+  "final_stage_bits": 2,
+  "stage_transitions": [
+    0,
+    1,
+    2
+  ],
+  "scratch_zero_after_updates": true,
+  "query_input_fields": [
+    "K",
+    "V",
+    "S",
+    "q",
+    "shared_constants"
+  ],
+  "snapshots": {
+    "capture_0": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "capture_1": [
+      0.02,
+      0.0,
+      0.0
+    ],
+    "capture_50": [
+      0.7899878657249267,
+      0.0,
+      0.0
+    ],
+    "capture_100": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "write_0": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "write_1": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "write_3076": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "write_6153": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ]
+  },
+  "resources": {
+    "payload_reals": 3,
+    "payload_bits": 192,
+    "scratch_reals": 3,
+    "scratch_bits": 192,
+    "stage_bits": 2,
+    "incoming_raw_ports": 2,
+    "incoming_port_bits_each": 64,
+    "query_and_output_bits": 64,
+    "capture_updates": 100,
+    "write_updates": 6153,
+    "capture_h_ms": 0.1,
+    "write_h_ms": 0.0016252234682268812,
+    "write_gamma": 127.12215321391781,
+    "write_gamma_units": "1/(key_unit^2*ms)",
+    "effective_write_pole": 0.0,
+    "capture_gain": 1.0,
+    "write_duration_ms": 10.0,
+    "capture_duration_ms": 10.0,
+    "episode_duration_ms": 100.0,
+    "between_events_hold_ms": 70,
+    "postwrite_hold_ms": 10,
+    "capture_multiplications": 400,
+    "capture_subtractions": 200,
+    "capture_additions": 200,
+    "write_multiplications": 18459,
+    "write_subtractions": 18459,
+    "write_additions": 6153,
+    "query_multiplications_per_query": 1,
+    "query_subtractions_per_query": 1,
+    "query_additions_per_query": 1,
+    "runtime_data_dependent_divisions": 0,
+    "payload_allocated_real_ms": 300.0,
+    "scratch_allocated_real_ms": 300.0,
+    "scratch_active_real_ms": 60.0,
+    "stage_bit_ms": 200.0,
+    "physical_arithmetic_latency_simulated": false,
+    "physical_energy_estimate": null,
+    "coordinate_min": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "coordinate_max": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "coordinate_total_variation": [
+      1.2679353174535417,
+      0.0,
+      0.0
+    ],
+    "coordinate_square_integrals": [
+      151.37942825541694,
+      0.0,
+      0.0
+    ],
+    "coordinate_rate_square_integrals": [
+      0.17407443721448015,
+      0.0,
+      0.0
+    ]
+  },
+  "effective_gap": 0.0,
+  "euler_factor": 1.0,
+  "geometric_endpoint_slope": 0.0,
+  "geometric_slope_residual": 0.0,
+  "continuous_reference_predictions": [
+    0.0,
+    0.0
+  ],
+  "observed_ecomp": 2.0
+}

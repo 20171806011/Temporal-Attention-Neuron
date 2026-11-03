@@ -1,0 +1,97 @@
+{
+  "time_utc": "2026-11-02T21:56:05.465854+00:00",
+  "models_evaluated_yet": false,
+  "phase_A_completion_sha256": "0a4f4cc8118083062ba0352f280add999089ec4a328fcba059b24a532e95f85c",
+  "fresh_inputs_sha256": "4d94d62d97f672478d62baaf859437ee2f3a1fa8e73fcc7593f41541564d45d9",
+  "clean_inputs_sha256": "410f98d3988626bcc84b9d79f804e1da06987f7713995246049181f132d3f83a",
+  "fresh_array_manifest": {
+    "noise": {
+      "shape": [
+        512,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "da8bf22ba5dc5e8d13bb742725f01bc04cd8a876e055ba275a22a4676c2684be"
+    },
+    "base": {
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "waveforms": {
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "9c80909a0a4a5c2bb60cbab464639f6f1a1cf380fe5374c13959e842f2471099"
+    },
+    "thinning_uniforms": {
+      "shape": [
+        512,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "a0c88ca229f23d934112c4a11268c24e06de32845a6a36920e3167dafa891630"
+    },
+    "history_ids": {
+      "shape": [
+        512
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "5738153ec97595b1c1e4dc027f7b7fb4534f19ed2ce9f9ee712e6d34a384cde7"
+    },
+    "conditions": {
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "97a5570dba6f367200a7456895c316d4a333e9bc8de5790b533cb51efbac6db0"
+    }
+  },
+  "clean_array_manifest": {
+    "noise": {
+      "shape": [
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+    },
+    "base": {
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "waveforms": {
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "history_ids": {
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    "conditions": {
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "97a5570dba6f367200a7456895c316d4a333e9bc8de5790b533cb51efbac6db0"
+    }
+  }
+}

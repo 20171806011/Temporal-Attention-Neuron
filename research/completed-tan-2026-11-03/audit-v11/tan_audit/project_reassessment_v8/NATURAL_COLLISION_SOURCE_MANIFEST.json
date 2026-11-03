@@ -1,0 +1,258 @@
+{
+  "scope": "Source/evidence review only; no model execution or proposed-fixture simulation",
+  "sources": [
+    {
+      "path": "snapshot/code/experiments/natural_collision.py",
+      "sha256": "8c7b4e75ec8284b671bca6280ee848498ddd9c6109a6dba31254f6d407ec4d7f"
+    },
+    {
+      "path": "snapshot/code/experiments/temporal_distractor.py",
+      "sha256": "6177df497f9735d9fdb434ff20e7751a8dbb4af7a32d836bb3c4898c06ad4f23"
+    },
+    {
+      "path": "snapshot/code/analysis/probe1_v3_amended_audit.py",
+      "sha256": "3ab75a7f5c8b6a74768f80a705170aad79eff9ac651a61700001478ee47c80d8"
+    },
+    {
+      "path": "snapshot/code/experiments/probe2/identifiability/AUDIT_REPORT.md",
+      "sha256": "412542eac914c8a9aea1377158233a2f12fd685d8ef32e016a18ae903f3408f3"
+    },
+    {
+      "path": "snapshot/paper/sections/results.tex",
+      "sha256": "a520aacde6e226b991a7b1f58f77404ac6bbea3f78b4dba91af0e2e9fdf3a53e"
+    },
+    {
+      "path": "snapshot/paper/sections/methods.tex",
+      "sha256": "60cc9d9fbd241b06b90d0b7d6c330010fc8058a208168381be7d078df91a3f49"
+    },
+    {
+      "path": "snapshot/paper/sections/model.tex",
+      "sha256": "ef2c5622a2375d6f4376f27bcff63f9914d66043356d3744ef2c6ac4572d16d7"
+    },
+    {
+      "path": "snapshot/paper/sections/discussion.tex",
+      "sha256": "2abe0fbd384703483a46169e3d3ca5ed94523428654e98a4f50681a50ceb84f7"
+    },
+    {
+      "path": "snapshot/paper2/sections/s3_state_geometry.tex",
+      "sha256": "4a85efd07b7aa44d42704c79b126c4e78ac3e1fae17a8a0bdefca43c48a3ac16"
+    },
+    {
+      "path": "snapshot/paper/supplementary/S2_phase1_collisions.tex",
+      "sha256": "be5cc6b2aa51cad83b2170e96618ba92d9cd5168c596249a021c214506d7676f"
+    },
+    {
+      "path": "snapshot/PHASE1_NATURAL_COLLISION_REPORT.md",
+      "sha256": "1ded04ae2898ed588037f6645d40648604f82c1068c74f4f80f3300c8af554c7"
+    },
+    {
+      "path": "snapshot/audit_v3_amended/POOLED_PROBE1_V3.md",
+      "sha256": "af104724143e61a63e33d8ec9af7116a98b1c76e951ba6dc49c304dc6619ba24"
+    },
+    {
+      "path": "snapshot/audit_v3_amended/MACHINE_READABLE_AUDIT.json",
+      "sha256": "56ca980ed54fb3314867ae84e8cabe849735341eb8b629ad9b1d92bcfc3b44ce"
+    },
+    {
+      "path": "snapshot/data/experiment_results/natural_collision_summary.csv",
+      "sha256": "d2a7877d5ca0626df7536312a9296d28144ea3d2c87c35e5662d2ef8356dd774"
+    },
+    {
+      "path": "snapshot/data/experiment_results/natural_collision_correlations.csv",
+      "sha256": "b04406e4fcd1a9170f6ec9f0342ac772dde1153463a5c3e58840022bddafb714"
+    },
+    {
+      "path": "snapshot/data/experiment_results/natural_collision_ensembles.npz",
+      "sha256": "b1faab376bbabf445e9ac08797a716fd04b2b6c28e0dd0a4ee7af2d9dcfc7be7"
+    },
+    {
+      "path": "snapshot/manuscript/sections/model.tex",
+      "sha256": "e79d5b580110a0468550411515929dedf4e6993a139a16b2811ff4dbcb24debc"
+    },
+    {
+      "path": "snapshot/manuscript/sections/analysis.tex",
+      "sha256": "34d886b12b97591b99314a01f7dd8194be3105c8fe1d0b2a879b4db9d79647b0"
+    },
+    {
+      "path": "snapshot/manuscript/sections/experiments.tex",
+      "sha256": "f51f3d663e85b9ccc1bbbe0b3c4183c668b1f0ec3fe8c936f8eb31090f49915a"
+    },
+    {
+      "path": "snapshot/manuscript/sections/discussion.tex",
+      "sha256": "17992d76263005ae0ddf3b16622bf008f16bacb60ceb5a9281ed7a7ee12ce481"
+    },
+    {
+      "path": "CURRENT_RESEARCH_STATE.md",
+      "sha256": "f0c92e25d5359a47f643169042eee27ba0cb2acf74fd1eb9396fec6977647ef4"
+    }
+  ],
+  "saved_npz_shapes": {
+    "lif_h": [
+      1500,
+      2,
+      18
+    ],
+    "lif_u": [
+      1500,
+      2,
+      18
+    ],
+    "lif_j": [
+      1500,
+      2,
+      18
+    ],
+    "lif_dh_before": [
+      1500
+    ],
+    "lif_dh_tilde": [
+      1500
+    ],
+    "lif_cont_gap": [
+      1500,
+      9
+    ],
+    "buf_h": [
+      1500,
+      2,
+      18
+    ],
+    "buf_u": [
+      1500,
+      2,
+      18
+    ],
+    "buf_j": [
+      1500,
+      2,
+      18
+    ],
+    "buf_dh_before": [
+      1500
+    ],
+    "buf_dh_tilde": [
+      1500
+    ],
+    "buf_cont_gap": [
+      1500,
+      9
+    ],
+    "noattn_h": [
+      1500,
+      2,
+      18
+    ],
+    "noattn_u": [
+      1500,
+      2,
+      18
+    ],
+    "noattn_j": [
+      1500,
+      2,
+      18
+    ],
+    "noattn_dh_before": [
+      1500
+    ],
+    "noattn_dh_tilde": [
+      1500
+    ],
+    "noattn_cont_gap": [
+      1500,
+      9
+    ],
+    "noattn_s": [
+      1500,
+      2,
+      18
+    ],
+    "tan_h": [
+      1500,
+      2,
+      18
+    ],
+    "tan_u": [
+      1500,
+      2,
+      18
+    ],
+    "tan_j": [
+      1500,
+      2,
+      18
+    ],
+    "tan_dh_before": [
+      1500
+    ],
+    "tan_dh_tilde": [
+      1500
+    ],
+    "tan_cont_gap": [
+      1500,
+      9
+    ],
+    "tan_s": [
+      1500,
+      2,
+      18
+    ],
+    "tan_alpha": [
+      1500,
+      2,
+      18,
+      5
+    ],
+    "inputs_tan_ensemble": [
+      1500,
+      2,
+      18
+    ],
+    "pair_gens": [
+      1500,
+      2
+    ],
+    "xstar": [
+      1500
+    ],
+    "continuation": [
+      1500,
+      8
+    ],
+    "resync_mask_tan_pairs": [
+      1500
+    ],
+    "reb_u_lif": [
+      843,
+      9
+    ],
+    "reb_h_lif": [
+      843,
+      9
+    ],
+    "reb_u_buf": [
+      843,
+      9
+    ],
+    "reb_h_buf": [
+      843,
+      9
+    ],
+    "reb_u_noattn": [
+      843,
+      9
+    ],
+    "reb_h_noattn": [
+      843,
+      9
+    ],
+    "reb_u_tan": [
+      843,
+      9
+    ],
+    "reb_h_tan": [
+      843,
+      9
+    ]
+  }
+}

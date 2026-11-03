@@ -1,0 +1,26 @@
+{
+  "time_utc": "2026-11-02T22:49:15.320105+00:00",
+  "training_seed": 2026110250,
+  "n_training_histories": 512,
+  "balanced_classes": true,
+  "current_samples_per_model": 61440,
+  "gain_kappa": 0.840938900477691,
+  "numerator_TAN_current_L1": 12494.317078649212,
+  "denominator_unscaled_ADAPT_current_L1": 14857.580106654454,
+  "calibrated_ADAPT_current_L1": 12494.317078649212,
+  "raw_budget_residual": 0.0,
+  "raw_budget_residual_per_current_sample": 0.0,
+  "sum_convention": "math.fsum over C-order float64 entries",
+  "gain_finite_positive": true,
+  "gain_fit_uses_spikes_accuracy_latency_or_test": false,
+  "test_inputs_generated_yet": false,
+  "native_trace_checks": {
+    "all_spikes_exact": true,
+    "max_membrane_abs_error": 0.0,
+    "max_history_abs_error": 0.0,
+    "n_trajectories": 1024,
+    "n_updates": 61440
+  },
+  "training_inputs_sha256": "d3a7a3f821e7687f876df0c0857bb383eccf206fb7836767296d34bf19e7131f",
+  "training_trajectories_sha256": "382f6ae022a5fd9d20e1eec2959acf7d32cb1aa77b09baf41c40346808cd31a6"
+}

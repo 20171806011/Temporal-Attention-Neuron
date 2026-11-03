@@ -1,0 +1,868 @@
+{
+  "source_sha256": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+  "protocol_sha256": "6637bd23829a8e4e55899a7ba59498b0080dee8a7eebb0a123ac4e679a0c5df6",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "target_seed": 20261103,
+  "noise_seed": 20261104,
+  "n_histories": 4096,
+  "polynomial_U": [
+    0.09044539592763255,
+    0.00013926662469358788,
+    0.06310841767423782,
+    2.3028240410664413e-06,
+    7.250882963196411e-05,
+    0.0071466921801524915
+  ],
+  "polynomial_A": [
+    0.17525004552407866,
+    0.00011849111241245773,
+    0.02498493888383447
+  ],
+  "exact_fraction_corner_determinants": [
+    -4.110453430218917e-06,
+    -3.992463766317291e-06,
+    -4.003973246249194e-06,
+    -3.885983582347569e-06
+  ],
+  "max_actual_vs_polynomial_residual": 4.163336342344337e-16,
+  "max_frozen_scalar_check_residual": 0.0,
+  "heldout_encoding_branch": {
+    "max_encoding_candidate": 0.3381853383318303,
+    "max_encoding_gate": 0.3665320255806986
+  },
+  "upper_corner_branch": {
+    "max_encoding_candidate": 0.33842532494440664,
+    "max_encoding_gate": 0.3666052867242588
+  },
+  "boundary_solver_checks": [
+    {
+      "values": [
+        -0.5,
+        -0.5
+      ],
+      "decoded": [
+        -0.49999999999997147,
+        -0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 1.3877787807814457e-17
+    },
+    {
+      "values": [
+        -0.5,
+        0.0
+      ],
+      "decoded": [
+        -0.5,
+        2.6020852139652106e-18
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 0.0
+    },
+    {
+      "values": [
+        -0.5,
+        0.5
+      ],
+      "decoded": [
+        -0.5,
+        0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 0.0
+    },
+    {
+      "values": [
+        0.0,
+        -0.5
+      ],
+      "decoded": [
+        8.546153512646886e-14,
+        -0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 1.3877787807814457e-17
+    },
+    {
+      "values": [
+        0.0,
+        0.0
+      ],
+      "decoded": [
+        0.0,
+        0.0
+      ],
+      "status": "VALID",
+      "boundary_snap": false,
+      "residual": 0.0
+    },
+    {
+      "values": [
+        0.0,
+        0.5
+      ],
+      "decoded": [
+        -1.760426464129773e-13,
+        0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 2.7755575615628914e-17
+    },
+    {
+      "values": [
+        0.5,
+        -0.5
+      ],
+      "decoded": [
+        0.5,
+        -0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 0.0
+    },
+    {
+      "values": [
+        0.5,
+        0.0
+      ],
+      "decoded": [
+        0.5,
+        1.5178830414797062e-17
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 0.0
+    },
+    {
+      "values": [
+        0.5,
+        0.5
+      ],
+      "decoded": [
+        0.4999999999999257,
+        0.5
+      ],
+      "status": "VALID",
+      "boundary_snap": true,
+      "residual": 2.7755575615628914e-17
+    }
+  ],
+  "zero_baseline": {
+    "n": 4096,
+    "rmse_per_role": [
+      0.287738771310202,
+      0.29033391124815666
+    ],
+    "mae_per_role": [
+      0.2493063773639162,
+      0.25232060093741904
+    ],
+    "mean_e_comp": 0.3342145855874588,
+    "max_abs_error": 0.4999302861442917,
+    "coverage": 1.0,
+    "validity_aware_local_joint_success_0_05": 0.010498046875,
+    "conditional_valid_only": {
+      "n": 4096,
+      "rmse_per_role": [
+        0.287738771310202,
+        0.29033391124815666
+      ],
+      "mae_per_role": [
+        0.2493063773639162,
+        0.25232060093741904
+      ],
+      "mean_e_comp": 0.3342145855874588
+    }
+  },
+  "cells": [
+    {
+      "scenario": "noiseless",
+      "m": 1,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607216828282562,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          1.4272791540613343e-10,
+          3.199985645515644e-13
+        ],
+        "mae_per_role": [
+          1.1841854038667406e-10,
+          2.619816028488498e-13
+        ],
+        "mean_e_comp": 1.1841854038667406e-10,
+        "max_abs_error": 4.386668112088543e-10,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 1.0,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            1.4272791540613343e-10,
+            3.199985645515644e-13
+          ],
+          "mae_per_role": [
+            1.1841854038667406e-10,
+            2.619816028488498e-13
+          ],
+          "mean_e_comp": 1.1841854038667406e-10
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.012575537610199,
+          0.023772147462897894
+        ],
+        "mae_per_role": [
+          3.7651877929560285,
+          0.017856409098971085
+        ],
+        "mean_e_comp": 3.7651877929560333,
+        "max_abs_error": 11.23000698564381,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.068603515625,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.012575537610199,
+            0.023772147462897894
+          ],
+          "mae_per_role": [
+            3.7651877929560285,
+            0.017856409098971085
+          ],
+          "mean_e_comp": 3.7651877929560333
+        }
+      }
+    },
+    {
+      "scenario": "noiseless",
+      "m": 100,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607216828282562,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          1.0406841405234147e-10,
+          2.3169727538115376e-13
+        ],
+        "mae_per_role": [
+          9.09006645702368e-11,
+          2.0046133923523277e-13
+        ],
+        "mean_e_comp": 9.09006645702368e-11,
+        "max_abs_error": 2.85803922195349e-10,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 1.0,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            1.0406841405234147e-10,
+            2.3169727538115376e-13
+          ],
+          "mae_per_role": [
+            9.09006645702368e-11,
+            2.0046133923523277e-13
+          ],
+          "mean_e_comp": 9.09006645702368e-11
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.012575537599019,
+          0.023772147462873205
+        ],
+        "mae_per_role": [
+          3.7651877929398267,
+          0.017856409098935423
+        ],
+        "mean_e_comp": 3.7651877929398223,
+        "max_abs_error": 11.230006985463314,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.068603515625,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.012575537599019,
+            0.023772147462873205
+          ],
+          "mae_per_role": [
+            3.7651877929398267,
+            0.017856409098935423
+          ],
+          "mean_e_comp": 3.7651877929398223
+        }
+      }
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 1,
+      "sigma_sensor": 1e-06,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607216828282562,
+      "status_counts": {
+        "NO_REAL_ROOT": 798,
+        "OUT_OF_DOMAIN": 3223,
+        "VALID": 75
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.2903671601247968,
+          0.28734179017946504
+        ],
+        "mae_per_role": [
+          0.2509302754576403,
+          0.24732210342450883
+        ],
+        "mean_e_comp": 0.33382785126800063,
+        "max_abs_error": 0.9552371241968021,
+        "coverage": 0.018310546875,
+        "validity_aware_local_joint_success_0_05": 0.001708984375,
+        "conditional_valid_only": {
+          "n": 75,
+          "rmse_per_role": [
+            0.3965224405980026,
+            0.0008719924032994988
+          ],
+          "mae_per_role": [
+            0.31861610321635536,
+            0.0006943166879752761
+          ],
+          "mean_e_comp": 0.3186161032163553
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          22.576353262363327,
+          0.05403806900774826
+        ],
+        "mae_per_role": [
+          18.035861443253918,
+          0.04317996560214786
+        ],
+        "mean_e_comp": 18.035863063653025,
+        "max_abs_error": 88.23923664608576,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.001708984375,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            22.576353262363327,
+            0.05403806900774826
+          ],
+          "mae_per_role": [
+            18.035861443253918,
+            0.04317996560214786
+          ],
+          "mean_e_comp": 18.035863063653025
+        }
+      }
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 100,
+      "sigma_sensor": 1e-06,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607216828282562,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 1261,
+        "VALID": 2835
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.3021981522219191,
+          0.16171673744966877
+        ],
+        "mae_per_role": [
+          0.24939488713380342,
+          0.07794087506649383
+        ],
+        "mean_e_comp": 0.2681650329235009,
+        "max_abs_error": 0.9944378143902347,
+        "coverage": 0.692138671875,
+        "validity_aware_local_joint_success_0_05": 0.103515625,
+        "conditional_valid_only": {
+          "n": 2835,
+          "rmse_per_role": [
+            0.2896315104251595,
+            0.0006426200881670138
+          ],
+          "mae_per_role": [
+            0.2283875400015056,
+            0.0005040248423333063
+          ],
+          "mean_e_comp": 0.2283875445219578
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.028885778421326,
+          0.023790318107206724
+        ],
+        "mae_per_role": [
+          3.807992334906919,
+          0.017920522375284246
+        ],
+        "mean_e_comp": 3.8079925044746994,
+        "max_abs_error": 12.209092439526314,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.021240234375,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.028885778421326,
+            0.023790318107206724
+          ],
+          "mae_per_role": [
+            3.807992334906919,
+            0.017920522375284246
+          ],
+          "mean_e_comp": 3.8079925044746994
+        }
+      }
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 1,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 1e-06,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607283139167021,
+      "status_counts": {
+        "NO_REAL_ROOT": 502,
+        "OUT_OF_DOMAIN": 3497,
+        "VALID": 97
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.2918182328277049,
+          0.28690305496482504
+        ],
+        "mae_per_role": [
+          0.25152035338662665,
+          0.2463832815200911
+        ],
+        "mean_e_comp": 0.33456814061232476,
+        "max_abs_error": 0.9402935591934134,
+        "coverage": 0.023681640625,
+        "validity_aware_local_joint_success_0_05": 0.002197265625,
+        "conditional_valid_only": {
+          "n": 97,
+          "rmse_per_role": [
+            0.4344766655535851,
+            0.0009605047557736299
+          ],
+          "mae_per_role": [
+            0.3556543037053365,
+            0.0007774498380428859
+          ],
+          "mean_e_comp": 0.3556543037053364
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          16.53886374553971,
+          0.04200220216841024
+        ],
+        "mae_per_role": [
+          13.248152440355945,
+          0.03373180356908777
+        ],
+        "mean_e_comp": 13.248156087818739,
+        "max_abs_error": 57.3283155535105,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.002197265625,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            16.53886374553971,
+            0.04200220216841024
+          ],
+          "mae_per_role": [
+            13.248152440355945,
+            0.03373180356908777
+          ],
+          "mean_e_comp": 13.248156087818739
+        }
+      }
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 100,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 1e-06,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607283139167021,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3398,
+        "VALID": 698
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.31171984714136164,
+          0.2649279166765756
+        ],
+        "mae_per_role": [
+          0.2639013109861344,
+          0.20960018486335094
+        ],
+        "mean_e_comp": 0.334075536547314,
+        "max_abs_error": 0.9732914798214841,
+        "coverage": 0.17041015625,
+        "validity_aware_local_joint_success_0_05": 0.0185546875,
+        "conditional_valid_only": {
+          "n": 698,
+          "rmse_per_role": [
+            0.4058738148400329,
+            0.0008891596630829031
+          ],
+          "mae_per_role": [
+            0.3310713477123348,
+            0.0007228302340605973
+          ],
+          "mean_e_comp": 0.33107134771233454
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.526931006933756,
+          0.02430316139361552
+        ],
+        "mae_per_role": [
+          4.343792223924444,
+          0.01868779459268667
+        ],
+        "mean_e_comp": 4.34379222392444,
+        "max_abs_error": 17.83719205856238,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.007568359375,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.526931006933756,
+            0.02430316139361552
+          ],
+          "mae_per_role": [
+            4.343792223924444,
+            0.01868779459268667
+          ],
+          "mean_e_comp": 4.34379222392444
+        }
+      }
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 1,
+      "sigma_sensor": 1e-06,
+      "sigma_membrane": 1e-06,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607283139167021,
+      "status_counts": {
+        "NO_REAL_ROOT": 971,
+        "OUT_OF_DOMAIN": 3066,
+        "VALID": 59
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.2900833559943575,
+          0.28828911900097276
+        ],
+        "mae_per_role": [
+          0.2508352423434159,
+          0.24880286225345538
+        ],
+        "mean_e_comp": 0.3346673969168025,
+        "max_abs_error": 0.9033653538791906,
+        "coverage": 0.014404296875,
+        "validity_aware_local_joint_success_0_05": 0.001220703125,
+        "conditional_valid_only": {
+          "n": 59,
+          "rmse_per_role": [
+            0.4215385478323871,
+            0.0009318777465989951
+          ],
+          "mae_per_role": [
+            0.35522724935582206,
+            0.0007773677106973938
+          ],
+          "mean_e_comp": 0.355227249355822
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          27.42382443068997,
+          0.06395150572025278
+        ],
+        "mae_per_role": [
+          21.747322115359317,
+          0.05082032943793085
+        ],
+        "mean_e_comp": 21.747329072877317,
+        "max_abs_error": 107.78175965696,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.001708984375,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            27.42382443068997,
+            0.06395150572025278
+          ],
+          "mae_per_role": [
+            21.747322115359317,
+            0.05082032943793085
+          ],
+          "mean_e_comp": 21.747329072877317
+        }
+      }
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 100,
+      "sigma_sensor": 1e-06,
+      "sigma_membrane": 1e-06,
+      "sigma_gate": 0.0,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607283139167021,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3428,
+        "VALID": 668
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.3089662738166222,
+          0.2651967429754671
+        ],
+        "mae_per_role": [
+          0.2622034738401972,
+          0.21067259649765138
+        ],
+        "mean_e_comp": 0.33198207346192543,
+        "max_abs_error": 0.9852909680070207,
+        "coverage": 0.1630859375,
+        "validity_aware_local_joint_success_0_05": 0.01611328125,
+        "conditional_valid_only": {
+          "n": 668,
+          "rmse_per_role": [
+            0.39367660812753064,
+            0.0008574744326739741
+          ],
+          "mae_per_role": [
+            0.3180305770547821,
+            0.0006907350954696968
+          ],
+          "mean_e_comp": 0.3180305770547818
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.5399226249236495,
+          0.024318911286387922
+        ],
+        "mae_per_role": [
+          4.364054371435757,
+          0.018721732089305904
+        ],
+        "mean_e_comp": 4.364054613639677,
+        "max_abs_error": 17.69863091721869,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.008056640625,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.5399226249236495,
+            0.024318911286387922
+          ],
+          "mae_per_role": [
+            4.364054371435757,
+            0.018721732089305904
+          ],
+          "mean_e_comp": 4.364054613639677
+        }
+      }
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 1,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 1e-06,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607218077023092,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          1.4272791540613343e-10,
+          3.199985645515644e-13
+        ],
+        "mae_per_role": [
+          1.1841854038667406e-10,
+          2.619816028488498e-13
+        ],
+        "mean_e_comp": 1.1841854038667406e-10,
+        "max_abs_error": 4.386668112088543e-10,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 1.0,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            1.4272791540613343e-10,
+            3.199985645515644e-13
+          ],
+          "mae_per_role": [
+            1.1841854038667406e-10,
+            2.619816028488498e-13
+          ],
+          "mean_e_comp": 1.1841854038667406e-10
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.012575537610199,
+          0.023772147462897894
+        ],
+        "mae_per_role": [
+          3.7651877929560285,
+          0.017856409098971085
+        ],
+        "mean_e_comp": 3.7651877929560333,
+        "max_abs_error": 11.23000698564381,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.068603515625,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.012575537610199,
+            0.023772147462897894
+          ],
+          "mae_per_role": [
+            3.7651877929560285,
+            0.017856409098971085
+          ],
+          "mean_e_comp": 3.7651877929560333
+        }
+      }
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 100,
+      "sigma_sensor": 0.0,
+      "sigma_membrane": 0.0,
+      "sigma_gate": 1e-06,
+      "physical_branch_departures": 0,
+      "max_query_preinnovation_candidate": 0.5607218077023092,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 364,
+        "VALID": 3732
+      },
+      "numerical_boundary_snaps": 0,
+      "bounded_exact_inverse": {
+        "n": 4096,
+        "rmse_per_role": [
+          0.16539447740391264,
+          0.0874633404922348
+        ],
+        "mae_per_role": [
+          0.11640889832163927,
+          0.022796273532218404
+        ],
+        "mean_e_comp": 0.1173511947907071,
+        "max_abs_error": 0.4995594252462794,
+        "coverage": 0.9111328125,
+        "validity_aware_local_joint_success_0_05": 0.332763671875,
+        "conditional_valid_only": {
+          "n": 3732,
+          "rmse_per_role": [
+            0.10845826887412248,
+            0.00024141702574247796
+          ],
+          "mae_per_role": [
+            0.08598816666762137,
+            0.00018944400061615612
+          ],
+          "mean_e_comp": 0.08598816666762117
+        }
+      },
+      "unbounded_linear_diagnostic": {
+        "n": 4096,
+        "rmse_per_role": [
+          5.014411309115464,
+          0.02377468457675885
+        ],
+        "mae_per_role": [
+          3.7726117495159976,
+          0.01786794713211993
+        ],
+        "mean_e_comp": 3.7726117495159937,
+        "max_abs_error": 11.376302419776112,
+        "coverage": 1.0,
+        "validity_aware_local_joint_success_0_05": 0.036376953125,
+        "conditional_valid_only": {
+          "n": 4096,
+          "rmse_per_role": [
+            5.014411309115464,
+            0.02377468457675885
+          ],
+          "mae_per_role": [
+            3.7726117495159976,
+            0.01786794713211993
+          ],
+          "mean_e_comp": 3.7726117495159937
+        }
+      }
+    }
+  ],
+  "targets_sha256": "da0bb3feaffc8258b50a81099f877d70cd948152fc5beb25099d4f5ca5f30148"
+}

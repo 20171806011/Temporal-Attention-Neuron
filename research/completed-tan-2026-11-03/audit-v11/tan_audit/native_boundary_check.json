@@ -1,0 +1,48 @@
+{
+  "numpy": "2.3.5",
+  "fresh_histories": 256,
+  "role_queries": 1536,
+  "seed_per_N": {
+    "2": 2026110202,
+    "3": 2026110203
+  },
+  "counts": {
+    "0": 842,
+    "1": 694
+  },
+  "conservative_u_upper": 0.3660323412732292,
+  "min_first_step": 36,
+  "min_fresh_step": 51,
+  "min_second_step": 107,
+  "boundary_spikes": [
+    36
+  ],
+  "continued120_spikes": [
+    36,
+    107
+  ],
+  "task_reachable_count_alphabet": [
+    -2,
+    0
+  ],
+  "relaxed_count_population_Ecomp_floor": "13/9",
+  "selected_fixtures_passed": [
+    "test_g1_1_state_closure_and_refractory_readout",
+    "test_g1_5_state_collision_non_injectivity",
+    "test_g1_6b_actual_spike_conformance",
+    "test_g1_7_euler_accuracy_and_convergence"
+  ],
+  "source_sha256": {
+    "p1_experiments/task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+    "p1_experiments/p1b/models_p1b_v2.py": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+    "p1_experiments/p1b/runner_p1b.py": "47609f1e70ab8de2966ee8305757f44658ef799918d5f92108ac4efe64304c26",
+    "p1_experiments/p1b/test_p1b_g1_fixtures.py": "8a56690f74ebd2e76dc39ab35b059da9beda77a4671f59094993a12905d2ff23",
+    "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md": "07d58a2de773ea13e8fd5c16901cb8e8a370219d4793f4a7f9baca23c747a82b"
+  },
+  "limitations": [
+    "Fresh conditional reproduction, not historical byte replay.",
+    "Population floor assumes independent Uniform[-3,3] operands and allows arbitrary oracle symbol choice.",
+    "Physical bound applies to original clean task q<=2.5 and tau_m10, not added content probes or modified time constants.",
+    "Generic counts2..5 fixture uses query drives outside original task domain."
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "not_energy": true,
+  "rows": [
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.09948172600002181,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.17383943400000135,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.17206794799994896,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.11638944199989965,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.12496276700005637,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.1367845929999021,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.15334856399999808,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.3305537360000699,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.360035172000039,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "original_M1",
+      "seconds": 0.2225333410000303,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "bounded_WHQ",
+      "seconds": 0.288553282999942,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "rate_limited_EMA",
+      "seconds": 0.2667016020000119,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "original_M1",
+      "seconds": 0.36589841699992576,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "bounded_WHQ",
+      "seconds": 0.5332913350000581,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "rate_limited_EMA",
+      "seconds": 0.4857947939999576,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.2502493190000905,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.22706826699993599,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.2168601690000287,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "original_M1",
+      "seconds": 0.2299091249999492,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "bounded_WHQ",
+      "seconds": 0.29988683299995955,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "rate_limited_EMA",
+      "seconds": 0.3241489859999547,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "original_M1",
+      "seconds": 0.4334797210000261,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "bounded_WHQ",
+      "seconds": 0.6095973960000265,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "rate_limited_EMA",
+      "seconds": 0.5851542069999596,
+      "split": "test"
+    }
+  ],
+  "total_seconds": 7.915764916999933
+}

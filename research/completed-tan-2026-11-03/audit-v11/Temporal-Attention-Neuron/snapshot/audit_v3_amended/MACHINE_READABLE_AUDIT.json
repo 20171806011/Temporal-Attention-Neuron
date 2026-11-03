@@ -1,0 +1,276 @@
+{
+ "amendment": "AUDIT_STATISTICS_ONLY_20260904",
+ "frozen_data_verified": true,
+ "max_deviation_frozen": 0.00047487007966051653,
+ "permutation_null": {
+  "n": 100,
+  "note": "label-permutation null, refit per seed x model"
+ },
+ "shuffle_rule": "A1: fixed 0.37 gate abolished; PASS/PASS_WITH_QC/INVALID via z10 from empirical null",
+ "coverage_rule": "A2: never-predicted class no longer blocks; cells flagged PASS_WITH_FLAG (at chance) or INVALID_FOR_INTERPRETATION (above chance)",
+ "B3_persistent_flag": "none",
+ "audit_cells": [
+  {
+   "seed": 20260904,
+   "model": "B1",
+   "cond": "clean",
+   "bal3": 0.3463,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260904,
+   "model": "B1",
+   "cond": "dist",
+   "bal3": 0.3524,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260904,
+   "model": "B2",
+   "cond": "clean",
+   "bal3": 0.868,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260904,
+   "model": "B2",
+   "cond": "dist",
+   "bal3": 0.8468,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260904,
+   "model": "B3",
+   "cond": "clean",
+   "bal3": 0.3333,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260904,
+   "model": "B3",
+   "cond": "dist",
+   "bal3": 0.3714,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260904,
+   "model": "B4",
+   "cond": "clean",
+   "bal3": 0.3275,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260904,
+   "model": "B4",
+   "cond": "dist",
+   "bal3": 0.4274,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B1",
+   "cond": "clean",
+   "bal3": 0.318,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B1",
+   "cond": "dist",
+   "bal3": 0.3058,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B2",
+   "cond": "clean",
+   "bal3": 0.8573,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B2",
+   "cond": "dist",
+   "bal3": 0.8414,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B3",
+   "cond": "clean",
+   "bal3": 0.3219,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B3",
+   "cond": "dist",
+   "bal3": 0.3553,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B4",
+   "cond": "clean",
+   "bal3": 0.3285,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260905,
+   "model": "B4",
+   "cond": "dist",
+   "bal3": 0.3978,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260906,
+   "model": "B1",
+   "cond": "clean",
+   "bal3": 0.3289,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260906,
+   "model": "B1",
+   "cond": "dist",
+   "bal3": 0.3613,
+   "shuffle": "PASS",
+   "coverage": "PASS_WITH_FLAG",
+   "note": "at-chance collapse, excluded from claims",
+   "final": "PASS_WITH_FLAG"
+  },
+  {
+   "seed": 20260906,
+   "model": "B2",
+   "cond": "clean",
+   "bal3": 0.8769,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260906,
+   "model": "B2",
+   "cond": "dist",
+   "bal3": 0.8397,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260906,
+   "model": "B3",
+   "cond": "clean",
+   "bal3": 0.47,
+   "shuffle": "PASS",
+   "coverage": "INVALID_FOR_INTERPRETATION",
+   "note": "never predicts class(es) [0] while above chance",
+   "final": "INVALID_FOR_INTERPRETATION"
+  },
+  {
+   "seed": 20260906,
+   "model": "B3",
+   "cond": "dist",
+   "bal3": 0.2855,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260906,
+   "model": "B4",
+   "cond": "clean",
+   "bal3": 0.329,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  },
+  {
+   "seed": 20260906,
+   "model": "B4",
+   "cond": "dist",
+   "bal3": 0.3417,
+   "shuffle": "PASS",
+   "coverage": "PASS",
+   "note": "",
+   "final": "PASS"
+  }
+ ],
+ "pooled_B4_minus_B3_distractor": {
+  "mean": 0.0570411192853063,
+  "ci_lo": 0.03874877856716105,
+  "ci_hi": 0.0757752442538886,
+  "per_seed": [
+   0.0561,
+   0.0425,
+   0.0562
+  ]
+ },
+ "seed_wise_B4_dist_minus_clean": [
+  0.099,
+  0.069,
+  0.013
+ ],
+ "interpretation_constraints": [
+  "no 'distractor robustness' naming (condition effects are context-structure effects)",
+  "B3 nominal bal3 not interpreted as healthy 3-class decoding under LO_BLIND",
+  "B4 distractor-condition advantage partially replicated; weaker in seed 20260906",
+  "B2 = strong stable positional-memory baseline (0.84-0.88)",
+  "B1 ~ chance"
+ ]
+}

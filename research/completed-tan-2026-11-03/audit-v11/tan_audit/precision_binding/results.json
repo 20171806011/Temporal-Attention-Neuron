@@ -1,0 +1,702 @@
+{
+  "protocol_sha256": "ae2c6180dd17eb085277153a58574970a03c413210a9db78c49ef8f8ce207db3",
+  "script_sha256": "b46c81c57f9bafb0d66dfda7ecc1d0bf498d05bc668d04331e1c5e1b82d8119b",
+  "inputs_sha256": "93fb40c3de844c59c83e93fd8d40f032fe2dc00d3795c6b0422cecace881ca16",
+  "input_count": 1590,
+  "prediction_rows": 6360,
+  "role_predictions": 12720,
+  "fresh_histories": 512,
+  "reused_adversarial": 18,
+  "bounds": {
+    "RAW32": {
+      "eps_key": 0.001953154802777142,
+      "eps_value": 0.004882887006942855,
+      "gap_lower": 0.04804684519722286,
+      "write_slope_upper": 124.97975387058356,
+      "write_intercept_upper": 315.4493846764589,
+      "prefix_error_upper": 0.24898769352917824,
+      "final_error_upper": 0.00976577401388571,
+      "total_error_upper": 0.25875346754306394,
+      "total_exact": "42715712/165082665"
+    },
+    "PHASE32": {
+      "eps_key": 1.6784924086366063e-05,
+      "eps_value": 4.5777065690089265e-05,
+      "gap_lower": 0.049983215075913634,
+      "write_slope_upper": 120.04121319432784,
+      "write_intercept_upper": 303.1030329858196,
+      "prefix_error_upper": 0.0020606597163921664,
+      "final_error_upper": 0.00976577401388571,
+      "total_error_upper": 0.011826433730277877,
+      "total_exact": "10155109/858678891"
+    },
+    "CACHE32": {
+      "key_error_upper": 0.004313725490196078,
+      "total_error_upper": 0.011764705882352941,
+      "total_exact": "1/85"
+    },
+    "ENDPOINT_ONLY": {
+      "total_error_upper": 0.00976577401388571,
+      "total_exact": "128/13107"
+    }
+  },
+  "metrics": [
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "RAW32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.00699701367598536,
+      "max_error": 0.06558004751327129,
+      "mae_per_role": [
+        0.0049932382904289046,
+        0.0042585513302774046
+      ],
+      "rmse_per_role": [
+        0.008475248147345956,
+        0.006224580675403708
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.994140625,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "PHASE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0031981186623097906,
+      "max_error": 0.008822766886502631,
+      "mae_per_role": [
+        0.0028214395052264005,
+        0.002846933109679165
+      ],
+      "rmse_per_role": [
+        0.003360150996764581,
+        0.0033641031978759025
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "CACHE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.007872439775579946,
+      "max_error": 0.011751497284262502,
+      "mae_per_role": [
+        0.00610598161285722,
+        0.0059394159763594126
+      ],
+      "rmse_per_role": [
+        0.006987479364634085,
+        0.006838073982174806
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "ENDPOINT_ONLY",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0031472890381469888,
+      "max_error": 0.008811350597700995,
+      "mae_per_role": [
+        0.002776967732067577,
+        0.002803254405672174
+      ],
+      "rmse_per_role": [
+        0.0033203602193597535,
+        0.0033279969389389476
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "RAW32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.00699701367598536,
+      "max_error": 0.06558004751327129,
+      "mae_per_role": [
+        0.0042585513302774046,
+        0.0049932382904289046
+      ],
+      "rmse_per_role": [
+        0.006224580675403708,
+        0.008475248147345956
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.994140625,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "PHASE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0031981186623097906,
+      "max_error": 0.008822766886502631,
+      "mae_per_role": [
+        0.002846933109679165,
+        0.0028214395052264005
+      ],
+      "rmse_per_role": [
+        0.0033641031978759025,
+        0.003360150996764581
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "CACHE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.007872439775579946,
+      "max_error": 0.011751497284262502,
+      "mae_per_role": [
+        0.0059394159763594126,
+        0.00610598161285722
+      ],
+      "rmse_per_role": [
+        0.006838073982174806,
+        0.006987479364634085
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "ENDPOINT_ONLY",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0031472890381469888,
+      "max_error": 0.008811350597700995,
+      "mae_per_role": [
+        0.002803254405672174,
+        0.002776967732067577
+      ],
+      "rmse_per_role": [
+        0.0033279969389389476,
+        0.0033203602193597535
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "RAW32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.006558010141041341,
+      "max_error": 0.06869927335019987,
+      "mae_per_role": [
+        0.004738573693838044,
+        0.00396378203329449
+      ],
+      "rmse_per_role": [
+        0.008205961252261848,
+        0.0059848460631770585
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.99609375,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "PHASE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.003011731070172043,
+      "max_error": 0.008708389936590955,
+      "mae_per_role": [
+        0.002645144959855594,
+        0.002663985568837203
+      ],
+      "rmse_per_role": [
+        0.0031918245427627963,
+        0.003233992027398261
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "CACHE32",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.007872439775579946,
+      "max_error": 0.011751497284262502,
+      "mae_per_role": [
+        0.0059394159763594126,
+        0.00610598161285722
+      ],
+      "rmse_per_role": [
+        0.006838073982174806,
+        0.006987479364634085
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "ENDPOINT_ONLY",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_e_comp": 0.003012853495486259,
+      "max_error": 0.008708389936590955,
+      "mae_per_role": [
+        0.002651502316504547,
+        0.002670741868476589
+      ],
+      "rmse_per_role": [
+        0.003190883320172422,
+        0.0032264191291492437
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "RAW32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.1289066486949533,
+      "max_error": 0.24223697261004462,
+      "mae_per_role": [
+        0.1289066486949533,
+        0.002189399552305781
+      ],
+      "rmse_per_role": [
+        0.1507770464157447,
+        0.00309549047728034
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.3333333333333333,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "PHASE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0023874011342981147,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.0023874011342981147,
+        0.0015837931918401857
+      ],
+      "rmse_per_role": [
+        0.002729487922848091,
+        0.001878146626559824
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "CACHE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0004901960784317656,
+      "max_error": 0.008823529411764675,
+      "mae_per_role": [
+        0.0004901960784315681,
+        0.0004901960784315681
+      ],
+      "rmse_per_role": [
+        0.00207972582701925,
+        0.00207972582701925
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "ENDPOINT_ONLY",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.001433118859330741,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.00143040614433845,
+        0.0014080601229967435
+      ],
+      "rmse_per_role": [
+        0.0018575995728191427,
+        0.0018055608792360222
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "RAW32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.1289066486949533,
+      "max_error": 0.24223697261004462,
+      "mae_per_role": [
+        0.002189399552305781,
+        0.1289066486949533
+      ],
+      "rmse_per_role": [
+        0.00309549047728034,
+        0.1507770464157447
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.3333333333333333,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "PHASE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0023874011342981147,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.0015837931918401857,
+        0.0023874011342981147
+      ],
+      "rmse_per_role": [
+        0.001878146626559824,
+        0.002729487922848091
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "CACHE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0004901960784317656,
+      "max_error": 0.008823529411764675,
+      "mae_per_role": [
+        0.0004901960784315681,
+        0.0004901960784315681
+      ],
+      "rmse_per_role": [
+        0.00207972582701925,
+        0.00207972582701925
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "ENDPOINT_ONLY",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.001433118859330741,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.0014080601229967435,
+        0.00143040614433845
+      ],
+      "rmse_per_role": [
+        0.0018055608792360222,
+        0.0018575995728191427
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "RAW32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.1289066486949533,
+      "max_error": 0.24223697261004462,
+      "mae_per_role": [
+        0.1289066486949533,
+        0.002189399552305781
+      ],
+      "rmse_per_role": [
+        0.1507770464157447,
+        0.00309549047728034
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 0.3333333333333333,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "PHASE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0023874011342981147,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.0023874011342981147,
+        0.0015837931918401857
+      ],
+      "rmse_per_role": [
+        0.002729487922848091,
+        0.001878146626559824
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "CACHE32",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.0004901960784317656,
+      "max_error": 0.008823529411764675,
+      "mae_per_role": [
+        0.0004901960784315681,
+        0.0004901960784315681
+      ],
+      "rmse_per_role": [
+        0.00207972582701925,
+        0.00207972582701925
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "ENDPOINT_ONLY",
+      "n": 18,
+      "coverage": 1.0,
+      "mean_e_comp": 0.001433118859330741,
+      "max_error": 0.004867627985049694,
+      "mae_per_role": [
+        0.00143040614433845,
+        0.0014080601229967435
+      ],
+      "rmse_per_role": [
+        0.0018575995728191427,
+        0.0018055608792360222
+      ],
+      "valid_joint_0_5": 1.0,
+      "local_valid_joint_0_05": 1.0,
+      "status_counts": {
+        "VALID": 18
+      }
+    }
+  ],
+  "paired_fresh_original_contrasts": {
+    "RAW32_minus_ENDPOINT_ONLY": {
+      "mean": 0.003849724637838371,
+      "percentile95_ci": [
+        0.003227670418738494,
+        0.004559723235073656
+      ],
+      "replicates": 2000
+    },
+    "PHASE32_minus_RAW32": {
+      "mean": -0.0037988950136755694,
+      "percentile95_ci": [
+        -0.004497331257324211,
+        -0.0031739937082060424
+      ],
+      "replicates": 2000
+    },
+    "PHASE32_minus_CACHE32": {
+      "mean": -0.004674321113270156,
+      "percentile95_ci": [
+        -0.004957421587575051,
+        -0.0043810740225606335
+      ],
+      "replicates": 2000
+    }
+  },
+  "resources": {
+    "RAW32": {
+      "peak_payload_bits": {
+        "mean": 32.0,
+        "min": 32,
+        "max": 32
+      },
+      "allocated_payload_bit_ms": {
+        "mean": 3200.0,
+        "min": 3200,
+        "max": 3200
+      },
+      "occupied_payload_bit_ms": {
+        "mean": 2581.25,
+        "min": 1280,
+        "max": 3200
+      },
+      "first_to_second_ms": {
+        "mean": 41.2890625,
+        "min": 20,
+        "max": 80
+      }
+    },
+    "PHASE32": {
+      "peak_payload_bits": {
+        "mean": 32.0,
+        "min": 32,
+        "max": 32
+      },
+      "allocated_payload_bit_ms": {
+        "mean": 3200.0,
+        "min": 3200,
+        "max": 3200
+      },
+      "occupied_payload_bit_ms": {
+        "mean": 2581.25,
+        "min": 1280,
+        "max": 3200
+      },
+      "first_to_second_ms": {
+        "mean": 41.2890625,
+        "min": 20,
+        "max": 80
+      }
+    },
+    "CACHE32": {
+      "peak_payload_bits": {
+        "mean": 32.0,
+        "min": 32,
+        "max": 32
+      },
+      "allocated_payload_bit_ms": {
+        "mean": 3200.0,
+        "min": 3200,
+        "max": 3200
+      },
+      "occupied_payload_bit_ms": {
+        "mean": 1920.625,
+        "min": 960,
+        "max": 2880
+      },
+      "first_to_second_ms": {
+        "mean": 41.2890625,
+        "min": 20,
+        "max": 80
+      }
+    },
+    "ENDPOINT_ONLY": {
+      "peak_payload_bits": {
+        "mean": 128.0,
+        "min": 128,
+        "max": 128
+      },
+      "allocated_payload_bit_ms": {
+        "mean": 12800.0,
+        "min": 12800,
+        "max": 12800
+      },
+      "occupied_payload_bit_ms": {
+        "mean": 6545.0,
+        "min": 3200,
+        "max": 10880
+      },
+      "first_to_second_ms": {
+        "mean": 41.2890625,
+        "min": 20,
+        "max": 80
+      }
+    }
+  },
+  "quantization_events": 22260,
+  "numerical_boundary_bands": 0,
+  "validation": {
+    "integer_payload_budget": true,
+    "cache_query_identity": true,
+    "no_saturation_or_singularity": true,
+    "all_raw_error_bounds": true,
+    "query_swap_exact": true,
+    "first_error_decomposition": true
+  },
+  "wall_seconds": 0.7429690359999768,
+  "maxrss_kib": 103348,
+  "limitation": "32bits denotes persistentpayload only, plus2controllerbits; exactinputs64bitarithmetic/timing/division/gains/readout outsidebudget; endpointonly peak128bits; notTANneuron."
+}

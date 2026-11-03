@@ -1,0 +1,123 @@
+% ============================ 5. Results ================================
+\section{Results}\label{sec:results}
+
+All numbers in this section are frozen archive results
+(Section~\ref{sec:methods}); each claim is traceable to a recorded
+experiment.
+
+\subsection{History dependence and non-Markovianity}\label{sec:res-phase1}
+
+Natural collisions were abundant for every window-carrying model
+(found pairs: B1 92{,}600; B2 19{,}234; B3 1{,}633{,}844; B4
+1{,}427{,}817; 1{,}500 analysed per model; Figure~\ref{fig:phase1},
+Table~\ref{tab:phase1}).  On the continuous branch, the mean one-step
+amplification $K$ was $0.5000000$ for B1 (exact; maximum deviation
+$1.8\times10^{-8}$, machine precision), $4.47\times10^{3}$ (95\% CI
+$[3.26,5.92]\times10^{3}$) for B2, $1.235\times10^{4}$
+($[7.78,1.83]\times10^{4}$) for B3 and $2.047\times10^{4}$
+($[1.12,3.57]\times10^{4}$) for B4, with $73.7\%$ of B4 collision pairs
+exceeding $K > 10^{3}$.  Post-reset Markov violations
+($|\Delta h_{10}| > \delta$) occurred in 0\%, 0.6\%, 33.1\% and 32.2\%
+of pairs for B1--B4 respectively.  When the probe was not surprising
+relative to the local window (gates closed, $S_{10} = 0$), the current
+vanished and $K = 0.5$ exactly for both B3 and B4: surprise-gating makes
+the non-Markovianity \emph{conditional} on prediction error.  Attention
+divergence predicted the current divergence (Pearson
+$r(JSD, \Delta A) = 0.87$--$0.89$, $p < 10^{-300}$; $\Delta A$ vs.\
+$\Delta\tilde{h}$ $r = 1.000$), and the amplification ordering was
+B4 $>$ B3 $>$ B2 (median $K$ ratios 2.15 and 3.29, Mann--Whitney
+$p = 1.3\times10^{-32}$ and $p = 1.3\times10^{-63}$).  After a common
+double spike at $T$ (843 fully resynchronised pairs), B1 stayed
+synchronised forever (machine-exact), B2 re-diverged on the continuous
+branch and re-converged after the window flush, while B3/B4 retained
+inter-pair gaps beyond the flush in $\sim$25\% of pairs: a spike reset
+erases $h$ but not the windowed memory.  These results establish that
+the scalar membrane potential is not a sufficient state whenever the
+update reads the windowed past, for \emph{all} window-carrying models;
+history dependence is not an attention-specific effect.
+
+\subsection{Local fluctuation geometry}\label{sec:res-phase2}
+
+With the shared four-dimensional frame $z_C$ and a matched full frame
+$z_F$ (Section~\ref{sec:methods-phase2}; Figure~\ref{fig:geometry},
+Figure~\ref{fig:rank}, Table~\ref{tab:phase2}), event-locked velocity
+effective rank $d_D$ (mean over $\tau \in \{0,1,2\}$, 374 pooled
+events) was: B1 $1.674$ ($\Delta$ vs.\ quiet $0.674$), B3 $1.458$
+($z_C$) and $1.484$ ($z_F$), B4 $1.589$ ($z_C$) and $2.089$ ($z_F$;
+$\Delta = 1.089$), and the input-only control C0 $1.055$.  Three
+findings follow.  First, event-locked expansion exists for every
+h-bearing model and is not specific to TAN: in the shared frame B4 does
+not exceed B1 ($1.589 < 1.674$), and this negative contrast is robust
+across amplitude controls (raw/stratified/residualised
+$1.589/1.701/1.712$ vs.\ B1 $1.674/1.732/1.747$).  Second, within the
+matched full frame that contains the attention coordinates, B4 exceeds
+B3 in effective rank (event $d_D$ 2.089 vs.\ 1.484; event CIs
+$[1.87,2.30]$ vs.\ $[1.42,1.53]$, disjoint) and in covariance scale
+(event $\log\operatorname{Tr}$ 3.58 vs.\ 2.48 nats; $\Delta = +1.09$
+nats); the rank contrast survives and slightly strengthens under
+amplitude controls ($+0.61$ raw, $+0.74$ stratified, $+0.78$
+residualised).  Third, the velocity-geometry response is temporally
+structured: its peak occurs at $\tau \approx 4$--$6$ (content-rich
+windows after burst onsets, $d_D$ up to 2.89), not at the first pulse
+($d_D(\tau{=}0) \approx 1.66$), and recovery is faster for B4
+($\tau_{e\text{-fold}} = 5.4$, CI $[4.6,6.3]$, vs.\ B3 8.5,
+$[6.1,10.6]$).  These are statements about the effective rank of local
+response covariance; they are not statements about intrinsic dimension.
+
+\subsection{Target-relevant temporal retrieval (Probe 1)}\label{sec:res-probe1}
+
+Pooled balanced three-class accuracy over the frozen three seeds
+(Figure~\ref{fig:probe1}, Table~\ref{tab:probe1}) was, for clean /
+distractor conditions: B1 $0.331 / 0.340$ (chance), B2
+$0.867 / 0.843$ (strong, stable positional-memory baseline), B3
+$0.375 / 0.337$ (with lo-class-blind cells; one cell invalid for
+interpretation), B4 $0.328 / 0.389$.  The B4 vs.\ B3 contrast in the
+distractor condition was $+0.0570$ (95\% CI $[+0.0387, +0.0758]$,
+$n = 6000$ pooled trials), with per-seed differences $+0.056$, $+0.043$,
+$+0.056$.  B4's absolute elevation over chance in the distractor
+condition attenuated across seeds ($0.427$, $0.398$, $0.342$;
+seed 20260906 is $\approx$ chance).  Taken together, and with B3's
+readout limitation and the task's structural bias toward fixed-position
+memory (B2 dominates), the evidence supports the constrained statement:
+Full TAN shows evidence of improved target-relevant retrieval under
+content-rich temporal context relative to the no-attention control, with
+a partially replicated, seed-attenuated effect.  This is \emph{limited
+support}, not a demonstration of flexible temporal retrieval or
+distractor robustness.
+
+\subsection{Identifiability audit of query-conditioned binding (Probe 2)}
+\label{sec:res-probe2}
+
+The identifiability audit did not support genuine query-conditioned
+routing in the current scalar TAN kernel (Figure~\ref{fig:probe2},
+Table~\ref{tab:probe2}).  The B2 linear shortcut test reached balanced
+accuracy $0.779$ ($[0.724, 0.836]$) and the B3 shortcut test $0.709$
+($[0.644, 0.775]$) against a red line of 0.58, so the task as encoded
+was solvable through storage/integration shortcuts before any routing
+mechanism was evaluated.  For B4, the attention hit rate (argmax of the
+history-tap attention weights landing on the target position) was $0.511$
+(bootstrap CI lower bound $0.481$), split as $0.000$ for $q = A$ and
+$1.000$ for $q = B$; the target/distractor contrast was $R = 0.034$
+(required $\geq 2$); and the query-conditioned JSD of attention
+distributions was $0.0002$ with permutation $p = 0.92$ (no detectable
+query dependence).  The decisive counterfactual: with history held
+fixed and only the query changed ($q = A \to B$), the attention argmax
+flip rate was $0.000$.  Changing the query changed attention sharpness,
+never the winner among history taps.
+
+\subsection{Mechanistic diagnosis}\label{sec:res-mechanism}
+
+Three layers explain the audit outcome (Figure~\ref{fig:mechanism}).
+\textit{Layer 1, encoding shortcut:} the composite encoding used
+asymmetric key amplitudes, so B-coded events were systematically larger;
+storage/integration readouts could exploit static amplitude, and B4's
+amplitude-based attention was attracted to B events ($q=B$ hit 1.000,
+$q=A$ hit 0.000).  \textit{Layer 2, scalar-kernel limitation:}
+independently of the encoding, with $E_{t,i} = \gamma_t x_i$ the ratio
+$E_{t,i}/E_{t,j} = x_i/x_j$ is query-independent for fixed history;
+query identity enters only through the scalar $\gamma_t$, so query
+changes weighting strength, not selected content.  \textit{Layer 3,
+self-attraction:} query amplitudes (3.0/4.0) exceeded all history codes,
+so the softmax concentrated on the current tap in 100\% of trials -- an
+experimental confound that does not explain away the structural
+limitation of the scalar kernel.

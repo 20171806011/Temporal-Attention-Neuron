@@ -1,0 +1,989 @@
+{
+  "started_utc": "2026-11-02T21:56:05.020057+00:00",
+  "completed_utc": "2026-11-02T21:56:09.566785+00:00",
+  "status": "COMPLETED",
+  "execution_command": [
+    "tan_audit/noise_preservation_v9/run_noise_preservation.py"
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "repository": "Temporal-Attention-Neuron",
+  "repository_status_unchanged": true,
+  "git_provenance_available": true,
+  "protocol_sha256": "70a9fcebb77a223e321e34fa11eb18f1228431c3d3ef8ac40cfc1a4706eb87e1",
+  "primary_script_sha256": "bd08b8aeef0ebdef4f69bba1e4efb8d9d4cb916800c0660f60c2bfd59c0e017f",
+  "ledger_fields": [
+    "history_id",
+    "condition",
+    "arm",
+    "step_present",
+    "predicted_step",
+    "observed_total_spikes",
+    "observed_onset_spikes",
+    "observed_late_spikes",
+    "R",
+    "generated_total_spikes",
+    "generated_onset_spikes",
+    "generated_late_spikes",
+    "underlying_model",
+    "sum_abs_current",
+    "sum_current_squared",
+    "sum_candidate_squared",
+    "peak_abs_current",
+    "peak_candidate",
+    "peak_abs_candidate",
+    "peak_membrane",
+    "peak_abs_membrane"
+  ],
+  "contrast_order": [
+    "TAN_BA_minus_ZERO_BA",
+    "TAN_BA_minus_LIF_BA",
+    "TAN_BA_minus_LIF_THINNED_BA",
+    "TAN_step_R_minus_LIF_step_R",
+    "TAN_step_R_minus_LIF_THINNED_step_R",
+    "TAN_noise_induced_R_minus_LIF_noise_induced_R"
+  ],
+  "phase_A_records": 100,
+  "fresh_ledger_rows": 4096,
+  "trajectory_axis_order": "history, condition, timestep[, history_slot]",
+  "float_validation_absolute_tolerance": 1e-12,
+  "original_results": "original_results.json",
+  "fresh_results": "primary_results.json",
+  "clean_results": "clean_results.json",
+  "files": {
+    "SOURCE_GUARD.json": {
+      "sha256": "dc9c3b29e2d2a7f4c2c90cd7d3a9c153127e8396975eec6cd698916ad351e29e",
+      "bytes": 2536
+    },
+    "original_call_results.csv": {
+      "sha256": "f7c1ced808c51bd6cf27bbc9971cf324c2195b918457d139b9e4594dc3552a10",
+      "bytes": 3014
+    },
+    "original_inputs.npz": {
+      "sha256": "ad238966de2c23e4db25ea4437a7bb32110a9c7de34e796ce755472caf2fdb30",
+      "bytes": 44394
+    },
+    "original_trajectories.npz": {
+      "sha256": "a5b0dbf50050935c98bf32ea6780114302433ed0e341ddb665e5e4841479347d",
+      "bytes": 483535
+    },
+    "PHASE_A_COMPLETE.json": {
+      "sha256": "0a4f4cc8118083062ba0352f280add999089ec4a328fcba059b24a532e95f85c",
+      "bytes": 1181
+    },
+    "original_bootstrap_draws.npy": {
+      "sha256": "951620937d0613efb127a5721a1cf31a2b7b1f5b7810bf00166c7c79c281d536",
+      "bytes": 800128
+    },
+    "original_bootstrap_contrasts.csv": {
+      "sha256": "053408de3b31f6d781ee08742a622d10886c1a96017d12abcac8be4cc77b5635",
+      "bytes": 39931
+    },
+    "original_ledger.csv": {
+      "sha256": "2a321fb5b0f07a06be123024d201b4603a28588caa810dc762b3851209865e57",
+      "bytes": 19403
+    },
+    "original_results.json": {
+      "sha256": "cc15aadf6a75264e4627d442e87b99f034e5e074121a5a462fc5db6e36f76ee8",
+      "bytes": 1671
+    },
+    "fresh_inputs.npz": {
+      "sha256": "4d94d62d97f672478d62baaf859437ee2f3a1fa8e73fcc7593f41541564d45d9",
+      "bytes": 777097
+    },
+    "clean_inputs.npz": {
+      "sha256": "410f98d3988626bcc84b9d79f804e1da06987f7713995246049181f132d3f83a",
+      "bytes": 1028
+    },
+    "FRESH_INPUTS_FROZEN.json": {
+      "sha256": "fba3a03da88183c0d09f36c288f422873e304c215877f3214d9cf13633ce9382",
+      "bytes": 2546
+    },
+    "clean_trajectories.npz": {
+      "sha256": "6c12bddc3918e297d909f74eeebf6da97ea0e610ae0364153cf1b94aff9cf5cf",
+      "bytes": 6371
+    },
+    "clean_results.json": {
+      "sha256": "d9fca23d47bb25085710b08d4735a65af278b4df100e339fadbb62f5ed662998",
+      "bytes": 2922
+    },
+    "clean_native_ledger.csv": {
+      "sha256": "9c88efc4982b03ba336d050930e88a30fd8464c0124dcb19eb4b3a6ee21b609c",
+      "bytes": 753
+    },
+    "fresh_trajectories.npz": {
+      "sha256": "2019c71fc901648eed48030af344b4db8e953e7a2ccc553d91d783e212012528",
+      "bytes": 8219682
+    },
+    "fresh_ledger.csv": {
+      "sha256": "1b3b4b6a2fcfd889761cfde7600707e007dae96fa97e27c836f44c1311d3aafd",
+      "bytes": 642430
+    },
+    "fresh_samples.npz": {
+      "sha256": "0f7e3427f4a3dedf86874d3c57594a555bcdd90214ef2b2744c38ad149011dcb",
+      "bytes": 11484
+    },
+    "fresh_bootstrap_draws.npy": {
+      "sha256": "1ad848da7990cb9b22d1ff06c51bc218982a3705246e8b67cd1c0192b9a52539",
+      "bytes": 8192128
+    },
+    "fresh_bootstrap_contrasts.csv": {
+      "sha256": "7f0964dd640b2b5e7845f16bf588da00c3ce37f0248196db8e7b9b247aeda6ac",
+      "bytes": 174468
+    },
+    "primary_results.json": {
+      "sha256": "11e7d54376e24de553b34038ca890f134e333df5cc7ea14ae5a163bf9aa2c442",
+      "bytes": 21638
+    },
+    "run.log": {
+      "sha256": "47eb6cd28f2d745a9509a4054e2d5c4a2f666d242bd7981441ef2b1704c1c462",
+      "bytes": 1624
+    },
+    "repo_status_before.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "repo_status_after.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "npz_schema": {
+    "original_inputs.npz": {
+      "noise": {
+        "shape": [
+          50,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          50
+        ],
+        "dtype": "int64"
+      },
+      "conditions": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U4"
+      }
+    },
+    "original_trajectories.npz": {
+      "conditions": {
+        "shape": [
+          1
+        ],
+        "dtype": "<U4"
+      },
+      "history_ids": {
+        "shape": [
+          50
+        ],
+        "dtype": "int64"
+      },
+      "LIF__current": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__candidate": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__membrane": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__exact_class_membrane": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__spikes": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF__exact_class_spikes": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__current": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          50,
+          1,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          50,
+          1,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          50,
+          1,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          50,
+          1,
+          60
+        ],
+        "dtype": "float64"
+      }
+    },
+    "fresh_inputs.npz": {
+      "noise": {
+        "shape": [
+          512,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "thinning_uniforms": {
+        "shape": [
+          512,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          512
+        ],
+        "dtype": "int64"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      }
+    },
+    "clean_inputs.npz": {
+      "noise": {
+        "shape": [
+          1,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "base": {
+        "shape": [
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "waveforms": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      }
+    },
+    "clean_trajectories.npz": {
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "history_ids": {
+        "shape": [
+          1
+        ],
+        "dtype": "int64"
+      },
+      "LIF__current": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__candidate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__exact_class_membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF__exact_class_spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__current": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          1,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          1,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      }
+    },
+    "fresh_trajectories.npz": {
+      "conditions": {
+        "shape": [
+          2
+        ],
+        "dtype": "<U5"
+      },
+      "history_ids": {
+        "shape": [
+          512
+        ],
+        "dtype": "int64"
+      },
+      "LIF__current": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__candidate": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__membrane": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__exact_class_membrane": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF__exact_class_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__current": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__candidate": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__membrane": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_membrane": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__exact_class_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__history": {
+        "shape": [
+          512,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__exact_class_history": {
+        "shape": [
+          512,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__attention": {
+        "shape": [
+          512,
+          2,
+          60,
+          10
+        ],
+        "dtype": "float64"
+      },
+      "TAN__surprise": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__gate": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__context": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "TAN__query": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "float64"
+      },
+      "LIF__observed_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "TAN__observed_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "LIF_THINNED__observed_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      },
+      "ZERO_OUTPUT__observed_spikes": {
+        "shape": [
+          512,
+          2,
+          60
+        ],
+        "dtype": "int8"
+      }
+    },
+    "fresh_samples.npz": {
+      "TAN__step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN__catch_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN__TPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN__FPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN__BA_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN__J_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__catch_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__TPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__FPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__BA_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF__J_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__catch_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__TPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__FPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__BA_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "LIF_THINNED__J_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__catch_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__TPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__FPR_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__BA_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "ZERO_OUTPUT__J_sample": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_BA_minus_ZERO_BA": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_BA_minus_LIF_BA": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_BA_minus_LIF_THINNED_BA": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_step_R_minus_LIF_step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_step_R_minus_LIF_THINNED_step_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      },
+      "TAN_noise_induced_R_minus_LIF_noise_induced_R": {
+        "shape": [
+          512
+        ],
+        "dtype": "float64"
+      }
+    }
+  }
+}

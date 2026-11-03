@@ -1,0 +1,271 @@
+{
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "runs": [
+    {
+      "all_12_writes_wall_ns": 48264863,
+      "condition": "separated_q24",
+      "method": "redundant_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 18464762
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 7406117
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 99294594
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 45486742
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 59691693
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 28525790
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 31317612
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 14443725
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 319294748
+    },
+    {
+      "all_12_writes_wall_ns": 39828614,
+      "condition": "separated_q24",
+      "method": "minimal_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 16199465
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 7932048
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 94246679
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 36799634
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 55038285
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 24252788
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 26245818
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 11468205
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 282408345
+    },
+    {
+      "all_12_writes_wall_ns": 1084903,
+      "condition": "separated_q24",
+      "method": "explicit_table_same_observations",
+      "phased_reconstruction": {},
+      "whole_run_including_scorer_wall_ns": 6720896
+    },
+    {
+      "all_12_writes_wall_ns": 69561549,
+      "condition": "clustered_q24",
+      "method": "redundant_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 22673969
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 5657395
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 47,
+          "wall_ns": 90219545
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 47,
+          "wall_ns": 20364182
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 78668605
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 16151498
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 23,
+          "wall_ns": 53576579
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 23,
+          "wall_ns": 13279980
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 310972722
+    },
+    {
+      "all_12_writes_wall_ns": 72419110,
+      "condition": "clustered_q24",
+      "method": "minimal_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 23580314
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 7860523
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 47,
+          "wall_ns": 105447074
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 47,
+          "wall_ns": 24489947
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 80289997
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 19538650
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 23,
+          "wall_ns": 58220359
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 23,
+          "wall_ns": 11792003
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 342074404
+    },
+    {
+      "all_12_writes_wall_ns": 1088498,
+      "condition": "clustered_q24",
+      "method": "explicit_table_same_observations",
+      "phased_reconstruction": {},
+      "whole_run_including_scorer_wall_ns": 6749039
+    },
+    {
+      "all_12_writes_wall_ns": 86313433,
+      "condition": "clustered_q40",
+      "method": "redundant_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 48320177
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 6949221
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 242650953
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 37305553
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 168917340
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 27752100
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 71970029
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 11801315
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 628899286
+    },
+    {
+      "all_12_writes_wall_ns": 102033344,
+      "condition": "clustered_q40",
+      "method": "minimal_common_certificate",
+      "phased_reconstruction": {
+        "evaluator_certificate:root_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 56887507
+        },
+        "evaluator_certificate:value_reconstruction_certificate": {
+          "calls": 12,
+          "wall_ns": 8844664
+        },
+        "ordinary_queries:root_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 285051239
+        },
+        "ordinary_queries:value_reconstruction_certificate": {
+          "calls": 55,
+          "wall_ns": 43716695
+        },
+        "requested_target_queries:root_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 201708702
+        },
+        "requested_target_queries:value_reconstruction_certificate": {
+          "calls": 34,
+          "wall_ns": 29964525
+        },
+        "write:root_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 86320782
+        },
+        "write:value_reconstruction_certificate": {
+          "calls": 21,
+          "wall_ns": 13093652
+        }
+      },
+      "whole_run_including_scorer_wall_ns": 740308884
+    },
+    {
+      "all_12_writes_wall_ns": 2420184,
+      "condition": "clustered_q40",
+      "method": "explicit_table_same_observations",
+      "phased_reconstruction": {},
+      "whole_run_including_scorer_wall_ns": 8634357
+    }
+  ],
+  "scope": "Host wall-clock timings; not energy, not an algorithmic lower bound; root/value phases include their certificates."
+}

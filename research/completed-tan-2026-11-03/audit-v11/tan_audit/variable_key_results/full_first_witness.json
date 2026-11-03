@@ -1,0 +1,108 @@
+{
+  "attempt_id": 1280,
+  "domain": "full",
+  "positions": [
+    0,
+    1
+  ],
+  "anchor_id": 0,
+  "shift": 1.2,
+  "anchor_keys": [
+    1.9249058855408148,
+    2.342028154804246
+  ],
+  "anchor_values": [
+    -2.8047912145471425,
+    1.97404267441867
+  ],
+  "anchor_state": [
+    0.00020519717693189004,
+    0.07749656384770424,
+    0.0
+  ],
+  "anchor_branch": {
+    "spikes": 0,
+    "clips": 0,
+    "margin": 0.7669038162849257,
+    "max_A": 0.12360066055680155
+  },
+  "accepted": true,
+  "anchor_formula_residual": 1.942890293094024e-15,
+  "paired_keys": [
+    1.9249058855408148,
+    2.2460265618385553
+  ],
+  "paired_values": [
+    -1.6047912145471426,
+    1.883897316851479
+  ],
+  "paired_state": [
+    0.00020519717693189004,
+    0.07749656384770427,
+    0.0
+  ],
+  "paired_branch": {
+    "spikes": 0,
+    "clips": 0,
+    "margin": 0.7669038162849255,
+    "max_A": 0.12360066055680162
+  },
+  "paired_formula_residual": 1.9290125052862095e-15,
+  "state_residual": 2.7755575615628914e-17,
+  "native_observation_residual": 0.0,
+  "probe_observation_residual": 0.0,
+  "native_anchor_prediction": {
+    "u_readout": 0.13076781164600257,
+    "v_hat_count": -2.0,
+    "v_hat_latency": 1.35
+  },
+  "native_paired_prediction": {
+    "u_readout": 0.13076781164600257,
+    "v_hat_count": -2.0,
+    "v_hat_latency": 1.35
+  },
+  "probe_anchor_samples": [
+    0.00020519717693189004,
+    0.13126161999691346
+  ],
+  "probe_paired_samples": [
+    0.00020519717693189004,
+    0.13126161999691346
+  ],
+  "reason": "accepted",
+  "query": 1.9249058855408148,
+  "anchor_singular_values": [
+    0.0053754341934415155,
+    2.5984815365718452e-05
+  ],
+  "paired_singular_values": [
+    0.0053754443444906565,
+    2.6784095712244624e-05
+  ],
+  "anchor_knownkeys_inverse": {
+    "solutions": [
+      [
+        -2.8047912145476417,
+        1.9740426744186323
+      ]
+    ],
+    "abstain": false,
+    "prediction": [
+      -2.8047912145476417,
+      1.9740426744186323
+    ]
+  },
+  "paired_knownkeys_inverse": {
+    "solutions": [
+      [
+        -1.604791214547646,
+        1.883897316851444
+      ]
+    ],
+    "abstain": false,
+    "prediction": [
+      -1.604791214547646,
+      1.883897316851444
+    ]
+  }
+}

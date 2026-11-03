@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "independent_generator": true,
+  "generator_rejections": 30,
+  "input_count": 1611,
+  "ledger_rows": 3222,
+  "role_outputs": 6444,
+  "metrics_cells": 12,
+  "snapshots_checked": 25776,
+  "complete_fixture_trajectories_checked": 50,
+  "resource_fields_checked": 135324,
+  "max_geometric_endpoint_slope_difference": 1.4352963262354024e-12,
+  "max_full_fixture_slope_difference": 3.765876499528531e-12,
+  "max_absolute_resource_formula_difference": 7.275957614183426e-09,
+  "all_sources_preserved": true,
+  "exact_required_minimax_updates": 2406,
+  "native_same_port_finite_error_bound": 0.9,
+  "uncalibrated_fixture_error": 2.0,
+  "controller_counter_alternative_bits": {
+    "A100": 7,
+    "FAST10": 13
+  },
+  "seconds": 2.2298968980003337,
+  "scope": "Three payload plus three counted scratch registers; stage bits exclude externally supplied event timing/clock. Scratch active real-ms is provisioned capacity, not measured occupied time. No physical energy or all-neuron claim."
+}

@@ -1,0 +1,73 @@
+{
+  "oracle_calibration": {
+    "N2": {
+      "trials": 500,
+      "both_acc": 1.0,
+      "mean_add_err": 0.0,
+      "passed": true
+    },
+    "N3": {
+      "trials": 500,
+      "both_acc": 1.0,
+      "mean_add_err": 0.0,
+      "passed": true
+    }
+  },
+  "adversarial_suites": {
+    "ScalarMetricAttention": {
+      "q_swap_ok": 200,
+      "v_swap_ok": 200,
+      "zero_val_ok": 200,
+      "equal_val_ok": 200,
+      "pos_perm_ok": 200,
+      "total_adv_trials": 200,
+      "passed": true
+    },
+    "VectorQKAddressAttention": {
+      "q_swap_ok": 200,
+      "v_swap_ok": 200,
+      "zero_val_ok": 200,
+      "equal_val_ok": 200,
+      "pos_perm_ok": 200,
+      "total_adv_trials": 200,
+      "passed": true
+    }
+  },
+  "leakage_check": {
+    "empirical_both_acc": 0.172,
+    "both_count": 172,
+    "c1_acc": 0.345,
+    "c2_acc": 0.342,
+    "total_trials": 1000,
+    "ci_95": [
+      0.14987640210972414,
+      0.19663395145680002
+    ],
+    "theoretical_chance": 0.16666666666666666,
+    "threshold": 0.21666666666666667,
+    "ci_bound": 0.18666666666666665,
+    "passed": true
+  },
+  "leakage_negative_fixture": {
+    "leaky_both_acc": 0.661,
+    "rejected_as_expected": true,
+    "exception_caught": "AssertionError",
+    "rejection_message": "LEAKAGE ASSERTION FAILURE: empirical accuracy 0.6610 exceeds threshold 0.2167 (chance=0.1667, delta=0.0500)"
+  },
+  "historical_kernel_regression": {
+    "QA_3.0": {
+      "EA": 3.59230428781891,
+      "EB": 3.3335615634710862,
+      "diff": 0.25874272434782375,
+      "winner": "A"
+    },
+    "QB_4.0": {
+      "EA": 5.032371000129226,
+      "EB": 5.188281133524823,
+      "diff": -0.15591013339559723,
+      "winner": "B"
+    },
+    "regression_passed": true
+  },
+  "g1_all_passed": true
+}

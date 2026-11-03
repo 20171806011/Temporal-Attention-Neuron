@@ -1,0 +1,68 @@
+{
+  "version": "tan-range-consistency-v2.0",
+  "scope": "Bounded conceptual Chat-sandbox comparison; NOT original TAN/P1-B/v11 or biological replication",
+  "dimension": 4,
+  "a_values": [1.0, 0.01],
+  "features": {"f1": "e1", "f2": "e1+a*e2", "later_new": "e3"},
+  "initial_latest": [0.25, -0.5],
+  "repeat_target": 1.0,
+  "repetitions": 16,
+  "checkpoints": [1, 4, 16],
+  "later_new_value": 0.0,
+  "final_clean_f2_value": -0.75,
+  "spectral_cutoffs_absolute": [1e-10, 1e-4],
+  "keep_eigenvalues": "strictly greater than cutoff; no absolute-value inversion of negative modes",
+  "faults": [
+    {"name":"none","ratio":0.0},
+    {"name":"weak_null_symmetric_mix","ratio":0.1},
+    {"name":"weak_null_symmetric_mix","ratio":0.6},
+    {"name":"weak_erosion","ratio":0.1},
+    {"name":"weak_erosion","ratio":0.6},
+    {"name":"null_lift","ratio":0.1},
+    {"name":"null_lift","ratio":0.6}
+  ],
+  "fault_scale": "delta=ratio*smallest_positive_eigenvalue(C_true_initial); one persistent additive symmetric fault after clean initialization, not reinjected each write",
+  "noise_cases": [
+    {"name":"clean","zeta":0.0,"direction":"zero"},
+    {"name":"null_0.001","zeta":0.001,"direction":"e3"},
+    {"name":"mixed_0.001","zeta":0.001,"direction":"0.8*e2+0.6*e3"},
+    {"name":"null_0.02","zeta":0.02,"direction":"e3"},
+    {"name":"mixed_0.02","zeta":0.02,"direction":"0.8*e2+0.6*e3"}
+  ],
+  "arms": {
+    "U": "old: b <- b + (v-x^T Khat b)*x",
+    "P": "old: b0=Qhat b; b <- b0 + (v-x^T Khat b0)*Qhat x",
+    "PN": "old: b0=Qhat b; ell=x^T Khat x; b <- b0 + (v-x^T Khat b0)/ell * Qhat x",
+    "TK": "same PN algorithm and same faulty C/cutoff; evaluator supplies noiseless current feature instead of x; no oracle inverse or historical key table"
+  },
+  "important_convention": "P/PN/TK reproject the entire b, not only the increment. This can delete old weak-direction content. TK is a privileged address-control reference, not a universal performance upper bound.",
+  "routing": "learner uses norm((I-Qhat)x)>tau for new; no operation labels or true IDs are supplied; clean initialization uses tau=1e-9 and cutoff=1e-12, then frozen runtime tau/cutoff",
+  "tau_runtime": 0.25,
+  "leverage_min": 1e-12,
+  "state_norm_cap": 1e12,
+  "new_write": "C <- C+xx^T; b <- b+v*x; increment admission counter; reject new when counter==dimension; no automatic b projection on new branch",
+  "precision": "float64",
+  "rng": "none; all vectors and cases deterministic",
+  "learner_access": "only current observed feature and desired value; C,b,admission counter,cutoff,tau; evaluator alone retains canonical keys/latest targets/reference matrices",
+  "measurements": [
+    "actual old/new routing and rejections",
+    "true-key output and max latest error; other-key drift",
+    "residual at presented feature and at original noisy feature",
+    "norm(b), norm(w), leverage and fixed-C residual recurrence",
+    "true-null leakage norm((I-Qtrue)b)",
+    "estimated-range defect norm((I-Qhat)b)",
+    "projector error norm(Qhat-Qtrue), idempotence, retained rank",
+    "weak-mode b component and full-reprojection deletion",
+    "post-new actual output, old-key protection, intended new admission",
+    "evaluator-only clean-expanded-geometry ghost: e3^T (Ctrue+e3e3^T)^dagger b_before_new",
+    "gap/cutoff sufficient condition delta<cutoff<alpha-delta; projector bound delta/(alpha-delta) only when certified"
+  ],
+  "claims": "descriptive paired deterministic cases; no p-values or population claims; report all failures; do not tune grid from output",
+  "predeclared_additional_fixtures": [
+    "retain normalized-wrong-address example a=.001,x=(1,.002),target=(1,0),true prediction=(-.2,.4)",
+    "truncate a valid weak direction in diagonal C then remove cutoff to test irreversible content deletion",
+    "rotate weak subspace with cos=.8,sin=.6 and alpha=.1; Qhat exactly idempotent yet leaves true-null pollution",
+    "two distinct dictionaries with identical C=I_on_span,b=0 and ambiguous span-inside incoming key",
+    "exact-Q invariant and new-direction ghost identity checked independently of matrix faults"
+  ]
+}

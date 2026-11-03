@@ -1,0 +1,4500 @@
+{
+  "payload_bits": 32,
+  "controller_bits": 2,
+  "registers": {
+    "interpolation": [
+      16,
+      16
+    ],
+    "M0": [
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  "quantizer": "2^B inclusive-endpoint nearest levels; verification uses nearest-even ties",
+  "domain": {
+    "key_min": "3/10",
+    "key_max_closure": "5/2",
+    "min_gap": "1/20",
+    "abs_value_max_closure": "3"
+  },
+  "bounds": {
+    "raw": {
+      "epsilon_first_key": {
+        "fraction": "128/65535",
+        "decimal": 0.001953154802777142
+      },
+      "epsilon_first_value": {
+        "fraction": "64/13107",
+        "decimal": 0.004882887006942855
+      },
+      "minimum_effective_gap": {
+        "fraction": "2519/52428",
+        "decimal": 0.04804684519722286
+      },
+      "intermediate_slope_bound": {
+        "fraction": "314824/2519",
+        "decimal": 124.97975387058356
+      },
+      "intermediate_intercept_bound": {
+        "fraction": "794617/2519",
+        "decimal": 315.4493846764589
+      },
+      "first_query_prefix_error_bound": {
+        "fraction": "3136/12595",
+        "decimal": 0.24898769352917824
+      },
+      "second_query_prefix_error_bound": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "terminal_quantization_error_bound": {
+        "fraction": "128/13107",
+        "decimal": 0.00976577401388571
+      },
+      "worst_query_and_Ecomp_bound": {
+        "fraction": "42715712/165082665",
+        "decimal": 0.25875346754306394
+      },
+      "slope_guard_margin": {
+        "fraction": "7608/2519",
+        "decimal": 3.020246129416435
+      },
+      "intercept_guard_margin": {
+        "fraction": "11463/2519",
+        "decimal": 4.550615323541088
+      }
+    },
+    "phase_aware": {
+      "epsilon_first_key": {
+        "fraction": "11/655350",
+        "decimal": 1.6784924086366063e-05
+      },
+      "epsilon_first_value": {
+        "fraction": "1/21845",
+        "decimal": 4.5777065690089265e-05
+      },
+      "minimum_effective_gap": {
+        "fraction": "65513/1310700",
+        "decimal": 0.049983215075913634
+      },
+      "intermediate_slope_bound": {
+        "fraction": "7864260/65513",
+        "decimal": 120.04121319432784
+      },
+      "intermediate_intercept_bound": {
+        "fraction": "19857189/65513",
+        "decimal": 303.1030329858196
+      },
+      "first_query_prefix_error_bound": {
+        "fraction": "135/65513",
+        "decimal": 0.0020606597163921664
+      },
+      "second_query_prefix_error_bound": {
+        "fraction": "0",
+        "decimal": 0.0
+      },
+      "terminal_quantization_error_bound": {
+        "fraction": "128/13107",
+        "decimal": 0.00976577401388571
+      },
+      "worst_query_and_Ecomp_bound": {
+        "fraction": "10155109/858678891",
+        "decimal": 0.011826433730277877
+      },
+      "slope_guard_margin": {
+        "fraction": "521404/65513",
+        "decimal": 7.9587868056721565
+      },
+      "intercept_guard_margin": {
+        "fraction": "1106971/65513",
+        "decimal": 16.89696701418039
+      }
+    }
+  },
+  "endpoint_only_error_bound": {
+    "fraction": "128/13107",
+    "decimal": 0.00976577401388571
+  },
+  "cache_key_error_bound": {
+    "fraction": "11/2550",
+    "decimal": 0.004313725490196078
+  },
+  "cache_value_error_bound": {
+    "fraction": "1/85",
+    "decimal": 0.011764705882352941
+  },
+  "cache_identity_margin": {
+    "fraction": "211/5100",
+    "decimal": 0.041372549019607845
+  },
+  "fixed_analytic_fixtures": 72,
+  "fixture_maxima": {
+    "raw": {
+      "fraction": "3175/13107",
+      "decimal": 0.2422369726100557
+    },
+    "phase_aware": {
+      "fraction": "128/13107",
+      "decimal": 0.00976577401388571
+    },
+    "endpoint_only": {
+      "fraction": "128/13107",
+      "decimal": 0.00976577401388571
+    },
+    "M0": {
+      "fraction": "1/85",
+      "decimal": 0.011764705882352941
+    }
+  },
+  "fixtures": [
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1807/327675",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "260/4471",
+          "intercept": "-13504/4471",
+          "codes": [
+            32782,
+            32458
+          ],
+          "query_errors": [
+            "1807/327675",
+            "293/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "261/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "261/109225",
+            "751/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "261/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "261/109225",
+            "751/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1249/19275",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "262400/4471",
+          "intercept": "-91840/4471",
+          "codes": [
+            47792,
+            30664
+          ],
+          "query_errors": [
+            "1249/19275",
+            "224/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "32/19275",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "60",
+          "intercept": "-21",
+          "codes": [
+            48127,
+            30617
+          ],
+          "query_errors": [
+            "31/19275",
+            "32/19275"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/19275",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "60",
+          "intercept": "-21",
+          "codes": [
+            48127,
+            30617
+          ],
+          "query_errors": [
+            "31/19275",
+            "32/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "43889/327675",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "524540/4471",
+          "intercept": "-170176/4471",
+          "codes": [
+            62801,
+            28870
+          ],
+          "query_errors": [
+            "43889/327675",
+            "1/19275"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "113/327675",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "120",
+          "intercept": "-39",
+          "codes": [
+            63487,
+            28774
+          ],
+          "query_errors": [
+            "113/327675",
+            "37/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "113/327675",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "120",
+          "intercept": "-39",
+          "codes": [
+            63487,
+            28774
+          ],
+          "query_errors": [
+            "113/327675",
+            "37/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "20864/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "-787700/13413",
+          "intercept": "235456/13413",
+          "codes": [
+            17734,
+            34565
+          ],
+          "query_errors": [
+            "20864/327675",
+            "1/19275"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1169/327675",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "-262144/4369",
+          "intercept": "393217/21845",
+          "codes": [
+            17408,
+            34611
+          ],
+          "query_errors": [
+            "384/109225",
+            "1169/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1169/327675",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "18",
+          "codes": [
+            17408,
+            34611
+          ],
+          "query_errors": [
+            "384/109225",
+            "1169/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1792/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "-1280/13413",
+          "intercept": "448/13413",
+          "codes": [
+            32743,
+            32771
+          ],
+          "query_errors": [
+            "1792/327675",
+            "224/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1408/327675",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "-4/4369",
+          "intercept": "7/21845",
+          "codes": [
+            32767,
+            32768
+          ],
+          "query_errors": [
+            "1408/327675",
+            "1376/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "608/109225",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "1792/327675",
+            "608/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "24448/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "785140/13413",
+          "intercept": "-234560/13413",
+          "codes": [
+            47752,
+            30977
+          ],
+          "query_errors": [
+            "24448/327675",
+            "431/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1169/327675",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "262136/4369",
+          "intercept": "-393203/21845",
+          "codes": [
+            48127,
+            30924
+          ],
+          "query_errors": [
+            "384/109225",
+            "1169/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1169/327675",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-18",
+          "codes": [
+            48127,
+            30924
+          ],
+          "query_errors": [
+            "384/109225",
+            "1169/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "43889/327675",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-524540/4471",
+          "intercept": "170176/4471",
+          "codes": [
+            2734,
+            36665
+          ],
+          "query_errors": [
+            "43889/327675",
+            "1/19275"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "113/327675",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-120",
+          "intercept": "39",
+          "codes": [
+            2048,
+            36761
+          ],
+          "query_errors": [
+            "113/327675",
+            "37/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "113/327675",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-120",
+          "intercept": "39",
+          "codes": [
+            2048,
+            36761
+          ],
+          "query_errors": [
+            "113/327675",
+            "37/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1249/19275",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-262400/4471",
+          "intercept": "91840/4471",
+          "codes": [
+            17743,
+            34871
+          ],
+          "query_errors": [
+            "1249/19275",
+            "224/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "32/19275",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-60",
+          "intercept": "21",
+          "codes": [
+            17408,
+            34918
+          ],
+          "query_errors": [
+            "31/19275",
+            "32/19275"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/19275",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-60",
+          "intercept": "21",
+          "codes": [
+            17408,
+            34918
+          ],
+          "query_errors": [
+            "31/19275",
+            "32/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1807/327675",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-260/4471",
+          "intercept": "13504/4471",
+          "codes": [
+            32753,
+            33077
+          ],
+          "query_errors": [
+            "1807/327675",
+            "293/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1199/327675",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "389/109225",
+            "1199/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1199/327675",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "389/109225",
+            "1199/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1519/327675",
+          "first_key": "22912/65535",
+          "first_value": "-13120/4369",
+          "slope": "-390/6503",
+          "intercept": "-19392/6503",
+          "codes": [
+            32752,
+            32462
+          ],
+          "query_errors": [
+            "1519/327675",
+            "31/19275"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "261/109225",
+          "first_key": "229363/655350",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "751/327675",
+            "261/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "261/109225",
+          "first_key": "7/20",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "751/327675",
+            "261/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "8111/327675",
+          "first_key": "22912/65535",
+          "first_value": "-13120/4369",
+          "slope": "-393600/6503",
+          "intercept": "118080/6503",
+          "codes": [
+            17273,
+            34627
+          ],
+          "query_errors": [
+            "8111/327675",
+            "512/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "21/6425",
+          "first_key": "229363/655350",
+          "first_value": "-3",
+          "slope": "-983025/16379",
+          "intercept": "589815/32758",
+          "codes": [
+            17403,
+            34611
+          ],
+          "query_errors": [
+            "21/6425",
+            "256/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1169/327675",
+          "first_key": "7/20",
+          "first_value": "-3",
+          "slope": "-60",
+          "intercept": "18",
+          "codes": [
+            17408,
+            34611
+          ],
+          "query_errors": [
+            "1169/327675",
+            "384/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "4901/109225",
+          "first_key": "22912/65535",
+          "first_value": "-13120/4369",
+          "slope": "-786810/6503",
+          "intercept": "255552/6503",
+          "codes": [
+            1794,
+            36792
+          ],
+          "query_errors": [
+            "4901/109225",
+            "517/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "943/327675",
+          "first_key": "229363/655350",
+          "first_value": "-3",
+          "slope": "-1966050/16379",
+          "intercept": "638952/16379",
+          "codes": [
+            2039,
+            36762
+          ],
+          "query_errors": [
+            "943/327675",
+            "123/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "113/327675",
+          "first_key": "7/20",
+          "first_value": "-3",
+          "slope": "-120",
+          "intercept": "39",
+          "codes": [
+            2048,
+            36761
+          ],
+          "query_errors": [
+            "37/109225",
+            "113/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "10016/327675",
+          "first_key": "22912/65535",
+          "first_value": "64/13107",
+          "slope": "393850/6503",
+          "intercept": "-137664/6503",
+          "codes": [
+            48272,
+            30600
+          ],
+          "query_errors": [
+            "10016/327675",
+            "251/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1696/327675",
+          "first_key": "229363/655350",
+          "first_value": "1/21845",
+          "slope": "983040/16379",
+          "intercept": "-344049/16379",
+          "codes": [
+            48132,
+            30617
+          ],
+          "query_errors": [
+            "1696/327675",
+            "1393/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/19275",
+          "first_key": "7/20",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-21",
+          "codes": [
+            48127,
+            30617
+          ],
+          "query_errors": [
+            "32/19275",
+            "31/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1408/327675",
+          "first_key": "22912/65535",
+          "first_value": "64/13107",
+          "slope": "640/6503",
+          "intercept": "-192/6503",
+          "codes": [
+            32793,
+            32764
+          ],
+          "query_errors": [
+            "224/327675",
+            "1408/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1408/327675",
+          "first_key": "229363/655350",
+          "first_value": "1/21845",
+          "slope": "15/16379",
+          "intercept": "-9/32758",
+          "codes": [
+            32768,
+            32767
+          ],
+          "query_errors": [
+            "1376/327675",
+            "1408/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "608/109225",
+          "first_key": "7/20",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "608/109225",
+            "1792/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "6368/327675",
+          "first_key": "22912/65535",
+          "first_value": "64/13107",
+          "slope": "-392570/6503",
+          "intercept": "137280/6503",
+          "codes": [
+            17314,
+            34929
+          ],
+          "query_errors": [
+            "6368/327675",
+            "123/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "416/109225",
+          "first_key": "229363/655350",
+          "first_value": "1/21845",
+          "slope": "-983010/16379",
+          "intercept": "344040/16379",
+          "codes": [
+            17404,
+            34918
+          ],
+          "query_errors": [
+            "416/109225",
+            "1009/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/19275",
+          "first_key": "7/20",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "21",
+          "codes": [
+            17408,
+            34918
+          ],
+          "query_errors": [
+            "32/19275",
+            "31/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "4901/109225",
+          "first_key": "22912/65535",
+          "first_value": "13120/4369",
+          "slope": "786810/6503",
+          "intercept": "-255552/6503",
+          "codes": [
+            63741,
+            28743
+          ],
+          "query_errors": [
+            "4901/109225",
+            "517/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "943/327675",
+          "first_key": "229363/655350",
+          "first_value": "3",
+          "slope": "1966050/16379",
+          "intercept": "-638952/16379",
+          "codes": [
+            63496,
+            28773
+          ],
+          "query_errors": [
+            "943/327675",
+            "123/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "113/327675",
+          "first_key": "7/20",
+          "first_value": "3",
+          "slope": "120",
+          "intercept": "-39",
+          "codes": [
+            63487,
+            28774
+          ],
+          "query_errors": [
+            "37/109225",
+            "113/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "8111/327675",
+          "first_key": "22912/65535",
+          "first_value": "13120/4369",
+          "slope": "393600/6503",
+          "intercept": "-118080/6503",
+          "codes": [
+            48262,
+            30908
+          ],
+          "query_errors": [
+            "8111/327675",
+            "512/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "21/6425",
+          "first_key": "229363/655350",
+          "first_value": "3",
+          "slope": "983025/16379",
+          "intercept": "-589815/32758",
+          "codes": [
+            48132,
+            30924
+          ],
+          "query_errors": [
+            "21/6425",
+            "256/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1169/327675",
+          "first_key": "7/20",
+          "first_value": "3",
+          "slope": "60",
+          "intercept": "-18",
+          "codes": [
+            48127,
+            30924
+          ],
+          "query_errors": [
+            "1169/327675",
+            "384/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "7/20",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1519/327675",
+          "first_key": "22912/65535",
+          "first_value": "13120/4369",
+          "slope": "390/6503",
+          "intercept": "19392/6503",
+          "codes": [
+            32783,
+            33073
+          ],
+          "query_errors": [
+            "1519/327675",
+            "31/19275"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1199/327675",
+          "first_key": "229363/655350",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "1199/327675",
+            "389/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1199/327675",
+          "first_key": "7/20",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "1199/327675",
+            "389/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "25/13107",
+          "first_key": "32128/13107",
+          "first_value": "-13120/4369",
+          "slope": "78/1279",
+          "intercept": "-4032/1279",
+          "codes": [
+            32783,
+            32445
+          ],
+          "query_errors": [
+            "367/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "1605617/655350",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "593/327675",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "49/20",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "593/327675",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "25391/327675",
+          "first_key": "32128/13107",
+          "first_value": "-13120/4369",
+          "slope": "78720/1279",
+          "intercept": "-196800/1279",
+          "codes": [
+            48524,
+            17011
+          ],
+          "query_errors": [
+            "25391/327675",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "101/109225",
+          "first_key": "1605617/655350",
+          "first_value": "-3",
+          "slope": "983025/16379",
+          "intercept": "-4915125/32758",
+          "codes": [
+            48132,
+            17403
+          ],
+          "query_errors": [
+            "101/109225",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1/19275",
+          "first_key": "49/20",
+          "first_value": "-3",
+          "slope": "60",
+          "intercept": "-150",
+          "codes": [
+            48127,
+            17408
+          ],
+          "query_errors": [
+            "1/19275",
+            "0"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "50351/327675",
+          "first_key": "32128/13107",
+          "first_value": "-13120/4369",
+          "slope": "157362/1279",
+          "intercept": "-389568/1279",
+          "codes": [
+            64264,
+            1578
+          ],
+          "query_errors": [
+            "50351/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1199/327675",
+          "first_key": "1605617/655350",
+          "first_value": "-3",
+          "slope": "1966050/16379",
+          "intercept": "-4865988/16379",
+          "codes": [
+            63496,
+            2346
+          ],
+          "query_errors": [
+            "1199/327675",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "49/20",
+          "first_value": "-3",
+          "slope": "120",
+          "intercept": "-297",
+          "codes": [
+            63487,
+            2355
+          ],
+          "query_errors": [
+            "623/327675",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "23456/327675",
+          "first_key": "32128/13107",
+          "first_value": "64/13107",
+          "slope": "-78770/1279",
+          "intercept": "193088/1279",
+          "codes": [
+            17001,
+            48226
+          ],
+          "query_errors": [
+            "23456/327675",
+            "103/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "928/327675",
+          "first_key": "1605617/655350",
+          "first_value": "1/21845",
+          "slope": "-983040/16379",
+          "intercept": "2408463/16379",
+          "codes": [
+            17403,
+            47825
+          ],
+          "query_errors": [
+            "928/327675",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "49/20",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "147",
+          "codes": [
+            17408,
+            47820
+          ],
+          "query_errors": [
+            "608/327675",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "32/6425",
+          "first_key": "32128/13107",
+          "first_value": "64/13107",
+          "slope": "-128/1279",
+          "intercept": "320/1279",
+          "codes": [
+            32742,
+            32793
+          ],
+          "query_errors": [
+            "32/6425",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "32/327675",
+          "first_key": "1605617/655350",
+          "first_value": "1/21845",
+          "slope": "-15/16379",
+          "intercept": "75/32758",
+          "codes": [
+            32767,
+            32768
+          ],
+          "query_errors": [
+            "32/327675",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "128/13107",
+          "first_key": "49/20",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "1056/109225",
+            "128/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "7776/109225",
+          "first_key": "32128/13107",
+          "first_value": "64/13107",
+          "slope": "78514/1279",
+          "intercept": "-192448/1279",
+          "codes": [
+            48482,
+            17360
+          ],
+          "query_errors": [
+            "7776/109225",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "288/109225",
+          "first_key": "1605617/655350",
+          "first_value": "1/21845",
+          "slope": "983010/16379",
+          "intercept": "-2408388/16379",
+          "codes": [
+            48131,
+            17711
+          ],
+          "query_errors": [
+            "288/109225",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "49/20",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-147",
+          "codes": [
+            48127,
+            17715
+          ],
+          "query_errors": [
+            "608/327675",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "50351/327675",
+          "first_key": "32128/13107",
+          "first_value": "13120/4369",
+          "slope": "-157362/1279",
+          "intercept": "389568/1279",
+          "codes": [
+            1271,
+            63957
+          ],
+          "query_errors": [
+            "50351/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1199/327675",
+          "first_key": "1605617/655350",
+          "first_value": "3",
+          "slope": "-1966050/16379",
+          "intercept": "4865988/16379",
+          "codes": [
+            2039,
+            63189
+          ],
+          "query_errors": [
+            "1199/327675",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "49/20",
+          "first_value": "3",
+          "slope": "-120",
+          "intercept": "297",
+          "codes": [
+            2048,
+            63180
+          ],
+          "query_errors": [
+            "623/327675",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "25391/327675",
+          "first_key": "32128/13107",
+          "first_value": "13120/4369",
+          "slope": "-78720/1279",
+          "intercept": "196800/1279",
+          "codes": [
+            17011,
+            48524
+          ],
+          "query_errors": [
+            "25391/327675",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "101/109225",
+          "first_key": "1605617/655350",
+          "first_value": "3",
+          "slope": "-983025/16379",
+          "intercept": "4915125/32758",
+          "codes": [
+            17403,
+            48132
+          ],
+          "query_errors": [
+            "101/109225",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1/19275",
+          "first_key": "49/20",
+          "first_value": "3",
+          "slope": "-60",
+          "intercept": "150",
+          "codes": [
+            17408,
+            48127
+          ],
+          "query_errors": [
+            "1/19275",
+            "0"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "25/13107",
+          "first_key": "32128/13107",
+          "first_value": "13120/4369",
+          "slope": "-78/1279",
+          "intercept": "4032/1279",
+          "codes": [
+            32752,
+            33090
+          ],
+          "query_errors": [
+            "367/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "1605617/655350",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "2543/327675",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "49/20",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "2543/327675",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "539/109225",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-156/2521",
+          "intercept": "-35904/12605",
+          "codes": [
+            32752,
+            32476
+          ],
+          "query_errors": [
+            "25/13107",
+            "539/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "25/13107",
+            "593/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "25/13107",
+            "593/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1639/13107",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-157440/2521",
+          "intercept": "385728/2521",
+          "codes": [
+            16780,
+            48435
+          ],
+          "query_errors": [
+            "1639/13107",
+            "32/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-60",
+          "intercept": "147",
+          "codes": [
+            17408,
+            47820
+          ],
+          "query_errors": [
+            "25/13107",
+            "608/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-60",
+          "intercept": "147",
+          "codes": [
+            17408,
+            47820
+          ],
+          "query_errors": [
+            "25/13107",
+            "608/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "3175/13107",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-314724/2521",
+          "intercept": "3893184/12605",
+          "codes": [
+            809,
+            64394
+          ],
+          "query_errors": [
+            "3175/13107",
+            "27/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-120",
+          "intercept": "297",
+          "codes": [
+            2048,
+            63180
+          ],
+          "query_errors": [
+            "25/13107",
+            "623/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-120",
+          "intercept": "297",
+          "codes": [
+            2048,
+            63180
+          ],
+          "query_errors": [
+            "25/13107",
+            "623/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1664/13107",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "157540/2521",
+          "intercept": "-393536/2521",
+          "codes": [
+            48765,
+            16783
+          ],
+          "query_errors": [
+            "1664/13107",
+            "157/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "128/13107",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "262144/4369",
+          "intercept": "-3276799/21845",
+          "codes": [
+            48128,
+            17408
+          ],
+          "query_errors": [
+            "128/13107",
+            "1051/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1/19275",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-150",
+          "codes": [
+            48127,
+            17408
+          ],
+          "query_errors": [
+            "0",
+            "1/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "32/6425",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "256/2521",
+          "intercept": "-3136/12605",
+          "codes": [
+            32793,
+            32742
+          ],
+          "query_errors": [
+            "0",
+            "32/6425"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "32/327675",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "4/4369",
+          "intercept": "-49/21845",
+          "codes": [
+            32768,
+            32767
+          ],
+          "query_errors": [
+            "0",
+            "32/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "128/13107",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "128/13107",
+            "1056/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "512/4369",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "-157028/2521",
+          "intercept": "1961408/12605",
+          "codes": [
+            16822,
+            48701
+          ],
+          "query_errors": [
+            "512/4369",
+            "913/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1/19275",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "-262136/4369",
+          "intercept": "3276701/21845",
+          "codes": [
+            17408,
+            48127
+          ],
+          "query_errors": [
+            "0",
+            "1/19275"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "1/19275",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "150",
+          "codes": [
+            17408,
+            48127
+          ],
+          "query_errors": [
+            "0",
+            "1/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "3175/13107",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "314724/2521",
+          "intercept": "-3893184/12605",
+          "codes": [
+            64726,
+            1141
+          ],
+          "query_errors": [
+            "3175/13107",
+            "27/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "120",
+          "intercept": "-297",
+          "codes": [
+            63487,
+            2355
+          ],
+          "query_errors": [
+            "25/13107",
+            "623/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "120",
+          "intercept": "-297",
+          "codes": [
+            63487,
+            2355
+          ],
+          "query_errors": [
+            "25/13107",
+            "623/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1639/13107",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "157440/2521",
+          "intercept": "-385728/2521",
+          "codes": [
+            48755,
+            17100
+          ],
+          "query_errors": [
+            "1639/13107",
+            "32/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "60",
+          "intercept": "-147",
+          "codes": [
+            48127,
+            17715
+          ],
+          "query_errors": [
+            "25/13107",
+            "608/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "25/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "60",
+          "intercept": "-147",
+          "codes": [
+            48127,
+            17715
+          ],
+          "query_errors": [
+            "25/13107",
+            "608/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "49/20"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "539/109225",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "156/2521",
+          "intercept": "35904/12605",
+          "codes": [
+            32783,
+            33059
+          ],
+          "query_errors": [
+            "25/13107",
+            "539/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "103/13107",
+            "2543/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "103/13107",
+            "2543/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "261/109225",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "130/96169",
+          "intercept": "-288832/96169",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "261/109225",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "261/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "261/109225",
+            "25/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "261/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "261/109225",
+            "25/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "389/109225",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "131200/96169",
+          "intercept": "-328000/96169",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "389/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "15/11",
+          "intercept": "-75/22",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "389/109225",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "15/11",
+          "intercept": "-75/22",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "384/1285",
+          "first_value": "-13120/4369",
+          "slope": "262270/96169",
+          "intercept": "-367168/96169",
+          "codes": [
+            33466,
+            32377
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "30/11",
+          "intercept": "-42/11",
+          "codes": [
+            33466,
+            32377
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "-3",
+          "slope": "30/11",
+          "intercept": "-42/11",
+          "codes": [
+            33466,
+            32377
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1792/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "-393850/288507",
+          "intercept": "119104/288507",
+          "codes": [
+            32418,
+            32810
+          ],
+          "query_errors": [
+            "1792/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "-65536/48059",
+          "intercept": "19663/48059",
+          "codes": [
+            32418,
+            32809
+          ],
+          "query_errors": [
+            "1408/327675",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "-15/11",
+          "intercept": "9/22",
+          "codes": [
+            32418,
+            32809
+          ],
+          "query_errors": [
+            "1408/327675",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1408/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "-640/288507",
+          "intercept": "1600/288507",
+          "codes": [
+            32767,
+            32768
+          ],
+          "query_errors": [
+            "1408/327675",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1408/327675",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "-1/48059",
+          "intercept": "5/96118",
+          "codes": [
+            32767,
+            32768
+          ],
+          "query_errors": [
+            "1408/327675",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "128/13107",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "1792/327675",
+            "128/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1024/327675",
+          "first_key": "384/1285",
+          "first_value": "64/13107",
+          "slope": "392570/288507",
+          "intercept": "-115904/288507",
+          "codes": [
+            33116,
+            32726
+          ],
+          "query_errors": [
+            "1024/327675",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "1/21845",
+          "slope": "65534/48059",
+          "intercept": "-19658/48059",
+          "codes": [
+            33117,
+            32726
+          ],
+          "query_errors": [
+            "1408/327675",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "0",
+          "slope": "15/11",
+          "intercept": "-9/22",
+          "codes": [
+            33117,
+            32726
+          ],
+          "query_errors": [
+            "1408/327675",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-262270/96169",
+          "intercept": "367168/96169",
+          "codes": [
+            32069,
+            33158
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-30/11",
+          "intercept": "42/11",
+          "codes": [
+            32069,
+            33158
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-30/11",
+          "intercept": "42/11",
+          "codes": [
+            32069,
+            33158
+          ],
+          "query_errors": [
+            "97/19275",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "389/109225",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-131200/96169",
+          "intercept": "328000/96169",
+          "codes": [
+            32418,
+            33117
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "389/109225",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-15/11",
+          "intercept": "75/22",
+          "codes": [
+            32418,
+            33117
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "389/109225",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "-15/11",
+          "intercept": "75/22",
+          "codes": [
+            32418,
+            33117
+          ],
+          "query_errors": [
+            "389/109225",
+            "0"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "261/109225",
+          "first_key": "384/1285",
+          "first_value": "13120/4369",
+          "slope": "-130/96169",
+          "intercept": "288832/96169",
+          "codes": [
+            32767,
+            33075
+          ],
+          "query_errors": [
+            "261/109225",
+            "25/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "389/109225",
+            "103/13107"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "3/10",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "389/109225",
+            "103/13107"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-390/288103",
+          "intercept": "-864192/288103",
+          "codes": [
+            32767,
+            32460
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "261/109225",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "25/13107",
+            "261/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "261/109225",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "25/13107",
+            "261/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-393600/288103",
+          "intercept": "118080/288103",
+          "codes": [
+            32418,
+            32809
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-15/11",
+          "intercept": "9/22",
+          "codes": [
+            32418,
+            32809
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-15/11",
+          "intercept": "9/22",
+          "codes": [
+            32418,
+            32809
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "-13120/4369",
+          "slope": "-786810/288103",
+          "intercept": "1100352/288103",
+          "codes": [
+            32068,
+            33159
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-30/11",
+          "intercept": "42/11",
+          "codes": [
+            32069,
+            33158
+          ],
+          "query_errors": [
+            "103/13107",
+            "97/19275"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "-3",
+          "slope": "-30/11",
+          "intercept": "42/11",
+          "codes": [
+            32069,
+            33158
+          ],
+          "query_errors": [
+            "103/13107",
+            "97/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "389/109225",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "393850/288103",
+          "intercept": "-982464/288103",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "0",
+            "389/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "389/109225",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "65536/48059",
+          "intercept": "-819189/240295",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "0",
+            "389/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "389/109225",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "15/11",
+          "intercept": "-75/22",
+          "codes": [
+            33117,
+            32418
+          ],
+          "query_errors": [
+            "0",
+            "389/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1408/327675",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "640/288103",
+          "intercept": "-192/288103",
+          "codes": [
+            32768,
+            32767
+          ],
+          "query_errors": [
+            "0",
+            "1408/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1408/327675",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "1/48059",
+          "intercept": "-3/480590",
+          "codes": [
+            32768,
+            32767
+          ],
+          "query_errors": [
+            "0",
+            "1408/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "128/13107",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "128/13107",
+            "1792/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "128/13107",
+          "first_key": "163712/65535",
+          "first_value": "64/13107",
+          "slope": "-392570/288103",
+          "intercept": "982080/288103",
+          "codes": [
+            32419,
+            33117
+          ],
+          "query_errors": [
+            "128/13107",
+            "517/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "389/109225",
+          "first_key": "5/2",
+          "first_value": "1/21845",
+          "slope": "-65534/48059",
+          "intercept": "819186/240295",
+          "codes": [
+            32418,
+            33117
+          ],
+          "query_errors": [
+            "0",
+            "389/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "389/109225",
+          "first_key": "5/2",
+          "first_value": "0",
+          "slope": "-15/11",
+          "intercept": "75/22",
+          "codes": [
+            32418,
+            33117
+          ],
+          "query_errors": [
+            "0",
+            "389/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "786810/288103",
+          "intercept": "-1100352/288103",
+          "codes": [
+            33467,
+            32376
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "30/11",
+          "intercept": "-42/11",
+          "codes": [
+            33466,
+            32377
+          ],
+          "query_errors": [
+            "103/13107",
+            "97/19275"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "30/11",
+          "intercept": "-42/11",
+          "codes": [
+            33466,
+            32377
+          ],
+          "query_errors": [
+            "103/13107",
+            "97/19275"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "393600/288103",
+          "intercept": "-118080/288103",
+          "codes": [
+            33117,
+            32726
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "15/11",
+          "intercept": "-9/22",
+          "codes": [
+            33117,
+            32726
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "15/11",
+          "intercept": "-9/22",
+          "codes": [
+            33117,
+            32726
+          ],
+          "query_errors": [
+            "103/13107",
+            "1408/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "5/2",
+        "3/10"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "103/13107",
+          "first_key": "163712/65535",
+          "first_value": "13120/4369",
+          "slope": "390/288103",
+          "intercept": "864192/288103",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "103/13107",
+          "first_key": "5/2",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "103/13107",
+            "389/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "19/3855",
+          "first_key": "65408/65535",
+          "first_value": "-13120/4369",
+          "slope": "156/2723",
+          "intercept": "-5952/1945",
+          "codes": [
+            32782,
+            32454
+          ],
+          "query_errors": [
+            "19/3855",
+            "229/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "67/65535",
+          "first_key": "655349/655350",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "67/65535",
+            "101/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "67/65535",
+          "first_key": "1",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "67/65535",
+            "101/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "7229/65535",
+          "first_key": "65408/65535",
+          "first_value": "-13120/4369",
+          "slope": "157440/2723",
+          "intercept": "-23616/389",
+          "codes": [
+            47569,
+            26551
+          ],
+          "query_errors": [
+            "7229/65535",
+            "416/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "317/65535",
+          "first_key": "655349/655350",
+          "first_value": "-3",
+          "slope": "3932100/65537",
+          "intercept": "-4128705/65537",
+          "codes": [
+            48127,
+            26317
+          ],
+          "query_errors": [
+            "317/65535",
+            "1568/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/6425",
+          "first_key": "1",
+          "first_value": "-3",
+          "slope": "60",
+          "intercept": "-63",
+          "codes": [
+            48127,
+            26316
+          ],
+          "query_errors": [
+            "19/3855",
+            "32/6425"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "2905/13107",
+          "first_key": "65408/65535",
+          "first_value": "-13120/4369",
+          "slope": "314724/2723",
+          "intercept": "-230208/1945",
+          "codes": [
+            62355,
+            20648
+          ],
+          "query_errors": [
+            "2905/13107",
+            "7/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "61/65535",
+          "first_key": "655349/655350",
+          "first_value": "-3",
+          "slope": "7864200/65537",
+          "intercept": "-8060799/65537",
+          "codes": [
+            63486,
+            20173
+          ],
+          "query_errors": [
+            "61/65535",
+            "239/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "539/109225",
+          "first_key": "1",
+          "first_value": "-3",
+          "slope": "120",
+          "intercept": "-123",
+          "codes": [
+            63487,
+            20172
+          ],
+          "query_errors": [
+            "19/3855",
+            "539/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "6848/65535",
+          "first_key": "65408/65535",
+          "first_value": "64/13107",
+          "slope": "-157540/2723",
+          "intercept": "22464/389",
+          "codes": [
+            17957,
+            38681
+          ],
+          "query_errors": [
+            "6848/65535",
+            "913/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "64/21845",
+          "first_key": "655349/655350",
+          "first_value": "1/21845",
+          "slope": "-3932160/65537",
+          "intercept": "3932157/65537",
+          "codes": [
+            17408,
+            38911
+          ],
+          "query_errors": [
+            "64/21845",
+            "943/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "64/21845",
+          "first_key": "1",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "60",
+          "codes": [
+            17408,
+            38911
+          ],
+          "query_errors": [
+            "64/21845",
+            "943/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "448/65535",
+          "first_key": "65408/65535",
+          "first_value": "64/13107",
+          "slope": "-256/2723",
+          "intercept": "192/1945",
+          "codes": [
+            32743,
+            32778
+          ],
+          "query_errors": [
+            "448/65535",
+            "224/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "64/21845",
+          "first_key": "655349/655350",
+          "first_value": "1/21845",
+          "slope": "-60/65537",
+          "intercept": "63/65537",
+          "codes": [
+            32767,
+            32768
+          ],
+          "query_errors": [
+            "64/21845",
+            "928/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "2272/327675",
+          "first_key": "1",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "448/65535",
+            "2272/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1472/13107",
+          "first_key": "65408/65535",
+          "first_value": "64/13107",
+          "slope": "157028/2723",
+          "intercept": "-111936/1945",
+          "codes": [
+            47530,
+            26874
+          ],
+          "query_errors": [
+            "1472/13107",
+            "19/4369"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "64/21845",
+          "first_key": "655349/655350",
+          "first_value": "1/21845",
+          "slope": "3932040/65537",
+          "intercept": "-3932031/65537",
+          "codes": [
+            48127,
+            26624
+          ],
+          "query_errors": [
+            "64/21845",
+            "943/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "64/21845",
+          "first_key": "1",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-60",
+          "codes": [
+            48127,
+            26624
+          ],
+          "query_errors": [
+            "64/21845",
+            "943/327675"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "2905/13107",
+          "first_key": "65408/65535",
+          "first_value": "13120/4369",
+          "slope": "-314724/2723",
+          "intercept": "230208/1945",
+          "codes": [
+            3180,
+            44887
+          ],
+          "query_errors": [
+            "2905/13107",
+            "7/13107"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "61/65535",
+          "first_key": "655349/655350",
+          "first_value": "3",
+          "slope": "-7864200/65537",
+          "intercept": "8060799/65537",
+          "codes": [
+            2049,
+            45362
+          ],
+          "query_errors": [
+            "61/65535",
+            "239/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "539/109225",
+          "first_key": "1",
+          "first_value": "3",
+          "slope": "-120",
+          "intercept": "123",
+          "codes": [
+            2048,
+            45363
+          ],
+          "query_errors": [
+            "19/3855",
+            "539/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "7229/65535",
+          "first_key": "65408/65535",
+          "first_value": "13120/4369",
+          "slope": "-157440/2723",
+          "intercept": "23616/389",
+          "codes": [
+            17966,
+            38984
+          ],
+          "query_errors": [
+            "7229/65535",
+            "416/327675"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "317/65535",
+          "first_key": "655349/655350",
+          "first_value": "3",
+          "slope": "-3932100/65537",
+          "intercept": "4128705/65537",
+          "codes": [
+            17408,
+            39218
+          ],
+          "query_errors": [
+            "317/65535",
+            "1568/327675"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/6425",
+          "first_key": "1",
+          "first_value": "3",
+          "slope": "-60",
+          "intercept": "63",
+          "codes": [
+            17408,
+            39219
+          ],
+          "query_errors": [
+            "19/3855",
+            "32/6425"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "1",
+        "21/20"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "19/3855",
+          "first_key": "65408/65535",
+          "first_value": "13120/4369",
+          "slope": "-156/2723",
+          "intercept": "5952/1945",
+          "codes": [
+            32753,
+            33081
+          ],
+          "query_errors": [
+            "19/3855",
+            "229/109225"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "549/109225",
+          "first_key": "655349/655350",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "19/3855",
+            "549/109225"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "549/109225",
+          "first_key": "1",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "19/3855",
+            "549/109225"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "317/65535",
+          "first_key": "22912/21845",
+          "first_value": "-13120/4369",
+          "slope": "-65/1067",
+          "intercept": "-3136/1067",
+          "codes": [
+            32752,
+            32467
+          ],
+          "query_errors": [
+            "593/327675",
+            "317/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "67/65535",
+          "first_key": "229369/218450",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "101/109225",
+            "67/65535"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "67/65535",
+          "first_key": "21/20",
+          "first_value": "-3",
+          "slope": "0",
+          "intercept": "-3",
+          "codes": [
+            32768,
+            32460
+          ],
+          "query_errors": [
+            "101/109225",
+            "67/65535"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "-3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "469/6425",
+          "first_key": "22912/21845",
+          "first_value": "-13120/4369",
+          "slope": "-65600/1067",
+          "intercept": "65600/1067",
+          "codes": [
+            17029,
+            39063
+          ],
+          "query_errors": [
+            "469/6425",
+            "64/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "421/109225",
+          "first_key": "229369/218450",
+          "first_value": "-3",
+          "slope": "-655350/10919",
+          "intercept": "655350/10919",
+          "codes": [
+            17403,
+            38913
+          ],
+          "query_errors": [
+            "421/109225",
+            "64/21845"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "64/21845",
+          "first_key": "21/20",
+          "first_value": "-3",
+          "slope": "-60",
+          "intercept": "60",
+          "codes": [
+            17408,
+            38911
+          ],
+          "query_errors": [
+            "943/327675",
+            "64/21845"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "621/4369",
+          "first_key": "22912/21845",
+          "first_value": "-13120/4369",
+          "slope": "-131135/1067",
+          "intercept": "134336/1067",
+          "codes": [
+            1305,
+            45660
+          ],
+          "query_errors": [
+            "621/4369",
+            "13/4369"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "741/109225",
+          "first_key": "229369/218450",
+          "first_value": "-3",
+          "slope": "-1310700/10919",
+          "intercept": "1343457/10919",
+          "codes": [
+            2038,
+            45366
+          ],
+          "query_errors": [
+            "741/109225",
+            "317/65535"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "539/109225",
+          "first_key": "21/20",
+          "first_value": "-3",
+          "slope": "-120",
+          "intercept": "123",
+          "codes": [
+            2048,
+            45363
+          ],
+          "query_errors": [
+            "539/109225",
+            "19/3855"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "0",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "25184/327675",
+          "first_key": "22912/21845",
+          "first_value": "64/13107",
+          "slope": "196925/3201",
+          "intercept": "-206528/3201",
+          "codes": [
+            48516,
+            26161
+          ],
+          "query_errors": [
+            "25184/327675",
+            "61/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "19/3855",
+          "first_key": "229369/218450",
+          "first_value": "1/21845",
+          "slope": "655360/10919",
+          "intercept": "-688117/10919",
+          "codes": [
+            48132,
+            26314
+          ],
+          "query_errors": [
+            "1312/327675",
+            "19/3855"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/6425",
+          "first_key": "21/20",
+          "first_value": "0",
+          "slope": "60",
+          "intercept": "-63",
+          "codes": [
+            48127,
+            26316
+          ],
+          "query_errors": [
+            "32/6425",
+            "19/3855"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "0",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "64/21845",
+          "first_key": "22912/21845",
+          "first_value": "64/13107",
+          "slope": "320/3201",
+          "intercept": "-320/3201",
+          "codes": [
+            32793,
+            32757
+          ],
+          "query_errors": [
+            "224/109225",
+            "64/21845"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "64/21845",
+          "first_key": "229369/218450",
+          "first_value": "1/21845",
+          "slope": "10/10919",
+          "intercept": "-10/10919",
+          "codes": [
+            32768,
+            32767
+          ],
+          "query_errors": [
+            "928/327675",
+            "64/21845"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "2272/327675",
+          "first_key": "21/20",
+          "first_value": "0",
+          "slope": "0",
+          "intercept": "0",
+          "codes": [
+            32768,
+            32768
+          ],
+          "query_errors": [
+            "2272/327675",
+            "448/65535"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "0",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "1376/21845",
+          "first_key": "22912/21845",
+          "first_value": "64/13107",
+          "slope": "-196285/3201",
+          "intercept": "205888/3201",
+          "codes": [
+            17070,
+            39354
+          ],
+          "query_errors": [
+            "1376/21845",
+            "13/4369"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "1888/327675",
+          "first_key": "229369/218450",
+          "first_value": "1/21845",
+          "slope": "-655340/10919",
+          "intercept": "688097/10919",
+          "codes": [
+            17403,
+            39220
+          ],
+          "query_errors": [
+            "1888/327675",
+            "317/65535"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "32/6425",
+          "first_key": "21/20",
+          "first_value": "0",
+          "slope": "-60",
+          "intercept": "63",
+          "codes": [
+            17408,
+            39219
+          ],
+          "query_errors": [
+            "32/6425",
+            "19/3855"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "621/4369",
+          "first_key": "22912/21845",
+          "first_value": "13120/4369",
+          "slope": "131135/1067",
+          "intercept": "-134336/1067",
+          "codes": [
+            64230,
+            19875
+          ],
+          "query_errors": [
+            "621/4369",
+            "13/4369"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "741/109225",
+          "first_key": "229369/218450",
+          "first_value": "3",
+          "slope": "1310700/10919",
+          "intercept": "-1343457/10919",
+          "codes": [
+            63497,
+            20169
+          ],
+          "query_errors": [
+            "741/109225",
+            "317/65535"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "539/109225",
+          "first_key": "21/20",
+          "first_value": "3",
+          "slope": "120",
+          "intercept": "-123",
+          "codes": [
+            63487,
+            20172
+          ],
+          "query_errors": [
+            "539/109225",
+            "19/3855"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "3",
+        "0"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "469/6425",
+          "first_key": "22912/21845",
+          "first_value": "13120/4369",
+          "slope": "65600/1067",
+          "intercept": "-65600/1067",
+          "codes": [
+            48506,
+            26472
+          ],
+          "query_errors": [
+            "469/6425",
+            "64/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "421/109225",
+          "first_key": "229369/218450",
+          "first_value": "3",
+          "slope": "655350/10919",
+          "intercept": "-655350/10919",
+          "codes": [
+            48132,
+            26622
+          ],
+          "query_errors": [
+            "421/109225",
+            "64/21845"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "64/21845",
+          "first_key": "21/20",
+          "first_value": "3",
+          "slope": "60",
+          "intercept": "-60",
+          "codes": [
+            48127,
+            26624
+          ],
+          "query_errors": [
+            "943/327675",
+            "64/21845"
+          ]
+        },
+        "M0": {
+          "max_error": "1/85"
+        }
+      }
+    },
+    {
+      "keys": [
+        "21/20",
+        "1"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "controls": {
+        "raw": {
+          "max_error": "317/65535",
+          "first_key": "22912/21845",
+          "first_value": "13120/4369",
+          "slope": "65/1067",
+          "intercept": "3136/1067",
+          "codes": [
+            32783,
+            33068
+          ],
+          "query_errors": [
+            "593/327675",
+            "317/65535"
+          ]
+        },
+        "phase_aware": {
+          "max_error": "549/109225",
+          "first_key": "229369/218450",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "549/109225",
+            "19/3855"
+          ]
+        },
+        "endpoint_only": {
+          "max_error": "549/109225",
+          "first_key": "21/20",
+          "first_value": "3",
+          "slope": "0",
+          "intercept": "3",
+          "codes": [
+            32768,
+            33075
+          ],
+          "query_errors": [
+            "549/109225",
+            "19/3855"
+          ]
+        },
+        "M0": {
+          "max_error": "0"
+        }
+      }
+    }
+  ],
+  "smooth_flow_noninjectivity_witness": {
+    "second": [
+      "12/5",
+      "9/5"
+    ],
+    "first": [
+      [
+        "2/5",
+        "-11/5"
+      ],
+      [
+        "7/5",
+        "-1/5"
+      ]
+    ],
+    "same_output": [
+      "2",
+      "-3"
+    ]
+  },
+  "limitations": [
+    "No IID histories generated or parameter search.",
+    "Uniform quantizer and arithmetic precision are declared engineering assumptions.",
+    "Endpoint-only retains unquantized first record and is not a matched peak-payload budget.",
+    "Smooth-flow obstruction concerns exact coefficient overwrite, not arbitrary readouts or hybrid resets."
+  ]
+}

@@ -1,0 +1,193 @@
+% ==========================================================================
+% Paper 2 — Section 8: From Binding to Composition. Overcoming the
+% Single-Head Bottleneck (TAN-II Sprint 4.3-A, frozen).
+% ==========================================================================
+\section{From Binding to Composition: Overcoming the Single-Head
+Bottleneck}
+\label{sec:composition}
+
+Proposition~\ref{prop:singlehead} states the wall: one head, one symbol.
+This section adds the two minimal degrees of freedom that cross it---a
+second parallel channel and one two-input algebraic node (operator O5 of
+§2.4)---and reports the frozen Sprint 4.3-A audits that separate binding
+from composition. The central empirical statement is the second orthogonal
+axis of the paper: \emph{binding fidelity $\perp$ combiner error}.
+
+\subsection{The dual-query window}
+\label{sec:dualwindow}
+
+The frozen dual-query window is $[A,0,B,Q_1,Q_2]$ (window length $W=5$
+kept), with events in the first three slots, queries in the last two, and
+the shared window mean $\mu=(K_A+K_B+Q_1+Q_2)/5=2.56$ on the canonical
+keys. The query pair $(Q_1,Q_2)=(4.5,5.3)$ is frozen by a
+direction-targeting derivation, not by fitting: the pair is required to
+rotate the two query directions $\theta_c=\omega S_c$ onto the two key
+directions ($\approx44.5^{\circ}$ and $\approx62.8^{\circ}$ versus
+$45^{\circ}$ and $63.4^{\circ}$), giving frozen routing margins
+$m_A=+0.210631046$ and $m_B=+0.261878523$ (the pre-registration's
+hand-computed values $0.2118$/$0.2637$ were four-decimal estimates; the
+deviation is recorded as Amendment AM6 with the closed forms adopted and
+the originals preserved). Channel $c\in\{1,2\}$ is keyed to slot $3+c$;
+queries are control signals, never candidates, and carry value zero.
+
+\subsection{The M0--M1--M2 ladder}
+\label{sec:ladder8}
+
+Three models instantiate the negative-control chain of §2.5 on the
+canonical scenarios S1 $(5,9)$, S2 $(7,-2)$, S3 $(2,6)$, with operators
+$f\in\{+,-\}$. The frozen error table (all values exact):
+
+\begin{itemize}[leftmargin=*,noitemsep,topsep=1pt]
+\item \emph{M0 (single winner).} Delivers exactly one operand:
+$E_{\mathrm{bind},B}=0$, $E_{\mathrm{bind},A}=|V_B-V_A|>0$, and
+$E_{\mathrm{comp}}=|V_A|>0$ for addition (e.g.\ $5$, $7$, $2$ on
+S1/S2/S3); the zero-value trap of §7 is re-audited and caught by the
+joint criterion.
+\item \emph{M1 (parallel binding).} Both channels bind exactly
+($E_{\mathrm{bind},A}=E_{\mathrm{bind},B}=0$), and the output is the
+\emph{pair} $(\hat V_A,\hat V_B)$: composition is
+\textsc{structurally undefined} because no operator connects the two
+channels. The frozen non-compositional scalar projection (second-channel
+readout, pre-registered as a control) fails with
+$E_{\mathrm{comp}}=|V_B-f(V_A,V_B)|>0$: two correctly bound operands are
+\emph{not} a composition.
+\item \emph{M2 (parallel binding + one two-input combiner).} The node
+$y=f(\hat C_1,\hat C_2)$ achieves $E_{\mathrm{bind},A}=E_{\mathrm{bind},B}
+=E_{\mathrm{comp}}=0$ exactly on all three scenarios and both operators
+($y=14,5,8$ for $+$; $-4,9,-4$ for $-$): the minimal composition node
+converts parallel binding into explicit composition.
+\end{itemize}
+
+\subsection{The second orthogonal axis and the separation theorem}
+\label{sec:separation}
+
+The ensemble audit (keys i.i.d.\ $U(0.3,2.5)$, values i.i.d.\ $U(-3,3)$,
+positions and orders randomized, seeds $20260904$--$06$, $N=10^4$ each)
+separates the combiner's intrinsic error from the propagated binding
+error. Frozen benchmarks (deterministic $2001^2$ quadrature) establish: per-channel
+routing rates $r_A=r_B=0.499750$, both-routed probability $P_{\mathrm{both}}=0.220725$ ($22.07\%$),
+and unconditional composition errors $E[E_{\mathrm{comp}}^+]=1.116099621$,
+$E[E_{\mathrm{comp}}^-]=2.000999500$. The 30,000-history Monte Carlo simulation (seeds $20260904$--$06$,
+$N=10^4$ each) yields empirical pooled means of $E[E_{\mathrm{comp}}^+]=1.107671595$
+(seed-level: $1.120449 / 1.074606 / 1.127960$) and $E[E_{\mathrm{comp}}^-]=1.975892767$
+(seed-level: $1.989288 / 1.959625 / 1.978765$), matching quadrature benchmarks within sampling variance.
+The empirical both-routed subset spans $6{,}608 / 30{,}000$ trials ($22.0267\% \approx 22.03\%$;
+$2{,}188 / 2{,}258 / 2{,}162$ per seed).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.70\textwidth]{fig5_composition}
+\caption{The minimal composition architecture and audit (Sprint 4.3-A).
+(a) The M0--M1--M2 ladder: one winner, two channels, two channels plus one
+two-input combiner. (b) The canonical three-error audit across scenarios
+S1/S2/S3: only M2 reaches zero composition error. (c) Subtraction
+antisymmetry across the four swap counterfactuals. (d) The zero-value trap:
+M0's accidental composition zero is caught by the binding error. (e)
+Unconditional composition error equals the routing-error benchmark.
+(f) Conditioned on correct binding, the combiner error is exactly
+$0.0\mathrm{e}0$.}
+\label{fig:composition}
+\end{figure}
+
+\begin{proposition}[Binding--combiner error separation]
+\label{prop:separation}
+Given exact operand delivery ($\hat C_c=V_c$ for both channels), the
+frozen combiner computes $f$ exactly, so
+$E_{\mathrm{comp}}\mid\text{both-routed}=0$. Empirically the maximum over
+$3\times10^4$ histories is exactly $0.0\mathrm{e}0$: the combiner adds
+zero error, and every unit of unconditional composition error is the
+propagation of an upstream routing error
+(\emph{routing error $\to$ wrong operand $\to$ composition error}).
+\end{proposition}
+
+Proposition~\ref{prop:separation} is the second orthogonal axis:
+\emph{binding fidelity $\perp$ combiner error}. Composition capability and
+binding fidelity are independent organizational quantities in this family;
+the combiner's quality is a property of the algebraic node, the
+unconditional error a property of the geometry upstream of it.
+
+\enlargethispage{2\baselineskip}
+\subsection{The eight counterfactuals}
+\label{sec:cf8}
+
+All eight frozen counterfactuals passed ($\PassFailInconclusive{}$
+verdicts, deterministic):
+
+\begin{enumerate}[leftmargin=*,noitemsep,topsep=1pt]
+\item \emph{Query swap.} $(Q_1,Q_2)\to(Q_2,Q_1)$: addition invariant,
+subtraction exactly antisymmetric ($y\to-y$).
+\item \emph{Value swap.} $(K_A,V_B),(K_B,V_A)$: addition invariant
+(correct commutative behavior---scored against the channel-level swap
+$(9,5)$ as the pairing check, never as a false negative), subtraction
+antisymmetric.
+\item \emph{Key swap} (keys exchanged, value pairing kept): addition
+invariant, subtraction antisymmetric.
+\item \emph{Channel-output swap} at the combiner inputs: addition
+invariant, subtraction antisymmetric.
+\item \emph{AM5 zero-value trap.} $V_A=0$: M0's composition error
+vanishes while its binding error does not---caught by the joint audit;
+M2 passes genuinely. \textsc{pass}.
+\item \emph{Binding-preserving counterfactual.} Value shift
+$(5,9)\to(7,11)$: all three errors stay zero and $y=18$; the legacy
+single-query controls ($3.0\to A$, $4.0\to B$) reproduce the frozen 4.2-D
+routing. \textsc{pass}.
+\item \emph{Binding-breaking counterfactual.} Legacy queries $(3.0,4.0)$
+in the dual window mis-route channel 2:
+$E_{\mathrm{bind},B}=4$ and $E_{\mathrm{comp}}=4$---the causal chain
+\emph{routing $\to$ binding $\to$ operand delivery $\to$ composition} is
+demonstrated by its failure mode. \textsc{pass}.
+\item \emph{Composition-sensitive relational counterfactual.} Across the
+three scenarios the output equals $f$ exactly and subtraction
+distinguishes the relations ($-4,9,-4$). \textsc{pass}.
+\end{enumerate}
+
+Position randomization (six orderings) is bitwise-invariant ($10^{-12}$),
+query leakage is excluded ($Q\cap V=\varnothing$; queries never
+candidates; query slots carry value zero), and the query-order swap pass
+over the whole ensemble preserves addition and antisymmetrizes subtraction
+history by history.
+
+\enlargethispage{2.5\baselineskip}
+\subsection{The dynamical carrier and spiking readout audit: Phase P1-B}
+\label{sec:carrier_audit}
+
+The static algebraic node of \S\ref{sec:ladder8}--\ref{sec:separation} combines
+retrieved operand values ($y = C_1 \pm C_2$) once delivered. However, in an online
+neural substrate, operands must be continuously maintained and routed through the
+internal dynamical state of the neuron, and transmitted across discrete spiking channels
+to downstream integrators. Phase~P1-B subjected this continuous dynamical carrier to a pre-registered
+confirmatory audit under Protocol~V2.6.
+
+\paragraph{Continuous carrier dynamics and subthreshold state collisions.}
+The continuous-time Temporal Attention Neuron carrier evolves as a three-variable ODE
+$\mathbf{z}(t) = [u(t), A(t), r(t)]^T$:
+\begin{equation}
+\tau_u \dot{u}(t) = -u(t) + I(t), \quad
+\tau_A \dot{A}(t) = -A(t) + \sigma_A(u(t)), \quad
+\tau_r \dot{r}(t) = -r(t) + A(t) \cdot u(t),
+\label{eq:p1b_carrier}
+\end{equation}
+where $I(t)$ is the incoming current pulse sequence, $\sigma_A(\cdot)$ is the
+attention activation with threshold $\theta_A$, and $r(t)$ is the surprise-weighted
+carrier. At query arrival time $t_Q$, an affine decoder maps the state to delivered operand values:
+$\hat{v}_c = g_{\text{dec}} r(t_Q) + b_{\text{dec}}$ ($g_{\text{dec}} = 0.132630817$, $b_{\text{dec}} = -0.026816484$).
+Pre-registered fixture G1.5 proved an analytical subthreshold collision theorem: for any interval where $u(t) < \theta_A$,
+$\sigma_A(u(t)) \equiv 0$, forcing unmodulated exponential decay $\dot{A} = -A/\tau_A$ and $\dot{r} = -r/\tau_r$.
+Consequently, distinct temporal history sequences that differ only during subthreshold periods collapse to analytically identical state vectors $\mathbf{z}(t_Q)$ (residual $< 10^{-10}$), erasing subthreshold events prior to query arrival.
+
+\paragraph{Confirmatory evaluation: floor-limited comparison and unestablished redundancy.}
+The confirmatory audit spanned 4,000 unique histories across 3 post-sequence silence
+delays ($\Delta t_{\text{silence}} \in \{0, 5, 10\}\,\text{ms}$) and 8 model variants,
+totaling 96,000 model-episodes (192,000 role queries). Protocol~V2.6 \S7.3 registered
+prerequisite joint delivery accuracy floors ($E_{\text{bind}} \le 0.05$ on both channels)
+of $0.80$ for $N=2$ and $0.40$ for $N=3$. The baseline dynamical carrier M1 (evolving from $A(0)=0$) achieved joint delivery accuracy of only $0.0290$ ($58/2{,}000$) for $N=2$ across all delays, and $0.0275$--$0.0280$ ($55$--$56/2{,}000$) for $N=3$. Failing the prerequisite in every cell, all conditions are classified as \texttt{FLOOR\_LIMITED\_COMPARISON}. Two One-Sided Tests (TOST, margin $\pm 0.05$) showed that M1 and the memory-lesioned constant-gate control M2a ($A(t) \equiv A_0 = 0.061886726$) are statistically equivalent within tight $90\%$ confidence intervals ($N=2$: $[-0.001515, 0.001515]$; $N=3$: $[-0.002978, 0.000841]$ at $0\,\text{ms}$, $[-0.002262, 0.001186]$ at $5, 10\,\text{ms}$). However, because both models reside near zero accuracy, this statistical equivalence is an artifact of mutual baseline failure, \emph{not} evidence that temporal gating dynamics are redundant (\texttt{redundancy\_inferred = False}).
+
+\paragraph{Spiking channel limitation.}
+To evaluate neural transmission to downstream algebra, carrier states were converted into spike trains via single-unit leaky integrate-and-fire (LIF) decoders under rate (M4\_Count) and first-spike latency (M4\_Latency) codes. Under the registered limitation criterion $E_{\text{comp}} \ge 0.05$, both decoders exhibited severe breakdown across all cells ($E_{\text{comp}} \in [2.21, 2.57]$). Delay-pooled $95\%$ bootstrap confidence intervals were: $N=2$: M4\_Count $[2.393533, 2.502027]$, M4\_Latency $[2.243582, 2.332606]$; $N=3$: M4\_Count $[2.473506, 2.571918]$, M4\_Latency $[2.212398, 2.296450]$. High episode-level abstention rates ($82.1\%$--$83.0\%$; single-query silence $57.15\%$--$58.60\%$) confirm that single-unit spiking decoders cannot reliably transmit continuous-carrier operands, certifying \texttt{DEMONSTRATED\_CHANNEL\_LIMITATION}.
+
+\subsection{Scope of the rung}
+\label{sec:scope8}
+
+The established statement is a sufficiency result inside the frozen mechanism family: \emph{parallel binding plus one minimal two-input combiner suffices for identifiable composition, with zero combiner error conditioned on correct binding}. Crucially, this zero composition error is strictly conditional: across the full ensemble of $30{,}000$ histories ($3\times10^4$), the both-routed subset comprises $6{,}608$ histories ($22.03\%$, matching the $22.07\%$ unguided benchmark), with unconditioned pooled errors of $1.108$ ($+$) and $1.976$ ($-$) reflecting upstream routing.
+
+Furthermore, the consensus determination certified under Protocol~V2.6 establishes that M1 fails the baseline delivery prerequisite across all conditions ($2.75\%$--$2.90\%$ joint accuracy), rendering comparisons floor-limited and leaving memory redundancy unestablished, while tested spiking readouts demonstrate channel limitation for single-unit point-process decoders ($E_{\text{comp}} > 2.2$, $82\%$ abstention). These findings establish \emph{model-specific insufficiency} for the continuous ODE carrier and frozen linear readout, not a universal biological impossibility result or a proven requirement for population coding. Internal composition dynamics (Hypothesis~H3), multi-operand composition, and learned operators remain formally deferred.

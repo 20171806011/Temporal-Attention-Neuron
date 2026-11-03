@@ -1,0 +1,41 @@
+# Fixed-budget persistent precision across the online binding write
+
+Frozen2026-11-02 before fresh-data generation or any outcome. Source comparison and rationale are recorded in SELECTION.md and LITERATURE_REVIEW.md. This is one bounded mechanism/resource test, not a bit-width, gain or quantizer sweep.
+
+## Task, budget and fixed arms
+
+Use original TaskGenerator N=2, keys[.3,2.5), minimum spacing.05, values[-3,3), five randomslots, both clean targetqueries.512 fresh histories from one continuous RandomState2026110215, no pertrial seed reset. Also evaluate18 previously fixed adversarial histories from PREDEFINED_ADVERSARIES.json(SHA256fb1e0af0e44e9352d2dedde84ca3f0c7343a2eb04f3aa6a2e5447e07d05f3023); these are reused support tests, not fresh IID data. Each receives original,queryswap andvalue-swap versions,3dependent variants. No histories dropped. Save/hash all inputs before metrics.
+
+Four fixed arms:
+1. RAW32: two16-bit persistent payload words. Firstwrite stores k1 using fixed range[-128,128] and v1 using[-320,320]. Secondwrite dequantizes that first record, computes a=(v2-v1hat)/(k2-k1hat),b=v2-a*k2 using current raw secondinput, then overwrites with quantized a,b on the same two fixed ranges. The b=v2-a*k2 arithmetic ordering is frozen here; it is algebraically equivalent to the earlier form and guarantees the exact-second-point relation before final quantization.
+2. PHASE32: same two16-bit payload words, but firstwrite keyrange[.3,2.5] andvaluerange[-3,3]; aftersecondwrite interpretation switches to[-128,128]/[-320,320]. This explicit phase-dependent encoding/gain selection is an added operation, not intrinsic robustness of the same analog coordinates. It uses no extra perhistory real metadata beyond the declared phase bits.
+3. CACHE32: M0 two-key/two-value cache with8bits in each field; keyrange[.3,2.5],valuerange[-3,3]. Both events are quantized on arrival. Query returns the value of the nearest stored quantized key. Fourfields total32payloadbits.
+4. ENDPOINT_ONLY: diagnostic interpolation with fullbinary64 firstrecord(k1,v1) held untilsecondwrite, followed by same16-bit finalcoefficients. Peak persistent payload128bits beforesecondwrite,32after; explicitly **not budget-matched**. It measures what an endpoint-only precision analysis omits.
+
+All arms additionally count a2-bit finite phase/controller(empty,first,ready,error), externalonset/reset/slotclock and separate rawkey/value inputports. First/second event writes occur at original active-slot onsets, matching the earlier idealwriter. There is no stored event-position list in the query decoder. Currentevent inputs andq are binary64; intermediate write arithmetic and readout are binary64. Those combinational widths/division/gain operations are disclosed **outside the persistent-payload budget**, so32bits is not a total circuit size/energy comparison. Perfect retention during the100ms episode; no additive noise, leak, queryerror or model fitting in this test. No physical neural query-circuit implementation or10ms execution-time guarantee.
+
+## Quantizer and online implementation
+
+Exactly2^B equally spaced reconstruction levels including both range endpoints. For valuex, form scaled=(x-lo)/(hi-lo)*(2^B-1), choose np.rint(scaled) (binary64 nearest/ties-even), and reconstruct lo+code*(hi-lo)/(2^B-1). Persistent matched-arm payload contains integercodes only; dequantized oldvalues are temporary secondwrite operands, not retained realhistory. Validate codebounds. Inputs outside a declared range or singular effective denominator(abs<=1e-12) produce explicit invalid status and zero fallback; no saturation, clipping, rangeexpansion, candidate retry or truth-dependent selection. Record any numeric boundary rounding at1e-12 stateunits separately. Every quantization error must be within halfgridstep+1e-10; interpret any exactrational/float tie decision difference separately, not as extra precision.
+
+Fixedguardbands128/320 were chosen from pre-data algebra, not observedcoefficients: first RAW32 keyerror<=128/65535=.001953155, valueerror<=320/65535=.004882887. Thus effectivegap>=.05−epsk>0, |awrite|<=(6+epsv)/(.05−epsk)=124.979754<128, and |bwrite|<=3+2.5|awrite|=315.449385<320. So no valid full-domain history should saturate; if it does, stop primary interpretation and investigate without tuningranges. PHASE32 gives tighter bounds using1.1/65535 and3/65535. Current secondinput values are unquantized in interpolation writes and8-bit quantized in CACHE32, an explicit difference entailed by the respective update schemes; no stored extra secondrecord survives coefficient write.
+
+## Exact bounds to validate
+
+With firstrecord errors ek,ev and true gap>=.05, |awrite|<=(6+epsv)/(.05−epsk). At first true key, pre-final-quant error=ev−awrite*ek; at secondkey it is zero in ideal arithmetic. After finalcoefficientquantization, additional perquery error<=2.5*(128/65535)+320/65535=640/65535=.009765774. Therefore full-domain maxerror bounds:
+- RAW32 <=epsv+awrite_bound*epsk+640/65535=.258753468.
+- PHASE32 <=.011826434.
+- ENDPOINT_ONLY <=.009765774 (but unmatchedpeakmemory).
+- CACHE32: keyroundingerror<=1.1/255=.004313725<.05/2, so exactquery nearest-key identity is preserved for alllegalhistories; valueerror<=3/255=.011764706.
+
+Verify formulas independently using exact Fractions. Bounds are sufficient upper bounds, not predicted averageerror or optimal-bit lower bounds. All are below originalstrict.5 tolerance, so this test is not predicted to fail that originaldeliverycriterion. The finer.05 validjoint metric is separately labeled localdiagnostic. Do not convert per-coordinatequantization into equal physical noise or energy.
+
+## Records, controls and endpoints
+
+For all530base histories×3variants×4arms=6,360paired rows(12,720roleoutputs), record originalinputid, integerstate aftereachwrite, firstrecorddecodedvalues, rawsecondwritecoefficients, finaldecodedcoefficients/cache, queryinputs, predictions, statuses, everyquantization step/error, intermediateerror and finalquantization contribution. Truevalues/targets are evaluatoronly; querykernel accepts storedcodes+currentq+fixedarmconstants, never targets/keys outsideCACHE'sstoredcodefields.
+
+Report separately for freshIID and reusedadversarial: unconditional Ecomp=maxoperanderror, perroleMAE/RMSE,maxerror, validcoverage, originalstrict.5jointdelivery and local.05jointdiagnostic, saturation/singular counts. Primary mechanistic comparison RAW32minusENDPOINT_ONLY error on paired freshoriginalhistories; secondary PHASE32minusRAW32 andPHASE32minusCACHE32. Fixed2,000 pairedpercentilebootstrap replicates seed2026110216, no significance-driven stopping. Also report maxfirst-target prequantizationerror versussecond-targeterror to locate firstwrite retention effects. Queryswap must permute predictions; value-swap must use re-encoded inputs and new targets.
+
+Resource ledger: peak/allocated/occupied persistentbits and bit-time during original100ms timeline;32allocatedpayloadbits for budgetmatchedarms, CACHEoccupies16afterfirst/32aftersecond, interpolationoccupies32afterfirst, ENDPOINT_ONLYoccupies128afterfirst/32aftersecond andhas128peakallocation. Add2controllerbits separately. Bit-ms is logical occupancy, not energy. Record timegap, phase transitions, quantizerbitwidth/range, numberofwrites, arithmeticoperations, stagegaininterpretation, source/code hashes and CPUwalltime separately from physicalwrite latency. Readout/currentinput64-bit arithmetic, comparison/control and division hardware are not charged to payloadbits and must not be called free.
+
+Validation gates: allintegerpayloadbitconstraints, nohiddenfirstrecord aftersecondwrite, nonsaturation/headroombounds, exact CACHEidentity, queryswap consistency, allrawerror bounds(with1e-10numeric allowance), complete rowcounts and independent exact-arithmetic subset/fullledger review. Execute modestCPUonce. If a genuineimplementationerror occurs, preservefailurelog, describeonecorrectedreplay without changingconditions. Stopafterthissinglecomparison; no alternativebitwidth/quantizer/normalization/centering/saturation-policy search. Existing P1B labels, priorresults and repository remainunchanged; no installs/spending/remote publication.

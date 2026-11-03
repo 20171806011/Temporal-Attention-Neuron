@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "stratified": {
+    "inputs": 4000,
+    "paired_rows": 12000,
+    "role_outputs": 24000,
+    "strata_cells": 66,
+    "independent_generator_rejections": {
+      "2": 82,
+      "3": 279
+    },
+    "independent_full_native_recurrence": true,
+    "max_prediction_difference": 0.0,
+    "max_encoding_state_difference": 0.0,
+    "oracle_unique_histories": 2534,
+    "oracle_max_error": 4.440892098500626e-16,
+    "whole_frozen_cells_matched": 6,
+    "exact_binary64_positive_key_subtractions": 5022
+  },
+  "boundary": {
+    "fixture_histories": 6,
+    "exact_pairs": 3,
+    "physical_actual_calls_checked": 52500,
+    "stored_arrays": 306,
+    "runner_episodes_checked": 144,
+    "runner_call_hashes_verified": 144,
+    "primed_positive_gate_onsets": [
+      0.039339733464011976,
+      0.0027091631255203794
+    ],
+    "all_positive_full_input_collision": false,
+    "constructed_pair_minimax_bound": "9/10",
+    "M0_raw_cache_exception_verified": true,
+    "registered_initial_states_masks_interventions_and_independent_queries_verified": true
+  },
+  "sources_preserved": true,
+  "seconds": 3.0600359790005314,
+  "scope": "Offline oracle receives full event ports/mask and fixed-N or at-most-one-zero promise; no such historical buffer is given to M1. Input collision at registered transduction, not raw-array Python API. No population claim from fixtures."
+}

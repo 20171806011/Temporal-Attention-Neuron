@@ -1,0 +1,37 @@
+{
+  "time_utc": "2026-11-02T21:56:05.409404+00:00",
+  "phase": "A original reproduction completed",
+  "records": 100,
+  "exact_raw_record_matches": 100,
+  "means_and_sample_sd": {
+    "LIF": {
+      "false_spike_rate_mean": 0.5065,
+      "false_spike_rate_sample_sd": 0.025659664209551524
+    },
+    "TAN": {
+      "false_spike_rate_mean": 0.2645,
+      "false_spike_rate_sample_sd": 0.033915410981452315
+    }
+  },
+  "native_trace_checks": {
+    "LIF": {
+      "all_spikes_exact": true,
+      "max_membrane_abs_error": 0.0,
+      "max_history_abs_error": 0.0,
+      "n_trajectories": 50,
+      "n_updates": 3000
+    },
+    "TAN": {
+      "all_spikes_exact": true,
+      "max_membrane_abs_error": 0.0,
+      "max_history_abs_error": 0.0,
+      "n_trajectories": 50,
+      "n_updates": 3000
+    }
+  },
+  "original_calls_sha256": "f7c1ced808c51bd6cf27bbc9971cf324c2195b918457d139b9e4594dc3552a10",
+  "original_inputs_sha256": "ad238966de2c23e4db25ea4437a7bb32110a9c7de34e796ce755472caf2fdb30",
+  "original_trajectories_sha256": "a5b0dbf50050935c98bf32ea6780114302433ed0e341ddb665e5e4841479347d",
+  "supplementary_metrics_computed_yet": false,
+  "fresh_inputs_generated_yet": false
+}

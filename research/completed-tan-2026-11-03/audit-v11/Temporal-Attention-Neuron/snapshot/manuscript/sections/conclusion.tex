@@ -1,0 +1,56 @@
+\section{Limitations and Future Work}\label{sec:limitation}
+
+\subsection{Limitations}
+
+Several limitations of the current study should be acknowledged.
+
+\textbf{Scalar input only.} The current TAN accepts a scalar input $x_t \in \mathbb{R}$. Extension to vector or multi-modal inputs requires upgrading $W_q, W_k, W_v$ to matrices, at which point TAN's attention mechanism becomes standard multi-head attention---but the single-neuron framing may need to be revisited.
+
+\textbf{Fixed window length $W$.} The history window length is a preset hyperparameter; the ablation results (\S6.3) and the parameter robustness results (\S6.4) suggest that $W = 5$ is near-optimal for the tested tasks, but the optimal $W$ likely depends on the temporal structure of the input. An adaptive window mechanism that grows or shrinks based on input statistics would be a natural extension.
+
+\textbf{Untrained weights.} The synaptic projections $W_q, W_k, W_v$ and the inverse temperature $\beta$ are manually set. A learnable version, trained via STDP~\cite{bi1998} or surrogate gradients~\cite{eshraghian2021,neftci2019}, could substantially improve performance on more complex tasks. The fact that the Simple RNN baseline (\S6.2) successfully distils TAN's policy suggests that a learnable TAN should also be trainable end-to-end.
+
+\textbf{LIF baseline calibration.} In the habituation experiment (Task A), the LIF threshold ($\theta = 2.0$) exceeds the unit step amplitude, so LIF does not fire at all. This is a baseline calibration limitation, not evidence that LIF intrinsically cannot habituate. A fair comparison requires calibrating the LIF threshold so that the input amplitude is sufficient to elicit spikes. \textit{This requires a new experiment with recalibrated LIF parameters.}
+
+\textbf{Statistical methodology.} The current statistical analysis treats TAN and baseline runs as independent samples. However, if both models are evaluated under the same random seed (same noise realisation), the observations are paired and a paired t-test or Wilcoxon signed-rank test would be more appropriate. The current analysis treats runs as independent; a paired analysis would be preferable when identical random realizations are used. \textit{Re-running paired statistics on existing data is possible but has not been done in this revision.}
+
+\textbf{The decay-time metric design flaw.} The decay-time metric used in \S\ref{sec:emergent-single} returns the window length when the neuron fires continuously (never decays). This produced spurious ``IMPROVED'' verdicts in the ablation study (\S6.3) that required diagnostic reinterpretation. Future versions should replace this metric with a more robust measure such as the firing rate ratio between the first and last five steps.
+
+\textbf{Clean phototaxis is deterministic.} The clean phototaxis task (Task C) produces identical trajectories across all 50 seeds for both TAN and LIF, so no statistical test is applicable. The comparison is deterministic, not statistical.
+
+\textbf{MI estimator details.} The mutual information analysis uses the KSG estimator for continuous variables (with jitter for tie-breaking) and a plugin estimator with Miller-Madow correction for discrete spike outputs. Sample size was 2000--3000. Confidence intervals and bias correction for the discrete estimator are limited; a more rigorous analysis would include bootstrap confidence intervals for all MI estimates.
+
+\textbf{No biological data validation.} All experiments are simulations; no comparison with real biological neuron electrophysiology has been conducted. TAN's predicted habituation dynamics should be validated against Aplysia or \textit{C. elegans} sensory neuron recordings in future work.
+
+\textbf{No hardware energy measurements.} The spike-sparsity results suggest a potential energy advantage, but TAN introduces additional internal computation. A net energy advantage cannot be established without hardware-level energy measurements.
+
+\subsection{Future Work}
+
+We see five promising directions for extending TAN, corresponding to the limitations above.
+
+\textbf{Multi-neuron networks.} Compose deep networks of TAN neurons and study the interaction between intra-neuron attention (the mechanism studied in this paper) and inter-neuron attention (the standard Transformer mechanism). This may reveal a natural hierarchy: low-level TANs handle local temporal patterns, while high-level TANs handle abstract sequence reasoning.
+
+\textbf{Learning rules.} Investigate how spike-timing-dependent plasticity (STDP) or local Hebbian learning rules~\cite{bi1998} can be integrated with the attention-weight structure of TAN, enabling online temporal-pattern learning without backpropagation. A natural starting point is to treat $\alpha_{t,i}$ as a local plasticity rate: synapses that are frequently attended to should strengthen, while those that are never attended to should weaken.
+
+\textbf{Larger environments.} Place a population of TAN-controlled biotons into two-dimensional fluid micro-environments that include obstacles, resource competition, and dynamic light-shadow interactions, and study whether such collectives can spontaneously evolve complex artificial-life social behaviours such as swarm foraging, defensive avoidance, or even primitive chemical communication.
+
+\textbf{Hardware implementation.} Implement TAN on Loihi 2, BrainScaleS-2~\cite{pehle2022}, or SpiNNaker 2, measuring power consumption, latency, and accuracy under online adaptation. The history window can be mapped to on-chip SRAM, and the softmax can be approximated by a winner-take-all circuit.
+
+\textbf{Multi-input channels and cross-channel attention.} Extend TAN to vector inputs $\mathbf{x}_t \in \mathbb{R}^d$ with multi-head attention across channels. This would allow TAN to process multi-modal sensory streams (e.g., visual + olfactory + tactile) and study cross-channel surprise interactions.
+
+% ============================================================
+% 10. Conclusion
+% ============================================================
+\section{Conclusion}\label{sec:conclusion}
+
+This paper has proposed the Temporal Attention Neuron (TAN), a model that combines a Boltzmann-style temporal attention kernel with neuromodulatory surprise gating on top of a classical leaky integrator. By fusing the local leaky integration of a classical spiking neuron with a non-Markovian attention window, TAN bridges the gap between physical execution constraints and temporal context retrieval.
+
+The paper presented a complete empirical and theoretical analysis organised in three layers. \textit{Emergent dynamics} at the single-neuron level (\S\ref{sec:emergent-single}) demonstrated spontaneous habituation, sparse sensory gating, and temporal edge detection; at the single-agent level (\S\ref{sec:emergent-agent}) demonstrated niche capture in clean gradients and hovering in noisy environments phenomenologically analogous to \textit{E. coli} chemotaxis. \textit{Experimental evaluation} (\S\ref{sec:evaluation}) provided systematic validation across 50 random seeds: TAN achieves lower error than LIF on the two stochastic tasks with very large effect sizes ($p<10^{-30}$, $|d|>5$); the two deterministic tasks produce identical trajectories and are compared as deterministic comparisons. TAN matches trained RNN and GRU distillation baselines on three of four tasks without any training. Ablation results are consistent with a functional specialization of the three internal modules. Parameter sweeps show relatively broad plateaus on TAN's unique parameters ($\lambda$, $\beta$). \textit{Dynamical and information-theoretic analysis} (\S\ref{sec:dynamics}) provided a mechanism for the observed behaviour: a fixed-point proof showed that the zero-membrane state is an attracting fixed point under sustained constant input; a 2D state-space projection showed that trajectories converge toward the origin; and a three-layer information cascade showed that mutual information between noise and the spike output is lower than between noise and the internal current, consistent with information loss introduced by the downstream nonlinear stages.
+
+Together, these results establish TAN as a systematically validated computational primitive whose behaviour arises from a specific, identifiable mechanism. The connection TAN provides between QKV-like temporal weighting and single-cell dynamics may inform future research linking deep learning, computational neuroscience, and artificial life, although we do not claim formal mathematical equivalence between TAN and a Transformer.
+
+As a minimalist proof-of-concept, the current TAN employs static synaptic weights. Future work will integrate local plasticity rules, extend the model to multi-input channels, and deploy it on neuromorphic hardware. We believe that TAN provides a new perspective on temporal processing in spiking neurons, and that the hierarchical information processing framework it suggests---Surprise detects, Attention weights, Threshold filters---may serve as a useful decomposition for understanding and engineering neuromorphic systems.
+
+% ============================================================
+% References
+% ============================================================

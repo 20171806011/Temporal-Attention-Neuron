@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "primary_artifacts_unchanged": true,
+  "repository_status_verified": true,
+  "repository_status_unchanged": true,
+  "repository_status_availability": "checked git checkout",
+  "repository_porcelain": "",
+  "source_sha256": {
+    "snapshot/code/experiments/natural_collision.py": "8c7b4e75ec8284b671bca6280ee848498ddd9c6109a6dba31254f6d407ec4d7f",
+    "snapshot/code/experiments/temporal_distractor.py": "6177df497f9735d9fdb434ff20e7751a8dbb4af7a32d836bb3c4898c06ad4f23"
+  },
+  "primary_sha256": {
+    "PREREGISTRATION.md": "d8f0b97300f7fd1d3e3b0c07cd5ca17c3cfb4b40b20efa25792e6ab3dd78df23",
+    "run_probe1_collision.py": "697a6640b9cfc3cfc8959f9841ead9e88701416642614d752a3b7860bc40e725",
+    "theory_certificates.py": "a23cdb7b1ae79c5fea9f1fe4eb5bbc7cbdce10a49d80c1455cc5cb112d66faa0",
+    "theory_certificates.json": "ba784e890178121247ed523af6c8b2ad631a3278e5b5dbea0fb0f76b5924e28f",
+    "probe1_inputs.jsonl": "1773c6bd6ee595fe1049b71ff6b8e34a3e7c9007f5de7f509d51d8536117fcf4",
+    "PROBE1_INPUTS_SHA256": "e4d02a9ea2b29b752289bffe6a434ff56c1a9fb81ed3a4da4d6abc3f10eb1aaf",
+    "probe1_trajectories.npz": "089b20f67989f31e13f417704e3c4c853393d5b53c2e81f6559083dda1e2f747",
+    "probe1_pair_ledger.jsonl": "bdc760a10e986ac8d940d1573a2cf83af993fda9dd6347e3526b1194ffde3b6b",
+    "probe1_results.json": "18a85fc0dfcde444cb34810da3ca7e55fb6444918d465a9898844be3b7c6ad27"
+  },
+  "independent_script_sha256": "5552c5106d6109651d6bad7be7e1b68636b5ef27e93c5220d2afadd2b0934f00",
+  "protocol_sha256": "d8f0b97300f7fd1d3e3b0c07cd5ca17c3cfb4b40b20efa25792e6ab3dd78df23",
+  "independently_regenerated_pairs": 545,
+  "histories_per_arm": 1090,
+  "arms": 5,
+  "independent_scalar_trajectories": 5450,
+  "independent_scalar_updates": 76300,
+  "paired_ledger_rows_checked": 2725,
+  "npz_arrays_checked": 35,
+  "trajectory_max_residuals": {
+    "B1_lif": {
+      "u": 0.0,
+      "h": 0.0,
+      "j": 0.0,
+      "spikes": 0.0,
+      "features": 0.0
+    },
+    "B2_buf": {
+      "u": 2.220446049250313e-16,
+      "h": 5.551115123125783e-17,
+      "j": 2.220446049250313e-16,
+      "spikes": 0.0,
+      "features": 2.220446049250313e-16
+    },
+    "B3_noattn": {
+      "u": 3.3306690738754696e-16,
+      "h": 3.3306690738754696e-16,
+      "j": 3.3306690738754696e-16,
+      "spikes": 0.0,
+      "s": 4.440892098500626e-16,
+      "features": 3.3306690738754696e-16
+    },
+    "B4_tan": {
+      "u": 5.551115123125783e-16,
+      "h": 5.551115123125783e-16,
+      "j": 5.551115123125783e-16,
+      "spikes": 0.0,
+      "s": 4.440892098500626e-16,
+      "alpha": 2.220446049250313e-16,
+      "features": 5.551115123125783e-16
+    },
+    "B4_no_reset_t8": {
+      "u": 7.771561172376096e-16,
+      "h": 4.440892098500626e-16,
+      "j": 5.551115123125783e-16,
+      "spikes": 0.0,
+      "s": 4.440892098500626e-16,
+      "alpha": 2.220446049250313e-16,
+      "features": 7.771561172376096e-16
+    }
+  },
+  "pair_ledger_max_residual": 2.220446049250313e-16,
+  "summary_max_residual": 0.0,
+  "all_original_response_coordinates_checked": true,
+  "scalar_only_zero_tail_feature_residuals": {
+    "B1_lif": 0.0,
+    "B3_noattn": 0.0,
+    "B4_tan": 0.0,
+    "B4_no_reset_t8": 0.0
+  },
+  "spike_only_response_pairs": {
+    "B1_lif": {
+      "equal_pairs": 545,
+      "total_pairs": 545
+    },
+    "B2_buf": {
+      "equal_pairs": 545,
+      "total_pairs": 545
+    },
+    "B3_noattn": {
+      "equal_pairs": 0,
+      "total_pairs": 545
+    },
+    "B4_tan": {
+      "equal_pairs": 545,
+      "total_pairs": 545
+    },
+    "B4_no_reset_t8": {
+      "equal_pairs": 545,
+      "total_pairs": 545
+    }
+  },
+  "independent_exact_theory": {
+    "exp_1_114_lower_minus_3": "34521225964697465952521244380636767153798600306101388815625432364445955277921009942390743215953938901213560837352551336001295074958548426439525852288280001/742070627209521020945986737930175781250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "context_C8_minus_1_positive_numerator_lower": "4629557643007223430991661314236794675594403276829986077378835319527306999065699489987255339503318344294373647264275585882672652581171808388846172894364070302689804881493910914613963701696815384549521486309104134327531255965864023441449258767320641588263463/6570536597310667160818612622911641930713530368000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "exp_degree": 40,
+    "exact_S8_range": [
+      "561/1000",
+      "589/1000"
+    ],
+    "exact_S9_range": [
+      "71/250",
+      "79/250"
+    ],
+    "u9_conservative_upper": "277/625",
+    "conditional_orientation_mass": "1/312500000",
+    "conditional_union_mass": "1/156250000",
+    "conditional_population_error_lower": "1/312500000",
+    "clarification": "The certified numerator equals (sum(exp)+delta)*(C8-1), not sum(exp)*(C8-1). The frozen explicit bound has the correct -delta term."
+  },
+  "primary_certificate_rational_leaf_checks": 58,
+  "reviewer_correction": "Initial checker stopped on three additional primary summary fields; its log is preserved as independent_review_initial_schema.log. The checker was extended to independently verify those fields, without changing primary files or scientific parameters.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "wall_seconds": 0.4360457620005036,
+  "maxrss_kib": 51396,
+  "limits": [
+    "Ideal response equality is distinct from floating precision and noise robustness.",
+    "The 3.2e-9 risk bound concerns the ideal continuous present-distractor distribution, not discrete PRNG prevalence or balanced-three-class accuracy.",
+    "Constructed-pair separation does not demonstrate trained classification accuracy.",
+    "B2 and reset-suppressed B4 can separate analog observations without separating spike-only observations.",
+    "Native B3/B4 are not a single-step matched attention intervention.",
+    "Saved source flow/hashes are not an external timestamp attestation."
+  ]
+}

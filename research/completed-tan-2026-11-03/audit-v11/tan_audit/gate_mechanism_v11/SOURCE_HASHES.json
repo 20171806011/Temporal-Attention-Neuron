@@ -1,0 +1,58 @@
+{
+  "scope": "Read-only source provenance; no model/calibration/metric execution.",
+  "relative_to": ".",
+  "source_paths": [
+    "Temporal-Attention-Neuron/snapshot/code/experiments/baseline_comparison.py",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/statistical_validation.py",
+    "Temporal-Attention-Neuron/snapshot/code/model/baselines.py",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/ablation.py",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/experiments.tex",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/related_work.tex",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/model.tex",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/conclusion.tex",
+    "Temporal-Attention-Neuron/snapshot/manuscript/reference.bib",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/baselines_summary.csv",
+    "Temporal-Attention-Neuron/ERRATA.md",
+    "Temporal-Attention-Neuron/README.md"
+  ],
+  "sha256": {
+    "Temporal-Attention-Neuron/snapshot/code/experiments/baseline_comparison.py": "97c63c76982ac5366044e8644c9692fa27702be13222078627f1c59320fc8558",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/statistical_validation.py": "7717f747d968d1704d9d361786352e758f88385139f89668457abd66f1a097d0",
+    "Temporal-Attention-Neuron/snapshot/code/model/baselines.py": "c2a02603f0a236c13cf110bbb189cc6556e5d2ae712b12bc23192e353fd2cf4b",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/ablation.py": "49f5418d985c563671ad93760bfc09e878a6216ce478129769bd3d253d3c8edd",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/experiments.tex": "f51f3d663e85b9ccc1bbbe0b3c4183c668b1f0ec3fe8c936f8eb31090f49915a",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/related_work.tex": "70d1e1f2232ac8532e6bc6b398dee8724dd492fcde3b108a2694d2ec2661570f",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/model.tex": "e79d5b580110a0468550411515929dedf4e6993a139a16b2811ff4dbcb24debc",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/conclusion.tex": "762f390c0ede0b49a055077116fddd553dd011ff2f2c476bb8231a329bb997cc",
+    "Temporal-Attention-Neuron/snapshot/manuscript/reference.bib": "290db2c5f589cecdb615bbcb2e980f64865cdaf43300dae2f26dedd7a9871dba",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/baselines_summary.csv": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53",
+    "Temporal-Attention-Neuron/ERRATA.md": "dc140fb2a1c8e0c174b9444c8d3d5fa4e3a448d760dc7811b4fb59983987b72f",
+    "Temporal-Attention-Neuron/README.md": "bb195ff9334b003490e045815ef7c9969763d9d610119c1da418f2588bbf80e8"
+  },
+  "AdaptiveLIF_source_nodes": [
+    {
+      "path": "Temporal-Attention-Neuron/snapshot/code/experiments/baseline_comparison.py",
+      "node": "AdaptiveLIFNeuron",
+      "start_line": 107,
+      "end_line": 136,
+      "source_segment_sha256": "e1f1db0b4fded98a49211c6931e1b2a685dbdc6a049f09f67f693369ff244fb0",
+      "ast_sha256": "472c2f786741ec0f5c94077b1e238b1fee8f4d4cd6a6ee51e416b5766c6fd1ca"
+    },
+    {
+      "path": "Temporal-Attention-Neuron/snapshot/code/model/baselines.py",
+      "node": "AdaptiveLIFNeuron",
+      "start_line": 7,
+      "end_line": 36,
+      "source_segment_sha256": "e1f1db0b4fded98a49211c6931e1b2a685dbdc6a049f09f67f693369ff244fb0",
+      "ast_sha256": "472c2f786741ec0f5c94077b1e238b1fee8f4d4cd6a6ee51e416b5766c6fd1ca"
+    }
+  ],
+  "duplicate_class_AST_equal": true,
+  "selected_class_runtime_dependencies": "Python arithmetic only; module-level numpy/torch imports are unnecessary for this exact class.",
+  "primary_literature": [
+    "https://pubmed.ncbi.nlm.nih.gov/14577853/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6726095/",
+    "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000850",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9840600/"
+  ]
+}

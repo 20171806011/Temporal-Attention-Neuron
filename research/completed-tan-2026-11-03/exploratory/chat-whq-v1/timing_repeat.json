@@ -1,0 +1,174 @@
+{
+  "not_energy": true,
+  "rows": [
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.08413653399998111,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.09420974900001511,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.10209173500004454,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.08572034000007989,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.09660046900000907,
+      "split": "validation"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.11061654499997076,
+      "split": "validation"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.11152559200002088,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.18631800599996495,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.1759079930000098,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "original_M1",
+      "seconds": 0.1625454060000493,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "bounded_WHQ",
+      "seconds": 0.22933421800007636,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "model": "rate_limited_EMA",
+      "seconds": 0.24038238600007844,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "original_M1",
+      "seconds": 0.32545690699998886,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "bounded_WHQ",
+      "seconds": 0.4274562089999563,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "model": "rate_limited_EMA",
+      "seconds": 0.49632304900001145,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "original_M1",
+      "seconds": 0.20121099200002845,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "bounded_WHQ",
+      "seconds": 0.2032138559999339,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "model": "rate_limited_EMA",
+      "seconds": 0.1909245300000748,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "original_M1",
+      "seconds": 0.20390547800002423,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "bounded_WHQ",
+      "seconds": 0.3131064570000035,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "model": "rate_limited_EMA",
+      "seconds": 0.2759676749999471,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "original_M1",
+      "seconds": 0.3585448559999804,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "bounded_WHQ",
+      "seconds": 0.5402713189999986,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "model": "rate_limited_EMA",
+      "seconds": 0.6670637099999794,
+      "split": "test"
+    }
+  ],
+  "total_seconds": 6.825485040000103
+}

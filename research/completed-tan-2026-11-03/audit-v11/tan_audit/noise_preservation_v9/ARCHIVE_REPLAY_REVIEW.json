@@ -1,0 +1,1759 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-11-02T22:02:07.474559+00:00",
+  "purpose": "Portability verification only; fixed scientific design unchanged.",
+  "isolated_root": "replay-v9",
+  "float_absolute_tolerance": 1e-12,
+  "attempts": 1,
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "replay-v9/tan_audit/noise_preservation_v9/independent_review.py"
+      ],
+      "cwd": "replay-v9",
+      "started_utc": "2026-11-02T22:02:07.509970+00:00",
+      "stdout_stderr_log": "replay-v9/copied_independent_review.log",
+      "exit_status": 0,
+      "completed_utc": "2026-11-02T22:02:09.247772+00:00",
+      "stdout_stderr_log_sha256": "099e412d0258385bcab4f35cc3bf623ccf6cbbd9294bf0a8f29c540d7192691d"
+    },
+    {
+      "argv": [
+        "python3",
+        "replay-v9/tan_audit/noise_preservation_v9/run_noise_preservation.py",
+        "--output-dir",
+        "replay-v9/tan_audit/noise_preservation_v9/primary_replay"
+      ],
+      "cwd": "replay-v9",
+      "started_utc": "2026-11-02T22:02:09.251995+00:00",
+      "stdout_stderr_log": "replay-v9/copied_primary_replay.log",
+      "exit_status": 0,
+      "completed_utc": "2026-11-02T22:02:13.331547+00:00",
+      "stdout_stderr_log_sha256": "d3307adaee4de33b446a7113fa23a02eb7e1786467cff405b14ce93af8e49b27"
+    }
+  ],
+  "source_files": {
+    "Temporal-Attention-Neuron/snapshot/code/experiments/statistical_validation.py": "7717f747d968d1704d9d361786352e758f88385139f89668457abd66f1a097d0",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/baseline_comparison.py": "97c63c76982ac5366044e8644c9692fa27702be13222078627f1c59320fc8558",
+    "Temporal-Attention-Neuron/snapshot/code/experiments/ablation.py": "49f5418d985c563671ad93760bfc09e878a6216ce478129769bd3d253d3c8edd",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/experiments.tex": "f51f3d663e85b9ccc1bbbe0b3c4183c668b1f0ec3fe8c936f8eb31090f49915a",
+    "Temporal-Attention-Neuron/snapshot/manuscript/sections/conclusion.tex": "762f390c0ede0b49a055077116fddd553dd011ff2f2c476bb8231a329bb997cc",
+    "Temporal-Attention-Neuron/ERRATA.md": "dc140fb2a1c8e0c174b9444c8d3d5fa4e3a448d760dc7811b4fb59983987b72f",
+    "Temporal-Attention-Neuron/MASTER_CLAIM_LEDGER.csv": "338fb20bb5bc7ed6088d85faa4714a986fca1e3a8709dab9217e08c38abb78fc",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/stats_validation_metrics.csv": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/stats_validation_summary.csv": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/baselines_metrics.csv": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/baselines_summary.csv": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/ablation_metrics.csv": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06",
+    "Temporal-Attention-Neuron/snapshot/data/experiment_results/ablation_summary.csv": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6",
+    "Temporal-Attention-Neuron/snapshot/results/tables/stats_validation_metrics.csv": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9",
+    "Temporal-Attention-Neuron/snapshot/results/tables/stats_validation_summary.csv": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0",
+    "Temporal-Attention-Neuron/snapshot/results/tables/baselines_metrics.csv": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637",
+    "Temporal-Attention-Neuron/snapshot/results/tables/baselines_summary.csv": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53",
+    "Temporal-Attention-Neuron/snapshot/results/tables/ablation_metrics.csv": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06",
+    "Temporal-Attention-Neuron/snapshot/results/tables/ablation_summary.csv": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6"
+  },
+  "comparisons": [
+    {
+      "file": "clean_inputs.npz",
+      "array": "noise",
+      "shape": [
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_inputs.npz",
+      "array": "base",
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_inputs.npz",
+      "array": "waveforms",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_inputs.npz",
+      "array": "history_ids",
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_inputs.npz",
+      "array": "conditions",
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "conditions",
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "history_ids",
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__current",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__candidate",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__membrane",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__exact_class_membrane",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__spikes",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "LIF__exact_class_spikes",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__current",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__candidate",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__membrane",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__exact_class_membrane",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__spikes",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__exact_class_spikes",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__history",
+      "shape": [
+        1,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__exact_class_history",
+      "shape": [
+        1,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__attention",
+      "shape": [
+        1,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__surprise",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__gate",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__context",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_trajectories.npz",
+      "array": "TAN__query",
+      "shape": [
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "noise",
+      "shape": [
+        512,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "base",
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "waveforms",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "thinning_uniforms",
+      "shape": [
+        512,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "history_ids",
+      "shape": [
+        512
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_inputs.npz",
+      "array": "conditions",
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__catch_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__TPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__FPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__BA_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN__J_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__catch_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__TPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__FPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__BA_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF__J_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__catch_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__TPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__FPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__BA_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "LIF_THINNED__J_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__catch_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__TPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__FPR_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__BA_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "ZERO_OUTPUT__J_sample",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_BA_minus_ZERO_BA",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_BA_minus_LIF_BA",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_BA_minus_LIF_THINNED_BA",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_step_R_minus_LIF_step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_step_R_minus_LIF_THINNED_step_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_samples.npz",
+      "array": "TAN_noise_induced_R_minus_LIF_noise_induced_R",
+      "shape": [
+        512
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "conditions",
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "history_ids",
+      "shape": [
+        512
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__current",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__candidate",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__membrane",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__exact_class_membrane",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__exact_class_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__current",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__candidate",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__membrane",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__exact_class_membrane",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__exact_class_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__history",
+      "shape": [
+        512,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__exact_class_history",
+      "shape": [
+        512,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__attention",
+      "shape": [
+        512,
+        2,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__surprise",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__gate",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__context",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__query",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF__observed_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "TAN__observed_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "LIF_THINNED__observed_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_trajectories.npz",
+      "array": "ZERO_OUTPUT__observed_spikes",
+      "shape": [
+        512,
+        2,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_inputs.npz",
+      "array": "noise",
+      "shape": [
+        50,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_inputs.npz",
+      "array": "base",
+      "shape": [
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_inputs.npz",
+      "array": "waveforms",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_inputs.npz",
+      "array": "history_ids",
+      "shape": [
+        50
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_inputs.npz",
+      "array": "conditions",
+      "shape": [
+        1
+      ],
+      "dtype": "<U4",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "conditions",
+      "shape": [
+        1
+      ],
+      "dtype": "<U4",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": null
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "history_ids",
+      "shape": [
+        50
+      ],
+      "dtype": "int64",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__current",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__candidate",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__membrane",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__exact_class_membrane",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__spikes",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "LIF__exact_class_spikes",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__current",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__candidate",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__membrane",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__exact_class_membrane",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__spikes",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__exact_class_spikes",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "int8",
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__history",
+      "shape": [
+        50,
+        1,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__exact_class_history",
+      "shape": [
+        50,
+        1,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__attention",
+      "shape": [
+        50,
+        1,
+        60,
+        10
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__surprise",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__gate",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__context",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_trajectories.npz",
+      "array": "TAN__query",
+      "shape": [
+        50,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "exact_required": false,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "fresh_bootstrap_draws.npy",
+      "shape": [
+        2000,
+        512
+      ],
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "original_bootstrap_draws.npy",
+      "shape": [
+        2000,
+        50
+      ],
+      "exact_required": true,
+      "bitwise_values_equal": true,
+      "max_abs_error": 0.0
+    },
+    {
+      "file": "clean_native_ledger.csv",
+      "rows": 4,
+      "columns": [
+        "history_id",
+        "condition",
+        "arm",
+        "step_present",
+        "predicted_step",
+        "observed_total_spikes",
+        "observed_onset_spikes",
+        "observed_late_spikes",
+        "R",
+        "generated_total_spikes",
+        "generated_onset_spikes",
+        "generated_late_spikes",
+        "underlying_model",
+        "sum_abs_current",
+        "sum_current_squared",
+        "sum_candidate_squared",
+        "peak_abs_current",
+        "peak_candidate",
+        "peak_abs_candidate",
+        "peak_membrane",
+        "peak_abs_membrane"
+      ],
+      "bytes_exact": true
+    },
+    {
+      "file": "fresh_bootstrap_contrasts.csv",
+      "rows": 2000,
+      "columns": [
+        "replicate",
+        "TAN_BA_minus_ZERO_BA",
+        "TAN_BA_minus_LIF_BA",
+        "TAN_BA_minus_LIF_THINNED_BA",
+        "TAN_step_R_minus_LIF_step_R",
+        "TAN_step_R_minus_LIF_THINNED_step_R",
+        "TAN_noise_induced_R_minus_LIF_noise_induced_R"
+      ],
+      "bytes_exact": true
+    },
+    {
+      "file": "fresh_ledger.csv",
+      "rows": 4096,
+      "columns": [
+        "history_id",
+        "condition",
+        "arm",
+        "step_present",
+        "predicted_step",
+        "observed_total_spikes",
+        "observed_onset_spikes",
+        "observed_late_spikes",
+        "R",
+        "generated_total_spikes",
+        "generated_onset_spikes",
+        "generated_late_spikes",
+        "underlying_model",
+        "sum_abs_current",
+        "sum_current_squared",
+        "sum_candidate_squared",
+        "peak_abs_current",
+        "peak_candidate",
+        "peak_abs_candidate",
+        "peak_membrane",
+        "peak_abs_membrane"
+      ],
+      "bytes_exact": true
+    },
+    {
+      "file": "original_bootstrap_contrasts.csv",
+      "rows": 2000,
+      "columns": [
+        "replicate",
+        "TAN_step_R_minus_LIF_step_R"
+      ],
+      "bytes_exact": true
+    },
+    {
+      "file": "original_call_results.csv",
+      "rows": 100,
+      "columns": [
+        "seed",
+        "model",
+        "false_spike_rate",
+        "total_spikes",
+        "expected_false_spike_rate",
+        "expected_total_spikes",
+        "match"
+      ],
+      "bytes_exact": true
+    },
+    {
+      "file": "original_ledger.csv",
+      "rows": 100,
+      "columns": [
+        "history_id",
+        "condition",
+        "arm",
+        "step_present",
+        "predicted_step",
+        "observed_total_spikes",
+        "observed_onset_spikes",
+        "observed_late_spikes",
+        "R",
+        "generated_total_spikes",
+        "generated_onset_spikes",
+        "generated_late_spikes",
+        "underlying_model",
+        "sum_abs_current",
+        "sum_current_squared",
+        "sum_candidate_squared",
+        "peak_abs_current",
+        "peak_candidate",
+        "peak_abs_candidate",
+        "peak_membrane",
+        "peak_abs_membrane"
+      ],
+      "bytes_exact": true
+    }
+  ],
+  "driver_sha256": "80b60897cf9994e8f38134192f218fef8cdb18475ae06cbaadd81537331f057b",
+  "driver_path": "historical_replay_driver_v9.py",
+  "original_protected_sha256_before": {
+    "ARCHIVE_SOURCE_ADDITIONS.json": "fefe14c1fc1d3c7301bfed6bb9be61133f63ceff48a00e58bef3a256ab0c6e32",
+    "FRESH_INPUTS_FROZEN.json": "fba3a03da88183c0d09f36c288f422873e304c215877f3214d9cf13633ce9382",
+    "INDEPENDENT_REVIEW_CHECKS.json": "0ee9cdb8c4ab89852b56074a36c8825741340e104c61857bf90a7c93843828ee",
+    "NOISE_SOURCE_MANIFEST.json": "cfc62677c9bd60e4f6a03a07867ff37cda04c5a51aa01326ffc9c1178bfcfd86",
+    "PHASE_A_COMPLETE.json": "0a4f4cc8118083062ba0352f280add999089ec4a328fcba059b24a532e95f85c",
+    "PREREGISTRATION.md": "70a9fcebb77a223e321e34fa11eb18f1228431c3d3ef8ac40cfc1a4706eb87e1",
+    "PRIMARY_MANIFEST.json": "2eccf54e95bf4fc4b27dc8e5bda506edafb3df0543185f6f2c738c1118f67e93",
+    "REVIEW.md": "bce23761683027afa00ce9d0225f43554f0b5ec5fd6f8879af28be10aaaa1d6a",
+    "SOURCE_GUARD.json": "dc9c3b29e2d2a7f4c2c90cd7d3a9c153127e8396975eec6cd698916ad351e29e",
+    "clean_inputs.npz": "410f98d3988626bcc84b9d79f804e1da06987f7713995246049181f132d3f83a",
+    "clean_native_ledger.csv": "9c88efc4982b03ba336d050930e88a30fd8464c0124dcb19eb4b3a6ee21b609c",
+    "clean_results.json": "d9fca23d47bb25085710b08d4735a65af278b4df100e339fadbb62f5ed662998",
+    "clean_trajectories.npz": "6c12bddc3918e297d909f74eeebf6da97ea0e610ae0364153cf1b94aff9cf5cf",
+    "fresh_bootstrap_contrasts.csv": "7f0964dd640b2b5e7845f16bf588da00c3ce37f0248196db8e7b9b247aeda6ac",
+    "fresh_bootstrap_draws.npy": "1ad848da7990cb9b22d1ff06c51bc218982a3705246e8b67cd1c0192b9a52539",
+    "fresh_inputs.npz": "4d94d62d97f672478d62baaf859437ee2f3a1fa8e73fcc7593f41541564d45d9",
+    "fresh_ledger.csv": "1b3b4b6a2fcfd889761cfde7600707e007dae96fa97e27c836f44c1311d3aafd",
+    "fresh_samples.npz": "0f7e3427f4a3dedf86874d3c57594a555bcdd90214ef2b2744c38ad149011dcb",
+    "fresh_trajectories.npz": "2019c71fc901648eed48030af344b4db8e953e7a2ccc553d91d783e212012528",
+    "independent_review.py": "69a1b964f2ed04bf8cd5a05fc42de41d87dcb7cde90d59f64f850f880179c220",
+    "original_bootstrap_contrasts.csv": "053408de3b31f6d781ee08742a622d10886c1a96017d12abcac8be4cc77b5635",
+    "original_bootstrap_draws.npy": "951620937d0613efb127a5721a1cf31a2b7b1f5b7810bf00166c7c79c281d536",
+    "original_call_results.csv": "f7c1ced808c51bd6cf27bbc9971cf324c2195b918457d139b9e4594dc3552a10",
+    "original_inputs.npz": "ad238966de2c23e4db25ea4437a7bb32110a9c7de34e796ce755472caf2fdb30",
+    "original_ledger.csv": "2a321fb5b0f07a06be123024d201b4603a28588caa810dc762b3851209865e57",
+    "original_results.json": "cc15aadf6a75264e4627d442e87b99f034e5e074121a5a462fc5db6e36f76ee8",
+    "original_trajectories.npz": "a5b0dbf50050935c98bf32ea6780114302433ed0e341ddb665e5e4841479347d",
+    "primary_results.json": "11e7d54376e24de553b34038ca890f134e333df5cc7ea14ae5a163bf9aa2c442",
+    "repo_status_after.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repo_status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "review_attempt_01.json": "0ee9cdb8c4ab89852b56074a36c8825741340e104c61857bf90a7c93843828ee",
+    "review_attempt_01.log": "de133d0f2abd3148edd4f642253e6ec85576645d12ca9885fe1db763c3c062ee",
+    "review_attempt_01.script.txt": "69a1b964f2ed04bf8cd5a05fc42de41d87dcb7cde90d59f64f850f880179c220",
+    "run.log": "47eb6cd28f2d745a9509a4054e2d5c4a2f666d242bd7981441ef2b1704c1c462",
+    "run_noise_preservation.py": "bd08b8aeef0ebdef4f69bba1e4efb8d9d4cb916800c0660f60c2bfd59c0e017f",
+    "taskb_original_extracted.py": "c014426b5d8321fd7bde4186660fb4132fe2f5f90782232b10e404bd330e0d9c"
+  },
+  "source_subset_exactly_archive_additions": true,
+  "source_git_available": false,
+  "mandatory_source_hashes_retained": true,
+  "explicit_environment_changes": {
+    "TAN_REPO_ROOT": "unset to exercise relative default",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "copied_independent_review": {
+    "status": "PASS",
+    "summary_path": "replay-v9/tan_audit/noise_preservation_v9/INDEPENDENT_REVIEW_CHECKS.json",
+    "summary_sha256": "ba3b72dd43363040e89c60348afd59a4a68456add2a55da1f2c4d86ffba10e19",
+    "readable_review_sha256": "1d6c52b5f7470933bd3a876daa6d7f30b3a2472be61a5bf630b6297d5e777ba6",
+    "check_count": 3291,
+    "comparison_count": 825,
+    "max_abs_float_residual": 4.718447854656915e-16,
+    "repository_before": {
+      "available": false,
+      "commit": null,
+      "status": null,
+      "note": "Source subset has no .git; source hashes remain mandatory."
+    },
+    "repository_after": {
+      "available": false,
+      "commit": null,
+      "status": null,
+      "note": "Source subset has no .git; source hashes remain mandatory."
+    },
+    "primary_artifacts_unchanged": true,
+    "checked_counts": {
+      "mandatory_source_files": 15,
+      "historical_records": 100,
+      "original_native_trajectories": 100,
+      "fresh_noise_paths": 512,
+      "fresh_thinning_uniform_paths": 512,
+      "fresh_native_trajectories": 2048,
+      "clean_native_trajectories": 4,
+      "all_native_trajectories": 2152,
+      "all_native_update_steps": 129120,
+      "TAN_history_vectors": 64560,
+      "TAN_history_entries": 645600,
+      "fresh_observed_trajectories": 4096,
+      "fresh_observed_spike_decisions": 245760,
+      "fresh_ledger_rows": 4096,
+      "original_ledger_rows": 100,
+      "clean_ledger_rows": 4,
+      "fresh_bootstrap_replicates": 2000,
+      "fresh_bootstrap_index_entries": 1024000,
+      "original_bootstrap_replicates": 2000,
+      "original_bootstrap_index_entries": 100000,
+      "fresh_contrasts": 6,
+      "fresh_contrast_replicates": 12000,
+      "original_contrast_replicates": 2000
+    }
+  },
+  "primary_replay_provenance": {
+    "status": "COMPLETED",
+    "manifest_sha256": "37255c0b7c868f857cd8b0e24b09c4920ba0e555cc419e5821d8c57e43de1470",
+    "source_guard_sha256": "46e7bc1c1570ed96cf4b5e2bb52485de7cb23e0ba9503f3081736fe182a890b0",
+    "source_git_available": false,
+    "actual_commit": null,
+    "repository_status_unchanged": null,
+    "source_hashes_equal_original": true,
+    "required_source_hash_count": 15
+  },
+  "scientific_comparison_summary": {
+    "npz_files": 7,
+    "numeric_array_elements": 4485366,
+    "result_json_numeric_values": 532,
+    "all_scientific_arrays_and_results_within_tolerance": true,
+    "all_inputs_and_spikes_exact": true,
+    "all_bootstrap_draws_exact": true,
+    "all_scientific_CSVs_byte_identical": true,
+    "all_saved_numeric_arrays_bitwise_equal": true,
+    "max_abs_error": 0.0,
+    "ignored_json_metadata_paths": [
+      "original_results.json/phase_A_completion/time_utc",
+      "original_results.json/phase_A_completion/original_calls_sha256",
+      "original_results.json/phase_A_completion/original_inputs_sha256",
+      "original_results.json/phase_A_completion/original_trajectories_sha256",
+      "original_results.json/new_labeled_paired_bootstrap/draws_sha256",
+      "primary_results.json/time_utc",
+      "primary_results.json/protocol_sha256",
+      "primary_results.json/fresh_inputs_sha256",
+      "primary_results.json/bootstrap_draws_sha256",
+      "PHASE_A_COMPLETE.json/time_utc",
+      "PHASE_A_COMPLETE.json/original_calls_sha256",
+      "PHASE_A_COMPLETE.json/original_inputs_sha256",
+      "PHASE_A_COMPLETE.json/original_trajectories_sha256"
+    ]
+  },
+  "completion_state": "Completed; no blocked, denied, pending or uncertain action.",
+  "original_protected_artifacts_unchanged": true,
+  "original_protected_sha256_after": {
+    "ARCHIVE_SOURCE_ADDITIONS.json": "fefe14c1fc1d3c7301bfed6bb9be61133f63ceff48a00e58bef3a256ab0c6e32",
+    "FRESH_INPUTS_FROZEN.json": "fba3a03da88183c0d09f36c288f422873e304c215877f3214d9cf13633ce9382",
+    "INDEPENDENT_REVIEW_CHECKS.json": "0ee9cdb8c4ab89852b56074a36c8825741340e104c61857bf90a7c93843828ee",
+    "NOISE_SOURCE_MANIFEST.json": "cfc62677c9bd60e4f6a03a07867ff37cda04c5a51aa01326ffc9c1178bfcfd86",
+    "PHASE_A_COMPLETE.json": "0a4f4cc8118083062ba0352f280add999089ec4a328fcba059b24a532e95f85c",
+    "PREREGISTRATION.md": "70a9fcebb77a223e321e34fa11eb18f1228431c3d3ef8ac40cfc1a4706eb87e1",
+    "PRIMARY_MANIFEST.json": "2eccf54e95bf4fc4b27dc8e5bda506edafb3df0543185f6f2c738c1118f67e93",
+    "REVIEW.md": "bce23761683027afa00ce9d0225f43554f0b5ec5fd6f8879af28be10aaaa1d6a",
+    "SOURCE_GUARD.json": "dc9c3b29e2d2a7f4c2c90cd7d3a9c153127e8396975eec6cd698916ad351e29e",
+    "clean_inputs.npz": "410f98d3988626bcc84b9d79f804e1da06987f7713995246049181f132d3f83a",
+    "clean_native_ledger.csv": "9c88efc4982b03ba336d050930e88a30fd8464c0124dcb19eb4b3a6ee21b609c",
+    "clean_results.json": "d9fca23d47bb25085710b08d4735a65af278b4df100e339fadbb62f5ed662998",
+    "clean_trajectories.npz": "6c12bddc3918e297d909f74eeebf6da97ea0e610ae0364153cf1b94aff9cf5cf",
+    "fresh_bootstrap_contrasts.csv": "7f0964dd640b2b5e7845f16bf588da00c3ce37f0248196db8e7b9b247aeda6ac",
+    "fresh_bootstrap_draws.npy": "1ad848da7990cb9b22d1ff06c51bc218982a3705246e8b67cd1c0192b9a52539",
+    "fresh_inputs.npz": "4d94d62d97f672478d62baaf859437ee2f3a1fa8e73fcc7593f41541564d45d9",
+    "fresh_ledger.csv": "1b3b4b6a2fcfd889761cfde7600707e007dae96fa97e27c836f44c1311d3aafd",
+    "fresh_samples.npz": "0f7e3427f4a3dedf86874d3c57594a555bcdd90214ef2b2744c38ad149011dcb",
+    "fresh_trajectories.npz": "2019c71fc901648eed48030af344b4db8e953e7a2ccc553d91d783e212012528",
+    "independent_review.py": "69a1b964f2ed04bf8cd5a05fc42de41d87dcb7cde90d59f64f850f880179c220",
+    "original_bootstrap_contrasts.csv": "053408de3b31f6d781ee08742a622d10886c1a96017d12abcac8be4cc77b5635",
+    "original_bootstrap_draws.npy": "951620937d0613efb127a5721a1cf31a2b7b1f5b7810bf00166c7c79c281d536",
+    "original_call_results.csv": "f7c1ced808c51bd6cf27bbc9971cf324c2195b918457d139b9e4594dc3552a10",
+    "original_inputs.npz": "ad238966de2c23e4db25ea4437a7bb32110a9c7de34e796ce755472caf2fdb30",
+    "original_ledger.csv": "2a321fb5b0f07a06be123024d201b4603a28588caa810dc762b3851209865e57",
+    "original_results.json": "cc15aadf6a75264e4627d442e87b99f034e5e074121a5a462fc5db6e36f76ee8",
+    "original_trajectories.npz": "a5b0dbf50050935c98bf32ea6780114302433ed0e341ddb665e5e4841479347d",
+    "primary_results.json": "11e7d54376e24de553b34038ca890f134e333df5cc7ea14ae5a163bf9aa2c442",
+    "repo_status_after.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "repo_status_before.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "review_attempt_01.json": "0ee9cdb8c4ab89852b56074a36c8825741340e104c61857bf90a7c93843828ee",
+    "review_attempt_01.log": "de133d0f2abd3148edd4f642253e6ec85576645d12ca9885fe1db763c3c062ee",
+    "review_attempt_01.script.txt": "69a1b964f2ed04bf8cd5a05fc42de41d87dcb7cde90d59f64f850f880179c220",
+    "run.log": "47eb6cd28f2d745a9509a4054e2d5c4a2f666d242bd7981441ef2b1704c1c462",
+    "run_noise_preservation.py": "bd08b8aeef0ebdef4f69bba1e4efb8d9d4cb916800c0660f60c2bfd59c0e017f",
+    "taskb_original_extracted.py": "c014426b5d8321fd7bde4186660fb4132fe2f5f90782232b10e404bd330e0d9c"
+  },
+  "completed_utc": "2026-11-02T22:02:13.518493+00:00",
+  "bulk_replay_copy_in_package": false
+}

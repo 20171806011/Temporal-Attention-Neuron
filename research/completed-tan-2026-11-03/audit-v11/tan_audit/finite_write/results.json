@@ -1,0 +1,525 @@
+{
+  "protocol_sha256": "01a94f178132b6b6210a8609dfcd4393c22f8c73f847cfddbc23fd410513a7a1",
+  "fixtures_sha256": "a002df84a5dd80430289895ad3a4261a55118cf6ecbd40456956377028f1387d",
+  "script_sha256": "df38bebc8f12c012829294e1decb88b040aa45b83233f38f326c803ab66846a2",
+  "inputs_sha256": "b9c9b03937463bd519e3ada94bcec5c2c8551b48791d31641b2737dff9887100",
+  "model_sha256": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+  "generator_sha256": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+  "fresh_histories": 512,
+  "adversarial_histories": 25,
+  "inputs": 1611,
+  "prediction_rows": 3222,
+  "role_outputs": 6444,
+  "capture_gain": 1.5773675300856045,
+  "arms": {
+    "A100": {
+      "write_updates": 100,
+      "h": 0.1,
+      "gamma": 4.130098089829634
+    },
+    "FAST10": {
+      "write_updates": 6153,
+      "h": 0.0016252234682268812,
+      "gamma": 127.12215321391781
+    }
+  },
+  "metrics": [
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "A100",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.1638409705547556,
+      "mae_per_role": [
+        0.07734482560871317,
+        0.08649614494604503
+      ],
+      "rmse_per_role": [
+        0.3437106625415985,
+        0.37933298117546166
+      ],
+      "max_error": 4.4356475012498295,
+      "strict_0_5_joint": 0.892578125,
+      "continuous_reference_mean_ecomp": 0.16481492508582335,
+      "continuous_reference_max_error": 4.4360382877954585,
+      "max_euler_vs_continuous_prediction_difference": 0.01342256852688184,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "original",
+      "arm": "FAST10",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.000812449265779395,
+      "mae_per_role": [
+        0.00020914458152465902,
+        0.0006033046842584745
+      ],
+      "rmse_per_role": [
+        0.0038714041177156824,
+        0.008588635732296086
+      ],
+      "max_error": 0.14323954584040788,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.0008134030057642001,
+      "continuous_reference_max_error": 0.1433716398755429,
+      "max_euler_vs_continuous_prediction_difference": 0.00013209403513503304,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "A100",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.1638409705547556,
+      "mae_per_role": [
+        0.08649614494604503,
+        0.07734482560871317
+      ],
+      "rmse_per_role": [
+        0.37933298117546166,
+        0.3437106625415985
+      ],
+      "max_error": 4.4356475012498295,
+      "strict_0_5_joint": 0.892578125,
+      "continuous_reference_mean_ecomp": 0.16481492508582335,
+      "continuous_reference_max_error": 4.4360382877954585,
+      "max_euler_vs_continuous_prediction_difference": 0.01342256852688184,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "query_swap",
+      "arm": "FAST10",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.000812449265779395,
+      "mae_per_role": [
+        0.0006033046842584745,
+        0.00020914458152465902
+      ],
+      "rmse_per_role": [
+        0.008588635732296086,
+        0.0038714041177156824
+      ],
+      "max_error": 0.14323954584040788,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.0008134030057642001,
+      "continuous_reference_max_error": 0.1433716398755429,
+      "max_euler_vs_continuous_prediction_difference": 0.00013209403513503304,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "A100",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.1638409705547556,
+      "mae_per_role": [
+        0.07734482560871331,
+        0.08649614494604499
+      ],
+      "rmse_per_role": [
+        0.34371066254159843,
+        0.37933298117546166
+      ],
+      "max_error": 4.435647501249829,
+      "strict_0_5_joint": 0.892578125,
+      "continuous_reference_mean_ecomp": 0.16481492508582335,
+      "continuous_reference_max_error": 4.436038287795457,
+      "max_euler_vs_continuous_prediction_difference": 0.01342256852688184,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "iid",
+      "variant": "value_swap",
+      "arm": "FAST10",
+      "n": 512,
+      "coverage": 1.0,
+      "mean_ecomp": 0.0008124492657793853,
+      "mae_per_role": [
+        0.0002091445815246808,
+        0.0006033046842584043
+      ],
+      "rmse_per_role": [
+        0.003871404117715685,
+        0.008588635732296093
+      ],
+      "max_error": 0.14323954584040788,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.0008134030057641948,
+      "continuous_reference_max_error": 0.1433716398755429,
+      "max_euler_vs_continuous_prediction_difference": 0.00013209403513503304,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 512
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "A100",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 4.362001478903891,
+      "mae_per_role": [
+        0.012098064713054085,
+        4.349903414190845
+      ],
+      "rmse_per_role": [
+        0.06049032356523269,
+        4.840521511577568
+      ],
+      "max_error": 5.411106902157699,
+      "strict_0_5_joint": 0.2,
+      "continuous_reference_mean_ecomp": 3.4969894381069637,
+      "continuous_reference_max_error": 5.411395549475651,
+      "max_euler_vs_continuous_prediction_difference": 5.411106902157597,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "original",
+      "arm": "FAST10",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 0.1598686902800556,
+      "mae_per_role": [
+        6.678593674630054e-14,
+        0.15986869028005493
+      ],
+      "rmse_per_role": [
+        1.0347408833665964e-13,
+        0.19983586285006644
+      ],
+      "max_error": 0.2497948285626257,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.15999999999999479,
+      "continuous_reference_max_error": 0.25000000000003375,
+      "max_euler_vs_continuous_prediction_difference": 0.00020517143741383137,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "A100",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 4.362001478903891,
+      "mae_per_role": [
+        4.349903414190845,
+        0.012098064713054085
+      ],
+      "rmse_per_role": [
+        4.840521511577568,
+        0.06049032356523269
+      ],
+      "max_error": 5.411106902157699,
+      "strict_0_5_joint": 0.2,
+      "continuous_reference_mean_ecomp": 3.4969894381069637,
+      "continuous_reference_max_error": 5.411395549475651,
+      "max_euler_vs_continuous_prediction_difference": 5.411106902157597,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "query_swap",
+      "arm": "FAST10",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 0.1598686902800556,
+      "mae_per_role": [
+        0.15986869028005493,
+        6.678593674630054e-14
+      ],
+      "rmse_per_role": [
+        0.19983586285006644,
+        1.0347408833665964e-13
+      ],
+      "max_error": 0.2497948285626257,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.15999999999999479,
+      "continuous_reference_max_error": 0.25000000000003375,
+      "max_euler_vs_continuous_prediction_difference": 0.00020517143741383137,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "A100",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 4.362001478903891,
+      "mae_per_role": [
+        0.01209806471305404,
+        4.349903414190845
+      ],
+      "rmse_per_role": [
+        0.06049032356523269,
+        4.840521511577568
+      ],
+      "max_error": 5.411106902157699,
+      "strict_0_5_joint": 0.2,
+      "continuous_reference_mean_ecomp": 3.4969894381069637,
+      "continuous_reference_max_error": 5.411395549475651,
+      "max_euler_vs_continuous_prediction_difference": 5.411106902157597,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    },
+    {
+      "group": "adversarial",
+      "variant": "value_swap",
+      "arm": "FAST10",
+      "n": 25,
+      "coverage": 1.0,
+      "mean_ecomp": 0.15986869028005557,
+      "mae_per_role": [
+        6.674216734836591e-14,
+        0.15986869028005493
+      ],
+      "rmse_per_role": [
+        1.0347329335627568e-13,
+        0.19983586285006644
+      ],
+      "max_error": 0.2497948285626257,
+      "strict_0_5_joint": 1.0,
+      "continuous_reference_mean_ecomp": 0.15999999999999473,
+      "continuous_reference_max_error": 0.25000000000003375,
+      "max_euler_vs_continuous_prediction_difference": 0.00020517143741383137,
+      "numerical_boundary_roundoff_rows": 0,
+      "status_counts": {
+        "VALID": 25
+      }
+    }
+  ],
+  "resources": {
+    "A100": {
+      "effective_write_pole": {
+        "mean": 3.046846493011276,
+        "min": 0.01094027871810743,
+        "max": 18.253463436524132
+      },
+      "coordinate_min": {
+        "mean": [
+          0.0,
+          -0.6696648019724176,
+          -1.9358662195203602
+        ],
+        "min": [
+          0.0,
+          -2.972277241191682,
+          -20.043985646131738
+        ],
+        "max": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "coordinate_max": {
+        "mean": [
+          1.3470846805904246,
+          0.7737668073384919,
+          1.9529496025679993
+        ],
+        "min": [
+          0.3016716280557451,
+          0.0,
+          0.0
+        ],
+        "max": [
+          2.499083214447186,
+          2.9934942777869153,
+          19.478285213481257
+        ]
+      },
+      "coordinate_total_variation": {
+        "mean": [
+          1.3470846805904246,
+          1.4434316093109099,
+          3.9469717046270216
+        ],
+        "min": [
+          0.3016716280557451,
+          0.005781625296766177,
+          0.003788028358455121
+        ],
+        "max": [
+          2.499083214447186,
+          2.9934942777869153,
+          20.043985646131738
+        ]
+      },
+      "coordinate_square_integrals": {
+        "mean": [
+          162.64359745969134,
+          209.88079685066745,
+          896.2635629262414
+        ],
+        "min": [
+          4.261686716695473,
+          0.0031475493384769924,
+          0.00027866298558808006
+        ],
+        "max": [
+          588.0768692086226,
+          841.3123866602571,
+          16345.424580103956
+        ]
+      },
+      "coordinate_rate_square_integrals": {
+        "mean": [
+          0.2378098177335295,
+          0.3087939407983176,
+          14.769143697117375
+        ],
+        "min": [
+          0.009853935971161487,
+          3.6194341993128454e-06,
+          2.0177732168741017e-05
+        ],
+        "max": [
+          0.6762421501130245,
+          0.9702813112055382,
+          293.60340452571745
+        ]
+      }
+    },
+    "FAST10": {
+      "effective_write_pole": {
+        "mean": 93.78026339317395,
+        "min": 0.3367357765257303,
+        "max": 561.831589757275
+      },
+      "coordinate_min": {
+        "mean": [
+          0.0,
+          -0.6696648019724176,
+          -2.654953162837923
+        ],
+        "min": [
+          0.0,
+          -2.972277241191682,
+          -87.86747389836925
+        ],
+        "max": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "coordinate_max": {
+        "mean": [
+          1.3470846805904246,
+          0.7737668073384919,
+          2.8352719271986437
+        ],
+        "min": [
+          0.3016716280557451,
+          0.0,
+          0.0
+        ],
+        "max": [
+          2.499083214447186,
+          2.9934942777869153,
+          78.00625386814824
+        ]
+      },
+      "coordinate_total_variation": {
+        "mean": [
+          1.3470846805904246,
+          1.4434316093109099,
+          5.490225090036569
+        ],
+        "min": [
+          0.3016716280557451,
+          0.005781625296766177,
+          0.003788028358457037
+        ],
+        "max": [
+          2.499083214447186,
+          2.9934942777869153,
+          87.86747389836925
+        ]
+      },
+      "coordinate_square_integrals": {
+        "mean": [
+          162.64359745969003,
+          209.88079685066498,
+          2997.6083902423134
+        ],
+        "min": [
+          4.261686716696183,
+          0.003147549338477022,
+          0.0002867057800741794
+        ],
+        "max": [
+          588.0768692085462,
+          841.3123866602045,
+          201415.47950566452
+        ]
+      },
+      "coordinate_rate_square_integrals": {
+        "mean": [
+          0.2378098177335295,
+          0.3087939407983176,
+          396.42205829324354
+        ],
+        "min": [
+          0.009853935971161487,
+          3.6194341993128454e-06,
+          0.0005802793598044287
+        ],
+        "max": [
+          0.6762421501130245,
+          0.9702813112055382,
+          2459.6861779826036
+        ]
+      }
+    }
+  },
+  "validation": {
+    "all_rows_valid": true,
+    "query_swap_exact": true,
+    "max_capture_abs_error": 3.552713678800501e-15,
+    "max_geometric_slope_residual": 1.4352963262354024e-12,
+    "native_interface_collision": true
+  },
+  "uncalibrated_fixture_ecomp": 2.0,
+  "wall_seconds": 2.073272710999845,
+  "maxrss_kib": 100428,
+  "limitation": "Enriched raw ports, three payload plus three scratch reals, calibrated capture, gated perfect hold, high gain/update rate and algebraic readout. No physical bandwidth/energy/noise validation; original labels unchanged."
+}

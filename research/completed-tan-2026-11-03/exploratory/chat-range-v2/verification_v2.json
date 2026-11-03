@@ -1,0 +1,21 @@
+{
+  "all_checks_passed": true,
+  "scope": "Independent verification path within same Chat environment, not third-party replay",
+  "results_sha256": "6dc05fcb45355a0011227ecaf75590191118926bb37b59edf47eca3a868f6fe5",
+  "counters": {
+    "rank_matched_gap_projector_checks": 180,
+    "rank_matched_gap_nonzero_fault_checks": 120,
+    "PN_presented_input_exact_within_1e-9": 140,
+    "fixed_C_recurrence_checks": 8898
+  },
+  "max_relative_U_P_pre_new_readout_difference": 3.7830969295510795e-14,
+  "exact_rational_wrong_address": [
+    "-1/5",
+    "2/5"
+  ],
+  "exact_rational_rotated_projection": [
+    "3/6250",
+    "9/25000"
+  ],
+  "supplement_note": "Rank-matched perturbation bound checks were added after examining main-grid coverage; no grid or model parameters were changed. The frozen sufficient cutoff certificate covered only zero-fault cases."
+}

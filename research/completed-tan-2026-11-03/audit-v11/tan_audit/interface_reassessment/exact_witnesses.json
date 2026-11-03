@@ -1,0 +1,1126 @@
+{
+  "fixtures": [
+    {
+      "id": "low_A",
+      "N": 2,
+      "positions": [
+        0,
+        4
+      ],
+      "keys": [
+        "4/5",
+        "1"
+      ],
+      "values": [
+        "1",
+        "-1"
+      ],
+      "queries": [
+        "4/5",
+        "1"
+      ],
+      "targets": [
+        "1",
+        "-1"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "9/5",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "4/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "1"
+        }
+      ]
+    },
+    {
+      "id": "low_B",
+      "N": 2,
+      "positions": [
+        0,
+        4
+      ],
+      "keys": [
+        "1",
+        "4/5"
+      ],
+      "values": [
+        "4/5",
+        "-4/5"
+      ],
+      "queries": [
+        "4/5",
+        "1"
+      ],
+      "targets": [
+        "-4/5",
+        "4/5"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "9/5",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "4/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "1"
+        }
+      ]
+    },
+    {
+      "id": "primed_A",
+      "N": 3,
+      "positions": [
+        0,
+        2,
+        4
+      ],
+      "keys": [
+        "2",
+        "4/5",
+        "1"
+      ],
+      "values": [
+        "0",
+        "3/2",
+        "-1/2"
+      ],
+      "queries": [
+        "4/5",
+        "1"
+      ],
+      "targets": [
+        "3/2",
+        "-1/2"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "2",
+          "novelty": "3/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "23/10",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "1/2",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "4/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "1"
+        }
+      ]
+    },
+    {
+      "id": "primed_B",
+      "N": 3,
+      "positions": [
+        0,
+        2,
+        4
+      ],
+      "keys": [
+        "2",
+        "1",
+        "4/5"
+      ],
+      "values": [
+        "0",
+        "13/10",
+        "-3/10"
+      ],
+      "queries": [
+        "4/5",
+        "1"
+      ],
+      "targets": [
+        "-3/10",
+        "13/10"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "2",
+          "novelty": "3/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "23/10",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "1/2",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "4/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "1"
+        }
+      ]
+    },
+    {
+      "id": "positive_A",
+      "N": 2,
+      "positions": [
+        0,
+        4
+      ],
+      "keys": [
+        "8/5",
+        "2"
+      ],
+      "values": [
+        "1",
+        "-1"
+      ],
+      "queries": [
+        "8/5",
+        "2"
+      ],
+      "targets": [
+        "1",
+        "-1"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "13/5",
+          "novelty": "1/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "1",
+          "novelty": "3/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "8/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "2"
+        }
+      ]
+    },
+    {
+      "id": "positive_B",
+      "N": 2,
+      "positions": [
+        0,
+        4
+      ],
+      "keys": [
+        "2",
+        "8/5"
+      ],
+      "values": [
+        "3/5",
+        "-3/5"
+      ],
+      "queries": [
+        "8/5",
+        "2"
+      ],
+      "targets": [
+        "-3/5",
+        "3/5"
+      ],
+      "encoding_segments": [
+        {
+          "slot": 0,
+          "start_ms": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "13/5",
+          "novelty": "3/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 0,
+          "start_ms": 10,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 20,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 1,
+          "start_ms": 30,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 40,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 2,
+          "start_ms": 50,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 60,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 3,
+          "start_ms": 70,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": false,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 80,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "presentation",
+          "mask": true,
+          "content": "1",
+          "novelty": "1/5",
+          "query_current": "0"
+        },
+        {
+          "slot": 4,
+          "start_ms": 90,
+          "duration_ms": 10,
+          "steps": 100,
+          "phase": "ISI",
+          "mask": true,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      ],
+      "delay_segments": {
+        "0": {
+          "duration_ms": 0,
+          "steps": 0,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "5": {
+          "duration_ms": 5,
+          "steps": 50,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        },
+        "10": {
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "0"
+        }
+      },
+      "independent_query_segments": [
+        {
+          "role": 0,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "8/5"
+        },
+        {
+          "role": 1,
+          "duration_ms": 10,
+          "steps": 100,
+          "content": "0",
+          "novelty": "0",
+          "query_current": "2"
+        }
+      ]
+    }
+  ],
+  "pair_proofs": [
+    {
+      "pair": [
+        "low_A",
+        "low_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": true,
+      "same_query_paths": true,
+      "target_linf_gap": "9/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": "9/10",
+      "classification": "FULL_REGISTERED_DRIVE_COLLISION"
+    },
+    {
+      "pair": [
+        "primed_A",
+        "primed_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": true,
+      "same_query_paths": true,
+      "target_linf_gap": "9/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": "9/10",
+      "classification": "FULL_REGISTERED_DRIVE_COLLISION"
+    },
+    {
+      "pair": [
+        "positive_A",
+        "positive_B"
+      ],
+      "same_content_only": true,
+      "same_complete_encoding_ports_masks_timing": false,
+      "same_query_paths": true,
+      "target_linf_gap": "8/5",
+      "minimax_and_equal_mixture_mean_ecomp_lower_bound": null,
+      "classification": "PROJECTED_CONTENT_EQUALITY_ONLY"
+    }
+  ],
+  "primed_M1_exact_gate_at_low_onsets": [
+    "179136376419441440315579000228723989926075146575957602853785788023915877849641370586233933886592979520962407142740569863560753353481218495388548372101597434264853607987154759420475728914978108988300949917853657415709469142580528638612536925975712204027424712856945211888917028444719497427820806451210173577118463559215493854608725352860148906760460500331111437204377935692312033591761362667802346621224487751229297479249585297962272902836951770998256541517077656498912579790511786910845633409888916161251998852639130047770333022100367994466899812046541247162173773316421910359173354944419391900024494240814733293310910946594658576127904432445284470152978839407110454026038081641994933153344624111389903984690504354915840367421946410115801947957274764830608208883111148453433237736475109776461826609612571819897793688202005370510352916458203393658266314732192229279559999/4553573719133495988591243474336912950198259295585938621301390909029207804957543880125289380900923400772965149070563042749329357667026546691023789405657930217017138298819359120187702216498315557196354192084627899863434377057922045851561668023918712484488730773992357435526644219681250757653043485501475999772087519048376811153279693871408981623476911442847388333247645171196131092964521471010554400409502624476892945656704666162811409590993605434050550684332847595214843750000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "33704753086658222669939371474844630900789425361539420117025078063162669913720290233966310818864335267707994830371520847508260241113011733358625699733495186307485132485475630722947247075514585714094141750338503192222265897379281926891673067999894535432246733691074549532787343997118719882521070406786364302588747181700264964964852562445883713629194297844785992177685571381378212611708105170910404804815499085106587456353788835260454377885853920707743653689453350528559639169380452259283241489034836520938786927050696408386926326345685697242757198821621877090424701645337926527632626563731396083575168041008215432807026864154472101938819056509305343524917422642065872231531437245543064339394464946944228431656157296805100166238271391019709535902017436508065418488464219838597581437827969959098400294620374670306100552919091684150036899563888306477026699337294145998367980664621190336721937168015533269620710708743000510391848306883299489974638584958310423577220188507374189397949120035796683869610374497213242037900692941588255998621506557464937955757765996959461303014527031387222506510044641327015916495662515051042934196828347328046867049236583301897283557343914806323091911150214813050731456145106603764473118276396804031305158879478750443162983879298106363711727105935693753380967019253095428683553523120749765520863283809258630996799814440574867349246829019497262248342527036312671866576981959227365709912524384860291179472086248373193465705467298066831433494804762050457389272139483839587497168460408262830008146132719571850145504530232451407694443461505186923091739589612922386744969672243478512112021982437762965910096500045850386587464268399627550669545734360795027652171294380109775417947427601471543653215480869307750664959119999/12441020169349955166899904849306953358652191156068743384340518943207493695266632762910884361740332270777962965862893330062230128161005245251115433707836168118065629464308702213807562181413678038422941998054019782092226551892168371954365536074609691602753124545165345974798290085763164445928831583029278895918811562873739888100660090202202269582165650679429114848952700218600833682000203836299158652822522440391928312129780255049037915317623420979266995822171278067324083138280462512916465376182568614463762681822208520858981986772628695115382349531284723215456993696708772399356536178040257889376982087201855735945342054793691037537761697672456063521006908337908398134534585014249789296455357922209721242152772937795866442086840143144594730158685821626804869372112334423151484684707685942887839611823168120417250079032126171478721777645780659417240467958626538925503530690315707129682020496985716260292947898946636087202932685613632202148437500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "positive_branch_inverse": {
+    "key": "novelty+7/5",
+    "value": "content-key",
+    "condition": "registered positive keys and novelty>0"
+  },
+  "binary64_qualification": {
+    "positive_novelty_key_subtraction_exact_by_sterbenz": true,
+    "max_value_ambiguity_for_same_rounded_content": 8.881784197001252e-16,
+    "scope": "ULP-scale value ambiguity only; not a 0.5-tolerance obstruction"
+  },
+  "query_aware_sufficient_condition": "At most one zero-novelty active event; decode positive keys, otherwise valid query belongs to unique low event.",
+  "scope": "Exact rational construction, not original-distribution prevalence; raw arrays remain available upstream and M0 uses them."
+}

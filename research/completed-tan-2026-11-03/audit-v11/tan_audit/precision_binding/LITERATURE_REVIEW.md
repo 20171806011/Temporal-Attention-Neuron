@@ -1,0 +1,42 @@
+# Literature and scope review for the fixed-precision binding test
+
+Prepared 2026-11-02 before inspecting any precision-test outcomes. This is a bounded comparison of authoritative mathematics and two primary research papers, not an exhaustive novelty search. No experiment was run for this review.
+
+The proposed comparison is useful because it tests a resource omitted by the ideal interpolation control: precision of the first event retained until the second write. The contribution is a task-specific mechanism and resource audit. It is not a new interpolation formula, a new general associative-memory architecture, or evidence that two neuronal state variables implement the algorithm.
+
+## What is already standard
+
+**Classical interpolation.** NIST DLMF §3.3(i) states the unique degree-at-most-n interpolation polynomial for n+1 distinct nodes and gives its Lagrange form. For two nodes, the polynomial is the affine function through the two supplied key/value pairs. Section 3.3(iv) gives the Newton divided-difference form. Thus both the exact interpolation identity and the key-difference denominator are standard. DLMF is an authoritative mathematical reference, not an original research paper establishing a new memory mechanism. It supplies no finite-time neuronal writer, persistent-bit budget, or biological robustness guarantee. [NIST DLMF §3.3](https://dlmf.nist.gov/3.3), [Lagrange formula](https://dlmf.nist.gov/3.3.E1), [Newton formula](https://dlmf.nist.gov/3.3.E38).
+
+The present writer stores `(k1,v1)` first and then replaces them by `a=(v2-v1)/(k2-k1)` and `b=v1-a*k1`; query output is `a*q+b`. This is the n=1 specialization, rearranged as an online two-stage algorithm. Its exact answers require distinct keys and a query promised to be one of those keys. Arbitrary queries receive an extrapolated/interpolated number, not a membership decision.
+
+**Associative memory through collective dynamics.** Hopfield's 1982 paper describes content-addressable memory emerging from the dynamics of many simple components, recovering a whole stored pattern from a sufficiently informative partial cue. Its asynchronous recurrent dynamics and collective error correction concern a different mechanism and task from evaluating an affine polynomial at a guaranteed valid scalar key. It is appropriate historical context for content-addressable neural memory; its robustness or capacity claims cannot be transferred to this two-register arithmetic writer. Conversely, the writer's success does not challenge the existence or usefulness of collective attractor memory. This comparison uses the original paper's abstract and bibliographic record; it does not claim an audit of every result in the scanned full text. [Hopfield, PNAS 79:2554–2558 (1982)](https://pmc.ncbi.nlm.nih.gov/articles/PMC346238/), [DOI](https://doi.org/10.1073/pnas.79.8.2554).
+
+**Fast-weight binding.** Schlag, Irie, and Schmidhuber (2021) describe key/value associations stored in fast-weight matrices through input-dependent updates, including outer-product and delta-rule variants. Linearized attention also carries a normalization vector. Their synthetic retrieval task includes queries chosen from stored keys, but uses different representations and update machinery. The paper therefore motivates counting the writer/controller and all persistent state, not only the final readout weights. Our interpretation of `(a,b)` as weights acting on query features `(q,1)` is a mathematical analogy; its divided-difference update is not their outer-product or delta rule. Their capacity and empirical results do not establish the present algorithm's precision, timing, or neural implementability. Relevant locations: equations 1–3 and 15–19, §§4.1–4.2 and 6.1–6.2. [ICML 2021 proceedings](https://proceedings.mlr.press/v139/schlag21a.html), [primary paper PDF](https://proceedings.mlr.press/v139/schlag21a/schlag21a.pdf).
+
+## Relation to the inspected repository
+
+The local control already has the same clean query answers as M0. `p1_experiments/models.py:297` defines the scalar metric `-(q-K_i)^2`; `p1_experiments/p1b/runner_p1b.py:91` scans the stored candidate keys and returns the selected value. For N=2, a direct online cache retains two keys and two values. Interpolation removes that final per-key cache by retaining two coefficients, under its different write and readout assumptions. This is a constructive sufficiency example, not a proof of minimal state dimension or a four-to-two-bit compression theorem: ideal real coordinates have unbounded precision.
+
+The existing audit searched local text sources without finding this specific online interpolation control; that limited repository observation is not literature novelty. The useful new evidence is the generator-specific range analysis, query-only interface check, counted event-phase logic, and separation of write/retention/readout errors. Existing local reports establish support-closure bounds `|a|<=120`, `|b|<=297` from keys in `[0.3,2.5)` separated by at least `0.05` and values in `[-3,3)`. These are ideal-coordinate bounds; floating-point guard behavior and finite-precision first writes need their own accounting.
+
+## Why the next comparison closes a real gap
+
+The fixed comparison of **32 persistent payload bits plus 2 phase bits** is informative if it applies after every event: two 16-bit interpolation registers versus four 8-bit cache fields. It asks whether interpolation's ideal reduction in coordinate count survives its actual online precision requirement. Repeating noiseless interpolation would only reproduce a known identity.
+
+- **Quantize the retained prefix.** The first event must survive in the two finite registers before the second event arrives. Endpoint-only quantization grants an unquantized first record and is an explicitly labeled diagnostic, not a budget-matched online arm.
+- **Expose coding changes.** Fixed raw full scales such as `±128` and `±320` leave most first-stage key/value resolution unused. Phase-dependent normalization can use those bits differently, but requires phase-dependent coding, gain interpretation, and the specified controller. A benefit would belong to that coding convention, not to a coordinate-independent robustness claim. Fix all ranges before execution; do not select them from outcomes.
+- **Keep the cache a strong control.** For uniform endpoint-inclusive 8-bit key quantization on `[0.3,2.5]`, maximum key error is `1.1/255≈0.004314`. With an exact valid-key query, this is below half the minimum separation `0.025`, so nearest-key selection remains unambiguous. Value quantization then has error at most `3/255≈0.011765`. These are our elementary bounds for that declared quantizer, not results imported from a paper or a prediction for other cache policies.
+- **Separate payload from computation.** The 32-bit budget excludes transient 64-bit arithmetic, incoming event and query precision, constants, clock/reset, comparator or division circuitry, and finite write time. Disclose these exclusions for both arms. Two phase bits represent the declared finite controller; they do not prove a two-bit physical controller implementation. No equality of total area, energy, latency, or biological resources follows.
+- **Preserve task and failure accounting.** Query access remains only the valid query key after encoding; no uncounted retained input array may support a decoder. Declare rounding ties, saturation/abstention, range headroom, and denominators. Include every history in unconditional loss. Keep the fixed bit budget, seeds, and coding arms; no post-result bitwidth or normalization search.
+
+Even a decisive result remains limited to this N=2 distribution and these interfaces. The test can expose an online precision cost or show that a stated coding rule controls it. It does not supply a finite-time divider, establish neuronal equivalence, solve arbitrary-key membership, or extend the two-coefficient writer to N=3.
+
+## Local evidence read
+
+- `tan_audit/interpolation_control/REPORT.md`
+- `tan_audit/interpolation_control/THEORY_REVIEW.md`
+- `Temporal-Attention-Neuron/p1_experiments/models.py`, scalar metric implementation
+- `Temporal-Attention-Neuron/p1_experiments/p1b/runner_p1b.py`, M0 implementation
+
+Original repository labels and results were not edited. External sources were read through public, supported access; no paywall circumvention or installation was used. 
