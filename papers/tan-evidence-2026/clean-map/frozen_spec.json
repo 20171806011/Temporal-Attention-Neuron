@@ -1,0 +1,109 @@
+{
+  "contract": {
+    "W": 5,
+    "a_support": [
+      "0 (catch)",
+      "[11/20,21/20] (label0)",
+      "[19/20,29/20] (label1)"
+    ],
+    "b_support": "[11/20,29/20], independent nuisance cue; not supplied to decoder",
+    "cue_t": 9,
+    "epsilon": "1/1000000000",
+    "epsilon_modes": [
+      "historical_task_unshifted",
+      "native_stabilized"
+    ],
+    "leak": "1/2",
+    "length": 14,
+    "other_inputs": 0,
+    "readout": "pre-reset u9..u13 followed by spikes9..13 only",
+    "strict_spike": ">",
+    "target_t": 5,
+    "threshold": "1/2",
+    "zero_initial_h": true,
+    "zero_initial_history": true
+  },
+  "diagnostic": {
+    "a_grid": [
+      "0",
+      "11/20",
+      "3/4",
+      "19/20",
+      "1",
+      "17/16",
+      "5/4",
+      "29/20"
+    ],
+    "b_grid": [
+      "11/20",
+      "9/10",
+      "1",
+      "29/20"
+    ],
+    "collision_b_bracket": [
+      "9/10",
+      "1"
+    ],
+    "collision_targets": [
+      {
+        "a": "17/16",
+        "label": 1,
+        "predicted_t5_branch": "no_reset"
+      },
+      {
+        "a": "5/4",
+        "label": 1,
+        "predicted_t5_branch": "reset"
+      }
+    ],
+    "fidelity_atol": 2e-14,
+    "local_inverse_rectangle": {
+      "a": [
+        "749/1000",
+        "751/1000"
+      ],
+      "b": [
+        "999/1000",
+        "1001/1000"
+      ]
+    },
+    "rational_exp_terms": 100,
+    "reference_pair": {
+      "a": "3/4",
+      "b": "1",
+      "label": 0
+    },
+    "root_certificate_dyadic_bits": 60,
+    "root_iterations": 96,
+    "root_working_decimal_digits": 100,
+    "t5_boundary_a_bracket": [
+      "1",
+      "5/4"
+    ]
+  },
+  "failure_policy": "Stop on source mismatch/fidelity failure/failed frozen bracket/unresolved declared certificate. Preserve logs; no retuning.",
+  "freeze": "Written before any numeric evaluation of the new map/collisions. Roots solve declared equations, not a parameter/accuracy search.",
+  "id": "TAN-Probe1-clean-map-1",
+  "interpretation": "Exact equal F pairs are defined by real roots certified by IVT; finite printed approximations need not be bitwise equal. Rank statements exclude reset surfaces. Collision existence does not yield a numerical population accuracy ceiling.",
+  "no_search": "Do not alter a values, b brackets, neighborhood, or tests if a proof/test fails. Record failure. Bisection is equation solving inside frozen brackets.",
+  "not_done": [
+    "No new classification labels/data generation",
+    "No nonlinear decoder fitting or Bayes accuracy estimate",
+    "No clean-only readout refit",
+    "No cue oracle fed into original decoder",
+    "No artificial state transplant",
+    "No quantized/perturbed native dynamics"
+  ],
+  "randomness": "None. Deterministic rational fixtures; no seed required.",
+  "scope": "Analytic reachable clean response map, one bounded diagnostic; no decoder training, no original Probe1/P1B/v11 rerun, no Codex.",
+  "source": {
+    "access": "Relevant functions reread via GitHub connector. tan.py bytes taken from prior archive with Git blob verified; task_excerpt.py is previously disclosed transcription, NOT whole original task file.",
+    "commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+    "native_blob": "d4e0ba873955b6e6b1f10bd36403f79c2666de51",
+    "native_path": "snapshot/code/model/tan.py",
+    "simulator_blob": "5bb1358e5ea35ef7077e2d0c65bda4661409b5ab",
+    "simulator_path": "snapshot/code/experiments/natural_collision.py",
+    "task_blob": "440daff8aced676aa66e97e99196cb9bd8e185ca",
+    "task_path": "snapshot/code/experiments/temporal_distractor.py"
+  }
+}

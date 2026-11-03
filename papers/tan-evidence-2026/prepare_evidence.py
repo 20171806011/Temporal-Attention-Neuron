@@ -34,16 +34,19 @@ groups={
 'exploratory/chat-latest-value/README.md','exploratory/chat-range-v2/README.md',
 'exploratory/chat-moment-v3/README.md','exploratory/chat-minimal-v4/README.md',
 'exploratory/chat-whq-v1/README.md'])}
+groups['E8']=('Separate clean-only archive with newly implemented exact-interval and trajectory checks; not a Bayes-accuracy bound', ['papers/tan-evidence-2026/clean-map/'+f for f in ['THEORY.md','SOURCE_REVIEW.md','frozen_spec.json','results.json','provenance.json','verify_independent.py','verification_independent.json']])
 ledger={'baseline_commit':'222caa0201feff1e37a06049aa44c0e59e1cbaba','groups':{}}
 lines=['# Evidence and manuscript relationship','','The manuscript synthesizes prior evidence. No prior manuscript or scientific result is overwritten.','',
 'Existing manuscript families: `snapshot/manuscript`, `snapshot/paper`, and `snapshot/paper2`. The 174-entry inventory includes draft/report sources and is not a claim of reading every file. Earlier stage-localization manuscript patches are retained as corrections rather than counted as separate experiments.','',
-'## Unresolved evidence boundary','','A separate clean-only map collision certificate and a complete higher-moment task-benefit experiment report were not located in this published snapshot. The paper presents the native analytical sensitivity, the verified distractor-swap collision, and the saved training control separately. No missing numerical result is inferred from code alone.','']
+'## Supplemental clean-map verification','','The separate clean-map archive now supplies the missing clean-only collision certificate. E8 records the selected unchanged scientific evidence and new verification: 5,482 checks, four collision brackets and 64 fixed trajectories. Its real-root conclusion is distinct from average task accuracy. The higher-moment discussion remains analytical; a dedicated task-benefit result is not inferred from code alone.','']
 for group,(scope,files) in groups.items():
  entries=[];lines += ['## '+group,'',scope+'.','']
  for f in files:
-  p=ROOT/PREFIX/f
-  entries.append({'path':PREFIX+f,'size_bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
-  url='https://github.com/20171806011/Temporal-Attention-Neuron/blob/'+ledger['baseline_commit']+'/'+PREFIX+f
+  rel=f if f.startswith('papers/') else PREFIX+f
+  p=ROOT/rel
+  entries.append({'path':rel,'size_bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+  ref='research/tan-evidence-paper-2026-11-03' if group=='E8' else ledger['baseline_commit']
+  url='https://github.com/20171806011/Temporal-Attention-Neuron/blob/'+ref+'/'+rel
   lines.append('- ['+f+']('+url+')')
  ledger['groups'][group]={'scope':scope,'files':entries};lines.append('')
 (HERE/'evidence_ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "check_count": 755,
+  "check_count": 774,
   "scope": "Source and snapshot identity; saved confusion arithmetic; selected headline values and tables. No simulation, training or external replication.",
   "checks": [
     "Evidence hash: research/completed-tan-2026-11-03/audit-v11/Temporal-Attention-Neuron/p1_experiments/results/run_p1a_rev2/condition_summary.csv",
@@ -29,6 +29,13 @@
     "Evidence hash: research/completed-tan-2026-11-03/exploratory/chat-moment-v3/README.md",
     "Evidence hash: research/completed-tan-2026-11-03/exploratory/chat-minimal-v4/README.md",
     "Evidence hash: research/completed-tan-2026-11-03/exploratory/chat-whq-v1/README.md",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/THEORY.md",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/SOURCE_REVIEW.md",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/frozen_spec.json",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/results.json",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/provenance.json",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/verify_independent.py",
+    "Evidence hash: papers/tan-evidence-2026/clean-map/verification_independent.json",
     "Snapshot has 680 scientific files",
     "Snapshot hash: audit-v11/CURRENT_PUBLIC_MANIFEST.json",
     "Snapshot hash: audit-v11/CURRENT_PUBLIC_SHA256SUMS.txt",
@@ -757,6 +764,18 @@
     "Collision table row",
     "Static middle query ScalarMetricAttention",
     "Static middle query VectorQKAddressAttention",
-    "Signed scalar middle query"
+    "Signed scalar middle query",
+    "Clean-map independent verification record",
+    "Clean-map fixed fixture counts",
+    "Clean-map four certified pairs",
+    "Clean-map serialized exact signs historical_task_unshifted17/16outer",
+    "Clean-map serialized exact signs historical_task_unshifted17/16saved_tight",
+    "Clean-map serialized exact signs historical_task_unshifted5/4outer",
+    "Clean-map serialized exact signs historical_task_unshifted5/4saved_tight",
+    "Clean-map serialized exact signs native_stabilized17/16outer",
+    "Clean-map serialized exact signs native_stabilized17/16saved_tight",
+    "Clean-map serialized exact signs native_stabilized5/4outer",
+    "Clean-map serialized exact signs native_stabilized5/4saved_tight",
+    "Manuscript verification count"
   ]
 }

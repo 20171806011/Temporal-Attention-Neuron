@@ -4,9 +4,9 @@ The manuscript synthesizes prior evidence. No prior manuscript or scientific res
 
 Existing manuscript families: `snapshot/manuscript`, `snapshot/paper`, and `snapshot/paper2`. The 174-entry inventory includes draft/report sources and is not a claim of reading every file. Earlier stage-localization manuscript patches are retained as corrections rather than counted as separate experiments.
 
-## Unresolved evidence boundary
+## Supplemental clean-map verification
 
-A separate clean-only map collision certificate and a complete higher-moment task-benefit experiment report were not located in this published snapshot. The paper presents the native analytical sensitivity, the verified distractor-swap collision, and the saved training control separately. No missing numerical result is inferred from code alone.
+The separate clean-map archive now supplies the missing clean-only collision certificate. E8 records the selected unchanged scientific evidence and new verification: 5,482 checks, four collision brackets and 64 fixed trajectories. Its real-root conclusion is distinct from average task accuracy. The higher-moment discussion remains analytical; a dedicated task-benefit result is not inferred from code alone.
 
 ## E1
 
@@ -68,3 +68,15 @@ Chat-sandbox conceptual experiments; not independently replicated here.
 - [exploratory/chat-moment-v3/README.md](https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/exploratory/chat-moment-v3/README.md)
 - [exploratory/chat-minimal-v4/README.md](https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/exploratory/chat-minimal-v4/README.md)
 - [exploratory/chat-whq-v1/README.md](https://github.com/20171806011/Temporal-Attention-Neuron/blob/222caa0201feff1e37a06049aa44c0e59e1cbaba/research/completed-tan-2026-11-03/exploratory/chat-whq-v1/README.md)
+
+## E8
+
+Separate clean-only archive with newly implemented exact-interval and trajectory checks; not a Bayes-accuracy bound.
+
+- [papers/tan-evidence-2026/clean-map/THEORY.md](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/THEORY.md)
+- [papers/tan-evidence-2026/clean-map/SOURCE_REVIEW.md](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/SOURCE_REVIEW.md)
+- [papers/tan-evidence-2026/clean-map/frozen_spec.json](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/frozen_spec.json)
+- [papers/tan-evidence-2026/clean-map/results.json](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/results.json)
+- [papers/tan-evidence-2026/clean-map/provenance.json](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/provenance.json)
+- [papers/tan-evidence-2026/clean-map/verify_independent.py](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/verify_independent.py)
+- [papers/tan-evidence-2026/clean-map/verification_independent.json](https://github.com/20171806011/Temporal-Attention-Neuron/blob/research/tan-evidence-paper-2026-11-03/papers/tan-evidence-2026/clean-map/verification_independent.json)

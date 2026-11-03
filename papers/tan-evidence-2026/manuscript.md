@@ -10,7 +10,7 @@ colorlinks: true
 
 # Abstract
 
-A temporal attention mechanism can change a neuron's response to recent history without making that history recoverable through its permitted output. We synthesize the recorded Temporal Attention Neuron (TAN) research into an evidence-based account of this distinction. The evidence spans static addressing, native finite-window dynamics, task-specific response collisions, a controlled readout-training intervention, and comparisons with ordinary adaptive filters. Static scalar metric addressing correctly identifies all 6,705 intermediate-key queries in the archived noiseless three-key condition, whereas the signed scalar-product rule identifies none. This positive result presupposes an available key–value array. In a separate native temporal task, 545 target–distractor swap pairs with different labels have identical complete allowed responses, despite different ordered internal windows. A later clean-only training intervention improves mean clean balanced accuracy from 32.5881% to 38.1199%, but does not eliminate this structural limitation. In a matched-calibration detection experiment, TAN's balanced accuracy exceeds an ordinary adaptive comparator under independent noise but falls below it under stationary AR(0.9) noise. We distinguish these locally executed records from exploratory Chat-sandbox constructions that have not been independently replicated here. The resulting contribution is a task- and resource-specific account of what the architecture computes, where information becomes inaccessible, and which apparent gains depend on readout, training composition, or additional mechanisms. No universal superiority, biological implementation, or independent experimental replication is established.
+A temporal attention mechanism can change a neuron's response to recent history without making that history recoverable through its permitted output. We synthesize the recorded Temporal Attention Neuron (TAN) research into an evidence-based account of this distinction. The evidence spans static addressing, native finite-window dynamics, task-specific response collisions, a controlled readout-training intervention, and comparisons with ordinary adaptive filters. Static scalar metric addressing correctly identifies all 6,705 intermediate-key queries in the archived noiseless three-key condition, whereas the signed scalar-product rule identifies none. This positive result presupposes an available key–value array. In a separate native temporal task, 545 target–distractor swap pairs with different labels have identical complete allowed responses, despite different ordered internal windows. Newly checked supplemental certificates also establish clean-only response collisions, including a pair requiring no target or query reset. A later clean-only training intervention improves mean clean balanced accuracy from 32.5881% to 38.1199%, but does not eliminate this structural limitation. In a matched-calibration detection experiment, TAN's balanced accuracy exceeds an ordinary adaptive comparator under independent noise but falls below it under stationary AR(0.9) noise. We distinguish these locally executed records from exploratory Chat-sandbox constructions that have not been independently replicated here. The resulting contribution is a task- and resource-specific account of what the architecture computes, where information becomes inaccessible, and which apparent gains depend on readout, training composition, or additional mechanisms. No universal superiority, biological implementation, or independent experimental replication is established.
 
 # Introduction
 
@@ -146,9 +146,48 @@ Suppressing only the step-8 voltage reset restores analog separation but not spi
 
 For an equal mixture of each opposite-label pair, any classifier of only the common response incurs error at least one half. This is a restricted indistinguishability statement. The corresponding conditional bound under the ideal continuous original present-distractor generator is only $3.2\times10^{-9}$. The construction therefore cannot explain the magnitude of average historical classification error. It proves a failure mode, not its prevalence.
 
+## Clean-only collisions do not require a reset
+
+A separately supplied clean-map archive resolves a gap in the initial synthesis. Its scientific files were not part of the 680-file snapshot. We checked their source identity and wrote a new verification implementation rather than treating the archive's review label as sufficient evidence [E8].
+
+For $x_5=a$, $x_9=b$ and all other inputs zero, let $R(z)=z$ if $z\leq1/2$ and zero otherwise. With historical unshifted normalization,
+
+$$
+D(a)=\tanh(4a/5)\frac{a\exp(8a^2/5)}{4+\exp(8a^2/5)+\delta},
+$$
+
+$$
+s=\frac{4b-a}{5},\quad q=2s,\quad
+T(a,b)=\frac{R(D(a))}{16}+\tanh(s)\frac{a e^{qa}+b e^{qb}}{3+e^{qa}+e^{qb}+\delta}.
+$$
+
+Here $D(a)=u_5$ and $T(a,b)=u_9$. For stabilized normalization, the epsilon term in the first denominator is $\delta\exp(8a^2/5)$ and that in the second is $\delta\exp(q\max(a,b))$. Both conventions are retained exactly. Between target and query, and after query, the current input is zero and the surprise gate is closed. On the allowed present-target support, $s\geq0.15>0$. Consequently the complete clean observation factors as
+
+$$
+F(a,b)=\left(T,\frac{R(T)}2,\frac{R(T)}4,\frac{R(T)}8,
+\frac{R(T)}{16},\mathbf1\{T>1/2\},0,0,0,0\right).
+$$
+
+This is an observation factorization, not a claim that the complete neuronal state is scalar. The pre-reset $T$ remains observable even if the query spikes.
+
+The reference $(a,b)=(3/4,1)$ has target amplitude in the exclusive low-class support. Fixing the alternative target to $17/16$ puts it in the exclusive high-class support. Exact rational interval bounds show opposite signs of $T(17/16,b)-T(3/4,1)$ at $b=0.9$ and $b=1$, and at the much tighter saved brackets. For each normalization, the map is continuous in $b$ on this interval: the target reset branch is fixed, the denominator is positive, and the stabilizing maximum is continuous. The intermediate value theorem therefore supplies an exact real cue with the same $T$, hence the same complete response. Both histories remain below threshold at target and query. A second fixed high target, $5/4$, provides another certified pair whose target does reset.
+
+| Softmax convention | High target | Matching cue (approximate) | Low/high target reset |
+|:--|--:|--:|:--|
+| Historical unshifted | 1.0625 | 0.940683774077897 | no / no |
+| Native stabilized | 1.0625 | 0.940683774067389 | no / no |
+| Historical unshifted | 1.25 | 0.950882451344341 | no / yes |
+| Native stabilized | 1.25 | 0.950882451342424 | no / yes |
+
+Every matching cue lies inside the legal cue support; query reset is absent in all four pairs. The reference $T$ is approximately 0.3565984021. Printed cue decimals are approximations, not exact roots. Equality refers to the real root certified by interval signs and continuity, not to an assertion of bit-identical outputs for arbitrary rounded inputs.
+
+The new checker uses exact Fraction arithmetic with range-reduced exponential bounds and separately written scalar full-trajectory code. It verified four collision brackets, two target-reset boundary brackets, and all 64 archived fixtures comprising 896 updates. In total, 5,482 checks passed; the maximum discrepancy against saved scalar trajectories was $3.3306690738754696\times10^{-16}$. It imports neither the archived audit nor its checker. This is additional computational verification within an AI-assisted workflow, not external human replication or formal proof-assistant verification. The local derivative-rectangle and global monotonicity certificates were not independently regenerated and are not needed for this existence result.
+
+Thus no response-only decoder can classify every allowed clean input perfectly under this real-valued contract. The cue differs across the pair, as permitted by the task; supplying it separately changes the observation resource. The proof does not establish an average accuracy ceiling of one third, calculate Bayes risk, or quantify how much historical error arose from representation loss. Finite-precision input restrictions and added process noise require separate analysis.
+
 ## Clean training improves the fixed readout, but only modestly
 
-All six fitted optimizers converged. The recorded features exactly matched the archived stabilized-source response. Table 2 reports balanced accuracy on the shared clean test subsets [E3].
+All six fitted optimizers converged. The recorded features exactly matched the archived stabilized-source response. The following table reports balanced accuracy on the shared clean test subsets [E3].
 
 | Historical seed | Clean-only training (%) | Mixed training (%) | Difference (percentage points) |
 |:--|--:|--:|--:|
@@ -161,7 +200,7 @@ The conditional 95% percentile interval for the mean difference is [3.3391, 7.60
 
 This intervention identifies training composition, including its induced normalization, as a contributor under the frozen pipeline. It does not isolate gradient conflict from preprocessing, identify a Bayes-optimal decoder, or establish architectural superiority. Mean performance remains modest, near the three-class balanced chance reference of one third. Historical reused tests are not a new blind benchmark.
 
-The clean-map question must also remain separate from the proven distractor-swap collision. The retained v8 certificate contains nonzero distractors. We did not locate a separate clean-only collision certificate in the 680-file publication and do not relabel that theorem as one. A poor clean linear classifier does not prove noninjectivity of the clean input-to-response map; conversely, better clean training does not prove that map is injective. Any additional clean-map collision claim requires its exact source, witness, normalization, allowed query and observation contract before it can be included as a verified result.
+The clean-only collision and the training intervention establish different facts. The supplemental certificate demonstrates noninjectivity of the permitted clean response across distinct labels, including under the stabilized convention used for training. The training intervention improves a particular decoder on the recorded test distribution. Neither result quantifies the other: the certified pair does not explain the magnitude of average error, and the training gain does not repair an exact response collision. Original clean-map notes describe the training control as prospective because they predate its completed execution; their historical wording is preserved in the supplement.
 
 ## Correlated noise reverses a detection advantage
 
@@ -200,9 +239,9 @@ The project-specific contribution of this synthesis is the integration of these 
 
 This paper is retrospective. Protocols described as frozen were saved before their respective recorded experiments; that does not make the present cross-study synthesis prospectively registered. Different TAN variants, normalization rules, tasks, readouts, and resource budgets cannot be pooled into a common success percentage. The clean-only control has three fixed historical seeds and conditional test resampling, not a population-level training study. The collision proof applies to its supported box and continuation, not arbitrary noise or all future inputs. Static addressing assumes available stored candidates. The adaptive comparison covers one calibration and one correlation change.
 
-The public archive is screened rather than a byte-identical image of every original machine file. It retains numeric data and records public text/path transformations. Historical hashes are distinct from current public-file hashes. Some reproduction guards require the pristine source or documented adaptation in a disposable copy. Download verification and source syntax checks are not experimental replication. No new model fit, simulation sweep, or scientific experiment was run to write this manuscript.
+The public archive is screened rather than a byte-identical image of every original machine file. It retains numeric data and records public text/path transformations. Historical hashes are distinct from current public-file hashes. Some reproduction guards require the pristine source or documented adaptation in a disposable copy. Download verification and source syntax checks are not experimental replication. No new model fit, simulation sweep, or classification experiment was run to write this manuscript. The supplemental clean-map update adds a new computational check of previously fixed certificates and trajectories.
 
-Readers can inspect the 680-file snapshot, per-claim ledger, archived protocols and saved outputs. The accompanying validation script checks source hashes, extracts selected headline numbers directly from saved CSV/JSON, and validates the original snapshot inventory without training. The build script produces the PDF and LaTeX from the canonical Markdown manuscript. Its output should be interpreted as publication consistency checking. Independent human review, independent execution in a specified environment, wider task testing, and physical implementation remain future work.
+Readers can inspect the 680-file snapshot, per-claim ledger, archived protocols and saved outputs. The accompanying validation script checks source hashes, extracts selected headline numbers directly from saved CSV/JSON, and validates the original snapshot inventory without training. The separate clean-map checker additionally recomputes rational root signs and fixed trajectories, with its scope recorded in the supplement. The build script produces the PDF and LaTeX from the canonical Markdown manuscript. Its output should be interpreted as publication consistency checking. Independent human review, independent execution in a specified environment, wider task testing, and physical implementation remain future work.
 
 # Conclusion
 
@@ -225,3 +264,5 @@ The identifiers below refer to project artifacts rather than externally publishe
 - **E5.** Native eight-stage experiment-series summary and final timescale report.
 - **E6.** Interpolation-control report and subsequent finite-precision binding report.
 - **E7.** Exploratory latest-value, range, moment, minimal and write/hold/query package documentation.
+
+- **E8.** Separate clean-map archive: unchanged theory, frozen specification and numerical results; newly implemented rational and trajectory verification in `clean-map/`.

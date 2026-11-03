@@ -52,6 +52,15 @@ for model in ['ScalarMetricAttention','VectorQKAddressAttention']:
  require(float(row['MiddleKeyChannelAcc_%'])==100,'Static middle query '+model)
 row=next(r for r in rows if r['Condition']=='C2_N3_zero_noise' and r['Model']=='SignedScalarKernel')
 require(float(row['MiddleKeyChannelAcc_%'])==0,'Signed scalar middle query')
+clean=json.loads((HERE/'clean-map/verification_independent.json').read_text())
+require(clean['status']=='PASS' and clean['checks']==5482,'Clean-map independent verification record')
+require(clean['fixed_histories']==64 and clean['scalar_updates']==896,'Clean-map fixed fixture counts')
+require(len(clean['exact_collision_certificates'])==4,'Clean-map four certified pairs')
+from fractions import Fraction
+for cert in clean['exact_collision_certificates']:
+ for bracket in cert['brackets']:
+  require(Fraction(bracket['lower_residual']['upper'])<0<Fraction(bracket['upper_residual']['lower']),'Clean-map serialized exact signs '+cert['mode']+cert['high_a']+bracket['kind'])
+require('5,482 checks passed' in paper,'Manuscript verification count')
 report={'status':'PASS','check_count':len(checks),'scope':'Source and snapshot identity; saved confusion arithmetic; selected headline values and tables. No simulation, training or external replication.','checks':checks}
 (HERE/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('PASS:',len(checks),'publication consistency checks')
