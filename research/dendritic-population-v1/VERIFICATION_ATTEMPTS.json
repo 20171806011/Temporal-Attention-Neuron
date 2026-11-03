@@ -1,0 +1,11 @@
+{
+  "attempt1": {
+    "outcome": "Stopped by authoring agent after approximately one minute to remove repeated NPZ decompression; no verification result written",
+    "old_checker_sha256": "833f6bbbc289b4ccd3b968ece6e5ad4ffae84a8f3d3864d1ed29ae6b63c8e314",
+    "reason": "The scalar loop accessed lazy compressed arrays repeatedly. Arrays are now loaded once per arm/split/regime. No scientific equations, protocol, inputs or primary outputs changed."
+  },
+  "attempt2": {
+    "checker_sha256": "706fc1c4ffac0829796bd502f20e35a3ecf1f925ad39e00d7ad0fa1d190e5beb",
+    "outcome": "See results/verification.json"
+  }
+}
