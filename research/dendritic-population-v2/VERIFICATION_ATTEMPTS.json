@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "status": "failed",
+      "checker_sha256": "12b292115df31e0413f64516834f370f2f01de4329f757f49fb69627f363d935",
+      "error": "development generation mismatch",
+      "cause": "independent verifier omitted common readout cue on channel 4; source/data match frozen protocol",
+      "change": "Add the prescribed cue to verifier only; no model, protocol, data, checkpoint or outcome changed"
+    },
+    {
+      "status": "PASS",
+      "checker_sha256": "bf84154947561a68a3cdb9ad96e0a1c155b74d75f6870558198e4d425015a624",
+      "result": "results/verification.json"
+    }
+  ]
+}
