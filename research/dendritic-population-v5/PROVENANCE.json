@@ -1,0 +1,24 @@
+{
+  "baseline": "bd985d64aff2a5872870abe11d86e2945bf4a79a",
+  "local_branch": "research/dendritic-population-v5-2026-11-03",
+  "cached_origin_main": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "main_scope": "No local main branch; cached origin/main was read, never changed. No fetch, push or remote write in V5.",
+  "protocol_before_data_commit": "5b3fb7c6e3b5c2c58883725ed5d23292a1cc2300",
+  "prepare_and_selection_before_final_training_commit": "ba2a098f82c3762da4e3f22a6d039bdecca2b589",
+  "final_checkpoints_before_test_commit": "b155ff98b95a62bb2d5449263e2028c20a691ea6",
+  "test_invocations": 1,
+  "external_publication": "Not pushed or published",
+  "subsequent_phase": "Not started; preregistered stability criterion not met",
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "artifact_locks": {
+    "FREEZE.json": "61f31fd8b7bfcb2d96e0fc7da93b744a6d38f35381af33f8e01d0d5dbdb894e4",
+    "results/PREPARE_LOCK.json": "e131961894e23baad5e3dd6c3cd89e0889ed1f4e93e7499e101b261671587fc4",
+    "results/FINAL_LOCK.json": "a16d1b7215fde36adc2d4480f5733f316a88a67d11a8269170e4e935d9991f47",
+    "results/TEST_STARTED.json": "422f314bb733c51212f2de32338a63e9e8e0cdd9fa0e2844d280d5ceee743aa0",
+    "results/TEST_SUMMARY.json": "4ada72ea5237ea97cb6e53016fad615ce4d832251b10e22583c4aa3ff70df70a"
+  },
+  "clarification": "PROTOCOL.md phrase 24updates means 24 simulation time steps, as frozen code and remaining protocol specify; parameter updates are 200. Frozen source unchanged."
+}

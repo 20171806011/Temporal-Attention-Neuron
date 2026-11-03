@@ -1,0 +1,7248 @@
+{
+  "rows": [
+    {
+      "phase": "A",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s0_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s0_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.011039701999834506,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0114288330078125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.451171875,
+        5.3359375,
+        8.240234375,
+        4.423828125,
+        9.224609375,
+        8.357421875,
+        9.177734375,
+        8.8515625
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s0_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s0_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.017768751000403427,
+      "accuracy": 0.4921875,
+      "coverage": 0.986328125,
+      "abstentions": 7,
+      "abstention_rate": 0.013671875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.484375
+      ],
+      "confusion": [
+        [
+          128,
+          125,
+          3
+        ],
+        [
+          128,
+          124,
+          4
+        ]
+      ],
+      "rate_error": 0.1297454833984375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.03125,
+        2.60546875,
+        9.369140625,
+        2.443359375,
+        6.8984375,
+        3.375,
+        8.810546875,
+        3.5078125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s0_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s0_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0070535459999518935,
+      "accuracy": 0.923828125,
+      "coverage": 0.984375,
+      "abstentions": 8,
+      "abstention_rate": 0.015625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.984375,
+        0.86328125
+      ],
+      "confusion": [
+        [
+          252,
+          4,
+          0
+        ],
+        [
+          27,
+          221,
+          8
+        ]
+      ],
+      "rate_error": 0.0333404541015625,
+      "events_mean": [
+        1.30859375,
+        1.626953125,
+        2.28515625,
+        0.73828125,
+        3.32421875,
+        2.701171875,
+        0.728515625,
+        1.509765625,
+        1.86328125,
+        3.98828125,
+        0.814453125,
+        1.205078125,
+        2.935546875,
+        2.7890625,
+        5.384765625,
+        2.099609375,
+        4.869140625,
+        1.6640625,
+        9.564453125,
+        9.607421875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s0_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s0_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00792653399912524,
+      "accuracy": 0.416015625,
+      "coverage": 0.8203125,
+      "abstentions": 92,
+      "abstention_rate": 0.1796875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.25,
+        0.58203125
+      ],
+      "confusion": [
+        [
+          64,
+          151,
+          41
+        ],
+        [
+          56,
+          149,
+          51
+        ]
+      ],
+      "rate_error": 0.16241455078125,
+      "events_mean": [
+        0.443359375,
+        1.576171875,
+        0.765625,
+        0.482421875,
+        3.79296875,
+        1.29296875,
+        0.11328125,
+        0.60546875,
+        2.4375,
+        3.3515625,
+        0.271484375,
+        0.828125,
+        2.01953125,
+        1.212890625,
+        4.845703125,
+        0.6796875,
+        3.984375,
+        0.970703125,
+        11.705078125,
+        8.654296875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s1_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s1_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006361449002724839,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0220794677734375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.798828125,
+        0.001953125,
+        12.82421875,
+        0.0,
+        12.453125,
+        6.8828125,
+        9.888671875,
+        11.62109375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s1_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s1_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006139032997452887,
+      "accuracy": 0.453125,
+      "coverage": 0.857421875,
+      "abstentions": 73,
+      "abstention_rate": 0.142578125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.85546875,
+        0.05078125
+      ],
+      "confusion": [
+        [
+          219,
+          11,
+          26
+        ],
+        [
+          196,
+          13,
+          47
+        ]
+      ],
+      "rate_error": 0.10882568359375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.259765625,
+        0.0,
+        11.6171875,
+        0.0,
+        8.81640625,
+        3.4140625,
+        12.365234375,
+        6.927734375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s1_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s1_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006089419002819341,
+      "accuracy": 0.619140625,
+      "coverage": 0.890625,
+      "abstentions": 56,
+      "abstention_rate": 0.109375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.98828125,
+        0.25
+      ],
+      "confusion": [
+        [
+          253,
+          1,
+          2
+        ],
+        [
+          138,
+          64,
+          54
+        ]
+      ],
+      "rate_error": 0.084869384765625,
+      "events_mean": [
+        1.244140625,
+        1.693359375,
+        0.0,
+        0.0,
+        2.705078125,
+        3.263671875,
+        0.0,
+        0.0,
+        0.994140625,
+        3.54296875,
+        0.75,
+        1.021484375,
+        1.24609375,
+        0.0,
+        5.466796875,
+        0.0,
+        5.875,
+        0.505859375,
+        11.48828125,
+        10.087890625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s1_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s1_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006299934997514356,
+      "accuracy": 0.435546875,
+      "coverage": 0.849609375,
+      "abstentions": 77,
+      "abstention_rate": 0.150390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.63671875,
+        0.234375
+      ],
+      "confusion": [
+        [
+          163,
+          58,
+          35
+        ],
+        [
+          154,
+          60,
+          42
+        ]
+      ],
+      "rate_error": 0.120819091796875,
+      "events_mean": [
+        0.0,
+        1.005859375,
+        0.0,
+        0.0,
+        2.115234375,
+        3.666015625,
+        0.0,
+        0.0,
+        0.515625,
+        2.75390625,
+        0.873046875,
+        0.060546875,
+        0.126953125,
+        0.0,
+        5.279296875,
+        0.0,
+        5.24609375,
+        0.373046875,
+        12.4140625,
+        9.3203125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s2_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s2_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006313919999229256,
+      "accuracy": 0.990234375,
+      "coverage": 0.99609375,
+      "abstentions": 2,
+      "abstention_rate": 0.00390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.98046875,
+        1.0
+      ],
+      "confusion": [
+        [
+          251,
+          3,
+          2
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.028289794921875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        16.4453125,
+        3.611328125,
+        8.265625,
+        0.58984375,
+        6.36328125,
+        15.58984375,
+        11.462890625,
+        8.7421875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s2_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s2_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.007189711999671999,
+      "accuracy": 0.474609375,
+      "coverage": 0.9453125,
+      "abstentions": 28,
+      "abstention_rate": 0.0546875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.4453125,
+        0.50390625
+      ],
+      "confusion": [
+        [
+          114,
+          130,
+          12
+        ],
+        [
+          111,
+          129,
+          16
+        ]
+      ],
+      "rate_error": 0.223388671875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        19.0,
+        0.0,
+        8.69140625,
+        0.0,
+        6.75390625,
+        17.15625,
+        13.400390625,
+        7.8828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s2_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s2_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006021171000611503,
+      "accuracy": 0.94921875,
+      "coverage": 0.96484375,
+      "abstentions": 18,
+      "abstention_rate": 0.03515625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.9765625,
+        0.921875
+      ],
+      "confusion": [
+        [
+          250,
+          2,
+          4
+        ],
+        [
+          6,
+          236,
+          14
+        ]
+      ],
+      "rate_error": 0.033355712890625,
+      "events_mean": [
+        2.87109375,
+        1.69140625,
+        1.04296875,
+        0.916015625,
+        1.595703125,
+        0.13671875,
+        0.814453125,
+        1.953125,
+        2.80859375,
+        1.154296875,
+        2.83203125,
+        1.220703125,
+        4.328125,
+        1.66796875,
+        0.037109375,
+        0.64453125,
+        3.962890625,
+        3.37890625,
+        10.111328125,
+        8.99609375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s2_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s2_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.007588389999000356,
+      "accuracy": 0.47265625,
+      "coverage": 0.953125,
+      "abstentions": 24,
+      "abstention_rate": 0.046875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.3671875,
+        0.578125
+      ],
+      "confusion": [
+        [
+          94,
+          151,
+          11
+        ],
+        [
+          95,
+          148,
+          13
+        ]
+      ],
+      "rate_error": 0.134246826171875,
+      "events_mean": [
+        1.384765625,
+        0.70703125,
+        0.51953125,
+        0.6328125,
+        2.41796875,
+        0.529296875,
+        0.048828125,
+        0.388671875,
+        1.484375,
+        0.1015625,
+        4.51953125,
+        1.681640625,
+        1.888671875,
+        1.15234375,
+        0.408203125,
+        0.048828125,
+        1.5859375,
+        4.80078125,
+        8.46484375,
+        12.328125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s3_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s3_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.007875809002143797,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.006683349609375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        14.203125,
+        3.76171875,
+        12.1875,
+        6.001953125,
+        1.4453125,
+        12.15625,
+        13.712890625,
+        11.013671875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s3_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s3_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006115198000770761,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.176605224609375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.96484375,
+        0.0,
+        15.955078125,
+        8.98046875,
+        0.5,
+        5.443359375,
+        15.427734375,
+        10.296875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s3_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s3_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006060976000298979,
+      "accuracy": 0.3046875,
+      "coverage": 0.71875,
+      "abstentions": 144,
+      "abstention_rate": 0.28125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.55078125,
+        0.05859375
+      ],
+      "confusion": [
+        [
+          141,
+          34,
+          81
+        ],
+        [
+          178,
+          15,
+          63
+        ]
+      ],
+      "rate_error": 0.105682373046875,
+      "events_mean": [
+        1.8203125,
+        3.001953125,
+        0.0,
+        0.240234375,
+        2.326171875,
+        2.30859375,
+        0.0,
+        0.03125,
+        0.0,
+        0.0,
+        0.173828125,
+        1.232421875,
+        4.240234375,
+        0.0,
+        4.005859375,
+        0.0,
+        0.0,
+        0.095703125,
+        6.775390625,
+        10.732421875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s3_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s3_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00608958999873721,
+      "accuracy": 0.349609375,
+      "coverage": 0.716796875,
+      "abstentions": 145,
+      "abstention_rate": 0.283203125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.69140625,
+        0.0078125
+      ],
+      "confusion": [
+        [
+          177,
+          0,
+          79
+        ],
+        [
+          188,
+          2,
+          66
+        ]
+      ],
+      "rate_error": 0.113311767578125,
+      "events_mean": [
+        1.0078125,
+        2.05078125,
+        0.0,
+        0.251953125,
+        1.908203125,
+        2.005859375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.126953125,
+        2.79296875,
+        0.0,
+        3.48046875,
+        0.0,
+        0.0,
+        0.126953125,
+        5.123046875,
+        10.548828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s4_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s4_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006151254998258082,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.009857177734375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.951171875,
+        4.501953125,
+        6.23046875,
+        11.154296875,
+        8.6953125,
+        11.43359375,
+        6.8828125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s4_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s4_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005861121000634739,
+      "accuracy": 0.486328125,
+      "coverage": 0.986328125,
+      "abstentions": 7,
+      "abstention_rate": 0.013671875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.515625,
+        0.45703125
+      ],
+      "confusion": [
+        [
+          132,
+          122,
+          2
+        ],
+        [
+          134,
+          117,
+          5
+        ]
+      ],
+      "rate_error": 0.167388916015625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.443359375,
+        1.669921875,
+        5.02734375,
+        7.640625,
+        8.375,
+        14.158203125,
+        5.212890625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s4_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s4_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006171001001348486,
+      "accuracy": 0.783203125,
+      "coverage": 0.8984375,
+      "abstentions": 52,
+      "abstention_rate": 0.1015625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.71875,
+        0.84765625
+      ],
+      "confusion": [
+        [
+          184,
+          47,
+          25
+        ],
+        [
+          12,
+          217,
+          27
+        ]
+      ],
+      "rate_error": 0.0566253662109375,
+      "events_mean": [
+        0.7421875,
+        1.671875,
+        3.388671875,
+        0.509765625,
+        0.685546875,
+        1.12109375,
+        0.19140625,
+        0.640625,
+        4.224609375,
+        0.423828125,
+        1.7890625,
+        2.212890625,
+        0.943359375,
+        3.583984375,
+        1.806640625,
+        0.830078125,
+        4.4765625,
+        4.001953125,
+        8.38671875,
+        7.349609375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s4_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s4_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.009000597998237936,
+      "accuracy": 0.416015625,
+      "coverage": 0.845703125,
+      "abstentions": 79,
+      "abstention_rate": 0.154296875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.05859375,
+        0.7734375
+      ],
+      "confusion": [
+        [
+          15,
+          207,
+          34
+        ],
+        [
+          13,
+          198,
+          45
+        ]
+      ],
+      "rate_error": 0.1272430419921875,
+      "events_mean": [
+        0.58203125,
+        1.22265625,
+        3.056640625,
+        0.474609375,
+        0.302734375,
+        0.80859375,
+        0.095703125,
+        0.015625,
+        4.224609375,
+        0.0,
+        1.939453125,
+        0.09375,
+        0.591796875,
+        3.31640625,
+        1.111328125,
+        0.111328125,
+        4.224609375,
+        2.033203125,
+        7.77734375,
+        7.1484375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s5_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s5_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006387216999428347,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0130462646484375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17.001953125,
+        14.4453125,
+        13.9609375,
+        4.966796875,
+        7.75,
+        1.845703125,
+        7.01953125,
+        8.57421875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s5_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s5_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0059970859983877745,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.1632232666015625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        19.0,
+        18.0,
+        4.607421875,
+        6.107421875,
+        0.0,
+        7.96484375,
+        10.158203125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s5_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s5_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005944558000919642,
+      "accuracy": 0.49609375,
+      "coverage": 0.9921875,
+      "abstentions": 4,
+      "abstention_rate": 0.0078125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.9921875
+      ],
+      "confusion": [
+        [
+          0,
+          254,
+          2
+        ],
+        [
+          0,
+          254,
+          2
+        ]
+      ],
+      "rate_error": 0.1077117919921875,
+      "events_mean": [
+        4.978515625,
+        0.0,
+        0.552734375,
+        2.216796875,
+        0.244140625,
+        0.82421875,
+        0.0,
+        0.689453125,
+        0.958984375,
+        0.017578125,
+        0.228515625,
+        0.0,
+        4.978515625,
+        0.64453125,
+        0.072265625,
+        0.0,
+        0.9765625,
+        0.0,
+        6.5390625,
+        8.763671875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s5_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s5_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006045287002052646,
+      "accuracy": 0.41796875,
+      "coverage": 0.845703125,
+      "abstentions": 79,
+      "abstention_rate": 0.154296875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.8359375
+      ],
+      "confusion": [
+        [
+          0,
+          219,
+          37
+        ],
+        [
+          0,
+          214,
+          42
+        ]
+      ],
+      "rate_error": 0.105926513671875,
+      "events_mean": [
+        4.0,
+        0.0,
+        0.1328125,
+        1.037109375,
+        0.47265625,
+        0.5,
+        0.0,
+        0.3203125,
+        1.140625,
+        0.0,
+        0.0,
+        0.0,
+        4.0,
+        0.07421875,
+        0.0,
+        0.0,
+        1.140625,
+        0.0,
+        6.203125,
+        8.5
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s6_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s6_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006184197998663876,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0105743408203125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.255859375,
+        8.0,
+        12.994140625,
+        11.5703125,
+        3.873046875,
+        10.916015625,
+        6.361328125,
+        8.529296875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s6_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s6_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006026191000273684,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.19830322265625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.6796875,
+        7.73828125,
+        7.982421875,
+        6.0859375,
+        1.11328125,
+        5.8828125,
+        7.267578125,
+        7.875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s6_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s6_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0062978099995234516,
+      "accuracy": 0.955078125,
+      "coverage": 0.974609375,
+      "abstentions": 13,
+      "abstention_rate": 0.025390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.98046875,
+        0.9296875
+      ],
+      "confusion": [
+        [
+          251,
+          2,
+          3
+        ],
+        [
+          8,
+          238,
+          10
+        ]
+      ],
+      "rate_error": 0.0271453857421875,
+      "events_mean": [
+        1.408203125,
+        0.787109375,
+        1.603515625,
+        1.724609375,
+        2.609375,
+        2.421875,
+        1.44921875,
+        4.818359375,
+        0.3828125,
+        0.513671875,
+        2.189453125,
+        0.71875,
+        0.798828125,
+        3.279296875,
+        4.51171875,
+        5.7109375,
+        0.705078125,
+        2.720703125,
+        9.294921875,
+        6.74609375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s6_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s6_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006252276001760038,
+      "accuracy": 0.42578125,
+      "coverage": 0.904296875,
+      "abstentions": 49,
+      "abstention_rate": 0.095703125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.2890625,
+        0.5625
+      ],
+      "confusion": [
+        [
+          74,
+          158,
+          24
+        ],
+        [
+          87,
+          144,
+          25
+        ]
+      ],
+      "rate_error": 0.1465606689453125,
+      "events_mean": [
+        0.7265625,
+        0.640625,
+        0.845703125,
+        1.990234375,
+        2.30078125,
+        2.291015625,
+        1.125,
+        4.529296875,
+        0.255859375,
+        0.484375,
+        1.564453125,
+        0.654296875,
+        0.609375,
+        2.779296875,
+        4.03515625,
+        5.248046875,
+        0.736328125,
+        2.125,
+        10.029296875,
+        5.5234375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s7_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s7_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005946281999058556,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.006622314453125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        8.80859375,
+        18.576171875,
+        7.837890625,
+        1.609375,
+        4.66796875,
+        3.419921875,
+        10.818359375,
+        9.271484375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s7_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s7_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006020090000674827,
+      "accuracy": 0.4375,
+      "coverage": 0.876953125,
+      "abstentions": 63,
+      "abstention_rate": 0.123046875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.37109375,
+        0.50390625
+      ],
+      "confusion": [
+        [
+          95,
+          129,
+          32
+        ],
+        [
+          96,
+          129,
+          31
+        ]
+      ],
+      "rate_error": 0.1927947998046875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.228515625,
+        18.966796875,
+        8.41015625,
+        0.0,
+        3.671875,
+        0.015625,
+        8.4609375,
+        14.23828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s7_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s7_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006147538999357494,
+      "accuracy": 0.8125,
+      "coverage": 0.8984375,
+      "abstentions": 52,
+      "abstention_rate": 0.1015625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.625,
+        1.0
+      ],
+      "confusion": [
+        [
+          160,
+          44,
+          52
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.040130615234375,
+      "events_mean": [
+        1.96875,
+        1.583984375,
+        0.0,
+        3.16796875,
+        0.525390625,
+        0.255859375,
+        3.291015625,
+        3.015625,
+        2.052734375,
+        0.765625,
+        3.03125,
+        3.2578125,
+        3.138671875,
+        3.16796875,
+        0.78125,
+        5.669921875,
+        1.21875,
+        3.61328125,
+        4.908203125,
+        9.328125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s7_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s7_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0061756020004395396,
+      "accuracy": 0.435546875,
+      "coverage": 0.88671875,
+      "abstentions": 58,
+      "abstention_rate": 0.11328125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.6328125,
+        0.23828125
+      ],
+      "confusion": [
+        [
+          162,
+          59,
+          35
+        ],
+        [
+          172,
+          61,
+          23
+        ]
+      ],
+      "rate_error": 0.158843994140625,
+      "events_mean": [
+        2.265625,
+        1.416015625,
+        0.0,
+        3.103515625,
+        0.00390625,
+        0.029296875,
+        2.880859375,
+        2.373046875,
+        1.666015625,
+        0.66015625,
+        2.859375,
+        3.21875,
+        3.2578125,
+        3.103515625,
+        0.033203125,
+        4.42578125,
+        1.00390625,
+        3.5625,
+        4.88671875,
+        9.865234375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s8_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s8_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006455295002524508,
+      "accuracy": 0.998046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.99609375
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          255,
+          1
+        ]
+      ],
+      "rate_error": 0.0142822265625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        9.638671875,
+        18.41015625,
+        2.4453125,
+        5.11328125,
+        4.53515625,
+        0.0,
+        7.08203125,
+        11.697265625
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s8_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s8_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0061156289993959945,
+      "accuracy": 0.443359375,
+      "coverage": 0.890625,
+      "abstentions": 56,
+      "abstention_rate": 0.109375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.76171875,
+        0.125
+      ],
+      "confusion": [
+        [
+          195,
+          38,
+          23
+        ],
+        [
+          191,
+          32,
+          33
+        ]
+      ],
+      "rate_error": 0.1352996826171875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        8.53515625,
+        16.740234375,
+        1.3046875,
+        3.447265625,
+        2.3125,
+        0.0,
+        8.212890625,
+        10.791015625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s8_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s8_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006402917999366764,
+      "accuracy": 0.34765625,
+      "coverage": 0.6171875,
+      "abstentions": 196,
+      "abstention_rate": 0.3828125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.25,
+        0.4453125
+      ],
+      "confusion": [
+        [
+          64,
+          101,
+          91
+        ],
+        [
+          37,
+          114,
+          105
+        ]
+      ],
+      "rate_error": 0.0981292724609375,
+      "events_mean": [
+        0.0,
+        0.0,
+        1.537109375,
+        1.0,
+        1.138671875,
+        0.5,
+        0.0,
+        0.0,
+        0.580078125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        8.5234375,
+        6.208984375,
+        0.0,
+        0.0,
+        0.0,
+        9.248046875,
+        10.5703125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s8_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s8_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005960337999567855,
+      "accuracy": 0.380859375,
+      "coverage": 0.708984375,
+      "abstentions": 149,
+      "abstention_rate": 0.291015625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.37109375,
+        0.390625
+      ],
+      "confusion": [
+        [
+          95,
+          93,
+          68
+        ],
+        [
+          75,
+          100,
+          81
+        ]
+      ],
+      "rate_error": 0.0999755859375,
+      "events_mean": [
+        0.0,
+        0.0,
+        1.3203125,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        8.234375,
+        6.0,
+        0.0,
+        0.0,
+        0.0,
+        9.61328125,
+        10.23828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s9_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s9_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0061663039996346924,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0136566162109375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.66015625,
+        9.06640625,
+        11.53125,
+        9.31640625,
+        7.052734375,
+        6.474609375,
+        10.900390625,
+        8.138671875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "A",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s9_DEND_fixed_RATE_0.01.npy",
+      "file": "test_A_s9_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006172625999170123,
+      "accuracy": 0.46484375,
+      "coverage": 0.916015625,
+      "abstentions": 43,
+      "abstention_rate": 0.083984375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.16015625,
+        0.76953125
+      ],
+      "confusion": [
+        [
+          41,
+          190,
+          25
+        ],
+        [
+          41,
+          197,
+          18
+        ]
+      ],
+      "rate_error": 0.1290740966796875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.552734375,
+        3.857421875,
+        9.404296875,
+        5.302734375,
+        5.1953125,
+        5.98828125,
+        6.888671875,
+        8.03515625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "A_s9_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s9_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006129455003247131,
+      "accuracy": 0.845703125,
+      "coverage": 0.939453125,
+      "abstentions": 31,
+      "abstention_rate": 0.060546875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.8359375,
+        0.85546875
+      ],
+      "confusion": [
+        [
+          214,
+          27,
+          15
+        ],
+        [
+          21,
+          219,
+          16
+        ]
+      ],
+      "rate_error": 0.0423583984375,
+      "events_mean": [
+        4.099609375,
+        0.19140625,
+        7.25390625,
+        0.28125,
+        1.154296875,
+        0.740234375,
+        1.93359375,
+        2.8515625,
+        0.60546875,
+        2.611328125,
+        4.208984375,
+        5.71875,
+        4.25390625,
+        7.53515625,
+        1.89453125,
+        4.365234375,
+        2.90234375,
+        10.6484375,
+        8.833984375,
+        12.25390625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "A",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "A_s9_POINT_fixed_RATE_0.01.npy",
+      "file": "test_A_s9_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005851773999893339,
+      "accuracy": 0.4609375,
+      "coverage": 0.912109375,
+      "abstentions": 45,
+      "abstention_rate": 0.087890625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.390625,
+        0.53125
+      ],
+      "confusion": [
+        [
+          100,
+          131,
+          25
+        ],
+        [
+          100,
+          136,
+          20
+        ]
+      ],
+      "rate_error": 0.1578826904296875,
+      "events_mean": [
+        3.166015625,
+        0.015625,
+        5.0859375,
+        0.333984375,
+        0.64453125,
+        0.126953125,
+        1.951171875,
+        1.146484375,
+        0.005859375,
+        3.365234375,
+        3.931640625,
+        5.380859375,
+        3.17578125,
+        5.419921875,
+        0.771484375,
+        2.716796875,
+        3.365234375,
+        10.845703125,
+        6.876953125,
+        13.8125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s0_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s0_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0058810490008909255,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0072174072265625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.341796875,
+        13.52734375,
+        15.513671875,
+        4.46484375,
+        12.78515625,
+        17.705078125,
+        13.48828125,
+        3.61328125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s0_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s0_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006312086999969324,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          256,
+          0,
+          0
+        ]
+      ],
+      "rate_error": 0.208526611328125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.466796875,
+        15.01171875,
+        13.380859375,
+        2.0234375,
+        19.0,
+        11.0,
+        17.8984375,
+        0.640625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s0_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s0_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0062400829992839135,
+      "accuracy": 0.994140625,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.98828125,
+        1.0
+      ],
+      "confusion": [
+        [
+          253,
+          3,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.04132080078125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.86328125,
+        13.19140625,
+        22.029296875,
+        0.0,
+        6.486328125,
+        23.0,
+        10.07421875,
+        12.15234375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s0_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s0_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00623433199871215,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.3515625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.302734375,
+        17.947265625,
+        22.0,
+        0.0,
+        0.0,
+        23.0,
+        14.197265625,
+        8.802734375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s0_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s0_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006075332999898819,
+      "accuracy": 0.50390625,
+      "coverage": 0.82421875,
+      "abstentions": 90,
+      "abstention_rate": 0.17578125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.234375,
+        0.7734375
+      ],
+      "confusion": [
+        [
+          60,
+          143,
+          53
+        ],
+        [
+          21,
+          198,
+          37
+        ]
+      ],
+      "rate_error": 0.095245361328125,
+      "events_mean": [
+        1.958984375,
+        2.263671875,
+        4.4765625,
+        0.837890625,
+        4.548828125,
+        7.240234375,
+        0.619140625,
+        0.0,
+        1.361328125,
+        0.578125,
+        5.6328125,
+        4.69140625,
+        4.22265625,
+        5.1484375,
+        10.1171875,
+        0.048828125,
+        0.58203125,
+        11.154296875,
+        11.2890625,
+        5.994140625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s0_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s0_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006563438000739552,
+      "accuracy": 0.447265625,
+      "coverage": 0.892578125,
+      "abstentions": 55,
+      "abstention_rate": 0.107421875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.16796875,
+        0.7265625
+      ],
+      "confusion": [
+        [
+          43,
+          187,
+          26
+        ],
+        [
+          41,
+          186,
+          29
+        ]
+      ],
+      "rate_error": 0.1185150146484375,
+      "events_mean": [
+        1.361328125,
+        2.39453125,
+        3.912109375,
+        0.662109375,
+        3.99609375,
+        5.6953125,
+        0.001953125,
+        0.0,
+        0.6796875,
+        1.033203125,
+        4.61328125,
+        2.923828125,
+        3.755859375,
+        4.509765625,
+        8.833984375,
+        0.0,
+        0.447265625,
+        9.646484375,
+        11.638671875,
+        5.44140625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s0_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s0_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0063800550015002955,
+      "accuracy": 0.41796875,
+      "coverage": 0.548828125,
+      "abstentions": 231,
+      "abstention_rate": 0.451171875,
+      "silent_fraction": 0.033203125,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.55078125,
+        0.28515625
+      ],
+      "confusion": [
+        [
+          141,
+          44,
+          71
+        ],
+        [
+          23,
+          73,
+          160
+        ]
+      ],
+      "rate_error": 0.183837890625,
+      "events_mean": [
+        1.083984375,
+        3.677734375,
+        1.25390625,
+        1.25,
+        1.283203125,
+        3.40625,
+        1.345703125,
+        0.4765625,
+        0.58203125,
+        0.9609375,
+        0.552734375,
+        1.296875,
+        1.837890625,
+        2.337890625,
+        4.5078125,
+        1.75,
+        0.55078125,
+        1.498046875,
+        5.240234375,
+        1.08984375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 0,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s0_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s0_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00667534800231806,
+      "accuracy": 0.3671875,
+      "coverage": 0.732421875,
+      "abstentions": 137,
+      "abstention_rate": 0.267578125,
+      "silent_fraction": 0.046875,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.3203125,
+        0.4140625
+      ],
+      "confusion": [
+        [
+          82,
+          105,
+          69
+        ],
+        [
+          82,
+          106,
+          68
+        ]
+      ],
+      "rate_error": 0.2047119140625,
+      "events_mean": [
+        0.533203125,
+        3.6171875,
+        0.498046875,
+        0.935546875,
+        1.0,
+        1.66796875,
+        0.498046875,
+        0.0,
+        0.0,
+        0.51953125,
+        0.0,
+        0.0,
+        1.62109375,
+        1.43359375,
+        2.666015625,
+        0.498046875,
+        0.01953125,
+        0.0,
+        3.392578125,
+        1.099609375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s1_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s1_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0061306070019782055,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.029083251953125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.47265625,
+        16.93359375,
+        0.0,
+        0.0,
+        12.736328125,
+        5.482421875,
+        10.84375,
+        4.814453125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s1_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s1_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006695426000078442,
+      "accuracy": 0.498046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.49609375,
+        0.5
+      ],
+      "confusion": [
+        [
+          127,
+          128,
+          1
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.1422882080078125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        19.134765625,
+        0.0,
+        0.0,
+        7.841796875,
+        0.60546875,
+        8.662109375,
+        4.0546875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s1_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s1_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005922516997088678,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0390625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.66015625,
+        5.9453125,
+        13.494140625,
+        2.65234375,
+        11.12890625,
+        3.298828125,
+        8.4453125,
+        13.375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s1_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s1_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0058621030002541374,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.3515625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.025390625,
+        9.2578125,
+        0.0,
+        11.177734375,
+        5.98046875,
+        5.14453125,
+        12.845703125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s1_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s1_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006142579000879778,
+      "accuracy": 0.806640625,
+      "coverage": 0.927734375,
+      "abstentions": 37,
+      "abstention_rate": 0.072265625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.87109375,
+        0.7421875
+      ],
+      "confusion": [
+        [
+          223,
+          22,
+          11
+        ],
+        [
+          40,
+          190,
+          26
+        ]
+      ],
+      "rate_error": 0.05535888671875,
+      "events_mean": [
+        0.0,
+        0.0,
+        3.744140625,
+        0.705078125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.90234375,
+        2.93359375,
+        3.498046875,
+        1.111328125,
+        0.0,
+        9.814453125,
+        0.0,
+        0.0,
+        8.318359375,
+        4.5,
+        11.8125,
+        9.2421875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s1_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s1_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.007113378997019026,
+      "accuracy": 0.400390625,
+      "coverage": 0.810546875,
+      "abstentions": 97,
+      "abstention_rate": 0.189453125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.6640625,
+        0.13671875
+      ],
+      "confusion": [
+        [
+          170,
+          36,
+          50
+        ],
+        [
+          174,
+          35,
+          47
+        ]
+      ],
+      "rate_error": 0.1474151611328125,
+      "events_mean": [
+        0.0,
+        0.0,
+        3.923828125,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.708984375,
+        1.40234375,
+        4.583984375,
+        0.841796875,
+        0.0,
+        10.18359375,
+        0.0,
+        0.0,
+        4.4453125,
+        5.37890625,
+        14.69140625,
+        6.416015625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s1_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s1_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0060171740005898755,
+      "accuracy": 0.966796875,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.96484375,
+        0.96875
+      ],
+      "confusion": [
+        [
+          247,
+          9,
+          0
+        ],
+        [
+          8,
+          248,
+          0
+        ]
+      ],
+      "rate_error": 0.034423828125,
+      "events_mean": [
+        1.7890625,
+        1.697265625,
+        3.40234375,
+        1.046875,
+        1.142578125,
+        2.802734375,
+        0.6640625,
+        2.876953125,
+        3.26953125,
+        1.787109375,
+        2.521484375,
+        0.748046875,
+        3.1640625,
+        3.720703125,
+        1.4765625,
+        3.541015625,
+        4.78125,
+        3.236328125,
+        8.017578125,
+        5.8828125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 1,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s1_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s1_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00638235700171208,
+      "accuracy": 0.48828125,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.75390625,
+        0.22265625
+      ],
+      "confusion": [
+        [
+          193,
+          63,
+          0
+        ],
+        [
+          199,
+          57,
+          0
+        ]
+      ],
+      "rate_error": 0.31280517578125,
+      "events_mean": [
+        0.7109375,
+        1.3359375,
+        5.484375,
+        2.486328125,
+        2.228515625,
+        3.388671875,
+        0.3828125,
+        5.54296875,
+        1.390625,
+        0.5703125,
+        5.5390625,
+        0.4296875,
+        2.046875,
+        6.41796875,
+        2.2890625,
+        5.88671875,
+        1.875,
+        5.888671875,
+        12.169921875,
+        3.67578125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s2_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s2_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005884984999283915,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.008087158203125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.712890625,
+        5.390625,
+        9.369140625,
+        5.193359375,
+        9.78515625,
+        0.8046875,
+        8.248046875,
+        5.71484375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s2_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s2_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005809853999380721,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.20330810546875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.388671875,
+        8.263671875,
+        7.978515625,
+        3.205078125,
+        11.0234375,
+        0.005859375,
+        7.421875,
+        5.435546875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s2_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s2_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006107311997766374,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0386199951171875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.185546875,
+        4.046875,
+        8.185546875,
+        9.173828125,
+        5.0859375,
+        5.99609375,
+        15.337890625,
+        13.560546875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s2_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s2_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006037841998477234,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          0,
+          256,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.3515625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.275390625,
+        0.0,
+        13.240234375,
+        14.390625,
+        0.0,
+        0.046875,
+        8.0,
+        24.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s2_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s2_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006069500999728916,
+      "accuracy": 0.666015625,
+      "coverage": 0.80859375,
+      "abstentions": 98,
+      "abstention_rate": 0.19140625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.70703125,
+        0.625
+      ],
+      "confusion": [
+        [
+          181,
+          26,
+          49
+        ],
+        [
+          47,
+          160,
+          49
+        ]
+      ],
+      "rate_error": 0.0663909912109375,
+      "events_mean": [
+        0.673828125,
+        0.833984375,
+        0.0,
+        0.0,
+        2.333984375,
+        3.87890625,
+        0.302734375,
+        0.171875,
+        2.515625,
+        0.5,
+        0.5390625,
+        0.583984375,
+        0.0,
+        0.0,
+        5.22265625,
+        0.474609375,
+        2.998046875,
+        0.349609375,
+        7.998046875,
+        9.67578125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s2_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s2_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006034926002030261,
+      "accuracy": 0.3046875,
+      "coverage": 0.5625,
+      "abstentions": 224,
+      "abstention_rate": 0.4375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.39453125,
+        0.21484375
+      ],
+      "confusion": [
+        [
+          101,
+          43,
+          112
+        ],
+        [
+          89,
+          55,
+          112
+        ]
+      ],
+      "rate_error": 0.1106414794921875,
+      "events_mean": [
+        0.36328125,
+        0.5234375,
+        0.0,
+        0.0,
+        2.70703125,
+        3.267578125,
+        0.16015625,
+        0.078125,
+        2.44140625,
+        0.5,
+        0.529296875,
+        0.2578125,
+        0.0,
+        0.0,
+        5.041015625,
+        0.23828125,
+        2.73046875,
+        0.263671875,
+        8.220703125,
+        10.689453125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s2_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s2_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.00604314200245426,
+      "accuracy": 0.755859375,
+      "coverage": 0.841796875,
+      "abstentions": 81,
+      "abstention_rate": 0.158203125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.83984375,
+        0.671875
+      ],
+      "confusion": [
+        [
+          215,
+          25,
+          16
+        ],
+        [
+          19,
+          172,
+          65
+        ]
+      ],
+      "rate_error": 0.0899200439453125,
+      "events_mean": [
+        1.884765625,
+        1.130859375,
+        0.2734375,
+        0.830078125,
+        2.453125,
+        3.259765625,
+        0.4609375,
+        0.7109375,
+        2.208984375,
+        0.564453125,
+        3.521484375,
+        1.810546875,
+        3.015625,
+        1.0703125,
+        5.001953125,
+        1.171875,
+        2.7734375,
+        4.923828125,
+        4.923828125,
+        3.142578125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 2,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s2_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s2_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005852594000316458,
+      "accuracy": 0.40625,
+      "coverage": 0.80859375,
+      "abstentions": 98,
+      "abstention_rate": 0.19140625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.4453125,
+        0.3671875
+      ],
+      "confusion": [
+        [
+          114,
+          94,
+          48
+        ],
+        [
+          112,
+          94,
+          50
+        ]
+      ],
+      "rate_error": 0.1604156494140625,
+      "events_mean": [
+        1.275390625,
+        0.34375,
+        0.529296875,
+        1.029296875,
+        2.890625,
+        2.533203125,
+        0.328125,
+        0.54296875,
+        1.798828125,
+        0.3828125,
+        2.326171875,
+        0.47265625,
+        1.619140625,
+        1.505859375,
+        4.78515625,
+        0.87109375,
+        2.181640625,
+        2.681640625,
+        4.859375,
+        3.892578125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s3_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s3_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006136546999186976,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0102386474609375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        11.46875,
+        3.474609375,
+        8.869140625,
+        11.82421875,
+        17.2578125,
+        17.068359375,
+        8.2578125,
+        9.02734375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s3_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s3_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006005822997394716,
+      "accuracy": 0.4609375,
+      "coverage": 0.900390625,
+      "abstentions": 51,
+      "abstention_rate": 0.099609375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.07421875,
+        0.84765625
+      ],
+      "confusion": [
+        [
+          19,
+          209,
+          28
+        ],
+        [
+          16,
+          217,
+          23
+        ]
+      ],
+      "rate_error": 0.13287353515625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        12.904296875,
+        2.08984375,
+        3.005859375,
+        7.44140625,
+        12.154296875,
+        14.322265625,
+        3.318359375,
+        11.427734375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s3_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s3_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.00614030399810872,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0390625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17.33984375,
+        4.49609375,
+        8.21484375,
+        5.94921875,
+        9.66015625,
+        6.095703125,
+        10.09375,
+        15.9609375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s3_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s3_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005868374999408843,
+      "accuracy": 0.498046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.49609375,
+        0.5
+      ],
+      "confusion": [
+        [
+          127,
+          128,
+          1
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.29193115234375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        17.0703125,
+        0.873046875,
+        4.951171875,
+        3.826171875,
+        8.765625,
+        0.0,
+        7.177734375,
+        19.423828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s3_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s3_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006773741999495542,
+      "accuracy": 0.3046875,
+      "coverage": 0.544921875,
+      "abstentions": 233,
+      "abstention_rate": 0.455078125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0234375,
+        0.5859375
+      ],
+      "confusion": [
+        [
+          6,
+          123,
+          127
+        ],
+        [
+          0,
+          150,
+          106
+        ]
+      ],
+      "rate_error": 0.0990753173828125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.064453125,
+        0.423828125,
+        0.427734375,
+        0.169921875,
+        0.0,
+        0.767578125,
+        1.033203125,
+        1.6953125,
+        7.341796875,
+        9.267578125,
+        0.0,
+        0.048828125,
+        0.59765625,
+        0.0,
+        2.21484375,
+        16.349609375,
+        8.28125,
+        11.828125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s3_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s3_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005888701998628676,
+      "accuracy": 0.3359375,
+      "coverage": 0.66015625,
+      "abstentions": 174,
+      "abstention_rate": 0.33984375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.015625,
+        0.65625
+      ],
+      "confusion": [
+        [
+          4,
+          163,
+          89
+        ],
+        [
+          3,
+          168,
+          85
+        ]
+      ],
+      "rate_error": 0.1011810302734375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.03125,
+        0.0,
+        0.1640625,
+        0.0,
+        0.802734375,
+        0.146484375,
+        0.478515625,
+        6.751953125,
+        8.21875,
+        0.0,
+        0.0,
+        0.1640625,
+        0.0,
+        0.625,
+        15.607421875,
+        8.50390625,
+        11.9765625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s3_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s3_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006115258001955226,
+      "accuracy": 0.7109375,
+      "coverage": 0.849609375,
+      "abstentions": 77,
+      "abstention_rate": 0.150390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.53515625,
+        0.88671875
+      ],
+      "confusion": [
+        [
+          137,
+          70,
+          49
+        ],
+        [
+          1,
+          227,
+          28
+        ]
+      ],
+      "rate_error": 0.1281585693359375,
+      "events_mean": [
+        1.048828125,
+        3.2421875,
+        0.4296875,
+        0.728515625,
+        1.11328125,
+        1.46484375,
+        0.908203125,
+        1.10546875,
+        1.96875,
+        2.390625,
+        0.7265625,
+        0.232421875,
+        3.939453125,
+        1.09765625,
+        0.78125,
+        1.916015625,
+        4.15625,
+        0.919921875,
+        3.298828125,
+        4.90234375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 3,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s3_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s3_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0061044870017212816,
+      "accuracy": 0.375,
+      "coverage": 0.751953125,
+      "abstentions": 127,
+      "abstention_rate": 0.248046875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.1484375,
+        0.6015625
+      ],
+      "confusion": [
+        [
+          38,
+          158,
+          60
+        ],
+        [
+          35,
+          154,
+          67
+        ]
+      ],
+      "rate_error": 0.192169189453125,
+      "events_mean": [
+        1.490234375,
+        3.041015625,
+        0.0,
+        0.0,
+        0.4375,
+        0.626953125,
+        0.37890625,
+        1.076171875,
+        0.861328125,
+        1.794921875,
+        0.20703125,
+        0.0,
+        4.119140625,
+        0.0,
+        0.109375,
+        1.376953125,
+        2.505859375,
+        0.20703125,
+        3.58203125,
+        5.66796875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s4_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s4_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0062217049999162555,
+      "accuracy": 0.998046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.99609375,
+        1.0
+      ],
+      "confusion": [
+        [
+          255,
+          0,
+          1
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0177459716796875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        12.134765625,
+        4.79296875,
+        10.986328125,
+        5.125,
+        2.6875,
+        18.380859375,
+        6.701171875,
+        7.248046875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s4_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s4_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005980285000987351,
+      "accuracy": 0.470703125,
+      "coverage": 0.9453125,
+      "abstentions": 28,
+      "abstention_rate": 0.0546875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.44140625,
+        0.5
+      ],
+      "confusion": [
+        [
+          113,
+          128,
+          15
+        ],
+        [
+          115,
+          128,
+          13
+        ]
+      ],
+      "rate_error": 0.1521453857421875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.828125,
+        1.87890625,
+        5.353515625,
+        0.818359375,
+        1.0,
+        19.0,
+        4.94921875,
+        12.109375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s4_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s4_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006242235001991503,
+      "accuracy": 0.99609375,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.99609375,
+        0.99609375
+      ],
+      "confusion": [
+        [
+          255,
+          1,
+          0
+        ],
+        [
+          1,
+          255,
+          0
+        ]
+      ],
+      "rate_error": 0.03973388671875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.998046875,
+        5.93359375,
+        8.36328125,
+        0.0,
+        0.12890625,
+        6.33984375,
+        9.220703125,
+        12.376953125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s4_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s4_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006110076999902958,
+      "accuracy": 0.498046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.02734375,
+        0.96875
+      ],
+      "confusion": [
+        [
+          7,
+          248,
+          1
+        ],
+        [
+          8,
+          248,
+          0
+        ]
+      ],
+      "rate_error": 0.2851104736328125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.03515625,
+        0.177734375,
+        0.529296875,
+        0.0,
+        0.0,
+        8.48828125,
+        0.525390625,
+        22.54296875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s4_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s4_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006455736998759676,
+      "accuracy": 0.7578125,
+      "coverage": 0.90625,
+      "abstentions": 48,
+      "abstention_rate": 0.09375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5625,
+        0.953125
+      ],
+      "confusion": [
+        [
+          144,
+          75,
+          37
+        ],
+        [
+          1,
+          244,
+          11
+        ]
+      ],
+      "rate_error": 0.0635833740234375,
+      "events_mean": [
+        0.4375,
+        0.0,
+        0.68359375,
+        0.9375,
+        1.896484375,
+        0.318359375,
+        1.70703125,
+        2.896484375,
+        0.0,
+        0.0,
+        3.49609375,
+        3.001953125,
+        0.0,
+        0.361328125,
+        0.54296875,
+        4.142578125,
+        0.0,
+        6.1484375,
+        6.14453125,
+        10.052734375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s4_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s4_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005767225000454346,
+      "accuracy": 0.392578125,
+      "coverage": 0.8203125,
+      "abstentions": 92,
+      "abstention_rate": 0.1796875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.43359375,
+        0.3515625
+      ],
+      "confusion": [
+        [
+          111,
+          104,
+          41
+        ],
+        [
+          115,
+          90,
+          51
+        ]
+      ],
+      "rate_error": 0.118377685546875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.298828125,
+        1.03515625,
+        1.40625,
+        0.314453125,
+        1.04296875,
+        2.548828125,
+        0.0,
+        0.0,
+        3.498046875,
+        2.580078125,
+        0.0,
+        0.216796875,
+        0.419921875,
+        3.033203125,
+        0.0,
+        5.765625,
+        5.01953125,
+        10.994140625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s4_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s4_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0070527759999095,
+      "accuracy": 0.173828125,
+      "coverage": 0.431640625,
+      "abstentions": 291,
+      "abstention_rate": 0.568359375,
+      "silent_fraction": 0.07421875,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.18359375,
+        0.1640625
+      ],
+      "confusion": [
+        [
+          47,
+          57,
+          152
+        ],
+        [
+          75,
+          42,
+          139
+        ]
+      ],
+      "rate_error": 0.21893310546875,
+      "events_mean": [
+        0.5,
+        0.0,
+        0.474609375,
+        0.001953125,
+        1.681640625,
+        0.248046875,
+        0.7734375,
+        1.4296875,
+        0.43359375,
+        0.0,
+        2.0859375,
+        0.123046875,
+        0.0,
+        0.4765625,
+        1.9296875,
+        2.193359375,
+        0.0,
+        0.9765625,
+        1.078125,
+        2.86328125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 4,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s4_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s4_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006293170998105779,
+      "accuracy": 0.13671875,
+      "coverage": 0.3046875,
+      "abstentions": 356,
+      "abstention_rate": 0.6953125,
+      "silent_fraction": 0.068359375,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.18359375,
+        0.08984375
+      ],
+      "confusion": [
+        [
+          47,
+          21,
+          188
+        ],
+        [
+          65,
+          23,
+          168
+        ]
+      ],
+      "rate_error": 0.2113189697265625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.1171875,
+        0.013671875,
+        1.537109375,
+        0.365234375,
+        0.0,
+        1.501953125,
+        0.0,
+        0.0,
+        2.318359375,
+        0.0,
+        0.0,
+        0.130859375,
+        1.90234375,
+        1.501953125,
+        0.0,
+        0.87890625,
+        1.0390625,
+        2.78125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s5_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s5_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006646793997788336,
+      "accuracy": 0.994140625,
+      "coverage": 0.994140625,
+      "abstentions": 3,
+      "abstention_rate": 0.005859375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.98828125,
+        1.0
+      ],
+      "confusion": [
+        [
+          253,
+          0,
+          3
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.016265869140625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        12.470703125,
+        11.369140625,
+        6.779296875,
+        13.451171875,
+        19.3671875,
+        2.982421875,
+        6.37109375,
+        10.421875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s5_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s5_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006455474998801947,
+      "accuracy": 0.4921875,
+      "coverage": 0.986328125,
+      "abstentions": 7,
+      "abstention_rate": 0.013671875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.50390625,
+        0.48046875
+      ],
+      "confusion": [
+        [
+          129,
+          123,
+          4
+        ],
+        [
+          130,
+          123,
+          3
+        ]
+      ],
+      "rate_error": 0.16162109375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        13.900390625,
+        11.8125,
+        0.0,
+        5.173828125,
+        20.0,
+        2.150390625,
+        11.716796875,
+        7.458984375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s5_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s5_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006003438000334427,
+      "accuracy": 0.5,
+      "coverage": 0.5,
+      "abstentions": 256,
+      "abstention_rate": 0.5,
+      "silent_fraction": 0.5,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.1640625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        21.658203125,
+        5.451171875,
+        5.10546875,
+        20.58984375,
+        0.02734375,
+        5.533203125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s5_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s5_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006879971999296686,
+      "accuracy": 0.111328125,
+      "coverage": 0.21484375,
+      "abstentions": 402,
+      "abstention_rate": 0.78515625,
+      "silent_fraction": 0.78515625,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.22265625
+      ],
+      "confusion": [
+        [
+          0,
+          53,
+          203
+        ],
+        [
+          0,
+          57,
+          199
+        ]
+      ],
+      "rate_error": 0.2783050537109375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        21.0,
+        0.00390625,
+        1.271484375,
+        21.0,
+        0.0,
+        0.224609375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s5_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s5_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0059295199971529655,
+      "accuracy": 0.736328125,
+      "coverage": 0.767578125,
+      "abstentions": 119,
+      "abstention_rate": 0.232421875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.62109375,
+        0.8515625
+      ],
+      "confusion": [
+        [
+          159,
+          12,
+          85
+        ],
+        [
+          4,
+          218,
+          34
+        ]
+      ],
+      "rate_error": 0.059356689453125,
+      "events_mean": [
+        1.14453125,
+        0.04296875,
+        2.548828125,
+        0.41796875,
+        0.724609375,
+        0.357421875,
+        1.361328125,
+        1.607421875,
+        6.17578125,
+        6.2265625,
+        2.158203125,
+        2.333984375,
+        0.296875,
+        2.927734375,
+        0.0,
+        2.787109375,
+        13.564453125,
+        4.486328125,
+        6.4140625,
+        10.2109375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s5_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s5_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006380375001754146,
+      "accuracy": 0.44921875,
+      "coverage": 0.87890625,
+      "abstentions": 62,
+      "abstention_rate": 0.12109375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.43359375,
+        0.46484375
+      ],
+      "confusion": [
+        [
+          111,
+          118,
+          27
+        ],
+        [
+          102,
+          119,
+          35
+        ]
+      ],
+      "rate_error": 0.1172637939453125,
+      "events_mean": [
+        0.994140625,
+        0.0,
+        0.671875,
+        0.0,
+        0.0,
+        0.0,
+        1.1484375,
+        1.466796875,
+        5.568359375,
+        6.505859375,
+        0.21484375,
+        0.037109375,
+        0.482421875,
+        0.671875,
+        0.0,
+        2.615234375,
+        13.01171875,
+        0.251953125,
+        8.318359375,
+        7.54296875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s5_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s5_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005947082998318365,
+      "accuracy": 0.521484375,
+      "coverage": 0.8828125,
+      "abstentions": 60,
+      "abstention_rate": 0.1171875,
+      "silent_fraction": 0.013671875,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.515625,
+        0.52734375
+      ],
+      "confusion": [
+        [
+          132,
+          98,
+          26
+        ],
+        [
+          87,
+          135,
+          34
+        ]
+      ],
+      "rate_error": 0.1861724853515625,
+      "events_mean": [
+        0.001953125,
+        5.06640625,
+        1.296875,
+        0.017578125,
+        0.84765625,
+        5.103515625,
+        0.0390625,
+        0.28125,
+        1.28125,
+        2.330078125,
+        0.0,
+        0.150390625,
+        5.068359375,
+        1.314453125,
+        5.7734375,
+        0.3203125,
+        1.4375,
+        0.150390625,
+        6.36328125,
+        2.740234375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 5,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s5_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s5_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006489969997346634,
+      "accuracy": 0.421875,
+      "coverage": 0.85546875,
+      "abstentions": 74,
+      "abstention_rate": 0.14453125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.29296875,
+        0.55078125
+      ],
+      "confusion": [
+        [
+          75,
+          141,
+          40
+        ],
+        [
+          81,
+          141,
+          34
+        ]
+      ],
+      "rate_error": 0.2088623046875,
+      "events_mean": [
+        0.0,
+        2.048828125,
+        0.142578125,
+        0.01171875,
+        0.5,
+        2.0703125,
+        0.001953125,
+        0.49609375,
+        0.57421875,
+        1.37109375,
+        0.0,
+        0.30859375,
+        2.048828125,
+        0.154296875,
+        2.392578125,
+        0.498046875,
+        0.650390625,
+        0.30859375,
+        2.55078125,
+        5.48046875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s6_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s6_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.00640439999915543,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.018341064453125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.265625,
+        6.857421875,
+        7.28515625,
+        2.150390625,
+        7.935546875,
+        6.958984375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s6_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s6_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006265290001465473,
+      "accuracy": 0.41796875,
+      "coverage": 0.84375,
+      "abstentions": 80,
+      "abstention_rate": 0.15625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.72265625,
+        0.11328125
+      ],
+      "confusion": [
+        [
+          185,
+          30,
+          41
+        ],
+        [
+          188,
+          29,
+          39
+        ]
+      ],
+      "rate_error": 0.1141815185546875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.548828125,
+        2.736328125,
+        9.646484375,
+        0.0,
+        12.74609375,
+        3.4375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s6_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s6_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006388210000295658,
+      "accuracy": 0.998046875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.99609375
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          255,
+          1
+        ]
+      ],
+      "rate_error": 0.0391845703125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.146484375,
+        5.35546875,
+        3.2265625,
+        0.0,
+        13.48046875,
+        9.5078125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s6_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s6_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006068981001590146,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          256,
+          0,
+          0
+        ]
+      ],
+      "rate_error": 0.3515625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.453125,
+        0.0,
+        24.0,
+        0.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s6_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s6_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0061943960026837885,
+      "accuracy": 0.501953125,
+      "coverage": 0.900390625,
+      "abstentions": 51,
+      "abstention_rate": 0.099609375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.19140625,
+        0.8125
+      ],
+      "confusion": [
+        [
+          49,
+          176,
+          31
+        ],
+        [
+          28,
+          208,
+          20
+        ]
+      ],
+      "rate_error": 0.100341796875,
+      "events_mean": [
+        0.2421875,
+        0.494140625,
+        0.0,
+        0.509765625,
+        0.568359375,
+        1.546875,
+        0.0,
+        0.0,
+        2.341796875,
+        4.388671875,
+        0.560546875,
+        0.3515625,
+        0.2421875,
+        0.0,
+        1.763671875,
+        0.0,
+        6.419921875,
+        0.0,
+        10.783203125,
+        7.0625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s6_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s6_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0063405209984921385,
+      "accuracy": 0.478515625,
+      "coverage": 0.921875,
+      "abstentions": 40,
+      "abstention_rate": 0.078125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.25,
+        0.70703125
+      ],
+      "confusion": [
+        [
+          64,
+          174,
+          18
+        ],
+        [
+          53,
+          181,
+          22
+        ]
+      ],
+      "rate_error": 0.102294921875,
+      "events_mean": [
+        0.005859375,
+        0.48828125,
+        0.0,
+        0.228515625,
+        0.056640625,
+        0.53125,
+        0.0,
+        0.0,
+        2.27734375,
+        4.10546875,
+        0.166015625,
+        0.0,
+        0.005859375,
+        0.0,
+        0.587890625,
+        0.0,
+        5.912109375,
+        0.0,
+        11.015625,
+        5.955078125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s6_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s6_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006872698002553079,
+      "accuracy": 0.017578125,
+      "coverage": 0.0234375,
+      "abstentions": 500,
+      "abstention_rate": 0.9765625,
+      "silent_fraction": 0.658203125,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.03515625
+      ],
+      "confusion": [
+        [
+          0,
+          3,
+          253
+        ],
+        [
+          0,
+          9,
+          247
+        ]
+      ],
+      "rate_error": 0.2562255859375,
+      "events_mean": [
+        0.84375,
+        0.0,
+        0.595703125,
+        0.0,
+        1.2734375,
+        0.837890625,
+        0.986328125,
+        0.25390625,
+        0.5703125,
+        1.947265625,
+        0.322265625,
+        0.583984375,
+        0.283203125,
+        0.595703125,
+        0.630859375,
+        1.240234375,
+        0.56640625,
+        0.318359375,
+        1.111328125,
+        1.43359375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 6,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s6_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s6_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005885546997888014,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "abstentions": 512,
+      "abstention_rate": 1.0,
+      "silent_fraction": 0.78515625,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "rate_error": 0.2689208984375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.9921875,
+        0.0,
+        0.0,
+        0.451171875,
+        0.724609375,
+        1.951171875,
+        0.0,
+        0.416015625,
+        0.0,
+        0.5,
+        0.00390625,
+        0.451171875,
+        0.71484375,
+        0.0,
+        0.71484375,
+        0.71484375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s7_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s7_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.00650025999857462,
+      "accuracy": 0.75,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.5
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.0673980712890625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.001953125,
+        10.517578125,
+        13.01171875,
+        1.63671875,
+        10.23828125,
+        0.0,
+        6.619140625,
+        9.099609375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s7_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s7_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0066897760007123,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          256,
+          0,
+          0
+        ]
+      ],
+      "rate_error": 0.1130828857421875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        9.591796875,
+        15.451171875,
+        1.017578125,
+        5.927734375,
+        0.0,
+        6.53125,
+        7.775390625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s7_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s7_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006252354996831855,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "abstentions": 512,
+      "abstention_rate": 1.0,
+      "silent_fraction": 1.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "rate_error": 0.2890625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s7_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s7_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005985244002658874,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "abstentions": 512,
+      "abstention_rate": 1.0,
+      "silent_fraction": 1.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "rate_error": 0.2890625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        0.0,
+        0.0,
+        23.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s7_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s7_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005778566999651957,
+      "accuracy": 0.37890625,
+      "coverage": 0.6171875,
+      "abstentions": 196,
+      "abstention_rate": 0.3828125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.28515625,
+        0.47265625
+      ],
+      "confusion": [
+        [
+          73,
+          87,
+          96
+        ],
+        [
+          35,
+          121,
+          100
+        ]
+      ],
+      "rate_error": 0.0964202880859375,
+      "events_mean": [
+        0.0,
+        0.0,
+        4.4140625,
+        0.2109375,
+        3.31640625,
+        3.34765625,
+        0.71875,
+        1.9296875,
+        0.818359375,
+        1.833984375,
+        0.0,
+        0.37109375,
+        0.0,
+        4.55078125,
+        5.42578125,
+        0.720703125,
+        0.0,
+        0.0,
+        5.12890625,
+        11.396484375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s7_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s7_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.0062379780029004905,
+      "accuracy": 0.296875,
+      "coverage": 0.65625,
+      "abstentions": 176,
+      "abstention_rate": 0.34375,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.2578125,
+        0.3359375
+      ],
+      "confusion": [
+        [
+          66,
+          108,
+          82
+        ],
+        [
+          76,
+          86,
+          94
+        ]
+      ],
+      "rate_error": 0.1082916259765625,
+      "events_mean": [
+        0.0,
+        0.0,
+        4.677734375,
+        0.48046875,
+        3.54296875,
+        3.59765625,
+        0.580078125,
+        1.29296875,
+        0.0,
+        1.537109375,
+        0.0,
+        0.0,
+        0.0,
+        5.1328125,
+        5.490234375,
+        0.580078125,
+        0.0,
+        0.0,
+        5.349609375,
+        11.1875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s7_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s7_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.007057906001136871,
+      "accuracy": 0.279296875,
+      "coverage": 0.404296875,
+      "abstentions": 305,
+      "abstention_rate": 0.595703125,
+      "silent_fraction": 0.59375,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.21875,
+        0.33984375
+      ],
+      "confusion": [
+        [
+          56,
+          64,
+          136
+        ],
+        [
+          0,
+          87,
+          169
+        ]
+      ],
+      "rate_error": 0.26324462890625,
+      "events_mean": [
+        0.984375,
+        1.43359375,
+        0.177734375,
+        0.0,
+        0.0,
+        0.095703125,
+        0.103515625,
+        2.021484375,
+        3.072265625,
+        3.13671875,
+        0.201171875,
+        0.63671875,
+        2.275390625,
+        0.0,
+        0.0,
+        0.1171875,
+        2.580078125,
+        0.837890625,
+        0.283203125,
+        1.505859375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 7,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s7_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s7_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005959165002423106,
+      "accuracy": 0.203125,
+      "coverage": 0.412109375,
+      "abstentions": 301,
+      "abstention_rate": 0.587890625,
+      "silent_fraction": 0.587890625,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.24609375,
+        0.16015625
+      ],
+      "confusion": [
+        [
+          63,
+          48,
+          145
+        ],
+        [
+          59,
+          41,
+          156
+        ]
+      ],
+      "rate_error": 0.26959228515625,
+      "events_mean": [
+        0.5,
+        1.052734375,
+        0.22265625,
+        0.00390625,
+        0.0,
+        0.22265625,
+        0.23046875,
+        2.005859375,
+        1.12890625,
+        2.494140625,
+        0.23046875,
+        0.162109375,
+        1.517578125,
+        0.001953125,
+        0.0,
+        0.234375,
+        1.328125,
+        0.392578125,
+        0.287109375,
+        0.9296875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s8_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s8_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.0064250489995174576,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0053253173828125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.572265625,
+        7.701171875,
+        2.150390625,
+        6.69921875,
+        11.337890625,
+        2.048828125,
+        6.513671875,
+        13.658203125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s8_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s8_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006605506998312194,
+      "accuracy": 0.5,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.5,
+        0.5
+      ],
+      "confusion": [
+        [
+          128,
+          128,
+          0
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.1478424072265625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        7.556640625,
+        3.66796875,
+        4.94140625,
+        6.2734375,
+        0.423828125,
+        7.57421875,
+        14.314453125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s8_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s8_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005817028999445029,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          256,
+          0,
+          0
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0389404296875,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        13.3125,
+        5.623046875,
+        3.1328125,
+        12.7578125,
+        6.046875,
+        9.484375,
+        13.71875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s8_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s8_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006162376001157099,
+      "accuracy": 0.501953125,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.50390625,
+        0.5
+      ],
+      "confusion": [
+        [
+          129,
+          126,
+          1
+        ],
+        [
+          128,
+          128,
+          0
+        ]
+      ],
+      "rate_error": 0.339599609375,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        8.462890625,
+        5.3046875,
+        0.5390625,
+        6.880859375,
+        4.71875,
+        10.33984375,
+        12.62890625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s8_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s8_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005899072999454802,
+      "accuracy": 0.921875,
+      "coverage": 0.990234375,
+      "abstentions": 5,
+      "abstention_rate": 0.009765625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.88671875,
+        0.95703125
+      ],
+      "confusion": [
+        [
+          227,
+          28,
+          1
+        ],
+        [
+          7,
+          245,
+          4
+        ]
+      ],
+      "rate_error": 0.0456085205078125,
+      "events_mean": [
+        4.859375,
+        6.921875,
+        3.623046875,
+        1.052734375,
+        1.267578125,
+        0.21484375,
+        2.3515625,
+        1.0859375,
+        0.80078125,
+        3.189453125,
+        0.0,
+        0.0,
+        9.240234375,
+        4.67578125,
+        1.482421875,
+        3.109375,
+        1.490234375,
+        0.0,
+        7.8125,
+        6.583984375
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s8_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s8_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005889504998776829,
+      "accuracy": 0.4765625,
+      "coverage": 0.92578125,
+      "abstentions": 38,
+      "abstention_rate": 0.07421875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.37109375,
+        0.58203125
+      ],
+      "confusion": [
+        [
+          95,
+          145,
+          16
+        ],
+        [
+          85,
+          149,
+          22
+        ]
+      ],
+      "rate_error": 0.1397247314453125,
+      "events_mean": [
+        2.52734375,
+        5.8671875,
+        1.884765625,
+        0.978515625,
+        0.9140625,
+        0.990234375,
+        2.728515625,
+        1.048828125,
+        0.4921875,
+        0.982421875,
+        0.0,
+        0.0,
+        7.216796875,
+        2.86328125,
+        1.904296875,
+        2.763671875,
+        0.470703125,
+        0.0,
+        10.16796875,
+        5.3671875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s8_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s8_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005928687998675741,
+      "accuracy": 0.97265625,
+      "coverage": 1.0,
+      "abstentions": 0,
+      "abstention_rate": 0.0,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.97265625,
+        0.97265625
+      ],
+      "confusion": [
+        [
+          249,
+          7,
+          0
+        ],
+        [
+          7,
+          249,
+          0
+        ]
+      ],
+      "rate_error": 0.02447509765625,
+      "events_mean": [
+        3.4765625,
+        3.666015625,
+        2.486328125,
+        0.259765625,
+        0.720703125,
+        0.0,
+        1.9140625,
+        0.404296875,
+        0.701171875,
+        3.009765625,
+        1.89453125,
+        2.056640625,
+        7.080078125,
+        2.736328125,
+        0.720703125,
+        2.1171875,
+        1.259765625,
+        3.28125,
+        6.43359375,
+        9.189453125
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 8,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s8_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s8_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005716951000067638,
+      "accuracy": 0.4921875,
+      "coverage": 0.998046875,
+      "abstentions": 1,
+      "abstention_rate": 0.001953125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.62109375,
+        0.36328125
+      ],
+      "confusion": [
+        [
+          159,
+          97,
+          0
+        ],
+        [
+          162,
+          93,
+          1
+        ]
+      ],
+      "rate_error": 0.2460784912109375,
+      "events_mean": [
+        1.724609375,
+        3.546875,
+        1.298828125,
+        0.296875,
+        1.046875,
+        0.0,
+        2.703125,
+        0.62890625,
+        0.34765625,
+        1.63671875,
+        2.4375,
+        2.783203125,
+        5.248046875,
+        1.595703125,
+        1.046875,
+        3.06640625,
+        0.384765625,
+        4.427734375,
+        9.013671875,
+        7.001953125
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s9_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s9_DEND_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006112543000199366,
+      "accuracy": 0.99609375,
+      "coverage": 0.99609375,
+      "abstentions": 2,
+      "abstention_rate": 0.00390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.9921875,
+        1.0
+      ],
+      "confusion": [
+        [
+          254,
+          0,
+          2
+        ],
+        [
+          0,
+          256,
+          0
+        ]
+      ],
+      "rate_error": 0.0254669189453125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        18.724609375,
+        4.2734375,
+        21.00390625,
+        9.802734375,
+        16.181640625,
+        18.783203125,
+        6.58203125,
+        8.51171875
+      ],
+      "failed": false
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s9_DEND_fixed_RATE_0.01.npy",
+      "file": "test_B_s9_DEND_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.005849219000083394,
+      "accuracy": 0.4140625,
+      "coverage": 0.830078125,
+      "abstentions": 87,
+      "abstention_rate": 0.169921875,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.66015625,
+        0.16796875
+      ],
+      "confusion": [
+        [
+          169,
+          44,
+          43
+        ],
+        [
+          169,
+          43,
+          44
+        ]
+      ],
+      "rate_error": 0.1598663330078125,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        15.3203125,
+        2.642578125,
+        21.0,
+        1.90625,
+        15.5078125,
+        20.0,
+        11.755859375,
+        2.208984375
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s9_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s9_DEND_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.005832728998939274,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "abstentions": 512,
+      "abstention_rate": 1.0,
+      "silent_fraction": 1.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "rate_error": 0.2890625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        22.30078125,
+        0.0,
+        22.029296875,
+        23.0,
+        0.0,
+        16.5546875,
+        0.0,
+        0.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "DEND",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s9_DEND_selected_CE_0.03.npy",
+      "file": "test_B_s9_DEND_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006600518001505407,
+      "accuracy": 0.0,
+      "coverage": 0.0,
+      "abstentions": 512,
+      "abstention_rate": 1.0,
+      "silent_fraction": 1.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.0,
+        0.0
+      ],
+      "confusion": [
+        [
+          0,
+          0,
+          256
+        ],
+        [
+          0,
+          0,
+          256
+        ]
+      ],
+      "rate_error": 0.2890625,
+      "events_mean": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        22.0,
+        0.0,
+        22.0,
+        23.0,
+        0.0,
+        17.3046875,
+        0.0,
+        0.0
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "intact",
+      "source_file": "B_s9_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s9_POINT_fixed_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006599577001907164,
+      "accuracy": 0.66796875,
+      "coverage": 0.74609375,
+      "abstentions": 130,
+      "abstention_rate": 0.25390625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.734375,
+        0.6015625
+      ],
+      "confusion": [
+        [
+          188,
+          14,
+          54
+        ],
+        [
+          26,
+          154,
+          76
+        ]
+      ],
+      "rate_error": 0.0651397705078125,
+      "events_mean": [
+        2.4765625,
+        3.9375,
+        2.064453125,
+        2.916015625,
+        0.33984375,
+        0.841796875,
+        0.94140625,
+        1.384765625,
+        1.875,
+        1.68359375,
+        1.6171875,
+        1.017578125,
+        2.25,
+        4.5390625,
+        0.32421875,
+        1.69140625,
+        3.072265625,
+        2.595703125,
+        7.609375,
+        10.62890625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "fixed",
+      "mode": "no_history",
+      "source_file": "B_s9_POINT_fixed_RATE_0.01.npy",
+      "file": "test_B_s9_POINT_fixed_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.00661339199723443,
+      "accuracy": 0.44921875,
+      "coverage": 0.8671875,
+      "abstentions": 68,
+      "abstention_rate": 0.1328125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.3984375,
+        0.5
+      ],
+      "confusion": [
+        [
+          102,
+          122,
+          32
+        ],
+        [
+          92,
+          128,
+          36
+        ]
+      ],
+      "rate_error": 0.1133270263671875,
+      "events_mean": [
+        1.580078125,
+        3.056640625,
+        1.66015625,
+        2.53515625,
+        0.025390625,
+        0.03125,
+        0.455078125,
+        0.4453125,
+        1.404296875,
+        1.3046875,
+        1.44921875,
+        1.0625,
+        1.4765625,
+        4.10546875,
+        0.01953125,
+        0.58984375,
+        2.322265625,
+        2.453125,
+        8.19921875,
+        10.765625
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "intact",
+      "source_file": "B_s9_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s9_POINT_selected_intact.npz",
+      "reused": false,
+      "inference_seconds": 0.006007244999636896,
+      "accuracy": 0.751953125,
+      "coverage": 0.8984375,
+      "abstentions": 52,
+      "abstention_rate": 0.1015625,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.61328125,
+        0.890625
+      ],
+      "confusion": [
+        [
+          157,
+          67,
+          32
+        ],
+        [
+          8,
+          228,
+          20
+        ]
+      ],
+      "rate_error": 0.095977783203125,
+      "events_mean": [
+        3.046875,
+        3.4921875,
+        0.90625,
+        0.7421875,
+        2.021484375,
+        0.66796875,
+        1.728515625,
+        0.904296875,
+        2.470703125,
+        0.88671875,
+        0.1484375,
+        1.0546875,
+        2.822265625,
+        1.603515625,
+        2.646484375,
+        2.5234375,
+        3.205078125,
+        1.169921875,
+        4.26171875,
+        6.794921875
+      ],
+      "failed": true
+    },
+    {
+      "phase": "B",
+      "seed": 9,
+      "arm": "POINT",
+      "role": "selected",
+      "mode": "no_history",
+      "source_file": "B_s9_POINT_selected_CE_0.003.npy",
+      "file": "test_B_s9_POINT_selected_no_history.npz",
+      "reused": false,
+      "inference_seconds": 0.006208291000803001,
+      "accuracy": 0.4453125,
+      "coverage": 0.888671875,
+      "abstentions": 57,
+      "abstention_rate": 0.111328125,
+      "silent_fraction": 0.0,
+      "both_saturated_fraction": 0.0,
+      "class_recall": [
+        0.82421875,
+        0.06640625
+      ],
+      "confusion": [
+        [
+          211,
+          18,
+          27
+        ],
+        [
+          209,
+          17,
+          30
+        ]
+      ],
+      "rate_error": 0.179046630859375,
+      "events_mean": [
+        3.05078125,
+        3.7109375,
+        0.009765625,
+        0.4921875,
+        2.671875,
+        0.564453125,
+        1.025390625,
+        0.05078125,
+        2.609375,
+        0.939453125,
+        0.0,
+        0.51953125,
+        3.056640625,
+        0.501953125,
+        3.236328125,
+        1.07421875,
+        3.474609375,
+        0.51953125,
+        5.27734375,
+        5.189453125
+      ],
+      "failed": true
+    }
+  ],
+  "intervals": {
+    "A_fixed_DEND_minus_POINT": {
+      "seed_pair_differences": [
+        0.076171875,
+        0.380859375,
+        0.041015625,
+        0.6953125,
+        0.216796875,
+        0.50390625,
+        0.044921875,
+        0.1875,
+        0.650390625,
+        0.154296875
+      ],
+      "mean": 0.2951171875,
+      "percentile95": [
+        0.15604980468750002,
+        0.4449267578124996
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_selected_DEND_minus_POINT": {
+      "seed_pair_differences": [
+        0.576171875,
+        0.033203125,
+        0.244140625,
+        0.2890625,
+        0.822265625,
+        -0.021484375,
+        0.98046875,
+        -0.279296875,
+        0.02734375,
+        -0.751953125
+      ],
+      "mean": 0.1919921875,
+      "percentile95": [
+        -0.11387207031249999,
+        0.494140625
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_fixed_DEND_minus_POINT": {
+      "seed_pair_differences": [
+        0.49609375,
+        0.193359375,
+        0.333984375,
+        0.6953125,
+        0.240234375,
+        0.2578125,
+        0.498046875,
+        0.37109375,
+        0.078125,
+        0.328125
+      ],
+      "mean": 0.34921875,
+      "percentile95": [
+        0.2494140625,
+        0.4546875
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_DEND_selected_minus_fixed": {
+      "seed_pair_differences": [
+        -0.005859375,
+        0.0,
+        0.0,
+        0.0,
+        -0.001953125,
+        -0.494140625,
+        -0.001953125,
+        -0.75,
+        0.0,
+        -0.99609375
+      ],
+      "mean": -0.225,
+      "percentile95": [
+        -0.4734375,
+        -0.00234375
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_POINT_selected_minus_fixed": {
+      "seed_pair_differences": [
+        -0.0859375,
+        0.16015625,
+        0.08984375,
+        0.40625,
+        -0.583984375,
+        -0.21484375,
+        -0.484375,
+        -0.099609375,
+        0.05078125,
+        0.083984375
+      ],
+      "mean": -0.0677734375,
+      "percentile95": [
+        -0.2494189453125,
+        0.10156738281249958
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_paired_gap_attenuation": {
+      "seed_pair_differences": [
+        -0.080078125,
+        0.16015625,
+        0.08984375,
+        0.40625,
+        -0.58203125,
+        0.279296875,
+        -0.482421875,
+        0.650390625,
+        0.05078125,
+        1.080078125
+      ],
+      "mean": 0.1572265625,
+      "percentile95": [
+        -0.12421875,
+        0.45489257812499917
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "A_fixed_DEND_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.5078125,
+        0.546875,
+        0.515625,
+        0.5,
+        0.513671875,
+        0.5,
+        0.5,
+        0.5625,
+        0.5546875,
+        0.53515625
+      ],
+      "mean": 0.5236328125,
+      "percentile95": [
+        0.51015625,
+        0.5380859375
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "A_fixed_POINT_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.5078125,
+        0.18359375,
+        0.4765625,
+        -0.044921875,
+        0.3671875,
+        0.078125,
+        0.529296875,
+        0.376953125,
+        -0.033203125,
+        0.384765625
+      ],
+      "mean": 0.2826171875,
+      "percentile95": [
+        0.1494140625,
+        0.4056640625
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_fixed_DEND_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.5,
+        0.501953125,
+        0.5,
+        0.5390625,
+        0.52734375,
+        0.501953125,
+        0.58203125,
+        0.25,
+        0.5,
+        0.58203125
+      ],
+      "mean": 0.4984375,
+      "percentile95": [
+        0.4365234375,
+        0.54140625
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_fixed_POINT_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.056640625,
+        0.40625,
+        0.361328125,
+        -0.03125,
+        0.365234375,
+        0.287109375,
+        0.0234375,
+        0.08203125,
+        0.4453125,
+        0.21875
+      ],
+      "mean": 0.221484375,
+      "percentile95": [
+        0.11835449218750001,
+        0.32265625
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_selected_DEND_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.494140625,
+        0.5,
+        0.5,
+        0.501953125,
+        0.498046875,
+        0.388671875,
+        0.498046875,
+        0.0,
+        0.498046875,
+        0.0
+      ],
+      "mean": 0.387890625,
+      "percentile95": [
+        0.2490234375,
+        0.49746582031249953
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    },
+    "B_selected_POINT_intact_minus_no_history": {
+      "seed_pair_differences": [
+        0.05078125,
+        0.478515625,
+        0.349609375,
+        0.3359375,
+        0.037109375,
+        0.099609375,
+        0.017578125,
+        0.076171875,
+        0.48046875,
+        0.306640625
+      ],
+      "mean": 0.2232421875,
+      "percentile95": [
+        0.1173828125,
+        0.33203125
+      ],
+      "unit": "independently trained seed pair",
+      "n_seed_pairs": 10
+    }
+  },
+  "primary": "B_selected_DEND_minus_POINT",
+  "stable_direction": false,
+  "stable_practically_meaningful": false,
+  "practical_threshold": 0.05,
+  "hashes": {
+    "test_A_s0.npz": "33d698c6405050e3c0ee042e9c8122cb656abb637efec0a6db2d1ad924f79768",
+    "test_A_s0_DEND_fixed_intact.npz": "6278b48ff9a0b51008f8862ef47cfca21689a3f7c4d5d1c7bfa8984058026400",
+    "test_A_s0_DEND_fixed_no_history.npz": "f1e998ad4abd50eb724fd9376aa44b56f1fdb1a17a462c13bd0a4405461efa1b",
+    "test_A_s0_POINT_fixed_intact.npz": "65d9a448e7d88b441aab777b934759dd542741341b7d4e0e73991a48c3dfb493",
+    "test_A_s0_POINT_fixed_no_history.npz": "6d3a958933b4a3f8096c7fdbeb09516b16905ad966464cb26fac614db84df3d6",
+    "test_A_s1.npz": "14e2f720950a4e3d85a09547ccd9b536262ce2040dcf3f61edc464b8d82a0a41",
+    "test_A_s1_DEND_fixed_intact.npz": "c21b53ee2d5e694e4bcee1c9dc3843a686e923e1a4f283790ad29a556cc9168d",
+    "test_A_s1_DEND_fixed_no_history.npz": "97d0806a09160fbeab49e1c0a5125f7526727ba26437e8a929173fdc7828205e",
+    "test_A_s1_POINT_fixed_intact.npz": "8dfd174c1eca20b90fdd7443b6b25fe9653ec47ce4052ad78c682a773a92f0d0",
+    "test_A_s1_POINT_fixed_no_history.npz": "3ba76e1d2e6647fbbd142e4c5f17947b5acfc8ef34073d73de2ed4fe5502a113",
+    "test_A_s2.npz": "dc4a210cde5e189395dd21ad3397708a602154080f75d03187ba519e4778fa9a",
+    "test_A_s2_DEND_fixed_intact.npz": "a93891ca240de4e46c8c68ffbbab6b24c95422d7ee842702f4b169c300710f9c",
+    "test_A_s2_DEND_fixed_no_history.npz": "dc5f8dd2b5938cfe55e26220d19cf88b7ec7a864bfee830c57fea56683bd56e6",
+    "test_A_s2_POINT_fixed_intact.npz": "a8f71888935c72f20f26c27d14780a5a207cc56069a1c0dfe71a45a229abe08c",
+    "test_A_s2_POINT_fixed_no_history.npz": "30412bdd07a94caf2f15fa89c784ce3be6ecf233b627e8a3df78dd1af816e9d3",
+    "test_A_s3.npz": "9044038498e8c6a8404961443725eb75a1145839d8f2c43f93bcb1a77afac4fb",
+    "test_A_s3_DEND_fixed_intact.npz": "f9555b0a3381637e1596d1ba87dff92e26011cc03ed6418c2091370c2ab764a1",
+    "test_A_s3_DEND_fixed_no_history.npz": "484ef345fa997ef0e7ef657e30198fc61a0559be4624c418a62dc203531bd248",
+    "test_A_s3_POINT_fixed_intact.npz": "0ff471743f7fe9afc9203d83af84c0ace05f5d66a5b130f95d830f84f63e0625",
+    "test_A_s3_POINT_fixed_no_history.npz": "0b452b05fab95107d8544aa1f50fdc75add05c2d7b458ca4287c8bf82eeacda2",
+    "test_A_s4.npz": "56a60be61cd1e62509f0b538521419782b792b13fc35f7be688d97a5108fa671",
+    "test_A_s4_DEND_fixed_intact.npz": "75022f75345a0d82301f1450fe639946e0912144cb0803f5bc2de47b7be2b0d5",
+    "test_A_s4_DEND_fixed_no_history.npz": "35ab99d483d6874772f8fe2aa382a0eb568bdd6c4a48f6bfecdf852e11fc98e8",
+    "test_A_s4_POINT_fixed_intact.npz": "e20df8f902d98b11f8bea43c61a7f9bec15f2270fbb0c7c53d33b24c0d664d6e",
+    "test_A_s4_POINT_fixed_no_history.npz": "c817009d0262c4c9f3a76ea26f4c0aa2782814729763792fed08a458a6c468c0",
+    "test_A_s5.npz": "2053fee4bed6b4639d6c7c9a379885966e7447bf418ea436ea0ba2aeb20ee116",
+    "test_A_s5_DEND_fixed_intact.npz": "f0140debd688678d754f81f701d2825efbf5ac1358ef5ba2fdee9a2f66785f05",
+    "test_A_s5_DEND_fixed_no_history.npz": "57b56a6682d67ab7597e639d6d24f84ddbf4335b8dafe5e23674e5af2ef296c8",
+    "test_A_s5_POINT_fixed_intact.npz": "bb5731ce53412875d1fcde066979c472f687ef420f5b34d0991ebbfa805052b4",
+    "test_A_s5_POINT_fixed_no_history.npz": "278971e32d7a72d44554d45928f95eedf461743cb660c5b94ef007531064e19d",
+    "test_A_s6.npz": "ee876a708bd89c60e46df44d6ec19c7f8bcc2cb8f10f82a5a5ff23a3b2ddd9f4",
+    "test_A_s6_DEND_fixed_intact.npz": "b0d101b14dd52402a7aedc4f34dd25b95b7f6e3b5bbf4bf75c1bfa2ded04afb4",
+    "test_A_s6_DEND_fixed_no_history.npz": "8c2a26239bdba847ba6063678821d63db59f2fc6ee1597de0579defd69c8cb01",
+    "test_A_s6_POINT_fixed_intact.npz": "f07371c6afd7f21a4a4279cfdd042bee21fb6a5c0970628252456310e8a48398",
+    "test_A_s6_POINT_fixed_no_history.npz": "0d14118549eebf97f0699bb45f9f2af1790dc451e25b0eb8403208898ed7e958",
+    "test_A_s7.npz": "235556a82519a0847bedda12a5bd3dd25f2a2a0a50699a22d84559afb8e661e6",
+    "test_A_s7_DEND_fixed_intact.npz": "adaaa815e3ca17a5a7854a57b22fff19b92decf16c538f082df7d80b3f080d7f",
+    "test_A_s7_DEND_fixed_no_history.npz": "9e08e77c2fa0fc2be59eb728f78c07089a1a12dc49e905f92d1cbc417843a0dc",
+    "test_A_s7_POINT_fixed_intact.npz": "6ee6a0ead557ec66f3bfacd4ca6447c5bfead5b521fb27b1c24ff90752ec6e8e",
+    "test_A_s7_POINT_fixed_no_history.npz": "47075f82287e2d3ca86fa475853aeb5debe0c3f9b7b40604458c778e4d66c80d",
+    "test_A_s8.npz": "b86ec4d26af4ddb1996c82dc07d465682b9bc53e8c96c48953c8d62cfc24cf7c",
+    "test_A_s8_DEND_fixed_intact.npz": "783bae09e20c902e35c4cf6ee562760bcc9d92c6ee7dbeb9993977e674ea9a66",
+    "test_A_s8_DEND_fixed_no_history.npz": "e7c063774a20a5eab5c0ee365ea77a4e042f2ccbede5a24ca50326f2ed890a24",
+    "test_A_s8_POINT_fixed_intact.npz": "0d8add8e239f9ab407e1581c9da9e4bf77de6e477d435bd85b095211f3ecff1e",
+    "test_A_s8_POINT_fixed_no_history.npz": "e1c56ee5d77a1559a2eb2f0afa1f440308830f3dd666a05fb7af7611c6313a13",
+    "test_A_s9.npz": "cca342a7916700c00608dfbad40e1dee53ab0e5ed255766af7662b3139302479",
+    "test_A_s9_DEND_fixed_intact.npz": "5835b834e683f5034141d82fafa20e346d9c7ecbbe2407aaf1629aebfaaea2c9",
+    "test_A_s9_DEND_fixed_no_history.npz": "1c867905ba14aa94ac566304ca835ac0f5b2f081da6b3768ca9621213bca264d",
+    "test_A_s9_POINT_fixed_intact.npz": "9aad1c6aaf256a67b09d756ab853b9ad183339ffe05ac89bb8d0876d4ed5d847",
+    "test_A_s9_POINT_fixed_no_history.npz": "3d979934417fa14c939b66cc306a1fe2e0256caab484759a3884d44d7b756dce",
+    "test_B_s0.npz": "0ff6cdb69716874958d964b50925ed82de8165f8e38c860f490dfb169be7be82",
+    "test_B_s0_DEND_fixed_intact.npz": "e920c6fc915e5aefe265960d7450f11659777ff4ca3d9f9579202ed9190b59d1",
+    "test_B_s0_DEND_fixed_no_history.npz": "6864c5c962c9109b5d0b22b6579773d274e7632a1a7792bc056537307e6073ac",
+    "test_B_s0_DEND_selected_intact.npz": "4a43184f08d321db603b3e7dc291928734f32fb96c5c064517df7db16ef85086",
+    "test_B_s0_DEND_selected_no_history.npz": "cb89aaec2b20dba05a823e8abfb3deee3668b041cd248afb730f455074c30933",
+    "test_B_s0_POINT_fixed_intact.npz": "1530927000247c86f22c1246932eddd7b6925425da6694918add3528d610479f",
+    "test_B_s0_POINT_fixed_no_history.npz": "a6b4af2feac58977e6bf95f0d90a29bc91c5686cf48101d823bd50b5450b487a",
+    "test_B_s0_POINT_selected_intact.npz": "cb0abb22c0478dbccaf4940423ebf73c558271c0b648373bfd0200f041a97986",
+    "test_B_s0_POINT_selected_no_history.npz": "d678dbfd6bd3232e9a76854534c8dfb9176949e344bd2da3c5d72e3fc73d7967",
+    "test_B_s1.npz": "59592128cbcbc30973883e9818b2cf893e762db4a8bdb172be97eff8475498da",
+    "test_B_s1_DEND_fixed_intact.npz": "c7c9742f5c18388a6da523f838a1b81c1a8e9bb20d0a18786680800fa80be322",
+    "test_B_s1_DEND_fixed_no_history.npz": "926cfb34aadbd08d744e2bacea88fad3e89d93083082e254cfb1a75ff19adb17",
+    "test_B_s1_DEND_selected_intact.npz": "d462d76eb29e2c3d864854ee492399ecf00c050f22bf33062f7115a3538a3e58",
+    "test_B_s1_DEND_selected_no_history.npz": "59022a755ddddf2d7a4253650a94880e88ed22c343b52f937b28cba57211e78b",
+    "test_B_s1_POINT_fixed_intact.npz": "a6d6726b3948f2978d89e108f15cbba2d24cd581a746edba6aa79956e5f97740",
+    "test_B_s1_POINT_fixed_no_history.npz": "3a7ff5fbfcf7bde8f1f825f32c7d2952c34627bf9819ba419f65e633b169f106",
+    "test_B_s1_POINT_selected_intact.npz": "0347007b3b8c8ff2ef3cdeba487ef665cf71f6a339a8b1c9344e7774875cec7b",
+    "test_B_s1_POINT_selected_no_history.npz": "b810cd277464dccb7ed818004d8a1481d501684dc4d373dab5408a91a2fef9bf",
+    "test_B_s2.npz": "27093d8a61f69f8a415d75e3dc250101ccfe64ba9d97ee0266157b5617dd02d7",
+    "test_B_s2_DEND_fixed_intact.npz": "21838eb9b1e24d5219cb67cb40a50ec58a4d8125fb5e62114ca73851f438e399",
+    "test_B_s2_DEND_fixed_no_history.npz": "47dd0a6404c2fa2ace19217cb79da32de7699be226954981cff26dd88e278d17",
+    "test_B_s2_DEND_selected_intact.npz": "9ce28dfbfa2cc8485f7ea0935154551805f6928c11738e44f55ec712bc3093f9",
+    "test_B_s2_DEND_selected_no_history.npz": "34f62eb617d54ef4b8e573338435205ac8b0823b0bd4966cfaa3090a675500bc",
+    "test_B_s2_POINT_fixed_intact.npz": "261afec3b97b2a8f2485ca0021e1f992eca5598915c8fbd67549780474f2c056",
+    "test_B_s2_POINT_fixed_no_history.npz": "f9d8ff4d9cf5068353b50dcadc2a8b556e9bced118147c01f1a94b6acbd1a14d",
+    "test_B_s2_POINT_selected_intact.npz": "6a1a104f4dcc103cf0dd8845c6a0447870816496d76c75e8c8b542ce3d93ab79",
+    "test_B_s2_POINT_selected_no_history.npz": "b9f8cbeee874af53a4cb6dec1d6dfddc36baa8dd9ef17ee431209f22412bf3f5",
+    "test_B_s3.npz": "834ff919850750c3dd02b01db701e2000f29013d73781cc292fe41b746daf862",
+    "test_B_s3_DEND_fixed_intact.npz": "bb6795f77504863b9b500179d772841b323ea16885ee2b5687ff9af4beb4827a",
+    "test_B_s3_DEND_fixed_no_history.npz": "819f6750ab66ba210713d8ddd46b373205c8e23ae8d5bdfb6e68340b4aae3a85",
+    "test_B_s3_DEND_selected_intact.npz": "999145dac769ccbdd8b6c312d59929e62a288efecf4399b6d71c349c5a2c5ba4",
+    "test_B_s3_DEND_selected_no_history.npz": "2074f73ce3c662554e30438d7d045ad3d7447666d5c45bfc7743cd33549ce0d0",
+    "test_B_s3_POINT_fixed_intact.npz": "ff05dd792da194607f179b0a6d6acc444f7c571c50ee4aa72bbe94a5f8d96b14",
+    "test_B_s3_POINT_fixed_no_history.npz": "4208d7cfab1c51f97fa32e9d6326fec0824c4f24e263d6375a36014337a05305",
+    "test_B_s3_POINT_selected_intact.npz": "0d4a1ce3328f98f6dbf0c25609716c9a6d29256196675412ff77f6a2b0d26f18",
+    "test_B_s3_POINT_selected_no_history.npz": "d236e629f408293fc2225affff9ec2e625576d52f4b4c1d86cc0c678f2d3ec15",
+    "test_B_s4.npz": "a5cd45f7b4fc6cb80f873d55bfd3aacef3193444c3b3b394d9fb728f3e094282",
+    "test_B_s4_DEND_fixed_intact.npz": "5d3de8c7ca91486b71f6bf604c667aa35d7e397aec4df087d0d994dcc9f0b387",
+    "test_B_s4_DEND_fixed_no_history.npz": "86744ac5377dd6a0fff590a3a9b348199b89b768decd4c5be439a2050ddaba03",
+    "test_B_s4_DEND_selected_intact.npz": "5ae1a01df5ce9ea3cdd91b9630c8f1e2f32c75825c143b01a31f2be8e33857f5",
+    "test_B_s4_DEND_selected_no_history.npz": "63c3adc6abcfd0598774d80b34f1490de20a5122dbd8483b1a37b9bf396830b4",
+    "test_B_s4_POINT_fixed_intact.npz": "565bf1e00d97f60e3ee2f216e90ebd011e915eaf067b3fc5c3d24875c57a9bd8",
+    "test_B_s4_POINT_fixed_no_history.npz": "26ea1187922ba19bea72f3abb230774aaf8c547d37c766d09871ef29e28a233d",
+    "test_B_s4_POINT_selected_intact.npz": "f33c2dbc8d87dfa3b0c51acfeed65428da8900e81544956dde66cfb9725bb4b1",
+    "test_B_s4_POINT_selected_no_history.npz": "c17fe23325e969c1ccc26e4b94015b87089bdce134b70a79a9e75e4d63b6bf1b",
+    "test_B_s5.npz": "a447c16e3d10b450500c73925a492bd55bca359efb32d7f660a1eceae05b186d",
+    "test_B_s5_DEND_fixed_intact.npz": "db9f29acc8d1914c37a174fc0c5c6d6fc5a377d471b2798d97bced494f8d54f3",
+    "test_B_s5_DEND_fixed_no_history.npz": "e18e42628cf1d5e93699b79cc8d79d25df693d3f53921d98f01666b53d367afe",
+    "test_B_s5_DEND_selected_intact.npz": "c3882b9ecca6eea9132ba3236437389910c5b9314629904155c2e590da956856",
+    "test_B_s5_DEND_selected_no_history.npz": "a85518d08854db21348b085f542ab88a7aaec55328f6d64755f8a3c10efd59ce",
+    "test_B_s5_POINT_fixed_intact.npz": "8a73af7f5a3e1a8c500d69ad4cc5b47dcc517885d57d2b055a9e638fee45604f",
+    "test_B_s5_POINT_fixed_no_history.npz": "28d14064dc5ca1ba696fa97daaa43048fab34e0c2aabd142975b911996fb9524",
+    "test_B_s5_POINT_selected_intact.npz": "a53cd88a4d5728c2c1e18132140558ccd7783c22d8bdb964eb1a91ed64399e24",
+    "test_B_s5_POINT_selected_no_history.npz": "c343ef96c30d870123fc562fe423999cb5be5eee17bdfa5918c78cf15f287f71",
+    "test_B_s6.npz": "186061cd2e7215db1f7859ab0e99545331c5906e213590575d91de7b02fcb4ef",
+    "test_B_s6_DEND_fixed_intact.npz": "a745d5e060f24239cdc7baeacdd1ff871bb8b21ac6e0dc9052b2a9bc42b6d7b6",
+    "test_B_s6_DEND_fixed_no_history.npz": "db3265e4086a42e8a18ee0a4371520e1dec832ec384461d111f5271ed3fe32a8",
+    "test_B_s6_DEND_selected_intact.npz": "ddd2de4bfd0e4d3a733a8c442acd1b52fbe4276ee67a059ecfa06c1c61c4bb73",
+    "test_B_s6_DEND_selected_no_history.npz": "8156d9fb18ff8b0b5af705cb23cbd9e29805942974ce7b4289e4a9a102973e93",
+    "test_B_s6_POINT_fixed_intact.npz": "4d4d523f618731ca5f507b30dc7563230a1f044af437a367b57d3b5385c28630",
+    "test_B_s6_POINT_fixed_no_history.npz": "addcd739f550b5c2369b426d7f4b427e785772dfee23398d73a21a8b85ab3367",
+    "test_B_s6_POINT_selected_intact.npz": "fbacce5939a7a0e9fb1bce8e3959dcb5ceb7c3d9b57cd11087acced05668d132",
+    "test_B_s6_POINT_selected_no_history.npz": "6085ecf9d7c90fad026230ef91f77a7ef76f89c0e9cec3ea019546778245b13e",
+    "test_B_s7.npz": "65ae88bc0f750751aa064f8156b678d53f8ff0ce9939f11086a3ed5205d111e9",
+    "test_B_s7_DEND_fixed_intact.npz": "4a52c5b2d8cfaa4cbeae2bc60569cf282dc9876b4f4d0501fb1a796f232dba22",
+    "test_B_s7_DEND_fixed_no_history.npz": "781740ec4c6c8675b21c6bcabc7e2ea62e7187d4bd5f79f16b5ca79927a3146e",
+    "test_B_s7_DEND_selected_intact.npz": "dac5c85d5bcc11a56d8a7e39b11f18638cc8cd62a662914337f552133e5632eb",
+    "test_B_s7_DEND_selected_no_history.npz": "d1b63fa2244f6329e2581530b79b7077003ba17be8d0870aeb5a32f01c0232ed",
+    "test_B_s7_POINT_fixed_intact.npz": "9b7588911a5cefa43d5e87387cf7708e6332f9a5084a6b2b6e5c6cc84e588b5a",
+    "test_B_s7_POINT_fixed_no_history.npz": "9e159c1c2c17d055192147c788afa34f78e07afb4e3f04f5ed95e0832659ca25",
+    "test_B_s7_POINT_selected_intact.npz": "d244f2c0cfea246717c3d40512583fcf35d1e90dcb2a28a53ac8bef9157c0afe",
+    "test_B_s7_POINT_selected_no_history.npz": "747edfe0e8dc1c4389f10351cfa8823934907f85571a33d73925fa4dbaa9bb60",
+    "test_B_s8.npz": "93adb5097dfd97fcba43375a9d2b7beda637a6e18368d97ad27e5710a22fd23a",
+    "test_B_s8_DEND_fixed_intact.npz": "48e0fc4302b1b229ad562255da3ed2c297842df9f1233090c73baf14b1bd90da",
+    "test_B_s8_DEND_fixed_no_history.npz": "588e667b60b6e2ca3c3eb0196709c8b9a54ab8fdfaff855f1b97993a79f15c2a",
+    "test_B_s8_DEND_selected_intact.npz": "5fee54de5da112afa0ad4f5128f9e5c9ef50a7470d6b618b4cb72b4f13925d5a",
+    "test_B_s8_DEND_selected_no_history.npz": "c424385653579a737ade0ed31fbcc9b842b9029941f4174ee3633f29cda405db",
+    "test_B_s8_POINT_fixed_intact.npz": "62458cbad42a194372ea90f4e004adfb919131a09e911fc9e5dbd4f043e4a60c",
+    "test_B_s8_POINT_fixed_no_history.npz": "483b8ff183dfa146212cf5b9e42bd3925a9b465cf1eebf7b119256fb16b3e81f",
+    "test_B_s8_POINT_selected_intact.npz": "60698034064ac93972c0e8d3bde97b40dda19b93cafc04bbf96788e08eb07790",
+    "test_B_s8_POINT_selected_no_history.npz": "72d45548611cbbb01e548d6a1062771380384bd2290780392f5d6a0c87972c89",
+    "test_B_s9.npz": "ea5f5f2d7071f9624bbf3ec1a524476125e22ab8958f96231dc23ade1f461506",
+    "test_B_s9_DEND_fixed_intact.npz": "d436fb3d01a839651aac1e375bbe9e30dc17ab094fe5ffddf3e5c597701d2f49",
+    "test_B_s9_DEND_fixed_no_history.npz": "43423e64779dbd1a42354146529c517b3ea3c83eeed6f82c310abad1df15118c",
+    "test_B_s9_DEND_selected_intact.npz": "8efab1b88869fcb600fdd6c695553fe46754b9bffae5af53d9982f38cd1acf46",
+    "test_B_s9_DEND_selected_no_history.npz": "6baec5fd3300e110d3b60ec3278143de86886ab9980fd0f4430d4817cb80a6a4",
+    "test_B_s9_POINT_fixed_intact.npz": "64718bec5b96c72fbf456ee52844a910a7cb254fc2bb7d0c3e26d92a022af6c6",
+    "test_B_s9_POINT_fixed_no_history.npz": "1cd2bed73d36b11a34a5ac86fffaa58711f50029cee77f85b40a990526d3db3b",
+    "test_B_s9_POINT_selected_intact.npz": "5bb24fa3b0958ddd74a35fd52b3577a4db3a4d61ea873ce9a7c4ec485a5d887a",
+    "test_B_s9_POINT_selected_no_history.npz": "a7fc27915693a55f71ba2a49b361fa6228df352ef37e9c12aa7b74be3d010f8e"
+  },
+  "seconds": 15.640760851001687,
+  "final_lock_sha256": "a16d1b7215fde36adc2d4480f5733f316a88a67d11a8269170e4e935d9991f47",
+  "unique_model_evaluations": 120,
+  "unique_test_histories": 10240
+}
