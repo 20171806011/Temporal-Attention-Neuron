@@ -1,6 +1,6 @@
 {
   "baseline": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
-  "frozen_at_utc": "2026-11-04T19:12:40.947417+00:00",
+  "frozen_at_utc": "2026-11-04T19:12:53.644722+00:00",
   "status": "Before any V7 scientific train/test data generation; deterministic fixtures only",
   "sha256": {
     "model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
@@ -15,7 +15,7 @@
     "SEEDS.json": "444e865c9ee5a9d87d46c3265fc10ed6b582ecd9dbdcec0c158146d237555a26",
     "CONTRASTS.json": "549599e4c7c86b9810779ca6c02bc108b78d9785707ce11ac915de3ccf997f50",
     "SOURCE_AUDIT.json": "17390bc4cd22376e5503a423789c429d45dc8dbbfc47c78055dce07cf077b4dc",
-    "verify.py": "9268c530a83d32dffff8a9a38398c90d8efb0b80e205a054958ea42118af3e13"
+    "verify.py": "4e385644a861c10aa9c7dcfb415e45005c95cce60a8f8c025e0eb1bd3ade5eaf"
   },
   "historical_manifests_verified": [
     {
@@ -49,5 +49,6 @@
       "entries": 639
     }
   ],
-  "verification_tooling": "Independent verifier included in freeze; reporting may be added without changing scientific sources."
+  "verification_tooling": "Independent verifier included in freeze; reporting may be added without changing scientific sources.",
+  "predata_note": "Trailing blank line normalized in verifier before scientific data; no behavior changed."
 }
