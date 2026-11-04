@@ -1,0 +1,3748 @@
+{
+  "status": "PASS",
+  "scope": "Read-only textual source/seed audit; no scientific data generated or model fit",
+  "source_files": [
+    {
+      "path": "../dendritic-population-v1/model.py",
+      "sha256": "ea1f8a602e30bcd0928c3527abb85b587de9e926b2b2cec960c06fe78c59a22a"
+    },
+    {
+      "path": "../dendritic-population-v1/REPORT.md",
+      "sha256": "ed169e179a0b53146b1cb004ae3066e6da84329f463ab4879ef57aa72815deb9"
+    },
+    {
+      "path": "../dendritic-population-v8/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "../dendritic-population-v8/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "../dendritic-population-v8/PROTOCOL.md",
+      "sha256": "ead293136cd5902f4360b4d545b5af2db9aac5973ca7219e424fabb6c0842429"
+    },
+    {
+      "path": "../completed-tan-2026-11-03/native-eight-stage/timescale-heldout/REPORT.md",
+      "sha256": "c14169b0d6a6f0268234b3718d6e1f5d62c8163b28dc3cefbe768276926f03b2"
+    }
+  ],
+  "scientific_new_seed_count": 31,
+  "scientific_new_seeds": [
+    2100000000,
+    2100000010,
+    2100000020,
+    2100000030,
+    2100000040,
+    2100010000,
+    2100010010,
+    2100010020,
+    2100010030,
+    2100010040,
+    2100020100,
+    2100020101,
+    2100020102,
+    2100020103,
+    2100020104,
+    2100020200,
+    2100020201,
+    2100020202,
+    2100020203,
+    2100020204,
+    2100020400,
+    2100020401,
+    2100020402,
+    2100020403,
+    2100020404,
+    2100020600,
+    2100020601,
+    2100020602,
+    2100020603,
+    2100020604,
+    2100030001
+  ],
+  "prior_text_files_scanned": 918,
+  "prior_text_files": [
+    {
+      "path": "research/dendritic-population-v1/FREEZE.json",
+      "sha256": "695976fe54efa095b8f50cc92f92f6c461eb40dfff8ca15c85e277af24ae8cba"
+    },
+    {
+      "path": "research/dendritic-population-v1/LITERATURE.md",
+      "sha256": "bda252771be12fa75dedab9e8b2705783da546c750aca5e1eaacd2917a3617b5"
+    },
+    {
+      "path": "research/dendritic-population-v1/MANIFEST.json",
+      "sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea"
+    },
+    {
+      "path": "research/dendritic-population-v1/NEXT_STEPS.md",
+      "sha256": "f6ac7fe6a5c7b6ff1c3a273b285b82fcc91f27b511efe54245e86dc632628529"
+    },
+    {
+      "path": "research/dendritic-population-v1/PROTOCOL.md",
+      "sha256": "7978fbb1507148e8b035cfa1986b6794e265573dda0c2507bf98d2f6131ffed0"
+    },
+    {
+      "path": "research/dendritic-population-v1/README.md",
+      "sha256": "70d3e3005a63a7deefa78097db4187fe3dc5154af3c758e11dff3d488e5bfad9"
+    },
+    {
+      "path": "research/dendritic-population-v1/REPORT.md",
+      "sha256": "ed169e179a0b53146b1cb004ae3066e6da84329f463ab4879ef57aa72815deb9"
+    },
+    {
+      "path": "research/dendritic-population-v1/SOURCE_AUDIT.md",
+      "sha256": "8a81394cf2cab4306b02bc84268f4522bc013525cb2fcf5ad2bc9aae95c5abf5"
+    },
+    {
+      "path": "research/dendritic-population-v1/VERIFICATION_ATTEMPTS.json",
+      "sha256": "e704f207e88bf259b18bceae374686b145ef36ad9c77b37e6cdd60ade167fd22"
+    },
+    {
+      "path": "research/dendritic-population-v1/model.py",
+      "sha256": "ea1f8a602e30bcd0928c3527abb85b587de9e926b2b2cec960c06fe78c59a22a"
+    },
+    {
+      "path": "research/dendritic-population-v1/plot_results.py",
+      "sha256": "43dd3437dec49680addee945bb64496aca142d2aadb1a7c89546b679848d4f8b"
+    },
+    {
+      "path": "research/dendritic-population-v1/results/results.json",
+      "sha256": "57e574a4019755697b70d882cdbd4a2bd24041290215ea89c288f943a74cd7e7"
+    },
+    {
+      "path": "research/dendritic-population-v1/results/verification.json",
+      "sha256": "85ae449481a22df46915146330b4431d9ec812e10657a96b6c7d4db5d3230475"
+    },
+    {
+      "path": "research/dendritic-population-v1/run.py",
+      "sha256": "492770cdb103d32119745c43e112d603b3d23f91def55043e61b259daf0581ff"
+    },
+    {
+      "path": "research/dendritic-population-v1/test_model.py",
+      "sha256": "83d5ce98baf5371456622b8b9dd15769ba24d8472744cc2fcdd194dfd264fd58"
+    },
+    {
+      "path": "research/dendritic-population-v1/verify.py",
+      "sha256": "706fc1c4ffac0829796bd502f20e35a3ecf1f925ad39e00d7ad0fa1d190e5beb"
+    },
+    {
+      "path": "research/dendritic-population-v2/FREEZE.json",
+      "sha256": "0408429fcfd277df221a35e00f63242b7b0d115d09c2d80c08d237c023ed1ce9"
+    },
+    {
+      "path": "research/dendritic-population-v2/MANIFEST.json",
+      "sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374"
+    },
+    {
+      "path": "research/dendritic-population-v2/PROTOCOL.md",
+      "sha256": "dc7fbd717360bc34508dd684c822111616a54c3d6a9b1e7ad3ebad7cf780672d"
+    },
+    {
+      "path": "research/dendritic-population-v2/README.md",
+      "sha256": "19581aca034fb21c9b8184a0140ca9c3bf04f49616499b6e9a63bdfd8a3b3ef0"
+    },
+    {
+      "path": "research/dendritic-population-v2/REPORT.md",
+      "sha256": "c42e19013afc7a0ffc057a7e0ee03fab8794cbb5e8877886d01dfbc64dd6d005"
+    },
+    {
+      "path": "research/dendritic-population-v2/VERIFICATION_ATTEMPTS.json",
+      "sha256": "9d87a00da213343a2bad0b689ef26943e74ca02303f56fc667828bf0b1262d46"
+    },
+    {
+      "path": "research/dendritic-population-v2/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v2/diagnose.py",
+      "sha256": "9b7e7c0234cc342fe2a76f8c91a7716452d8ba416fcbfe9201a21a4cd921a2e5"
+    },
+    {
+      "path": "research/dendritic-population-v2/evaluate.py",
+      "sha256": "86cf4ca5d449b43e9864f13ccea827275697d4aa9bc31411b23d2a3c5d26e8b4"
+    },
+    {
+      "path": "research/dendritic-population-v2/model.py",
+      "sha256": "dfdb47504d602a06d00ee2cface322a0d73e034ded8141d7a872979be75f8387"
+    },
+    {
+      "path": "research/dendritic-population-v2/plot_results.py",
+      "sha256": "a2f5d75953bd2ec985ac26b265792f4884a01efea13f7cee47c3e9f7702db2f1"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/SELECTION.json",
+      "sha256": "cec4719f1a5e53e19c10653b4d21717d14bfe83c79bb8cd98400eb73e1d386f4"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/TEST_STARTED.json",
+      "sha256": "5cc1d70c361253a8789d51d23d1b97df2606e63684204feef3ffb6119ae31f16"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/diagnostics.json",
+      "sha256": "b0b2cdeda516432317fcf481e7373a1d43622765ad13c93597cca5d494728249"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/summary.json",
+      "sha256": "86cb520f48355923a615cb2d48edec4769842041a11a75207fa2b1f4d9856585"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/training_log.json",
+      "sha256": "ac4931059eb0d066e6149dce0a670e6b7c9bbcdb4e6f15c3c2803cfe2aa29df2"
+    },
+    {
+      "path": "research/dendritic-population-v2/results/verification.json",
+      "sha256": "c3aa2b374983420defaf2b90c4b48e17666cf8c93b1972d5940cea60b99ca923"
+    },
+    {
+      "path": "research/dendritic-population-v2/test_model.py",
+      "sha256": "f63a7a6b9cfa0faca133030bc3f0288d8cd1d37facd897e2d200cd6c7a0b8bb0"
+    },
+    {
+      "path": "research/dendritic-population-v2/train.py",
+      "sha256": "28dcae5d153c4677de8fd99868fcc10b53b55a4ba46b441ba542fcdf90505c11"
+    },
+    {
+      "path": "research/dendritic-population-v2/verify.py",
+      "sha256": "bf84154947561a68a3cdb9ad96e0a1c155b74d75f6870558198e4d425015a624"
+    },
+    {
+      "path": "research/dendritic-population-v3/FREEZE.json",
+      "sha256": "101b1a127e3aa0e03a56321dd00c96d428088a445bc4456774f0eaa8458af624"
+    },
+    {
+      "path": "research/dendritic-population-v3/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v3/MANIFEST.json",
+      "sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077"
+    },
+    {
+      "path": "research/dendritic-population-v3/PROTOCOL.md",
+      "sha256": "45645ae101b76d9b5c1b4f6fb4c73016260a6c469cc62dd929ba72e50b8558db"
+    },
+    {
+      "path": "research/dendritic-population-v3/README.md",
+      "sha256": "e5f6776673b5079658c897aa687e6ae76826b75eefcbf680b4d167e80edb286f"
+    },
+    {
+      "path": "research/dendritic-population-v3/REFERENCES.md",
+      "sha256": "c31898549fdacf9c3cacd75a568c0acb8d6f16dd9c41086dc18b860915995453"
+    },
+    {
+      "path": "research/dendritic-population-v3/REPORT.md",
+      "sha256": "5c601c23fe4d888d5be2c6b86edca5a748332d59f751482916a21a31ac5490e1"
+    },
+    {
+      "path": "research/dendritic-population-v3/REPORT_WITH_APPENDIX.md",
+      "sha256": "2f15e1634732ad257945adcfcab8524a17a1b355c82fd37e0300fab357f36099"
+    },
+    {
+      "path": "research/dendritic-population-v3/audit_gradients.py",
+      "sha256": "9254001411292869366e21bdefdcf89ed28149ad6ca3ef57b30c5d5f02b9c83c"
+    },
+    {
+      "path": "research/dendritic-population-v3/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v3/data.py",
+      "sha256": "3a11d1ad1dc9be8a040c850ba6cdea324d6f545b9153d65cec5abcadb30f4211"
+    },
+    {
+      "path": "research/dendritic-population-v3/evaluate.py",
+      "sha256": "67a0e605ef91412061df0be308946f43df382f1b6945a613cac80998a61c7045"
+    },
+    {
+      "path": "research/dendritic-population-v3/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v3/plot_results.py",
+      "sha256": "44a03ba68f490562f13e771403f49d372cc05079df46a69319d8dcb35397b384"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/SELECTION.json",
+      "sha256": "b2fa3a2dffcdaca788d67dc114a0fa0c869f0b478230a7f85e30150b7926eae3"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/TEST_STARTED.json",
+      "sha256": "06ac75ab85bade51df51535c818520424e12928bdf0050d62a5b1ce5f70e2fbc"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/gradient_audit.json",
+      "sha256": "f9040f6b15d7a4a0e1a2ce7ce9edbfd1fa175e422332796ea2cd0fc4b6cd4e8e"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/summary.json",
+      "sha256": "200dfcbc68661491b6068e5303a2bbeef10c01c61a1df8d820200c73080b8f47"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/training_log.json",
+      "sha256": "c6ba7aaf01d05e35e44dde6bd0d957909051d942326b0ec3acc2c35a8208c5c3"
+    },
+    {
+      "path": "research/dendritic-population-v3/results/verification.json",
+      "sha256": "80b620c363d19ea90173c801c0a92372b83fe3ce550009bddbed28b29f741e7c"
+    },
+    {
+      "path": "research/dendritic-population-v3/train.py",
+      "sha256": "af9465e2f4c190dd588fa97829181bdd559260f8cdef9154b21c812ec1e41bf5"
+    },
+    {
+      "path": "research/dendritic-population-v3/verify.py",
+      "sha256": "098ce878295e96567706daae62fd5809d7510d950b8a8314b348e34066864902"
+    },
+    {
+      "path": "research/dendritic-population-v4/CORRECTION_PROVENANCE.json",
+      "sha256": "5913580d1fce011d0ad99dc40bc174a817669704c0d3802af597928a8c2f6d2f"
+    },
+    {
+      "path": "research/dendritic-population-v4/DRAFT_MANIFEST.json",
+      "sha256": "f03aaf1602c2a894a8570f5f4942ad7644cbf13e253988c0132ca1b39e4db864"
+    },
+    {
+      "path": "research/dendritic-population-v4/FREEZE.json",
+      "sha256": "5c4384e825d635070f0bc90fe684dbeceed8e0d301fc0e39d84054e460378e76"
+    },
+    {
+      "path": "research/dendritic-population-v4/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v4/HISTORICAL_INTEGRITY.json",
+      "sha256": "760b0d716fe433166dd35a10dd6b794536428bfb401119fb55434a8087358831"
+    },
+    {
+      "path": "research/dendritic-population-v4/MANIFEST.json",
+      "sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0"
+    },
+    {
+      "path": "research/dendritic-population-v4/PROTOCOL.md",
+      "sha256": "85daa1b49292c874d3d25e273657e083ced1c01cf12705b69565484742f59960"
+    },
+    {
+      "path": "research/dendritic-population-v4/PROTOCOL_DRAFT.md",
+      "sha256": "9b17a4a2b16dfef8438df265f73a346ffe8b122987723e296d85167f38f4d513"
+    },
+    {
+      "path": "research/dendritic-population-v4/README.md",
+      "sha256": "9e663c90716ed95078a75110c817b25810d6fe77dfa12138390bc13d7355cd72"
+    },
+    {
+      "path": "research/dendritic-population-v4/REPORT.md",
+      "sha256": "f844330e690c26ef7ca4e5b4142bdddc289de01b39ed14d94811e93813eb7a7a"
+    },
+    {
+      "path": "research/dendritic-population-v4/RUN_PROVENANCE.json",
+      "sha256": "3967f067ba16ca4059cf6b7c908426106d426bd47cd65b980405d096ec7596df"
+    },
+    {
+      "path": "research/dendritic-population-v4/TABLES.md",
+      "sha256": "b2cec4647e640737f3eebfb477c72c4ac0cdbfd12369e1412f49f40e80bab3ed"
+    },
+    {
+      "path": "research/dendritic-population-v4/audit_gradients.py",
+      "sha256": "7fd59451522cbdfefc39b1b2071a0c2fc6307d2967b39b9c179a747db18227ea"
+    },
+    {
+      "path": "research/dendritic-population-v4/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v4/common.py",
+      "sha256": "c04d6174993178e8118799403a210dbe40d25bbab555030aa2d9db044ed6371d"
+    },
+    {
+      "path": "research/dendritic-population-v4/data.py",
+      "sha256": "3144a27b6456866faadd4b7e8415f483346ba66fd7d3f3fd5286588cfe8c5b6b"
+    },
+    {
+      "path": "research/dendritic-population-v4/data_v2.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v4/data_v3.py",
+      "sha256": "3a11d1ad1dc9be8a040c850ba6cdea324d6f545b9153d65cec5abcadb30f4211"
+    },
+    {
+      "path": "research/dendritic-population-v4/evaluate.py",
+      "sha256": "8639176b74d194036c9728aaa3023c94d7596f169f94eec3fedf54c28a5b53b8"
+    },
+    {
+      "path": "research/dendritic-population-v4/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v4/plot_results.py",
+      "sha256": "6137c162c154e05cf7c0336c45790bc5a155d49ff92ac7d7dc32868af4ff3c5e"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/A_SELECTION.json",
+      "sha256": "e19ea3ad4f635bf5c4f16c02529b24361ee8f6fa78f19182c7ddfde77c394601"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/B_LEVELS.json",
+      "sha256": "65e28c6ce5cd368857a8e277b46f8b7cc4fa6153fe8b7224aaaa4bd68b61f1dd"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/DEVELOPMENT_LOCK.json",
+      "sha256": "66c1636e898e39db84927ca984c469b776cbe05ef43d5957d578ffe7d0dccbf4"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/REPLICATION_LOCK.json",
+      "sha256": "8e4c87c56643c362381097669275882f4bec12bb03c420f5b98b9c0acb1c1a6a"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/REPLICATION_STARTED.json",
+      "sha256": "58beace4ed974ac13d640a8b00974bf06a8888f8e97ef8f7c41d92c367089799"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/TEST_STARTED.json",
+      "sha256": "7932a6cdf7e2bef2a83d05df4af5c8c5320b6e7b3553b7cc1fac72150cc045d1"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/TEST_SUMMARY.json",
+      "sha256": "35f9e83509f111a55c4435442414b7ea7ba8e03287bb1e6455dcb5a90ebeab35"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/aggregation.json",
+      "sha256": "bb43905d83bc86a27b320e5f49a8d6d99a0f1fa5552b497a8050f840eb2d7587"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/development_log.json",
+      "sha256": "6362b9847a9499489caff59fe6349a03e9b56eb16f2b53dad00fd46de26dd39d"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/gradient_audit.json",
+      "sha256": "b9e57557f2de3483776a54fc838592d4169a5f28aa31fc820adf2e44ea5ba587"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/parity_A.json",
+      "sha256": "10a727d4f7a9356462f02625084e8084fe9a35876c52ae357a6445bd2538be55"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/parity_B.json",
+      "sha256": "252c20ee5efffd3ab54ea87ed650e54ea536fa23ffc0d31826790361cf98f646"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/parity_C.json",
+      "sha256": "4cbb3ad789a74dfb100c746f934c6b5cf882887576c901cadfb423704828180d"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/parity_REPLICATION.json",
+      "sha256": "794e2d7d470b3bf026786ba191730158750b5eb023edab3222cc1a82afc96ea3"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/replication_log.json",
+      "sha256": "be9e733c08851a9ab7d5af7e4b50933cf282bcb7da3f76513f5b4b6024e3cac5"
+    },
+    {
+      "path": "research/dendritic-population-v4/results/verification.json",
+      "sha256": "6deb427c6a24bab250d1b30a2ae048f1cd49b7a584a1e34665a9879a2dc18675"
+    },
+    {
+      "path": "research/dendritic-population-v4/runner.py",
+      "sha256": "a4f4b5330fe301a898f8617164461fd414c635674ec1d0f29a3b5d4c581467ad"
+    },
+    {
+      "path": "research/dendritic-population-v4/summarize.py",
+      "sha256": "890f78a234f69bafdbfdd4c985e32d4164491a4a6fb2369366359dc8b8b8736d"
+    },
+    {
+      "path": "research/dendritic-population-v4/verify_v4.py",
+      "sha256": "08a336dbfb542d67d32b451fd04119aa05846e682134bc085d8af0998a83fe0c"
+    },
+    {
+      "path": "research/dendritic-population-v5/CONTRACT_CHECK.json",
+      "sha256": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a"
+    },
+    {
+      "path": "research/dendritic-population-v5/FREEZE.json",
+      "sha256": "61f31fd8b7bfcb2d96e0fc7da93b744a6d38f35381af33f8e01d0d5dbdb894e4"
+    },
+    {
+      "path": "research/dendritic-population-v5/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v5/MANIFEST.json",
+      "sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332"
+    },
+    {
+      "path": "research/dendritic-population-v5/PRESERVATION.json",
+      "sha256": "f1125eb8f245d8f1ebcee8f65e52f49447f8ff3e69e061d94fc009527a05a40a"
+    },
+    {
+      "path": "research/dendritic-population-v5/PROTOCOL.md",
+      "sha256": "55e00d9f3c22268c14c28372a955d3a525ea5d0e3b9829b7469eb0cf5faa4f0b"
+    },
+    {
+      "path": "research/dendritic-population-v5/PROVENANCE.json",
+      "sha256": "4df4048884c79c720d6c5a1b36bc8a200d161635b82b836099a8939dd336578c"
+    },
+    {
+      "path": "research/dendritic-population-v5/README.md",
+      "sha256": "b67ce60081049cdce83e3a4166415a0ada08f1bb31c59133987fb50e40871034"
+    },
+    {
+      "path": "research/dendritic-population-v5/REPORT.md",
+      "sha256": "5a5769dad42d8f8b021b490850185a5a7972b81ea160abee1bb25d8fd1086829"
+    },
+    {
+      "path": "research/dendritic-population-v5/SOURCE_AUDIT.md",
+      "sha256": "f7c1a1807b731403d67c163bd6ad447b8e43cf21788d471a5a9cf8a420aa151e"
+    },
+    {
+      "path": "research/dendritic-population-v5/TABLES.md",
+      "sha256": "7652695831adec9f923fc182ffa1156426d5cbc5aa6d6b158138787c37bece5d"
+    },
+    {
+      "path": "research/dendritic-population-v5/audit_gradients.py",
+      "sha256": "bdd532cd3ccf1fbc86336fb789360941663a412180c3ceeb2528f17798acab59"
+    },
+    {
+      "path": "research/dendritic-population-v5/check_contracts.py",
+      "sha256": "2f4faa23d7144ec67f75c2f8beb8dbdcdbacb3a3815a2795f520aa2559537047"
+    },
+    {
+      "path": "research/dendritic-population-v5/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v5/common.py",
+      "sha256": "c66160f12b7d43e75b7b4d8dc432b10fe08a0da88b3f50f0a598638b7a1f915c"
+    },
+    {
+      "path": "research/dendritic-population-v5/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v5/evaluate.py",
+      "sha256": "d84ddd12971ef2cbfa688b8e3cc51a51e1159c104f9f304eb35f637d4f4954cf"
+    },
+    {
+      "path": "research/dendritic-population-v5/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/COST.json",
+      "sha256": "64cd4721b8718fcb119f5c2ca495cabf9fa77d984513abe4862dcd4b1f819e3c"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/FINAL_LOCK.json",
+      "sha256": "a16d1b7215fde36adc2d4480f5733f316a88a67d11a8269170e4e935d9991f47"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/FINAL_LOG.json",
+      "sha256": "ac0eebbe0640b6df28421a568193dcd6ef754e2f6912b94f65eccb40700dd0a1"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/FINAL_STARTED.json",
+      "sha256": "57419909e44fccdf9941728e1bdf15ea1b329e6c59350952341d832f6526a619"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/PREPARE_LOCK.json",
+      "sha256": "e131961894e23baad5e3dd6c3cd89e0889ed1f4e93e7499e101b261671587fc4"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/PREPARE_LOG.json",
+      "sha256": "d7a89058ef33a60f6cddaba8b25d4a355bec79251a1481caf58bfebb2a2933d7"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/SELECTION.json",
+      "sha256": "1a66499e1711cbddec3c6f4044f2e2f03858b6ddf044d3a1309748a2533a39ab"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/TEST_STARTED.json",
+      "sha256": "422f314bb733c51212f2de32338a63e9e8e0cdd9fa0e2844d280d5ceee743aa0"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/TEST_SUMMARY.json",
+      "sha256": "4ada72ea5237ea97cb6e53016fad615ce4d832251b10e22583c4aa3ff70df70a"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/gradient_audit.json",
+      "sha256": "b84799cb639cc443a7feaf49f11d878d71d5462825ef59cd9129a2f3f702445a"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/per_seed_metrics.csv",
+      "sha256": "21656472f0c2a9772df65a0e3d21bbac010e0e92a682e368d2ae4a0aa894faef"
+    },
+    {
+      "path": "research/dendritic-population-v5/results/verification.json",
+      "sha256": "45fa92d617a80e9dd4bca6745186f06819e604446aedcc640da5a6c67657b691"
+    },
+    {
+      "path": "research/dendritic-population-v5/runner.py",
+      "sha256": "8e4f5e6324cb9419a6d01a7be6cd5fe15dbefe1897d72e4e4d78775842bbebda"
+    },
+    {
+      "path": "research/dendritic-population-v5/summarize.py",
+      "sha256": "61613641973aaa179bcd62bb344dc525ad677b2f54789ca1420cfd6b81634f7c"
+    },
+    {
+      "path": "research/dendritic-population-v5/verify.py",
+      "sha256": "eea208d905c0ba0f09839c206593c7a7b84f6adc5a1b99d2684d91c4be8e1b54"
+    },
+    {
+      "path": "research/dendritic-population-v6/CONTRACT_CHECK.json",
+      "sha256": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a"
+    },
+    {
+      "path": "research/dendritic-population-v6/FREEZE.json",
+      "sha256": "f57ac5a853c3c95bef40f5bd2ab9476f750502c71de95119033d8502afc8cd77"
+    },
+    {
+      "path": "research/dendritic-population-v6/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v6/MANIFEST.json",
+      "sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d"
+    },
+    {
+      "path": "research/dendritic-population-v6/POSTHOC_V5.md",
+      "sha256": "2169a871215b403111b5b799674effc58679a9300022d7e3fca2cff6372d2d46"
+    },
+    {
+      "path": "research/dendritic-population-v6/PRESERVATION.json",
+      "sha256": "65991dfd35cb708c1fa7111c7339a863447a2afee0cfb790393b95d7aa24adf1"
+    },
+    {
+      "path": "research/dendritic-population-v6/PROTOCOL.md",
+      "sha256": "dc9b0dff10d5099849bbd629e4dd28efeeb6531d6c94bdf88ed04a0fb443ed96"
+    },
+    {
+      "path": "research/dendritic-population-v6/PROVENANCE.json",
+      "sha256": "ff9bc000c08da0b3c2de7ac821e3509c01bd7d532c9a8045a41907370da38e24"
+    },
+    {
+      "path": "research/dendritic-population-v6/README.md",
+      "sha256": "956f3991a7c20d2e9a2917e8c015ffc6a64a7fe550439aec6e0d842fb415b022"
+    },
+    {
+      "path": "research/dendritic-population-v6/REPORT.md",
+      "sha256": "d3c4128699c4d3110092c2a6ff3c410c995f1cf5e67382591d4d7c739e9c4859"
+    },
+    {
+      "path": "research/dendritic-population-v6/SEEDS.json",
+      "sha256": "dd9f2704ffb2c4b52d20a3965dc8a1d316c3b45c2785cb9f416e1ecc50a05658"
+    },
+    {
+      "path": "research/dendritic-population-v6/TABLES.md",
+      "sha256": "78a31f3c109a9acd777c06d2d77f782706d8285b128f114b295cdc7f45a3088c"
+    },
+    {
+      "path": "research/dendritic-population-v6/audit_gradients.py",
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb"
+    },
+    {
+      "path": "research/dendritic-population-v6/check_contracts.py",
+      "sha256": "4c9cfa7beae2c1e16eb2aed3d84ce5f3fae40fc1950b049edef337d22fd4ff4f"
+    },
+    {
+      "path": "research/dendritic-population-v6/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v6/common.py",
+      "sha256": "d205742b10f09a4c601c8ae097a6ec8005e884636b3b0735c2e147b47297c5a6"
+    },
+    {
+      "path": "research/dendritic-population-v6/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v6/evaluate.py",
+      "sha256": "b21e0619d59386882a92afecbe7889ae44311cbe96cd4ff2c59f07a6ea381a1b"
+    },
+    {
+      "path": "research/dendritic-population-v6/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v6/posthoc_v5.json",
+      "sha256": "15c017dd17dd181dfff8e09e947e740a02cca6ed48e31d66242bbfd86200f5dc"
+    },
+    {
+      "path": "research/dendritic-population-v6/posthoc_v5.py",
+      "sha256": "09aaf6db5ae31e0fde9bdf51a507fcc3dc13ce91fcba65ce42164f95adc32986"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/COST.json",
+      "sha256": "f1ea328e31b8b2d4ee0e82d078531d3e7c2c69efd3b89f4149930a9444120d35"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/PRECISION_PLAN.json",
+      "sha256": "beeeaecc2d80739247be4477540fe647cf25ac10783713bc5ede5f86cf34bbc6"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TEST_LOG.json",
+      "sha256": "64f97baf1ac9d30c03da5169e43ad937c5b3d4c029ce69c76e5c4e31c9ce36de"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TEST_STARTED.json",
+      "sha256": "eca20606768d2c3003d2bc7f05cd1c7bc94d33295ac0359898a93950ed241e62"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TEST_SUMMARY.json",
+      "sha256": "218ed0eb979164bb0d27501db75d378d40cd8156445a8f71b4963420aee3cc7c"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TRAIN_LOCK.json",
+      "sha256": "cf8a054688f395b64efd7da9f18d8066302126e13bbac5efeb42d36a09bb1a92"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TRAIN_LOG.json",
+      "sha256": "4b9f7127b86a513c66fd1fa84391b7114f5428ade76c029c98a44823cd507038"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/TRAIN_STARTED.json",
+      "sha256": "d8ade342a65564d00466a2aa0132b7c159d88e66229521ef8908775bb2854967"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/gradient_audit.json",
+      "sha256": "7ce4d8b67221ca3930e43e88b0d5ce9e0b65e64ba8b07bc5fd5f54a33deda364"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/per_seed_metrics.csv",
+      "sha256": "7c70a67a48677c1fb2a1b7bea55b4e52838d13f5d2dae5feff9426715f6ee6c2"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s0_DEND_CE_0.03_checkpoints.json",
+      "sha256": "8755706b1f7fce9cc5a3144b8264876e86b4810c5c2e32f60a51dee7d4f19544"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s0_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "ffc72126433d0dd0c6d5aafbe5b9a37a31a0021f653bb6951be88628f87a04a6"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s0_POINT_CE_0.03_checkpoints.json",
+      "sha256": "677c75a7907838734699faa1a7098ab509972641688ea94ca4aa6099cfa384af"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s0_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "952b981b74fa74299ff6a87107a4995b13ee24a8f2cff7723627a7457b99b7c3"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s10_DEND_CE_0.03_checkpoints.json",
+      "sha256": "030d7ace9bc759bed4924562ebcbf0227db02e0ca1ad4f31300a7736f609e9c6"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s10_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "edc86e9473ba481eba355d78400b2280b76aa7768e5aad3f144a63a0082b2659"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s10_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b2ddd7515c6d77335744f3b4de64b2353b03e49e9949bce5ff539a2331112539"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s10_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a793cb9d450bffc202b1b3863ceb06d8f071761fd03a912584c7e090bee36ca9"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s11_DEND_CE_0.03_checkpoints.json",
+      "sha256": "a47340b7a7156746de6cfc5ce42243963a100a86ee6718ff669889bce6074532"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s11_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "d26e94035487cc10062c3fe44c07ba2bdd5bea53f508f64866de73feb0f50c9e"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s11_POINT_CE_0.03_checkpoints.json",
+      "sha256": "83d013d52bfc6307a158e298d6ba67348fcbe1634347a77901c48f8966e7eae4"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s11_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f0834e92ed6dbea3191080b95757df9124c5971381edc420770ff344652b9513"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s12_DEND_CE_0.03_checkpoints.json",
+      "sha256": "49c91a9310c1e0f2dc25eff2fed70579def3693f8cf810651adc1723d807101a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s12_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "e31c0ef34cb1366ceea806636464396ae898d38d95d6a054492be84b0b597ed6"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s12_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e601dc7dc2693bbb3b59f875035335144e87938537b57e2f0159f68f96c7a0ac"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s12_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "56cad64f0dc4b1851cd88cfdd69c753981196635e32aa1df42b8052369e73662"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s13_DEND_CE_0.03_checkpoints.json",
+      "sha256": "5c5b1ac4c367fc26aa1f34cd4d32d0d595df9d90058e4380297a5b1d9f206c04"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s13_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "1715b888f2f73db2a38ce7f7b9995a499cfe7dd19f40c3a69af5de6aa4c4dc7b"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s13_POINT_CE_0.03_checkpoints.json",
+      "sha256": "50328378161f3ef021a69ba21158ba852b84069952042dd5906135865c831e4a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s13_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "df934863d969193504c6cf9e422ad3eb89712a123eca8f0bcafc67361f849bfe"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s14_DEND_CE_0.03_checkpoints.json",
+      "sha256": "3a1f492ff37b067983b546b343d0cad044e4ac516e1ce32df9bc1b62a84d9154"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s14_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "6c2e38a28403dd5c5d7aacff49b7ae61766a69a27d967a4a68240f170ee557c8"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s14_POINT_CE_0.03_checkpoints.json",
+      "sha256": "fd043b372dd6b0a499b4334171150360ddfd68b9907ef90cef6cc5808f0ffb9a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s14_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "82d1047e49410ca98c2f77fad93f39cba90f30fbed522f91f8f41b029a23ce7e"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s15_DEND_CE_0.03_checkpoints.json",
+      "sha256": "76882b612f9d01c9ea6c7efccfb8d1ddceec3f30c39efd8e61d3e410a52f419a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s15_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "2ce5dc070bb0a94d0787a4e0ea5f9130c5cfdd33562b38a28c3aaaca7c7b738d"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s15_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0d8b006990948323cccce73e19c0384ed718389baca25a8935f4fa95c269a288"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s15_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "ba87c978850031896431e4278c3695afc386db49e997b0c437f2480a37d749d7"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s16_DEND_CE_0.03_checkpoints.json",
+      "sha256": "d83bda503810cc7f6dcbb712e37baa5cc4132a2a3e6431da37eb004ddd938cc8"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s16_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "ef2b8f9faf788cfd98d4bae6e9cf3f4e2cea86d55a3587aa545dd07c97ac2254"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s16_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1c32a79856675469992ca9ef794269230ce98de22ea89fcebf8dc62dc0a87636"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s16_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "0c5b3c613e324eefdf4a0b696a8ec37c23a622972a9dd5f44c6e718975e908ba"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s17_DEND_CE_0.03_checkpoints.json",
+      "sha256": "99e9531da9f3e5d62c3c56b4d81b54ac1b0e812d81e1fd905bc848723c258869"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s17_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "d298bf39665b8469ecb2dd286a520852d81e9c6157fd44b9f24f2322c372c1eb"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s17_POINT_CE_0.03_checkpoints.json",
+      "sha256": "903357d675a430bfe48b32c2be73408c80ab8cc8c7b8717b9f6f8db9a438a4c7"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s17_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "106e84fd4e39e3bf4b7a0f9892b23c95f8354130fe437a12c1d596e0221fc6fb"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s18_DEND_CE_0.03_checkpoints.json",
+      "sha256": "eaba7eb110552bc3fecb793d8204c9905b3c8784e95bb312414dd4e521444147"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s18_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "41f8fe19658b98d85a2c60e1428881e27b51a2c8358d185cfcec168335723ef1"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s18_POINT_CE_0.03_checkpoints.json",
+      "sha256": "355375b6c3a050b218fe1670df9abe16fc490fbd1e827be9a89d855c818ce90f"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s18_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "68640780e9d4ae066eb6df12414e5613edf695b96bebb48b2b13290ac2193d8d"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s19_DEND_CE_0.03_checkpoints.json",
+      "sha256": "78c6825502a5ecbe0f0b88e0f02c521f8dcc3c1b38639af4b61485f0cb0a0b53"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s19_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "e841ee2bc9d1cf26d2fca846c4e6ea44633393da5e1e7954aec992e28208e4f9"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s19_POINT_CE_0.03_checkpoints.json",
+      "sha256": "fb0fe3cef84ef77597a71a5c16b27f2683ca9624400f540943e8665c9c98d70a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s19_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "46904eb7a41c617ba4beb7bb94177c3173f83c4b8fae9be33bb2f7a307efd69e"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s1_DEND_CE_0.03_checkpoints.json",
+      "sha256": "41720530f2fd23fabec7ed3ddc84c93f885ce10bba9cd05ea1b5f8e1759084bb"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s1_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "f679fbb1aa37c40a7a2ea8ac7024f632b239057e419b8ed96691ffab1ae4ae08"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s1_POINT_CE_0.03_checkpoints.json",
+      "sha256": "bdae8d65901979b23be65201288b2dcaef729494f25d3ba3b96166ef6fdca199"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s1_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "5ad6af3df78700555a1e50cbd850781daa0894ce96fa47f4c8c818eaa4877954"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s2_DEND_CE_0.03_checkpoints.json",
+      "sha256": "ac8eebfb9a676595213058cd7377e718bf4522c7d0be1b5c6dbde1c8dbbe48a5"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s2_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "b6b95af710e2d0fef0222d1fa280e6cb8ca235e8381f64ee96be61f4d02d1064"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s2_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3847711aa8903ddec86f1f16d5f5c337f28b306b5bd7e4b5b7e4745509ac3629"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s2_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "1831da1ce3d3aaad45545e963099057b5496dd0c23dd3cbaed1728931a72d07e"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s3_DEND_CE_0.03_checkpoints.json",
+      "sha256": "88cccfb0f0fe147317dd756f3e54048fb52d5a0de57fb76e5c87a13caabf9e52"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s3_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "b53935386e6c8571df7468a24abe7646d9450f883f5ec609d22ed65194c5b514"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s3_POINT_CE_0.03_checkpoints.json",
+      "sha256": "8399e3465ef5cdedaaef217395a5ba36109cc11967d0dfb37f629e938a7edc1b"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s3_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "343138a11e25b2b4a902051a38d0d7dbed3cf85031d8917cb7b1dc38b0a2f66e"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s4_DEND_CE_0.03_checkpoints.json",
+      "sha256": "314f16da5f7ff696dee223cf390c0fa189d01c124290a3653765e777a9151a1d"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s4_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "0190228a90cfab9a863117d2e3ba0a799c527ea31503b900e14e66379b14492a"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s4_POINT_CE_0.03_checkpoints.json",
+      "sha256": "7de2186d406dfc30780cae7efad289a22d9ce4e671208dcae8d2475c0e5c0eae"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s4_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "3b85d3a03e0cb4b40bef277341a6f07b88def644631aed97feafde3442dc01dc"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s5_DEND_CE_0.03_checkpoints.json",
+      "sha256": "f49d6d574f37fde00a8ee0cb969ecd1e535278f428a555f525142fcc0b363e40"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s5_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "4a033a0a70235fb3659bd8f56a550a1844e7b8b1668757166828a15c8abcb479"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s5_POINT_CE_0.03_checkpoints.json",
+      "sha256": "2e004e3b7f310e1ca470c15699d638109f2953a717bf00617347af86d12270c7"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s5_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "0e8af3b1df4c021a3d62e660ea3a3294f2ff6ed530ba8f6bff4ba2b9f54c9a8c"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s6_DEND_CE_0.03_checkpoints.json",
+      "sha256": "9800c4fc0093dfa1365d4ea454e8a8ca68b8afb639e0ec24205e69987e2c62c8"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s6_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "15ef9f20f7ea134c11498adcd02946e98c943eae2d1e225d8fab020b05d991a9"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s6_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f45cac988d95884940da70ab97be416a4d224a5f51928336cd4c3b28e4742f91"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s6_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "5fc94df5d97474adc68f7eba21c0680b16d6b020a924e04ecac4c5eef8955e2c"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s7_DEND_CE_0.03_checkpoints.json",
+      "sha256": "2369b1a4694493415910faa93a318b370fc3e659482420687f88d45c1a47f254"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s7_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "cc16350f84f0e4646b93ecfaae1e2084918b0db308ddd18b946a34c61fb8845c"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s7_POINT_CE_0.03_checkpoints.json",
+      "sha256": "359d55cb6bef9c089886a3f1cbda87806b1ba61c02dbb46fced4a3667b46eb9c"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s7_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "ed6affecdca844a8b61b2088eb23f625bd13b4e846f02647606e3ebd6356c3f2"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s8_DEND_CE_0.03_checkpoints.json",
+      "sha256": "dd7afdf59f4a404638456955e96f842f0bf04e9dd5a4dc65bb2f43c1eb1f62c4"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s8_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "c22d179725bffb5f0a17082976a71ee17fa27cafcbf5f2e3a25dd99c7f8cbdf5"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s8_POINT_CE_0.03_checkpoints.json",
+      "sha256": "9b62810d06d7e38d77020b7cf2f060ef77eea0a35ddd17e8c0f6afdee01d6438"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s8_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "137404af30e11aceed635108150adc21f99a0420dd4ca441a516c7747b8b09b6"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s9_DEND_CE_0.03_checkpoints.json",
+      "sha256": "968e723525dbf0822a0afcde533a80cd361c8f591519f12fc37d918e6af0a2cc"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s9_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "ee93410c8484f7ce818c6ac1e843456dd8276b79506e08cd8bd58518c8f337d4"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s9_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f845fb0ea5bef238a03a05982e5a9748b82ed25f23243d8f6cbb6be6d947dba4"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/s9_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e0010edde2b1efadcdc854e5a9f47930850a44120b21ff30302a2ed2214b55e9"
+    },
+    {
+      "path": "research/dendritic-population-v6/results/verification.json",
+      "sha256": "572bb46e54d6fcdef4b89d5531904e78b7abd92624dc0d3d05f5a26e7f37d6e9"
+    },
+    {
+      "path": "research/dendritic-population-v6/runner.py",
+      "sha256": "4f8f70143f2fbe7a709e7b49bc113d6af17be72298ead8dc7b184f1ddfa819d3"
+    },
+    {
+      "path": "research/dendritic-population-v6/summarize.py",
+      "sha256": "6cb117b39a5eeb6a9c6d2f40fd131f930881c35e6c7cac735deaede15a56487f"
+    },
+    {
+      "path": "research/dendritic-population-v6/verify.py",
+      "sha256": "5e3b904a5e487d9fb98287eda8b10eb0c63781d08c43868daf0e5ddb39e687f1"
+    },
+    {
+      "path": "research/dendritic-population-v7/CONTRACT_CHECK.json",
+      "sha256": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a"
+    },
+    {
+      "path": "research/dendritic-population-v7/CONTRASTS.json",
+      "sha256": "549599e4c7c86b9810779ca6c02bc108b78d9785707ce11ac915de3ccf997f50"
+    },
+    {
+      "path": "research/dendritic-population-v7/FREEZE.json",
+      "sha256": "f544f4ba8ff2394476773759c1d9bf720649c56be423ecf222a3b3ea14344871"
+    },
+    {
+      "path": "research/dendritic-population-v7/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v7/MANIFEST.json",
+      "sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd"
+    },
+    {
+      "path": "research/dendritic-population-v7/PRESERVATION.json",
+      "sha256": "0862b67963f200bda3ec0324d9d47037704e0e74614247ac73b39c35dc33d9a4"
+    },
+    {
+      "path": "research/dendritic-population-v7/PROTOCOL.md",
+      "sha256": "71b0f33939d125fec7aeda51f3a9b3111ad64a14f86473ae3304760ed5a6c14f"
+    },
+    {
+      "path": "research/dendritic-population-v7/PROVENANCE.md",
+      "sha256": "2b9c38055596335fc0668225d66917eda41a7df77e710e428100d4038682a6cc"
+    },
+    {
+      "path": "research/dendritic-population-v7/README.md",
+      "sha256": "f6a2c3c1b03e4ec75f56031d6f8088bc5a4d992d5a9b79c5a228804713b69808"
+    },
+    {
+      "path": "research/dendritic-population-v7/REPORT.md",
+      "sha256": "e93ba43b7da11a00d31720ab7acfbfe9124807124d05dbe1bebb21efbbd26b16"
+    },
+    {
+      "path": "research/dendritic-population-v7/RESOURCE_COST.json",
+      "sha256": "3abbd4a71dcccee9991121b8d685dff89ab022888145b29c3e656e1480366dd8"
+    },
+    {
+      "path": "research/dendritic-population-v7/RESOURCE_COST.md",
+      "sha256": "2c52fdf8801bb7b80d8ca3544c32b27b91520b1f540bf80d0c464e0c035e846c"
+    },
+    {
+      "path": "research/dendritic-population-v7/SEEDS.json",
+      "sha256": "444e865c9ee5a9d87d46c3265fc10ed6b582ecd9dbdcec0c158146d237555a26"
+    },
+    {
+      "path": "research/dendritic-population-v7/SOURCE_AUDIT.json",
+      "sha256": "17390bc4cd22376e5503a423789c429d45dc8dbbfc47c78055dce07cf077b4dc"
+    },
+    {
+      "path": "research/dendritic-population-v7/TABLES.md",
+      "sha256": "1a28608a56b42a56478bce049e94321343280eaa9d6f14e9fda462b8161757d7"
+    },
+    {
+      "path": "research/dendritic-population-v7/audit_gradients.py",
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb"
+    },
+    {
+      "path": "research/dendritic-population-v7/check_contracts.py",
+      "sha256": "a9cdf3222af3fa831dff33c0f45b500251182a267213fb90470dba50bc631f21"
+    },
+    {
+      "path": "research/dendritic-population-v7/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v7/common.py",
+      "sha256": "ced597cb2a764df4649cfd95950da3734238ef6c883eda07940e1f0c2297a710"
+    },
+    {
+      "path": "research/dendritic-population-v7/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v7/evaluate.py",
+      "sha256": "e2818096abd13495db928278c14b06108af695bb14e94f20a02060227cd4efa9"
+    },
+    {
+      "path": "research/dendritic-population-v7/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TEST_LOG.json",
+      "sha256": "5c0de7b501a904ab76fd5ff9964bee45efb5c45084dfe18c0726784769e99a15"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TEST_STARTED.json",
+      "sha256": "7496ff22c778e9b58875f7f4fab82dc614d15d5b37cd0f05327f2b75ecab41a3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TEST_SUMMARY.json",
+      "sha256": "bb6c519ae3fd3e54ab9ad17a08a6c7acfc96f25fe601f0e7df91e5f4122063ca"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TRAIN_LOCK.json",
+      "sha256": "ea45bbd0211a87c0b3d388c7c52e29587a27a4cda2f11b72e06834ce188c02ca"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TRAIN_LOG.json",
+      "sha256": "9242e59d2daf171a0c95ebf9df4853d5ad225d88260a3b842f21f3eb34363b4e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/TRAIN_STARTED.json",
+      "sha256": "7632d7ed4ab4519e7953cc68699d58362507d0e0da42029c0c94ed0ca7372c36"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/cell_metrics.csv",
+      "sha256": "ebee3311328fb6771c4c1b239e14414bc520b096346aa070614945a5c22ac882"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/gradient_audit.json",
+      "sha256": "c38289b4401ff08f5e0f4bff2547199d4cf5aa900576ec382877b06d672ce81a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/paired_contrasts.csv",
+      "sha256": "b5898d6c51482b556d2b5cdaace130f3fa1dee1ddf479241cdf80ecddab24f4e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/per_seed_metrics.csv",
+      "sha256": "48745192f2bd3ef89d4b6d4cdc1cc14b537ae93ece9fc7d5cb3edb7a3808c33b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_DEND_CE_0.01_checkpoints.json",
+      "sha256": "6f9fb13991c5a637a9d2385d6780622900c2846503de0f77631aa27f778b7162"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_DEND_CE_0.03_checkpoints.json",
+      "sha256": "bed28c08b62b129730bd17f3931032dc322b7d5db2a8736cae0d75a2322b5b87"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "135899e3f96fcff71f831e8ecca760f851c5f5f3aa7786d76beafd389cd95c65"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "4bd30d745ad63ca65f9865c84d3c2c5bca1978d19728d31d053bc32d2f2e6eae"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_POINT_CE_0.01_checkpoints.json",
+      "sha256": "cab4c0c3251ea4541991102299984485920bde1697435085ca4428a966b515dd"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d2e1c8f2acef3ae52923eed06b3b9851bceab4cee64d7c08b0357633b24b8536"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b587932aea759ac76f87f7824c4da84c9fd229a87858d48396ab431e844298c1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s0_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "eb32beefc79b2d9eac10a2c24c85974148f7e4b69a05d02123011bf28968d41f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_DEND_CE_0.01_checkpoints.json",
+      "sha256": "ed5d1cc77ba1987b24c9bb99c0b03b57d0f800186363fabb28134686e894ddf3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_DEND_CE_0.03_checkpoints.json",
+      "sha256": "7ca8272939816c1554c9ee8efcbcda51db608e455aba584806be6b9c725ceb40"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "9b876a627549527627325133aa41024dc8afee594ae4c5f354000f026390537f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "74b96d62c07df27bbe96a37576c687bb0657cc34acc236e778cd970535c67299"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_POINT_CE_0.01_checkpoints.json",
+      "sha256": "7f140e5bfd2b4567b3c8195dd1e4e51eb4148c8f6a25d565eec2e54f641611ea"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0e12f02f2e23a540c7f8c789935b9a7e108d157e8af8c8a124be55182bfb4cfc"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "4bf7cadf1175318ad4a7e7ac9f4ae55b4e022ff1f56fbf13bd514cfff158c143"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s10_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "53e75b0076d5988c264614eadbb82cdfd137725b623c57bdcf54eda5b6e6a3d1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_DEND_CE_0.01_checkpoints.json",
+      "sha256": "3b39c73d7583f0d9418ec8ad6e9e1e1e59a6468e7ff1bb65355fcd1005bf57f6"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_DEND_CE_0.03_checkpoints.json",
+      "sha256": "75dfae3d611b64c7b65e8883e23ce69ff49b6bbe837ac38c4c5f0dc0765a47b9"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "c19fdb50468312c121bc7c5477362a4749448deab1926724c774b316ec57ed65"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "2deae187f456d1f4c2c0348a4493d7cefe8d0e62437a5a0bf7c39a4046ddab92"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e435547fa55af2f4420ae1b082e2026ee6cb35ce8ebdacc4251d05c1e7635bde"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_POINT_CE_0.03_checkpoints.json",
+      "sha256": "ac039b6e68b63a62b740bef0ceffcc7ed65a31176ff984f071055f543c8d15d7"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "375f277a9f4da19c88a415c9d5f150693c73e927f3b0724bdc383b1f9cbf70db"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s11_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d37053d27b069cb45305da78eb53141e49d88e0d65cd62f2dedd48a1f356a990"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_DEND_CE_0.01_checkpoints.json",
+      "sha256": "03d3a3fa40170618df20282dbb41330ea46f728411fc6de25c7c328d68fd2a0e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_DEND_CE_0.03_checkpoints.json",
+      "sha256": "34bc294310627504df0148044b89438897d658dd0f44bcdb5dad33fd578d41ab"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "44fbf0de2af382b2050df6865253384ac619915382a27da3d4b4aa551781d49f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "eb16b86f17e3a33c7cf551f9c2f4701095aa0cc0f3ebe2420288a5dcd37f49eb"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_POINT_CE_0.01_checkpoints.json",
+      "sha256": "9157a48173509bf62cb7e2ddbcce7046c48a95935e424cd189dc0d2bf019dc1d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_POINT_CE_0.03_checkpoints.json",
+      "sha256": "2265918c6df6621029cf885d68f42addf97c18303fd4176cc7bd840e14621d62"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "878edc2f7fd956db15eb152525ff679bf3fdc8cb94351b73eb0a73bf2465ee52"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s12_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "91b9a96e4493fbcdfe3c3fd4ae1fcba392efc499e9855660e224f23c1caf7b60"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_DEND_CE_0.01_checkpoints.json",
+      "sha256": "08bc54da10818026634e91bc343fbf9780392739c5a1e7382fcf037e17efb45b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_DEND_CE_0.03_checkpoints.json",
+      "sha256": "cab44b77ecb46939df573778243c2fd15fac5431b3d9a9c34bcb2b3f769d5b6b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "bae15fd1dd6a0f94fd0e33bf3be5b382653ffda9dc9732a1402e41f94b40ebf0"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "0916b390bad0e965c2753970e51a58574c4e71c96cb05d419d2009d158a5e75f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_POINT_CE_0.01_checkpoints.json",
+      "sha256": "bd70501fd3fb3e1ca58e6396733a3994f3ffab3a24e37417e6d0dc829c3469e6"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_POINT_CE_0.03_checkpoints.json",
+      "sha256": "78a7bbb5edb94b0a183800624a18162e0179e4e5c58f1e7041dc9b6760e832e6"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b822f853e519ae49dc7672cf1346cdcbaac1d099660b5ecd8df1d30e60c26a6e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s13_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "b354806f0ac2156d1928b4eddf230ec25fdef894f9fdbefa7c3e163c8972ebf6"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_DEND_CE_0.01_checkpoints.json",
+      "sha256": "2b0761d9c0d04ff9edb47a9bbca3e184da36910971b23389594cbbdcb2b4c267"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_DEND_CE_0.03_checkpoints.json",
+      "sha256": "3091de8cb1b7dbb42c96fb4c2ad39cd7d8084707f4a23363197fc769acd72e8e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "176d0e7bbb6ecd04b6f91ccff40b7182addfb91b3ae6dd930ed7bd923a83e2c7"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "7b8b2cd74526b31298be957136e39a09571f70f1a8d43fc1056adc556f8d653f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_POINT_CE_0.01_checkpoints.json",
+      "sha256": "3fac937fda88286d4ad4d3cebfed07e3f99c65432a1dea3cda11646b41e49ef8"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a35efd0d4def8346aaec472f497f5c4ce14c1335789cb8adfabcc94af023ef73"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "4c48c21b83eadb985ddedcb18bbbd4082154cc7ec7ac0a741a1e808ff27d6707"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s14_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ce8260ae44426cca7c963a9e8285a5192cf4f595260df64fdda061f83244469c"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_DEND_CE_0.01_checkpoints.json",
+      "sha256": "35915579e6488681380faac439f6fd0a1bf545dedd5bf6e0755ac60a690789c5"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_DEND_CE_0.03_checkpoints.json",
+      "sha256": "bf499a0246861a930e93e9562adbbb4c297add9729e09bded6fef92bd4923b51"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "51329237802128ed40270c2d4c7d071dd6f34d06c01aa455d9db60f45db13792"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "53f0a4aa602404afd6636eb008c64823d17dad8b56e0ce44f72e219b04de760f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_POINT_CE_0.01_checkpoints.json",
+      "sha256": "20f1f5ad5fa958e50907a96006770373b1ed8c7d6d04ba8dc6ff777b635cad60"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_POINT_CE_0.03_checkpoints.json",
+      "sha256": "bfe95b1e7616c27ac6fa86123f43dfc8acb7ad30d55abb7a81c44fcd6bf7ddfd"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "442fe5b2ce38d0e65b433fd3372bc4abf3110f53d4a58d9d897ecfddfb5f1ef4"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s15_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "11e35261bf12cbea483498c99ff35c9d6bffe2ddb1caff43f57059d91a434756"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_DEND_CE_0.01_checkpoints.json",
+      "sha256": "71875c32c0b5661d2cca69fea28540fe0fbc7e47f140a8a526a1d78d405a2ef0"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_DEND_CE_0.03_checkpoints.json",
+      "sha256": "fa7b77e6b3a29632040093d82579832770ec13e436c9e8be51939adaec463752"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "26aa577c6d2102a8c2e73261bfa0a3be263138ece0d7cde90dcbf6f9be312f64"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "834deb4aad6bd2989b887a2683e28f41b6f21849bf8dbf679476d259b49131b4"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_POINT_CE_0.01_checkpoints.json",
+      "sha256": "d5f62abcf8e48a7467295594ced92bf1b3417e5a3984790ffc2716a9e2ba7e4a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e32e25df31ba9ff64ceac9f6ab021959ca600eda6bfb81eca86c5488b9b4737d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b7c8588f5e60d01d730f922159adcc9ae3de90b75f3e64d692ebcfd98b12bb68"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s16_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "66626553dc4c52955ea5d92e7559c1418dd847309e26e85fa43b321df056f7d4"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_DEND_CE_0.01_checkpoints.json",
+      "sha256": "906ee3ee53ddf6f4eeb0358c162fefb235ce65c917fe4c9260d852232b3206c1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_DEND_CE_0.03_checkpoints.json",
+      "sha256": "9f897637199bb81bf13b1cf4e1465bc855b08405465b1603c01bf1656fbe02ce"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "6c0ce5061a12b4547bfb940fabcc6fa9440c109e3076b753d3c567e644994532"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "39f3b2dbf42a98af86d54b562b2012ea16d8b0c7c81eccb7cd2aa9b8e47e6a4a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_POINT_CE_0.01_checkpoints.json",
+      "sha256": "193f846b6da2985ebaa5ab1af3d5a2c613368da3f062c5740dfda4412564e359"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a3b2a12f398eec1a6cef2826ebeabc3b44596e2daa330089ea49adada7300d68"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "ce5b2b14c409858dd304373196466ed060a7a8200cc88e928718922bb36cadae"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s17_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "2653ddb5bcdfdf686479d22e4886568f77f29beaa234d13b880c97d423e17ca0"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_DEND_CE_0.01_checkpoints.json",
+      "sha256": "a1eaa49111a12005888f8467aef0f547367bbe6a5e898211d1e885a8d5a998ef"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_DEND_CE_0.03_checkpoints.json",
+      "sha256": "92db715a264071d2a9c0f8669da9434c6bb10da4c4623a48e4fb2f9beba74dd5"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "ecaa8ac2eac336cdd13f104225daa878e0cc7b81638df9817ef863cbd4169ca2"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "af2812d1aa88a459df896e888f9d532cc17a11984eb03cf7ebe8f3235379fcaa"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_POINT_CE_0.01_checkpoints.json",
+      "sha256": "08e4e2cd600213f524cc5c00ecd8a3ee1a7f314cc3fc041bae40018a11d26e12"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0818f64b41d6375f5b2ab2b6a33786c2fcccb7b78210daf529aa422a56dcab6f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9bb8bd36c61c088af18b22a151cd4ef00582b977799d7685886b383b36eb7773"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s18_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "5b8017252f20356eac9cb77246786660db7376cd7da82b8075836c883f3fddc0"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_DEND_CE_0.01_checkpoints.json",
+      "sha256": "a7a0492d3f0193eb01a7843ab8e50158e77f3c26dbc754b64396763c8844a2ec"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_DEND_CE_0.03_checkpoints.json",
+      "sha256": "bfcd1bbab7b699545299a2d8298e970452d3894cba4a57462829717c74d5e3a3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "d742c751b089803a356226d7debc55588cb898553345ac6c08fd671c1c8c4b41"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "6d32f9c08cc2bcfb03dfc633ff3ee1ce883b13775e8d0763a29f29610fba72a3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_POINT_CE_0.01_checkpoints.json",
+      "sha256": "da3bc2df6f178c9ec8048dd81c693db8c1d2dc7ee8ea49805d4e0364ce74435a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_POINT_CE_0.03_checkpoints.json",
+      "sha256": "59da73a480bf8568c6f9e8df6b99bae36bba0626ab57d3d41dd6e8451c59290a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "28c61d091744b269f64459810f032c1a7379f06c230ddd2c1068588f2a4b0383"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s19_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "dff5a815b26f9a8cf51a8cbf3ed1678943b0eee2d8fb5cf093145e7b3ff27e29"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_DEND_CE_0.01_checkpoints.json",
+      "sha256": "c2b36465a1f8ce2705ec6564464948621c003b6071ab261b1c04b40699698797"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_DEND_CE_0.03_checkpoints.json",
+      "sha256": "44c5ccf3641b0299826717e79c51e3cb3001e2743208071d942cf7090fddd848"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "681a2498aedd6fccfaeca99e46dac883c2938d1dc02c2a8536b10a9950c27da4"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "9e0f3f9e9d6ac6a2efb1ee4c49765f4d0c2ec726d6b88dac2dd1da40057a4b37"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_POINT_CE_0.01_checkpoints.json",
+      "sha256": "532a5e96ca88816b865b2dfda727c48d57f927d0c413c38cb3b8afe47d6bb67b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b29ed06d95ea7840d6d60da534c2ac251a08a8961aec9f73a3096dbb68e07e62"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "18b15bdab9e5a2dee6e6112ac67b2540607cf2a13baefe96ce371de1a2468f3c"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s1_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "9df0a3c3cf0f38aed170be2b7728df4feac04d19452597df79679f2e0bb49ef0"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_DEND_CE_0.01_checkpoints.json",
+      "sha256": "a6eea2d786ef1f744e5c473b8f87f7730448fcdc7a8571496a5a23750710d423"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_DEND_CE_0.03_checkpoints.json",
+      "sha256": "de4b8d436562c50eab3631ca51ea4f6f20b0debc029fc635166bfed0adc8d686"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "167b48a65d9633a72daccb0188731ddd7f9b2c09adc40284e1bf975eeef9d0e3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "49cedfc25a63aa52dd761ca49c48d35a7792f7d1db8e43d287e65b2265bb7f40"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_POINT_CE_0.01_checkpoints.json",
+      "sha256": "6e3710b54e3505c294e84dabb3b1f98797956700428df951fe820c4581ad8219"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_POINT_CE_0.03_checkpoints.json",
+      "sha256": "8c5807f0eb548967878ea42f3a91432a856c54f76ef5185c6668bcda253e6a8d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "3bbec72a4e72f9ec9fab550c811fde6f91d90c08bc3087de07a02d7feabb8396"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s2_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "fa628158df8248e1e3a64640101dbd332e12f9d62e67b6ca089b54334f217a6f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_DEND_CE_0.01_checkpoints.json",
+      "sha256": "accdc22a9ba127e2226634b6446b05bb34f9b75c40fdbf248933dac505f51bd4"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_DEND_CE_0.03_checkpoints.json",
+      "sha256": "69e05e207c6a87893a1a3dd0abcc4bc24892b0b8da40ad60595e3aed05671581"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "edb1d6afa58a951bdfae6411d1e9b79112bc847ded840a2968d7fbfc1ea4274b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "b03450edfe4d9060c7d03c3962bc3a9e5df8157a36b4f44e6a4ee40e68d81eac"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_POINT_CE_0.01_checkpoints.json",
+      "sha256": "51a9eafb6fb218e5b6daeccf6e56d196e53bf516b31a5a7bf70d29847f787606"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_POINT_CE_0.03_checkpoints.json",
+      "sha256": "8b49d630cb3a214325ec81fd45ee579a59b44751b552f9289829c78245c519bc"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "61343dfe36c006fc70eddabc3949aa2beb018302a0ff85f7e334a03364aee7c7"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s3_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c011ff0ed7d05baab5c70ac8f3ba40cdd3512bd6508415f11777ca9e2420260f"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_DEND_CE_0.01_checkpoints.json",
+      "sha256": "2a3a52e343480f3a8fdc634388aa03a5d518d8ea91fd6f3dd01a62245b86d581"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_DEND_CE_0.03_checkpoints.json",
+      "sha256": "ae930a687d9a04cbb1e9a6b680758cef7b7ee4ae27ebba07a2f436d41e5bcc5c"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "2375e1b4a453023ae036eb313a92a339540b77f5958802a0ab6ec3080dc490b1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "737f19d9cceec0bd90c65833947bffa7adca6148e9f83dc44e8117eb83a0724c"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_POINT_CE_0.01_checkpoints.json",
+      "sha256": "23c35af0bcb11f5180a57cd56601b3aeab45a202a4bf2c51a303545f5e6b8865"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_POINT_CE_0.03_checkpoints.json",
+      "sha256": "25ed34c704e279269168ba01a108fcdb2df30bca943766c0906c302ac8d335fe"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "35851cdc8692ecc7f30023fd800e21c293a2960fa3cd1dc6ab9555aad335833e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s4_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "543faebccf263d52cdca2034f71c54fd7262d529207986bbdf6a7205274ef303"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_DEND_CE_0.01_checkpoints.json",
+      "sha256": "a57d1a9c753bbd073993d971962be06747238d25cc2ce4e8a3e4f79b877d74e3"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_DEND_CE_0.03_checkpoints.json",
+      "sha256": "4a5493c139ab224fd4cdc1ece58e2a52ef8882904a1b005dad11916de2c7c64b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "273d8c15475c4a27bee10b0284d95730936313b615fb92fc249f6004f120352e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "2fac081cc39c57606e91c77f38f5e2531830a9d9f0f4ebfbed78372e22284aa8"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_POINT_CE_0.01_checkpoints.json",
+      "sha256": "d23aee0355fa680b155d287d8edf3fc28211433c0834c1813a9d016105b4ca12"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3dc484c9e93d011cc2e496d28a3d32742e9b85a766f9c39e714123516a5ac3a9"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "0c823c1fc26fedc32385fd8c0f482d7a7fc07db428b95f99f785f3f3688f2daf"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s5_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "be312fba7e91c2c7628ced8d7e9d1a2d28ace26e3e1c3b804481ff3ef8882869"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_DEND_CE_0.01_checkpoints.json",
+      "sha256": "22e3b5fd3af08b119f6d7629ea65ec7c27497dcc05ec887d02f1c716df9aefa8"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_DEND_CE_0.03_checkpoints.json",
+      "sha256": "c99e9baa3bea974a27c8f2edf50fcc2cf6445ca570bea453abeef48fde64dd4a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "6ebdef55b4988cdecb1798b22e908782642ef609d341644955ef8d4b25da6b7e"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "e270421911d5d7d78144be9bc4871576c584763022bb31d7121157028939ea56"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_POINT_CE_0.01_checkpoints.json",
+      "sha256": "f83da2fcdb5ca3c31711a284aaa96b09e915fbfe9c414949d8e458826f3e2eaa"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_POINT_CE_0.03_checkpoints.json",
+      "sha256": "938a8968257b4018b1a7795dba68681df1ab2210dfc6263f5b7e6ad6e2cd3636"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "c38b5b932e981aa2c7b9a2632898b1c90a1ea2e2ec9d4e407f567fd9a024e726"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s6_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "bd847994d3081fb250af79727eb3af728c3899ca68d816bbe2fc2ce58428c479"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_DEND_CE_0.01_checkpoints.json",
+      "sha256": "20dd81578514ad6ca7a57dcbe8ea161982950f416a7e7d0f7bba48be5033fa2d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_DEND_CE_0.03_checkpoints.json",
+      "sha256": "814ee7a8b11c108b9c1a5c718924c4664220029ff220f07f3f5df882576c136d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "143be35f9b5ede6480fe65f465f1af1f06baf46529af74e5490e73651b6b39ca"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "f4c2dbd72c38aed15f9c098df0ae1ad56f1258b512a150dea7830021c0a58884"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_POINT_CE_0.01_checkpoints.json",
+      "sha256": "4fc6750088f586d49d3fb30e9036108e9d426db8773eb6f4afdd13731d200276"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1cd0794980585639a745be0acf9944140788846287b1870177c68364a39bb43d"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e5181c0df2ee61e95a196e565f35268d4b725e7d8bc8ded0e3e0df20be59b0ed"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s7_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ee6d4f6aca00f6a9f5060bfb64ec11fd3cd2dfb4b774a1bd9a33c92112d6c07a"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_DEND_CE_0.01_checkpoints.json",
+      "sha256": "e373bf375dda37965cb7150a7ec41d7f137744cefcfb04989ce0c21099aa7be8"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_DEND_CE_0.03_checkpoints.json",
+      "sha256": "44729337545d047ca29296e163250c871167a62db21c846d4bd6bf37807005f1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "3cc009f938a41ad661cbaed9989df3c0b2c5b29df92a78d75656b3adcd85ddbb"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "8d45518475eeefd0cc28978b8fa61c6fb94df0c31dde350b12b92b6030e49b6b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_POINT_CE_0.01_checkpoints.json",
+      "sha256": "2b9b0acbe446aaf98d13028b85f3f2c30b1214a945603ef4ee45c46e55027210"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_POINT_CE_0.03_checkpoints.json",
+      "sha256": "cab0d7462efb0997bb41910aaaf2bb2e5732e7cc24a8a3e843706a891fcf0f87"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b4dab1b5cd0fda926805a703e3f65f78ff01a82e6dff3ef806320049e385bf40"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s8_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "dbb4d61393cdae2147cfa2ab3207964c1e67c463bd11f4cd07c8726d9bc14ddd"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_DEND_CE_0.01_checkpoints.json",
+      "sha256": "2d22198da2a488de04865224b87165acd5cfb92b50a846db2d9398aef84b6a47"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_DEND_CE_0.03_checkpoints.json",
+      "sha256": "38f6354163404a471d9853599af63b89fd8ec0cd55fe9c5ffeadfcf024de7167"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_DEND_RATE_0.01_checkpoints.json",
+      "sha256": "7dd20e5386353f5c1a9e160537883991c4f2ea38e2174beaeb351c3090213452"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_DEND_RATE_0.03_checkpoints.json",
+      "sha256": "f36d53fb5a402a5912020481da9a0e138d843cd77bdf5efdd49a345cf5093702"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e38debbde7cb5f29661852ab6e8181484c6a2023a4f503d0ba6eebb0bf2eae6b"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f4d4a10951ab448e841833fb6baa7d51cac6ecb5a265fab85cd9484595eae6e1"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e84191bec254544f64ab47b88ac91912a7dbd1e6b9e909023916a9c398202948"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/s9_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e6308ca04b489c493a264e0f0bbc34d4a8dac9926f7540a73ec5e040778de618"
+    },
+    {
+      "path": "research/dendritic-population-v7/results/verification.json",
+      "sha256": "18b99da0d2b5ae93544e90964d6be8eb2b5fa5c103dc43ad667bf059902b48fd"
+    },
+    {
+      "path": "research/dendritic-population-v7/runner.py",
+      "sha256": "c34af45fc1a6832a9583d7701b28cfe583388c1c935300663a8a4758c440de20"
+    },
+    {
+      "path": "research/dendritic-population-v7/summarize.py",
+      "sha256": "5e767b1c4e3a9ec7af4941fb7b736bc2fe67768dbaa4d1941f1eee48c08d896d"
+    },
+    {
+      "path": "research/dendritic-population-v7/verify.py",
+      "sha256": "4e385644a861c10aa9c7dcfb415e45005c95cce60a8f8c025e0eb1bd3ade5eaf"
+    },
+    {
+      "path": "research/dendritic-population-v8/CONTRACT_CHECK.json",
+      "sha256": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a"
+    },
+    {
+      "path": "research/dendritic-population-v8/CONTRASTS.json",
+      "sha256": "c0c57e95cbfff8fae965ee3d044be1161c502a0064cb1642e0ce1589c7fd2005"
+    },
+    {
+      "path": "research/dendritic-population-v8/ENVIRONMENT.json",
+      "sha256": "eefed73cf7fcc0f20d32246e77410c1cfe3842c5142112e695c4cb6f2764ce06"
+    },
+    {
+      "path": "research/dendritic-population-v8/FREEZE.json",
+      "sha256": "487034a573025523df9eeb23f69948e4bede9420bf90545379a0fbab7e1a04a1"
+    },
+    {
+      "path": "research/dendritic-population-v8/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v8/MANIFEST.json",
+      "sha256": "d4524d9c9a7e9f5a63073e7b16abb43d07b594cc8ebc9620416f3a0c5fab3f7b"
+    },
+    {
+      "path": "research/dendritic-population-v8/PAUSE_STATE.json",
+      "sha256": "c069ac2893942435654746fe2e177c70604fb146bf3ab75f71c6bf42317df800"
+    },
+    {
+      "path": "research/dendritic-population-v8/PLANNING.json",
+      "sha256": "c162d0897f7e8206b74daa87f9f93bb5ca1271e585571fce6e02381cbfdf101b"
+    },
+    {
+      "path": "research/dendritic-population-v8/PRESERVATION.json",
+      "sha256": "7807d937ee9cd973308108e466f785e6d75b80a376225d72700441442326eddd"
+    },
+    {
+      "path": "research/dendritic-population-v8/PROTOCOL.md",
+      "sha256": "ead293136cd5902f4360b4d545b5af2db9aac5973ca7219e424fabb6c0842429"
+    },
+    {
+      "path": "research/dendritic-population-v8/PROVENANCE.md",
+      "sha256": "c441c9cbfeeab2ce57e7e75e5193da4b00f39dfa744badd3dfac3488ccbfb797"
+    },
+    {
+      "path": "research/dendritic-population-v8/README.md",
+      "sha256": "41a4770573aefec6377a403c91c22c50eff7cd46a5962f22caea6e263917569b"
+    },
+    {
+      "path": "research/dendritic-population-v8/REPORT.md",
+      "sha256": "3039d0955bd5c471f51c50e93fb0ea978b8343cccbc758619e92f66660bba846"
+    },
+    {
+      "path": "research/dendritic-population-v8/REPRODUCE.md",
+      "sha256": "af91a41c27a4cd362edcaca1b442afe8de7904499c3cfdf61f7f177593ea3978"
+    },
+    {
+      "path": "research/dendritic-population-v8/RESOURCE_COST.json",
+      "sha256": "f1fed3ba0eb9677ea644cfe7cbf0537735b5b2e73b7d7d27d6629b8cf8bc9fe4"
+    },
+    {
+      "path": "research/dendritic-population-v8/RESOURCE_COST.md",
+      "sha256": "6f07be99460546f9c7a710ba96abfbf25891279d2c8cfd747ead6caa9c1b204e"
+    },
+    {
+      "path": "research/dendritic-population-v8/SEEDS.json",
+      "sha256": "b4f24720c4c12aa3874384534b1975f973550be1404651d820493aa41a1bc406"
+    },
+    {
+      "path": "research/dendritic-population-v8/SOURCE_AUDIT.json",
+      "sha256": "691d1752e9ed75c9a4bc8717bca1f2d6925d665268d13fe109f44f2d3af9b646"
+    },
+    {
+      "path": "research/dendritic-population-v8/TABLES.md",
+      "sha256": "03d3571bd87ce63f4cbbef17b5d970a320e6f8a09c1811f8db6a3d9026a6991d"
+    },
+    {
+      "path": "research/dendritic-population-v8/audit_gradients.py",
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb"
+    },
+    {
+      "path": "research/dendritic-population-v8/check_contracts.py",
+      "sha256": "5027d8a0bf0a37290c59e55beba8c318668cccff5277e1ae7a6d8fa9e2e6f998"
+    },
+    {
+      "path": "research/dendritic-population-v8/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v8/common.py",
+      "sha256": "084c99045b43d1db1738efbe7c7906ddfd0ba3c15a701e0c5f7fbf610a560f6b"
+    },
+    {
+      "path": "research/dendritic-population-v8/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v8/evaluate.py",
+      "sha256": "156f25505e07b6bbf014aa44afb8c5d75b957e3f20733f2ad2c8068d40b3a259"
+    },
+    {
+      "path": "research/dendritic-population-v8/finalize_delivery.py",
+      "sha256": "7869c897ffa42bdb08a15a22690cb4ba9df9256697cfa2691934fdafad298315"
+    },
+    {
+      "path": "research/dendritic-population-v8/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v8/plan_sample_size.py",
+      "sha256": "528db08e9eda963f3c9f72e6f64fa1b5f59497a599fd65358d91cb0f635c9b60"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TEST_LOG.json",
+      "sha256": "ea1b855e6c85dac1ed6dd286f39f25348b7b128964dab856633e6e567d0c7921"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TEST_STARTED.json",
+      "sha256": "e800db222ab9ef89d8e744f67137765e031c5aa61897b45ec247e143ba3249c3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TEST_SUMMARY.json",
+      "sha256": "cfa952e9a6625bee1d49b92a97a2b3e8e9ac7cd2fc6c9956a06e9b372446fa0c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TRAIN_LOCK.json",
+      "sha256": "f9b7ca478dd1e29e9d1511e5285c07598c091b39ae2ea93ebe31bc2ae70afa8d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TRAIN_LOG.json",
+      "sha256": "c4074d228a631df13a7506ca1b71904a3ec61b97b083f5f911784fa47dd41a62"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/TRAIN_STARTED.json",
+      "sha256": "0d9887d882b52f110d684c8c902543f75bcd54a3b659a9a540362bb4b4a3865d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/cell_metrics.csv",
+      "sha256": "6d5e1b12d68337a706fad644c71a78011f275197f8bc5fb4526f72d875cd42e7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/gradient_audit.json",
+      "sha256": "07bd9f643f82d8646a3533045dca555ebaea87b3aec9668bda29a8f8a9c7a004"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/paired_contrasts.csv",
+      "sha256": "55ebac0b991bd9b2feceb5241323a8a7de9dba50ddade004e75482bece7f4f50"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/per_seed_metrics.csv",
+      "sha256": "4eeaae7029789c8c05b8e70f1e4623443eb927b43c64e0313cca8c5366d7c643"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s0_POINT_CE_0.01_checkpoints.json",
+      "sha256": "ef9829acd27f00db54d69b64eff376eeb9d43a12ae604d144df0c4c3e8e50050"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s0_POINT_CE_0.03_checkpoints.json",
+      "sha256": "5f4beb1b12b994d92ced5afccfc61bb3a064bb8a631476c9e8b1a1f8a7a4d2af"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s0_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e09ec4c4a1b76834df645b82215c39f48f1107fb51f75f4e834bda4050e40e87"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s0_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "7be02d746cea98424c77e22f59a698ee202e324ff9bb7e9f93aa532266002cc1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s100_POINT_CE_0.01_checkpoints.json",
+      "sha256": "1e989f02656cd5ebdc3bf4efab7eae30ee4c8c02379292fcd18fc0fa419718c8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s100_POINT_CE_0.03_checkpoints.json",
+      "sha256": "bd5ccb63835447d04f48cbbfcebff89320a05e7b8349655a329fe02e06271fe6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s100_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7d52ae7d98884ab3f8e79b8338389d5d66b819846616f100f2b0ad34595f6901"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s100_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "bc1b9e4acdccbe69a937fa1d3da985c10ce5c96bf19d8b33a66f46e1a0860c50"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s101_POINT_CE_0.01_checkpoints.json",
+      "sha256": "c675cb3ff755b11dae9bee69913a602ad8c681908ff1c85aaaf3b9cfa87e68b9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s101_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1bcc27292c2908a7f3a5b1d2d590d4a9d165230a71d5417c917519401587d748"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s101_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "80def4dd9f01c64e298bebb4dffed6c0635324db7b6ba1a3c51b533b78f76284"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s101_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "71729d507219a7e46ea5b26cf1001ee5ecb4fb67f802c284c5b8f71495297450"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s102_POINT_CE_0.01_checkpoints.json",
+      "sha256": "ffa130bf3b76de9711da7b5dc33f6a87efe5def8cfec8bc9cf3b06c59faa942d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s102_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d5444d992ff76a195d4e72d2cd0a15c62097ab9affb6e290a965161bc2b0df72"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s102_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "93a3c55d5cb386a440c32593a44085f87f282a0ac18cd3f84730ea8b70da7f9f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s102_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "825fb0e61631b4a40129c62c3b744294a18e0fce1bcdc8b0302318ac44c050d3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s103_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e3202bc6f0470456acd910e011aa4975c0e1d006fbc9b98f74c299931d8e045a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s103_POINT_CE_0.03_checkpoints.json",
+      "sha256": "412c21fdd2331fdb7d4dbe3f7a3e7b00e199e2d9d6408772b005651e014ab1d9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s103_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e29c9a1cb6773ec19ea4db5812884e030f5562a5eee433442783b854e3bcf8af"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s103_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "fb2f4c48532b87543468c0819514a3f0c78ccf942aef8e3880cd591c3b9d3d91"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s10_POINT_CE_0.01_checkpoints.json",
+      "sha256": "f695ab32d9bc0f59578fe77c89854ce38a10ba3cfb331ef7bab782090a247120"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s10_POINT_CE_0.03_checkpoints.json",
+      "sha256": "c320ef33dd35018b84882c63f132d34cc2a024f9948f3b0a52c443b1a8db7af9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s10_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "11c7662b6f2fda3cc4c79476b18b614e9ccad195e349b2433c6ac6997e62c543"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s10_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "adc2e0ea1dffd6bd6ac3a278e12e616356c09482f5031e8e1a4625a809e79353"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s11_POINT_CE_0.01_checkpoints.json",
+      "sha256": "369f18bea817ef50438a22834b9edb8718136c8c6cf18ecd4fd89d0a156a70d0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s11_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3c1fbd55787a413023e85f99fb611a593d3a978f54164f6f2409b83f49527591"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s11_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b8605bc402cd9f7f3d87d5ac9274b117f6dbafbeda6271982d1981bf3d74f4ee"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s11_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c62c726aa9ced4160f9ad9c929424ad47a439c93fab3926978aecad9ceb4ed9f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s12_POINT_CE_0.01_checkpoints.json",
+      "sha256": "5bf3fa727201d25d7412c15dd7af50b26718c3da72a881e5613e76f5e658266d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s12_POINT_CE_0.03_checkpoints.json",
+      "sha256": "04a0d6cfbff58cddfcca65d8d0b8ab6cd0b44742366ac1af350acb2cd3bfd1f8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s12_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "73f81e3850d47587be74c1e4501c994ee358aa40a33d8e4dbd7874c9fd483ca3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s12_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "87271a9d9fdc68b3f56e141f089d4e1274c5f7c5e9c84bc2db4e12b20f63e94d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s13_POINT_CE_0.01_checkpoints.json",
+      "sha256": "668ddbe8c5776b80470e24a3e5036f36a2ab720ced6ecbbbe48ff9fce18f32e3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s13_POINT_CE_0.03_checkpoints.json",
+      "sha256": "130ef32e74c0f54115b86439eb59a6f303a8949f884ef1b92f3ae50ab741bcbd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s13_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "80a011460208f81d73f4802733e5a3db9097f15a59d7ab0f977c6dc470eef81c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s13_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "93d2c8bccb3f412bec476666a4b1c3ebc200fe00d06a65b7ca9e18b92c4ebc9d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s14_POINT_CE_0.01_checkpoints.json",
+      "sha256": "74f6e8d2d293c0acaa387ce3d658034970753635fef1269b48a6c36aa8e25c5d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s14_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d6678bf7a4862a0d9ea2e196aa9072631d6c5e171cb9bcc7685d700ca7dbbb53"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s14_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "eaa51ed09c53938880ea7c11d15999f87e7dbbf34bb9ffc273b083e27a46d8e0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s14_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "4b2a4cffde8de3925122347430e9e7a775d7de5247f8d4aec03cb5888375d91d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s15_POINT_CE_0.01_checkpoints.json",
+      "sha256": "b4dcd72036168d69bc3ab5f86de3ca39b095fe4e7465078b0e8aa8cb7eb8fb7d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s15_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e113a388ad87195bb5391301fb1f864b413a0b84caad7fc125524f20031b562d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s15_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "8c1989d474af9f6dd9055232456c9c2b3b16475d27e065d1aeb3ee7f0ce22daa"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s15_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "832cf676daeabf1083001215802bce2ad2b40f6eb88afcf6d3a80e1612f1b3a9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s16_POINT_CE_0.01_checkpoints.json",
+      "sha256": "cc37e96fb872becb4636905d0cd58ecbb2fb18403f314785976713dc06599523"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s16_POINT_CE_0.03_checkpoints.json",
+      "sha256": "db5531a14fb1adba1a198baab58f55251b45f0a945fe15a33241a92b31e51d5d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s16_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "18d307865031ff4c4209e7fec39a2b08174e6eea541efbf72611d7b8ef40d908"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s16_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "b1097ecb0f9c822b62c93f2d4071327a0c9f8f81f626e46ead6332938bb29ab8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s17_POINT_CE_0.01_checkpoints.json",
+      "sha256": "152bf17dfc051a4adf1d980f4c5e87ba5cb034b389d75577f17765b386455608"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s17_POINT_CE_0.03_checkpoints.json",
+      "sha256": "5ba2b39bf5849f64e6a3cff9cafef09e2b1e22b833ed63f04387464e6ca1ee73"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s17_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "d2f2c324cec7c00639a8f67eb841fb0cd5416f0d8c83ef8859fb730250993f57"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s17_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e611e35e3f710348aac0f12b3adfee5733c5d461062a5fbbd080b85dd536b1ed"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s18_POINT_CE_0.01_checkpoints.json",
+      "sha256": "554fb9d185152ba4ec39cbca327efd2b46959de3eb7fb25a64ba7ee4a445fe16"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s18_POINT_CE_0.03_checkpoints.json",
+      "sha256": "025216a26beb256d98e3e62a6ba7199c5b3542baa1f093032cbb8c1782cbadad"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s18_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "62658445b4cd4767168ab916d152f4d6f41ffc0c85f4665b827701e975e4ebfd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s18_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "86c224aec665f509176cef27c3e6c06148a974fc42ea19629f9509a5d7284a02"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s19_POINT_CE_0.01_checkpoints.json",
+      "sha256": "d26791df27ddc959d80ee36dc8dc3437b582f5836782afbf4914845dd2f8191b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s19_POINT_CE_0.03_checkpoints.json",
+      "sha256": "6cd92b347a2425a522d0621f83e8279154fb82fac7321883a1b400b5ff0333ca"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s19_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "4d318858f887c95ca55d2d9141b267db752e33e3e3b9f908ed696d742938b75e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s19_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c09d69cdded6a4dcdb17137e18b2ea42969ed833499768e9602542afcd90209b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s1_POINT_CE_0.01_checkpoints.json",
+      "sha256": "9654401cb93ce968e5d332f962e4a182047af8d84abce0ea119a8f8ae84ee848"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s1_POINT_CE_0.03_checkpoints.json",
+      "sha256": "608fd94d7044510d63131f91ef8cd98c88d8df0b16b1cc6618071991da9cef39"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s1_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a6b8c5e9456b907a2dd70dee8f5162c674ae8ee8e76b1f2bca59c115a0c2f6ba"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s1_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f9a3feab2734048759e08fc8ef37612c0c9b11f613e27da735b99abac93bf567"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s20_POINT_CE_0.01_checkpoints.json",
+      "sha256": "57d96ee574695aba98f605e692c3b6a58c0fa53b5a6de41946a2d0890040f789"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s20_POINT_CE_0.03_checkpoints.json",
+      "sha256": "48131bbc5f6d6eacf5478df5de83bd4ec114f7d3e381b00212cf393ee47445e6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s20_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "055fc451f06d1e083652c42dc8a16316f459e200c016bf4c7a4af3a20c0ab6cd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s20_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "4e43e30b4be051fffad3dc3d87796104217c9a2d20386d12b10326cda6dc064a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s21_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0b23f0e36cdd53c7497af71d134b50d57bb5d8a78fe4a61416c59128430f5e95"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s21_POINT_CE_0.03_checkpoints.json",
+      "sha256": "74ecbba106e8029789697b09ed31191e22dbabea0a81fe38874ef6a668521a66"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s21_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "30c496ed607f6878cbb923d1cab22b79c58516fdacae3ebd6d54336268f37aa7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s21_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "b6b04970030b3bc6c36ae67437a79b07f99dd678be689661fd07c3627c3be621"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s22_POINT_CE_0.01_checkpoints.json",
+      "sha256": "a7a8842849b15921dda9ffbac1c858e2d91260ad7beeca0707fb9f59deb414bc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s22_POINT_CE_0.03_checkpoints.json",
+      "sha256": "55e68a8fe31839d918a0554db4405ade5c22cdd5b6546143e424d64bc70d73c8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s22_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e64fbea0d054c287f99bfdba9dd438197a07d481a3ac9557238b991e586360d6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s22_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ff87f607bc1458cb3d3215328ffdbf3891c50bb50272610bc2460eb4cee1597e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s23_POINT_CE_0.01_checkpoints.json",
+      "sha256": "02fac1b0ebb72f8ef81a199fd87abdfc25889b78bbbffd42078346fc1b1fcdd7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s23_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d93adc13ee8c29cf194ce4c8a8d5186673a4d62c3ba96f2cd23bb22e5cdf37d3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s23_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "3494e5237bc26ba78d13269fcca616a19ead56cf516c146c7ad56960c32d4fd9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s23_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "2795cc7b3f4cfb9d8ed9f43d89f97fd16668f78a3f025273d6301b9f7b86ed9b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s24_POINT_CE_0.01_checkpoints.json",
+      "sha256": "2ddc34771a8f35e129ddf1b15e59dd7de7055dedeaa3e22f37584c240afdd6e8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s24_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d2407447d83356e84035b687ba711b1ddd2151c1933bfbc5fcd2143efaf29705"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s24_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7aad72cc3cca60187ccf330ff3f5c0352e0431b737cbbd8f0c4e6fd0d83e5a1e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s24_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "5b42f06de8869787b5c08c2e09b9a603e2a9a4e2583b20076fec316ca8f76980"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s25_POINT_CE_0.01_checkpoints.json",
+      "sha256": "bce3608ec5e2103684d3ec03506a592a4172d46be0896bffc985509e4661e8a6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s25_POINT_CE_0.03_checkpoints.json",
+      "sha256": "6243d85b9f408352e67206dfc255aeca37f5000a4cb2f8fa7e287eca12a9b29b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s25_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "c601689a42071cadd993dfa942ae8acb59322ad489902a9670a5d7afe208b374"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s25_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c1e1476018b2ac14441fb8d1685f81053154be896fd7ebc2822d33d5b2e206f6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s26_POINT_CE_0.01_checkpoints.json",
+      "sha256": "ef5be3f2c8089e48a68a185db1d948ae26d9126aa462d7cf024764f04eed104d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s26_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a6cb067ef1d02edc5e9b4aebf6175e64dda55dd784dab56de182c5b04330f325"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s26_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b20a2b9a773abc81f9cb58f673ab2c7dc4a28058a82f41e1a3e7e3f7ed072d8e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s26_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "2b8d7ebd826c3e61e1bd39891b9505284d70092e2b042eef7ad5c351225b0620"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s27_POINT_CE_0.01_checkpoints.json",
+      "sha256": "3a46319acfade7643bc124e3a3f48af1ae12ed60427277d851aead804d997ac6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s27_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f34431716339e78915d96fb648e36ec482a60f9e6b131ba368c8fdf0f001907d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s27_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "65f7a03c7a04ca4f7250be533ce94a4106345c7c244700f13a741a35d0cba96e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s27_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "200a4b6a896a0133b1a1e71ddd2cf666c897c05b1ac9d3b96d9b3096e49dfc9c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s28_POINT_CE_0.01_checkpoints.json",
+      "sha256": "2f4f3b3728ad9c161bc78e162e9966c0f599f7239d76612220418ca7c6d79735"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s28_POINT_CE_0.03_checkpoints.json",
+      "sha256": "8f7eab1c9d89686d6f012beda7db7b976e9655a47d34f56498a9016f23ff0349"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s28_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6edf8fb97b89c9c15e1cc79b1270c7bbcffc7b512ab9c9b14e25a58d9178790e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s28_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d8de7e7dd427b93a6cde73e94fb99a2cdf0d0bf4617590dcc8a811995ab5bc63"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s29_POINT_CE_0.01_checkpoints.json",
+      "sha256": "d608bdf5fb6d15213b8cff25f64a61d7310961b6775ab261d1b643c6d1f95916"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s29_POINT_CE_0.03_checkpoints.json",
+      "sha256": "4cfdd3f57d3b50ef437b3745b1988e9848bf205a7ff5f1cbdb4896c2f7c1bc94"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s29_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "90ee5f083b4df8e01c63d491b30952f2e5324e8f15ba2cace9711b7d7111242c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s29_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "dbfe3099aa2d4aeb32e95ef18b3fa3cedd66c3e86ba226784379d444b3ca521f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s2_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0d38c40557820dde8b9f31ac48944f2dfd78548a20657d02f83babec085c9fdd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s2_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e935f02fb93dfe2d8fb24a055c8c56aeb6a447f400393989c1b9a5edde9396a1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s2_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "38492a38037e1f00a0405a92a7a680b19b8ad866bef5608b330862a3d7511398"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s2_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "aed936aaacfb039848e508ccf0c477effea9f860a80af70581044c4323fde69b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s30_POINT_CE_0.01_checkpoints.json",
+      "sha256": "8b1c26137fc4c1016ec14c5bfcf7c26407789bcc94bf5e65aa1592ce184cad25"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s30_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d7491ebae6034a05d552e973935cfbe031b14ad19fdcf7f989a5c8d76d1c3e6f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s30_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e10201bd83c6fbdc36d0f1e90175b8b7643fdf0c7bb4423e7ec85f7c6a605fa8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s30_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "0320d264b019c7cbeb836b8cc6142127125dd927dc37ce18a25463092508f7f8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s31_POINT_CE_0.01_checkpoints.json",
+      "sha256": "b69737d60f9a59e606ee3507baf23db13c8e41f550634923af8ed64111c2319c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s31_POINT_CE_0.03_checkpoints.json",
+      "sha256": "62c6d1b9b76e4bce10f7a437b0336bbada8c27cfe7730e4ee7ae3e8a24c76a78"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s31_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7d6c3afe15baaddd5835d5eaabb05aa7d3bfb2bd7b1a076c24b065ac65ec0656"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s31_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "2b56923c38c179fc30eb79ac1fa7e7a7303a8975fcfdd9e350803aa4cecfb2fc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s32_POINT_CE_0.01_checkpoints.json",
+      "sha256": "9fea7295efe7eea5173e4747288aa0da8a69e95e9f19185df0d6b5b5a2233673"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s32_POINT_CE_0.03_checkpoints.json",
+      "sha256": "c431f3bc24f51ec0383a3ad60062f7610b22e9471a54ef3038d564ed48937161"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s32_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b01180e6e11328011580c0fabc0913f0c142f773c2ad96ed69d09f90982e8826"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s32_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "cd783d2f7e2f8b83892c179a0a5cd69c668e7a7db6bc6417339b9b2359a93d2f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s33_POINT_CE_0.01_checkpoints.json",
+      "sha256": "1ab60ab5780e76bbd87f611966991e8e8e1df4803ff1746461222ebdc3b015df"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s33_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0451cd769bd22c04316f6d30cbd46d7f49107dc35560b2d0882c0f911d2b3be7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s33_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f452adfa508a2964447b62a97077fc3cc1ce3ff1560e9c9f1678d1510d0da704"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s33_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "bd1b758de6288798a0fccca3ba77d5b902eeacde53b974c9da835500dc0dddab"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s34_POINT_CE_0.01_checkpoints.json",
+      "sha256": "f7deac60c55cb5320047a59700731fa74ea2389b26ed613c456c5cf0c956e1da"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s34_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0cc8065fb63705195597de410d0b250911ce2f7c18eab5f17f6d11fdfdb36adf"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s34_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "712605c3a2cf88ff1ff2012063c1f2de8e41fed494c3fd1da466149d84a1290a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s34_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "88e968bbb6b59bbc751d8d4abbd9069507ffcdce9080552d646e68bd47926a74"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s35_POINT_CE_0.01_checkpoints.json",
+      "sha256": "29cf5f6bc0cd5fea3872979ab73b52491889ba1d83738c4bfd4f842a4e626c9e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s35_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e3ca69fdb7520fa29517ed9bc77b400bb6e891d76b030d15505adab786c3308e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s35_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7968757a00db3aa736c199eac543855d02ce89a7f77bb2446eb1d2a4df7229f0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s35_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "14eaed62828361bdbbd91e53a2b0bf9f41d898d499861b8f84fd562897e0fdd0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s36_POINT_CE_0.01_checkpoints.json",
+      "sha256": "6aeed5ea2fcdc86d04623b1d118577bfb4fb72f0ba63b3cf23d62482b159fa2e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s36_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a4f17644fe04cccdc6cd52cb27ff9d5d025c6ec5231116de0707d782983d889f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s36_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "97cbd89fdd9791a184d7d67399bf2bd9552a87324cd07efa150a0062668227b7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s36_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "a721026874efaba2b594a49321d10a5fb71223cf36db55c9c1c8560c129ce89b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s37_POINT_CE_0.01_checkpoints.json",
+      "sha256": "5c51dba5c5b986d0803eef7236ba1d74262baa6b9d94f4de2e3bc152bc134699"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s37_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d69bf60734eca361cf54e749b09962cb52a5307d3c1e0a07f1d690ff2680625c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s37_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "594a883b41c3c5158c95d676d4e5da4265fe849fbe6fcd7481b75461fa7b481f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s37_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "936e10e188f1504fe4eee5cefe59b9d533cdfe472275a55ecfb4049a2217a616"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s38_POINT_CE_0.01_checkpoints.json",
+      "sha256": "74c539eb3f282b294bf6138d4950efbab67e68b56db36d58b90480ef576f9098"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s38_POINT_CE_0.03_checkpoints.json",
+      "sha256": "9bf5e296509d50488c1da01a1ae4f065521ef24ad0a074a43659f1710095c7c2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s38_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b8beb6f369d732e9821978983bdea1047382d7a469e2ac35cd7ccea951a1d87a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s38_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d3045bdd47ef591a7f38447d90d13b65bbfaf3c8bbd2266d14ca71c02ee49abf"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s39_POINT_CE_0.01_checkpoints.json",
+      "sha256": "8b5d2340b7312752df83ed8e921853712be379522b1551b812063013bdd8b382"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s39_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3f4231c5650a55e439a1b9d65ab72d3f078316ab58080d4444986292ba8b045e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s39_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "d1c808b1a64c2f15776a785a75fd2598788349e5c3120b875b648d0268ca9a2a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s39_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "06b7aa92c50cc5c80634c6d3488efc95c9c95995a4f3b312c73f32e80d1da3a2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s3_POINT_CE_0.01_checkpoints.json",
+      "sha256": "6f16b2afb568c885a033da3d3f0fed51ac391f424a86eb4f8bf27b1526bac4e8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s3_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d944df5f4c410f3d90e944a20d8081d9ba485bf4fc612d15b0b33b03c1e31885"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s3_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "bbaffb81a9351ddcbfafc8fc6ed4250de6bc2b5c35a093be0981c304f2f5c78f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s3_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e5af9279114e2a26b2bd6459581bd6569a4c19d402a19527b1153ba2e8141b99"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s40_POINT_CE_0.01_checkpoints.json",
+      "sha256": "01bdcbf7957dc3745c973af7f6c12200743b657dad3e55fef6b0cd5792736786"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s40_POINT_CE_0.03_checkpoints.json",
+      "sha256": "07265e62b06797e4aad3aa18d93e5409c248b74415ef818b46735dc0125c1936"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s40_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "00d04863f55cbc37d8e793652fcbe7f2a58a87534437972ca7004601c46eebf0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s40_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "eeb43d70f1160a43a2651d3a5693269819c1a99f406263ccb873fe82b0d9e603"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s41_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e5f5d88f47c1f112b1688b912f17c61a7dac40cc2131a4dfaef774efb18e25ac"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s41_POINT_CE_0.03_checkpoints.json",
+      "sha256": "cc4b60202ba891d0a782095cf6e08f301c9d5c1fe2373b9edd62401ea8e9ee00"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s41_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6de7b7cf98abe3d467a4a312131527083fa8b2ec55e2bba7368f9d7b79fa20d0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s41_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "bbf3a96cb7bde13caf3b5c7e1fdc91380d1d9763fc8fadac9ddd56c3de5ab5cc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s42_POINT_CE_0.01_checkpoints.json",
+      "sha256": "01ab8af704d4e3b6713071dcdd4b2210f423b57dca66f029fbfbed96b82d3bb8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s42_POINT_CE_0.03_checkpoints.json",
+      "sha256": "71dfacde7fcb0e6d6fd6ae2b7ce0f7848698e15f74a8699f8c43fc7fbe73c652"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s42_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "fe094a64372ae3a4e3cd8e0a881eadd2454d24f6e7a1d0e1e90e70367a1348a9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s42_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "975371d14501a8b6672870f3fe6bb5c5dcd31763d3542dfe8db8717682b2ed70"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s43_POINT_CE_0.01_checkpoints.json",
+      "sha256": "364dbc4b0a60fdd4df5b0c325743d9d0f7bd4713778a1d26aa6e06dda5035b8e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s43_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d7995268257cdd7c0e0a1e8c6a5eff2a2735b66d3e3e3bf62094eb7bd15349d1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s43_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b7f23b89a71ae85686df7c7968872655ec0f27c566bdd8183c6443309693f544"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s43_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "27e65b7c0d17693eec752e3570c6c23adcbd75bc5d2c93f1e40450b1b89c9b6e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s44_POINT_CE_0.01_checkpoints.json",
+      "sha256": "cac190986479ebacb2714b70f64a558e4d13a77b9a2faa69b303b8c5e1117b4c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s44_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a0653703d3b1c271bbe14a91402be207733101ee543eb090464a73a5a9e65dfa"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s44_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f0e13923b47b5f4b3b207385a4bf4e7da9ca52e8f18bbdf03f3373d65028d73a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s44_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "9a805d3878971699ebdb4dac2e4fccefdca99bdc49bd99f917da2cd67c54d0a1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s45_POINT_CE_0.01_checkpoints.json",
+      "sha256": "49ee015048ce5b699d9138787467d7d46a5aeb671053e36972d6d5c60bfbcbb7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s45_POINT_CE_0.03_checkpoints.json",
+      "sha256": "13b860a5040a04abef67ca740dd9f1b60cf0271cdbb2e38c0ced1eae39e3dafa"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s45_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "ee863f3879e7ff94e78e5cf6af5acf65bfb719ee84df4a13a16474a8a7fb8a7a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s45_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "828c587fbe017b253c7c620a3c51b0eb9ea4ee3edb07f50ab65f1f301d418ea1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s46_POINT_CE_0.01_checkpoints.json",
+      "sha256": "1306df2fb5956ff5fa8db99fa24b603e4249d6b8576e029a09cddbce43df7169"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s46_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d51c404fbe2ac74fa083ca6f19cfff6760ba4c06216bf796997c12f0519728f9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s46_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7d88ed851192894bd85181c0dbc76e0f1afba2ae2faee31036ef83d12b5e7147"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s46_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "546c8c248f38a57ea26d8c4ba37bd03fd9c9a29dda317dc5304d021fd81ab793"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s47_POINT_CE_0.01_checkpoints.json",
+      "sha256": "fa2b6b1c31f4b98113dd877711bc1ce54c9a606ccd3639b5e94112542a931657"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s47_POINT_CE_0.03_checkpoints.json",
+      "sha256": "4a806303d1e94a76e92cbe297082b74aac1045a89e43e9d93420d66d545ad67b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s47_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "8f8f8ccae8bb7851ce3e6ebd88001c6d2ab2120fc14fe1650c9deeab59bf9659"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s47_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "30b36eb77204aa6a283388d0700890477df62e2f421916379cd2218f98f97c77"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s48_POINT_CE_0.01_checkpoints.json",
+      "sha256": "617b1545341f061f7f0d31a686cea2b8fe4a0bc39a55804ba8e73303649fc84f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s48_POINT_CE_0.03_checkpoints.json",
+      "sha256": "833bd480f3414bdd049bc70a5ee7850ab8476bda6415d5acc8638a807e72a38c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s48_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b3218d08e41ecb0bb9644e1c06b8682e1f37f4599433e3842a69a2014b75ebff"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s48_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f3599aa5c349b3c4e4f5465cd348d3398821fe30d7addcf808b441536197fca0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s49_POINT_CE_0.01_checkpoints.json",
+      "sha256": "4a199abccf1e6c32ad15361d0e7022412e04182b9635e8460cd4196372447f41"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s49_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f7acdd414cfa8d6c3b6b6025ab1ade16a7102a9256ef5c5c45ac51785cf48948"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s49_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "3c0e175836a6c6f6fc18e9776e7137c0749d13ab2c82fb1601f5c8248d384a3b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s49_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "812e453fa9a0a6b50cf430465c84eea9ce58353ad3b28fa8a635bfe1f383aa76"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s4_POINT_CE_0.01_checkpoints.json",
+      "sha256": "8261ecde4a075973a0d9f8dfb94477c28084aeebc4c3bd08a7846e8789d4afe2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s4_POINT_CE_0.03_checkpoints.json",
+      "sha256": "27d7bf8a7169f19a06792deeeab353e2181d1f9331579e92bc06cc30957c977a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s4_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6a5335332c7ee40d141e959efe6bc4457b3e274480881115895f52b356ef6eae"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s4_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "8bc995537ab42763bb65245ad08f7a4c6571a366551b0b80f2bfb4e5f11ad013"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s50_POINT_CE_0.01_checkpoints.json",
+      "sha256": "c4198e8b496da1a5aff61b1fc6078a7d09571d2d9124a838907ad09e75303bf0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s50_POINT_CE_0.03_checkpoints.json",
+      "sha256": "845036e1d740ab2bf1a1010f163eeb0474fd363e9a52ffb0ff402aaa57809257"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s50_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "1c4251697a54831cdaa9720e4d4666693fe4e2370d1e982e9927c85e0e6f4e4f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s50_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "6749f2a373000ad92b648dcba87228c9e9aa19146bc0bbe0df350132a9b0961e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s51_POINT_CE_0.01_checkpoints.json",
+      "sha256": "94969164f0a314548a9df64e6fb5c5e1ede0e160b6f6e7288044f8062f9c8225"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s51_POINT_CE_0.03_checkpoints.json",
+      "sha256": "0384bd2c4d3b94c69271b77f7ae53400644e3959a3dad3ffcb8dcb2a1ea7553c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s51_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "5a6c5e7b587b5507c9fe56157e0ee9163d694ef57c7a768f0c6a03a0cb310a2a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s51_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "4aa0a3ae75bd3a0b4d06f6648b6efbd6f752b3af79f97456b1da47ef0d912d62"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s52_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e1fd8581c9e188b212681a21fef6336a830d568b795472886b65ef3c92f047e9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s52_POINT_CE_0.03_checkpoints.json",
+      "sha256": "6dbbb2f1016fa0e8f5bc690a0a1048c566738809eee1365eeeb18310e7fad391"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s52_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "456e06394e92be0b11baa65236873c6bf901ca474dc59ee45ce75a44f5496429"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s52_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "1ad56db01dc6275d08425eb0d3d52e456b70140554e893c3bc74283ae093b1aa"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s53_POINT_CE_0.01_checkpoints.json",
+      "sha256": "38e96afe9cb6ce9fb89987d350a88f17d8b18f6181b7a512fe964cba445a783f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s53_POINT_CE_0.03_checkpoints.json",
+      "sha256": "6b57015225f0e02276d4f77aa191503dd1fdaaea225f3ddec9d5505590c5dfd7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s53_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "c487906ec5eaab1aa82f56b4df4f4a04e3530e641c3d7af3bf694e5a31deb6db"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s53_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ed2ddad7820b7779bf648943516240599cacc0ddb7a786f42f7f3b63ddb7e473"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s54_POINT_CE_0.01_checkpoints.json",
+      "sha256": "6e3a317e1c25382beda28d1be2880c6a7a7aff451e6f47a0b58d0597b2c97e76"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s54_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b6c62a2026125e6a526a8fe557224b297e11fdadca8ecbb3bc113db5170ebcb6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s54_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "1fec96d94ee297669563871204a043725b8ba8c32020965268ed26ea7237c671"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s54_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "03b7e44a63eb2821a6f8b2b373609ab7251531ccdc26bea7c5aad368fdc3a837"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s55_POINT_CE_0.01_checkpoints.json",
+      "sha256": "80029cb942a46225111ef9bd5c324609379dc173a6f925c0cf42211ef4f2d266"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s55_POINT_CE_0.03_checkpoints.json",
+      "sha256": "2923cf338a514905100dd848be844b04ad7738de9bd40cab6297062f3c63c538"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s55_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "448af17c1d57de5f9f9f71e3810b1da1a6131a650cb74fd8bcda03e841aa7f85"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s55_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "1252e229633c8e70cbda3235782a0f1ed2f70f435de7008e81fc81efc88eb179"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s56_POINT_CE_0.01_checkpoints.json",
+      "sha256": "81f621cc62406e9f1fa010d9368f429e6cd19e92028a7d70cc17e51bee65d9b5"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s56_POINT_CE_0.03_checkpoints.json",
+      "sha256": "c0acef62b518b86c20502e1d8ead6db01c1a36119fb2ca231dcab87eb279e140"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s56_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "487a5371d11bd84da3ae6cc9ef3b0feb1c5b7766e9a8db5c252a734d35eb3120"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s56_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "b0d836144f83f81993bd826364a4d77ccce0b928e82c6f3eb99dc0be05e9cf37"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s57_POINT_CE_0.01_checkpoints.json",
+      "sha256": "b35303d1e631be04204a92f4b3faf07f87e2a74bf286b816523cd396f2fb9f18"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s57_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f1bf0c6bd3ca8f21376dcd7b5e773c8ea826fd1122c771df5f1c81f254be0f9d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s57_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f7b80ee729ac2705e4fcff39ce6c2f7d784a614ed09b9d0f6ca77277ea800897"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s57_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c2f0d2b0ac2ddfc9c6788524f6f89c529f60ed3b919082f3c6db49ccfb6a61d6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s58_POINT_CE_0.01_checkpoints.json",
+      "sha256": "16afe5d3d2da70038c8c237f10db1ea89befc8172d470b34e7295edda6eb986b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s58_POINT_CE_0.03_checkpoints.json",
+      "sha256": "77d831d46683929c39d58a55315d627bb6105e95e3020e8b804ea70f48e6419d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s58_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "2c5866314c757e8806f2fe0e1ff1510e29cfecd4e1acfdc7aaa5020888ea209c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s58_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d9963dd2e31200166bcce573160cbe2b58a7a1bc5374e583745c67e17ca0f072"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s59_POINT_CE_0.01_checkpoints.json",
+      "sha256": "628b69051a7f393a062a0b197011ef78e58d8e5ba7ba872d605a8b9183dbce8f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s59_POINT_CE_0.03_checkpoints.json",
+      "sha256": "c4eba9acbcabe83dadc808cb1a6b4c6952e41d979581d1d44b9cb403927b7ff7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s59_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "23a8f1022aa43fc5dcec58a0117feed2326953ddd4c120d3c4351b48c33409b0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s59_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f3486ac0a20261de035c17cbc19af0d47687c34f723e760f84c8138f54080506"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s5_POINT_CE_0.01_checkpoints.json",
+      "sha256": "c830b47bdcafda3825dccbb92e9797f74277a8ef980a0f87b79da9e8e5282e31"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s5_POINT_CE_0.03_checkpoints.json",
+      "sha256": "03572b06a133d088322ca3117a351514cbd6585a2569a01db0b5da1885e23fd1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s5_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "8e74c164e47d55ebd919ae91dd8b7ededa1dd7aaf1eea0b9a589e5390bd95a77"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s5_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f86ef0104f04ce94b498ca7321176ab3097184a1791efd6f95cea0fdac1af3f1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s60_POINT_CE_0.01_checkpoints.json",
+      "sha256": "ba58d3d7fa5511549788bfc3f5546b99fad3320c610ec68a3729d38df3f5df94"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s60_POINT_CE_0.03_checkpoints.json",
+      "sha256": "410f90805315ce22c908c09f40ffceb01a88376efdbcd5e6147062282a5a7cd2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s60_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a8f7f63aca12b8b5b171f16475edc3a12dcb365df4aad4169a389306341b2b9e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s60_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "93db8ede944f4c60aff14accaff17950a5ae1ad4beb371b93cc5bdceda699719"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s61_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e718968efae2a7ccca913abf48c2bbcf002fb4861ebbd5393216e125a3563160"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s61_POINT_CE_0.03_checkpoints.json",
+      "sha256": "7e926ec21247d40f6d09413847d44d900eea06fd15eb1a57fdda885a24272749"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s61_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6e4dec0f41f251779b4f61a18046acec535ec26e5e484544a46c4cfe7b883bfc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s61_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "73a028d6fc39729ed457c871f70105bec41a5c7fadced56f5fe1b2b4a4c8109e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s62_POINT_CE_0.01_checkpoints.json",
+      "sha256": "93f9343f473050d355ed48b32f948cfe92bb46e8427f730c54aa070580ed0ea6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s62_POINT_CE_0.03_checkpoints.json",
+      "sha256": "2689aa2858271264e3fa7e2996c0216cb305c61287092d0dd4a1047b3fe7901e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s62_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9541fffebeb4e76ef88bee6421b8e0da0079ffc6407b33e100df925b818215f8"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s62_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "9d7288fca9aa95e4a848f3a3e6f8d650c3ac184953941426a456f2d6edd351b4"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s63_POINT_CE_0.01_checkpoints.json",
+      "sha256": "ec2ed45fa49b3bd73913d70d2a7d053cd185e3d56aafef5ee0916f0005aca2f9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s63_POINT_CE_0.03_checkpoints.json",
+      "sha256": "be328bb040d2d4b58a52b282f76313cd9c7ce477938a008b654db273509a6d56"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s63_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "08ab32f0aeafdecdc1e879050fce3fcfe5f8bde4575fede83b577ca2af020118"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s63_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "5cde9350c4b5c3a8d7f6a896bc4eb3343b1255a5585ac3363ed37213967b1359"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s64_POINT_CE_0.01_checkpoints.json",
+      "sha256": "32ea9d7689169ea9af03cae74c136f7480907b1f68c84d283bbf408f829f0a68"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s64_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f38c476a1509093a4068681bc4528ec205ee4469908f2949066978a90137f485"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s64_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7f8fe26caab8a1054220bd913865fd0537501ebea7fa18bad4cbfa18f76b4650"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s64_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "fdde591fa4e1aabf2a74f20631a285b0734bff21ef987f5ac65c9739c0a91a16"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s65_POINT_CE_0.01_checkpoints.json",
+      "sha256": "4661fbcdb834fb14dea10ee58f3c9785cbc7cb3c7378dbc7febef61c983ccd53"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s65_POINT_CE_0.03_checkpoints.json",
+      "sha256": "2442271f293cf6858da0853d1e94fd086ce8e57286e7d9b9787d018009f25200"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s65_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "356315d84456720ace82c899d50be241d8396a457c2661ca6de3758176935757"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s65_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "1b9cfddfa493a4e138c545a945be92ed47d1ecd4f517848896f676fe80763f15"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s66_POINT_CE_0.01_checkpoints.json",
+      "sha256": "9892dd9afaf80af1778fb9b5eb67347c1e0092220f635da6dcb1fe3c2a0d20cf"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s66_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f25183b203cd54fbd8127980693d8ebd2e8dbf81aa380042067a959dd55ba72f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s66_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f927b94f7aeba41bf7aaccf071716e979b81b2881656f796f58526b4dd721aa6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s66_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ce4f0a239c40a535d9e2847bb068796e1e8b3e086b088296f0b9e8541fdcd7ca"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s67_POINT_CE_0.01_checkpoints.json",
+      "sha256": "5d312d34b22d5e9574e13659497a252129422ad6e28f9d6e9091fe318c314cdc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s67_POINT_CE_0.03_checkpoints.json",
+      "sha256": "de5bf12d075e2f6bd367ccd3f2d8d8ec72b637c90107aa1455edc8abf60ef99d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s67_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a0954fa6e3fe50938d6158659c968010066850f7695285afa4834947cee78b36"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s67_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "249ce32b04a7eb117b67dfb7f2d468c33545e96b6aa981a6b6cd17767bcd0bd7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s68_POINT_CE_0.01_checkpoints.json",
+      "sha256": "eab6440695bc15ed7e57f1668f3d2ac29a59c673ae94ef70237340437f492b46"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s68_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1c4ec9ce9ad99f2ca439a44d1f80f7da1a9569f62b6da34ae8cb4e44a684020c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s68_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "51d5ab2cf9c0b2883d5fac168c1c1e9ebdeed8429e4a464a901cd4bf60ee6b31"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s68_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "0135e3b00c400bf6afb59eb619b4acce7bc3d35fccea5b379e8eb38113e75f60"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s69_POINT_CE_0.01_checkpoints.json",
+      "sha256": "6c8d2ed67b33f9037c98c5e5d12d920ec4b0cd05dbcc34318c7a1f273c478870"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s69_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b45815d56c8aea6d1eb03338f4484dc97294aee0bc2fb4aab98fd6b46e8aea36"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s69_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6d33051030eca654e5eb250b3e0f2f2770e6b77d0e11697b9f3a4ff2ddcfd6ad"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s69_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f22c1febe1522015bbcf99a0976ad5594254ec03651aae971692ddb79643a7a0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s6_POINT_CE_0.01_checkpoints.json",
+      "sha256": "42425d58addb97f9ef471da7ccc85a8d86b738ae02a6cefe7657b46bbd60f3f4"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s6_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1ded481dbb090d065ec3da6dfa339f21ac12da9948053eaa8ece5c646b327fdd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s6_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "7235bfceb70febb612ea4a3c70b7b582773df5d2613a8ea8a087aa6efa2ab698"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s6_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "42cd648da837509faf7dd79c8713f3d19cee7f077c61590bff08e71657d17646"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s70_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e95412cc9ae6919a78e71b1be0e46b11644889a2b06e105baa1b4e9fbeba060b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s70_POINT_CE_0.03_checkpoints.json",
+      "sha256": "beb9735945ca2c0ed379de1a9af94151fd4a38cb5e243d1f90902636b0b8bf92"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s70_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "845989011671ca9c8221999f2f9b74b66893915b649834b325e48a21589dc53d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s70_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "0c3293e15eb6f7a404568d4dc7f24ed729163f2ece49b4c232d527f8fcd2b3d7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s71_POINT_CE_0.01_checkpoints.json",
+      "sha256": "a6ca024dc53e407a0bfee527fe0ad9082efb67a642826e011734a1aa09d29590"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s71_POINT_CE_0.03_checkpoints.json",
+      "sha256": "60c01d619b0b9a68e92c0bb0d77a1fd118ca4c93ec8fc3d9600daae41c5c692d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s71_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "53b109e95c8b94ac79312637148d1b570cefdee7c7c10216bfddb8ddbfc71c5b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s71_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e04defdc116b2e737eedbecd9c2097b740a75d7955abc8953a62da28de062dad"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s72_POINT_CE_0.01_checkpoints.json",
+      "sha256": "5e74922fb5d475782807eb0ffc5d66eb27c519b378cb1580aca670a41854a8d9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s72_POINT_CE_0.03_checkpoints.json",
+      "sha256": "5bb4ff8fbb8eeaa1273f176b4853812e2045aed6e0e3539d577d0a63ca4ae5af"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s72_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "c0bfd71ae3973bedf4130e6d74f7670dae69eb32b0cb2e08f33b18bf635521a3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s72_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "8c4c94e3008b8fa07b38874a09c7ab317b22fe8b099a07633031e6c01a3bd4f1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s73_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0b99656484fc9c99b0eaea84ca2dfe799297167468a09380a1cabf61ffedd7fe"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s73_POINT_CE_0.03_checkpoints.json",
+      "sha256": "cf6b7fd0456bd7d190d36c70096d0616d6296d6c5ae45e50764f83096c06cc2b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s73_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "80f5ed12d4f2b446614120081528eee220c91845beded35e771ac089c8533dc0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s73_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "352505c65bbc7c9f2cbd37a19f469cd27aa67f0ce3702c7dfc004d6412cb882c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s74_POINT_CE_0.01_checkpoints.json",
+      "sha256": "04b48bfa339d336f1870eee663fe843ff8ccbdc65fa76ab560bd5d65d4574aa4"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s74_POINT_CE_0.03_checkpoints.json",
+      "sha256": "8c4b3c7a483fa0f61854d04db069c61c092c2dd0184a81e3dba0a48c93d15c74"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s74_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "1ce3df0a4298cacb2628f8851c544f1f7dec5b57ef0ce67175c961aab26f0145"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s74_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "74bfc47d3b8cb850d4922f7c33cc7736608d2d64382d3536af8932aaa70cc826"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s75_POINT_CE_0.01_checkpoints.json",
+      "sha256": "9eed1090748c361015d321ff8e4821a2eee336b5d6f071d7f270d7104ed5fe85"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s75_POINT_CE_0.03_checkpoints.json",
+      "sha256": "a7f6fe1c1638345cf177ba61b2d84736a315b381f09754bcf6a081a2baca39e6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s75_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "6b30f900472a63839eae764aa0e4124f8979e43bfab16cdc52ef175cc41cf385"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s75_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d3797616974a9f8c8088e7b965f69eed72a8cdeb49a4698b358348010527a909"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s76_POINT_CE_0.01_checkpoints.json",
+      "sha256": "86c81bbd8e32a2e612438e80e705a5852856475c5b22fbee97d862f82ee8a721"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s76_POINT_CE_0.03_checkpoints.json",
+      "sha256": "df69da48ad672930a9c2fefdd5f852af61ba71144e11ed07842aefbd9bb9c1c1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s76_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "5a78371ea9f06ed03fd508d652dec62ae6f8847c6f28048dc1481479bc613524"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s76_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e786502645265083a328fd81bad502ea96bd7af499ab446d21298c4ab524a616"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s77_POINT_CE_0.01_checkpoints.json",
+      "sha256": "a40c9295190d87978c2e6240c532040c902a01e04c7a024288c698b5f47b3c52"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s77_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d334b287525eb07983ca7b134cf05efa6122204fa98e82bb99a932dcf1e77254"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s77_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9351a84e5cd8a844ea15efdcdf79b61bdd7628c4dc09d9fa08df9aa6840a8a55"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s77_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f9ccc18611f3f808589cfae17715e6224d6ee6748ce59e3c1a1a38785cf0198d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s78_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0374346dadf14705fe90ee0e52efb945f6efedc9feb60e05ee8a557fc678791f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s78_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b96e48b6208472c6bae63d3fa0144b93c6e26de43c81a99956a1ffb49e7c8962"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s78_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9811af504036781ab21eaf1ea227fce9b329902c493580fcdf7829ba9a63db9c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s78_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d0233a01a27844d97b6e3a4b53c861e1ff8738f7377dfaed92e1fb79f125e6cd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s79_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0649810fe9f9413fae560926b3fd240374c2da4b5ad7ab79af9933b2e49af677"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s79_POINT_CE_0.03_checkpoints.json",
+      "sha256": "f707eb4cc6a1524b0919dfab6b77a2a9f2e6bf96e95fb05708f1851f4371c202"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s79_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "f839d9d09a7f06f04618e7f8653e4e36b77b8bf20732b451889d37c14bb870bd"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s79_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "3c098340c673b82031ebb38670943881566222a313da4fcb22a94c648a4192a2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s7_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0beb5f30f3a6a6615c80190dc8c5c982135fb5d008514af5571244d5217957b3"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s7_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3c4e8728160c80ce3b50f1712cfe38067cf34904b180b841e86f248d5d19fba2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s7_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "93f4b83caa8d18a40e6618b8c7ab8c6957a45c5a5d271618f2ec826aa4f2dd4a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s7_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "c2d47d9d1675165a13ac68856e02ccc455a9a32e206ad778e33e75fd055e3419"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s80_POINT_CE_0.01_checkpoints.json",
+      "sha256": "c2f91f61462c1767651b74ce1dcdb574a6296fbd7d38e3a30771445fe2f1e667"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s80_POINT_CE_0.03_checkpoints.json",
+      "sha256": "4c388d41888b1cb5dcdde915181a7dbb27c3a16a80b62f66b96921ad9b469fff"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s80_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "817e6ab63f5c5efb13c734b3e17bb957af4a73ee00bb8fc8de8e83eda9551d3a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s80_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ae68a95ff89620fe853f372db0fc043362212c68cccb22b0cd5e25dabbb79c2e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s81_POINT_CE_0.01_checkpoints.json",
+      "sha256": "3ea422cfc5089feb33db3f70a0fd28f43cf3530e9663bb6553e80e600374a6b6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s81_POINT_CE_0.03_checkpoints.json",
+      "sha256": "748ca4770b245e1c59bac88e9ee5084667b731a9b1cc9419935f51c4f6361959"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s81_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "2172350cdcb7221318a0daebed680c3d624192879594135f063b5a3bfc682b66"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s81_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "56b0381548fae713b972cd818301161596ab3dce897b1498437941da641c7716"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s82_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0abe85acf70747208d492d95811510709c49a0bc71d9253241ce3bf8ed1dac53"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s82_POINT_CE_0.03_checkpoints.json",
+      "sha256": "eec624ef708e1b4c3c0ac9ce39d1d6ce1c1a295f7a2ea9129841ee2501106387"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s82_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "53d51ee24684ffe59259330141093e8e4b62d2862e275753d35d8808e0c5c35e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s82_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "cb3ffc800cb6b2940d05ded5c377b4adfbdd41816e036e8be4604a15f113fb7d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s83_POINT_CE_0.01_checkpoints.json",
+      "sha256": "20b3cd69546c9eba0b79c337a14dd95deac5eea45abf690e8772c6df6f59f98c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s83_POINT_CE_0.03_checkpoints.json",
+      "sha256": "86950048109f4d7be1f8c7e1e47074e51bce99e5c7a40a5508bbf72e35283535"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s83_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "47c17a4dc7a81682039deecb90e6accc759f680022c4ff6b522cfa7cc391dcd4"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s83_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "69531e86baba0ba782020eb9a4646b0275a060b9df8003daecd3e07533ccd3cb"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s84_POINT_CE_0.01_checkpoints.json",
+      "sha256": "29446d3dce621b18abdcb09b0cca30ab73fdacb879fc647e1ab5b94c25d315f6"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s84_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e124d806e2e95ffeecdf19a100b05f9f5ef63ad54b255325e0c29f3c6a251636"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s84_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "3c790077ff4bcb6a2810fee9abc9a6139f7f7ba2326826a009e4eb57bfe46aa7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s84_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "e174f280e0ba63fdb870446942f20913e8bfe98a16d6862e68d3ab3967d0050d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s85_POINT_CE_0.01_checkpoints.json",
+      "sha256": "1e9cfc37fb31f2a31faf7044631cfb8f8287b6f6d876e4abd06e4254046cd5b7"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s85_POINT_CE_0.03_checkpoints.json",
+      "sha256": "9e1c4d6ffa249ce138bb795d2feb3655fea0560a5b584cd81fbc4955a8892361"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s85_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "c41cccd3d792b6c83c991772dd285a8c5dfc7fbc4cf65220cd8258d52cb08307"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s85_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "d06037450bce783bd8e08817dda46ffb4fa6dd050ccc5109e1239951a9bfe27f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s86_POINT_CE_0.01_checkpoints.json",
+      "sha256": "87f8c8b1dd1ca0b0defb60331400fa28912ce52560607e81eb11d9e5dae41b51"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s86_POINT_CE_0.03_checkpoints.json",
+      "sha256": "b28db31be9d2dfe5bc65663cf886002089adcade905f5bebcacfc3524cf6c32e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s86_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a9f92b5fd5d21e87dbb1179362e10f0f79b8985ef94f636006aa13c9c27a1ebb"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s86_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "0ddde369d962cae5065b79f8a1f5f8c04e91949b66c5d922885904e0e12068ce"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s87_POINT_CE_0.01_checkpoints.json",
+      "sha256": "59034eb9cf3e11d4caba6704faacf80cba67b3349eaa886bb0b84fa1ee6b3e7a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s87_POINT_CE_0.03_checkpoints.json",
+      "sha256": "20528a98945f2e7e87c16787dbdbc494300d9d894c64ddb3fe1712ca2abd47b9"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s87_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "b3aacb8c838dd1ec983f63fd2981d35872f1b648e116a48d6f143034e4d8b30e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s87_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "03a8546d45208ebe1e79bda4588ae2c81244d0b6b475eb5fada5bbb617da2a58"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s88_POINT_CE_0.01_checkpoints.json",
+      "sha256": "b7efe1c6d757ca6900c0cac80c09f40924452e6900fcdbafc405f865aae7b720"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s88_POINT_CE_0.03_checkpoints.json",
+      "sha256": "fc9446c2ef7f6228c6ec396abeba1e1c8aa160e5c675af06f1b88148c474d0f4"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s88_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9f3b9d557ea8856257d4295398d7c9f6b6413d1c9bec6c22427819af0f651436"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s88_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "047a4205afc9700fa5f34fc3a8d56c858adf27e6c09811a36ac99eec7c208731"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s89_POINT_CE_0.01_checkpoints.json",
+      "sha256": "26ec2065a33482da51a0c6a16965861618031b31b445b5dd938185d1fd8e0ed2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s89_POINT_CE_0.03_checkpoints.json",
+      "sha256": "417f4a0b015bb67beda995009714b8e41d3bb98e8102c447cecc3a71f90b153a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s89_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "adaafcebe5d4c5af81b03880c3996e46517a6f2635605a6608f5f6f91e1af2ff"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s89_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "04c807b5ef07868a647cc8df620188ef1f5a411304bc2118b92b2a6834208cbe"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s8_POINT_CE_0.01_checkpoints.json",
+      "sha256": "bef77279f5addf783d6124c451b2a4ea65dde297bebcbe7e812ceef71edf761b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s8_POINT_CE_0.03_checkpoints.json",
+      "sha256": "57eb72754d7380e632aae431063941b9607cc1d0b745a4f987c7b5b3e9919455"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s8_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "524be86cbd998ac83bea58590b41ae0aeae5cf8ceaa75243659b40e3f39ea144"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s8_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "ca330d6edd6e0539cfdac369b565b269aada5d0f7e28f4a9b7b119d1a52add79"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s90_POINT_CE_0.01_checkpoints.json",
+      "sha256": "811ab84a6c2fe369bbc9fd54454f17ff5c235e4b905010e4576aa404604ea6b1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s90_POINT_CE_0.03_checkpoints.json",
+      "sha256": "46c196eede7fcfdfe15c5745332e2fab7fc687287579713064d47fcbd6583a18"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s90_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "9d3b3ae4279a7a377c66a0a048016d9489ccfbf3cf68819b05dbe93e04b6308e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s90_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "f5813fdc5cba87f0a6b74382f46dc26394e3ab00b6ce832ac9d68f7262d0765a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s91_POINT_CE_0.01_checkpoints.json",
+      "sha256": "0bf1cac81138ab1cd70d4d28140a62ab29fd308e75d90e5ca9e0333bf7138ef1"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s91_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d91e1575cd40646f3aa335e3d3a583548cb926b43584fb06ec2b4d8ce6186b72"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s91_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "d9dfb5bcb429a4df37cb4916fd4c4cf7eba15ffafa1682f539bcbf2bdac804ee"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s91_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "261ca2fb232244d2d2c98f9d96285b592fd90cc32047ed98bf714c5e0f917a49"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s92_POINT_CE_0.01_checkpoints.json",
+      "sha256": "74fbc2f42d7fd46b28ea64af633ec612d6d7c5d23a03113005458b027d493cdc"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s92_POINT_CE_0.03_checkpoints.json",
+      "sha256": "dd89373fe92e736605758e7d149387d9850631d50af74fe91e7e15abef81a2a0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s92_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "4d4485c00242728aa10a9025c656474be368654697e21b468e9d01ee3622f46e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s92_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "8223692d23661f6ac1a1bf30e04345a6f8b18d0e465ed4e156ff0ae01206fb41"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s93_POINT_CE_0.01_checkpoints.json",
+      "sha256": "f90c6af8d9a6a6df4f289cbe4183a62788e6663561f1810f8c91f966df29c318"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s93_POINT_CE_0.03_checkpoints.json",
+      "sha256": "55b8d6379991a69e738a85b6c47cfc51065086a5b1e84e724d54d0dd34e9728e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s93_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "2c289e6aed82135141d9c5f9a2a61c48c0d398db5af25525cb38e7d6baf87085"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s93_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "dd1ef0db0973ce7d62657cc9f7798e352f200e0d7ea6fc764b46d85f1641f89b"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s94_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e0808471b9e6c69ce38eb6193a4d87773796c8d21cbc1b72c071da3254d47139"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s94_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d6f378fa971c30b6bfe57975cedf3248ad5e0b0ae9e9f77c873d898fcb5be773"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s94_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "d9399aeb53a83f29c41e704cbcaa269850b74f29dbfef428ff6c7ba44b7ade96"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s94_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "7d1c75aef7cbb434ef64faad0480e52e209a3afbd72681a51dd268efd628f61f"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s95_POINT_CE_0.01_checkpoints.json",
+      "sha256": "e625c20ab8e8143f578d0c43ba4f68aeba41aaf37476462fd1e95d0c6e5cce3c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s95_POINT_CE_0.03_checkpoints.json",
+      "sha256": "3d9cbed6c3dde80ac39af3beb2e4007b8b12757608e025932572a834699ce2c0"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s95_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "34f3da021c9fc5cb703e99e7c2eaeedddc40e7ac2ed5f1d6249923d9de96fa78"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s95_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "3afee25a997d50de40038caafbd347ba747d2815fe4dfb2c05fb313ab9b91dcb"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s96_POINT_CE_0.01_checkpoints.json",
+      "sha256": "cfd6f3fe6f82348787025d5afe09fa1022709e64c997266ef148fa2ad1eb7efa"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s96_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1d9cf0f1afb7e24ebfd29d922990baea55722d6a71ddd177f003a7cbd59fd420"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s96_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "a5c6e094279b13252c83b98e0a16e62dff5db9e9c30205d3ff8944a914b7fb00"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s96_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "0f22121d6dba83f814a90cabb575b78acd0ad5644c27a66d86669fbc026df274"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s97_POINT_CE_0.01_checkpoints.json",
+      "sha256": "4c92e5e258a21003a657d0ceff2409dca20d43d75895358e2a133e0df9443230"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s97_POINT_CE_0.03_checkpoints.json",
+      "sha256": "923e3112b4a493b1cd9832204c52222aae2a46cc369b9d9f8b093c78af857684"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s97_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "454cb72c08e65f010913b5401d7420783089e6103ce2679a2c0660da3e536060"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s97_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "521ba16667d263a56252c29ad8c6581659e4437f6cc7f8c49f437fcd6cb2eb7a"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s98_POINT_CE_0.01_checkpoints.json",
+      "sha256": "55e32a7b120ab839b065afce70e43f48b023974df3437216b7e6a177748acd49"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s98_POINT_CE_0.03_checkpoints.json",
+      "sha256": "1db383a8e91920b925dd5d47a4797d346ff3094049a7e07dc2fb2751070b359e"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s98_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "63a350d01eca4dc9daf255bf5adb3e2745ff10abb3aa54a4387d7c824bfe0dd5"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s98_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "89ed749922873cd17d489c9075f8e80068ea0f050c9f682a35c3a4f448215d43"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s99_POINT_CE_0.01_checkpoints.json",
+      "sha256": "1a899783a59678b552b717c75a66ca05fe164f2516d85b853d86c23ef49114f2"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s99_POINT_CE_0.03_checkpoints.json",
+      "sha256": "e53d533c62b092a75cf35d6deefb418fb5129c2013cf6f1612d83d486130982c"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s99_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "8bcdeaaba236ccdd585a07ccb89931128848a2887f8a07a22df943932457a095"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s99_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "91f981b20eea10f62815d8fb1e46396b2849d960b7acfbcf2aef37cc672b4148"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s9_POINT_CE_0.01_checkpoints.json",
+      "sha256": "4b8abc32de854e066d0ae91d1750126de85002b77e681379358094358e236d2d"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s9_POINT_CE_0.03_checkpoints.json",
+      "sha256": "d47dadfbeca6068bcdff1bc28564f6f6310edac6f297354b90d263cc61442210"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s9_POINT_RATE_0.01_checkpoints.json",
+      "sha256": "e753f9fe1aebadbe113105a75c10b35f9c0122358e3f5c6b2cedde97723c59d5"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/s9_POINT_RATE_0.03_checkpoints.json",
+      "sha256": "a0e939aeb484c91e21e03d96822988f8edf1ab43f33f68a1ff744b90df0d3353"
+    },
+    {
+      "path": "research/dendritic-population-v8/results/verification.json",
+      "sha256": "b2799f9fb845dd897caedfe9d64fb46caedd6f634e33db8c7296cec4f78a800e"
+    },
+    {
+      "path": "research/dendritic-population-v8/runner.py",
+      "sha256": "8d17774c64e611647e2917664da30a9e76e117e209d8268ad0c93a3c969cb889"
+    },
+    {
+      "path": "research/dendritic-population-v8/summarize.py",
+      "sha256": "eb16c4dbe4d415b594e1ddc64cd7e6cc66c618ab67c2703c021154c7c2805a2c"
+    },
+    {
+      "path": "research/dendritic-population-v8/verify.py",
+      "sha256": "fe51fe1a16191551e52ee32f73cd1976ca3495f77e43f1ab7225a8bdc35b5179"
+    },
+    {
+      "path": "research/dendritic-population-v9/CONTRACT_CHECK.json",
+      "sha256": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a"
+    },
+    {
+      "path": "research/dendritic-population-v9/FREEZE.json",
+      "sha256": "d402df8ab41e934b83ffdb5d1bda8a6126f3719040386689cfd0da0a7adf7ed9"
+    },
+    {
+      "path": "research/dendritic-population-v9/GRADIENT_CHECK.json",
+      "sha256": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327"
+    },
+    {
+      "path": "research/dendritic-population-v9/MASKED_CHECK.json",
+      "sha256": "252ac1c28883878d54c9dcc5f106f0eac01e8cce3403688286442b1b8017c823"
+    },
+    {
+      "path": "research/dendritic-population-v9/PROTOCOL.md",
+      "sha256": "26abaf1b6420a889c1ea58ddbaa2de8276ec987c6b2d675b7acb8032b0ecce75"
+    },
+    {
+      "path": "research/dendritic-population-v9/SEEDS.json",
+      "sha256": "52cce05865af8198989eb75af526f782369fb1a19b3f7b04aad4c7af2f90f76a"
+    },
+    {
+      "path": "research/dendritic-population-v9/SOURCE_AUDIT.json",
+      "sha256": "42dd946ceb3ef1fae6c9fda3f3df5b16a0262c08d5400ff14a9d1aa541ac6505"
+    },
+    {
+      "path": "research/dendritic-population-v9/audit_gradients.py",
+      "sha256": "6e66ec367b493692477d2ae32e2f7d962314bf9ce981d17703df42ec4c8a4e05"
+    },
+    {
+      "path": "research/dendritic-population-v9/check_contracts.py",
+      "sha256": "0a3ae4ff6150a7a473d823265bccf9a5f11ff08642c26c9161300f315353eae2"
+    },
+    {
+      "path": "research/dendritic-population-v9/check_gradients.py",
+      "sha256": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1"
+    },
+    {
+      "path": "research/dendritic-population-v9/check_masked.py",
+      "sha256": "54197ff37cc7ab898964ff6734fcfc523a14e33160937353e9e2d5a740916111"
+    },
+    {
+      "path": "research/dendritic-population-v9/common.py",
+      "sha256": "be79beb345e891fd431ffa68637ac82a88d5581df370c1ae8b1f263b0a27533c"
+    },
+    {
+      "path": "research/dendritic-population-v9/data.py",
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+    },
+    {
+      "path": "research/dendritic-population-v9/evaluate.py",
+      "sha256": "ecfb475282dea21227a8bba988a9d3daa6d82db7550b7ce8f09e0b28e5cc18e7"
+    },
+    {
+      "path": "research/dendritic-population-v9/model.py",
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb"
+    },
+    {
+      "path": "research/dendritic-population-v9/runner.py",
+      "sha256": "0d65bc623776d5094661ea4005fbdb46883d03cbabb6dcc744ba6490940d49f3"
+    },
+    {
+      "path": "research/dendritic-population-v9/summarize.py",
+      "sha256": "ef06880a8569a4b57bfab5d3f29d44a2de915e20ab71e2a9eb2d1d189f49b1b6"
+    },
+    {
+      "path": "research/dendritic-population-v9/verify.py",
+      "sha256": "5b19202f076bb490c664ed01d3668dd9b54f230ca648a943e92bf251cc3d16c8"
+    }
+  ],
+  "collisions": [],
+  "limitations": "Exact integer-token scan of V1\u2013V9 .py/.md/.json/.csv artifacts, restricted to stable V9 protocol/source/seed files because its execution may overlap preparation. This is not a global uniqueness proof across external software or absent archives. File hashes record this audit snapshot, not a claim of immutable prior reporting outputs. Fixture seeds are excluded from scientific seed claims.",
+  "claims": [
+    "Current POINT already has two native spiking branch cells per hidden soma.",
+    "Current DEND uses ReLU, not NMDA conductance.",
+    "Both arms retain .85 branch and .65 soma/output coefficients.",
+    "The 150ms/10ms earlier evidence used a different modified model and analog inverse decoder.",
+    "V1 already tested fixed local nonlinear binding against pooling and strong POINT."
+  ]
+}
