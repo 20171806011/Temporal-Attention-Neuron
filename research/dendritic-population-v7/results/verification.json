@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": 202055,
+  "training": {
+    "trajectories": 160,
+    "reconstructed_updates": 32000,
+    "native_training_checkpoints": 1440,
+    "native_training_checkpoint_episodes": 184320,
+    "full_saved_training_trajectory_episodes": 20480,
+    "independently_replayed_initial_objectives": 160,
+    "count_derived_history_rows": 32000,
+    "max_training_state_candidate_residual": 1.7763568394002505e-15
+  },
+  "tests": {
+    "test_models": 160,
+    "test_model_episodes": 81920,
+    "unique_test_histories": 10240,
+    "max_test_state_candidate_residual": 3.552713678800501e-15,
+    "paired_seed_intervals": 50,
+    "bonferroni_primary_intervals": 6,
+    "wilson_run_event_intervals": 24
+  },
+  "distinct_training_test_histories": 12800,
+  "seconds": 40.28837155800011,
+  "scope": "Separate delayed-XOR RNG, initialization, scalar native equations, metrics, factorial cell arithmetic, seed-unit bootstrap, six primary Bonferroni intervals and Wilson implementation. All saved-gradient Adam steps/checkpoints reconstruct; every stored count-derived loss/metric and all sampled checkpoint native metrics match. Full native spikes/counts/predictions replay for final train and test. Native trajectories are not re-evaluated at every unsampled training update. Surrogate gradients are checked separately. Internal workflow verification is not outside replication or peer review."
+}

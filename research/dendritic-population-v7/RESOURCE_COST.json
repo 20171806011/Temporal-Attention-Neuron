@@ -1,0 +1,179 @@
+{
+  "cells": [
+    {
+      "arm": "DEND",
+      "recipe": "RATE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.857597916999566
+    },
+    {
+      "arm": "DEND",
+      "recipe": "RATE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.627046907999784
+    },
+    {
+      "arm": "DEND",
+      "recipe": "CE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.778785388999495
+    },
+    {
+      "arm": "DEND",
+      "recipe": "CE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.99581699199939
+    },
+    {
+      "arm": "POINT",
+      "recipe": "RATE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.621114295000552
+    },
+    {
+      "arm": "POINT",
+      "recipe": "RATE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.716710821000106
+    },
+    {
+      "arm": "POINT",
+      "recipe": "CE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.84791502500002
+    },
+    {
+      "arm": "POINT",
+      "recipe": "CE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.511428217999992
+    }
+  ],
+  "totals": {
+    "trajectories": 160,
+    "parameter_updates": 32000,
+    "forward_dense_MAC_terms": 15335424000,
+    "backward_dense_MAC_terms": 23592960000,
+    "checkpoint_training_forward_batches": 1440,
+    "checkpoint_forward_dense_MAC_terms": 690094080,
+    "test_forward_dense_MAC_terms": 306708480
+  },
+  "shared_resources": {
+    "trainable_float64_parameters": 176,
+    "continuous_states": 20,
+    "previous_hidden_spike_states": 6,
+    "output_count_accumulators": 2,
+    "training_batch": 128,
+    "sequence_steps": 24,
+    "updates_per_trajectory": 200,
+    "test_episodes_per_block": 512,
+    "training_seed_blocks": 20,
+    "cells_per_block": 8,
+    "unique_training_histories": 2560,
+    "unique_test_histories": 10240,
+    "model_test_episodes": 81920,
+    "forward_dense_MAC_terms_per_episode_step": 156,
+    "backward_dense_MAC_terms_per_episode_step": 240,
+    "checkpoint_updates": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ]
+  },
+  "training_phase_wall_seconds": 146.7839845860001,
+  "test_artifact_phase_wall_seconds": 24.73313060800001,
+  "test_inference_seconds": 1.0409089939998921,
+  "audits": {
+    "verification": {
+      "status": "PASS",
+      "recorded_wall_seconds": 40.28837155800011,
+      "training_counts": {
+        "trajectories": 160,
+        "reconstructed_updates": 32000,
+        "native_training_checkpoints": 1440,
+        "native_training_checkpoint_episodes": 184320,
+        "full_saved_training_trajectory_episodes": 20480,
+        "independently_replayed_initial_objectives": 160,
+        "count_derived_history_rows": 32000,
+        "max_training_state_candidate_residual": 1.7763568394002505e-15
+      },
+      "test_counts": {
+        "test_models": 160,
+        "test_model_episodes": 81920,
+        "unique_test_histories": 10240,
+        "max_test_state_candidate_residual": 3.552713678800501e-15,
+        "paired_seed_intervals": 50,
+        "bonferroni_primary_intervals": 6,
+        "wilson_run_event_intervals": 24
+      }
+    },
+    "gradient_audit": {
+      "status": "PASS",
+      "recorded_wall_seconds": 73.70601656999997,
+      "sampled_updates": 480,
+      "final_checkpoints": 160,
+      "parameter_derivative_checks": 28160
+    }
+  },
+  "limitations": [
+    "Dense matrix MAC counts exclude scalar nonlinearities, resets, loss computation, Adam, data generation, I/O and numerical audits.",
+    "Recorded wall times depend on CPU contention and file compression; separate audit times may overlap and must not be summed as elapsed workflow time.",
+    "DEND has 12 graded compartments while POINT has 12 additional spiking branch cells; scalar work, activation patterns and reset derivatives differ.",
+    "Matching matrix terms and nominal learning rates does not establish equal effective updates, energy or hardware cost.",
+    "Checkpoint forward counts include the final training diagnostic; no validation or hyperparameter selection runs were performed."
+  ]
+}

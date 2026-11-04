@@ -1,0 +1,812 @@
+{
+  "status": "PASS",
+  "sampled_updates": 480,
+  "max_sampled_gradient_residual": 0,
+  "final_checkpoints": 160,
+  "parameter_derivative_checks": 28160,
+  "max_chain_rule_residual": 3.717453804299455e-10,
+  "rows": [
+    {
+      "id": "s0_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.6838878838810153e-13
+    },
+    {
+      "id": "s0_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.495006185039317e-12
+    },
+    {
+      "id": "s0_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.408230097762704e-11
+    },
+    {
+      "id": "s0_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.682750055309969e-11
+    },
+    {
+      "id": "s0_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.817461986710291e-11
+    },
+    {
+      "id": "s0_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.055477025838932e-11
+    },
+    {
+      "id": "s0_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.812911561882937e-11
+    },
+    {
+      "id": "s0_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.2900193333573746e-10
+    },
+    {
+      "id": "s1_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 4.146981389807793e-14
+    },
+    {
+      "id": "s1_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.657565552240682e-11
+    },
+    {
+      "id": "s1_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.18399540851501e-11
+    },
+    {
+      "id": "s1_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1722148341515755e-10
+    },
+    {
+      "id": "s1_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.3541850543637444e-11
+    },
+    {
+      "id": "s1_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1314473904094685e-11
+    },
+    {
+      "id": "s1_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.9855494248706704e-10
+    },
+    {
+      "id": "s1_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.314502904330009e-11
+    },
+    {
+      "id": "s2_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.776923522818794e-12
+    },
+    {
+      "id": "s2_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.897803085894964e-12
+    },
+    {
+      "id": "s2_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0223875131915028e-10
+    },
+    {
+      "id": "s2_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.555208115455196e-11
+    },
+    {
+      "id": "s2_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.6515069003266167e-11
+    },
+    {
+      "id": "s2_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.4158195449365252e-11
+    },
+    {
+      "id": "s2_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.8013247783579128e-10
+    },
+    {
+      "id": "s2_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.790802553194446e-11
+    },
+    {
+      "id": "s3_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.95331037274921e-12
+    },
+    {
+      "id": "s3_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.899601575704328e-12
+    },
+    {
+      "id": "s3_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.702040874252221e-11
+    },
+    {
+      "id": "s3_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.1026393470856101e-10
+    },
+    {
+      "id": "s3_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0795952033993653e-11
+    },
+    {
+      "id": "s3_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3495761325425966e-11
+    },
+    {
+      "id": "s3_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.153374965320476e-10
+    },
+    {
+      "id": "s3_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.30041755992236e-11
+    },
+    {
+      "id": "s4_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.938572104710829e-12
+    },
+    {
+      "id": "s4_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.3056899580109437e-11
+    },
+    {
+      "id": "s4_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.748433635846376e-11
+    },
+    {
+      "id": "s4_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.305069498326483e-11
+    },
+    {
+      "id": "s4_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.8164344523972295e-11
+    },
+    {
+      "id": "s4_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 4.007321651389582e-11
+    },
+    {
+      "id": "s4_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.8126670618071744e-10
+    },
+    {
+      "id": "s4_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3293553137250843e-10
+    },
+    {
+      "id": "s5_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.565854111832651e-12
+    },
+    {
+      "id": "s5_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.958285401518735e-11
+    },
+    {
+      "id": "s5_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.813564246169762e-11
+    },
+    {
+      "id": "s5_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.416478363741487e-11
+    },
+    {
+      "id": "s5_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.4306514889319936e-11
+    },
+    {
+      "id": "s5_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1031034526643693e-11
+    },
+    {
+      "id": "s5_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.717453804299455e-10
+    },
+    {
+      "id": "s5_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.299748709827582e-11
+    },
+    {
+      "id": "s6_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 6.421542117496237e-12
+    },
+    {
+      "id": "s6_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5669547256957905e-11
+    },
+    {
+      "id": "s6_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 6.627840621166795e-11
+    },
+    {
+      "id": "s6_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.977875254337806e-11
+    },
+    {
+      "id": "s6_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.72266787708464e-11
+    },
+    {
+      "id": "s6_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.5329343830726436e-11
+    },
+    {
+      "id": "s6_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1324934504172886e-10
+    },
+    {
+      "id": "s6_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.461244821992211e-11
+    },
+    {
+      "id": "s7_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0376430432655308e-11
+    },
+    {
+      "id": "s7_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.010618758817694e-11
+    },
+    {
+      "id": "s7_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.038466392566552e-11
+    },
+    {
+      "id": "s7_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.321537468142485e-11
+    },
+    {
+      "id": "s7_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.661486622796475e-11
+    },
+    {
+      "id": "s7_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1002835795248522e-10
+    },
+    {
+      "id": "s7_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5472956770012924e-10
+    },
+    {
+      "id": "s7_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3487188248824042e-10
+    },
+    {
+      "id": "s8_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1088807172834891e-11
+    },
+    {
+      "id": "s8_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5797247190918462e-11
+    },
+    {
+      "id": "s8_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0306286200986378e-10
+    },
+    {
+      "id": "s8_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1027509873133556e-10
+    },
+    {
+      "id": "s8_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 4.7383277856916095e-11
+    },
+    {
+      "id": "s8_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.354384244476561e-12
+    },
+    {
+      "id": "s8_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.103436300664562e-10
+    },
+    {
+      "id": "s8_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.114073330658362e-10
+    },
+    {
+      "id": "s9_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 6.969910835043626e-12
+    },
+    {
+      "id": "s9_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1112250225889242e-11
+    },
+    {
+      "id": "s9_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.166824649272902e-11
+    },
+    {
+      "id": "s9_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2289159391275044e-10
+    },
+    {
+      "id": "s9_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.33895539825613e-12
+    },
+    {
+      "id": "s9_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.9527941469456916e-11
+    },
+    {
+      "id": "s9_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.772859682720983e-11
+    },
+    {
+      "id": "s9_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1352680386110532e-10
+    },
+    {
+      "id": "s10_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3020676984526469e-11
+    },
+    {
+      "id": "s10_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.6430724619417858e-11
+    },
+    {
+      "id": "s10_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.522638911131989e-11
+    },
+    {
+      "id": "s10_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.997788753696968e-11
+    },
+    {
+      "id": "s10_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.434531493501063e-11
+    },
+    {
+      "id": "s10_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.334613141100495e-11
+    },
+    {
+      "id": "s10_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.070548462721331e-11
+    },
+    {
+      "id": "s10_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.64669863886902e-11
+    },
+    {
+      "id": "s11_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.534291785498879e-14
+    },
+    {
+      "id": "s11_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.634656795652006e-12
+    },
+    {
+      "id": "s11_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.058369966592541e-11
+    },
+    {
+      "id": "s11_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.131646443256436e-11
+    },
+    {
+      "id": "s11_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 5.504587011087667e-11
+    },
+    {
+      "id": "s11_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.6232137627049028e-11
+    },
+    {
+      "id": "s11_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1426013429946969e-10
+    },
+    {
+      "id": "s11_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1616396381727888e-10
+    },
+    {
+      "id": "s12_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3629931927029715e-11
+    },
+    {
+      "id": "s12_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5327495783007405e-11
+    },
+    {
+      "id": "s12_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.668899947183618e-11
+    },
+    {
+      "id": "s12_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.45976824935524e-11
+    },
+    {
+      "id": "s12_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0065737340384244e-10
+    },
+    {
+      "id": "s12_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.72099396361575e-11
+    },
+    {
+      "id": "s12_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1658598502364424e-10
+    },
+    {
+      "id": "s12_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.025576273211426e-10
+    },
+    {
+      "id": "s13_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.239738152106575e-12
+    },
+    {
+      "id": "s13_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.912492841496772e-12
+    },
+    {
+      "id": "s13_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.232906825896003e-11
+    },
+    {
+      "id": "s13_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.346386186370024e-11
+    },
+    {
+      "id": "s13_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.8830443931569518e-11
+    },
+    {
+      "id": "s13_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.3504651310301004e-11
+    },
+    {
+      "id": "s13_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.627514805001346e-11
+    },
+    {
+      "id": "s13_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.92653981880592e-11
+    },
+    {
+      "id": "s14_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2452573694421432e-11
+    },
+    {
+      "id": "s14_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.3956807891634124e-11
+    },
+    {
+      "id": "s14_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.719338242248957e-11
+    },
+    {
+      "id": "s14_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.456102193450186e-11
+    },
+    {
+      "id": "s14_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0427749717145218e-11
+    },
+    {
+      "id": "s14_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0047729063832967e-11
+    },
+    {
+      "id": "s14_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3790370827557316e-10
+    },
+    {
+      "id": "s14_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.4195767412499333e-10
+    },
+    {
+      "id": "s15_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.3594367005795999e-11
+    },
+    {
+      "id": "s15_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5123377214171924e-11
+    },
+    {
+      "id": "s15_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.803693176282492e-11
+    },
+    {
+      "id": "s15_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.77451100072143e-10
+    },
+    {
+      "id": "s15_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.4973827580962654e-11
+    },
+    {
+      "id": "s15_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.4839309862439984e-11
+    },
+    {
+      "id": "s15_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.560230437989043e-11
+    },
+    {
+      "id": "s15_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.4699465141430055e-10
+    },
+    {
+      "id": "s16_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.531282668158835e-12
+    },
+    {
+      "id": "s16_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.0071783970142254e-11
+    },
+    {
+      "id": "s16_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2563610957518675e-10
+    },
+    {
+      "id": "s16_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0721405653470878e-10
+    },
+    {
+      "id": "s16_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.799155453694704e-11
+    },
+    {
+      "id": "s16_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.272847572412061e-11
+    },
+    {
+      "id": "s16_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1472874083054418e-10
+    },
+    {
+      "id": "s16_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2767099096672174e-10
+    },
+    {
+      "id": "s17_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0165597787918472e-11
+    },
+    {
+      "id": "s17_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.2135169001216508e-11
+    },
+    {
+      "id": "s17_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.699033026235293e-11
+    },
+    {
+      "id": "s17_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.1868814623879152e-10
+    },
+    {
+      "id": "s17_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2763820030200698e-11
+    },
+    {
+      "id": "s17_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.0193584397552216e-11
+    },
+    {
+      "id": "s17_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0642764046948564e-10
+    },
+    {
+      "id": "s17_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0222920374376333e-10
+    },
+    {
+      "id": "s18_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.8190559301911602e-11
+    },
+    {
+      "id": "s18_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.5384673008087884e-11
+    },
+    {
+      "id": "s18_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.357556587437233e-11
+    },
+    {
+      "id": "s18_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0516847879756333e-10
+    },
+    {
+      "id": "s18_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.653112235384187e-11
+    },
+    {
+      "id": "s18_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.916320771028172e-11
+    },
+    {
+      "id": "s18_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.788499995023707e-11
+    },
+    {
+      "id": "s18_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.0531223258424265e-10
+    },
+    {
+      "id": "s19_DEND_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.523274215098347e-11
+    },
+    {
+      "id": "s19_DEND_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.7752633239311033e-11
+    },
+    {
+      "id": "s19_DEND_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 8.253889596538527e-11
+    },
+    {
+      "id": "s19_DEND_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 9.898902671948845e-11
+    },
+    {
+      "id": "s19_POINT_RATE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.6377693431578362e-11
+    },
+    {
+      "id": "s19_POINT_RATE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.428767212213922e-12
+    },
+    {
+      "id": "s19_POINT_CE_0.01",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.865503569098008e-11
+    },
+    {
+      "id": "s19_POINT_CE_0.03",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.5078488478837858e-10
+    }
+  ],
+  "seconds": 73.70601656999997,
+  "limits": "Finite differences on locally anchored surrogate graph, not hard-spike derivative. Sampled gradients reuse frozen analytic backward. Native/data/Adam/statistics checker separately written."
+}

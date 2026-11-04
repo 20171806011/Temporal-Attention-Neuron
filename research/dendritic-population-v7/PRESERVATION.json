@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "baseline": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
+  "historical_manifests": [
+    {
+      "phase": 1,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "entries": 49
+    },
+    {
+      "phase": 2,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "entries": 61
+    },
+    {
+      "phase": 3,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "entries": 92
+    },
+    {
+      "phase": 4,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "entries": 599
+    },
+    {
+      "phase": 5,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "entries": 562
+    },
+    {
+      "phase": 6,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "entries": 639
+    }
+  ],
+  "unchanged_manifest_entries": 2002,
+  "recorded_origin_main": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "main_check_scope": "Existing local remote-tracking reference; no network fetch, push or main modification in V7",
+  "changes_outside_v7": [],
+  "predata_commit": "8ad0b69e65074563929dff905acc0067837e3778",
+  "checkpoint_commit": "041693b7297b888ed31ac78f8d5677408669f1fe",
+  "commit_gate_checks": {
+    "predata_tree_has_no_results": true,
+    "checkpoint_tree_has_160_initial_and_160_final_weights": true,
+    "checkpoint_tree_has_no_test_data_or_marker": true,
+    "committed_train_lock_matches_delivered_bytes": true,
+    "all_frozen_sources_unchanged": true
+  }
+}
