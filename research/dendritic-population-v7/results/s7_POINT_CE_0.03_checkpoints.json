@@ -1,0 +1,560 @@
+[
+  {
+    "updates": 0,
+    "accuracy": 0.2734375,
+    "coverage": 0.484375,
+    "abstentions": 66,
+    "abstention_rate": 0.515625,
+    "silent_fraction": 0.4296875,
+    "nonsilent_tie_fraction": 0.0859375,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.046875,
+      0.5
+    ],
+    "confusion": [
+      [
+        3,
+        23,
+        38
+      ],
+      [
+        4,
+        32,
+        28
+      ]
+    ],
+    "mean_signed_count_margin": 0.0546875,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      26,
+      66,
+      35,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "branch_event_rate": 0.029324001736111112,
+    "hidden_event_rate": 0.058648003472222224,
+    "output_event_rate": 0.024088541666666668,
+    "readout_hidden_event_rate": 0.11946614583333333,
+    "readout_output_event_rate": 0.04150390625,
+    "output_candidate_margin_quantiles": [
+      -1.496696444185306,
+      -1.0426414179452361,
+      -0.41246265009569805,
+      -0.016515966298602136,
+      0.83660312152566
+    ]
+  },
+  {
+    "updates": 1,
+    "accuracy": 0.3203125,
+    "coverage": 0.515625,
+    "abstentions": 62,
+    "abstention_rate": 0.484375,
+    "silent_fraction": 0.484375,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.640625,
+      0.0
+    ],
+    "confusion": [
+      [
+        41,
+        0,
+        23
+      ],
+      [
+        25,
+        0,
+        39
+      ]
+    ],
+    "mean_signed_count_margin": 0.109375,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      23,
+      62,
+      41,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "branch_event_rate": 0.030219184027777776,
+    "hidden_event_rate": 0.06043836805555555,
+    "output_event_rate": 0.027180989583333332,
+    "readout_hidden_event_rate": 0.115234375,
+    "readout_output_event_rate": 0.033203125,
+    "output_candidate_margin_quantiles": [
+      -1.5331515000712526,
+      -1.1813849132940404,
+      -0.4992788594635832,
+      -0.07588179106376486,
+      0.90768794070664
+    ]
+  },
+  {
+    "updates": 5,
+    "accuracy": 0.0234375,
+    "coverage": 0.0625,
+    "abstentions": 120,
+    "abstention_rate": 0.9375,
+    "silent_fraction": 0.9375,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.015625,
+      0.03125
+    ],
+    "confusion": [
+      [
+        1,
+        5,
+        58
+      ],
+      [
+        0,
+        2,
+        62
+      ]
+    ],
+    "mean_signed_count_margin": -0.015625,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      120,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "branch_event_rate": 0.05710177951388889,
+    "hidden_event_rate": 0.11078559027777778,
+    "output_event_rate": 0.00146484375,
+    "readout_hidden_event_rate": 0.20328776041666666,
+    "readout_output_event_rate": 0.00390625,
+    "output_candidate_margin_quantiles": [
+      -2.6515535247889845,
+      -1.772460231620236,
+      -0.7793796168913434,
+      -0.29646723026192745,
+      0.19045397961541433
+    ]
+  },
+  {
+    "updates": 10,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.1123318142361111,
+    "hidden_event_rate": 0.2035590277777778,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.3287760416666667,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -4.624277992717016,
+      -3.6810498321986134,
+      -1.5698965947830903,
+      -0.6236579325506277,
+      -0.29377689045153194
+    ]
+  },
+  {
+    "updates": 20,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.18372938368055555,
+    "hidden_event_rate": 0.3258463541666667,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.39453125,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -6.106108048651537,
+      -5.424109478324604,
+      -2.4563965770734546,
+      -1.1583479695896908,
+      -0.5146166899459378
+    ]
+  },
+  {
+    "updates": 50,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.1972384982638889,
+    "hidden_event_rate": 0.3406575520833333,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.40478515625,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -6.35688907952671,
+      -5.696466517797034,
+      -2.4134665100970984,
+      -0.8058394257352027,
+      -0.5651058538689729
+    ]
+  },
+  {
+    "updates": 100,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.2422417534722222,
+    "hidden_event_rate": 0.4048394097222222,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.4532877604166667,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -6.351235611380607,
+      -5.742965519194033,
+      -4.092971225720439,
+      -3.1104515160055843,
+      -2.4131525954980515
+    ]
+  },
+  {
+    "updates": 150,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.2423773871527778,
+    "hidden_event_rate": 0.4059787326388889,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.4617513020833333,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -6.60987602248171,
+      -6.337936518211542,
+      -4.162863951261432,
+      -3.1615864456827363,
+      -2.5483470562191926
+    ]
+  },
+  {
+    "updates": 200,
+    "accuracy": 0.0,
+    "coverage": 0.0,
+    "abstentions": 128,
+    "abstention_rate": 1.0,
+    "silent_fraction": 1.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        0,
+        0,
+        64
+      ],
+      [
+        0,
+        0,
+        64
+      ]
+    ],
+    "mean_signed_count_margin": 0.0,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      128,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": true,
+    "fully_abstaining": true,
+    "branch_event_rate": 0.241943359375,
+    "hidden_event_rate": 0.4066840277777778,
+    "output_event_rate": 0.0,
+    "readout_hidden_event_rate": 0.4474283854166667,
+    "readout_output_event_rate": 0.0,
+    "output_candidate_margin_quantiles": [
+      -7.3100512306348655,
+      -6.89881875288487,
+      -4.350933218789734,
+      -3.090772490394743,
+      -2.4083564342653068
+    ]
+  }
+]
