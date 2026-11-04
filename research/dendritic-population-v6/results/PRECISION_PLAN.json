@@ -1,0 +1,23 @@
+{
+  "primary": "accuracy_DEND_CE_minus_RATE",
+  "pilot_pairs": 20,
+  "paired_accuracy_SD_ddof1": 0.33922787782101405,
+  "mean_precision_illustrations": [
+    {
+      "target_half_width": 0.05,
+      "normal_approx_pairs": 177,
+      "inflated_SD_1_5_pairs": 398
+    },
+    {
+      "target_half_width": 0.1,
+      "normal_approx_pairs": 45,
+      "inflated_SD_1_5_pairs": 100
+    }
+  ],
+  "pilot_zero_failures_one_sided95_upper": 0.13910834066826516,
+  "future_single_failure_proportion_worstcase_normal_pairs_for_halfwidth_0_10": 97,
+  "future_single_failure_proportion_worstcase_normal_pairs_for_halfwidth_0_05": 385,
+  "fresh_zero_failure_runs_for_one_sided95_upper_below_0_05": 59,
+  "upper_if_zero_of59": 0.049507609888227,
+  "limitations": "Illustrative normal precision estimates, not guaranteed power or required/authorized runs.20pairpilotSD is uncertain, especially with silent/success mixtures.1.5xSD is sensitivity,not a confidence bound.0SD would not justify n=0. Paired failure differences additionally require discordance assumptions.Confirmatory study needs new seeds and independent implementation/team review; none run here."
+}
