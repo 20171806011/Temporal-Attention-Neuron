@@ -1,0 +1,120 @@
+{
+  "edition": "2026-11-04 V6–V10 publication",
+  "status": "Versioned publication edition; the containing Git commit and remote refs identify the published revision",
+  "repository": "20171806011/Temporal-Attention-Neuron",
+  "publication_branch": "research/population-paper-v6-v10-2026-11-04",
+  "source_commit": "c75814eac5202e6a265ca42e78805f906d302249",
+  "components": [
+    {
+      "phase": "V1",
+      "directory": "research/dendritic-population-v1",
+      "manifest": "research/dendritic-population-v1/MANIFEST.json",
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "declared_files_excluding_manifest": 49,
+      "bytes_including_manifest": 32407232
+    },
+    {
+      "phase": "V2",
+      "directory": "research/dendritic-population-v2",
+      "manifest": "research/dendritic-population-v2/MANIFEST.json",
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "declared_files_excluding_manifest": 61,
+      "bytes_including_manifest": 37566197
+    },
+    {
+      "phase": "V3",
+      "directory": "research/dendritic-population-v3",
+      "manifest": "research/dendritic-population-v3/MANIFEST.json",
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "declared_files_excluding_manifest": 92,
+      "bytes_including_manifest": 43629034
+    },
+    {
+      "phase": "V4",
+      "directory": "research/dendritic-population-v4",
+      "manifest": "research/dendritic-population-v4/MANIFEST.json",
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "declared_files_excluding_manifest": 599,
+      "bytes_including_manifest": 158108930
+    },
+    {
+      "phase": "V5",
+      "directory": "research/dendritic-population-v5",
+      "manifest": "research/dendritic-population-v5/MANIFEST.json",
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "declared_files_excluding_manifest": 562,
+      "bytes_including_manifest": 337331672
+    },
+    {
+      "phase": "V6",
+      "directory": "research/dendritic-population-v6",
+      "manifest": "research/dendritic-population-v6/MANIFEST.json",
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "declared_files_excluding_manifest": 639,
+      "bytes_including_manifest": 330904629
+    },
+    {
+      "phase": "V7",
+      "directory": "research/dendritic-population-v7",
+      "manifest": "research/dendritic-population-v7/MANIFEST.json",
+      "manifest_sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd",
+      "declared_files_excluding_manifest": 1203,
+      "bytes_including_manifest": 653588120
+    },
+    {
+      "phase": "V8",
+      "directory": "research/dendritic-population-v8",
+      "manifest": "research/dendritic-population-v8/MANIFEST.json",
+      "manifest_sha256": "d4524d9c9a7e9f5a63073e7b16abb43d07b594cc8ebc9620416f3a0c5fab3f7b",
+      "declared_files_excluding_manifest": 3170,
+      "bytes_including_manifest": 1510162327
+    },
+    {
+      "phase": "V9",
+      "directory": "research/dendritic-population-v9",
+      "manifest": "research/dendritic-population-v9/MANIFEST.json",
+      "manifest_sha256": "caf15b22a901844c28587616b7383a035d326e8ed297333b179746425599e65d",
+      "declared_files_excluding_manifest": 213,
+      "bytes_including_manifest": 112646248
+    },
+    {
+      "phase": "V10A",
+      "directory": "research/dendritic-population-v10",
+      "manifest": "research/dendritic-population-v10/MANIFEST.json",
+      "manifest_sha256": "3359857ab31ce862877366f79d56c680f1f6feaf05b5bd314b673da8fda8a823",
+      "declared_files_excluding_manifest": 337,
+      "bytes_including_manifest": 90470321
+    }
+  ],
+  "v6_v10_tracked_files": 5567,
+  "v6_v10_manifest_entries": 5562,
+  "v6_v10_bytes": 2697771645,
+  "new_manuscript": "papers/native-spike-populations-2026/manuscript.md",
+  "historical_status_policy": "Original frozen local-only/pause/publication statements remain execution-time records; this edition provides the later publication context. Earlier manifests unchanged.",
+  "scientific_execution": "No new fits, model simulations or scientific test evaluations for publication; source identity, saved arithmetic, document and remote checks only",
+  "reviewed_source_commits": {
+    "V6": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
+    "V7": "0c74816da453003490f313c8ee7939e16840e4f2",
+    "V8": "9cddbbad7f1722d8a116c0a8245fc40d3a5e97ca",
+    "V9_V10A": "c75814eac5202e6a265ca42e78805f906d302249"
+  },
+  "publication_method": "Preserve original Git history, push complete phase commits in bounded batches, then publish and merge a reviewable cumulative PR; no force push or history rewrite",
+  "transport_reference": "https://docs.github.com/en/get-started/using-git/troubleshooting-the-2-gb-push-limit",
+  "paper_manifest": {
+    "path": "papers/native-spike-populations-2026/MANIFEST.json",
+    "sha256": "fe753cbddcad130f0b97677222fc943dbaa85948dd4cb247c0d4675b14dbbc43",
+    "files": 21
+  },
+  "validation": {
+    "publication_checks": 5512,
+    "pinned_sources": 117,
+    "report": "papers/native-spike-populations-2026/validation.json",
+    "scientific_reexecution": false
+  },
+  "published_phase_branches": {
+    "research/dendritic-population-v6-2026-11-04": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
+    "research/dendritic-population-v7-2026-11-04": "0c74816da453003490f313c8ee7939e16840e4f2",
+    "research/dendritic-population-v8-2026-11-04": "9cddbbad7f1722d8a116c0a8245fc40d3a5e97ca",
+    "research/dendritic-population-v9-v10": "c75814eac5202e6a265ca42e78805f906d302249"
+  }
+}
