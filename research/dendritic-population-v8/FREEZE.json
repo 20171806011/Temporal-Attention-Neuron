@@ -1,0 +1,60 @@
+{
+  "baseline": "0c74816da453003490f313c8ee7939e16840e4f2",
+  "frozen_at_utc": "2026-11-04T19:28:41.818371+00:00",
+  "status": "Before any V8 scientific data generation; V7-only sample-size planning and deterministic fixtures completed",
+  "sha256": {
+    "model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+    "data.py": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+    "common.py": "084c99045b43d1db1738efbe7c7906ddfd0ba3c15a701e0c5f7fbf610a560f6b",
+    "runner.py": "8d17774c64e611647e2917664da30a9e76e117e209d8268ad0c93a3c969cb889",
+    "evaluate.py": "156f25505e07b6bbf014aa44afb8c5d75b957e3f20733f2ad2c8068d40b3a259",
+    "audit_gradients.py": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb",
+    "check_contracts.py": "5027d8a0bf0a37290c59e55beba8c318668cccff5277e1ae7a6d8fa9e2e6f998",
+    "check_gradients.py": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1",
+    "PROTOCOL.md": "ead293136cd5902f4360b4d545b5af2db9aac5973ca7219e424fabb6c0842429",
+    "SEEDS.json": "b4f24720c4c12aa3874384534b1975f973550be1404651d820493aa41a1bc406",
+    "CONTRASTS.json": "c0c57e95cbfff8fae965ee3d044be1161c502a0064cb1642e0ce1589c7fd2005",
+    "SOURCE_AUDIT.json": "691d1752e9ed75c9a4bc8717bca1f2d6925d665268d13fe109f44f2d3af9b646",
+    "verify.py": "fe51fe1a16191551e52ee32f73cd1976ca3495f77e43f1ab7225a8bdc35b5179",
+    "plan_sample_size.py": "528db08e9eda963f3c9f72e6f64fa1b5f59497a599fd65358d91cb0f635c9b60",
+    "PLANNING.json": "c162d0897f7e8206b74daa87f9f93bb5ca1271e585571fce6e02381cbfdf101b"
+  },
+  "historical_manifests_verified": [
+    {
+      "phase": 1,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "entries": 49
+    },
+    {
+      "phase": 2,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "entries": 61
+    },
+    {
+      "phase": 3,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "entries": 92
+    },
+    {
+      "phase": 4,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "entries": 599
+    },
+    {
+      "phase": 5,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "entries": 562
+    },
+    {
+      "phase": 6,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "entries": 639
+    },
+    {
+      "phase": 7,
+      "manifest_sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd",
+      "entries": 1203
+    }
+  ],
+  "verification_tooling": "Independent checker and sample-size planning included; reporting can be added without changing frozen scientific sources."
+}

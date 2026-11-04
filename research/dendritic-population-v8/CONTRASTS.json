@@ -1,0 +1,92 @@
+{
+  "columns": [
+    "POINT|RATE_0.01",
+    "POINT|RATE_0.03",
+    "POINT|CE_0.01",
+    "POINT|CE_0.03"
+  ],
+  "contrasts": [
+    {
+      "name": "POINT_loss_lr_interaction",
+      "coefficients": [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "primary_accuracy": true
+    },
+    {
+      "name": "POINT_loss_main",
+      "coefficients": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "primary_accuracy": false
+    },
+    {
+      "name": "POINT_lr_main",
+      "coefficients": [
+        -0.5,
+        0.5,
+        -0.5,
+        0.5
+      ],
+      "primary_accuracy": false
+    },
+    {
+      "name": "POINT_loss_at_0.01",
+      "coefficients": [
+        -1,
+        0,
+        1,
+        0
+      ],
+      "primary_accuracy": false
+    },
+    {
+      "name": "POINT_loss_at_0.03",
+      "coefficients": [
+        0,
+        -1,
+        0,
+        1
+      ],
+      "primary_accuracy": false
+    },
+    {
+      "name": "POINT_lr_at_RATE",
+      "coefficients": [
+        -1,
+        1,
+        0,
+        0
+      ],
+      "primary_accuracy": false
+    },
+    {
+      "name": "POINT_lr_at_CE",
+      "coefficients": [
+        0,
+        0,
+        -1,
+        1
+      ],
+      "primary_accuracy": false
+    }
+  ],
+  "primary_accuracy_family_size": 1,
+  "n_pairs": 104,
+  "primary_method": "two-sided paired-mean Student-t interval",
+  "primary_confidence": 0.95,
+  "primary_df": 103,
+  "primary_t_critical": 1.9832641447734565,
+  "bootstrap_resamples": 20000,
+  "bootstrap_quantiles": [
+    0.025,
+    0.975
+  ],
+  "practical_threshold": -0.05
+}
