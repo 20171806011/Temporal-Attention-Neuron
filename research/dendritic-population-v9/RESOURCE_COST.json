@@ -1,0 +1,171 @@
+{
+  "cells": [
+    {
+      "arm": "DEND",
+      "condition": "intact",
+      "trajectories": 5,
+      "parameter_updates": 1000,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 176,
+      "forward_dense_MAC_terms": 479232000,
+      "backward_dense_MAC_terms": 737280000,
+      "checkpoint_forward_batches": 45,
+      "checkpoint_forward_dense_MAC_terms": 21565440,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 4.530129250000755,
+      "recorded_test_inference_seconds": 0.06982074700135854
+    },
+    {
+      "arm": "DEND",
+      "condition": "retrained",
+      "trajectories": 5,
+      "parameter_updates": 1000,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 116,
+      "forward_dense_MAC_terms": 479232000,
+      "backward_dense_MAC_terms": 737280000,
+      "checkpoint_forward_batches": 45,
+      "checkpoint_forward_dense_MAC_terms": 21565440,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 4.535665262999828,
+      "recorded_test_inference_seconds": 0.06487177399958455
+    },
+    {
+      "arm": "DEND",
+      "condition": "cut",
+      "trajectories": 0,
+      "parameter_updates": 0,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 0,
+      "forward_dense_MAC_terms": 0,
+      "backward_dense_MAC_terms": 0,
+      "checkpoint_forward_batches": 0,
+      "checkpoint_forward_dense_MAC_terms": 0,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 0,
+      "recorded_test_inference_seconds": 0.03303244199832989
+    },
+    {
+      "arm": "POINT",
+      "condition": "intact",
+      "trajectories": 5,
+      "parameter_updates": 1000,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 176,
+      "forward_dense_MAC_terms": 479232000,
+      "backward_dense_MAC_terms": 737280000,
+      "checkpoint_forward_batches": 45,
+      "checkpoint_forward_dense_MAC_terms": 21565440,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 4.609158782000122,
+      "recorded_test_inference_seconds": 0.033057420000659477
+    },
+    {
+      "arm": "POINT",
+      "condition": "retrained",
+      "trajectories": 5,
+      "parameter_updates": 1000,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 116,
+      "forward_dense_MAC_terms": 479232000,
+      "backward_dense_MAC_terms": 737280000,
+      "checkpoint_forward_batches": 45,
+      "checkpoint_forward_dense_MAC_terms": 21565440,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 4.646158869002647,
+      "recorded_test_inference_seconds": 0.03133388300011575
+    },
+    {
+      "arm": "POINT",
+      "condition": "cut",
+      "trajectories": 0,
+      "parameter_updates": 0,
+      "stored_parameters": 176,
+      "effective_trainable_parameters": 0,
+      "forward_dense_MAC_terms": 0,
+      "backward_dense_MAC_terms": 0,
+      "checkpoint_forward_batches": 0,
+      "checkpoint_forward_dense_MAC_terms": 0,
+      "test_forward_dense_MAC_terms": 9584640,
+      "recorded_training_seconds": 0,
+      "recorded_test_inference_seconds": 0.03237641100076871
+    }
+  ],
+  "totals": {
+    "trajectories": 20,
+    "parameter_updates": 4000,
+    "forward_dense_MAC_terms": 1916928000,
+    "backward_dense_MAC_terms": 2949120000,
+    "checkpoint_forward_batches": 180,
+    "checkpoint_forward_dense_MAC_terms": 86261760,
+    "test_forward_dense_MAC_terms": 57507840
+  },
+  "shared_resources": {
+    "stored_float64_parameters": 176,
+    "continuous_states": 20,
+    "previous_hidden_spike_states": 6,
+    "output_count_accumulators": 2,
+    "hidden_somata": 6,
+    "output_cells": 2,
+    "branch_units": 12,
+    "DEND_branch_type": "graded",
+    "POINT_branch_type": "native spiking with reset",
+    "training_batch": 128,
+    "sequence_steps": 24,
+    "readout_steps": 8,
+    "updates_per_trajectory": 200,
+    "training_seed_blocks": 5,
+    "test_episodes_per_block": 512,
+    "unique_training_histories": 640,
+    "unique_test_histories": 2560,
+    "model_test_episodes": 15360,
+    "trained_models": 20,
+    "derived_inference_cut_models": 10,
+    "forward_dense_MAC_terms_per_episode_step": 156,
+    "backward_dense_MAC_terms_per_episode_step": 240,
+    "checkpoint_updates": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      100,
+      150,
+      200
+    ]
+  },
+  "intervention": {
+    "cross_cell_slots_fixed_zero": 60,
+    "within_cell_recurrent_slots_retained": 12,
+    "intact_effective_trainable_parameters": 176,
+    "retrained_effective_trainable_parameters": 116,
+    "masked_regularizer_denominator": 176,
+    "no_sparse_compute_optimization": true
+  },
+  "training_phase_wall_seconds": 18.400396017000276,
+  "test_artifact_phase_wall_seconds": 4.889683236000565,
+  "test_inference_seconds": 0.2644926770008169,
+  "audits": {
+    "verification": {
+      "status": "PASS",
+      "recorded_wall_seconds": 5.800112963000174
+    },
+    "gradient_audit": {
+      "status": "PASS",
+      "recorded_wall_seconds": 7.526765693000016
+    }
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "limitations": [
+    "Dense matrix MAC terms exclude scalar nonlinearities, reset, losses, optimizer, generation, I/O and numerical verification.",
+    "Intact and retrained have unequal effective trainable parameter counts (176 versus 116), despite equal storage and dense matrix work.",
+    "DEND and POINT have unequal scalar nonlinearities, reset derivatives, branch-event semantics and realized activation/gradient patterns.",
+    "Recorded wall times depend on machine contention and artifact compression; audits may overlap and must not be added as total elapsed workflow time.",
+    "Spike totals and state L1 variation are computational activity proxies, not physical energy, ATP, biological metabolism or hardware efficiency.",
+    "The inference-cut condition has no additional fit; its training origin is the corresponding intact model."
+  ]
+}

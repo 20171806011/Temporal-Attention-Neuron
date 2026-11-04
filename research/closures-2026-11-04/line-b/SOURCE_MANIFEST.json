@@ -1,0 +1,294 @@
+{
+  "algorithm": "SHA-256",
+  "source_commit": "9cddbbad7f1722d8a116c0a8245fc40d3a5e97ca",
+  "scope": "Selected canonical V6\u2013V8 evidence and full phase manifests. Sources remain at their original repository paths; every listed byte string matches the pinned git commit.",
+  "source_file_count": 57,
+  "files": {
+    "research/dendritic-population-v6/PROTOCOL.md": {
+      "sha256": "dc9b0dff10d5099849bbd629e4dd28efeeb6531d6c94bdf88ed04a0fb443ed96",
+      "size_bytes": 10296,
+      "git_blob": "256399d7cbeee7b4246d41dd8bdc478c4889d8eb"
+    },
+    "research/dendritic-population-v6/REPORT.md": {
+      "sha256": "d3c4128699c4d3110092c2a6ff3c410c995f1cf5e67382591d4d7c739e9c4859",
+      "size_bytes": 25445,
+      "git_blob": "9df7ae931b45843e7050f4f394e88d8937178b26"
+    },
+    "research/dendritic-population-v6/TABLES.md": {
+      "sha256": "78a31f3c109a9acd777c06d2d77f782706d8285b128f114b295cdc7f45a3088c",
+      "size_bytes": 45951,
+      "git_blob": "2f0632579c543974d54ff14255f2ab34a2fec0d1"
+    },
+    "research/dendritic-population-v6/FREEZE.json": {
+      "sha256": "f57ac5a853c3c95bef40f5bd2ab9476f750502c71de95119033d8502afc8cd77",
+      "size_bytes": 2286,
+      "git_blob": "f54e7c50e3dd8375fe13aec7fd51232dee373546"
+    },
+    "research/dendritic-population-v6/SEEDS.json": {
+      "sha256": "dd9f2704ffb2c4b52d20a3965dc8a1d316c3b45c2785cb9f416e1ecc50a05658",
+      "size_bytes": 2734,
+      "git_blob": "1ff9c9fc6919ab6c34928c0a6c11a6e270528aff"
+    },
+    "research/dendritic-population-v6/MANIFEST.json": {
+      "sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "size_bytes": 104220,
+      "git_blob": "386b7aba6914bf515d321fbb8575a54acaf466a0"
+    },
+    "research/dendritic-population-v6/model.py": {
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+      "size_bytes": 3655,
+      "git_blob": "d3b446ebeabed51e6ccbc59c68f98d3d659f7c79"
+    },
+    "research/dendritic-population-v6/data.py": {
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+      "size_bytes": 497,
+      "git_blob": "133a3d948e8ced1793081c1e3692786bcb79a645"
+    },
+    "research/dendritic-population-v6/common.py": {
+      "sha256": "d205742b10f09a4c601c8ae097a6ec8005e884636b3b0735c2e147b47297c5a6",
+      "size_bytes": 5057,
+      "git_blob": "d1c939145fcd0f7a459cd1f0e4b6cb16d210aa50"
+    },
+    "research/dendritic-population-v6/verify.py": {
+      "sha256": "5e3b904a5e487d9fb98287eda8b10eb0c63781d08c43868daf0e5ddb39e687f1",
+      "size_bytes": 25423,
+      "git_blob": "0ca2a9a90947cd04173bec4fe389cce6eaada79f"
+    },
+    "research/dendritic-population-v6/audit_gradients.py": {
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb",
+      "size_bytes": 2333,
+      "git_blob": "4f574522b52681379f9793eb18d8016cf0b20bec"
+    },
+    "research/dendritic-population-v6/results/TRAIN_LOCK.json": {
+      "sha256": "cf8a054688f395b64efd7da9f18d8066302126e13bbac5efeb42d36a09bb1a92",
+      "size_bytes": 208210,
+      "git_blob": "d8c18b97f25e28dcad06b86102f89c565c0de699"
+    },
+    "research/dendritic-population-v6/results/TEST_SUMMARY.json": {
+      "sha256": "218ed0eb979164bb0d27501db75d378d40cd8156445a8f71b4963420aee3cc7c",
+      "size_bytes": 150915,
+      "git_blob": "c8affd67fd3438816c19b492837f9687a561244d"
+    },
+    "research/dendritic-population-v6/results/verification.json": {
+      "sha256": "572bb46e54d6fcdef4b89d5531904e78b7abd92624dc0d3d05f5a26e7f37d6e9",
+      "size_bytes": 1300,
+      "git_blob": "b55421b3a0a284b6a251f5dccc89bb7fe4222106"
+    },
+    "research/dendritic-population-v6/results/gradient_audit.json": {
+      "sha256": "7ce4d8b67221ca3930e43e88b0d5ce9e0b65e64ba8b07bc5fd5f54a33deda364",
+      "size_bytes": 10566,
+      "git_blob": "60ddfbb6720fa3c9284681a496f951db9744395d"
+    },
+    "research/dendritic-population-v6/PROVENANCE.json": {
+      "sha256": "ff9bc000c08da0b3c2de7ac821e3509c01bd7d532c9a8045a41907370da38e24",
+      "size_bytes": 1459,
+      "git_blob": "766d93395532aedfd23b1de3f7cb02e112b72a76"
+    },
+    "research/dendritic-population-v6/results/COST.json": {
+      "sha256": "f1ea328e31b8b2d4ee0e82d078531d3e7c2c69efd3b89f4149930a9444120d35",
+      "size_bytes": 2228,
+      "git_blob": "154c936944cefcf926f76db42c6859fcc47de5a0"
+    },
+    "research/dendritic-population-v6/POSTHOC_V5.md": {
+      "sha256": "2169a871215b403111b5b799674effc58679a9300022d7e3fca2cff6372d2d46",
+      "size_bytes": 9495,
+      "git_blob": "0d4e5b067c9e759d48a9e4e813a59f2811eb5b73"
+    },
+    "research/dendritic-population-v6/posthoc_v5.json": {
+      "sha256": "15c017dd17dd181dfff8e09e947e740a02cca6ed48e31d66242bbfd86200f5dc",
+      "size_bytes": 1170155,
+      "git_blob": "094a4881796dd629080925e78422f7a9c48ba46e"
+    },
+    "research/dendritic-population-v7/PROTOCOL.md": {
+      "sha256": "71b0f33939d125fec7aeda51f3a9b3111ad64a14f86473ae3304760ed5a6c14f",
+      "size_bytes": 10865,
+      "git_blob": "4d969c1a526c7fa780f6a809bafa79675b1205fd"
+    },
+    "research/dendritic-population-v7/REPORT.md": {
+      "sha256": "e93ba43b7da11a00d31720ab7acfbfe9124807124d05dbe1bebb21efbbd26b16",
+      "size_bytes": 26546,
+      "git_blob": "bd22e011efb471e3f8ca450de3e99e152a113e7b"
+    },
+    "research/dendritic-population-v7/TABLES.md": {
+      "sha256": "1a28608a56b42a56478bce049e94321343280eaa9d6f14e9fda462b8161757d7",
+      "size_bytes": 123294,
+      "git_blob": "b8af935ee1e26554c0c145816fa378e271315c3a"
+    },
+    "research/dendritic-population-v7/FREEZE.json": {
+      "sha256": "f544f4ba8ff2394476773759c1d9bf720649c56be423ecf222a3b3ea14344871",
+      "size_bytes": 2524,
+      "git_blob": "ba4fad4a8c51d0059991bdc8b760828e711dc2e2"
+    },
+    "research/dendritic-population-v7/SEEDS.json": {
+      "sha256": "444e865c9ee5a9d87d46c3265fc10ed6b582ecd9dbdcec0c158146d237555a26",
+      "size_bytes": 2734,
+      "git_blob": "b586059138e66963a0870d16bf9d84d11cd19c92"
+    },
+    "research/dendritic-population-v7/MANIFEST.json": {
+      "sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd",
+      "size_bytes": 135927,
+      "git_blob": "c1d48fda582313cdcf5a5668ca7e7a25f456c69d"
+    },
+    "research/dendritic-population-v7/model.py": {
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+      "size_bytes": 3655,
+      "git_blob": "d3b446ebeabed51e6ccbc59c68f98d3d659f7c79"
+    },
+    "research/dendritic-population-v7/data.py": {
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+      "size_bytes": 497,
+      "git_blob": "133a3d948e8ced1793081c1e3692786bcb79a645"
+    },
+    "research/dendritic-population-v7/common.py": {
+      "sha256": "ced597cb2a764df4649cfd95950da3734238ef6c883eda07940e1f0c2297a710",
+      "size_bytes": 5528,
+      "git_blob": "377a57a729065f29a19b98256bcc44323d2d9e25"
+    },
+    "research/dendritic-population-v7/verify.py": {
+      "sha256": "4e385644a861c10aa9c7dcfb415e45005c95cce60a8f8c025e0eb1bd3ade5eaf",
+      "size_bytes": 28294,
+      "git_blob": "57a70383d374e7ed149ff23f62dcc7c398086f14"
+    },
+    "research/dendritic-population-v7/audit_gradients.py": {
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb",
+      "size_bytes": 2333,
+      "git_blob": "4f574522b52681379f9793eb18d8016cf0b20bec"
+    },
+    "research/dendritic-population-v7/results/TRAIN_LOCK.json": {
+      "sha256": "ea45bbd0211a87c0b3d388c7c52e29587a27a4cda2f11b72e06834ce188c02ca",
+      "size_bytes": 413922,
+      "git_blob": "352d7b220afd09f1d9c9000ca46810e3a6e33097"
+    },
+    "research/dendritic-population-v7/results/TEST_SUMMARY.json": {
+      "sha256": "bb6c519ae3fd3e54ab9ad17a08a6c7acfc96f25fe601f0e7df91e5f4122063ca",
+      "size_bytes": 316398,
+      "git_blob": "748e65ccbb50bb907429dc94052809fd172fdc5d"
+    },
+    "research/dendritic-population-v7/results/verification.json": {
+      "sha256": "18b99da0d2b5ae93544e90964d6be8eb2b5fa5c103dc43ad667bf059902b48fd",
+      "size_bytes": 1403,
+      "git_blob": "48bb085a87146a2f8c5e63f647ee6e956ff14d00"
+    },
+    "research/dendritic-population-v7/results/gradient_audit.json": {
+      "sha256": "c38289b4401ff08f5e0f4bff2547199d4cf5aa900576ec382877b06d672ce81a",
+      "size_bytes": 20685,
+      "git_blob": "c090b0bf02b5277177825f81f7c95bf2c5776c33"
+    },
+    "research/dendritic-population-v7/PROVENANCE.md": {
+      "sha256": "2b9c38055596335fc0668225d66917eda41a7df77e710e428100d4038682a6cc",
+      "size_bytes": 2184,
+      "git_blob": "e14d8eb2acd43d1118ad507d66fbeaede9e90f40"
+    },
+    "research/dendritic-population-v7/CONTRASTS.json": {
+      "sha256": "549599e4c7c86b9810779ca6c02bc108b78d9785707ce11ac915de3ccf997f50",
+      "size_bytes": 4954,
+      "git_blob": "1a953e45bab7b8e647418b68769330e35a4b818c"
+    },
+    "research/dendritic-population-v7/RESOURCE_COST.json": {
+      "sha256": "3abbd4a71dcccee9991121b8d685dff89ab022888145b29c3e656e1480366dd8",
+      "size_bytes": 6356,
+      "git_blob": "13fe2baecfc3bedd953af5216a6ef74b9373ef7c"
+    },
+    "research/dendritic-population-v8/PROTOCOL.md": {
+      "sha256": "ead293136cd5902f4360b4d545b5af2db9aac5973ca7219e424fabb6c0842429",
+      "size_bytes": 12821,
+      "git_blob": "ca3c226efee987e9e37fd396f8c7406bbeb6bfe4"
+    },
+    "research/dendritic-population-v8/REPORT.md": {
+      "sha256": "3039d0955bd5c471f51c50e93fb0ea978b8343cccbc758619e92f66660bba846",
+      "size_bytes": 25564,
+      "git_blob": "679d376f60f066010256bf455661870167f52293"
+    },
+    "research/dendritic-population-v8/TABLES.md": {
+      "sha256": "03d3571bd87ce63f4cbbef17b5d970a320e6f8a09c1811f8db6a3d9026a6991d",
+      "size_bytes": 250538,
+      "git_blob": "eb5fea1defe9e3e7b5852dfe929c0ce39a790e79"
+    },
+    "research/dendritic-population-v8/FREEZE.json": {
+      "sha256": "487034a573025523df9eeb23f69948e4bede9420bf90545379a0fbab7e1a04a1",
+      "size_bytes": 2793,
+      "git_blob": "e7ae5e5ae4b710bf949ae96d65717d927933d419"
+    },
+    "research/dendritic-population-v8/SEEDS.json": {
+      "sha256": "b4f24720c4c12aa3874384534b1975f973550be1404651d820493aa41a1bc406",
+      "size_bytes": 13424,
+      "git_blob": "65504109c2ebf0f0998049cc2f3febcbc4f97abb"
+    },
+    "research/dendritic-population-v8/MANIFEST.json": {
+      "sha256": "d4524d9c9a7e9f5a63073e7b16abb43d07b594cc8ebc9620416f3a0c5fab3f7b",
+      "size_bytes": 360076,
+      "git_blob": "e2b677a3287a8337f92c77ba8a53936e9439d348"
+    },
+    "research/dendritic-population-v8/model.py": {
+      "sha256": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+      "size_bytes": 3655,
+      "git_blob": "d3b446ebeabed51e6ccbc59c68f98d3d659f7c79"
+    },
+    "research/dendritic-population-v8/data.py": {
+      "sha256": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+      "size_bytes": 497,
+      "git_blob": "133a3d948e8ced1793081c1e3692786bcb79a645"
+    },
+    "research/dendritic-population-v8/common.py": {
+      "sha256": "084c99045b43d1db1738efbe7c7906ddfd0ba3c15a701e0c5f7fbf610a560f6b",
+      "size_bytes": 6446,
+      "git_blob": "aa76fe0ef1225f91431ee9cade1b0949a945d256"
+    },
+    "research/dendritic-population-v8/verify.py": {
+      "sha256": "fe51fe1a16191551e52ee32f73cd1976ca3495f77e43f1ab7225a8bdc35b5179",
+      "size_bytes": 28973,
+      "git_blob": "7306f91890e49b27c326435991acac6e136d28b6"
+    },
+    "research/dendritic-population-v8/audit_gradients.py": {
+      "sha256": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb",
+      "size_bytes": 2333,
+      "git_blob": "4f574522b52681379f9793eb18d8016cf0b20bec"
+    },
+    "research/dendritic-population-v8/results/TRAIN_LOCK.json": {
+      "sha256": "f9b7ca478dd1e29e9d1511e5285c07598c091b39ae2ea93ebe31bc2ae70afa8d",
+      "size_bytes": 1093824,
+      "git_blob": "90dc39c762a845cd09990ddf0198ec1826a1400f"
+    },
+    "research/dendritic-population-v8/results/TEST_SUMMARY.json": {
+      "sha256": "cfa952e9a6625bee1d49b92a97a2b3e8e9ac7cd2fc6c9956a06e9b372446fa0c",
+      "size_bytes": 772233,
+      "git_blob": "0ae5da916e6163532e7c7c8e969eba5b810fb0c5"
+    },
+    "research/dendritic-population-v8/results/verification.json": {
+      "sha256": "b2799f9fb845dd897caedfe9d64fb46caedd6f634e33db8c7296cec4f78a800e",
+      "size_bytes": 1436,
+      "git_blob": "00ef649023bcfbb951b3901102e4b4bf99144ae5"
+    },
+    "research/dendritic-population-v8/results/gradient_audit.json": {
+      "sha256": "07bd9f643f82d8646a3533045dca555ebaea87b3aec9668bda29a8f8a9c7a004",
+      "size_bytes": 53448,
+      "git_blob": "b4bcfce13cedd89c4ef483e381b333aab3228ade"
+    },
+    "research/dendritic-population-v8/PROVENANCE.md": {
+      "sha256": "c441c9cbfeeab2ce57e7e75e5193da4b00f39dfa744badd3dfac3488ccbfb797",
+      "size_bytes": 2847,
+      "git_blob": "f734225ea86c45354bfbad0cbd52b2e6b235c97b"
+    },
+    "research/dendritic-population-v8/CONTRASTS.json": {
+      "sha256": "c0c57e95cbfff8fae965ee3d044be1161c502a0064cb1642e0ce1589c7fd2005",
+      "size_bytes": 1579,
+      "git_blob": "1f9424d90bc03a4b8b2c85b5d927636d72b02ebe"
+    },
+    "research/dendritic-population-v8/RESOURCE_COST.json": {
+      "sha256": "f1fed3ba0eb9677ea644cfe7cbf0537735b5b2e73b7d7d27d6629b8cf8bc9fe4",
+      "size_bytes": 5115,
+      "git_blob": "30a627de598fed1f0948817458771f4c5da958d2"
+    },
+    "research/dendritic-population-v8/PLANNING.json": {
+      "sha256": "c162d0897f7e8206b74daa87f9f93bb5ca1271e585571fce6e02381cbfdf101b",
+      "size_bytes": 1466,
+      "git_blob": "8ae09288374ad449b3f2d3ca99c24621f7e5a221"
+    },
+    "research/dendritic-population-v8/PAUSE_STATE.json": {
+      "sha256": "c069ac2893942435654746fe2e177c70604fb146bf3ab75f71c6bf42317df800",
+      "size_bytes": 1131,
+      "git_blob": "a056726d061d2b85ffd544a3aca4c0eb622ff716"
+    }
+  },
+  "archive_policy": "No original scientific source or output was modified; this report is a retrospective synthesis, not a pooled experiment or external publication."
+}
