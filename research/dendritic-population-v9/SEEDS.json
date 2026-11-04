@@ -1,0 +1,52 @@
+{
+  "n_pairs": 5,
+  "pairs": [
+    {
+      "seed": 0,
+      "train_seed": 2090000000,
+      "test_seed": 2090010000,
+      "initial_seed": 2090020000
+    },
+    {
+      "seed": 1,
+      "train_seed": 2090000010,
+      "test_seed": 2090010010,
+      "initial_seed": 2090020001
+    },
+    {
+      "seed": 2,
+      "train_seed": 2090000020,
+      "test_seed": 2090010020,
+      "initial_seed": 2090020002
+    },
+    {
+      "seed": 3,
+      "train_seed": 2090000030,
+      "test_seed": 2090010030,
+      "initial_seed": 2090020003
+    },
+    {
+      "seed": 4,
+      "train_seed": 2090000040,
+      "test_seed": 2090010040,
+      "initial_seed": 2090020004
+    }
+  ],
+  "analysis_seed": 2090030001,
+  "checkpoint_updates": [
+    0,
+    1,
+    5,
+    10,
+    20,
+    50,
+    100,
+    150,
+    200
+  ],
+  "sampled_updates": [
+    0,
+    99,
+    199
+  ]
+}
