@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "training_device": "CPU",
+  "scientific_stage_threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "roles": {
+    "numpy": "native model, training and analysis",
+    "scipy": "pre-data sample-size planning and independent t quantile check",
+    "matplotlib": "postprocessing figures only"
+  },
+  "installation": "All packages already present; no package or system change in V8"
+}
