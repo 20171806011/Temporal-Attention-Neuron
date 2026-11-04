@@ -1,0 +1,27 @@
+{
+  "source_npz_sha256": "089b20f67989f31e13f417704e3c4c853393d5b53c2e81f6559083dda1e2f747",
+  "comparison": "Exact C-order float64 bytes of each complete10-coordinate response; not allclose or numeric equality alone.",
+  "pairs_per_arm": 545,
+  "arms": {
+    "B1_lif": {
+      "bit_identical_complete_response_pairs": 545,
+      "bit_identical_spike_response_pairs": 545
+    },
+    "B2_buf": {
+      "bit_identical_complete_response_pairs": 0,
+      "bit_identical_spike_response_pairs": 545
+    },
+    "B3_noattn": {
+      "bit_identical_complete_response_pairs": 0,
+      "bit_identical_spike_response_pairs": 0
+    },
+    "B4_tan": {
+      "bit_identical_complete_response_pairs": 545,
+      "bit_identical_spike_response_pairs": 545
+    },
+    "B4_no_reset_t8": {
+      "bit_identical_complete_response_pairs": 0,
+      "bit_identical_spike_response_pairs": 545
+    }
+  }
+}

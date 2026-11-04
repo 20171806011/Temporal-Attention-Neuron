@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": 43533,
+  "preparation": {
+    "trajectories": 80,
+    "updates": 16000,
+    "independent_initial_objectives": 80
+  },
+  "final_training": {
+    "trajectories": 40,
+    "updates": 8000,
+    "independent_initial_objectives": 40
+  },
+  "logical_test_rows": 120,
+  "unique_model_evaluations": 120,
+  "test_model_episodes": 61440,
+  "logical_test_model_episodes": 61440,
+  "test_scalar_state_updates": 29491200,
+  "unique_test_histories": 10240,
+  "distinct_cross_split_histories": 14080,
+  "no_history_prefix_checks": 60,
+  "max_state_candidate_residual": 1.3322676295501878e-15,
+  "seconds": 7.919344589998218,
+  "scope": "Separate RNG, native equations, metric, validation selection and seed-unit bootstrap implementation; full stored-gradient Adam reconstruction and independent initial training objectives. Separate gradient audits are required; this is internal workflow verification, not external replication."
+}

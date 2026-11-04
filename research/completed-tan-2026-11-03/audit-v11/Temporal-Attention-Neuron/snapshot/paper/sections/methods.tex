@@ -1,0 +1,152 @@
+% ========================== 4. Experimental program ====================
+\section{Experimental Program}\label{sec:methods}
+
+\subsection{Overview}\label{sec:methods-overview}
+
+The program follows the hierarchy of Section~\ref{sec:intro}: state
+sufficiency (Phase~1), local fluctuation geometry (Phase~2),
+target-relevant retrieval (Probe~1), and identifiability of
+query-conditioned routing (Probe~2).  All experiments, seeds,
+parameters, audit rules and results are frozen and recorded in the
+accompanying research archive; this paper reports only archived results.
+Statistical procedures are summarized in
+Section~\ref{sec:methods-stats}.
+
+\subsection{Phase 1: state sufficiency}\label{sec:methods-phase1}
+
+\textbf{Question.} Is the scalar membrane potential $h_t$ a sufficient
+Markov state of TAN?
+
+\textbf{Natural-collision protocol.} $N = 160{,}000$ random histories of
+length $T-1 = 9$ were drawn from four stimulus families (Gaussian white
+noise, random steps, ramps, sine waves).  For each model separately, all
+unordered pairs $(A,B)$ whose subthreshold potentials at $t = T-1$
+collide -- $0.05 < h_{T-1} < \theta$ on both sides and
+$|h_{T-1}^{(A)} - h_{T-1}^{(B)}| < \delta = 10^{-4}$ -- form the
+\textit{natural-collision ensemble}.  Restricting to the subthreshold
+band excludes trivial reset coincidences ($h=0$).  At $t = T = 10$ an
+identical probe $x^{*} \sim \mathcal{U}(0.5, 3.0)$ is injected into both
+histories and the one-step divergence is measured on the continuous
+branch (pre-reset potential $u_{T} = \lambda h_{T-1} + A_T$), i.e.\
+\begin{equation}
+  \Delta\tilde{h}_T = |u_T^{(A)} - u_T^{(B)}|,
+  \qquad K = \Delta\tilde{h}_T / |h_{T-1}^{(A)} - h_{T-1}^{(B)}| .
+\end{equation}
+Post-reset divergence, spike-outcome classes and reset
+re-synchronisation (a common double spike at $T$, then identical
+continuation inputs) are tabulated separately.  Under the 1D membrane
+state-sufficiency hypothesis (where $u_T = \lambda h_{T-1} + f(x_T)$),
+divergence contracts with $K = \lambda < 1$ (LIF predicts $K = \lambda$
+exactly on every collision pair); large $K \gg 1$ refutes the sufficiency
+of the 1D membrane potential $h$ as a complete state descriptor.
+
+\subsection{Phase 2: local fluctuation geometry}\label{sec:methods-phase2}
+
+\textbf{Question.} Does surprise-gated weighting reorganize the local,
+event-locked response geometry relative to uniform temporal integration?
+
+\textbf{Protocol.} Sparse episodic stimuli (Poisson-like onset gaps with
+burst structure and amplitude diversity; $T = 5000$, burn-in 500, three
+fixed seeds) drive B1--B4 and an input-only control C0.  For each model a
+response trajectory is embedded in frozen coordinate frames:
+$z_C = [h,\mu,S,A]$ for all models (B1's $A$ is its input, a null
+convention), and $z_F = [h,\mu,S,A,\alpha_1,\dots,\alpha_5,C]$ for B3/B4
+(matched frame).  Coordinates are globally $Z$-scored per seed
+(post-burn-in) and per-seed centred before cross-seed pooling; no
+whitening is applied.  Events are aligned at episode onset and analysed
+at fixed lag $\tau \in [-6, 30]$; the primary response is the
+baseline-subtracted state $\Delta z_{e,\tau}$ relative to a five-step
+pre-event window, pooled across events (never per-window PR averaging).
+At each lag we compute the effective rank of the pooled response
+covariance,
+\begin{equation}
+  d_G(\tau) = \frac{\operatorname{Tr}(C_z)^2}
+  {\operatorname{Tr}(C_z^2)},
+\end{equation}
+its log-trace $\log\operatorname{Tr}(C_z)$ and eigenvalue spectrum, and
+the velocity geometry
+\begin{equation}
+  d_D(\tau) = \frac{\operatorname{Tr}(C_v)^2}
+  {\operatorname{Tr}(C_v^2)}, \qquad
+  v_{e,\tau} = z_{e,\tau+1} - z_{e,\tau},
+\end{equation}
+where $C_v$ is the pooled covariance of same-event adjacent-phase
+increments.  $d_{PR}$ is reported and interpreted strictly as an
+\emph{effective rank of the local fluctuation covariance}; it is never
+called an intrinsic or manifold dimension \citep{gaoganguli2015,
+mazzucato2016,facco2017,chungabbott2021}.  Zero-variance windows return
+NaN (never a fabricated value).  Amplitude controls are computed for
+every lag: raw pooled, amplitude-stratified (median split on the
+log-amplitude, pooled-within covariance) and per-coordinate
+residualisation on log-amplitude.  Quiet-reference samples lie $\geq 12$
+steps from any pulse.  Recovery times ($\tau_{1/2}$ on $d_D$,
+$\tau_{e\text{-fold}}$ on $\log\operatorname{Tr}$) are estimated on
+isolated events with event bootstrap confidence intervals.
+
+\subsection{Probe 1: temporal distractor task}\label{sec:methods-probe1}
+
+\textbf{Question.} Does stored history contribute to target-relevant
+retrieval, as opposed to mere storage?
+
+\textbf{Task (frozen v3).} Each trial has five event steps: a target at
+fixed step 5 whose amplitude class $c_T$ is low
+($\mathcal{U}(0.55,1.05)$) or high ($\mathcal{U}(0.95,1.45)$) with
+overlapping supports; either three distractors at steps 6--8 (drawn from
+the same class mixture, so a distractor may exceed the target) or
+silence; and a query at step 9 that acts as a \emph{retrieval cue} but
+does not enter the label.  The label is three-way:
+$c_T \in \{\text{lo},\text{hi}\}$ or \emph{absent} (catch, one third of
+trials).  The query re-opens the surprise gate so the window (which still
+contains the target at step 9) can be re-read into the response.  A
+linear three-class softmax readout is trained on response-trajectory
+features $F = [u_9,\dots,u_{13},\, y_9,\dots,y_{13}]$; per-step
+observables before the query are never visible (no amplitude leakage at
+arrival).  Readout protocol, training (clean + distractor mixed,
+$n_\text{train} = 4000$), testing ($n_\text{test} = 2000$) and the three
+seeds are identical across B1--B4.  Primary endpoint:
+$\Delta_{\text{dist}} = \text{acc}(\text{clean}) -
+\text{acc}(\text{distractor})$; main contrast B4 vs.\ B3.
+
+\subsection{Probe 2: query-conditioned binding identifiability audit}
+\label{sec:methods-probe2}
+
+\textbf{Question.} Does the current query determine which historical
+event is selected ($Q \to K \to V$)?
+
+\textbf{Audit design.} Two events $E_A = (K_A, V_A)$, $E_B = (K_B, V_B)$
+with key amplitudes $K_A = 1.0$, $K_B = 2.0$ and values
+$V \in \{-1,+1\}$ (fair) are encoded into the scalar stream as
+$x(E) = K_{\text{amp}} + V\Delta$, $\Delta = 0.25$; the two events
+occupy two uniformly random history slots (of four), the remaining slots
+carry noise $\mathcal{N}(0, 0.05^2)$, and the query is
+$x_t = 3.0$ ($q = A$) or $4.0$ ($q = B$).  The answer is
+$y = V_q$.  Identifiability gates: (A) a linear readout on
+$z = [x_{t-4},\dots,x_t]$ (B2 shortcut test) must not exceed 0.58
+balanced accuracy; (B) the same readout on B3's uniform-integration
+response features must not exceed 0.58; (C) for B4, attention must hit
+the target history position in $\geq 50\%$ of trials (chance 25\%),
+show target/distractor contrast $R = \mathbb{E}[\alpha_{\text{target}}]/
+\mathbb{E}[\alpha_{\text{distractor}}] \geq 2$, and produce
+query-dependent attention (Jensen--Shannon divergence between
+$\alpha\,|\,q{=}A$ and $\alpha\,|\,q{=}B$ distributions with permutation
+$p < 0.01$).  Counterfactual audits permute positions, values and
+queries, and hold history fixed while changing the query.  All gates,
+thresholds and the final status are frozen:
+\texttt{TERMINATED / AUDIT\_FAILED} is the archived outcome of this
+audit, i.e.\ an identifiability boundary result, not an incomplete
+experiment.
+
+\subsection{Statistical and reproducibility procedures}\label{sec:methods-stats}
+
+All experiments use fixed seeds and frozen parameters recorded in the
+archive (\texttt{docs/REPRODUCIBILITY\_LEDGER.md}).  Confidence intervals are
+event/trial bootstraps (2000 resamples) unless stated.  Calibration
+audits (generator sanity, hidden-label checks, shuffled-label readouts,
+class-coverage, permutation nulls for shuffle statistics) are executed
+before formal runs; violations stop the run.  Probe-1's three-seed data
+were re-analysed after an audit-statistics amendment (empirical
+permutation null for the shuffle audit; per-cell coverage statuses
+instead of run-blocking flags) on the frozen data alone, with the
+deterministic reproduction verified against the frozen per-seed numbers
+(maximum deviation $4.7\times10^{-4}$, rounding only).  No result in
+this paper was obtained by post-hoc tuning.

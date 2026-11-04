@@ -1,0 +1,37 @@
+# Original Task B: one bounded signal-preservation control
+
+Frozen 2026-11-02 before new neuron execution or diagnostic outcomes. Source/table-only reviews are NOISE_SOURCE_REVIEW.md, NOISE_CLAIM_SCOPE_REVIEW.md, DESIGN_REVIEW.md and THEORY_REVIEW.md. Frozen repository commit 85213f0d417d54e4f48b301ed1c0e4200ef3c421. No fitting, parameter search, source edits, publication, new installation or spending.
+
+## Question and prediction
+
+Does the original lower late spike rate coexist with measurable preservation of the original upward step? The original endpoint R=mean(spikes[20:60]) alone is minimized by silence. Exact native LIF algebra predicts R=.5 even without noise. These observations do not imply native TAN is silent or useless. Predict above-null native TAN step detection, while leaving its comparison against native LIF and thinned LIF open. This is known-onset step-presence discrimination, not clean-waveform reconstruction, general denoising, optimal decoding or energy efficiency. Historical metric names, results and labels stay unchanged.
+
+## Phase A: original reproduction before supplementary scoring
+
+Use the exact AST-extracted LIFNeuron, TANNeuron and run_experiment_B bodies from snapshot/code/experiments/statistical_validation.py with only NumPy supplied. Verify extraction against original text and all source hashes. Do not import original module top-level filesystem/log/plot actions. Replay both models at all original seeds 0..49; compare all 100 per-seed false_spike_rate and total_spikes records to the frozen raw table, and reproduce model means and sample SD. Save original-call results and completion evidence BEFORE generating/reporting supplementary metrics. Independently instrument each trajectory and compare full outputs/states against the exact classes. Keep original statistical tests untouched; add a labeled whole-seed paired bootstrap contrast, 2000 replicates, RandomState2026110232.
+
+## Frozen native contract
+
+60 discrete updates, initial membrane zero, TAN ten-zero history. Step base is zero on indices0..14 and1.5 on15..59. Add independent Gaussian noise sigma.4 before lower clipping at0. LIF leak.8 threshold2, strict greater-than spike/reset0. TAN W10 leak.8 threshold1, noise_tolerance0, beta1, gating on, use_asym_rect=False: signed S=input−updated-history mean; query2S, history keys/values; stable softmax with denominator epsilon1e−9; current tanh(abs(S))*context. Preserve arithmetic ordering and log any harmless float discrepancy. No alternative rectified branch substitution. TAN first all-post-onset window is index24; original endpoint includes four mixed windows20..23.
+
+## Phase B: fixed inputs and controls
+
+Exactly512 independent Gaussian paths: continuous legacy NumPy RandomState2026110226, normal(0,.4,size=(512,60)). For each row create the original step and an absent-step all-zero base, with identical pre-clipping noise and the original clipping. Histories are independent rows; pairing is before clipping. Save all noise and delivered waveforms plus hashes before model evaluation. No seed resets per timepoint. No additional task, noise level or duration.
+
+Arms: original TAN, original LIF, LIF_THINNED, ZERO_OUTPUT. LIF_THINNED independently retains each native LIF output when U<p, with p=.2645/.5065=529/1013 fixed from the published historical means. U is RandomState2026110230.uniform(size=(512,60)), independent of Gaussian noise, shared only between step/catch counterparts within a history and applied at every time. It sees neither labels nor TAN outputs. No per-trial or fresh-data matching. This matches the HISTORICAL EXPECTED LATE OBSERVED EVENT BUDGET, not neural input gain, fresh realized count, generated spike count or physical energy. Underlying LIF computation/reset/spikes are unchanged. ZERO_OUTPUT is a mathematical all-zero observed trace, with no assigned physical energy implementation.
+
+Run native clean step/catch controls once each (four trajectories), using zero noise. For thinned clean controls report exact expectations p*counts and detector hit probability 1−(1−p)^onset_count; do not pretend repeated deterministic inputs are independent samples. Zero control is exact. Save native clean trajectories and strict LIF certificate spikes16,18,...,58, total22, late20/40.
+
+## New diagnostics, fixed before evaluation
+
+Primary new readout: predict step present iff at least one observed spike in indices[15:20), the five onset steps excluded from the original metric. Identical fixed count threshold1 for every arm; no fitting, adaptive window or trial history. Report TPR, catch FPR, specificity, balanced accuracy BA=.5*(TPR+1−FPR) and Youden J=TPR−FPR. Chance silent BA=.5. The known onset clock and an external five-step counter are readout resources. A failure of this fixed readout is not proof of absence of information elsewhere in the trace.
+
+For every arm/condition report original R, total/onset/late counts and full outcome ledger. Also report mean noisy-step R minus its model's clean-step R (thinned clean expected R). This is a signed model-specific noise-induced rate change, not a desired-output error rate. Negative changes are permitted and preserved. Do not add AUC, tune timing, fit another decoder or sweep thresholds/noise.
+
+For fresh uncertainty resample all512 independent history groups together, preserving every arm, both conditions and thinning uniforms. RandomState2026110231, exactly2000 percentile bootstrap replicates, no stopping by significance. Save bootstrap draws/hash and all contrast replicates. Six frozen paired contrasts: (1) TAN BA−ZERO BA; (2) TAN BA−LIF BA; (3) TAN BA−LIF_THINNED BA; (4) TAN step R−LIF step R; (5) TAN step R−LIF_THINNED step R; (6) difference of noisy-minus-clean step R between TAN and LIF. Report means and2.5/97.5percentiles; descriptive simultaneous interpretation only, no multiplicity-adjusted claim. No outcome-dependent exclusions. Save all arm rates and samples, even unfavorable comparisons.
+
+## Resources, validation and stopping
+
+For native traces log actual effective current, pre-reset candidate, post-reset membrane, spike, TAN surprise/gate/context/history (or exact reproducible full history), with per-trial sum abs(current), sum current², sum candidate², peaks and generated/observed spikes. These are dimensionless discrete-sample proxies; no physical timestep or ATP conversion is supplied. TAN retains ten history samples plus membrane versus LIF membrane; its temporary attention arithmetic, different threshold and transformed current preclude intrinsic equal-resource claims. Thinning changes observed communication only. Report actual fresh late-budget mismatch rather than enforcing equality. No true physical gain/energy matching is claimed; the output-budget diagnostic is the justified narrow comparison.
+
+Independent implementation must regenerate all original/fresh/clean native trajectories, both surrogate outputs, source/input hashes, all ledger rows and all paired bootstrap statistics from the saved design; no importing the primary simulator or metric helper. Distinguish exact spike identity from float state tolerance, predeclare float absolute tolerance1e−12. Check repository status unchanged. Stop after original100-record reproduction, this one fixed512-history table, clean/null checks, independent verification, report/agenda and scientific report update. Preserve P1A's separately replicated positive evidence; defer MI/cascade estimator audit and branch-specific ablation localization.

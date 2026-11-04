@@ -1,0 +1,1391 @@
+{
+  "H1_pass": true,
+  "analysis_scope": "One frozen synthetic task; state-matched not equal biological resources. No external output pulse generator. No universal TAN advantage.",
+  "data_hashes": {
+    "bootstrap_indices.npy": "ad254fd3153d651513a3db0bc7c48351d459f1b915a6b11f12291fb14aa2d019",
+    "development__jitter4_noise03__DEND.npz": "ef462cc4ab8bfc385b17389d187aea3c594ee6581d8872b29800e9765d08b9f0",
+    "development__jitter4_noise03__POINT_NETWORK.npz": "186026878f94498e931f1ab9e34f8171a0676b58be58facec433c496d65dbf77",
+    "development__jitter4_noise03__POOLED.npz": "212d9b4f51f039192896f5443f58920e0d4e1ed8e5362f95d2e43fa6c29e89c7",
+    "development__jitter8_noise10__DEND.npz": "7fb1a059607e3dd738a910af96416028f3f10da6cff3e8982d5596aef73e98a1",
+    "development__jitter8_noise10__POINT_NETWORK.npz": "62c539a2742a6fe190ace38344890ce68cd97830346718803b705281530f7aeb",
+    "development__jitter8_noise10__POOLED.npz": "03e3f58037ffd62a3dab2a62ac16d3758fc7a2d6361a86a904f65beb3b8f1227",
+    "development__synchronous_clean__DEND.npz": "52e2a96ccf9021ecde77e92049536878c20aa3bbe99b5305c17a2b722d86706f",
+    "development__synchronous_clean__POINT_NETWORK.npz": "31a66cd74509b00dfe1f158430cbb63d4855fb0a42e4bfe3b02abc7aee027d84",
+    "development__synchronous_clean__POOLED.npz": "238142f873fca94d663542cb0042abc77c4168c9f5f9327242dbfba74a26c460",
+    "development_inputs.npz": "6d47a2b3b0ce3f53ba8cc91bb81721beeb7db317b2a2a3c16d9f2160646ae2b5",
+    "test__jitter4_noise03__DEND.npz": "8d94068e25866404671e01a2b757441f05e192839d009486d0e86e7a112e21b3",
+    "test__jitter4_noise03__POINT_NETWORK.npz": "a52bc8d3f0782d73df371690ef9b64496f7cdb93023491fcd649d2a1daa4fd16",
+    "test__jitter4_noise03__POOLED.npz": "895d6dff0ffb4b9c13693627e5d0130df0917c472dde06f0bb895f7f45f6cc77",
+    "test__jitter8_noise10__DEND.npz": "c456e40c53938233c488aeb8297e538418258d2554bfac0d7982a4fdde2d9c48",
+    "test__jitter8_noise10__POINT_NETWORK.npz": "7268f98105a3da01369a371819829bb5a38595930159768d868e4a211c572918",
+    "test__jitter8_noise10__POOLED.npz": "0842a70f8b41a1f8f7bcc0a8be8771d0bfccde99abf229e8cef622b2e86f5c5d",
+    "test__synchronous_clean__DEND.npz": "1dde7749c7b322eba1719cf1945ea0f546f71b1c4e15761dac20c169950193ba",
+    "test__synchronous_clean__POINT_NETWORK.npz": "17021e9dddc00ba060ecefa01b23707f1a791bdcfa2f949da8deb61bf0db2722",
+    "test__synchronous_clean__POOLED.npz": "e819ef5e54f9786761814946084d0c7bd41e90aa00e0120def46a6d1255878a3",
+    "test_inputs.npz": "991c93373daaf03f44f956d0bd723fc2d8defb74c9342212a9c9b02b6b6710e0",
+    "validation__jitter4_noise03__DEND.npz": "c3c7b3e4fccbaf8de2b8a57a48c1007a4428e8fa353c83d672f0a56240f20bb4",
+    "validation__jitter4_noise03__POINT_NETWORK.npz": "cb19595118ed3c3ec5806ca4aaed0fe151010406f91a22ef493a7a554d17eb36",
+    "validation__jitter4_noise03__POOLED.npz": "48809a71078d8e1dcce0faa6b3ff986da23672c7309d4112b317052146ecebe6",
+    "validation__jitter8_noise10__DEND.npz": "f418ecac26d0d0eaedaf7b5254b6d5126ecc3a6812cae23216a1b4ce3f152057",
+    "validation__jitter8_noise10__POINT_NETWORK.npz": "7a18c79270304891c660f7cff4940690138a584590235add454383f51adf47a2",
+    "validation__jitter8_noise10__POOLED.npz": "f6302b621637215953a64addee66621ca0e0516f5c928075d4fd39216761a472",
+    "validation__synchronous_clean__DEND.npz": "6cfd727b31a31726a2a87785c30d6d1d3d9889f97c5f2aa607a25f962edd9d70",
+    "validation__synchronous_clean__POINT_NETWORK.npz": "a6ed4f89fc4c6bcb21f796388750162d37aed71b3a04e7f08916860a4692bd9c",
+    "validation__synchronous_clean__POOLED.npz": "f4433d37bbc199949375401f78376577c971afef3110618f4d1748700fa02706",
+    "validation_inputs.npz": "b1de3c5d015fc1a317822a47d4a8334f672cad72814d16faaabcd641222ec847"
+  },
+  "execution_seconds": 1.3774969800015242,
+  "freeze_sha256": "695976fe54efa095b8f50cc92f92f6c461eb40dfff8ca15c85e277af24ae8cba",
+  "no_learning": true,
+  "no_parameter_selection": true,
+  "protocol_sha256": "7978fbb1507148e8b035cfa1986b6794e265573dda0c2507bf98d2f6131ffed0",
+  "splits": {
+    "development": {
+      "jitter4_noise03": {
+        "DEND": {
+          "accuracy": 0.9916666666666667,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              39,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9916666666666667,
+          "correct_channel_first_step_capped": 11.85,
+          "correct_channel_first_step_conditional": 11.680672268907562,
+          "coverage": 0.9916666666666667,
+          "hidden_spikes_mean": 3.533333333333333,
+          "max_absolute_state": 2.010975709219059,
+          "mean_costs": [
+            63.26541836937819,
+            76.49574071570217,
+            3.0712268180518523,
+            1.451873958931421,
+            2.12,
+            1.2719999999999998
+          ],
+          "n": 120,
+          "output_spikes_mean": 3.533333333333333
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 1.7916666666666667,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 9.25,
+          "correct_channel_first_step_conditional": 9.25,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 1.7916666666666667,
+          "max_absolute_state": 1.09906866442027,
+          "mean_costs": [
+            63.26541836937819,
+            76.49574071570217,
+            1.7916666666666667,
+            1.7916666666666667,
+            1.0750000000000008,
+            0.6449999999999994
+          ],
+          "n": 120,
+          "output_spikes_mean": 1.7916666666666667
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9916666666666667,
+          "correct_channel_first_step_capped": 11.716666666666667,
+          "correct_channel_first_step_conditional": 11.546218487394958,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 11.6,
+          "max_absolute_state": 2.010975709219059,
+          "mean_costs": [
+            63.26541836937819,
+            76.49574071570217,
+            9.77991374510027,
+            4.778176695315559,
+            6.959999999999999,
+            4.176
+          ],
+          "n": 120,
+          "output_spikes_mean": 11.6
+        }
+      },
+      "jitter8_noise10": {
+        "DEND": {
+          "accuracy": 0.7666666666666667,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              30,
+              0,
+              0,
+              10
+            ],
+            [
+              0,
+              31,
+              0,
+              9
+            ],
+            [
+              0,
+              0,
+              31,
+              9
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.7666666666666667,
+          "correct_channel_first_step_capped": 16.725,
+          "correct_channel_first_step_conditional": 12.076086956521738,
+          "coverage": 0.7666666666666667,
+          "hidden_spikes_mean": 2.625,
+          "max_absolute_state": 2.0094196288490416,
+          "mean_costs": [
+            72.32139722865003,
+            77.76078241616506,
+            2.473414143312007,
+            1.0807961523319094,
+            1.5749999999999995,
+            0.944999999999999
+          ],
+          "n": 120,
+          "output_spikes_mean": 2.625
+        },
+        "POINT_NETWORK": {
+          "accuracy": 0.975,
+          "branch_spikes_mean": 1.7583333333333333,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              39,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              38,
+              2
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.541666666666666,
+          "correct_channel_first_step_conditional": 10.541666666666666,
+          "coverage": 0.975,
+          "hidden_spikes_mean": 1.7583333333333333,
+          "max_absolute_state": 1.0998955105351764,
+          "mean_costs": [
+            72.32139722865003,
+            77.76078241616506,
+            1.7583333333333333,
+            1.7583333333333333,
+            1.0550000000000002,
+            0.6329999999999993
+          ],
+          "n": 120,
+          "output_spikes_mean": 1.7583333333333333
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.8166666666666667,
+          "correct_channel_first_step_capped": 15.541666666666666,
+          "correct_channel_first_step_conditional": 11.846938775510203,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 10.1,
+          "max_absolute_state": 2.0094196288490416,
+          "mean_costs": [
+            72.32139722865003,
+            77.76078241616506,
+            9.406130293040642,
+            4.519055923951479,
+            6.059999999999998,
+            3.6360000000000006
+          ],
+          "n": 120,
+          "output_spikes_mean": 10.1
+        }
+      },
+      "synchronous_clean": {
+        "DEND": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.608333333333333,
+          "correct_channel_first_step_conditional": 10.608333333333333,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 3.933333333333333,
+          "max_absolute_state": 2.0234189087007355,
+          "mean_costs": [
+            59.40376301594551,
+            79.06007251063406,
+            3.326631428657207,
+            1.7098474889783806,
+            2.3600000000000008,
+            1.4160000000000001
+          ],
+          "n": 120,
+          "output_spikes_mean": 3.933333333333333
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 2.0083333333333333,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 8.175,
+          "correct_channel_first_step_conditional": 8.175,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 2.0083333333333333,
+          "max_absolute_state": 1.0997683125868736,
+          "mean_costs": [
+            59.40376301594551,
+            79.06007251063406,
+            2.0083333333333333,
+            2.0083333333333333,
+            1.2050000000000005,
+            0.7229999999999992
+          ],
+          "n": 120,
+          "output_spikes_mean": 2.0083333333333333
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.608333333333333,
+          "correct_channel_first_step_conditional": 10.608333333333333,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 11.8,
+          "max_absolute_state": 2.0234189087007355,
+          "mean_costs": [
+            59.40376301594551,
+            79.06007251063406,
+            9.979894285971625,
+            5.129542466935138,
+            7.080000000000002,
+            4.2479999999999976
+          ],
+          "n": 120,
+          "output_spikes_mean": 11.8
+        }
+      }
+    },
+    "test": {
+      "jitter4_noise03": {
+        "DEND": {
+          "accuracy": 0.9733333333333334,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              198,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              191,
+              0,
+              9
+            ],
+            [
+              0,
+              0,
+              195,
+              5
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9733333333333334,
+          "correct_channel_first_step_capped": 12.191666666666666,
+          "correct_channel_first_step_conditional": 11.648972602739725,
+          "coverage": 0.9733333333333334,
+          "hidden_spikes_mean": 3.6883333333333335,
+          "max_absolute_state": 2.0910713619299504,
+          "mean_costs": [
+            63.8743401306063,
+            77.98599418288123,
+            3.1667092081714063,
+            1.5426555776200452,
+            2.2130000000000027,
+            1.3278000000000072
+          ],
+          "n": 600,
+          "output_spikes_mean": 3.6883333333333335
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 1.85,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              200,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              200,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              200,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 9.3,
+          "correct_channel_first_step_conditional": 9.3,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 1.85,
+          "max_absolute_state": 1.099980906082725,
+          "mean_costs": [
+            63.8743401306063,
+            77.98599418288123,
+            1.85,
+            1.85,
+            1.1100000000000059,
+            0.6660000000000087
+          ],
+          "n": 600,
+          "output_spikes_mean": 1.85
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.985,
+          "correct_channel_first_step_capped": 11.836666666666666,
+          "correct_channel_first_step_conditional": 11.529610829103214,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 11.915,
+          "max_absolute_state": 2.0910713619299504,
+          "mean_costs": [
+            63.8743401306063,
+            77.98599418288123,
+            10.088380143032555,
+            5.072188777372187,
+            7.1489999999999965,
+            4.2894000000000085
+          ],
+          "n": 600,
+          "output_spikes_mean": 11.915
+        }
+      },
+      "jitter8_noise10": {
+        "DEND": {
+          "accuracy": 0.7616666666666667,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              159,
+              0,
+              0,
+              41
+            ],
+            [
+              0,
+              145,
+              0,
+              55
+            ],
+            [
+              0,
+              0,
+              153,
+              47
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.7616666666666667,
+          "correct_channel_first_step_capped": 16.92,
+          "correct_channel_first_step_conditional": 12.201312910284464,
+          "coverage": 0.7616666666666667,
+          "hidden_spikes_mean": 2.515,
+          "max_absolute_state": 2.108281633626137,
+          "mean_costs": [
+            72.94754802312114,
+            79.24780499868956,
+            2.509176929790568,
+            1.101676672548337,
+            1.5090000000000037,
+            0.9054000000000053
+          ],
+          "n": 600,
+          "output_spikes_mean": 2.515
+        },
+        "POINT_NETWORK": {
+          "accuracy": 0.9383333333333334,
+          "branch_spikes_mean": 1.7766666666666666,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              192,
+              0,
+              0,
+              8
+            ],
+            [
+              0,
+              186,
+              0,
+              14
+            ],
+            [
+              0,
+              0,
+              185,
+              15
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9833333333333333,
+          "correct_channel_first_step_capped": 10.961666666666666,
+          "correct_channel_first_step_conditional": 10.605084745762712,
+          "coverage": 0.9383333333333334,
+          "hidden_spikes_mean": 1.7733333333333334,
+          "max_absolute_state": 1.0999142983734589,
+          "mean_costs": [
+            72.94754802312114,
+            79.24780499868956,
+            1.7766666666666666,
+            1.7833333333333334,
+            1.0640000000000056,
+            0.638400000000007
+          ],
+          "n": 600,
+          "output_spikes_mean": 1.7733333333333334
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.8566666666666667,
+          "correct_channel_first_step_capped": 14.875,
+          "correct_channel_first_step_conditional": 12.009727626459144,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 10.305,
+          "max_absolute_state": 2.108281633626137,
+          "mean_costs": [
+            72.94754802312114,
+            79.24780499868956,
+            9.525016852792218,
+            4.60731114681036,
+            6.183000000000002,
+            3.709800000000001
+          ],
+          "n": 600,
+          "output_spikes_mean": 10.305
+        }
+      },
+      "synchronous_clean": {
+        "DEND": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              200,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              200,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              200,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.55,
+          "correct_channel_first_step_conditional": 10.55,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 4.105,
+          "max_absolute_state": 2.1006754947595554,
+          "mean_costs": [
+            59.98024339669109,
+            80.73937619361205,
+            3.4624036853581917,
+            1.8608927233522354,
+            2.4630000000000036,
+            1.4778000000000047
+          ],
+          "n": 600,
+          "output_spikes_mean": 4.105
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 2.065,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              200,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              200,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              200,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 8.166666666666666,
+          "correct_channel_first_step_conditional": 8.166666666666666,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 2.065,
+          "max_absolute_state": 1.0985944337142608,
+          "mean_costs": [
+            59.98024339669109,
+            80.73937619361205,
+            2.065,
+            2.065,
+            1.239000000000007,
+            0.7434000000000097
+          ],
+          "n": 600,
+          "output_spikes_mean": 2.065
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ],
+            [
+              0,
+              0,
+              0,
+              200
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.55,
+          "correct_channel_first_step_conditional": 10.55,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 12.315,
+          "max_absolute_state": 2.1006754947595554,
+          "mean_costs": [
+            59.98024339669109,
+            80.73937619361205,
+            10.387211056074571,
+            5.58267817005671,
+            7.388999999999986,
+            4.43340000000001
+          ],
+          "n": 600,
+          "output_spikes_mean": 12.315
+        }
+      }
+    },
+    "validation": {
+      "jitter4_noise03": {
+        "DEND": {
+          "accuracy": 0.9666666666666667,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              38,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              39,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              39,
+              1
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9666666666666667,
+          "correct_channel_first_step_capped": 12.3,
+          "correct_channel_first_step_conditional": 11.620689655172415,
+          "coverage": 0.9666666666666667,
+          "hidden_spikes_mean": 3.6083333333333334,
+          "max_absolute_state": 2.054451864982616,
+          "mean_costs": [
+            63.379790756256824,
+            76.86311009233869,
+            3.0989188375952734,
+            1.4967862367946583,
+            2.164999999999999,
+            1.299
+          ],
+          "n": 120,
+          "output_spikes_mean": 3.6083333333333334
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 1.8333333333333333,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 9.258333333333333,
+          "correct_channel_first_step_conditional": 9.258333333333333,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 1.8333333333333333,
+          "max_absolute_state": 1.0995877746849096,
+          "mean_costs": [
+            63.379790756256824,
+            76.86311009233869,
+            1.8333333333333333,
+            1.8333333333333333,
+            1.1000000000000008,
+            0.6599999999999991
+          ],
+          "n": 120,
+          "output_spikes_mean": 1.8333333333333333
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.975,
+          "correct_channel_first_step_capped": 11.991666666666667,
+          "correct_channel_first_step_conditional": 11.478632478632479,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 11.675,
+          "max_absolute_state": 2.054451864982616,
+          "mean_costs": [
+            63.379790756256824,
+            76.86311009233869,
+            9.887889506613107,
+            4.936755472028881,
+            7.005,
+            4.203
+          ],
+          "n": 120,
+          "output_spikes_mean": 11.675
+        }
+      },
+      "jitter8_noise10": {
+        "DEND": {
+          "accuracy": 0.775,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              32,
+              0,
+              0,
+              8
+            ],
+            [
+              0,
+              30,
+              0,
+              10
+            ],
+            [
+              0,
+              0,
+              31,
+              9
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.775,
+          "correct_channel_first_step_capped": 16.641666666666666,
+          "correct_channel_first_step_conditional": 12.182795698924732,
+          "coverage": 0.775,
+          "hidden_spikes_mean": 2.675,
+          "max_absolute_state": 2.000169788494086,
+          "mean_costs": [
+            72.62006147937652,
+            78.42936819067252,
+            2.5372307910635477,
+            1.1133987786342983,
+            1.6049999999999998,
+            0.9629999999999989
+          ],
+          "n": 120,
+          "output_spikes_mean": 2.675
+        },
+        "POINT_NETWORK": {
+          "accuracy": 0.9416666666666667,
+          "branch_spikes_mean": 1.875,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              38,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              39,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              36,
+              4
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.9833333333333333,
+          "correct_channel_first_step_capped": 10.833333333333334,
+          "correct_channel_first_step_conditional": 10.474576271186441,
+          "coverage": 0.9416666666666667,
+          "hidden_spikes_mean": 1.875,
+          "max_absolute_state": 1.0995795660040977,
+          "mean_costs": [
+            72.62006147937652,
+            78.42936819067252,
+            1.875,
+            1.875,
+            1.1249999999999996,
+            0.6749999999999993
+          ],
+          "n": 120,
+          "output_spikes_mean": 1.875
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 0.8666666666666667,
+          "correct_channel_first_step_capped": 14.65,
+          "correct_channel_first_step_conditional": 11.98076923076923,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 10.625,
+          "max_absolute_state": 2.000169788494086,
+          "mean_costs": [
+            72.62006147937652,
+            78.42936819067252,
+            9.619443222324751,
+            4.695446182572206,
+            6.375000000000001,
+            3.8250000000000006
+          ],
+          "n": 120,
+          "output_spikes_mean": 10.625
+        }
+      },
+      "synchronous_clean": {
+        "DEND": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.708333333333334,
+          "correct_channel_first_step_conditional": 10.708333333333334,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 3.908333333333333,
+          "max_absolute_state": 2.0777156120491282,
+          "mean_costs": [
+            59.43245263546328,
+            79.31987545756138,
+            3.3465722303604433,
+            1.7616060936731832,
+            2.3450000000000015,
+            1.407000000000001
+          ],
+          "n": 120,
+          "output_spikes_mean": 3.908333333333333
+        },
+        "POINT_NETWORK": {
+          "accuracy": 1.0,
+          "branch_spikes_mean": 2.0166666666666666,
+          "conditional_accuracy": 1.0,
+          "confusion": [
+            [
+              40,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              40,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              40,
+              0
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 8.233333333333333,
+          "correct_channel_first_step_conditional": 8.233333333333333,
+          "coverage": 1.0,
+          "hidden_spikes_mean": 2.0166666666666666,
+          "max_absolute_state": 1.0968272611688785,
+          "mean_costs": [
+            59.43245263546328,
+            79.31987545756138,
+            2.0166666666666666,
+            2.0166666666666666,
+            1.2100000000000002,
+            0.7259999999999992
+          ],
+          "n": 120,
+          "output_spikes_mean": 2.0166666666666666
+        },
+        "POOLED": {
+          "accuracy": 0.0,
+          "branch_spikes_mean": 0.0,
+          "conditional_accuracy": null,
+          "confusion": [
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ],
+            [
+              0,
+              0,
+              0,
+              40
+            ]
+          ],
+          "confusion_columns": [
+            "class0",
+            "class1",
+            "class2",
+            "abstain"
+          ],
+          "correct_channel_firing_coverage": 1.0,
+          "correct_channel_first_step_capped": 10.708333333333334,
+          "correct_channel_first_step_conditional": 10.708333333333334,
+          "coverage": 0.0,
+          "hidden_spikes_mean": 11.725,
+          "max_absolute_state": 2.0777156120491282,
+          "mean_costs": [
+            59.43245263546328,
+            79.31987545756138,
+            10.039716691081328,
+            5.2848182810195485,
+            7.035,
+            4.220999999999998
+          ],
+          "n": 120,
+          "output_spikes_mean": 11.725
+        }
+      }
+    }
+  },
+  "test_comparisons": {
+    "jitter4_noise03": {
+      "POINT_NETWORK": {
+        "difference": -0.02666666666666667,
+        "percentile95": [
+          -0.04,
+          -0.015
+        ]
+      },
+      "POOLED": {
+        "difference": 0.9733333333333334,
+        "percentile95": [
+          0.96,
+          0.985
+        ]
+      }
+    },
+    "jitter8_noise10": {
+      "POINT_NETWORK": {
+        "difference": -0.17666666666666667,
+        "percentile95": [
+          -0.215,
+          -0.13833333333333334
+        ]
+      },
+      "POOLED": {
+        "difference": 0.7616666666666667,
+        "percentile95": [
+          0.7266666666666667,
+          0.7967083333333331
+        ]
+      }
+    },
+    "synchronous_clean": {
+      "POINT_NETWORK": {
+        "difference": 0.0,
+        "percentile95": [
+          0.0,
+          0.0
+        ]
+      },
+      "POOLED": {
+        "difference": 1.0,
+        "percentile95": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "python": "3.12.14"
+  }
+}

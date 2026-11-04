@@ -1,0 +1,2945 @@
+{
+  "version": "tan-range-consistency-v2.0",
+  "scope": "Bounded conceptual Chat-sandbox comparison; NOT original TAN/P1-B/v11 or biological replication",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "rng": "none",
+  "spec_sha256": "dc73c12e5ccceed4f51efca859365930f8756c8515a579b764abe69bbce130a8",
+  "script_sha256": "dc5b1cdedf0ac7282420dd1a7bf41536aa3d7c252e046e9819625f71de3968cf",
+  "checks": {
+    "trajectories": 560,
+    "scenarios": 140,
+    "gap_certified_trajectories": 60,
+    "clean_exact_control_trajectories": 12,
+    "max_recurrence_absolute_error": 3.0517578125e-05,
+    "max_recurrence_scaled_error": 1.1885892895787272e-15,
+    "max_projected_range_relative_defect": 5.514285930859989e-16
+  },
+  "summary": {
+    "by_arm": {
+      "U": {
+        "trajectories": 140,
+        "repeat_false_new_trajectories": 0,
+        "repeat_stopped_or_rejected_trajectories": 5,
+        "later_new_not_admitted_as_new": 31,
+        "later_new_routed_old": 26,
+        "later_new_stopped_or_rejected": 5,
+        "stopped": 5,
+        "post_new_max_error_above_1e-6": 131,
+        "max_post_new_latest_error_including_stopped_diagnostics": 9710496517061.066,
+        "max_post_new_latest_error_without_stopped": 39903989.341017805,
+        "max_true_null_leak_before_new": 185878816.7597513,
+        "max_clean_geometry_ghost_abs": 185878816.7597513,
+        "max_noisy_query_residual_after_repeats": 196637493780.6334
+      },
+      "P": {
+        "trajectories": 140,
+        "repeat_false_new_trajectories": 0,
+        "repeat_stopped_or_rejected_trajectories": 5,
+        "later_new_not_admitted_as_new": 31,
+        "later_new_routed_old": 26,
+        "later_new_stopped_or_rejected": 5,
+        "stopped": 5,
+        "post_new_max_error_above_1e-6": 125,
+        "max_post_new_latest_error_including_stopped_diagnostics": 9710496517061.066,
+        "max_post_new_latest_error_without_stopped": 46464700.62577364,
+        "max_true_null_leak_before_new": 185878816.75975135,
+        "max_clean_geometry_ghost_abs": 185878816.75975135,
+        "max_noisy_query_residual_after_repeats": 196637493780.6334
+      },
+      "PN": {
+        "trajectories": 140,
+        "repeat_false_new_trajectories": 0,
+        "repeat_stopped_or_rejected_trajectories": 0,
+        "later_new_not_admitted_as_new": 30,
+        "later_new_routed_old": 30,
+        "later_new_stopped_or_rejected": 0,
+        "stopped": 0,
+        "post_new_max_error_above_1e-6": 125,
+        "max_post_new_latest_error_including_stopped_diagnostics": 1.6065529688278453,
+        "max_post_new_latest_error_without_stopped": 1.6065529688278453,
+        "max_true_null_leak_before_new": 0.3606488201658406,
+        "max_clean_geometry_ghost_abs": 0.3606488201658406,
+        "max_noisy_query_residual_after_repeats": 5.551115123125783e-16
+      },
+      "TK": {
+        "trajectories": 140,
+        "repeat_false_new_trajectories": 0,
+        "repeat_stopped_or_rejected_trajectories": 0,
+        "later_new_not_admitted_as_new": 30,
+        "later_new_routed_old": 30,
+        "later_new_stopped_or_rejected": 0,
+        "stopped": 0,
+        "post_new_max_error_above_1e-6": 95,
+        "max_post_new_latest_error_including_stopped_diagnostics": 1.5000500012500004,
+        "max_post_new_latest_error_without_stopped": 1.5000500012500004,
+        "max_true_null_leak_before_new": 0.35739449210021257,
+        "max_clean_geometry_ghost_abs": 0.35739449210021257,
+        "max_noisy_query_residual_after_repeats": 3.428532244880519
+      }
+    },
+    "fixed_slices": {
+      "(1.0, 1e-10, 'none', 0.0, 'null_0.02')": {
+        "U": {
+          "initial_rank": 2,
+          "projector_error_initial": 2.3417182690063047e-16,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5
+            ],
+            "max_latest_error": 0.0,
+            "true_null_leak": 0.015000000000000006,
+            "estimated_range_defect": 0.015000000000000006,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7072658623177004,
+            "w_norm": 1.8027756377319946,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.38196601125010515,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.015000000000000006,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5,
+              0.015000000000000006
+            ],
+            "max_latest_error": 0.015000000000000006,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7072658623177004,
+            "w_norm": 1.802838040424042,
+            "residual_at_noisy": -0.015000000000000006,
+            "residual_at_presented": -0.015000000000000006,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0,
+              -0.7499999999999998,
+              0.015000000000000006
+            ],
+            "max_latest_error": 0.015000000000000006,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 2.2887833992611187e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7907117047318828,
+            "w_norm": 2.015620251932392,
+            "residual_at_noisy": -2.220446049250313e-16,
+            "residual_at_presented": -2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 2,
+          "projector_error_initial": 2.3417182690063047e-16,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.38196601125010515,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.9999999999999998,
+              -0.7499999999999998,
+              0.0
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 2.2887833992611187e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7905694150420949,
+            "w_norm": 2.015564437074637,
+            "residual_at_noisy": -2.220446049250313e-16,
+            "residual_at_presented": -2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 2,
+          "projector_error_initial": 2.3417182690063047e-16,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.38196601125010515,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.9999999999999998,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 2.2887833992611187e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.790569415042095,
+            "w_norm": 2.0155644370746373,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 2,
+          "projector_error_initial": 2.3417182690063047e-16,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              0.38196601125010515,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.4999999999999982,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 1.5700924586837752e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7071067811865478,
+            "w_norm": 1.8027756377319932,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.9999999999999998,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 2.2887833992611187e-16,
+            "projector_error": 2.3417182690063047e-16,
+            "idempotence_error": 2.3417182690063047e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.790569415042095,
+            "w_norm": 2.0155644370746373,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              0.38196601125010515,
+              1.0,
+              2.618033988749895
+            ]
+          }
+        }
+      },
+      "(0.01, 1e-10, 'none', 0.0, 'mixed_0.02')": {
+        "U": {
+          "initial_rank": 2,
+          "projector_error_initial": 1.0991207943827074e-13,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              13665.259418836424,
+              -36440.525116897144
+            ],
+            "max_latest_error": 36440.025116897144,
+            "true_null_leak": 273.30018837672844,
+            "estimated_range_defect": 273.30018837672844,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 22779.820275790302,
+            "w_norm": 5010597.088045351,
+            "residual_at_noisy": 66504.99583833729,
+            "residual_at_presented": 66504.99583833729,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": -273.30018837672844,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              13665.259418836424,
+              -36440.525116897144,
+              -273.30018837672844
+            ],
+            "max_latest_error": 36440.025116897144,
+            "true_null_leak": 4.013145371573046e-11,
+            "estimated_range_defect": 3.638422869199817e-12,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 22779.820275790302,
+            "w_norm": 5010597.095498853,
+            "residual_at_noisy": 273.30018837672844,
+            "residual_at_presented": 273.30018837672844,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              13665.25941883642,
+              -0.7499999999854481,
+              -273.30018837672844
+            ],
+            "max_latest_error": 13664.25941883642,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 3.637979880491162e-12,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 13667.242247450387,
+            "w_norm": 1366669.2900498023,
+            "residual_at_noisy": -1.4551915228366852e-11,
+            "residual_at_presented": -1.4551915228366852e-11,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 2,
+          "projector_error_initial": 1.0991207943827074e-13,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              13665.259418836562,
+              -36440.525116897516
+            ],
+            "max_latest_error": 36440.025116897516,
+            "true_null_leak": 4.013145371573046e-11,
+            "estimated_range_defect": 3.638422869199817e-12,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 22778.180761517167,
+            "w_norm": 5010597.088045402,
+            "residual_at_noisy": 66504.99583833796,
+            "residual_at_presented": 66504.99583833796,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              13665.259418836562,
+              -36440.525116897516,
+              0.0
+            ],
+            "max_latest_error": 36440.025116897516,
+            "true_null_leak": 4.013145371573046e-11,
+            "estimated_range_defect": 3.638422869199817e-12,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 22778.180761517167,
+            "w_norm": 5010597.088045402,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              13665.259418836567,
+              -0.7499999999672582,
+              0.0
+            ],
+            "max_latest_error": 13664.259418836567,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 3.637979880491162e-12,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 13664.50941883866,
+            "w_norm": 1366669.2627231625,
+            "residual_at_noisy": -3.2741809263825417e-11,
+            "residual_at_presented": -3.2741809263825417e-11,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 2,
+          "projector_error_initial": 1.0991207943827074e-13,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              -0.15068493150684859,
+              0.5684931506849317
+            ],
+            "max_latest_error": 1.1506849315068486,
+            "true_null_leak": 6.262351748276274e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.4178468935615038,
+            "w_norm": 71.91796607940921,
+            "residual_at_noisy": 1.1102230246251565e-16,
+            "residual_at_presented": 1.1102230246251565e-16,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              -0.15068493150684859,
+              0.5684931506849317,
+              0.0
+            ],
+            "max_latest_error": 1.1506849315068486,
+            "true_null_leak": 6.262351748276274e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.4178468935615038,
+            "w_norm": 71.91796607940921,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              -0.15068493150684859,
+              -0.7500000000000006,
+              0.0
+            ],
+            "max_latest_error": 1.1506849315068486,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 2.220513810852149e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.900716157201311,
+            "w_norm": 59.93169628150114,
+            "residual_at_noisy": 5.551115123125783e-16,
+            "residual_at_presented": 5.551115123125783e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 2,
+          "projector_error_initial": 1.0991207943827074e-13,
+          "gap_cutoff_certified": true,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.5000249993750298,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 2.400000000000003,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.5000249993750298,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0000000000000002,
+              -0.7500000000000004,
+              0.0
+            ],
+            "max_latest_error": 4.440892098500626e-16,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 5.553824967135427e-17,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.2501124746988846,
+            "w_norm": 175.00285711953396,
+            "residual_at_noisy": 4.440892098500626e-16,
+            "residual_at_presented": 4.440892098500626e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        }
+      },
+      "(0.01, 0.0001, 'none', 0.0, 'clean')": {
+        "U": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              0.9999828200288045,
+              1.0000328204197844
+            ],
+            "max_latest_error": 1.5000328204197844,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 0.015000515716503715,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000096893671637,
+            "w_norm": 0.9999953203609214,
+            "residual_at_noisy": 1.7179971195546706e-05,
+            "residual_at_presented": 1.7179971195546706e-05,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              0.9999828200288045,
+              1.0000328204197844,
+              0.0
+            ],
+            "max_latest_error": 1.5000328204197844,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 0.015000515716503715,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000096893671637,
+            "w_norm": 0.9999953203609214,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.1249664109126827,
+              0.12497265938943634,
+              0.0
+            ],
+            "max_latest_error": 0.8750335890873173,
+            "true_null_leak": 2.4771851236948805e-15,
+            "estimated_range_defect": 0.02375035168676552,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 0.2510680781885505,
+            "w_norm": 0.12496797306116023,
+            "residual_at_noisy": -0.8749726593894364,
+            "residual_at_presented": -0.8749726593894364,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              0.9999828200288047,
+              1.0000328204197846
+            ],
+            "max_latest_error": 1.5000328204197846,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000040641737855,
+            "w_norm": 0.9999953203609216,
+            "residual_at_noisy": 1.717997119532466e-05,
+            "residual_at_presented": 1.717997119532466e-05,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              0.9999828200288047,
+              1.0000328204197846,
+              0.0
+            ],
+            "max_latest_error": 1.5000328204197846,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000040641737855,
+            "w_norm": 0.9999953203609216,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.12496641091268265,
+              0.1249726593894363,
+              0.0
+            ],
+            "max_latest_error": 0.8750335890873173,
+            "true_null_leak": 1.3769367590565906e-16,
+            "estimated_range_defect": 5.551792708129603e-17,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 0.24994219467718337,
+            "w_norm": 0.12496797306116018,
+            "residual_at_noisy": -0.8749726593894362,
+            "residual_at_presented": -0.8749726593894362,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125,
+              0.0
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              -0.7499625009375003,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 1.7499625009375004,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 2.220598509946676e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 1.4999812512890556,
+            "w_norm": 0.7499718758788985,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125,
+              0.0
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              -0.7499625009375003,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 1.7499625009375004,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 2.220598509946676e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 1.4999812512890556,
+            "w_norm": 0.7499718758788985,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000078e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        }
+      },
+      "(1.0, 1e-10, 'weak_null_symmetric_mix', 0.1, 'null_0.02')": {
+        "U": {
+          "initial_rank": 2,
+          "projector_error_initial": 0.09853761796664223,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.003556114245896,
+              -0.4871409774709541
+            ],
+            "max_latest_error": 0.012859022529045916,
+            "true_null_leak": 0.015487248995199885,
+            "estimated_range_defect": 0.08448665498983436,
+            "projector_error": 0.09853761796664223,
+            "idempotence_error": 6.394655759401103e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7247039627321916,
+            "w_norm": 1.805801086780617,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              -0.0037822088642961624,
+              0.0,
+              0.3857482201144011,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.015487248995199885,
+          "new_event": {
+            "score": 0.9951333266680702,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0288792855450573,
+              -0.5027915580367708,
+              0.08591532212837183
+            ],
+            "max_latest_error": 0.08591532212837183,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 2.999215988638303e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7247039627321916,
+            "w_norm": 1.8471571670756113,
+            "residual_at_noisy": -0.08591532212837183,
+            "residual_at_presented": -0.08591532212837183,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.025323171299161285,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0293031871377714,
+              -0.7502619855921824,
+              0.09397840956874168
+            ],
+            "max_latest_error": 0.09397840956874168,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.5246917379414775e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7971039171026354,
+            "w_norm": 2.0579478119015637,
+            "residual_at_noisy": 0.0002619855921823788,
+            "residual_at_presented": 0.0002619855921823788,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 2,
+          "projector_error_initial": 0.09853761796664223,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.003556114245896,
+              -0.4871409774709521
+            ],
+            "max_latest_error": 0.012859022529047914,
+            "true_null_leak": 0.06858823704389143,
+            "estimated_range_defect": 2.498001805406602e-16,
+            "projector_error": 0.09853761796664223,
+            "idempotence_error": 6.394655759401103e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7197623487849103,
+            "w_norm": 1.8058010867806151,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              -0.0037822088642961624,
+              0.0,
+              0.3857482201144011,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": -0.06858823704389143,
+          "new_event": {
+            "score": 0.9951333266680702,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0129397560548126,
+              -0.49294038704711585,
+              0.0006817614841745923
+            ],
+            "max_latest_error": 0.012939756054812568,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.0182194481103634e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7197623487849103,
+            "w_norm": 1.814861542813608,
+            "residual_at_noisy": -0.0006817614841745923,
+            "residual_at_presented": -0.0006817614841745923,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.009383641808916598,
+          "after_final_f2": {
+            "true_predictions": [
+              1.013380549979517,
+              -0.7502724256275022,
+              0.00906616017285293
+            ],
+            "max_latest_error": 0.013380549979516987,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.5354328361705813e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.797684922142672,
+            "w_norm": 2.034083123351787,
+            "residual_at_noisy": 0.0002724256275021819,
+            "residual_at_presented": 0.0002724256275021819,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 2,
+          "projector_error_initial": 0.09853761796664223,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.003556114245896,
+              -0.48714097747095186
+            ],
+            "max_latest_error": 0.012859022529048136,
+            "true_null_leak": 0.06858823704389141,
+            "estimated_range_defect": 2.498001805406602e-16,
+            "projector_error": 0.09853761796664223,
+            "idempotence_error": 6.394655759401103e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7197623487849102,
+            "w_norm": 1.805801086780615,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              -0.0037822088642961624,
+              0.0,
+              0.3857482201144011,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": -0.06858823704389141,
+          "new_event": {
+            "score": 0.9951333266680702,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0129397560548123,
+              -0.4929403870471156,
+              0.0006817614841745923
+            ],
+            "max_latest_error": 0.012939756054812346,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.0182194481103634e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7197623487849102,
+            "w_norm": 1.8148615428136072,
+            "residual_at_noisy": -0.0006817614841745923,
+            "residual_at_presented": -0.0006817614841745923,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.009383641808916376,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0133800833312046,
+              -0.7499999999999998,
+              0.00905728399448591
+            ],
+            "max_latest_error": 0.01338008333120455,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.5354328361705813e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7975188356972507,
+            "w_norm": 2.033846244428246,
+            "residual_at_noisy": -2.220446049250313e-16,
+            "residual_at_presented": -2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 2,
+          "projector_error_initial": 0.09853761796664223,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.4884697063697705
+            ],
+            "max_latest_error": 0.011530293630229504,
+            "true_null_leak": 0.06844445407317767,
+            "estimated_range_defect": 3.7341307954279784e-16,
+            "projector_error": 0.09853761796664223,
+            "idempotence_error": 6.394655759401103e-16,
+            "retained_rank": 2,
+            "admissions": 2,
+            "b_norm": 0.7171289235080446,
+            "w_norm": 1.8019502010857606,
+            "residual_at_noisy": 0.0035486594884548417,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              -0.0037822088642961624,
+              0.0,
+              0.3857482201144011,
+              2.618033988749895
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": -0.06844445407317767,
+          "new_event": {
+            "score": 0.9951333266680702,
+            "retained_rank": 2,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0093639706822983,
+              -0.4942569585210872,
+              0.000680332293168405
+            ],
+            "max_latest_error": 0.009363970682298328,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.0182194481103634e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7171289235080446,
+            "w_norm": 1.810991989739882,
+            "residual_at_noisy": -0.000680332293168405,
+            "residual_at_presented": -0.000680332293168405,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          },
+          "old_output_drift_on_new": 0.009363970682298328,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0098020427528858,
+              -0.7499999999999996,
+              0.009012958239954946
+            ],
+            "max_latest_error": 0.009802042752885765,
+            "true_null_leak": 0.0,
+            "estimated_range_defect": 3.5354328361705813e-16,
+            "projector_error": 4.842620325048208e-16,
+            "idempotence_error": 4.842620325048208e-16,
+            "retained_rank": 3,
+            "admissions": 3,
+            "b_norm": 0.7963344439891783,
+            "w_norm": 2.0289614655388024,
+            "residual_at_noisy": -4.440892098500626e-16,
+            "residual_at_presented": -4.440892098500626e-16,
+            "eigenvalues": [
+              0.0,
+              0.37961428023659977,
+              1.002351731013505,
+              2.618033988749895
+            ]
+          }
+        }
+      },
+      "(0.01, 1e-10, 'null_lift', 0.1, 'clean')": {
+        "U": {
+          "initial_rank": 3,
+          "projector_error_initial": 1.0,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000002
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750312,
+            "w_norm": 150.00333329629714,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 0.0,
+            "retained_rank": 3,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 200005.00012499996,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 0.0,
+            "estimated_range_defect": 1.1102569054260746e-16
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000002,
+              0.0
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750312,
+            "w_norm": 150.00333329629714,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 2.220446049250313e-16,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 5.553824967135427e-17,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.2501124746988844,
+            "w_norm": 175.00285711953393,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 3,
+          "projector_error_initial": 1.0,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750298,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 0.0,
+            "retained_rank": 3,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 200005.00012499996,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 1.1102569054260746e-16,
+            "estimated_range_defect": 1.1102569054260746e-16
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750299,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0000000000000002,
+              -0.7500000000000004,
+              0.0
+            ],
+            "max_latest_error": 4.440892098500626e-16,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 5.553824967135427e-17,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.2501124746988847,
+            "w_norm": 175.00285711953396,
+            "residual_at_noisy": 4.440892098500626e-16,
+            "residual_at_presented": 4.440892098500626e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 3,
+          "projector_error_initial": 1.0,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750298,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 0.0,
+            "retained_rank": 3,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 200005.00012499996,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 1.1102569054260746e-16,
+            "estimated_range_defect": 1.1102569054260746e-16
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750299,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0000000000000002,
+              -0.7500000000000004,
+              0.0
+            ],
+            "max_latest_error": 4.440892098500626e-16,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 5.553824967135427e-17,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.2501124746988847,
+            "w_norm": 175.00285711953396,
+            "residual_at_noisy": 4.440892098500626e-16,
+            "residual_at_presented": 4.440892098500626e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 3,
+          "projector_error_initial": 1.0,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750298,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 0.0,
+            "retained_rank": 3,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 200005.00012499996,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 1.1102569054260746e-16,
+            "estimated_range_defect": 1.1102569054260746e-16
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              -0.5000000000000018,
+              0.0
+            ],
+            "max_latest_error": 1.7763568394002505e-15,
+            "true_null_leak": 5.507747036226363e-16,
+            "estimated_range_defect": 1.1102569054260746e-16,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.5000249993750299,
+            "w_norm": 150.00333329629728,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              1.0000000000000002,
+              -0.7500000000000004,
+              0.0
+            ],
+            "max_latest_error": 4.440892098500626e-16,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 5.553824967135427e-17,
+            "projector_error": 1.0991207943827074e-13,
+            "idempotence_error": 2.222492492863401e-16,
+            "retained_rank": 3,
+            "admissions": 2,
+            "b_norm": 0.2501124746988847,
+            "w_norm": 175.00285711953396,
+            "residual_at_noisy": 4.440892098500626e-16,
+            "residual_at_presented": 4.440892098500626e-16,
+            "eigenvalues": [
+              0.0,
+              4.999875000000079e-06,
+              4.999875000000078e-05,
+              2.00005000125
+            ]
+          }
+        }
+      },
+      "(0.01, 0.0001, 'weak_erosion', 0.1, 'mixed_0.001')": {
+        "U": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              0.9999788222046266,
+              1.0000288223957103
+            ],
+            "max_latest_error": 1.5000288223957103,
+            "true_null_leak": 0.001350044188438137,
+            "estimated_range_defect": 0.013269251275483313,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000076662844142,
+            "w_norm": 0.9999913224867686,
+            "residual_at_noisy": 1.7177780086696792e-05,
+            "residual_at_presented": 1.7177780086696792e-05,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.499887500000069e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.001350044188438137,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              0.9999788222046266,
+              1.0000288223957103,
+              0.001350044188438137
+            ],
+            "max_latest_error": 1.5000288223957103,
+            "true_null_leak": 3.5258254649228604e-16,
+            "estimated_range_defect": 0.0132003943161248,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000076662844142,
+            "w_norm": 0.9999922338039167,
+            "residual_at_noisy": -0.001350044188438137,
+            "residual_at_presented": -0.001350044188438137,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.12496441210053938,
+              0.12497066047734992,
+              0.001350044188438137
+            ],
+            "max_latest_error": 0.8750355878994607,
+            "true_null_leak": 2.2794266474335245e-15,
+            "estimated_range_defect": 0.02195021029701586,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 0.2509038393937142,
+            "w_norm": 0.12497326647356159,
+            "residual_at_noisy": -0.87497066047735,
+            "residual_at_presented": -0.87497066047735,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "P": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              0.9999788222046269,
+              1.0000288223957106
+            ],
+            "max_latest_error": 1.5000288223957106,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.0000326457896507,
+            "w_norm": 0.9999913224867688,
+            "residual_at_noisy": 1.7177780086474748e-05,
+            "residual_at_presented": 1.7177780086474748e-05,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.499887500000069e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              0.9999788222046269,
+              1.0000288223957106,
+              0.0
+            ],
+            "max_latest_error": 1.5000288223957106,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.0000326457896507,
+            "w_norm": 0.9999913224867688,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              0.12496441210053938,
+              0.12497066047734992,
+              0.0
+            ],
+            "max_latest_error": 0.8750355878994607,
+            "true_null_leak": 1.3769367590565906e-16,
+            "estimated_range_defect": 5.552173813354909e-17,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 0.24993819690297997,
+            "w_norm": 0.12496597422403068,
+            "residual_at_noisy": -0.87497066047735,
+            "residual_at_presented": -0.87497066047735,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "PN": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              0.9999959999160006,
+              1.0000460009659915
+            ],
+            "max_latest_error": 1.5000460009659915,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000067002500778,
+            "w_norm": 1.0000085004128734,
+            "residual_at_noisy": 1.1102230246251565e-16,
+            "residual_at_presented": 1.1102230246251565e-16,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.499887500000069e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              0.9999959999160006,
+              1.0000460009659915,
+              0.0
+            ],
+            "max_latest_error": 1.5000460009659915,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000067002500778,
+            "w_norm": 1.0000085004128734,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              -0.7499625009375003,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 1.7499625009375004,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 2.220598509946676e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 1.4999812512890556,
+            "w_norm": 0.7499718758788985,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        },
+        "TK": {
+          "initial_rank": 1,
+          "projector_error_initial": 1.0000000000001101,
+          "gap_cutoff_certified": false,
+          "repeat_branch_counts": {
+            "old": 16
+          },
+          "pre_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 1,
+            "admissions": 2,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": -4.000099999901252e-06,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              0.0,
+              4.499887500000069e-05,
+              2.00005000125
+            ]
+          },
+          "clean_geometry_ghost_scorer_only": 0.0,
+          "new_event": {
+            "score": 1.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "new"
+          },
+          "after_new": {
+            "true_predictions": [
+              1.0,
+              1.00005000125,
+              0.0
+            ],
+            "max_latest_error": 1.50005000125,
+            "true_null_leak": 1.1015494072452725e-15,
+            "estimated_range_defect": 4.44092597968927e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 2.000075002968795,
+            "w_norm": 1.0000125005468758,
+            "residual_at_noisy": 0.0,
+            "residual_at_presented": 0.0,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          },
+          "old_output_drift_on_new": 0.0,
+          "after_final_f2": {
+            "true_predictions": [
+              -0.7499625009375003,
+              -0.7500000000000002,
+              0.0
+            ],
+            "max_latest_error": 1.7499625009375004,
+            "true_null_leak": 8.257283745649602e-16,
+            "estimated_range_defect": 2.220598509946676e-16,
+            "projector_error": 1.0000000000001101,
+            "idempotence_error": 2.220479930051231e-16,
+            "retained_rank": 2,
+            "admissions": 3,
+            "b_norm": 1.4999812512890556,
+            "w_norm": 0.7499718758788985,
+            "residual_at_noisy": 2.220446049250313e-16,
+            "residual_at_presented": 2.220446049250313e-16,
+            "eigenvalues": [
+              0.0,
+              4.499887500000069e-05,
+              1.0,
+              2.00005000125
+            ]
+          }
+        }
+      }
+    }
+  },
+  "fixtures": {
+    "normalized_wrong_address": {
+      "a": 0.001,
+      "leverage": 5.0000000009872,
+      "arms": {
+        "U": [
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 1.0,
+              "residual_before": 1.0,
+              "residual_after": -4.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 1.1102230246251565e-16
+            },
+            "true_predictions": [
+              -1.0,
+              2.0
+            ],
+            "noisy_prediction": 5.0
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -4.0,
+              "residual_before": -4.0,
+              "residual_after": 16.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 4.440892098500626e-16
+            },
+            "true_predictions": [
+              3.0,
+              -6.0
+            ],
+            "noisy_prediction": -15.0
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 16.0,
+              "residual_before": 16.0,
+              "residual_after": -64.00000000000003,
+              "recurrence_error": 2.842170943040401e-14,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 1.7763568394002505e-15
+            },
+            "true_predictions": [
+              -13.000000000000004,
+              26.00000000000001
+            ],
+            "noisy_prediction": 65.00000000000003
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -64.00000000000003,
+              "residual_before": -64.00000000000003,
+              "residual_after": 256.0000000000002,
+              "recurrence_error": 1.1368683772161603e-13,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 7.105427357601002e-15
+            },
+            "true_predictions": [
+              51.00000000000004,
+              -102.00000000000007
+            ],
+            "noisy_prediction": -255.0000000000002
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 256.0000000000002,
+              "residual_before": 256.0000000000002,
+              "residual_after": -1024.000000000001,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 2.842170943040401e-14
+            },
+            "true_predictions": [
+              -205.0000000000002,
+              410.00000000000034
+            ],
+            "noisy_prediction": 1025.000000000001
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -1024.000000000001,
+              "residual_before": -1024.000000000001,
+              "residual_after": 4096.000000000004,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 1.1368683772161603e-13
+            },
+            "true_predictions": [
+              819.0000000000009,
+              -1638.0000000000014
+            ],
+            "noisy_prediction": -4095.0000000000036
+          }
+        ],
+        "P": [
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 1.0,
+              "residual_before": 1.0,
+              "residual_after": -4.000000000000001,
+              "recurrence_error": 8.881784197001252e-16,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 1.1102230246251565e-16
+            },
+            "true_predictions": [
+              -1.0,
+              2.0000000000000004
+            ],
+            "noisy_prediction": 5.000000000000001
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -4.000000000000001,
+              "residual_before": -4.000000000000001,
+              "residual_after": 16.000000000000007,
+              "recurrence_error": 3.552713678800501e-15,
+              "reprojection_removed": 1.1102230246251565e-16,
+              "estimated_range_defect": 4.440892098500626e-16
+            },
+            "true_predictions": [
+              3.0000000000000018,
+              -6.000000000000002
+            ],
+            "noisy_prediction": -15.000000000000005
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 16.000000000000007,
+              "residual_before": 16.000000000000007,
+              "residual_after": -64.00000000000003,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 4.440892098500626e-16,
+              "estimated_range_defect": 1.7763568394002505e-15
+            },
+            "true_predictions": [
+              -13.00000000000001,
+              26.00000000000001
+            ],
+            "noisy_prediction": 65.00000000000003
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -64.00000000000003,
+              "residual_before": -64.00000000000003,
+              "residual_after": 256.0000000000001,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 1.7763568394002505e-15,
+              "estimated_range_defect": 7.105427357601002e-15
+            },
+            "true_predictions": [
+              51.00000000000004,
+              -102.00000000000004
+            ],
+            "noisy_prediction": -255.00000000000014
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 256.0000000000001,
+              "residual_before": 256.0000000000001,
+              "residual_after": -1024.0000000000005,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 7.105427357601002e-15,
+              "estimated_range_defect": 2.842170943040401e-14
+            },
+            "true_predictions": [
+              -205.00000000000017,
+              410.00000000000017
+            ],
+            "noisy_prediction": 1025.0000000000005
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -1024.0000000000005,
+              "residual_before": -1024.0000000000005,
+              "residual_after": 4096.000000000002,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.842170943040401e-14,
+              "estimated_range_defect": 1.1368683772161603e-13
+            },
+            "true_predictions": [
+              819.0000000000007,
+              -1638.0000000000007
+            ],
+            "noisy_prediction": -4095.0000000000023
+          }
+        ],
+        "PN": [
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 0.2,
+              "residual_before": 1.0,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.20000000000000004,
+              0.3999999999999999
+            ],
+            "noisy_prediction": 1.0
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": -4.4408920985006264e-17,
+              "residual_before": -2.220446049250313e-16,
+              "residual_after": 2.220446049250313e-16,
+              "recurrence_error": 2.220446049250313e-16,
+              "reprojection_removed": 2.7755575615628914e-17,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.2,
+              0.39999999999999986
+            ],
+            "noisy_prediction": 0.9999999999999998
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 0.0,
+              "residual_before": 0.0,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.7755575615628914e-17,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.20000000000000004,
+              0.3999999999999999
+            ],
+            "noisy_prediction": 1.0
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 0.0,
+              "residual_before": 0.0,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.7755575615628914e-17,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.20000000000000007,
+              0.3999999999999999
+            ],
+            "noisy_prediction": 1.0
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 2.2204460492503132e-17,
+              "residual_before": 1.1102230246251565e-16,
+              "residual_after": -2.220446049250313e-16,
+              "recurrence_error": 2.220446049250313e-16,
+              "reprojection_removed": 2.7755575615628914e-17,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.20000000000000012,
+              0.39999999999999997
+            ],
+            "noisy_prediction": 1.0000000000000002
+          },
+          {
+            "event": {
+              "score": 1.1102230246251565e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 5.0,
+              "coefficient": 0.0,
+              "residual_before": 0.0,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.7755575615628914e-17,
+              "estimated_range_defect": 2.7755575615628914e-17
+            },
+            "true_predictions": [
+              -0.20000000000000015,
+              0.3999999999999999
+            ],
+            "noisy_prediction": 1.0
+          }
+        ],
+        "TK": [
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 1.0000000000000002,
+              "residual_before": 1.0,
+              "residual_after": 2.220446049250313e-16,
+              "recurrence_error": 2.220446049250313e-16,
+              "reprojection_removed": 0.0,
+              "estimated_range_defect": 1.110223083832473e-16
+            },
+            "true_predictions": [
+              0.9999999999999998,
+              1.1102230246251565e-16
+            ],
+            "noisy_prediction": -0.9999999999999996
+          },
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 4.440892098500627e-16,
+              "residual_before": 4.440892098500626e-16,
+              "residual_after": -2.220446049250313e-16,
+              "recurrence_error": 2.220446049250313e-16,
+              "reprojection_removed": 1.110223083832473e-16,
+              "estimated_range_defect": 2.220446078853972e-16
+            },
+            "true_predictions": [
+              1.0000000000000002,
+              0.0
+            ],
+            "noisy_prediction": -1.0
+          },
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 1.1102230246251568e-16,
+              "residual_before": 1.1102230246251565e-16,
+              "residual_after": -2.220446049250313e-16,
+              "recurrence_error": 2.220446049250313e-16,
+              "reprojection_removed": 2.220446078853972e-16,
+              "estimated_range_defect": 2.220446078853972e-16
+            },
+            "true_predictions": [
+              1.0000000000000002,
+              2.220446049250313e-16
+            ],
+            "noisy_prediction": -0.9999999999999998
+          },
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 1.1102230246251568e-16,
+              "residual_before": 1.1102230246251565e-16,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.220446078853972e-16,
+              "estimated_range_defect": 2.220446078853972e-16
+            },
+            "true_predictions": [
+              1.0,
+              1.1102230246251565e-16
+            ],
+            "noisy_prediction": -0.9999999999999998
+          },
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 2.2204460492503136e-16,
+              "residual_before": 2.220446049250313e-16,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.220446078853972e-16,
+              "estimated_range_defect": 2.220446078853972e-16
+            },
+            "true_predictions": [
+              1.0,
+              1.1102230246251565e-16
+            ],
+            "noisy_prediction": -0.9999999999999998
+          },
+          {
+            "event": {
+              "score": 1.110223083832473e-16,
+              "retained_rank": 2,
+              "admissions": 2,
+              "branch": "old",
+              "leverage": 0.9999999999999998,
+              "coefficient": 2.2204460492503136e-16,
+              "residual_before": 2.220446049250313e-16,
+              "residual_after": 0.0,
+              "recurrence_error": 0.0,
+              "reprojection_removed": 2.220446078853972e-16,
+              "estimated_range_defect": 2.220446078853972e-16
+            },
+            "true_predictions": [
+              1.0,
+              2.220446049250313e-16
+            ],
+            "noisy_prediction": -0.9999999999999996
+          }
+        ]
+      }
+    },
+    "valid_weak_content_deletion": {
+      "weak_eigenvalue": 0.0001,
+      "destructive_cutoff": 0.0002,
+      "recovery_cutoff": 1e-10,
+      "arms": {
+        "U": {
+          "event": {
+            "score": 0.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 1.0,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 0.0,
+            "estimated_range_defect": 0.01
+          },
+          "b_before": [
+            0.0,
+            0.01,
+            0.0,
+            0.0
+          ],
+          "b_after": [
+            0.0,
+            0.01,
+            0.0,
+            0.0
+          ],
+          "readout_after_threshold_recovery": [
+            0.0,
+            1.0
+          ]
+        },
+        "P": {
+          "event": {
+            "score": 0.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 1.0,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 0.01,
+            "estimated_range_defect": 0.0
+          },
+          "b_before": [
+            0.0,
+            0.01,
+            0.0,
+            0.0
+          ],
+          "b_after": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "readout_after_threshold_recovery": [
+            0.0,
+            0.0
+          ]
+        },
+        "PN": {
+          "event": {
+            "score": 0.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 1.0,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 0.01,
+            "estimated_range_defect": 0.0
+          },
+          "b_before": [
+            0.0,
+            0.01,
+            0.0,
+            0.0
+          ],
+          "b_after": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "readout_after_threshold_recovery": [
+            0.0,
+            0.0
+          ]
+        },
+        "TK": {
+          "event": {
+            "score": 0.0,
+            "retained_rank": 1,
+            "admissions": 2,
+            "branch": "old",
+            "leverage": 1.0,
+            "coefficient": 0.0,
+            "residual_before": 0.0,
+            "residual_after": 0.0,
+            "recurrence_error": 0.0,
+            "reprojection_removed": 0.01,
+            "estimated_range_defect": 0.0
+          },
+          "b_before": [
+            0.0,
+            0.01,
+            0.0,
+            0.0
+          ],
+          "b_after": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "readout_after_threshold_recovery": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "rotated_projector": {
+      "delta_C": 0.06,
+      "alpha": 0.1,
+      "projector_error": 0.6,
+      "idempotence": 5.551115123125783e-17,
+      "b_before": [
+        0.0,
+        0.0,
+        0.001,
+        0.0
+      ],
+      "b_projected": [
+        0.0,
+        0.00048,
+        0.00035999999999999997,
+        0.0
+      ],
+      "true_null_leak_after": 0.00035999999999999997,
+      "claim": "range(Qhat) is not the true range; this is not proof of actual post-new ghost under unchanged faulty geometry"
+    },
+    "span_inside_new_key_ambiguity": {
+      "dictionary_A": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "dictionary_B": [
+        [
+          0.7071067811865475,
+          -0.7071067811865475
+        ],
+        [
+          0.7071067811865475,
+          0.7071067811865475
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "C_difference": 2.4441574809578864e-16,
+      "b_both_zero": true,
+      "incoming": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "old_in_A": true,
+      "new_but_inside_span_in_B": true,
+      "note": "outside the promise in world B; no membership guarantee follows"
+    },
+    "exact_Q_ghost_and_invariant": {
+      "U": {
+        "leak_before_new": 0.001,
+        "old_outputs_before_new": [
+          1.0,
+          0.0
+        ],
+        "new_output": 0.001
+      },
+      "P": {
+        "leak_before_new": 0.0,
+        "old_outputs_before_new": [
+          1.0,
+          0.0
+        ],
+        "new_output": 0.0
+      },
+      "PN": {
+        "leak_before_new": 0.0,
+        "old_outputs_before_new": [
+          1.0,
+          0.0
+        ],
+        "new_output": 0.0
+      },
+      "TK": {
+        "leak_before_new": 0.0,
+        "old_outputs_before_new": [
+          1.0,
+          0.0
+        ],
+        "new_output": 0.0
+      }
+    }
+  }
+}

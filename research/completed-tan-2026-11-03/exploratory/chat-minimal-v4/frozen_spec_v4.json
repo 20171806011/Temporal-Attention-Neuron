@@ -1,0 +1,216 @@
+{
+  "Nmax": 3,
+  "canonical_key_semantics": "Latest values attach to latent canonical key identities. Each admitted identity has an internal anchor equal to its first observed key rounded to storage grid (unrounded in exact comparator). No true key goes to learners. A global admission uncertainty bound relates anchors to canonical keys. Later noisy observations are address certificates, not replacement anchors.",
+  "common_certificate": {
+    "gates": [
+      "integer shape/domain checks",
+      "certified disjoint root intervals",
+      "same v3 OLD/NEW/ambiguous address rule",
+      "capacity N<L for NEW",
+      "candidate root certificate",
+      "all candidate value errors <= epsilon"
+    ],
+    "new_anchor": "round_h(observation); sigma_new=max(sigma,ceil_h(zeta+abs(anchor-observation)))",
+    "new_update_bounds": "mu_new=ceil_h(mu+h/2), beta_new=ceil_h(beta+h/2)",
+    "no_projection_repair_or_key_replacement": true,
+    "no_surrogate_spectral_gate": true,
+    "old_update_bound": "beta_new = ceil_h(beta + E_i + abs(r)*L*root_radius + h/2); L used for BOTH representations, never L-1 in this comparison.",
+    "removed_for_both_moment_methods": [
+      "Hankel alpha_lower > 4*(L+1)*mu gate",
+      "redundant/high-order moment consistency gate"
+    ],
+    "root_inputs": "count N, m1..mN and common componentwise moment error mu only; m0=N constructed transiently for minimal.",
+    "root_proposal": "numpy.roots on midpoint Newton polynomial; no proposal trusted without exact-rational interval sign checks",
+    "root_search": {
+      "initial_radius_grid_units": 2,
+      "intervals_must_be_disjoint": true,
+      "maximum_doublings": 40
+    },
+    "value_inputs": "first N b moments, certified root intervals, beta; interval Lagrange inversion"
+  },
+  "conditions": [
+    {
+      "fractional_bits": 24,
+      "future_key_D": "9/10",
+      "future_key_E": "-9/10",
+      "minimum_canonical_separation": "1/5",
+      "name": "separated_q24",
+      "s": "1/2"
+    },
+    {
+      "fractional_bits": 24,
+      "future_key_D": "4/5",
+      "future_key_E": "-4/5",
+      "minimum_canonical_separation": "3/200",
+      "name": "clustered_q24",
+      "s": "1/50"
+    },
+    {
+      "fractional_bits": 40,
+      "future_key_D": "4/5",
+      "future_key_E": "-4/5",
+      "minimum_canonical_separation": "3/200",
+      "name": "clustered_q40",
+      "s": "1/50"
+    }
+  ],
+  "evaluation": {
+    "no_statistics": "Small deterministic diagnostic set; no bootstrap, population claims, or tuning",
+    "not_success": "Refusal is not a completed write. Exact comparator also rejects ambiguous observation and new key at capacity.",
+    "primary": [
+      "write coverage",
+      "accepted latest absolute error",
+      "other committed memories retention error",
+      "read coverage",
+      "uncompleted rejected request error or absence",
+      "bitwise no-mutation of rejection including count and budgets"
+    ],
+    "queries": "Same noisy scalar observations and same sensor bounds for all three methods; alternate +/- ordinary zeta/2 by canonical label. No noiseless-key input to table."
+  },
+  "events": [
+    {
+      "id": 1,
+      "key": "A=-s",
+      "noise": "+zeta/2",
+      "purpose": "first admission",
+      "value": "1/4"
+    },
+    {
+      "id": 2,
+      "key": "B=+s",
+      "noise": "-zeta/2",
+      "purpose": "second admission",
+      "value": "-1/2"
+    },
+    {
+      "id": 3,
+      "key": "A",
+      "noise": "-zeta/2",
+      "purpose": "noisy latest overwrite",
+      "value": "3/4"
+    },
+    {
+      "id": 4,
+      "key": "A",
+      "noise": "-zeta/2",
+      "purpose": "fixed-noise repeated overwrite",
+      "value": "3/4"
+    },
+    {
+      "id": 5,
+      "key": "A",
+      "observation": "0",
+      "purpose": "two-address ambiguity, must reject without mutating state",
+      "sensor_bound": "s+1/10000",
+      "value": "-3/4"
+    },
+    {
+      "id": 6,
+      "key": "B",
+      "noise": "+zeta/3",
+      "purpose": "other latest overwrite after rejection",
+      "value": "1/2"
+    },
+    {
+      "id": 7,
+      "key": "C=0",
+      "noise": "+zeta/3",
+      "purpose": "new middle key and weak-mode challenge",
+      "value": "-1/4"
+    },
+    {
+      "id": 8,
+      "key": "C",
+      "noise": "-zeta/3",
+      "purpose": "overwrite if admitted, otherwise attempted admission",
+      "value": "7/8"
+    },
+    {
+      "id": 9,
+      "key": "A",
+      "noise": "+zeta/4",
+      "purpose": "retention/latest check",
+      "value": "-1/8"
+    },
+    {
+      "id": 10,
+      "key": "D",
+      "noise": "-zeta/2",
+      "purpose": "future new insertion or capacity rejection",
+      "value": "3/8"
+    },
+    {
+      "id": 11,
+      "key": "E",
+      "noise": "+zeta/2",
+      "purpose": "new key at capacity, not old",
+      "value": "1/8"
+    },
+    {
+      "id": 12,
+      "key": "A",
+      "noise": "-zeta/4",
+      "purpose": "overwrite after refusals",
+      "value": "1/8"
+    }
+  ],
+  "external_contract": "All distinct canonical keys in the stream differ by at least condition Delta; current observation comes with verified absolute sensor error zeta. No unseen key may lie closer than Delta to a stored canonical key. Without this promise finite-noise exact membership is not asserted.",
+  "failure_policy": "Record all failed certificates; no threshold/precision/sequence search or post-result tightening. Fail-closed, original persistent bytes unchanged on refusal.",
+  "fairness": "Same observations/sensor bounds/value range/capacity/64-bit persistent word format. Not equal total bits. Exact-reference algebra is not fixed-bit hardware.",
+  "freeze_stage": "This specification and hash were written before implementing or executing v4 learners.",
+  "holding_fault_model": "No unmodelled drift, counter corruption, bit flips, or lost transactions; initialized zero; fixed-point updates are the only storage perturbations. No continuous-time holding experiment.",
+  "ideal_reference": "Small exact-rational minimal fixture for N=0..L, zero-key/count, repeat, full-capacity new refusal and unknown query. Prior v3 exact results referenced, not rerun as a stream competitor.",
+  "inputs_sha256": {
+    "v3_reference_frozen_spec.json": "12969e0af938064554551688f1e2743ef4fc0d91cf92306438b6fa940a574a3a",
+    "v3_reference_scalar_moment_v3.py": "aec8de57c3a2e38d8a5cba5ad9e08c09f5710aca75ea7a793789aeac306f7e85",
+    "v3_reference_summary_v3.json": "b9739259f41780937deb08181593112a8ed73859b4566db0d1d3af34650ca7d4"
+  },
+  "key_range": [
+    "-1",
+    "1"
+  ],
+  "measurements": [
+    "same 12 requests x 3 conditions x 3 methods",
+    "accepted latest error",
+    "all other committed-memory retention error",
+    "completed versus requested targets",
+    "write and read coverage",
+    "exact snapshot bytes for every refusal including count/budgets",
+    "root reconstruction and value-certification wall times by method",
+    "instrumented rational bit sizes and structural workspace counts"
+  ],
+  "methods": [
+    "redundant_common_certificate",
+    "minimal_common_certificate",
+    "explicit_table_same_observations"
+  ],
+  "ordinary_sensor_error_bound": "1/10000",
+  "payloads": {
+    "explicit_table_same_observations": {
+      "dynamic_aux_words": "count,sigma: 2",
+      "payload_words": "L anchors + L values = 2L"
+    },
+    "minimal_common_certificate": {
+      "b_exponents": "0..L-1",
+      "dynamic_aux_words": "count,mu,beta,sigma: 4",
+      "m_exponents": "1..L",
+      "payload_words": "2L"
+    },
+    "redundant_common_certificate": {
+      "b_exponents": "0..L",
+      "dynamic_aux_words": "count,mu,beta,sigma: 4",
+      "m_exponents": "0..2L",
+      "payload_words": "3L+2"
+    }
+  },
+  "primary_isolation_prediction": "Given identical used prefixes and common budgets, redundant and minimal methods must have identical roots, decisions, predictions and coverage at every request. Extra stored moments are not read by common certification.",
+  "prior_v3_policy": "Copy existing summary as report only. Do not execute v3 learner or overwrite v3 files. A source audit comparison may compare reports.",
+  "randomness": "None. No seed; observations and all offsets inherited exactly from v3.",
+  "required_value_error": "1/100",
+  "rounding": "signed fixed-point, nearest ties-to-even; budget bounds round upwards",
+  "runtime_policy": "Timing is descriptive host-wall-clock cost, not energy/hardware complexity; written separately so correctness results can be byte reproducible.",
+  "scope": "One bounded conceptual Chat sandbox comparison; not TAN/P1-B/v11 execution. No Codex, no training, no tuning.",
+  "stored_word_bits": 64,
+  "value_bound": "1",
+  "version": "minimal-scalar-moment-v4.0"
+}

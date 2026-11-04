@@ -1,0 +1,87 @@
+{
+  "primary_outputs_rewritten": false,
+  "input_rows": 768,
+  "prediction_rows": 2304,
+  "role_predictions": 4608,
+  "resource_rows": 768,
+  "base_seed_reproduction_passed": true,
+  "protocol_script_input_model_hashes_match": true,
+  "imported_coefficients_helper_sha256": "7b5af080d879603137fcb4fe31bd8d5ea4d83c36885e0974bf7a825bfb18aece",
+  "independent_block_endpoint_max_residual": 3.3306690738754696e-16,
+  "independent_whole_domain_conservative_voltage_upper": 0.5970423517197371,
+  "independent_inverse_rows_checked": 1536,
+  "independent_inverse_max_prediction_difference": 1.6089352072867769e-12,
+  "single_query_interface_checks": 32,
+  "recomputed_metrics": {
+    "correct_metadata": {
+      "original": {
+        "mean_e_comp": 5.00822812583325e-13,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      },
+      "query_swap": {
+        "mean_e_comp": 5.00822812583325e-13,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      },
+      "value_swap": {
+        "mean_e_comp": 5.039249860493492e-13,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      }
+    },
+    "wrong_metadata": {
+      "original": {
+        "mean_e_comp": 2.2085256986848174,
+        "coverage": 0.75,
+        "valid_joint_delivery_0_5": 0.0703125,
+        "local_valid_joint_0_05": 0.01171875
+      },
+      "query_swap": {
+        "mean_e_comp": 2.2085256986848174,
+        "coverage": 0.75,
+        "valid_joint_delivery_0_5": 0.0703125,
+        "local_valid_joint_0_05": 0.01171875
+      },
+      "value_swap": {
+        "mean_e_comp": 2.3203564855596635,
+        "coverage": 0.75390625,
+        "valid_joint_delivery_0_5": 0.03125,
+        "local_valid_joint_0_05": 0.0
+      }
+    },
+    "M0": {
+      "original": {
+        "mean_e_comp": 0.0,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      },
+      "query_swap": {
+        "mean_e_comp": 0.0,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      },
+      "value_swap": {
+        "mean_e_comp": 0.0,
+        "coverage": 1.0,
+        "valid_joint_delivery_0_5": 1.0,
+        "local_valid_joint_0_05": 1.0
+      }
+    }
+  },
+  "paired_bootstrap_95_ci": [
+    2.071585704785832,
+    2.345021850081132
+  ],
+  "qualification": [
+    "Wrong key/slot metadata changes both assumed encoding map and query-to-slot lookup.",
+    "Full-state and external metadata oracle, no two-probe/native addressing claim.",
+    "Recorded state extrema omit initial state0; post-step A minima can exceed0.",
+    "Imported coefficient helper identity is separately verified here."
+  ]
+}

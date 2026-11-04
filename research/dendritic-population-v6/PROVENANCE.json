@@ -1,0 +1,29 @@
+{
+  "baseline_published_commit": "438a9fba4e6249510e4540618c359ba41ac22b00",
+  "local_branch": "research/dendritic-population-v6",
+  "protocol_source_before_data_commit": "26d85e9d6176f7b0d335d55527cd0c8049f55a75",
+  "all_training_weights_and_independent_verifier_before_test_commit": "0cb7d16aad5fe897406110fc5c79fd483347aab3",
+  "test_invocations": 1,
+  "scientific_reruns": 0,
+  "plan_deviations": [],
+  "prior_v5_posthoc": {
+    "generated_new_inputs": false,
+    "trained_new_models": false,
+    "description": "Reconstructed saved Adam parameters; replayed existing train inputs at9fixedcheckpoints; inspected savedtestoutputs."
+  },
+  "model_and_data_byte_identical_to_v5": true,
+  "software": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "execution": "CPU; single BLAS/OpenMP thread; no package installation or paid compute",
+  "publication": "Local only; no push, PR, main merge or mainline manuscript update",
+  "next_phase_started": false,
+  "source_locks": {
+    "FREEZE.json": "f57ac5a853c3c95bef40f5bd2ab9476f750502c71de95119033d8502afc8cd77",
+    "results/TRAIN_LOCK.json": "cf8a054688f395b64efd7da9f18d8066302126e13bbac5efeb42d36a09bb1a92",
+    "results/TEST_STARTED.json": "eca20606768d2c3003d2bc7f05cd1c7bc94d33295ac0359898a93950ed241e62",
+    "results/TEST_SUMMARY.json": "218ed0eb979164bb0d27501db75d378d40cd8156445a8f71b4963420aee3cc7c",
+    "verify.py": "5e3b904a5e487d9fb98287eda8b10eb0c63781d08c43868daf0e5ddb39e687f1"
+  }
+}

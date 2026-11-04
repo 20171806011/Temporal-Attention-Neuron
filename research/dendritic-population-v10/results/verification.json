@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": 68836,
+  "training": {
+    "trajectories": 40,
+    "reconstructed_updates": 8000,
+    "native_training_checkpoints": 360,
+    "native_training_checkpoint_episodes": 46080,
+    "full_saved_training_trajectory_episodes": 5120,
+    "independently_replayed_initial_objectives": 40,
+    "count_derived_history_rows": 8000,
+    "max_training_state_candidate_residual": 8.881784197001252e-16
+  },
+  "tests": {
+    "test_models": 40,
+    "test_model_episodes": 20480,
+    "unique_test_histories": 2560,
+    "max_test_state_candidate_residual": 1.7763568394002505e-15,
+    "paired_seed_intervals": 4,
+    "wilson_failure_intervals": 8
+  },
+  "git_provenance": {
+    "protocol_commit": "4dd342161cee0d2d0f0a8383cec6aba5758d514d",
+    "checkpoint_commit": "e77dd9555ce15f94b9f5bcba12650c48aa9ce19d",
+    "committed_source_blobs": 19,
+    "committed_training_blobs": 248,
+    "commit_ancestry": "PASS"
+  },
+  "distinct_training_test_histories": 3200,
+  "seconds": 8.468897578999531,
+  "scope": "Separate all-pattern binding RNG, initialization, scalar native equations, RATE objectives, metrics, pattern recalls, activity/state variation, retrospective settling curves, seed-paired bootstrap and Wilson intervals. All 8000 stored-gradient Adam updates and all checkpoints reconstruct. Full native spikes/counts/predictions replay for saved final train and test trajectories. Native trajectories are replayed at nine checkpoints per run, not every unsampled update. Surrogate derivatives are audited separately. No scientific implementation imports. Internal workflow verification is not outside replication or peer review."
+}

@@ -1,0 +1,275 @@
+{
+  "note": "Post-execution reporting only. Full composite OJ, input normalized to domain half-width .5. Sensor covariance in raw voltage units. Singular covariance explicitly treated as noiseless constraint, never regularized. Weak directions in normalized value coordinates have arbitrary sign.",
+  "arms": {
+    "baseline": [
+      {
+        "scenario": "sensor_only",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            1e-12
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          33793.98849009344,
+          1.2976411582705023
+        ],
+        "weakest_value_direction": [
+          0.9999975324651127,
+          -0.0022215003231509127
+        ],
+        "condition": 26042.629947969675
+      },
+      {
+        "scenario": "membrane_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.351860930361997e-11
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          6.963331234679394e-05,
+          0.03155420883711891
+        ],
+        "remaining_value_direction": [
+          -0.9999975650618408,
+          0.002206778282841031
+        ],
+        "remaining_direction_noise_normalized_gain": 0.21066782259491665
+      },
+      {
+        "scenario": "sensor_and_membrane",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            4.4518609303619975e-11
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          31606.337562172488,
+          0.20794529338711618
+        ],
+        "weakest_value_direction": [
+          0.9999975642274802,
+          -0.0022071563395722007
+        ],
+        "condition": 151993.52217764957
+      },
+      {
+        "scenario": "gate_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0181923746979093e-13
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          6.963331234679394e-05,
+          0.03155420883711891
+        ],
+        "remaining_value_direction": [
+          -0.9999975650618408,
+          0.002206778282841031
+        ],
+        "remaining_direction_noise_normalized_gain": 4.355327230863003
+      }
+    ],
+    "gate_only": [
+      {
+        "scenario": "sensor_only",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            1e-12
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          5670.196220968781,
+          72.51025323454732
+        ],
+        "weakest_value_direction": [
+          0.9871434583468399,
+          -0.1598367687456195
+        ],
+        "condition": 78.1985439028536
+      },
+      {
+        "scenario": "membrane_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.351860930361997e-11
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          0.0008135483265551708,
+          0.005194320974372087
+        ],
+        "remaining_value_direction": [
+          -0.9879558137636566,
+          0.15473625965038398
+        ],
+        "remaining_direction_noise_normalized_gain": 11.854104309296213
+      },
+      {
+        "scenario": "sensor_and_membrane",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            4.4518609303619975e-11
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          5267.26495738886,
+          11.698806302895191
+        ],
+        "weakest_value_direction": [
+          0.9879350053151904,
+          -0.15486905847481194
+        ],
+        "condition": 450.2395219660429
+      },
+      {
+        "scenario": "gate_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.5870920733684518e-13
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          0.0008135483265551708,
+          0.005194320974372087
+        ],
+        "remaining_value_direction": [
+          -0.9879558137636566,
+          0.15473625965038398
+        ],
+        "remaining_direction_noise_normalized_gain": 196.29316943611352
+      }
+    ],
+    "uniform": [
+      {
+        "scenario": "sensor_only",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            1e-12
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          2492.685206121847,
+          5.369965027995316
+        ],
+        "weakest_value_direction": [
+          0.9542268658788051,
+          -0.29908374819624167
+        ],
+        "condition": 464.1902122503024
+      },
+      {
+        "scenario": "membrane_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            9.072094573354892e-11
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          0.0005446546808224219,
+          0.0017498911414268884
+        ],
+        "remaining_value_direction": [
+          -0.9548189873870442,
+          0.29718798987371553
+        ],
+        "remaining_direction_noise_normalized_gain": 0.76682298699985
+      },
+      {
+        "scenario": "sensor_and_membrane",
+        "measurement_noise_covariance": [
+          [
+            1e-12,
+            0.0
+          ],
+          [
+            0.0,
+            9.172094573354891e-11
+          ]
+        ],
+        "full_whitened_composite_singular_values": [
+          1841.1657577212504,
+          0.7591222874586436
+        ],
+        "weakest_value_direction": [
+          0.9548071914378305,
+          -0.2972258857815078
+        ],
+        "condition": 2425.3875668504274
+      },
+      {
+        "scenario": "gate_process_only",
+        "measurement_noise_covariance": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.905851874373413e-15
+          ]
+        ],
+        "noise_free_first_sample_constraint": [
+          0.0005446546808224219,
+          0.0017498911414268884
+        ],
+        "remaining_value_direction": [
+          -0.9548189873870442,
+          0.29718798987371553
+        ],
+        "remaining_direction_noise_normalized_gain": 135.49153765600647
+      }
+    ]
+  }
+}

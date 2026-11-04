@@ -1,0 +1,418 @@
+{
+  "status": "PASS",
+  "scope": "Independent formula replay of existing saved inputs/outputs, not fresh sampling or a new experiment",
+  "histories": 60000,
+  "output_rows": 420000,
+  "coverage_exactly_one_per_model": true,
+  "scalar_vector_winner_identity_queries": 120000,
+  "nearest_neighbor_noise_cell_checks": 120000,
+  "max_abs_query_key_angle": 0.9600123627786202,
+  "all_observed_distances_inside_cosine_monotonic_domain": true,
+  "max_absolute_differences": {
+    "hard_values": 0.0,
+    "soft_values": 2.398081733190338e-14,
+    "hard_add": 0.0,
+    "hard_sub": 0.0,
+    "soft_add": 2.5757174171303632e-14,
+    "soft_sub": 2.3092638912203256e-14
+  },
+  "condition_counts": [
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 4919,
+      "both_accuracy": 0.4919,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 5214,
+      "both_accuracy": 0.5214,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 2936,
+      "both_accuracy": 0.2936,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 992,
+      "both_accuracy": 0.0992,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C1_N2_zero_noise",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 0,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 1720,
+      "both_accuracy": 0.172,
+      "middle_queries": 6705,
+      "middle_hits": 2263
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6705,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 2581,
+      "both_accuracy": 0.2581,
+      "middle_queries": 6705,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 1368,
+      "both_accuracy": 0.1368,
+      "middle_queries": 6705,
+      "middle_hits": 2466
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 655,
+      "both_accuracy": 0.0655,
+      "middle_queries": 6705,
+      "middle_hits": 1236
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6705,
+      "middle_hits": 6705
+    },
+    {
+      "condition": "C2_N3_zero_noise",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6705,
+      "middle_hits": 6705
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 1699,
+      "both_accuracy": 0.1699,
+      "middle_queries": 6741,
+      "middle_hits": 2280
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6741,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 2596,
+      "both_accuracy": 0.2596,
+      "middle_queries": 6741,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 1427,
+      "both_accuracy": 0.1427,
+      "middle_queries": 6741,
+      "middle_hits": 2420
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 717,
+      "both_accuracy": 0.0717,
+      "middle_queries": 6741,
+      "middle_hits": 1315
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 9876,
+      "both_accuracy": 0.9876,
+      "middle_queries": 6741,
+      "middle_hits": 6681
+    },
+    {
+      "condition": "C3_N3_low_noise",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 9876,
+      "both_accuracy": 0.9876,
+      "middle_queries": 6741,
+      "middle_hits": 6681
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 1699,
+      "both_accuracy": 0.1699,
+      "middle_queries": 6741,
+      "middle_hits": 2280
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6741,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 2551,
+      "both_accuracy": 0.2551,
+      "middle_queries": 6741,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 1427,
+      "both_accuracy": 0.1427,
+      "middle_queries": 6741,
+      "middle_hits": 2420
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 717,
+      "both_accuracy": 0.0717,
+      "middle_queries": 6741,
+      "middle_hits": 1315
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 7986,
+      "both_accuracy": 0.7986,
+      "middle_queries": 6741,
+      "middle_hits": 5626
+    },
+    {
+      "condition": "C4_N3_high_noise",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 7986,
+      "both_accuracy": 0.7986,
+      "middle_queries": 6741,
+      "middle_hits": 5626
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 1634,
+      "both_accuracy": 0.1634,
+      "middle_queries": 6665,
+      "middle_hits": 2192
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6665,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6665,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6665,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6665,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6665,
+      "middle_hits": 6665
+    },
+    {
+      "condition": "C5_N3_OOD_low_keys",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6665,
+      "middle_hits": 6665
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "QueryBlindControl",
+      "n": 10000,
+      "both_hits": 1695,
+      "both_accuracy": 0.1695,
+      "middle_queries": 6690,
+      "middle_hits": 2284
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "PositiveScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6690,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "SignedScalarKernel",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6690,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "HistoricalSprint4_2_KernelStaticControl",
+      "n": 10000,
+      "both_hits": 0,
+      "both_accuracy": 0.0,
+      "middle_queries": 6690,
+      "middle_hits": 0
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "FrozenSRotationHarmonicReference",
+      "n": 10000,
+      "both_hits": 61,
+      "both_accuracy": 0.0061,
+      "middle_queries": 6690,
+      "middle_hits": 121
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "ScalarMetricAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6690,
+      "middle_hits": 6690
+    },
+    {
+      "condition": "C6_N3_OOD_high_keys",
+      "model": "VectorQKAddressAttention",
+      "n": 10000,
+      "both_hits": 10000,
+      "both_accuracy": 1.0,
+      "middle_queries": 6690,
+      "middle_hits": 6690
+    }
+  ],
+  "source_sha256": {
+    "p1_experiments/models.py": "3762cfb8627e7574dfbcbdc8db2470489471ad247832d03fa2dae916ce3f23e5",
+    "p1_experiments/task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+    "p1_experiments/run_p1a_experiment.py": "256c8b777407e818c4c44ef7c8b0e10fceeabf498c661cc630a117e774f7bdb0",
+    "p1_experiments/oracle_and_evaluator.py": "13392549dcbddf5d6acb05721a57873714d2ca1a84e2ed712d1b8b5fe10d6fe3",
+    "p1_experiments/THEORETICAL_PROPOSITION_1D_METRIC.md": "19138da1a5b64eb70f9bc1e97b98c9481c0cbe16661d0c4aa86c9f79be20df94",
+    "p1_experiments/REPLAY_PROTOCOL_AMENDMENT_1.md": "7ececbc879c55c3ce0c9239f06a7baf922aec78c761e39e7718c3e3ff32ccd96",
+    "p1_experiments/P1A_FINAL_BASELINE_MANIFEST.md": "8eb894f7c7f63ddd9e7d2464bd947ca1e8c2e5164057ec609a46f047b1c76310",
+    "p1_experiments/results/run_p1a_rev2/trial_inputs.csv.gz": "5d3fa4fda5c36f9b1ac7c50f9784f58bfb74a6b5b5b659229abdab20ab7ae56e",
+    "p1_experiments/results/run_p1a_rev2/model_outputs.csv.gz": "cf9767811a5fe5f4b2d91e37c3f6c25dbebb20a67125c00664e39efd9848adac",
+    "p1_experiments/results/run_p1a_rev2/P1A_SCIENTIFIC_REPORT.md": "de71e4658ba77a3403d733420986b81cdcdebb983c233800b8b57c545a416f0c",
+    "p1_experiments/results/run_p1a_rev2/g1_gate_report.json": "cc56f0f2fbcdd1bbd649c2cd582a490b813e66ce6d4f543dffec104a804f4a60",
+    "p1_experiments/results/run_p1a_rev2/post_write_recomputation_audit.json": "a0c7f7f2cd894940ec450cd89c372ffc436a9105edf903ce50c162c358072c7d",
+    "p1_experiments/results/run_p1a_rev2/condition_summary.csv": "77990921f04c3a3549ae56079fa0a1d753be29bb2dbffc4118f4820a215d58ea"
+  },
+  "script_sha256": "43779bbdaf3112ee5821f5e8b257758dfbbbae22ab53faa3d8c9b0ef96f171cc",
+  "python_numpy": "2.3.5",
+  "wall_seconds": 14.025971508999646,
+  "maxrss_kib": 207708
+}

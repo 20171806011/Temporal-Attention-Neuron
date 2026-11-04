@@ -1,0 +1,459 @@
+{
+  "protocol_sha256": "b7e8b21cb042512d0180c992c11520a391d7c574a4059f7d175225096a1d4cac",
+  "script_sha256": "7b5af080d879603137fcb4fe31bd8d5ea4d83c36885e0974bf7a825bfb18aece",
+  "repository_commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "controls": {
+    "original_wrapper_trials": 64,
+    "max_state_error": 0.0,
+    "native_fixtures_passed": [
+      "test_g1_0_governance_and_provenance",
+      "test_g1_1_state_closure_and_refractory_readout"
+    ]
+  },
+  "attempts": 2560,
+  "accepted": 1882,
+  "cells": [
+    {
+      "domain": "narrow",
+      "positions": [
+        0,
+        1
+      ],
+      "attempts": 128,
+      "accepted": 103,
+      "reasons": {
+        "accepted": 103,
+        "key_domain_or_spacing": 2,
+        "value_domain": 23
+      },
+      "max_state_residual": 1.249000902703301e-16,
+      "minimum_branch_margin": 0.7888664077933321,
+      "minimum_fixedkey_singular_value": 1.3873393371971387e-05,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 206,
+      "privileged_joint_local_success": 206,
+      "privileged_mean_max_error": 4.136930819484381e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        0,
+        2
+      ],
+      "attempts": 128,
+      "accepted": 95,
+      "reasons": {
+        "accepted": 95,
+        "key_domain_or_spacing": 3,
+        "value_domain": 30
+      },
+      "max_state_residual": 1.457167719820518e-16,
+      "minimum_branch_margin": 0.7922750335671456,
+      "minimum_fixedkey_singular_value": 8.578809431087789e-05,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 190,
+      "privileged_joint_local_success": 190,
+      "privileged_mean_max_error": 5.352014153496492e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        0,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 103,
+      "reasons": {
+        "accepted": 103,
+        "value_domain": 25
+      },
+      "max_state_residual": 2.0816681711721685e-16,
+      "minimum_branch_margin": 0.8326338006890881,
+      "minimum_fixedkey_singular_value": 0.0005975986902703937,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 206,
+      "privileged_joint_local_success": 206,
+      "privileged_mean_max_error": 7.217993732376891e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        0,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 100,
+      "reasons": {
+        "accepted": 100,
+        "key_domain_or_spacing": 2,
+        "value_domain": 26
+      },
+      "max_state_residual": 2.0816681711721685e-16,
+      "minimum_branch_margin": 0.8265875447739105,
+      "minimum_fixedkey_singular_value": 0.0021757459538157054,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 200,
+      "privileged_joint_local_success": 200,
+      "privileged_mean_max_error": 9.411832424532917e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        1,
+        2
+      ],
+      "attempts": 128,
+      "accepted": 104,
+      "reasons": {
+        "accepted": 104,
+        "value_domain": 24
+      },
+      "max_state_residual": 1.249000902703301e-16,
+      "minimum_branch_margin": 0.7915180384242642,
+      "minimum_fixedkey_singular_value": 9.196609429172241e-05,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 208,
+      "privileged_joint_local_success": 208,
+      "privileged_mean_max_error": 5.799036464701693e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        1,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 93,
+      "reasons": {
+        "accepted": 93,
+        "key_domain_or_spacing": 1,
+        "value_domain": 34
+      },
+      "max_state_residual": 1.942890293094024e-16,
+      "minimum_branch_margin": 0.8361978857348321,
+      "minimum_fixedkey_singular_value": 0.0006883084907006767,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 186,
+      "privileged_joint_local_success": 186,
+      "privileged_mean_max_error": 7.039175097053545e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        1,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 97,
+      "reasons": {
+        "accepted": 97,
+        "key_domain_or_spacing": 3,
+        "value_domain": 28
+      },
+      "max_state_residual": 1.8041124150158794e-16,
+      "minimum_branch_margin": 0.8517708530624919,
+      "minimum_fixedkey_singular_value": 0.002497196502057705,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 194,
+      "privileged_joint_local_success": 194,
+      "privileged_mean_max_error": 9.168058637580307e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        2,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 102,
+      "reasons": {
+        "accepted": 102,
+        "key_domain_or_spacing": 1,
+        "value_domain": 25
+      },
+      "max_state_residual": 2.3592239273284576e-16,
+      "minimum_branch_margin": 0.79426489090827,
+      "minimum_fixedkey_singular_value": 0.0007266052519573716,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 204,
+      "privileged_joint_local_success": 204,
+      "privileged_mean_max_error": 7.545309692950892e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        2,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 102,
+      "reasons": {
+        "accepted": 102,
+        "value_domain": 26
+      },
+      "max_state_residual": 2.498001805406602e-16,
+      "minimum_branch_margin": 0.8050862672137259,
+      "minimum_fixedkey_singular_value": 0.002950847127142768,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 204,
+      "privileged_joint_local_success": 204,
+      "privileged_mean_max_error": 9.656469523782098e-13
+    },
+    {
+      "domain": "narrow",
+      "positions": [
+        3,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 89,
+      "reasons": {
+        "accepted": 89,
+        "key_domain_or_spacing": 3,
+        "value_domain": 36
+      },
+      "max_state_residual": 1.942890293094024e-16,
+      "minimum_branch_margin": 0.7863929325050638,
+      "minimum_fixedkey_singular_value": 0.003054928992164449,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 178,
+      "privileged_joint_local_success": 178,
+      "privileged_mean_max_error": 9.857841758866862e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        0,
+        1
+      ],
+      "attempts": 128,
+      "accepted": 90,
+      "reasons": {
+        "accepted": 90,
+        "key_domain_or_spacing": 11,
+        "value_domain": 27
+      },
+      "max_state_residual": 1.942890293094024e-16,
+      "minimum_branch_margin": 0.644771800147786,
+      "minimum_fixedkey_singular_value": 9.834042182882592e-06,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 180,
+      "privileged_joint_local_success": 180,
+      "privileged_mean_max_error": 4.21436959404294e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        0,
+        2
+      ],
+      "attempts": 128,
+      "accepted": 81,
+      "reasons": {
+        "accepted": 81,
+        "key_domain_or_spacing": 18,
+        "value_domain": 29
+      },
+      "max_state_residual": 2.0122792321330962e-16,
+      "minimum_branch_margin": 0.6429803631623447,
+      "minimum_fixedkey_singular_value": 0.00010265064609995938,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 162,
+      "privileged_joint_local_success": 162,
+      "privileged_mean_max_error": 5.359060246322725e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        0,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 87,
+      "reasons": {
+        "accepted": 87,
+        "key_domain_or_spacing": 11,
+        "value_domain": 30
+      },
+      "max_state_residual": 2.636779683484747e-16,
+      "minimum_branch_margin": 0.6968858709088961,
+      "minimum_fixedkey_singular_value": 0.0004270878325975711,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 174,
+      "privileged_joint_local_success": 174,
+      "privileged_mean_max_error": 6.926375182215765e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        0,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 94,
+      "reasons": {
+        "accepted": 94,
+        "key_domain_or_spacing": 8,
+        "value_domain": 26
+      },
+      "max_state_residual": 3.3306690738754696e-16,
+      "minimum_branch_margin": 0.6798391486076719,
+      "minimum_fixedkey_singular_value": 0.0019228890120853873,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 188,
+      "privileged_joint_local_success": 188,
+      "privileged_mean_max_error": 9.907157836425269e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        1,
+        2
+      ],
+      "attempts": 128,
+      "accepted": 96,
+      "reasons": {
+        "accepted": 96,
+        "key_domain_or_spacing": 12,
+        "value_domain": 20
+      },
+      "max_state_residual": 2.0816681711721685e-16,
+      "minimum_branch_margin": 0.5735999591633538,
+      "minimum_fixedkey_singular_value": 9.612869073568095e-05,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 192,
+      "privileged_joint_local_success": 192,
+      "privileged_mean_max_error": 5.825652460433872e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        1,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 80,
+      "reasons": {
+        "accepted": 80,
+        "key_domain_or_spacing": 12,
+        "value_domain": 36
+      },
+      "max_state_residual": 3.3306690738754696e-16,
+      "minimum_branch_margin": 0.6159423623361868,
+      "minimum_fixedkey_singular_value": 0.0006509297417408289,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 160,
+      "privileged_joint_local_success": 160,
+      "privileged_mean_max_error": 7.147740732627028e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        1,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 87,
+      "reasons": {
+        "accepted": 87,
+        "key_domain_or_spacing": 12,
+        "value_domain": 29
+      },
+      "max_state_residual": 2.7755575615628914e-16,
+      "minimum_branch_margin": 0.6489341639072739,
+      "minimum_fixedkey_singular_value": 0.0020114260345908035,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 174,
+      "privileged_joint_local_success": 174,
+      "privileged_mean_max_error": 9.185449336012519e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        2,
+        3
+      ],
+      "attempts": 128,
+      "accepted": 90,
+      "reasons": {
+        "accepted": 90,
+        "key_domain_or_spacing": 11,
+        "value_domain": 27
+      },
+      "max_state_residual": 1.6653345369377348e-16,
+      "minimum_branch_margin": 0.6643940639193706,
+      "minimum_fixedkey_singular_value": 0.0005753242716126886,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 180,
+      "privileged_joint_local_success": 180,
+      "privileged_mean_max_error": 7.521366245871124e-13
+    },
+    {
+      "domain": "full",
+      "positions": [
+        2,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 94,
+      "reasons": {
+        "accepted": 94,
+        "key_domain_or_spacing": 12,
+        "value_domain": 22
+      },
+      "max_state_residual": 3.0531133177191805e-16,
+      "minimum_branch_margin": 0.5934835091066805,
+      "minimum_fixedkey_singular_value": 0.0022638903859398137,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 188,
+      "privileged_joint_local_success": 188,
+      "privileged_mean_max_error": 1.0034490968643183e-12
+    },
+    {
+      "domain": "full",
+      "positions": [
+        3,
+        4
+      ],
+      "attempts": 128,
+      "accepted": 95,
+      "reasons": {
+        "accepted": 95,
+        "key_domain_or_spacing": 11,
+        "value_domain": 22
+      },
+      "max_state_residual": 2.220446049250313e-16,
+      "minimum_branch_margin": 0.6167940041420013,
+      "minimum_fixedkey_singular_value": 0.002620949372445871,
+      "privileged_inverse_abstentions": 0,
+      "privileged_inverse_total": 190,
+      "privileged_joint_local_success": 190,
+      "privileged_mean_max_error": 9.746729739091328e-13
+    }
+  ],
+  "decimal_witnesses": [
+    {
+      "domain": "narrow",
+      "attempt_id": 0,
+      "precision": 120,
+      "state_residual": "5E-121",
+      "k2_prime": "1.91205846561399809410223150540476395933993217266211994764758918775457909331792076893128299980994038480619412938442468431",
+      "v1_prime": "-0.068238822482351",
+      "v2_prime": "-0.16878752928427179252082701197947715008987172675087482509937052697920534020977733050602648822317196702431821302589930795",
+      "minimum_margin": "0.926827785339479625710792134534912142407359015128592667574054626034090917910864518701874220064854404299404541626560931298"
+    },
+    {
+      "domain": "full",
+      "attempt_id": 1280,
+      "precision": 120,
+      "state_residual": "5E-121",
+      "k2_prime": "2.24602656183855386040942241742133261176169127025075127478063520047453196945590002997526577060815832791112538624286199392",
+      "v1_prime": "-1.6047912145471425",
+      "v2_prime": "1.88389731685148068691470407819564854223978729671443516045277609865419386325758185308816335317580800711448462248146527170",
+      "minimum_margin": "0.766903816284925619221388577302456989000288056479450448021971955767009211735459973748157739785840772932833914080867226850"
+    }
+  ],
+  "limits": "Adversarial constructed pairs, not IID risk. Exact-state equality is ideal algebra only. Known-key inverse has extra input information."
+}

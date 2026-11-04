@@ -1,0 +1,1199 @@
+{
+  "accepted": 65,
+  "all_refusals_bitwise_identical": true,
+  "caution": "Identical common-certificate coverage does not imply identical fault-detection abilities outside the no-drift error model.",
+  "common_certificate_equivalence": {
+    "all_identical": true,
+    "comparisons": 396,
+    "interpretation": "One common certificate and identical accessed prefixes: payload deletion is not a coverage intervention."
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "prior_v3_report_comparison": [
+    {
+      "accepted_count_same": true,
+      "condition": "separated_q24",
+      "source": "existing v3 summary copied byte-for-byte; no v3 re-execution",
+      "v3_accepted_reported": 9,
+      "v3_refusal_reasons_reported": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "v4_common_accepted": 9,
+      "v4_refusal_reasons": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ]
+    },
+    {
+      "accepted_count_same": true,
+      "condition": "clustered_q24",
+      "source": "existing v3 summary copied byte-for-byte; no v3 re-execution",
+      "v3_accepted_reported": 4,
+      "v3_refusal_reasons_reported": [
+        {
+          "event": 4,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 6,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 7,
+          "reason": "candidate_spectrum_uncertified"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_spectrum_uncertified"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "v4_common_accepted": 4,
+      "v4_refusal_reasons": [
+        {
+          "event": 4,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 6,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 7,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ]
+    },
+    {
+      "accepted_count_same": true,
+      "condition": "clustered_q40",
+      "source": "existing v3 summary copied byte-for-byte; no v3 re-execution",
+      "v3_accepted_reported": 6,
+      "v3_refusal_reasons_reported": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "v4_common_accepted": 6,
+      "v4_refusal_reasons": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ]
+    }
+  ],
+  "rejected": 43,
+  "results_sha256": "8ba2c43b96f038635af8f3cec3d48b6858f9eadfdc20e4b67b7a203203624b06",
+  "rows": [
+    {
+      "accepted": 9,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 7.212149771188065e-08,
+        "exact": "153364999923970880540044033129/2126481074154217072607517153876246528"
+      },
+      "max_other_retention_error": {
+        "decimal": 9.247833249238679e-08,
+        "exact": "468827051911432692955661/5069588078375315766660757996040"
+      },
+      "method": "redundant_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 15,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 25,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 73762,
+        "max_denominator_bits": 323,
+        "max_numerator_bits": 315,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 7.212149771188065e-08,
+        "exact": "153364999923970880540044033129/2126481074154217072607517153876246528"
+      },
+      "max_other_retention_error": {
+        "decimal": 9.247833249238679e-08,
+        "exact": "468827051911432692955661/5069588078375315766660757996040"
+      },
+      "method": "minimal_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 10,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 25,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 73762,
+        "max_denominator_bits": 323,
+        "max_numerator_bits": 315,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 9,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "separated_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "explicit_table_same_observations",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 8,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 25,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 1288,
+        "max_denominator_bits": 25,
+        "max_numerator_bits": 24,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 4,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 25,
+      "answered_reads_requested": 25,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 8.864910013865092e-06,
+        "exact": "6371692863/718754375739224"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.1282913434162225e-05,
+        "exact": "62798807471247697294142046479701/5565832604999562465984307347744358400"
+      },
+      "method": "redundant_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.5,
+            "exact": "-1/2"
+          },
+          "label": "B",
+          "missing": false,
+          "requested": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          }
+        },
+        {
+          "committed": null,
+          "label": "C",
+          "missing": true,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        }
+      ],
+      "persistent_words": 15,
+      "read_attempts_committed": 25,
+      "read_attempts_requested": 34,
+      "rejected": 8,
+      "rejected_events": [
+        {
+          "event": 4,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 6,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 7,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 10,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 88508,
+        "max_denominator_bits": 326,
+        "max_numerator_bits": 313,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.3333333333333333
+    },
+    {
+      "accepted": 4,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 25,
+      "answered_reads_requested": 25,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 8.864910013865092e-06,
+        "exact": "6371692863/718754375739224"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.1282913434162225e-05,
+        "exact": "62798807471247697294142046479701/5565832604999562465984307347744358400"
+      },
+      "method": "minimal_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.5,
+            "exact": "-1/2"
+          },
+          "label": "B",
+          "missing": false,
+          "requested": {
+            "decimal": 0.5,
+            "exact": "1/2"
+          }
+        },
+        {
+          "committed": null,
+          "label": "C",
+          "missing": true,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        }
+      ],
+      "persistent_words": 10,
+      "read_attempts_committed": 25,
+      "read_attempts_requested": 34,
+      "rejected": 8,
+      "rejected_events": [
+        {
+          "event": 4,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 6,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 7,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 10,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 88508,
+        "max_denominator_bits": 326,
+        "max_numerator_bits": 313,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.3333333333333333
+    },
+    {
+      "accepted": 9,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "clustered_q24",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "explicit_table_same_observations",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 8,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 25,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 1288,
+        "max_denominator_bits": 25,
+        "max_numerator_bits": 19,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.75
+    },
+    {
+      "accepted": 6,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "method": "redundant_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.25,
+            "exact": "-1/4"
+          },
+          "label": "C",
+          "missing": false,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 15,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 6,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 16,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 188368,
+        "max_denominator_bits": 313,
+        "max_numerator_bits": 313,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.5
+    },
+    {
+      "accepted": 6,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "max_other_retention_error": {
+        "decimal": 1.830762345101464e-09,
+        "exact": "3249869565151868243233690362761/1775145514570737418671078901363213598720"
+      },
+      "method": "minimal_common_certificate",
+      "pending_requested_targets": [
+        {
+          "committed": {
+            "decimal": 0.75,
+            "exact": "3/4"
+          },
+          "label": "A",
+          "missing": false,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        },
+        {
+          "committed": {
+            "decimal": -0.25,
+            "exact": "-1/4"
+          },
+          "label": "C",
+          "missing": false,
+          "requested": {
+            "decimal": 0.875,
+            "exact": "7/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 10,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 6,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 8,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 9,
+          "reason": "candidate_content_budget_exceeded"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 12,
+          "reason": "candidate_content_budget_exceeded"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 16,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 188368,
+        "max_denominator_bits": 313,
+        "max_numerator_bits": 313,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.5
+    },
+    {
+      "accepted": 9,
+      "all_evaluator_checks_passed": true,
+      "all_refusals_bitwise_unchanged": true,
+      "answered_reads_committed": 29,
+      "answered_reads_requested": 29,
+      "attempts": 12,
+      "condition": "clustered_q40",
+      "max_accepted_latest_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "max_other_retention_error": {
+        "decimal": 0.0,
+        "exact": "0"
+      },
+      "method": "explicit_table_same_observations",
+      "pending_requested_targets": [
+        {
+          "committed": null,
+          "label": "D",
+          "missing": true,
+          "requested": {
+            "decimal": 0.375,
+            "exact": "3/8"
+          }
+        },
+        {
+          "committed": null,
+          "label": "E",
+          "missing": true,
+          "requested": {
+            "decimal": 0.125,
+            "exact": "1/8"
+          }
+        }
+      ],
+      "persistent_words": 8,
+      "read_attempts_committed": 29,
+      "read_attempts_requested": 34,
+      "rejected": 3,
+      "rejected_events": [
+        {
+          "event": 5,
+          "reason": "address_unresolved"
+        },
+        {
+          "event": 10,
+          "reason": "new_key_capacity_full"
+        },
+        {
+          "event": 11,
+          "reason": "new_key_capacity_full"
+        }
+      ],
+      "requested_target_reads_within_epsilon": 25,
+      "workspace_operand_tracking": {
+        "interval_rational_endpoints_observed": 1288,
+        "max_denominator_bits": 41,
+        "max_numerator_bits": 35,
+        "scope": "Instrumented interval operands only; not peak memory or fixed-bit hardware."
+      },
+      "write_coverage": 0.75
+    }
+  ],
+  "scope": "One bounded conceptual Chat sandbox comparison; not TAN/P1-B/v11 execution. No Codex, no training, no tuning.",
+  "timing_first_execution": {
+    "environment": {
+      "numpy": "2.3.5",
+      "python": "3.13.5",
+      "sympy": "1.14.0"
+    },
+    "runs": [
+      {
+        "all_12_writes_wall_ns": 45596044,
+        "condition": "separated_q24",
+        "method": "redundant_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 16249363
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 6918790
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 86423459
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 41848436
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 54601703
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 25286596
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 29284977
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 13632954
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 287422859
+      },
+      {
+        "all_12_writes_wall_ns": 40904476,
+        "condition": "separated_q24",
+        "method": "minimal_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 18074032
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 10210680
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 92496710
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 43480515
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 58873961
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 27246495
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 26657796
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 12172223
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 300848646
+      },
+      {
+        "all_12_writes_wall_ns": 907780,
+        "condition": "separated_q24",
+        "method": "explicit_table_same_observations",
+        "phased_reconstruction": {},
+        "whole_run_including_scorer_wall_ns": 6980092
+      },
+      {
+        "all_12_writes_wall_ns": 70806822,
+        "condition": "clustered_q24",
+        "method": "redundant_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 23690853
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 4766928
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 47,
+            "wall_ns": 102190142
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 47,
+            "wall_ns": 25434696
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 77032508
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 17611938
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 23,
+            "wall_ns": 54168872
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 23,
+            "wall_ns": 13827294
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 329392706
+      },
+      {
+        "all_12_writes_wall_ns": 65492099,
+        "condition": "clustered_q24",
+        "method": "minimal_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 21949606
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 5043448
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 47,
+            "wall_ns": 102283983
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 47,
+            "wall_ns": 21044235
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 78198923
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 16974336
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 23,
+            "wall_ns": 52093637
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 23,
+            "wall_ns": 10885153
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 318734028
+      },
+      {
+        "all_12_writes_wall_ns": 751082,
+        "condition": "clustered_q24",
+        "method": "explicit_table_same_observations",
+        "phased_reconstruction": {},
+        "whole_run_including_scorer_wall_ns": 7410261
+      },
+      {
+        "all_12_writes_wall_ns": 91254349,
+        "condition": "clustered_q40",
+        "method": "redundant_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 52130494
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 7982953
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 251330407
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 38952261
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 172271181
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 25798075
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 74319663
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 14264340
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 649805637
+      },
+      {
+        "all_12_writes_wall_ns": 95563880,
+        "condition": "clustered_q40",
+        "method": "minimal_common_certificate",
+        "phased_reconstruction": {
+          "evaluator_certificate:root_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 49007480
+          },
+          "evaluator_certificate:value_reconstruction_certificate": {
+            "calls": 12,
+            "wall_ns": 8135113
+          },
+          "ordinary_queries:root_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 268451440
+          },
+          "ordinary_queries:value_reconstruction_certificate": {
+            "calls": 55,
+            "wall_ns": 45546800
+          },
+          "requested_target_queries:root_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 182248967
+          },
+          "requested_target_queries:value_reconstruction_certificate": {
+            "calls": 34,
+            "wall_ns": 34539450
+          },
+          "write:root_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 80886725
+          },
+          "write:value_reconstruction_certificate": {
+            "calls": 21,
+            "wall_ns": 11716973
+          }
+        },
+        "whole_run_including_scorer_wall_ns": 692879592
+      },
+      {
+        "all_12_writes_wall_ns": 812134,
+        "condition": "clustered_q40",
+        "method": "explicit_table_same_observations",
+        "phased_reconstruction": {},
+        "whole_run_including_scorer_wall_ns": 6397235
+      }
+    ],
+    "scope": "Host wall-clock timings; not energy, not an algorithmic lower bound; root/value phases include their certificates."
+  },
+  "transactions": 108
+}

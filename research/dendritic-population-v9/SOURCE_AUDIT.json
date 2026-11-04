@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "baseline": "9cddbbad7f1722d8a116c0a8245fc40d3a5e97ca",
+  "historical_manifests": [
+    {
+      "phase": 1,
+      "entries": 49,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea"
+    },
+    {
+      "phase": 2,
+      "entries": 61,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374"
+    },
+    {
+      "phase": 3,
+      "entries": 92,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077"
+    },
+    {
+      "phase": 4,
+      "entries": 599,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0"
+    },
+    {
+      "phase": 5,
+      "entries": 562,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332"
+    },
+    {
+      "phase": 6,
+      "entries": 639,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d"
+    },
+    {
+      "phase": 7,
+      "entries": 1203,
+      "manifest_sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd"
+    },
+    {
+      "phase": 8,
+      "entries": 3170,
+      "manifest_sha256": "d4524d9c9a7e9f5a63073e7b16abb43d07b594cc8ebc9620416f3a0c5fab3f7b"
+    }
+  ],
+  "preserved_entries": 6375,
+  "seed_scan": "16 distinct literal train/test/init/analysis seeds absent as complete integer tokens from prior V1\u2013V8 text artifacts below5MB",
+  "model_data_byte_identical_to_v8": true,
+  "mask": "SameV4crossmask:60off-cell slots zero,12self recurrent retained;116effectiveparams",
+  "scope": "New user blueprint resumes architecture research; earlier V8 pause preserved as historical record"
+}

@@ -1,0 +1,9 @@
+# V10A: learned binding and network-size pilot
+
+This completed independent experimental line compares DEND with the existing strong POINT branch-cell network on a precisely defined four-feature binding task at hidden-soma sizes 6, 4, 2, 1. It uses 40 fixed RATE/.01 training runs, five paired seeds, hard native firing/reset and the existing spike-count decoder. Read [REPORT.md](REPORT.md), [PROTOCOL.md](PROTOCOL.md) and [DESIGN_REVIEW.md](DESIGN_REVIEW.md) together.
+
+Both internal numerical audits passed. Under this one fixed recipe and task distribution, DEND's mean held-out balanced accuracy was higher at all four sizes, with five-block exploratory intervals reported in full. POINT nevertheless passed the frozen task gate at the smallest tested size in one seed; that model has five cells, so neither a single-cell result nor a POINT impossibility follows. Per-seed and per-pattern outcomes are in [TABLES.md](TABLES.md); accounting is in [RESOURCE_COST.md](RESOURCE_COST.md).
+
+The protocol corrects unsupported premises in the initial blueprint: the baseline already has branch cells, four-high inputs are positive under the proposed logic, graded states are not free energy, and a separate model's physical time constants cannot be transferred here. Both arms can use dense learned input allocation. No new pooling intervention is included, so this pilot does not identify local partition's causal necessity.
+
+All sizes and all failed, silent and tied fits are retained. Parameters/states are matched between architectures at each size; cells, scalar operations, reset derivatives and energy are not asserted equal. Activity and latency are computational proxies. The earlier V1–V9 artifacts remain unchanged. See [REPRODUCE.md](REPRODUCE.md) for the two commit gates and audit workflow.

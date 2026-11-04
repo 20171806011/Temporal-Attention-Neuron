@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": 5512,
+  "pinned_source_files": 117,
+  "source_commit": "c75814eac5202e6a265ca42e78805f906d302249",
+  "new_training_or_inference": false,
+  "scope": "Publication source identity and saved-result arithmetic only. No experiment rerun or outside replication. Figures also require visual inspection.",
+  "pdf": {
+    "pages": 15,
+    "sha256": "0983324afcfa0bbdd4b592cdbe6c04d4ce9bb4f81f302e17af94ca79d7a4e8a3",
+    "source_sha256": "007786eb510e1f348a2c8bdd06b12ce2a1562d72fdde8fd40b4825f8367bbafe",
+    "text_bounds": "PASS all pages",
+    "visual_inspection_pages": [
+      1,
+      10,
+      11,
+      12,
+      15
+    ],
+    "overfull_missing_character_undefined_reference_warnings": 0
+  },
+  "review": {
+    "manuscript_science": "PASS against retained results, including negative findings and inferential limits",
+    "readmes_and_evidence": "PASS",
+    "relative_links_images_checked": 167,
+    "citation_schema": "CFF1.2.0 PASS",
+    "frozen_v6_v10_manifest_entries": 5562,
+    "frozen_v6_v10_tracked_files": 5567,
+    "independently_recomputed_saved_test_rows": 726,
+    "private_operational_content_scan": "No matching credential, signed-URL, private-key or operational-thread dumps in reviewed publication sources"
+  },
+  "toolchain": {
+    "pandoc": "pandoc 3.1.11.1",
+    "tex": "XeTeX 3.141592653-2.6-0.999996 (TeX Live 2025/dev/Debian)"
+  }
+}

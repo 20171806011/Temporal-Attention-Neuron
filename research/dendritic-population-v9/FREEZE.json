@@ -1,0 +1,28 @@
+{
+  "baseline": "9cddbbad7f1722d8a116c0a8245fc40d3a5e97ca",
+  "frozen_at_utc": "2026-11-04T20:43:12.095528+00:00",
+  "status": "Before any V9 scientific data generation; deterministic source, forward, gradient and independent verifier fixtures completed",
+  "sha256": {
+    "model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+    "data.py": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+    "common.py": "be79beb345e891fd431ffa68637ac82a88d5581df370c1ae8b1f263b0a27533c",
+    "runner.py": "0d65bc623776d5094661ea4005fbdb46883d03cbabb6dcc744ba6490940d49f3",
+    "evaluate.py": "ecfb475282dea21227a8bba988a9d3daa6d82db7550b7ce8f09e0b28e5cc18e7",
+    "audit_gradients.py": "6e66ec367b493692477d2ae32e2f7d962314bf9ce981d17703df42ec4c8a4e05",
+    "check_contracts.py": "0a3ae4ff6150a7a473d823265bccf9a5f11ff08642c26c9161300f315353eae2",
+    "check_gradients.py": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1",
+    "check_masked.py": "54197ff37cc7ab898964ff6734fcfc523a14e33160937353e9e2d5a740916111",
+    "verify.py": "5b19202f076bb490c664ed01d3668dd9b54f230ca648a943e92bf251cc3d16c8",
+    "PROTOCOL.md": "26abaf1b6420a889c1ea58ddbaa2de8276ec987c6b2d675b7acb8032b0ecce75",
+    "SEEDS.json": "52cce05865af8198989eb75af526f782369fb1a19b3f7b04aad4c7af2f90f76a",
+    "SOURCE_AUDIT.json": "42dd946ceb3ef1fae6c9fda3f3df5b16a0262c08d5400ff14a9d1aa541ac6505",
+    "CONTRACT_CHECK.json": "777e5b02f644ceb4340b2d26c6493cf63221f18358f371a89ca0e2c47d0aa80a",
+    "GRADIENT_CHECK.json": "eadb6c1bc38d6b1089ffb7f1252c7dc9f9f1fbfaa3056cb29c8e48f565bf8327",
+    "MASKED_CHECK.json": "252ac1c28883878d54c9dcc5f106f0eac01e8cce3403688286442b1b8017c823"
+  },
+  "dependencies": {
+    "dendritic-population-v2/model.py": "dfdb47504d602a06d00ee2cface322a0d73e034ded8141d7a872979be75f8387",
+    "dendritic-population-v8/model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+    "dendritic-population-v8/data.py": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "level": 0,
+    "gates": {
+      "DEND": true,
+      "POINT": true
+    },
+    "ceiling": true,
+    "test_eligible": false
+  },
+  {
+    "level": 1,
+    "gates": {
+      "DEND": true,
+      "POINT": true
+    },
+    "ceiling": true,
+    "test_eligible": false
+  },
+  {
+    "level": 2,
+    "gates": {
+      "DEND": true,
+      "POINT": false
+    },
+    "ceiling": false,
+    "test_eligible": true
+  },
+  {
+    "level": 3,
+    "gates": {
+      "DEND": true,
+      "POINT": false
+    },
+    "ceiling": false,
+    "test_eligible": true
+  }
+]

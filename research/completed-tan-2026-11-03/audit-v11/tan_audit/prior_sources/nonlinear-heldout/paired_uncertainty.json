@@ -1,0 +1,95 @@
+{
+  "note": "Post-execution descriptive uncertainty, not preregistered testing; all cells included; normal approximation over iid histories, no multiple-comparison adjustment.",
+  "comparisons": [
+    {
+      "scenario": "noiseless",
+      "m": 1,
+      "mean_paired_ecomp_difference_vs_zero": -0.33421458546904026,
+      "approx_normal_95_ci": [
+        -0.33777574865017457,
+        -0.33065342228790595
+      ]
+    },
+    {
+      "scenario": "noiseless",
+      "m": 100,
+      "mean_paired_ecomp_difference_vs_zero": -0.33421458549655814,
+      "approx_normal_95_ci": [
+        -0.33777574867772425,
+        -0.330653422315392
+      ]
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 1,
+      "mean_paired_ecomp_difference_vs_zero": -0.00038673431945815005,
+      "approx_normal_95_ci": [
+        -0.001437169435696893,
+        0.0006637007967805927
+      ]
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 100,
+      "mean_paired_ecomp_difference_vs_zero": -0.06604955266395787,
+      "approx_normal_95_ci": [
+        -0.07151047104957269,
+        -0.06058863427834306
+      ]
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 1,
+      "mean_paired_ecomp_difference_vs_zero": 0.00035355502486593117,
+      "approx_normal_95_ci": [
+        -0.0006850191844025967,
+        0.001392129234134459
+      ]
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 100,
+      "mean_paired_ecomp_difference_vs_zero": -0.00013904904014482066,
+      "approx_normal_95_ci": [
+        -0.0031938879972541055,
+        0.0029157899169644642
+      ]
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 1,
+      "mean_paired_ecomp_difference_vs_zero": 0.0004528113293436978,
+      "approx_normal_95_ci": [
+        -0.00038885636283520457,
+        0.0012944790215226002
+      ]
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 100,
+      "mean_paired_ecomp_difference_vs_zero": -0.0022325121255333913,
+      "approx_normal_95_ci": [
+        -0.005231178222205571,
+        0.0007661539711387882
+      ]
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 1,
+      "mean_paired_ecomp_difference_vs_zero": -0.33421458546904026,
+      "approx_normal_95_ci": [
+        -0.33777574865017457,
+        -0.33065342228790595
+      ]
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 100,
+      "mean_paired_ecomp_difference_vs_zero": -0.2168633907967517,
+      "approx_normal_95_ci": [
+        -0.22134187717105952,
+        -0.2123849044224439
+      ]
+    }
+  ]
+}

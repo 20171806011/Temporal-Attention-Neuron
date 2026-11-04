@@ -1,0 +1,82 @@
+[
+  {
+    "budget": 100,
+    "candidates": [
+      {
+        "loss": "CE",
+        "lr": 0.01,
+        "min_accuracy": 0.0,
+        "mean_accuracy": 0.69296875,
+        "mean_rate_error": 0.125848388671875
+      },
+      {
+        "loss": "CE",
+        "lr": 0.03,
+        "min_accuracy": 0.0,
+        "mean_accuracy": 0.80078125,
+        "mean_rate_error": 0.094488525390625
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.01,
+        "min_accuracy": 0.3125,
+        "mean_accuracy": 0.6546875,
+        "mean_rate_error": 0.06275634765625
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.03,
+        "min_accuracy": 0.4453125,
+        "mean_accuracy": 0.728125,
+        "mean_rate_error": 0.054730224609375
+      }
+    ],
+    "selected": {
+      "loss": "RATE",
+      "lr": 0.03,
+      "min_accuracy": 0.4453125,
+      "mean_accuracy": 0.728125,
+      "mean_rate_error": 0.054730224609375
+    }
+  },
+  {
+    "budget": 200,
+    "candidates": [
+      {
+        "loss": "CE",
+        "lr": 0.01,
+        "min_accuracy": 0.0859375,
+        "mean_accuracy": 0.88203125,
+        "mean_rate_error": 0.06234130859375
+      },
+      {
+        "loss": "CE",
+        "lr": 0.03,
+        "min_accuracy": 0.0,
+        "mean_accuracy": 0.87421875,
+        "mean_rate_error": 0.07767333984375
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.01,
+        "min_accuracy": 0.5625,
+        "mean_accuracy": 0.846875,
+        "mean_rate_error": 0.04012451171875
+      },
+      {
+        "loss": "RATE",
+        "lr": 0.03,
+        "min_accuracy": 0.4765625,
+        "mean_accuracy": 0.8171875,
+        "mean_rate_error": 0.046856689453125
+      }
+    ],
+    "selected": {
+      "loss": "RATE",
+      "lr": 0.01,
+      "min_accuracy": 0.5625,
+      "mean_accuracy": 0.846875,
+      "mean_rate_error": 0.04012451171875
+    }
+  }
+]

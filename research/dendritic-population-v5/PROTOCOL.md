@@ -1,0 +1,56 @@
+# V5 frozen study: delayed XOR replication and equal configuration search
+
+## Question, provenance and scope
+
+V4 found a delayed-XOR difference under one common RATE/.01 recipe, 200 updates and five fresh training seeds. V5 asks whether this condition repeats and whether a difference remains after each architecture receives the same small configuration search. V4 selected its common recipe by worst-seed accuracy, not mean accuracy; its CE candidates sometimes performed better for POINT. No universal capacity conclusion follows from those observations.
+
+Preserve all V1–V4 source/results and main. The author has closed the prior extra-module request as a misattribution: no such module exists or needs removal. Native dynamics, initialization distributions and delayed-XOR generator are copied byte-identically from V4; no migration to PyTorch is performed. This isolates training configurations from framework/numerical changes. No architecture search, analog decoder, label-conditioned output signals or biological/energy/hardware claims.
+
+## Pre-data audit and no-history diagnostic
+
+Forward takes only input, parameters and arm; labels enter supervised loss/metrics, not dynamics. Each invocation allocates zero state for each independent batch row. No batch statistics or cross-episode state transfer exist. The first cue occupies 2+j through 5+j (j=0,1,2), ending by step7. The second occupies 10+j through13+j, ending by15. Output counts use16–23; informative inputs are absent then, although the common cue and noise remain. Each dataset is exactly balanced over four bit pairs. Train/validation/test RNG namespaces are disjoint; within an arm pair data and initialization are matched.
+
+On every final test, evaluate each fixed trained model on intact inputs AND a copy with all six input channels at steps0–7 set to zero. Neuron equations, initial state, weights, sequence length and readout stay unchanged. By step8 its state is deterministic across episodes (bias-driven), with no first-bit information. Subsequent inputs convey only the second bit and independent nuisance. For the balanced-XOR population, target is independent of that suffix, so expected unconditional accuracy is coverage/2 <=.5. Ordinary finite test draws may exceed .5 by chance. This is a distribution-shifting inference diagnostic, not a separately trained capacity bound or proof of where memory is stored. It removes the first distractor step and prefix noise too; report this rather than describing it as a pure first-cue intervention.
+
+Before training, deterministic fixtures check V4 native parity, binary spikes/reset, label-free signatures, permutation/split-batch consistency, and the same parameter-derivative checks as V4. Recheck exact dataset disjointness and saved-source hashes during verification. No observed V5 test may influence training or selection.
+
+## Models, losses, training and budgets
+
+Retain 20 float64 continuous states, six stored previous-hidden-spike values, two native count readouts, 176 parameters. DEND represents8cells; POINT20. All conditions use 128 training episodes,24updates,200 full-batch Adam steps, beta1=.9 beta2=.999 epsilon1e-8, global gradient norm clip1, parameter bounds[-2,2], V3 surrogate slope1/(1+5*abs(candidate-.5))^2 including reset derivatives. Forward always hard/binary; surrogate is not the exact hard-spike loss derivative. CE uses .5*counts as logits; RATE uses count/8 targets .75 for correct and .125 for wrong output. Both add .0001 mean squared parameters.
+
+Stage A: train10 fresh paired initialization/training seeds, both arms fixed RATE/.01,200 steps. No validation selection. After checkpoint commit, test512 fresh balanced histories per seed and evaluate no-history diagnostic.
+
+Stage B search: five separate paired development seeds,128 training+128 validation episodes each. Give each arm CE/RATE × learning rates {.003,.01,.03}: six candidates, five seeds,200 updates each. This adds a lower rate to V4's two rates without choosing it based on V5 results. Exactly30 search trajectories per arm. Final checkpoints only; no early stopping or best-epoch selection. Choose independently for each arm by: highest minimum validation accuracy across its five seeds; highest mean accuracy; lowest mean RATE error; smaller LR; RATE before CE. The common RATE-error tie-break is an explicit selection preference, not proof of classification quality. Preserve all candidates, failures and traces. Selection happens before either final test is opened.
+
+Stage B final: retrain the selected arm-specific configuration on10 new paired initialization/training seeds, disjoint from A and search. No validation filtering. Evaluate512 untouched test histories per seed after committing checkpoints. A poor seed remains included, with abstentions incorrect.
+
+Paired configuration control: on the SAME B final seeds, also train the V4 RATE/.01 recipe in each arm, with identical initial parameters/data and200 steps. This is one prespecified configuration control, not an architecture variant. If the selected recipe is exactly RATE/.01, reuse that identical trajectory/checkpoint and explicitly count it only once. This control isolates configuration effects within the same seed cohort. A-versus-B separate-cohort mean changes remain descriptive; do not use them alone as a causal decomposition.
+
+Maximum120 distinct trajectories and24,000 Adam updates: A20 + Bsearch60 + Bfinal-selected20 + Bfinal-fixed20; exact reuse can reduce this. Equal search/data/update/matrix budgets between architectures; cell counts, scalar branch nonlinearities, reset derivatives, activation patterns and wall time are not equal. One forward has156 and one backward240 dense MAC terms per sample/time step; each training update is one of each, not an energy measure. Report actual unique trajectories and reuse. CPU-only, one BLAS/OpenMP thread, no installs/paid compute. Cap total training at600seconds; verification at300seconds; test/artifact phase at300seconds. Preserve partial failure logs and stop if caps are exceeded. No automatic restart or seed dropping.
+
+## Outcomes, units and fixed inference rules
+
+PRIMARY: mean paired DEND-minus-POINT unconditional accuracy in B under independently selected configurations. The independent TRAINED SEED PAIR is the principal unit (n=10); each seed contributes one accuracy per arm, with512episodes conditionally estimating that seed's accuracy. Report all10 paired differences, class0/class1 recall counting abstentions as errors, coverage, abstention and failure rates (accuracy<.9 or coverage<.9), and an explicit 2-true-class by 3-predicted-class confusion matrix, last predicted column abstention.
+
+Primary95% interval:20,000 percentile bootstrap resamples of10 trained-seed pairs, seed2026119002. No episode resampling is used for this interval. Practical threshold is5percentage points (.05). An observed positive mean with interval excluding0 supports a direction only within this task/training distribution. A practically meaningful positive difference requires the interval lower bound>.05. If it crosses0, report uncertainty; never claim equivalence. Degenerate intervals do not imply population equality or a non-inferiority bound. Ten seed pairs still limit inference and bootstrap tail estimation.
+
+SECONDARY: A fixed-recipe paired difference, interval same seed-pair method with seed2026119001; B-fixed paired difference; each arm's selected-minus-fixed improvement on the same B pairs; paired attenuation delta=(DENDfixed-POINTfixed)-(DENDselected-POINTselected), positive meaning narrowing, each with seed2026119003. Because recipes were selected from five development seeds, these final intervals are conditional on that one completed search; they do not resample the entire selection procedure. No multiplicity correction for secondary intervals; label them exploratory. Primary is specified before data and never swapped with a favorable secondary.
+
+Report no-history accuracy/coverage/class recalls per seed plus intact-minus-no-history seed-level intervals (RNG2026119004), exploratory. Numerical diagnostic deviations from50% are not automatically called leakage; inspect nuisance/sample variability, code and confidence limits without retuning. The no-history diagnostic tests dependence on input prefix, not necessity of cross-cell recurrence.
+
+Call the L3 difference 'stable under both tested recipes' only if A and B-selected each has a positive seed-level interval excluding0; call it stable AND practically meaningful only if both lower bounds exceed.05. Otherwise state which criterion failed. No intrinsic representational/biological/energy ranking follows. Per-arm differences may be configuration/optimization effects rather than capacity. If both effects survive, only PLAN a separately frozen L3 retrained cross-cell-mask/cut ablation with new seeds, effective-parameter accounting and unchanged native dynamics. Do not run it here. If they do not survive, document that limitation. Do not begin V6 or additional variants automatically.
+
+## Seed namespaces and commit gates
+
+A s=0..9: training2026116000+10s; test2026116100+10s; initialization2026116200+s.
+B search s=0..4: training2026117000+10s; validation2026117001+10s; initialization2026117100+s.
+B final s=0..9: training2026118000+10s; test2026118100+10s; initialization2026118200+s.
+Analysis RNG seeds2026119001..9004. All namespaces are disjoint from historical V1–V4 seeds. Different arrays intentionally share data within paired architecture/configuration comparisons; no cross-split episode duplicate is permitted.
+
+Commit protocol/source hashes before any development or training data generation. Train A and B-search without test generation, lock/commit every candidate and per-arm selections. Then train B finals with fixed selections, lock/commit all final weights. Only then generate A and B tests in ONE invocation, so A results cannot affect B selection. Save exact commit provenance. No test retry/reselection after an observed result; if a code defect is found, preserve failure evidence and report it before any new protocol.
+
+## Verification and deliverables
+
+Preserve source/configs, all weights, every clipped gradient/update trace, actual data/seeds, class confusion tables, per-seed metrics, cost counts, plots, frozen/checkpoint locks and SHA-256 manifest. Independently regenerate XOR data and scalar native dynamics; exact spikes/counts/predictions must match. Reconstruct all Adam updates; independently recompute selected/sampled training values and check local surrogate chain rule at initial and selected weights. Verify same-prefix-erased state at step8 across episodes and no cross-episode dependence. Numerical checks are internal to this AI-assisted workflow, not outside replication or peer review.
+
+Report separate What this does not establish and Limitations sections, actual failures, no-test-reselection assurance, and label any prospective ablation unexecuted. Research direction/native-firing requirement by Li Zexu; protocol, implementation, execution, numerical verification and first report draft AI-assisted. Independent local research branch only; no GitHub push, public PR, main modification or paper merge.

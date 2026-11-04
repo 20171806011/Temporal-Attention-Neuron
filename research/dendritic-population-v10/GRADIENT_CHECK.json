@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "finite_difference_parameter_checks": 686,
+  "seconds": 2.951825496999845,
+  "meaning": "Central differences of a locally anchored differentiable graph validate the surrogate chain rule, NOT a derivative of the hard-spike model.",
+  "rows": [
+    {
+      "h": 6,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 4.758621592990903e-11,
+      "max_hard_loss_minus_regularizer_error": 1.1345669750347701e-11,
+      "parameter_derivatives": 176
+    },
+    {
+      "h": 6,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 6.505348214933958e-11,
+      "max_hard_loss_minus_regularizer_error": 2.5237042626193243e-11,
+      "parameter_derivatives": 176
+    },
+    {
+      "h": 4,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 4.891591298683551e-11,
+      "max_hard_loss_minus_regularizer_error": 2.212143422263986e-11,
+      "parameter_derivatives": 102
+    },
+    {
+      "h": 4,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 3.2518259352604106e-11,
+      "max_hard_loss_minus_regularizer_error": 8.187739996039886e-12,
+      "parameter_derivatives": 102
+    },
+    {
+      "h": 2,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 5.0627724235141613e-11,
+      "max_hard_loss_minus_regularizer_error": 1.9030073451412954e-11,
+      "parameter_derivatives": 44
+    },
+    {
+      "h": 2,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 5.0566368529469247e-11,
+      "max_hard_loss_minus_regularizer_error": 1.9030073451412954e-11,
+      "parameter_derivatives": 44
+    },
+    {
+      "h": 1,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 2.6207416336902767e-11,
+      "max_hard_loss_minus_regularizer_error": 4.995752965134964e-12,
+      "parameter_derivatives": 21
+    },
+    {
+      "h": 1,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 2.629049365363012e-11,
+      "max_hard_loss_minus_regularizer_error": 8.374441255132813e-12,
+      "parameter_derivatives": 21
+    }
+  ]
+}

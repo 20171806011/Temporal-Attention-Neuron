@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "sampled_updates": 60,
+  "max_sampled_gradient_residual": 0,
+  "final_checkpoints": 20,
+  "parameter_derivative_checks": 2920,
+  "max_chain_rule_residual": 4.8385039898291016e-11,
+  "rows": [
+    {
+      "id": "s0_DEND_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.2378975448867902e-11
+    },
+    {
+      "id": "s0_DEND_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 7.393108365614268e-14
+    },
+    {
+      "id": "s0_POINT_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 4.8385039898291016e-11
+    },
+    {
+      "id": "s0_POINT_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 1.9841558409304516e-11
+    },
+    {
+      "id": "s1_DEND_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.464983508449926e-12
+    },
+    {
+      "id": "s1_DEND_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 1.3894320481482036e-11
+    },
+    {
+      "id": "s1_POINT_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.721058492152683e-11
+    },
+    {
+      "id": "s1_POINT_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 2.4431536654878627e-11
+    },
+    {
+      "id": "s2_DEND_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 7.846180302695238e-12
+    },
+    {
+      "id": "s2_DEND_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 2.9334802070638856e-11
+    },
+    {
+      "id": "s2_POINT_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.4772062226926736e-11
+    },
+    {
+      "id": "s2_POINT_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 4.0616185027521616e-11
+    },
+    {
+      "id": "s3_DEND_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 2.3988172559441523e-11
+    },
+    {
+      "id": "s3_DEND_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 1.4572063174178584e-11
+    },
+    {
+      "id": "s3_POINT_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.337193160074997e-11
+    },
+    {
+      "id": "s3_POINT_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 2.84664979305696e-11
+    },
+    {
+      "id": "s4_DEND_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 1.9992981743896174e-11
+    },
+    {
+      "id": "s4_DEND_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 1.666817749904244e-11
+    },
+    {
+      "id": "s4_POINT_intact",
+      "parameters": 176,
+      "max_chain_rule_residual": 3.3143637031933515e-11
+    },
+    {
+      "id": "s4_POINT_retrained",
+      "parameters": 116,
+      "max_chain_rule_residual": 3.226101379311466e-11
+    }
+  ],
+  "seconds": 7.526765693000016,
+  "limits": "Finite differences on locally anchored surrogate graph, not hard-spike derivative. Sampled gradients reuse frozen analytic backward. Native/data/Adam/statistics checker separately written."
+}

@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": 44671,
+  "training": {
+    "trajectories": 20,
+    "reconstructed_updates": 4000,
+    "masked_updates_with_zero_parameter_gradient_and_moments": 2000,
+    "native_training_checkpoints": 180,
+    "native_training_checkpoint_episodes": 23040,
+    "full_saved_training_trajectory_episodes": 2560,
+    "independently_replayed_initial_objectives": 20,
+    "count_derived_history_rows": 4000,
+    "max_training_state_candidate_residual": 8.881784197001252e-16
+  },
+  "inference_cuts": {
+    "derived_models": 10,
+    "additional_training_updates": 0,
+    "mask_zero_slots": 60,
+    "self_recurrent_slots_retained": 12
+  },
+  "tests": {
+    "test_models": 30,
+    "test_model_episodes": 15360,
+    "unique_test_histories": 2560,
+    "max_test_state_candidate_residual": 8.881784197001252e-16,
+    "paired_seed_intervals": 8,
+    "wilson_failure_intervals": 6,
+    "latency_curve": "retrospective settled prefix counts with all-episode denominators; no stopping rule"
+  },
+  "distinct_training_test_histories": 3200,
+  "seconds": 5.800112963000174,
+  "scope": "Separate RNG, initialization, scalar native equations, all count metrics, activity/state-change/retrospective settling metrics, masked Adam reconstruction, cut provenance, paired bootstrap and Wilson implementation. All fixed coordinates/gradients/moments remain zero. Full final train/test native traces match; saved checkpoint metrics and count histories match. No all-update native replay or independent rederivation of all proxy gradients. Internal workflow checks are not external replication; finite optimization failure does not establish physical necessity."
+}

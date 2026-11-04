@@ -1,0 +1,47 @@
+{
+  "version": "scalar-moment-v3.0",
+  "scope": "Conceptual scalar-key memory; not original TAN, P1-B, or v11 reproduction. No Codex.",
+  "freeze_stage": "Written before implementation execution; no parameter sweep or training",
+  "Nmax": 3,
+  "feature_degree": 3,
+  "key_range": ["-1", "1"],
+  "value_bound": "1",
+  "required_value_error": "1/100",
+  "ordinary_sensor_error_bound": "1/10000",
+  "stored_word_bits": 64,
+  "rounding": "signed fixed-point, nearest ties-to-even; budget bounds round upwards",
+  "root_proposal": "numpy.roots on midpoint Newton polynomial; no proposal trusted without exact-rational interval sign checks",
+  "root_certificate": {"initial_radius_grid_units": 2, "maximum_doublings": 40, "intervals_must_be_disjoint": true},
+  "spectral_gate": "alpha_lower > 4 * (Nmax+1) * moment_error_bound; alpha_lower from interval Lagrange inverse norm bounds",
+  "methods": ["certified_moments", "certified_explicit_table", "exact_rational_moments_same_noisy_observation"],
+  "conditions": [
+    {"name": "separated_q24", "s": "1/2", "minimum_canonical_separation": "1/5", "fractional_bits": 24, "future_key_D": "9/10", "future_key_E": "-9/10"},
+    {"name": "clustered_q24", "s": "1/50", "minimum_canonical_separation": "3/200", "fractional_bits": 24, "future_key_D": "4/5", "future_key_E": "-4/5"},
+    {"name": "clustered_q40", "s": "1/50", "minimum_canonical_separation": "3/200", "fractional_bits": 40, "future_key_D": "4/5", "future_key_E": "-4/5"}
+  ],
+  "canonical_key_semantics": "Latest values attach to latent canonical key identities. Each admitted identity has an internal anchor equal to its first observed key rounded to storage grid (unrounded in exact comparator). No true key goes to learners. A global admission uncertainty bound relates anchors to canonical keys. Later noisy observations are address certificates, not replacement anchors.",
+  "external_contract": "All distinct canonical keys in the stream differ by at least condition Delta; current observation comes with verified absolute sensor error zeta. No unseen key may lie closer than Delta to a stored canonical key. Without this promise finite-noise exact membership is not asserted.",
+  "events": [
+    {"id":1,"key":"A=-s","value":"1/4","noise":"+zeta/2","purpose":"first admission"},
+    {"id":2,"key":"B=+s","value":"-1/2","noise":"-zeta/2","purpose":"second admission"},
+    {"id":3,"key":"A","value":"3/4","noise":"-zeta/2","purpose":"noisy latest overwrite"},
+    {"id":4,"key":"A","value":"3/4","noise":"-zeta/2","purpose":"fixed-noise repeated overwrite"},
+    {"id":5,"key":"A","value":"-3/4","observation":"0","sensor_bound":"s+1/10000","purpose":"two-address ambiguity, must reject without mutating state"},
+    {"id":6,"key":"B","value":"1/2","noise":"+zeta/3","purpose":"other latest overwrite after rejection"},
+    {"id":7,"key":"C=0","value":"-1/4","noise":"+zeta/3","purpose":"new middle key and weak-mode challenge"},
+    {"id":8,"key":"C","value":"7/8","noise":"-zeta/3","purpose":"overwrite if admitted, otherwise attempted admission"},
+    {"id":9,"key":"A","value":"-1/8","noise":"+zeta/4","purpose":"retention/latest check"},
+    {"id":10,"key":"D","value":"3/8","noise":"-zeta/2","purpose":"future new insertion or capacity rejection"},
+    {"id":11,"key":"E","value":"1/8","noise":"+zeta/2","purpose":"new key at capacity, not old"},
+    {"id":12,"key":"A","value":"1/8","noise":"-zeta/4","purpose":"overwrite after refusals"}
+  ],
+  "evaluation": {
+    "queries": "Same noisy scalar observations and same sensor bounds for all three methods; alternate +/- ordinary zeta/2 by canonical label. No noiseless-key input to table.",
+    "primary": ["write coverage", "accepted latest absolute error", "other committed memories retention error", "read coverage", "uncompleted rejected request error or absence", "bitwise no-mutation of rejection including count and budgets"],
+    "not_success": "Refusal is not a completed write. Exact comparator also rejects ambiguous observation and new key at capacity.",
+    "no_statistics": "Small deterministic diagnostic set; no bootstrap, population claims, or tuning"
+  },
+  "certification_resources": "Stored core C moments and b use fixed-width words; root proofs and interval update checks use exact rational variable-precision workspace, which must be reported, not treated as free or fixed-width physical computation.",
+  "failure_policy": "Record all refusal reasons and candidate failures. No silent b projection, moment repair, key replacement, threshold changes or deletion. Candidate staging committed only after all gates pass.",
+  "randomness": "None; deterministic rational observation offsets. No seed needed."
+}

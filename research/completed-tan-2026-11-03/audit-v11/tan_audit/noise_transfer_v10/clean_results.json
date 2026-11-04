@@ -1,0 +1,111 @@
+{
+  "native_trajectories": 4,
+  "no_replicate_interpretation": true,
+  "comparison_with_v9_max_abs_error": 0.0,
+  "native_trace_checks": {
+    "LIF": {
+      "all_spikes_exact": true,
+      "max_membrane_abs_error": 0.0,
+      "max_history_abs_error": 0.0,
+      "n_trajectories": 2,
+      "n_updates": 120
+    },
+    "TAN": {
+      "all_spikes_exact": true,
+      "max_membrane_abs_error": 0.0,
+      "max_history_abs_error": 0.0,
+      "n_trajectories": 2,
+      "n_updates": 120
+    }
+  },
+  "invariants": {
+    "TAN_C_pmf_normalization": 0.0,
+    "TAN_C_chain_closure": 0.0,
+    "TAN_D_pmf_normalization": 0.0,
+    "TAN_D_chain_closure": 0.0,
+    "TAN_count_detail_chain_closure": 0.0,
+    "TAN_binary_MI_formula": 0.0,
+    "LIF_C_pmf_normalization": 0.0,
+    "LIF_C_chain_closure": 0.0,
+    "LIF_D_pmf_normalization": 0.0,
+    "LIF_D_chain_closure": 0.0,
+    "LIF_count_detail_chain_closure": 0.0,
+    "LIF_binary_MI_formula": 0.0,
+    "LIF_THINNED_C_pmf_normalization": 0.0,
+    "LIF_THINNED_C_chain_closure": 0.0,
+    "LIF_THINNED_D_pmf_normalization": 0.0,
+    "LIF_THINNED_D_chain_closure": 0.0,
+    "LIF_THINNED_count_detail_chain_closure": 0.0,
+    "LIF_THINNED_binary_MI_formula": 0.0,
+    "ZERO_OUTPUT_C_pmf_normalization": 0.0,
+    "ZERO_OUTPUT_C_chain_closure": -0.0,
+    "ZERO_OUTPUT_D_pmf_normalization": 0.0,
+    "ZERO_OUTPUT_D_chain_closure": -0.0,
+    "ZERO_OUTPUT_count_detail_chain_closure": 0.0,
+    "ZERO_OUTPUT_binary_MI_formula": -0.0,
+    "LIF_count_minus_thinned_C_I_signal": 0.425427151101915,
+    "LIF_count_minus_thinned_C_I_path": 0.0
+  },
+  "information": {
+    "TAN": {
+      "C_H": 1.0,
+      "C_H_given_S": 0.0,
+      "C_I_signal": 1.0,
+      "C_U_deletion": 0.0,
+      "C_I_path": 0.0,
+      "D_H": 1.0,
+      "D_H_given_S": 0.0,
+      "D_I_signal": 1.0,
+      "D_U_deletion": 0.0,
+      "D_I_path": 0.0,
+      "Delta_signal": 0.0,
+      "Delta_path": 0.0,
+      "Delta_deletion": 0.0
+    },
+    "LIF": {
+      "C_H": 1.0,
+      "C_H_given_S": 0.0,
+      "C_I_signal": 1.0,
+      "C_U_deletion": 0.0,
+      "C_I_path": 0.0,
+      "D_H": 1.0,
+      "D_H_given_S": 0.0,
+      "D_I_signal": 1.0,
+      "D_U_deletion": 0.0,
+      "D_I_path": 0.0,
+      "Delta_signal": 0.0,
+      "Delta_path": 0.0,
+      "Delta_deletion": 0.0
+    },
+    "LIF_THINNED": {
+      "C_H": 1.3236422424070897,
+      "C_H_given_S": 0.7490693935090047,
+      "C_I_signal": 0.574572848898085,
+      "C_U_deletion": 0.7490693935090047,
+      "C_I_path": 0.0,
+      "D_H": 0.9620751249144244,
+      "D_H_given_S": 0.38750227601633946,
+      "D_I_signal": 0.5745728488980849,
+      "D_U_deletion": 0.38750227601633946,
+      "D_I_path": 0.0,
+      "Delta_signal": 1.1102230246251565e-16,
+      "Delta_path": 0.0,
+      "Delta_deletion": 0.36156711749266524
+    },
+    "ZERO_OUTPUT": {
+      "C_H": -0.0,
+      "C_H_given_S": 0.0,
+      "C_I_signal": -0.0,
+      "C_U_deletion": 0.0,
+      "C_I_path": 0.0,
+      "D_H": -0.0,
+      "D_H_given_S": 0.0,
+      "D_I_signal": -0.0,
+      "D_U_deletion": 0.0,
+      "D_I_path": 0.0,
+      "Delta_signal": 0.0,
+      "Delta_path": 0.0,
+      "Delta_deletion": 0.0
+    }
+  }
+}

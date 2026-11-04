@@ -1,0 +1,28 @@
+{
+  "time_utc": "2026-11-02T21:56:05.062121+00:00",
+  "commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "expected_source_commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "git_provenance_available": true,
+  "protocol_sha256": "70a9fcebb77a223e321e34fa11eb18f1228431c3d3ef8ac40cfc1a4706eb87e1",
+  "source_manifest_sha256": "cfc62677c9bd60e4f6a03a07867ff37cda04c5a51aa01326ffc9c1178bfcfd86",
+  "selected_extracted_sha256": "c014426b5d8321fd7bde4186660fb4132fe2f5f90782232b10e404bd330e0d9c",
+  "source_files_sha256": {
+    "snapshot/code/experiments/statistical_validation.py": "7717f747d968d1704d9d361786352e758f88385139f89668457abd66f1a097d0",
+    "snapshot/code/experiments/baseline_comparison.py": "97c63c76982ac5366044e8644c9692fa27702be13222078627f1c59320fc8558",
+    "snapshot/code/experiments/ablation.py": "49f5418d985c563671ad93760bfc09e878a6216ce478129769bd3d253d3c8edd",
+    "snapshot/data/experiment_results/stats_validation_metrics.csv": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9",
+    "snapshot/results/tables/stats_validation_metrics.csv": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9",
+    "snapshot/data/experiment_results/stats_validation_summary.csv": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0",
+    "snapshot/results/tables/stats_validation_summary.csv": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0",
+    "snapshot/data/experiment_results/baselines_metrics.csv": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637",
+    "snapshot/results/tables/baselines_metrics.csv": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637",
+    "snapshot/data/experiment_results/baselines_summary.csv": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53",
+    "snapshot/results/tables/baselines_summary.csv": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53",
+    "snapshot/data/experiment_results/ablation_metrics.csv": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06",
+    "snapshot/results/tables/ablation_metrics.csv": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06",
+    "snapshot/data/experiment_results/ablation_summary.csv": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6",
+    "snapshot/results/tables/ablation_summary.csv": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6"
+  },
+  "all_guards_passed": true,
+  "execution": "Only exact verified AST class/function bodies; NumPy supplied."
+}

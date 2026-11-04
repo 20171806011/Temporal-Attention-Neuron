@@ -1,0 +1,16 @@
+{
+  "checks_passed": 305,
+  "scalar_episode_checks": 54,
+  "max_scalar_vs_vector_sample_error": 0.0,
+  "max_recomputed_metric_discrepancy": 0.0,
+  "test_model_condition_histories_including_auxiliary_and_negative": 6656,
+  "prior_bundles_unchanged": {
+    "tan_minimal_moment_v4_bundle.zip": true,
+    "tan_scalar_moment_v3_bundle.zip": true,
+    "tan_latest_value_audit_bundle.zip": true,
+    "tan_range_consistency_v2_bundle.zip": true
+  },
+  "same_agent_not_third_party": true,
+  "limitations": "No full upstream P1B replay; scalar original recurrence was transcribed from directly read source. No population guarantee or test-set optimization.",
+  "public_archive_note": "Historical verification output. checks_passed includes the original archive-preservation checks. Two unrelated preservation entries are omitted from this public copy; numerical scientific checks and reported counts are unchanged. Public replay without optional prior archives has fewer checks."
+}

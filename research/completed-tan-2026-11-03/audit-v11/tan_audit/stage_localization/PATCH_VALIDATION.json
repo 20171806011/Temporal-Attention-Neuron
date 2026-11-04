@@ -1,0 +1,72 @@
+{
+  "frozen_commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "patch_sha256": {
+    "manuscript_corrections.patch": "39320870b516e99f74460410d5a8953d8ceb7e013d5039b008fe79dfe3b1803e",
+    "readme_scope_corrections.patch": "f7fab604304533229c48cc95ed89ee6966751b54ed20d0854d47dd14a3f2ea9c"
+  },
+  "read_only_apply_checks": [
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "--whitespace=error-all",
+        "tan_audit/stage_localization/manuscript_corrections.patch"
+      ],
+      "cwd": "Temporal-Attention-Neuron",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "apply",
+        "--check",
+        "--whitespace=error-all",
+        "tan_audit/stage_localization/readme_scope_corrections.patch"
+      ],
+      "cwd": "Temporal-Attention-Neuron",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "repository_status": {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "Temporal-Attention-Neuron",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "source_hashes_before": {
+    "snapshot/paper2/sections/s8_composition.tex": "ed692809df97f6f627d33ba421c74ed30f1aa192e7fca5af7bc04071dc869a95",
+    "snapshot/paper2/main.tex": "b10865a3ecec8f2b48897dfab13d1a01062fcbb41ff26c7a8e6a447b8dfdb575",
+    "README.md": "bb195ff9334b003490e045815ef7c9969763d9d610119c1da418f2588bbf80e8"
+  },
+  "source_hashes_after": {
+    "snapshot/paper2/sections/s8_composition.tex": "ed692809df97f6f627d33ba421c74ed30f1aa192e7fca5af7bc04071dc869a95",
+    "snapshot/paper2/main.tex": "b10865a3ecec8f2b48897dfab13d1a01062fcbb41ff26c7a8e6a447b8dfdb575",
+    "README.md": "bb195ff9334b003490e045815ef7c9969763d9d610119c1da418f2588bbf80e8"
+  },
+  "repository_bytes_unchanged": true,
+  "latex_fragment_check": {
+    "argv": [
+      "pdflatex",
+      "-interaction=nonstopmode",
+      "-halt-on-error",
+      "-output-directory=replay-latex",
+      "tan_audit/stage_localization/manuscript_preview/p1b_correction_fragment.tex"
+    ],
+    "exit_code": 0,
+    "source_sha256": "7b404fa0fde65beafe13be0f8eb45a87a9d0b11705d72ebca53ac8e5e8742d44",
+    "log": "manuscript_latex_validation.log",
+    "pdf_sha256": "58c59d9cc6561dd3f960eaf6b736b46d4e702461178377e6b0d1e65add5c9d54",
+    "scope": "Isolated replacement paragraphs compile; not a full manuscript build or release layout check."
+  },
+  "historical_value_checks": "Builder asserts the selected historical count, coefficient, accuracy, CI and decision-label strings remain. Historical experiments are not rerun by this documentation task."
+}

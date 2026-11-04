@@ -1,0 +1,843 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  10pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=25mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{american}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Temporal Attention Neurons: Separating History Sensitivity, Addressing, and Recoverable Memory},
+  pdfauthor={Li Zexu},
+  pdflang={en-US},
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Temporal Attention Neurons: Separating History Sensitivity,
+Addressing, and Recoverable Memory}
+\author{Li Zexu}
+\date{3 November 2026 --- research manuscript draft}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}\label{abstract}
+
+A temporal attention mechanism can change a neuron's response to recent
+history without making that history recoverable through its permitted
+output. We synthesize the recorded Temporal Attention Neuron (TAN)
+research into an evidence-based account of this distinction. The
+evidence spans static addressing, native finite-window dynamics,
+task-specific response collisions, a controlled readout-training
+intervention, and comparisons with ordinary adaptive filters. Static
+scalar metric addressing correctly identifies all 6,705 intermediate-key
+queries in the archived noiseless three-key condition, whereas the
+signed scalar-product rule identifies none. This positive result
+presupposes an available key--value array. In a separate native temporal
+task, 545 target--distractor swap pairs with different labels have
+identical complete allowed responses, despite different ordered internal
+windows. Newly checked supplemental certificates also establish
+clean-only response collisions, including a pair requiring no target or
+query reset. A later clean-only training intervention improves mean
+clean balanced accuracy from 32.5881\% to 38.1199\%, but does not
+eliminate this structural limitation. In a matched-calibration detection
+experiment, TAN's balanced accuracy exceeds an ordinary adaptive
+comparator under independent noise but falls below it under stationary
+AR(0.9) noise. We distinguish these locally executed records from
+exploratory Chat-sandbox constructions that have not been independently
+replicated here. The resulting contribution is a task- and
+resource-specific account of what the architecture computes, where
+information becomes inaccessible, and which apparent gains depend on
+readout, training composition, or additional mechanisms. No universal
+superiority, biological implementation, or independent experimental
+replication is established.
+
+\section{Introduction}\label{introduction}
+
+Attention is a computation over a representation, not by itself a
+guarantee that the representation retains the information required by a
+task. The Transformer makes content-dependent weighting operational at
+network scale {[}1{]}. TAN asks a smaller architectural question: what
+can a discrete dynamical unit do when its membrane update receives a
+surprise-gated, attention-weighted summary of recent inputs? Answering
+this question requires separating at least four properties: history
+sensitivity, address selection, preservation of a key--value
+association, and recovery through a specified observation.
+
+The original project developed the TAN model, its experimental tasks,
+and an architectural progression from state and geometry to routing,
+binding, and composition. Existing manuscripts already discuss these
+distinctions. This paper is a retrospective synthesis of the subsequent
+evidence, not a duplicate presentation of those manuscripts or a new
+experimental campaign. In particular, later evidence qualifies a simple
+monotonic capability ladder: a representation may contain a target while
+its output cannot expose it; a scalar metric can address an existing
+array without solving dynamic storage; and a training change can improve
+observed accuracy without repairing an information-losing map.
+
+We organize the evidence around three questions. Which positive results
+survive an explicit account of inputs, state, and readout? Which
+negative results are mathematical obstructions within a fixed contract,
+rather than broad claims about neurons? Which performance differences
+remain when ordinary baselines and training composition are considered?
+The answer is a set of bounded capabilities, not a single success or
+failure label for all implementations called TAN.
+
+\section{Materials and evidence
+provenance}\label{materials-and-evidence-provenance}
+
+\subsection{Source hierarchy and prior
+manuscripts}\label{source-hierarchy-and-prior-manuscripts}
+
+The original source baseline is commit
+\texttt{85213f0d417d54e4f48b301ed1c0e4200ef3c421}. The screened research
+publication is commit \texttt{222caa0201feff1e37a06049aa44c0e59e1cbaba},
+containing 680 archived scientific files in four collections: audit v11
+(440), native eight-stage studies (110), exploratory studies (100), and
+the local clean-training control (30). The exact screened ZIP has
+189,164,458 bytes and SHA-256
+\texttt{ca8a2ae51b4e8f18ab341fa483ca9970a7a3077c5d4e4013e5df13a9811b6167}.
+Hash agreement establishes file identity, not scientific validity.
+
+An inventory made before drafting records 174 existing manuscript/report
+sources. The principal earlier manuscript families are
+\texttt{snapshot/manuscript}, \texttt{snapshot/paper}, and
+\texttt{snapshot/paper2}. Later correction fragments under the
+stage-localization audit are amendments, not an additional independent
+study. We retain these sources unchanged and use the latest completed
+report relevant to each claim. For static addressing, the authoritative
+experiment is P1A Rev2, not the superseded first run. For clean
+training, the frozen completed protocol supersedes an earlier proposal
+whose prospective wording remains historical.
+
+During final publication checks, main advanced to commit
+\texttt{65b0d2e9310a5790e653b77114bf4b6c7aa93e9c}, adding a TAN-III
+manuscript focused on decoder floors, carrier rank, and a proposed
+dendritic interpretation. We inspected that concurrent manuscript and
+retain it unchanged. The present synthesis is a separate evidence-scoped
+account centered on observable recovery and the training-composition
+control. Shared numerical findings are not counted as additional
+experiments. The proposed biological interpretation is not treated here
+as an experimentally demonstrated implementation.
+
+The evidence ledger accompanying this manuscript gives
+repository-relative links and hashes for the sources actually used.
+Reported numerical findings below are historical results checked against
+retained evidence. Writing and building this paper does not constitute a
+new run of the underlying experiments.
+
+\subsection{Execution and attribution}\label{execution-and-attribution}
+
+The model and original project are attributed to Li Zexu, consistent
+with the existing repository. Subsequent audit design, coding,
+mathematical analysis, computational checking, and this synthesis
+involved AI assistance. This statement does not assign every later
+derivation or implementation exclusively to the human author. AI systems
+are not listed as authors; human review remains necessary before journal
+submission.
+
+We distinguish three evidence levels. First, exact arguments establish
+consequences of explicitly stated mathematical maps. Second, the native
+and local audit collections record executed computations, saved inputs,
+outputs, and source provenance. Some include separately implemented
+checkers or isolated replays; these are computational verification
+within an AI-assisted workflow, not independent human replication.
+Third, the \texttt{exploratory/chat-*} collections record Chat-sandbox
+conceptual experiments, including same-agent checks and reruns. We have
+inspected their documentation but have not independently reproduced
+those experiments in the current environment. The paper is an unreviewed
+research draft, not peer-reviewed evidence.
+
+\section{Models, contracts, and
+analysis}\label{models-contracts-and-analysis}
+
+\subsection{Native finite-window TAN}\label{native-finite-window-tan}
+
+For the W5 native model used in the temporal task, let \(H_t\) be the
+ordered window containing the current input and four preceding inputs,
+and let \(h_{t-1}\) be the previous post-reset membrane state. The
+principal operations are
+
+\[
+\mu_t=\frac{1}{5}\sum_{z\in H_t}z,\qquad
+S_t=\max(0,x_t-\mu_t),\qquad q_t=2S_t,
+\]
+
+\[
+C_t=\sum_i\alpha_{ti}H_{ti},\qquad
+A_t=\tanh(S_t)C_t,\qquad
+u_t=0.5h_{t-1}+A_t,
+\]
+
+\[
+y_t=\mathbf{1}\{u_t>0.5\},\qquad
+h_t=(1-y_t)u_t.
+\]
+
+The attention weights use exponentials of \(q_tH_{ti}\), with a small
+additive denominator constant. Implementation details matter. The native
+v8 collision proof uses the historical unshifted exponential
+normalization with \(\delta=10^{-9}\). The clean-training control uses
+the source's stabilized softmax: subtract the maximum score before
+exponentiation and then add the same denominator constant. Because of
+that constant, these implementations are not exactly algebraically
+identical. We do not silently transfer an exact floating-point result
+between them {[}E2, E3{]}.
+
+The full finite-window system is Markovian in \((h_t,H_t)\). Earlier
+natural-collision results show that membrane alone is insufficient; they
+do not establish non-Markovianity of the full state. The five window
+values plus membrane are a 48-byte logical payload under binary64
+storage, excluding object overhead, temporaries, and the external
+decoder.
+
+\subsection{Higher-moment sensitivity is not positional
+addressing}\label{higher-moment-sensitivity-is-not-positional-addressing}
+
+For the ideal normalization without \(\delta\), define
+
+\[
+Z(q)=\sum_i e^{qH_i},\qquad C(q)=\frac{d}{dq}\log Z(q).
+\]
+
+A local expansion at \(q=0\) gives
+
+\[
+C(q)=\mu+q\kappa_2+\frac{q^2}{2}\kappa_3+\cdots,
+\]
+
+where \(\kappa_j\) are cumulants of the empirical window distribution.
+Thus native attention generally responds to information beyond mean and
+variance. A clipped second-order approximation such as
+\(\mu+q\operatorname{Var}(H)\) is an ablation, not an exact substitute.
+This is an analytical property of exponential weighting, not evidence of
+a novel statistical identity or of improved task accuracy.
+
+The exact deployed normalization retains \(\delta\), so the ideal
+expansion must not be quoted as an exact formula for its stored outputs.
+Moreover, the context remains invariant to a permutation of a fixed
+window when the query is unchanged. Sensitivity to the amplitude
+distribution can coexist with loss of target position. The ordered
+window can retain position while a pooled output discards it. This is
+consistent with the broader distinction between set-invariant
+computation and ordered representations {[}2{]}. The bundled upstream
+control code contains a second-order context ablation, but its presence
+alone does not establish a validated higher-moment performance advantage
+{[}E3{]}.
+
+\subsection{Static address selection}\label{static-address-selection}
+
+P1A Rev2 grants the models the full stored key, value, and validity
+arrays. For distinct keys and an exact query \(q=k_t\), the metric score
+
+\[s_i=-(q-k_i)^2\]
+
+has a unique maximum at the requested key. By contrast, a nonzero scalar
+multiplier applied to ordered keys selects an extreme key; zero produces
+a tie rather than unique intermediate-key identification. These are
+elementary score properties. They do not prove a lower bound on neural
+state dimension.
+
+The vector-QK implementation's cosine score has the same hard ordering
+as the metric on the observed domain, where \(|0.4(q-k)|<\pi\). Its
+agreement with metric routing therefore has a direct explanation.
+Soft-output comparisons require accounting for score curvature and
+temperature: equal numeric temperature is not equal local
+discrimination. Values and the final addition/subtraction operation are
+explicitly available resources {[}E1{]}.
+
+\subsection{Observation collision and training
+control}\label{observation-collision-and-training-control}
+
+In native Probe1, the target occurs at step 5, distractors at steps
+6--8, query at step 9, and the continuation is zero. The only decoder
+observation is
+
+\[F=(u_9,u_{10},u_{11},u_{12},u_{13},y_9,y_{10},y_{11},y_{12},y_{13}).\]
+
+The v8 study compares histories \((a,b,c,d,q)\) and \((b,a,c,d,q)\) with
+\(a,c\in[0.615,0.635]\) and \(b,d,q\in[1.365,1.385]\). Their target
+classes differ outside the original overlapping low/high amplitude
+region. One anchor, all 32 box corners, and 512 frozen random draws give
+545 paired cases {[}E2{]}.
+
+The later training control asks a different question: whether the
+composition of readout training data contributes to weak clean-task
+accuracy. It holds the stabilized W5 source dynamics and 33-parameter
+linear readout fixed. For each of three historical seeds, clean-only and
+mixed arms each use 1,500 examples, balanced at 500 per class. The mixed
+arm contains 250 clean and 250 distractor examples per class. Its 750
+clean examples are a subset of the clean-only arm. Selection uses a
+fixed permutation without consulting test values. Both arms evaluate the
+same 1,001 clean examples per seed. Each arm uses its own train-only
+standardization, zero initialization, L2 coefficient \(10^{-4}\), and
+the frozen L-BFGS-B procedure, without validation-based tuning {[}E3{]}.
+
+Balanced accuracy is the arithmetic mean of class recalls. Training
+uncertainty is assessed only conditionally: 2,000 paired bootstrap draws
+resample original test reuse-groups within each fixed seed, preserve
+pairing between arms, and average equally across seeds. This does not
+integrate over training-set, optimizer, or seed-selection uncertainty.
+
+\subsection{Matched-calibration adaptive
+baseline}\label{matched-calibration-adaptive-baseline}
+
+The separate v11 detection task uses W10 TAN with signed surprise, a
+magnitude gate, leak 0.8, strict threshold 1, and zero initial state. It
+must not be confused with the W5 rectified-surprise classifier. The
+ordinary comparator has two persistent scalars:
+
+\[
+m_t=0.8m_{t-1}+0.2x_t,\quad
+I_t=\kappa\left|\frac98(x_t-m_t)\right|,\quad
+u_t=0.8u_{t-1}^{\mathrm{post}}+I_t.
+\]
+
+Both models use the same threshold/reset and observation window. A
+separate 512-history independent-noise calibration fixes
+\(\kappa=0.840938900477691\) by matching pooled absolute effective
+current, not accuracy or test outcomes. The comparator is an engineering
+implementation of input adaptation, not a claimed reproduction of a
+particular biological neuron. Adaptation-based separation of fast
+signals and slower backgrounds already has primary-literature precedent
+{[}3{]}.
+
+The test contains 1,024 innovation histories paired across independent
+and stationary AR(0.9) noise, step/catch conditions, and both models.
+Each waveform lasts 60 updates, with step onset at 15. A detection is
+any spike during updates 15--19; the readout therefore knows onset.
+Misses receive capped delay 5. The bootstrap resamples whole innovation
+groups, preserving every pairing. Calibration is frozen. Matching one
+pooled current statistic does not match all state, computation, current
+variance, or physical energy {[}E4{]}.
+
+\section{Results}\label{results}
+
+\subsection{Static addressing succeeds within its granted memory
+interface}\label{static-addressing-succeeds-within-its-granted-memory-interface}
+
+In the archived noiseless three-key condition, scalar metric attention
+and vector QK each identify all 6,705 intermediate-key role queries,
+whereas the signed scalar rule identifies zero. In the two noisy
+conditions, both-address success is 9,876/10,000 and 7,986/10,000 for
+each addressing method. These are observed task outcomes, not
+unconditional robustness guarantees.
+
+The retained verification recomputed 60,000 condition/trial records and
+420,000 model-output rows from separately written score formulas. All
+hard choices agreed exactly; the largest soft arithmetic discrepancy was
+\(2.58\times10^{-14}\). The conditions do not supply 60,000 independent
+histories because two noisy conditions share base histories and scaled
+noise draws. This is saved-ledger verification, not regeneration of the
+historical random experiment {[}E1{]}. The result supports static metric
+addressing and challenges an overly narrow scalar-product obstruction.
+It does not establish dynamic writing or compact key--value storage.
+
+\subsection{Native response collisions separate stored from recoverable
+content}\label{native-response-collisions-separate-stored-from-recoverable-content}
+
+A rational interval certificate gives a step-8 gated current above
+0.528613674287 throughout the specified box. Both native membranes
+therefore reset. At query, the two windows contain the same multiset,
+the same current input, and equal pooled context. The subsequent zero
+continuation closes the gate, yielding the same response
+
+\[F=(u_9,u_9/2,u_9/4,u_9/8,u_9/16,0,0,0,0,0).\]
+
+At the anchor, \(u_9\approx0.33538361861604077\). All 545 native TAN
+response pairs were also bit-identical in the recorded floating
+implementation. The ordered windows nevertheless differed when queried
+{[}E2{]}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Model or intervention
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Identical complete responses / 545 pairs
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Different spike responses / 545 pairs
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Native LIF & 545 & 0 \\
+Native recency delay line & 0 & 0 \\
+Native uniform gated context & 0 & 545 \\
+Native TAN & 545 & 0 \\
+TAN with step-8 voltage reset suppressed & 0 & 0 \\
+\end{longtable}
+
+Suppressing only the step-8 voltage reset restores analog separation but
+not spike-only separation. It changes the dynamical rule and is a causal
+control, not another successful run of unchanged TAN. The delay-line and
+uniform-context results are valuable negative controls against a
+universal advantage claim; they are not isolated single-component
+interventions on TAN.
+
+For an equal mixture of each opposite-label pair, any classifier of only
+the common response incurs error at least one half. This is a restricted
+indistinguishability statement. The corresponding conditional bound
+under the ideal continuous original present-distractor generator is only
+\(3.2\times10^{-9}\). The construction therefore cannot explain the
+magnitude of average historical classification error. It proves a
+failure mode, not its prevalence.
+
+\subsection{Clean-only collisions do not require a
+reset}\label{clean-only-collisions-do-not-require-a-reset}
+
+A separately supplied clean-map archive resolves a gap in the initial
+synthesis. Its scientific files were not part of the 680-file snapshot.
+We checked their source identity and wrote a new verification
+implementation rather than treating the archive's review label as
+sufficient evidence {[}E8{]}.
+
+For \(x_5=a\), \(x_9=b\) and all other inputs zero, let \(R(z)=z\) if
+\(z\leq1/2\) and zero otherwise. With historical unshifted
+normalization,
+
+\[
+D(a)=\tanh(4a/5)\frac{a\exp(8a^2/5)}{4+\exp(8a^2/5)+\delta},
+\]
+
+\[
+s=\frac{4b-a}{5},\quad q=2s,\quad
+T(a,b)=\frac{R(D(a))}{16}+\tanh(s)\frac{a e^{qa}+b e^{qb}}{3+e^{qa}+e^{qb}+\delta}.
+\]
+
+Here \(D(a)=u_5\) and \(T(a,b)=u_9\). For stabilized normalization, the
+epsilon term in the first denominator is \(\delta\exp(8a^2/5)\) and that
+in the second is \(\delta\exp(q\max(a,b))\). Both conventions are
+retained exactly. Between target and query, and after query, the current
+input is zero and the surprise gate is closed. On the allowed
+present-target support, \(s\geq0.15>0\). Consequently the complete clean
+observation factors as
+
+\[
+F(a,b)=\left(T,\frac{R(T)}2,\frac{R(T)}4,\frac{R(T)}8,
+\frac{R(T)}{16},\mathbf1\{T>1/2\},0,0,0,0\right).
+\]
+
+This is an observation factorization, not a claim that the complete
+neuronal state is scalar. The pre-reset \(T\) remains observable even if
+the query spikes.
+
+The reference \((a,b)=(3/4,1)\) has target amplitude in the exclusive
+low-class support. Fixing the alternative target to \(17/16\) puts it in
+the exclusive high-class support. Exact rational interval bounds show
+opposite signs of \(T(17/16,b)-T(3/4,1)\) at \(b=0.9\) and \(b=1\), and
+at the much tighter saved brackets. For each normalization, the map is
+continuous in \(b\) on this interval: the target reset branch is fixed,
+the denominator is positive, and the stabilizing maximum is continuous.
+The intermediate value theorem therefore supplies an exact real cue with
+the same \(T\), hence the same complete response. Both histories remain
+below threshold at target and query. A second fixed high target,
+\(5/4\), provides another certified pair whose target does reset.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Softmax convention
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+High target
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Matching cue (approximate)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Low/high target reset
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Historical unshifted & 1.0625 & 0.940683774077897 & no / no \\
+Native stabilized & 1.0625 & 0.940683774067389 & no / no \\
+Historical unshifted & 1.25 & 0.950882451344341 & no / yes \\
+Native stabilized & 1.25 & 0.950882451342424 & no / yes \\
+\end{longtable}
+
+Every matching cue lies inside the legal cue support; query reset is
+absent in all four pairs. The reference \(T\) is approximately
+0.3565984021. Printed cue decimals are approximations, not exact roots.
+Equality refers to the real root certified by interval signs and
+continuity, not to an assertion of bit-identical outputs for arbitrary
+rounded inputs.
+
+The new checker uses exact Fraction arithmetic with range-reduced
+exponential bounds and separately written scalar full-trajectory code.
+It verified four collision brackets, two target-reset boundary brackets,
+and all 64 archived fixtures comprising 896 updates. In total, 5,482
+checks passed; the maximum discrepancy against saved scalar trajectories
+was \(3.3306690738754696\times10^{-16}\). It imports neither the
+archived audit nor its checker. This is additional computational
+verification within an AI-assisted workflow, not external human
+replication or formal proof-assistant verification. The local
+derivative-rectangle and global monotonicity certificates were not
+independently regenerated and are not needed for this existence result.
+
+Thus no response-only decoder can classify every allowed clean input
+perfectly under this real-valued contract. The cue differs across the
+pair, as permitted by the task; supplying it separately changes the
+observation resource. The proof does not establish an average accuracy
+ceiling of one third, calculate Bayes risk, or quantify how much
+historical error arose from representation loss. Finite-precision input
+restrictions and added process noise require separate analysis.
+
+\subsection{Clean training improves the fixed readout, but only
+modestly}\label{clean-training-improves-the-fixed-readout-but-only-modestly}
+
+All six fitted optimizers converged. The recorded features exactly
+matched the archived stabilized-source response. The following table
+reports balanced accuracy on the shared clean test subsets {[}E3{]}.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Historical seed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Clean-only training (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Mixed training (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Difference (percentage points)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+20260904 & 38.5541 & 32.9776 & 5.5765 \\
+20260905 & 38.0594 & 32.0142 & 6.0451 \\
+20260906 & 37.7462 & 32.7725 & 4.9737 \\
+Equal-seed mean & 38.1199 & 32.5881 & 5.5318 \\
+\end{longtable}
+
+The conditional 95\% percentile interval for the mean difference is
+{[}3.3391, 7.6080{]} percentage points. All classes are predicted in
+both arms, but changes are not uniform: for seed 20260905, low-class
+recall under clean-only training is 11.51\%, while other recalls
+improve. An aggregate improvement must not be described as improvement
+for every class.
+
+This intervention identifies training composition, including its induced
+normalization, as a contributor under the frozen pipeline. It does not
+isolate gradient conflict from preprocessing, identify a Bayes-optimal
+decoder, or establish architectural superiority. Mean performance
+remains modest, near the three-class balanced chance reference of one
+third. Historical reused tests are not a new blind benchmark.
+
+The clean-only collision and the training intervention establish
+different facts. The supplemental certificate demonstrates
+noninjectivity of the permitted clean response across distinct labels,
+including under the stabilized convention used for training. The
+training intervention improves a particular decoder on the recorded test
+distribution. Neither result quantifies the other: the certified pair
+does not explain the magnitude of average error, and the training gain
+does not repair an exact response collision. Original clean-map notes
+describe the training control as prospective because they predate its
+completed execution; their historical wording is preserved in the
+supplement.
+
+\subsection{Correlated noise reverses a detection
+advantage}\label{correlated-noise-reverses-a-detection-advantage}
+
+The complete primary detection outcomes are {[}E4{]}:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Noise
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Misses / 1,024
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Catch alarms / 1,024
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Balanced accuracy (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Mean capped delay
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Independent & TAN & 0 & 1 & 99.9512 & 0.560547 \\
+Independent & Adaptive & 0 & 137 & 93.3105 & 0.103516 \\
+AR(0.9) & TAN & 62 & 6 & 96.6797 & 0.930664 \\
+AR(0.9) & Adaptive & 7 & 40 & 97.7051 & 0.301758 \\
+\end{longtable}
+
+The primary TAN-minus-adaptive AR balanced-accuracy difference is
+-1.0254 percentage points, with a predeclared 97.5\% paired percentile
+interval {[}-2.0020, -0.0488{]}. The change in advantage from
+independent to AR noise is -7.6660 points, interval {[}-9.0820,
+-6.2988{]}. Both go against the prespecified superiority direction.
+
+TAN still has fewer catch false alarms under AR noise, but misses more
+steps and responds more slowly. This is an operating tradeoff, not
+absence of useful behavior. The archived checker reports verification of
+10,244 trajectories and all spike decisions; it is a separately
+implemented computational check, not external replication. TAN stores
+ten input coordinates plus membrane, whereas the adaptive comparator
+stores two scalars. The experiment therefore does not establish
+resource-normalized superiority for TAN.
+
+\subsection{Modified carriers and exploratory
+constructions}\label{modified-carriers-and-exploratory-constructions}
+
+The native eight-stage series illustrates how a conditional rescue can
+require a changed contract. A longer gate time constant reduces
+sensor-only composition error from 0.270803 to 0.008093 on 4,096
+held-out histories. However, the successful system also uses
+value-dependent gate drive, a nonzero query content probe, two analog
+samples, a known-equation nonlinear inverse, fixed known keys/timing,
+and targets restricted to \([-0.5,0.5]^2\). It is neither original P1B
+success nor general variable-key retrieval {[}E5{]}.
+
+The interpolation control makes another useful separation. Two real
+payload registers can encode the line through two supplied key--value
+pairs, enabling ideal querying without retaining separate per-key
+records after the second write. Its recorded clean composition error is
+approximately \(5.08\times10^{-16}\) on 512 histories. This is classical
+interpolation with an explicit controller, separate ports, division, and
+atomic overwrite, not a new associative-memory identity or a
+demonstrated native neuron. Finite precision, leakage, and resource
+costs materially alter the result {[}E6{]}.
+
+Exploratory Chat-sandbox packages address related but different
+constructions. The bounded write/hold/query circuit adds state and
+control resources; a same-resource EMA performs at least as well in its
+stated small comparison. Moment-based latest-value schemes rely on
+address promises, conditioning, admissibility tests, or refusal. They
+can preserve a response at a noisy observed address while returning an
+incorrect value at the true key. These are informative conceptual
+controls, not replications of original TAN, and have not been
+independently rerun for this manuscript {[}E7{]}.
+
+\section{Discussion}\label{discussion}
+
+The evidence supports an operational distinction between access to
+information and the mere presence of information in state. Native
+attention can be sensitive to higher moments of the input distribution
+while remaining permutation-invariant at a fixed query. A common reset
+can remove order-dependent membrane information before that pooled query
+occurs. Conversely, static metric addressing succeeds when the candidate
+array and bound values are granted. There is no contradiction: the tasks
+expose different resources and ask different questions.
+
+The training control adds a second distinction, between a map's
+information content and the performance of a particular fitted decoder.
+Improving the training distribution can improve a decoder on a fixed
+representation. Such improvement does not invert an exact collision and
+does not certify sufficient representation. Likewise, the existence of
+one collision family does not explain all empirical error. Reporting
+both findings prevents either a purely architectural or a purely
+optimization-based explanation from outrunning the evidence.
+
+The adaptive comparison shows why a named baseline and a declared
+matching rule are necessary. A large independent-noise advantage can
+reverse when temporal correlation changes, even without retuning. Fewer
+false alarms alone do not establish better detection, just as higher
+late activity alone does not establish better information transfer.
+Current integrals and logical state counts are useful accounting
+quantities, but they are not measurements of energy, biological cost, or
+hardware throughput.
+
+The project-specific contribution of this synthesis is the integration
+of these verified boundaries and interventions. Exponential pooling,
+nearest-neighbor addressing, permutation invariance, interpolation, and
+adaptation are established ideas. The evidence does not justify a claim
+of a breakthrough, universal task superiority, a minimal neural state
+theorem, or a new general theory of attention.
+
+\section{Limitations and
+reproducibility}\label{limitations-and-reproducibility}
+
+This paper is retrospective. Protocols described as frozen were saved
+before their respective recorded experiments; that does not make the
+present cross-study synthesis prospectively registered. Different TAN
+variants, normalization rules, tasks, readouts, and resource budgets
+cannot be pooled into a common success percentage. The clean-only
+control has three fixed historical seeds and conditional test
+resampling, not a population-level training study. The collision proof
+applies to its supported box and continuation, not arbitrary noise or
+all future inputs. Static addressing assumes available stored
+candidates. The adaptive comparison covers one calibration and one
+correlation change.
+
+The public archive is screened rather than a byte-identical image of
+every original machine file. It retains numeric data and records public
+text/path transformations. Historical hashes are distinct from current
+public-file hashes. Some reproduction guards require the pristine source
+or documented adaptation in a disposable copy. Download verification and
+source syntax checks are not experimental replication. No new model fit,
+simulation sweep, or classification experiment was run to write this
+manuscript. The supplemental clean-map update adds a new computational
+check of previously fixed certificates and trajectories.
+
+Readers can inspect the 680-file snapshot, per-claim ledger, archived
+protocols and saved outputs. The accompanying validation script checks
+source hashes, extracts selected headline numbers directly from saved
+CSV/JSON, and validates the original snapshot inventory without
+training. The separate clean-map checker additionally recomputes
+rational root signs and fixed trajectories, with its scope recorded in
+the supplement. The build script produces the PDF and LaTeX from the
+canonical Markdown manuscript. Its output should be interpreted as
+publication consistency checking. Independent human review, independent
+execution in a specified environment, wider task testing, and physical
+implementation remain future work.
+
+\section{Conclusion}\label{conclusion}
+
+TAN provides a concrete test bed for separating temporal sensitivity,
+static addressing, binding, and recoverable output. The positive
+static-address evidence, native response collision, modest
+training-composition gain, and reversed correlated-noise comparison
+jointly support a resource- and task-specific account. They do not
+support treating attention-like weighting as sufficient for reliable
+memory. The useful next step is to test a sharply specified mechanism
+and output contract, while preserving both the positive results and the
+limitations established here.
+
+\section{References}\label{references}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Vaswani, A., et al.~(2017). \emph{Attention Is All You Need}. Advances
+  in Neural Information Processing Systems 30.
+  \href{https://arxiv.org/abs/1706.03762}{Primary paper}.
+\item
+  Zaheer, M., et al.~(2017). \emph{Deep Sets}. Advances in Neural
+  Information Processing Systems 30.
+  \href{https://arxiv.org/abs/1703.06114}{Primary paper}.
+\item
+  Benda, J., Longtin, A., and Maler, L. (2005). Spike-frequency
+  adaptation separates transient communication signals from background
+  oscillations. \emph{Journal of Neuroscience}, 25(9), 2312--2321. DOI:
+  \href{https://doi.org/10.1523/JNEUROSCI.4795-04.2005}{10.1523/JNEUROSCI.4795-04.2005}.
+  \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC6726095/}{Primary full
+  text}.
+\end{enumerate}
+
+\section{Archived evidence
+references}\label{archived-evidence-references}
+
+The identifiers below refer to project artifacts rather than externally
+published, peer-reviewed papers. Exact paths, hashes, and scope are
+provided in \texttt{evidence\_ledger.json} and \texttt{EVIDENCE.md}
+beside this manuscript.
+
+\begin{itemize}
+\item
+  \textbf{E1.} P1A Rev2 condition summary; metric-address proposition;
+  v8 P1A evidence review and saved-ledger checks.
+\item
+  \textbf{E2.} v8 original-project reassessment report, collision
+  results, exact theory certificate and scope review.
+\item
+  \textbf{E3.} Local clean-training frozen protocol, report, results and
+  bundled stabilized-source implementation.
+\item
+  \textbf{E4.} v11 gate-mechanism report, metric summary and frozen
+  protocol.
+\item
+  \textbf{E5.} Native eight-stage experiment-series summary and final
+  timescale report.
+\item
+  \textbf{E6.} Interpolation-control report and subsequent
+  finite-precision binding report.
+\item
+  \textbf{E7.} Exploratory latest-value, range, moment, minimal and
+  write/hold/query package documentation.
+\item
+  \textbf{E8.} Separate clean-map archive: unchanged theory, frozen
+  specification and numerical results; newly implemented rational and
+  trajectory verification in \texttt{clean-map/}.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "finite_difference_parameter_checks": 704,
+  "native_fixture_checks": "quiet, strict threshold, reset, binary forward",
+  "meaning": "Central differences on a locally anchored differentiable graph validate the explicit surrogate chain rule. They are NOT derivatives of the hard spike network.",
+  "rows": [
+    {
+      "arm": "DEND",
+      "loss": "CE",
+      "max_surrogate_chain_rule_error": 2.0268557665570341e-10,
+      "max_hard_loss_minus_regularizer_error": 5.256142283485321e-11,
+      "gradient_norm": 1.5930021463042074,
+      "parameter_derivatives": 176
+    },
+    {
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 4.758621592990903e-11,
+      "max_hard_loss_minus_regularizer_error": 1.1345669750347701e-11,
+      "gradient_norm": 0.17693088541643487,
+      "parameter_derivatives": 176
+    },
+    {
+      "arm": "POINT",
+      "loss": "CE",
+      "max_surrogate_chain_rule_error": 2.3736503686322256e-10,
+      "max_hard_loss_minus_regularizer_error": 1.0828947491240083e-10,
+      "gradient_norm": 0.42269336464692053,
+      "parameter_derivatives": 176
+    },
+    {
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_surrogate_chain_rule_error": 6.505348214933958e-11,
+      "max_hard_loss_minus_regularizer_error": 2.5237042626193243e-11,
+      "gradient_norm": 0.3343863810801409,
+      "parameter_derivatives": 176
+    }
+  ]
+}

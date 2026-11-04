@@ -1,0 +1,330 @@
+{
+  "scope": "Source/table reads and compilation only; no model execution or new statistics.",
+  "repository": "Temporal-Attention-Neuron",
+  "source_files": {
+    "snapshot/code/experiments/statistical_validation.py": {
+      "bytes": 25213,
+      "sha256": "7717f747d968d1704d9d361786352e758f88385139f89668457abd66f1a097d0"
+    },
+    "snapshot/code/experiments/baseline_comparison.py": {
+      "bytes": 38101,
+      "sha256": "97c63c76982ac5366044e8644c9692fa27702be13222078627f1c59320fc8558"
+    },
+    "snapshot/code/experiments/ablation.py": {
+      "bytes": 36111,
+      "sha256": "49f5418d985c563671ad93760bfc09e878a6216ce478129769bd3d253d3c8edd"
+    },
+    "snapshot/data/experiment_results/stats_validation_metrics.csv": {
+      "bytes": 15788,
+      "sha256": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9"
+    },
+    "snapshot/results/tables/stats_validation_metrics.csv": {
+      "bytes": 15788,
+      "sha256": "9709f92bdfdafcc55fe7f2109dfa0e3e9f0ea8ba383bb8563a6de3ee17bb52e9"
+    },
+    "snapshot/data/experiment_results/stats_validation_summary.csv": {
+      "bytes": 1330,
+      "sha256": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0"
+    },
+    "snapshot/results/tables/stats_validation_summary.csv": {
+      "bytes": 1330,
+      "sha256": "c106904ab62bea991b6b2a355e57caac519ba21967408aa3a2564ab07af162c0"
+    },
+    "snapshot/data/experiment_results/baselines_metrics.csv": {
+      "bytes": 37055,
+      "sha256": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637"
+    },
+    "snapshot/results/tables/baselines_metrics.csv": {
+      "bytes": 37055,
+      "sha256": "08d59ca8ead123a7f868ee32e3a0b328004c89d70efea03cacc82d936a4f2637"
+    },
+    "snapshot/data/experiment_results/baselines_summary.csv": {
+      "bytes": 3766,
+      "sha256": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53"
+    },
+    "snapshot/results/tables/baselines_summary.csv": {
+      "bytes": 3766,
+      "sha256": "4151a6584782769917cbff53213889481ed63464247f30f8b7f5fde04a390a53"
+    },
+    "snapshot/data/experiment_results/ablation_metrics.csv": {
+      "bytes": 39137,
+      "sha256": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06"
+    },
+    "snapshot/results/tables/ablation_metrics.csv": {
+      "bytes": 39137,
+      "sha256": "dd97aed09d5b5b9254a3ade81963fac7961b1b7a409b1ef32018f02863fe1a06"
+    },
+    "snapshot/data/experiment_results/ablation_summary.csv": {
+      "bytes": 3766,
+      "sha256": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6"
+    },
+    "snapshot/results/tables/ablation_summary.csv": {
+      "bytes": 3766,
+      "sha256": "2d5729e4e2add8a4e6cedb94b0c8767b5bbabe612fadaac7f30e79774b2b2dc6"
+    }
+  },
+  "selected_source_nodes": [
+    {
+      "name": "LIFNeuron",
+      "start_line": 73,
+      "end_line": 86,
+      "exact_segment_sha256": "090ef4a455927c2d1a691ba858bfcf623091913d9f68342726d0e179deacb76f",
+      "ast_sha256": "b289bfdce128f58d0ad10fcaa9079e5763e1877917d679afcc42e735e7d953cf"
+    },
+    {
+      "name": "TANNeuron",
+      "start_line": 89,
+      "end_line": 132,
+      "exact_segment_sha256": "235f5ba769ecb85f19ae9565d02b9a2b726edabf5c97e35bf79593b734361005",
+      "ast_sha256": "f14998ab647926551e59bd08ab55996f5d212fd07ca9720fcb8f163b038d0488"
+    },
+    {
+      "name": "run_experiment_B",
+      "start_line": 174,
+      "end_line": 201,
+      "exact_segment_sha256": "4c8889d558729ff8331eed6981db1c44fc8bef271bd0e5ffbd3051d42a746b8a",
+      "ast_sha256": "a302304a1eeca1bfab8feba8df4c3936583b1c00a5ec1ef6b3494a44536d5b1f"
+    }
+  ],
+  "extracted_path": "tan_audit/noise_preservation_v9/taskb_original_extracted.py",
+  "extracted_sha256": "c014426b5d8321fd7bde4186660fb4132fe2f5f90782232b10e404bd330e0d9c",
+  "runtime_dependencies_for_selected_nodes": [
+    "numpy as np",
+    "Python builtins"
+  ],
+  "omitted_top_level_side_effects": [
+    "font configuration",
+    "outputs/stage2_part1 directory creation",
+    "logging FileHandler"
+  ],
+  "table_audits": {
+    "stats_validation_metrics": {
+      "duplicate_bytes_equal": true,
+      "task_column": "exp",
+      "n_rows": 400,
+      "n_task_B_rows": 100,
+      "task_B_summary_rows": null,
+      "task_B_seed_model_coverage_exact_50_by_2": true
+    },
+    "stats_validation_summary": {
+      "duplicate_bytes_equal": true,
+      "task_column": "exp",
+      "n_rows": 4,
+      "n_task_B_rows": 1,
+      "task_B_summary_rows": [
+        {
+          "exp": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate",
+          "better": "lower",
+          "LIF_mean": "0.5065",
+          "LIF_std": "0.025659664209551524",
+          "LIF_CI_lo": "0.49950000000000006",
+          "LIF_CI_hi": "0.5139999999999999",
+          "TAN_mean": "0.2645",
+          "TAN_std": "0.033915410981452315",
+          "TAN_CI_lo": "0.25549999999999995",
+          "TAN_CI_hi": "0.274",
+          "t_stat": "-40.23650813306106",
+          "t_p": "7.225941479519349e-60",
+          "wilcoxon_p": "6.856641447475644e-18",
+          "cohens_d": "-8.047301626612212",
+          "d_interp": "very large",
+          "sig": "***",
+          "test_note": "Welch's two-sample t-test",
+          "pass_alpha_001": "True",
+          "pass_large_d": "True"
+        }
+      ]
+    },
+    "baselines_metrics": {
+      "duplicate_bytes_equal": true,
+      "task_column": "task",
+      "n_rows": 1000,
+      "n_task_B_rows": 250,
+      "task_B_summary_rows": null
+    },
+    "baselines_summary": {
+      "duplicate_bytes_equal": true,
+      "task_column": "task",
+      "n_rows": 16,
+      "n_task_B_rows": 4,
+      "task_B_summary_rows": [
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "baseline": "LIF",
+          "baseline_mean": "0.5065",
+          "baseline_std": "0.025659664209551524",
+          "baseline_CI_lo": "0.49950000000000006",
+          "baseline_CI_hi": "0.5135000000000001",
+          "TAN_mean": "0.2645",
+          "TAN_std": "0.033915410981452315",
+          "TAN_CI_lo": "0.255",
+          "TAN_CI_hi": "0.274",
+          "t_stat": "-40.23650813306106",
+          "t_p": "7.225941479519349e-60",
+          "wilcoxon_p": "6.856641447475644e-18",
+          "cohens_d": "-8.047301626612212",
+          "d_interp": "very large",
+          "sig": "***",
+          "verdict": "WIN"
+        },
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "baseline": "AdaptiveLIF",
+          "baseline_mean": "0.31999999999999995",
+          "baseline_std": "0.015152288168283163",
+          "baseline_CI_lo": "0.316",
+          "baseline_CI_hi": "0.324",
+          "TAN_mean": "0.2645",
+          "TAN_std": "0.033915410981452315",
+          "TAN_CI_lo": "0.255",
+          "TAN_CI_hi": "0.274",
+          "t_stat": "-10.564830363001644",
+          "t_p": "5.701876639523317e-16",
+          "wilcoxon_p": "1.8508119437323456e-13",
+          "cohens_d": "-2.1129660726003285",
+          "d_interp": "very large",
+          "sig": "***",
+          "verdict": "WIN"
+        },
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "baseline": "RNN",
+          "baseline_mean": "0.24150000000000005",
+          "baseline_std": "0.06954847083810231",
+          "baseline_CI_lo": "0.2225",
+          "baseline_CI_hi": "0.261",
+          "TAN_mean": "0.2645",
+          "TAN_std": "0.033915410981452315",
+          "TAN_CI_lo": "0.255",
+          "TAN_CI_hi": "0.274",
+          "t_stat": "2.101838422668683",
+          "t_p": "0.039113364764923046",
+          "wilcoxon_p": "0.05530378168750094",
+          "cohens_d": "0.4203676845337367",
+          "d_interp": "small",
+          "sig": "ns",
+          "verdict": "TIE"
+        },
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "baseline": "GRU",
+          "baseline_mean": "0.11900000000000001",
+          "baseline_std": "0.05793205027426175",
+          "baseline_CI_lo": "0.1035",
+          "baseline_CI_hi": "0.1355",
+          "TAN_mean": "0.2645",
+          "TAN_std": "0.033915410981452315",
+          "TAN_CI_lo": "0.255",
+          "TAN_CI_hi": "0.274",
+          "t_stat": "15.326190101541469",
+          "t_p": "2.1798001758144635e-25",
+          "wilcoxon_p": "3.7913091067288977e-16",
+          "cohens_d": "3.0652380203082936",
+          "d_interp": "very large",
+          "sig": "***",
+          "verdict": "LOSS"
+        }
+      ]
+    },
+    "ablation_metrics": {
+      "duplicate_bytes_equal": true,
+      "task_column": "task",
+      "n_rows": 800,
+      "n_task_B_rows": 200,
+      "task_B_summary_rows": null
+    },
+    "ablation_summary": {
+      "duplicate_bytes_equal": true,
+      "task_column": "task",
+      "n_rows": 12,
+      "n_task_B_rows": 3,
+      "task_B_summary_rows": [
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "ablation": "TAN-no-surprise",
+          "module_removed": "surprise",
+          "full_mean": "0.14150000000000001",
+          "full_std": "0.0297137705999307",
+          "full_CI_lo": "0.1335",
+          "full_CI_hi": "0.14950000000000002",
+          "ablation_mean": "0.9714999999999999",
+          "ablation_std": "0.023151012672345504",
+          "ablation_CI_lo": "0.965",
+          "ablation_CI_hi": "0.9775125",
+          "t_stat": "-155.80831675933476",
+          "t_p": "9.775292888852377e-114",
+          "wilcoxon_p": "6.856641447475644e-18",
+          "cohens_d": "-31.16166335186695",
+          "d_interp": "very large",
+          "sig": "***",
+          "pct_degradation": "586.572438162544",
+          "verdict": "BROKEN",
+          "predicted": "broken",
+          "prediction_match": "True"
+        },
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "ablation": "TAN-no-attention",
+          "module_removed": "attention",
+          "full_mean": "0.14150000000000001",
+          "full_std": "0.0297137705999307",
+          "full_CI_lo": "0.1335",
+          "full_CI_hi": "0.14950000000000002",
+          "ablation_mean": "0.11899999999999998",
+          "ablation_std": "0.02398979374820952",
+          "ablation_CI_lo": "0.1125",
+          "ablation_CI_hi": "0.1255",
+          "t_stat": "4.16606899100964",
+          "t_p": "6.887484308900496e-05",
+          "wilcoxon_p": "0.0001866362633237576",
+          "cohens_d": "0.8332137982019279",
+          "d_interp": "large",
+          "sig": "***",
+          "pct_degradation": "-15.901060070671399",
+          "verdict": "IMPROVED",
+          "predicted": "degraded",
+          "prediction_match": "False"
+        },
+        {
+          "task": "B",
+          "metric": "false_spike_rate",
+          "metric_label": "False Spike Rate (lower=better)",
+          "ablation": "TAN-no-gate",
+          "module_removed": "gate",
+          "full_mean": "0.14150000000000001",
+          "full_std": "0.0297137705999307",
+          "full_CI_lo": "0.1335",
+          "full_CI_hi": "0.14950000000000002",
+          "ablation_mean": "0.5010000000000001",
+          "ablation_std": "0.010050890913907358",
+          "ablation_CI_lo": "0.49849999999999994",
+          "ablation_CI_hi": "0.5035000000000001",
+          "t_stat": "-81.04049983452799",
+          "t_p": "4.5896495625091896e-63",
+          "wilcoxon_p": "6.856641447475644e-18",
+          "cohens_d": "-16.208099966905596",
+          "d_interp": "very large",
+          "sig": "***",
+          "pct_degradation": "254.0636042402827",
+          "verdict": "BROKEN",
+          "predicted": "broken",
+          "prediction_match": "True"
+        }
+      ]
+    }
+  }
+}

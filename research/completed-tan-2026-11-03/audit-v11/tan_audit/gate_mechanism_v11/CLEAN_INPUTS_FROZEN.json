@@ -1,0 +1,63 @@
+{
+  "time_utc": "2026-11-02T22:49:15.436535+00:00",
+  "models_evaluated_yet": false,
+  "input_file": "clean_inputs.npz",
+  "inputs_sha256": "ddfc0bf0f7059d5d37e55c4de4ce969a2b6995bf6e4fbf38f2183d3b06f89b81",
+  "array_manifest": {
+    "noise": {
+      "shape": [
+        1,
+        1,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "4b48f21a4b7a02bfbec19ef880a967a02334a3cdcef8ae83de2ef327ba8bc5dd"
+    },
+    "base": {
+      "shape": [
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "waveforms": {
+      "shape": [
+        1,
+        1,
+        2,
+        60
+      ],
+      "dtype": "float64",
+      "raw_c_order_sha256": "dfd09ede02fda992320ac35f8edaaad018c3d4a75598bebcfbbd7365423cedea"
+    },
+    "history_ids": {
+      "shape": [
+        1
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    "regimes": {
+      "shape": [
+        1
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "f6abdc2408d72a0de1d9ec4149d2c921a7530722066ae40225449085886e32cd"
+    },
+    "conditions": {
+      "shape": [
+        2
+      ],
+      "dtype": "<U5",
+      "raw_c_order_sha256": "97a5570dba6f367200a7456895c316d4a333e9bc8de5790b533cb51efbac6db0"
+    },
+    "S": {
+      "shape": [
+        2
+      ],
+      "dtype": "int64",
+      "raw_c_order_sha256": "4cbbd8ca5215b8d161aec181a74b694f4e24b001d5b081dc0030ed797a8973e0"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "study": "V8",
+  "scientific_execution": "complete",
+  "verification": "PASS",
+  "next_research_action": "Pause after final report and local delivery; no autonomous extra experiments or new stages. Await future user instruction.",
+  "local_branch": "research/dendritic-population-v8",
+  "predata_commit": "cd5cd4ef1cc65fd098b3a73d36d68e7a49307d17",
+  "checkpoint_commit": "3ec9ce117ad3ce1a20d6e5ef4f2395916f120821",
+  "final_commit_locator": "Commit containing this file and MANIFEST.json; see git log",
+  "published": false,
+  "n_paired_blocks": 104,
+  "training_runs": 416,
+  "primary_interaction": {
+    "mean": -0.14105694110576922,
+    "student_t95": [
+      -0.22603812072468885,
+      -0.05607576148684959
+    ],
+    "bootstrap_sensitivity95": [
+      -0.22562490609975963,
+      -0.058424260066105814
+    ]
+  },
+  "interpretation": "Negative interaction direction recurs in fresh data, with smaller point estimate than V7; V7 opposite-sign simple-effect point estimates do not recur. POINT-only, narrow task/budget, internal new-data replication, approximate coverage. No structural or biological superiority claim."
+}

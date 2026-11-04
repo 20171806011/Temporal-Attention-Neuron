@@ -1,0 +1,144 @@
+{
+  "time_utc": "2026-11-02T22:49:31.141313+00:00",
+  "protocol_sha256": "1d4a98c9c4b26583b3ab7d388659c4144c585756deebb29214137fdab600d362",
+  "gain_kappa": 0.840938900477691,
+  "n_training_histories": 512,
+  "n_test_innovation_histories": 1024,
+  "test_seed": 2026110251,
+  "training_seed": 2026110250,
+  "bootstrap_seed": 2026110252,
+  "bootstrap_replicates": 2000,
+  "regime_order": [
+    "iid",
+    "ar09"
+  ],
+  "condition_order": [
+    "step",
+    "catch"
+  ],
+  "S": [
+    1,
+    0
+  ],
+  "arms": [
+    "TAN",
+    "ADAPT"
+  ],
+  "model_parameters": {
+    "ADAPT": {
+      "EMA_old_weight": 0.8,
+      "EMA_input_weight": 0.2,
+      "signed_contrast_scale": 1.125,
+      "rectifier": "absolute value",
+      "membrane_leak": 0.8,
+      "threshold": 1.0,
+      "strict_greater_than": true,
+      "initial_reference": 0.0,
+      "initial_membrane": 0.0
+    }
+  },
+  "calibration": {
+    "time_utc": "2026-11-02T22:49:15.320105+00:00",
+    "training_seed": 2026110250,
+    "n_training_histories": 512,
+    "balanced_classes": true,
+    "current_samples_per_model": 61440,
+    "gain_kappa": 0.840938900477691,
+    "numerator_TAN_current_L1": 12494.317078649212,
+    "denominator_unscaled_ADAPT_current_L1": 14857.580106654454,
+    "calibrated_ADAPT_current_L1": 12494.317078649212,
+    "raw_budget_residual": 0.0,
+    "raw_budget_residual_per_current_sample": 0.0,
+    "sum_convention": "math.fsum over C-order float64 entries",
+    "gain_finite_positive": true,
+    "gain_fit_uses_spikes_accuracy_latency_or_test": false,
+    "test_inputs_generated_yet": false,
+    "native_trace_checks": {
+      "all_spikes_exact": true,
+      "max_membrane_abs_error": 0.0,
+      "max_history_abs_error": 0.0,
+      "n_trajectories": 1024,
+      "n_updates": 61440
+    },
+    "training_inputs_sha256": "d3a7a3f821e7687f876df0c0857bb383eccf206fb7836767296d34bf19e7131f",
+    "training_trajectories_sha256": "382f6ae022a5fd9d20e1eec2959acf7d32cb1aa77b09baf41c40346808cd31a6"
+  },
+  "no_exclusions": true,
+  "test_native_trajectory_checks": {
+    "all_spikes_exact": true,
+    "max_membrane_abs_error": 0.0,
+    "max_history_abs_error": 0.0,
+    "n_trajectories": 4096,
+    "n_updates": 245760
+  },
+  "clean_native_trajectory_checks": {
+    "all_spikes_exact": true,
+    "max_membrane_abs_error": 0.0,
+    "max_history_abs_error": 0.0,
+    "n_trajectories": 2,
+    "n_updates": 120
+  },
+  "clean_algebra_checks": {
+    "boxcar_clean_surprise_max_abs_error": 8.326672684688674e-17,
+    "ADAPT_clean_contrast_max_abs_error": 6.661338147750939e-16,
+    "clean_native_v9_max_abs_error": 0.0,
+    "first_signed_transient_target": 1.35,
+    "infinite_signed_transient_area_target": 6.75,
+    "ADAPT_finite_signed_transient_sum": 6.749705996034959,
+    "ADAPT_finite_signed_transient_formula": 6.74970599603498,
+    "stationary_unclipped_theory": {
+      "white_noise_variance_factor_TAN": 0.9000000000000001,
+      "white_noise_variance_factor_ADAPT": 0.9,
+      "ar09_variance_factor_TAN": 0.42497807238,
+      "ar09_variance_factor_ADAPT": 0.32142857142857145
+    },
+    "theory_scope": "Linear contrast before clipping/rectification/context; not empirical spike predictions."
+  },
+  "test_ledger_rows": 8192,
+  "paired_history_rows": 4096,
+  "fixed_metric_count": 212,
+  "primary_contrasts": {
+    "Delta_AR": {
+      "estimate": -0.01025390625,
+      "interval_level": 0.975,
+      "percentile_interval": [
+        -0.02001953125,
+        -0.00048828125
+      ],
+      "defined_bootstrap_replicates": 2000,
+      "undefined_bootstrap_replicates": 0
+    },
+    "Interaction": {
+      "estimate": -0.07666015625,
+      "interval_level": 0.975,
+      "percentile_interval": [
+        -0.0908203125,
+        -0.06298828125
+      ],
+      "defined_bootstrap_replicates": 2000,
+      "undefined_bootstrap_replicates": 0
+    }
+  },
+  "both_primary_lower_bounds_above_zero": false,
+  "primary_direction_disfavored": {
+    "Delta_AR": true,
+    "Interaction": true
+  },
+  "metric_summary_file": "metric_summary.json",
+  "all_per_history_metrics_file": "history_metric_samples.npz",
+  "nominal_signal_sum": 67.5,
+  "nominal_signal_squared_sum": 101.25,
+  "expected_noise_squared_sum": 9.6,
+  "deterministic_clean_control_count": 4,
+  "onset_known_externally": true,
+  "latency_miss_penalty": 5,
+  "inference_conditional_on_frozen_calibration": true,
+  "interpretation_limits": [
+    "New nuisance distribution; no unique gate-causal identification.",
+    "Calibration matches iid training total current L1 only, not spike counts or physical energy.",
+    "Primary percentile intervals are a reporting rule, not exact simultaneous coverage.",
+    "Degenerate empirical intervals do not establish population perfection.",
+    "Undefined conditional latency replicates, if any, remain recorded; no histories removed."
+  ],
+  "round_status": "Experiment complete; separate computational review recorded."
+}

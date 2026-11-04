@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "native_v2_parity": true,
+  "sampled_training_updates": 72,
+  "max_sampled_gradient_residual": 0,
+  "selected_parameter_derivative_checks": 1056,
+  "rows": [
+    {
+      "seed": 0,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_chain_rule_residual": 9.564569646562687e-12,
+      "parameters": 176
+    },
+    {
+      "seed": 0,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_chain_rule_residual": 1.0200209465896645e-13,
+      "parameters": 176
+    },
+    {
+      "seed": 1,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_chain_rule_residual": 1.8888405109401204e-11,
+      "parameters": 176
+    },
+    {
+      "seed": 1,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_chain_rule_residual": 1.1127203325411728e-11,
+      "parameters": 176
+    },
+    {
+      "seed": 2,
+      "arm": "DEND",
+      "loss": "RATE",
+      "max_chain_rule_residual": 8.467654962623916e-12,
+      "parameters": 176
+    },
+    {
+      "seed": 2,
+      "arm": "POINT",
+      "loss": "RATE",
+      "max_chain_rule_residual": 7.018151467960698e-12,
+      "parameters": 176
+    }
+  ],
+  "analytic_loss_controls": [
+    {
+      "pattern": "silence",
+      "counts": [
+        0.0,
+        0.0
+      ],
+      "CE": 0.6931471805599453,
+      "RATE": 0.2890625
+    },
+    {
+      "pattern": "both_saturated",
+      "counts": [
+        8.0,
+        8.0
+      ],
+      "CE": 0.6931471805599453,
+      "RATE": 0.4140625
+    },
+    {
+      "pattern": "correct_target",
+      "counts": [
+        6.0,
+        1.0
+      ],
+      "CE": 0.07888973429254952,
+      "RATE": 0.0
+    }
+  ],
+  "seconds": 3.125784416000897,
+  "limits": "Local surrogate chain rule, not true hard-spike derivative. Sampled gradient recomputation uses frozen analytic code; independent native recurrence and Adam replay are in verify.py. No post-test training or tuning."
+}

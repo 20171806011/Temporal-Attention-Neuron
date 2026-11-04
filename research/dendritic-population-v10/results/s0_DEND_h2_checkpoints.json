@@ -1,0 +1,1010 @@
+[
+  {
+    "updates": 0,
+    "accuracy": 0.5625,
+    "balanced_accuracy": 0.5,
+    "coverage": 1.0,
+    "abstentions": 0,
+    "abstention_rate": 0.0,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      1.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        72,
+        0,
+        0
+      ],
+      [
+        56,
+        0,
+        0
+      ]
+    ],
+    "mean_signed_count_margin": -0.3515625,
+    "median_signed_count_margin": 1.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      17,
+      17,
+      14,
+      8,
+      0,
+      0,
+      0,
+      10,
+      22,
+      12,
+      12,
+      12,
+      4,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 13.9765625,
+      "output": 10.5
+    },
+    "total_spike_events_mean": 24.4765625,
+    "state_l1_change_mean": 20.620243895196822,
+    "dense_event_delivery_proxy_mean": 94.359375,
+    "correct_settled_fraction_by_step": [
+      0.515625,
+      0.5546875,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625
+    ],
+    "unique_settled_fraction_by_step": [
+      0.953125,
+      0.9921875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "capped_correct_settled_latency_mean": 4.5546875,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.2911783854166667,
+    "output_event_rate": 0.21875,
+    "readout_hidden_event_rate": 0.31298828125,
+    "readout_output_event_rate": 0.23876953125,
+    "output_candidate_margin_quantiles": [
+      -1.357719343494412,
+      -1.350273363746696,
+      -0.4,
+      0.44560472445084287,
+      0.6558636505736706
+    ]
+  },
+  {
+    "updates": 1,
+    "accuracy": 0.5625,
+    "balanced_accuracy": 0.5,
+    "coverage": 1.0,
+    "abstentions": 0,
+    "abstention_rate": 0.0,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      1.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        72,
+        0,
+        0
+      ],
+      [
+        56,
+        0,
+        0
+      ]
+    ],
+    "mean_signed_count_margin": -0.2421875,
+    "median_signed_count_margin": 1.5,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      21,
+      19,
+      11,
+      5,
+      0,
+      0,
+      0,
+      8,
+      12,
+      20,
+      15,
+      8,
+      6,
+      3,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 15.2578125,
+      "output": 11.078125
+    },
+    "total_spike_events_mean": 26.3359375,
+    "state_l1_change_mean": 22.111266155352066,
+    "dense_event_delivery_proxy_mean": 102.625,
+    "correct_settled_fraction_by_step": [
+      0.453125,
+      0.484375,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625
+    ],
+    "unique_settled_fraction_by_step": [
+      0.890625,
+      0.921875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "capped_correct_settled_latency_mean": 4.6875,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.31787109375,
+    "output_event_rate": 0.23079427083333334,
+    "readout_hidden_event_rate": 0.36962890625,
+    "readout_output_event_rate": 0.25830078125,
+    "output_candidate_margin_quantiles": [
+      -1.3002001491303234,
+      -1.2926400265078013,
+      -0.3900000026462611,
+      0.4894071382298897,
+      0.7381923079809898
+    ]
+  },
+  {
+    "updates": 2,
+    "accuracy": 0.5625,
+    "balanced_accuracy": 0.5,
+    "coverage": 1.0,
+    "abstentions": 0,
+    "abstention_rate": 0.0,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      1.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        72,
+        0,
+        0
+      ],
+      [
+        56,
+        0,
+        0
+      ]
+    ],
+    "mean_signed_count_margin": -0.0546875,
+    "median_signed_count_margin": 2.0,
+    "signed_count_margin_histogram": [
+      0,
+      1,
+      26,
+      17,
+      10,
+      2,
+      0,
+      0,
+      0,
+      1,
+      8,
+      28,
+      12,
+      10,
+      8,
+      0,
+      5
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 16.765625,
+      "output": 11.7890625
+    },
+    "total_spike_events_mean": 28.5546875,
+    "state_l1_change_mean": 23.391233778642356,
+    "dense_event_delivery_proxy_mean": 112.3828125,
+    "correct_settled_fraction_by_step": [
+      0.5,
+      0.5546875,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625
+    ],
+    "unique_settled_fraction_by_step": [
+      0.9375,
+      0.9921875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "capped_correct_settled_latency_mean": 4.5703125,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.3492838541666667,
+    "output_event_rate": 0.24560546875,
+    "readout_hidden_event_rate": 0.4228515625,
+    "readout_output_event_rate": 0.28369140625,
+    "output_candidate_margin_quantiles": [
+      -1.244019076987712,
+      -1.2322813523426155,
+      -0.3802455981283473,
+      0.5769222878825995,
+      0.7548523623388055
+    ]
+  },
+  {
+    "updates": 5,
+    "accuracy": 0.5625,
+    "balanced_accuracy": 0.5,
+    "coverage": 1.0,
+    "abstentions": 0,
+    "abstention_rate": 0.0,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      1.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        72,
+        0,
+        0
+      ],
+      [
+        56,
+        0,
+        0
+      ]
+    ],
+    "mean_signed_count_margin": 0.265625,
+    "median_signed_count_margin": 3.0,
+    "signed_count_margin_histogram": [
+      0,
+      1,
+      30,
+      19,
+      6,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      11,
+      27,
+      17,
+      8,
+      0,
+      8
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 20.6328125,
+      "output": 13.28125
+    },
+    "total_spike_events_mean": 33.9140625,
+    "state_l1_change_mean": 25.575042941353317,
+    "dense_event_delivery_proxy_mean": 137.078125,
+    "correct_settled_fraction_by_step": [
+      0.46875,
+      0.5546875,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625,
+      0.5625
+    ],
+    "unique_settled_fraction_by_step": [
+      0.90625,
+      0.9921875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "capped_correct_settled_latency_mean": 4.6015625,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.4298502604166667,
+    "output_event_rate": 0.2766927083333333,
+    "readout_hidden_event_rate": 0.5556640625,
+    "readout_output_event_rate": 0.3154296875,
+    "output_candidate_margin_quantiles": [
+      -1.0730756217679935,
+      -1.0605693868025838,
+      -0.3413745308116885,
+      0.6137327260486751,
+      0.8317904421690696
+    ]
+  },
+  {
+    "updates": 10,
+    "accuracy": 0.5625,
+    "balanced_accuracy": 0.5,
+    "coverage": 1.0,
+    "abstentions": 0,
+    "abstention_rate": 0.0,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      1.0,
+      0.0
+    ],
+    "confusion": [
+      [
+        72,
+        0,
+        0
+      ],
+      [
+        56,
+        0,
+        0
+      ]
+    ],
+    "mean_signed_count_margin": 0.1328125,
+    "median_signed_count_margin": 3.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      2,
+      32,
+      12,
+      10,
+      0,
+      0,
+      0,
+      1,
+      3,
+      42,
+      11,
+      10,
+      0,
+      0,
+      5
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 22.6015625,
+      "output": 15.4921875
+    },
+    "total_spike_events_mean": 38.09375,
+    "state_l1_change_mean": 27.36338372025701,
+    "dense_event_delivery_proxy_mean": 151.1015625,
+    "correct_settled_fraction_by_step": [
+      0.5234375,
+      0.5390625,
+      0.5390625,
+      0.5390625,
+      0.5546875,
+      0.5625,
+      0.5625,
+      0.5625
+    ],
+    "unique_settled_fraction_by_step": [
+      0.9609375,
+      0.9765625,
+      0.9765625,
+      0.9765625,
+      0.9921875,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "capped_correct_settled_latency_mean": 4.6171875,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.4708658854166667,
+    "output_event_rate": 0.32275390625,
+    "readout_hidden_event_rate": 0.60888671875,
+    "readout_output_event_rate": 0.37353515625,
+    "output_candidate_margin_quantiles": [
+      -0.7777979747019953,
+      -0.7570116188523982,
+      -0.1826207766094367,
+      0.5902808185035202,
+      0.7632914095508383
+    ]
+  },
+  {
+    "updates": 25,
+    "accuracy": 0.2421875,
+    "balanced_accuracy": 0.2569444444444444,
+    "coverage": 0.515625,
+    "abstentions": 62,
+    "abstention_rate": 0.484375,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.484375,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.1388888888888889,
+      0.375
+    ],
+    "confusion": [
+      [
+        10,
+        29,
+        33
+      ],
+      [
+        6,
+        21,
+        29
+      ]
+    ],
+    "mean_signed_count_margin": 0.171875,
+    "median_signed_count_margin": 0.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      33,
+      62,
+      22,
+      1,
+      0,
+      5,
+      3,
+      0,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 30.3125,
+      "output": 21.5078125
+    },
+    "total_spike_events_mean": 51.8203125,
+    "state_l1_change_mean": 31.86844945366153,
+    "dense_event_delivery_proxy_mean": 203.3828125,
+    "correct_settled_fraction_by_step": [
+      0.03125,
+      0.0625,
+      0.1015625,
+      0.1015625,
+      0.125,
+      0.1328125,
+      0.203125,
+      0.2421875
+    ],
+    "unique_settled_fraction_by_step": [
+      0.109375,
+      0.140625,
+      0.2578125,
+      0.2578125,
+      0.3125,
+      0.3203125,
+      0.3984375,
+      0.515625
+    ],
+    "capped_correct_settled_latency_mean": 8.0,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      0.25,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.375,
+      1.0,
+      0.0,
+      0.0,
+      0.625,
+      0.5,
+      0.125,
+      0.0,
+      0.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.6315104166666666,
+    "output_event_rate": 0.4480794270833333,
+    "readout_hidden_event_rate": 0.67578125,
+    "readout_output_event_rate": 0.4873046875,
+    "output_candidate_margin_quantiles": [
+      -0.3993292803536568,
+      -0.21842573827599926,
+      -0.010656832325612431,
+      0.5266672694578052,
+      0.6456323950361955
+    ]
+  },
+  {
+    "updates": 50,
+    "accuracy": 0.7421875,
+    "balanced_accuracy": 0.7390873015873016,
+    "coverage": 0.8828125,
+    "abstentions": 15,
+    "abstention_rate": 0.1171875,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.1171875,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.7638888888888888,
+      0.7142857142857143
+    ],
+    "confusion": [
+      [
+        55,
+        14,
+        3
+      ],
+      [
+        4,
+        40,
+        12
+      ]
+    ],
+    "mean_signed_count_margin": 1.8515625,
+    "median_signed_count_margin": 2.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      5,
+      12,
+      15,
+      29,
+      20,
+      25,
+      2,
+      4,
+      15,
+      0,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 31.1484375,
+      "output": 18.4609375
+    },
+    "total_spike_events_mean": 49.609375,
+    "state_l1_change_mean": 28.580498598129587,
+    "dense_event_delivery_proxy_mean": 205.3515625,
+    "correct_settled_fraction_by_step": [
+      0.0859375,
+      0.21875,
+      0.2734375,
+      0.390625,
+      0.4921875,
+      0.6015625,
+      0.640625,
+      0.7421875
+    ],
+    "unique_settled_fraction_by_step": [
+      0.0859375,
+      0.234375,
+      0.296875,
+      0.4453125,
+      0.5625,
+      0.6796875,
+      0.71875,
+      0.8828125
+    ],
+    "capped_correct_settled_latency_mean": 5.5546875,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.875,
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      0.875,
+      0.25,
+      0.5,
+      0.5,
+      0.875,
+      1.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.64892578125,
+    "output_event_rate": 0.3846028645833333,
+    "readout_hidden_event_rate": 0.7529296875,
+    "readout_output_event_rate": 0.43115234375,
+    "output_candidate_margin_quantiles": [
+      -0.47159359847259996,
+      -0.3472798121985343,
+      -0.03320999597364149,
+      0.24625660392558701,
+      0.32798562332224945
+    ]
+  },
+  {
+    "updates": 100,
+    "accuracy": 0.875,
+    "balanced_accuracy": 0.8690476190476191,
+    "coverage": 0.9140625,
+    "abstentions": 11,
+    "abstention_rate": 0.0859375,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0859375,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.9166666666666666,
+      0.8214285714285714
+    ],
+    "confusion": [
+      [
+        66,
+        3,
+        3
+      ],
+      [
+        2,
+        46,
+        8
+      ]
+    ],
+    "mean_signed_count_margin": 3.9140625,
+    "median_signed_count_margin": 4.0,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      11,
+      7,
+      16,
+      7,
+      26,
+      17,
+      12,
+      27,
+      0
+    ],
+    "failed": true,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 33.140625,
+      "output": 21.421875
+    },
+    "total_spike_events_mean": 54.5625,
+    "state_l1_change_mean": 24.193413363237614,
+    "dense_event_delivery_proxy_mean": 220.265625,
+    "correct_settled_fraction_by_step": [
+      0.40625,
+      0.5546875,
+      0.6953125,
+      0.7109375,
+      0.8046875,
+      0.8515625,
+      0.875,
+      0.875
+    ],
+    "unique_settled_fraction_by_step": [
+      0.421875,
+      0.578125,
+      0.71875,
+      0.734375,
+      0.828125,
+      0.8828125,
+      0.90625,
+      0.9140625
+    ],
+    "capped_correct_settled_latency_mean": 3.2265625,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.375,
+      1.0,
+      0.375,
+      1.0,
+      0.875,
+      1.0,
+      1.0,
+      0.875,
+      0.75,
+      0.75,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.6904296875,
+    "output_event_rate": 0.4462890625,
+    "readout_hidden_event_rate": 0.822265625,
+    "readout_output_event_rate": 0.49462890625,
+    "output_candidate_margin_quantiles": [
+      -0.48328415900841487,
+      -0.34369358399293237,
+      -0.004043441677090254,
+      0.2135652566779367,
+      0.3072470844943589
+    ]
+  },
+  {
+    "updates": 200,
+    "accuracy": 0.96875,
+    "balanced_accuracy": 0.9682539682539683,
+    "coverage": 0.9765625,
+    "abstentions": 3,
+    "abstention_rate": 0.0234375,
+    "silent_fraction": 0.0,
+    "nonsilent_tie_fraction": 0.0234375,
+    "both_saturated_fraction": 0.0,
+    "class_recall": [
+      0.9722222222222222,
+      0.9642857142857143
+    ],
+    "confusion": [
+      [
+        70,
+        0,
+        2
+      ],
+      [
+        1,
+        54,
+        1
+      ]
+    ],
+    "mean_signed_count_margin": 5.1015625,
+    "median_signed_count_margin": 5.5,
+    "signed_count_margin_histogram": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      3,
+      0,
+      17,
+      4,
+      30,
+      9,
+      8,
+      51,
+      5
+    ],
+    "failed": false,
+    "fully_silent": false,
+    "fully_abstaining": false,
+    "spike_events_mean": {
+      "branch": 0.0,
+      "hidden": 32.6015625,
+      "output": 21.3203125
+    },
+    "total_spike_events_mean": 53.921875,
+    "state_l1_change_mean": 22.3372361185497,
+    "dense_event_delivery_proxy_mean": 216.9296875,
+    "correct_settled_fraction_by_step": [
+      0.59375,
+      0.71875,
+      0.8125,
+      0.8203125,
+      0.9375,
+      0.9375,
+      0.96875,
+      0.96875
+    ],
+    "unique_settled_fraction_by_step": [
+      0.59375,
+      0.71875,
+      0.8125,
+      0.8203125,
+      0.9375,
+      0.9453125,
+      0.9765625,
+      0.9765625
+    ],
+    "capped_correct_settled_latency_mean": 2.2421875,
+    "latency_failure_cap": 9,
+    "latency_scope": "Retrospective prefix-count settling within readout steps1..8; wrong/abstaining episodes receive9. No online stopping, no label-conditioned dynamics. Activity is not energy.",
+    "pattern_recall": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.875,
+      1.0,
+      0.875,
+      1.0,
+      1.0,
+      0.875,
+      1.0,
+      0.875,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "branch_event_rate": 0.0,
+    "hidden_event_rate": 0.67919921875,
+    "output_event_rate": 0.4441731770833333,
+    "readout_hidden_event_rate": 0.81298828125,
+    "readout_output_event_rate": 0.50244140625,
+    "output_candidate_margin_quantiles": [
+      -0.5588041415940871,
+      -0.4367136919813158,
+      0.0005437491769161307,
+      0.12232842414835243,
+      0.31733961479823325
+    ]
+  }
+]

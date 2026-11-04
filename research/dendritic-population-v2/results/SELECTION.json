@@ -1,0 +1,77 @@
+{
+  "selected": [
+    {
+      "seed": 0,
+      "arm": "DEND",
+      "lr": 0.03,
+      "file": "candidate_0_DEND_0.03.npy",
+      "sha256": "4f9f1780e5756190a2752081bb97a9763a12bbf9b0dbffc4497dca80c756716a",
+      "validation_accuracy": 0.0,
+      "validation_objective": 0.6931621616542667,
+      "seconds": 0.4302485580010398,
+      "parameter_change": 1.8319643461655883
+    },
+    {
+      "seed": 0,
+      "arm": "POINT",
+      "lr": 0.03,
+      "file": "candidate_0_POINT_0.03.npy",
+      "sha256": "cd3904a22b90c754bc167b28bb87eceda99c05b3e49001fc6ef01d03b7426313",
+      "validation_accuracy": 0.0,
+      "validation_objective": 0.693160293176119,
+      "seconds": 0.4234972750000452,
+      "parameter_change": 0.14575890687739781
+    },
+    {
+      "seed": 1,
+      "arm": "DEND",
+      "lr": 0.03,
+      "file": "candidate_1_DEND_0.03.npy",
+      "sha256": "40647ebba7703f89c1142d176321be60d39600849d1ff4ec66c80520eecd2cfa",
+      "validation_accuracy": 0.0,
+      "validation_objective": 0.6931603099609597,
+      "seconds": 0.44049267199989117,
+      "parameter_change": 0.4499000727867341
+    },
+    {
+      "seed": 1,
+      "arm": "POINT",
+      "lr": 0.1,
+      "file": "candidate_1_POINT_0.1.npy",
+      "sha256": "1175b7b66b8f0ab79eaa081d9112282b149d324d0b3943e4a82d8ff8129534d1",
+      "validation_accuracy": 0.4765625,
+      "validation_objective": 0.7161779688772867,
+      "seconds": 0.46199003999936394,
+      "parameter_change": 1.09038419876675
+    },
+    {
+      "seed": 2,
+      "arm": "DEND",
+      "lr": 0.03,
+      "file": "candidate_2_DEND_0.03.npy",
+      "sha256": "b76529e1cb915d08d724f4e4c47037a6d1ee66706d43e19e02eaf11751797293",
+      "validation_accuracy": 0.0,
+      "validation_objective": 0.6931606254877266,
+      "seconds": 0.42865717299901007,
+      "parameter_change": 0.09931776972064046
+    },
+    {
+      "seed": 2,
+      "arm": "POINT",
+      "lr": 0.03,
+      "file": "candidate_2_POINT_0.03.npy",
+      "sha256": "a6f711a4b9f3ed538438bb9e71eab7db92a2e8f9d61b51588705b1895940446c",
+      "validation_accuracy": 0.234375,
+      "validation_objective": 0.7405803134668814,
+      "seconds": 0.42551624099905894,
+      "parameter_change": 0.23745242576561512
+    }
+  ],
+  "training_seconds": 5.2620243660003325,
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "test_generated": false,
+  "freeze_sha256": "0408429fcfd277df221a35e00f63242b7b0d115d09c2d80c08d237c023ed1ce9"
+}

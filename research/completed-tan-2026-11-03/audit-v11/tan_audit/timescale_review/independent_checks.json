@@ -1,0 +1,156 @@
+{
+  "exact_fraction_block_checks": {
+    "baseline": {
+      "corner_determinants": [
+        {
+          "point": [
+            -0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -4.110453430218917e-06
+        },
+        {
+          "point": [
+            -0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -3.992463766317291e-06
+        },
+        {
+          "point": [
+            0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -4.003973246249194e-06
+        },
+        {
+          "point": [
+            0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -3.885983582347569e-06
+        }
+      ],
+      "gate_gradient_positive": true,
+      "conservative_encoding_membrane_upper": 0.8431921594657951,
+      "gate_upper": 0.36660528672425874,
+      "conservative_query_membrane_upper": 0.8187801760522202,
+      "independent_U_match": 0.0,
+      "independent_A_match": 0.0,
+      "ledger_cells_checked": [
+        "noiseless",
+        "sensor_only",
+        "membrane_process_only",
+        "sensor_and_membrane",
+        "gate_process_only"
+      ]
+    },
+    "gate_only": {
+      "corner_determinants": [
+        {
+          "point": [
+            -0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -2.499474578308363e-05
+        },
+        {
+          "point": [
+            -0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -2.5720451050969362e-05
+        },
+        {
+          "point": [
+            0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -2.8189103517593823e-05
+        },
+        {
+          "point": [
+            0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -2.8914808785479556e-05
+        }
+      ],
+      "gate_gradient_positive": true,
+      "conservative_encoding_membrane_upper": 0.14174757078365832,
+      "gate_upper": 0.06162937860159058,
+      "conservative_query_membrane_upper": 0.805765343239361,
+      "independent_U_match": 0.0,
+      "independent_A_match": 0.0,
+      "ledger_cells_checked": [
+        "noiseless",
+        "sensor_only",
+        "membrane_process_only",
+        "sensor_and_membrane",
+        "gate_process_only"
+      ]
+    },
+    "uniform": {
+      "corner_determinants": [
+        {
+          "point": [
+            -0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -6.000608875534205e-06
+        },
+        {
+          "point": [
+            -0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -5.968970799031072e-06
+        },
+        {
+          "point": [
+            0.5,
+            -0.5
+          ],
+          "exact_sign": -1,
+          "value": -5.660329172241218e-06
+        },
+        {
+          "point": [
+            0.5,
+            0.5
+          ],
+          "exact_sign": -1,
+          "value": -5.628691095738086e-06
+        }
+      ],
+      "gate_gradient_positive": true,
+      "conservative_encoding_membrane_upper": 0.14174757078365832,
+      "gate_upper": 0.06162937860159058,
+      "conservative_query_membrane_upper": 0.805765343239361,
+      "independent_U_match": 0.0,
+      "independent_A_match": 0.0,
+      "ledger_cells_checked": [
+        "noiseless",
+        "sensor_only",
+        "membrane_process_only",
+        "sensor_and_membrane",
+        "gate_process_only"
+      ]
+    }
+  },
+  "ledger_rows_checked": 61440,
+  "target_seed_bytes_verified": true,
+  "all_metrics_verified": true,
+  "source_script_sha256": "eb2598bb88677e855ffe216926b2f38ec954e992ef7b2c9101ed69fee41e8009",
+  "protocol_sha256": "f6ed4fbe3372826ca44e7889311cfdbfff713c915a7ac1c08e128d34141f9dc3"
+}

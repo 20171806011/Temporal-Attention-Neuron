@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "baseline": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
+  "historical_manifests": [
+    {
+      "phase": 1,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "entries": 49
+    },
+    {
+      "phase": 2,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "entries": 61
+    },
+    {
+      "phase": 3,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "entries": 92
+    },
+    {
+      "phase": 4,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "entries": 599
+    },
+    {
+      "phase": 5,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "entries": 562
+    },
+    {
+      "phase": 6,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "entries": 639
+    }
+  ],
+  "entries": 2002,
+  "fresh_seed_scan": "61 registered train/test/init/analysis integer values distinct and not found in V1\u2013V6 text artifacts below 5MB; new disjoint 207... namespace",
+  "source_identity": {
+    "model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+    "data.py": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394"
+  },
+  "v6_primary": {
+    "mean": -0.13564453125,
+    "percentile95": [
+      -0.2875,
+      0.0013671875
+    ],
+    "paired_values": [
+      -0.744140625,
+      0.0,
+      -0.001953125,
+      0.0234375,
+      -0.00390625,
+      0.005859375,
+      0.001953125,
+      -0.001953125,
+      -0.00390625,
+      0.00390625,
+      0.0,
+      0.0,
+      0.0,
+      0.005859375,
+      0.0,
+      0.0,
+      -1.0,
+      -1.0,
+      0.001953125,
+      0.0
+    ],
+    "n_pairs": 20,
+    "unit": "independently trained seed/data pair",
+    "degenerate": false
+  },
+  "v6_limitation": "Two bundled recipes confounded loss and learning rate; V7 crosses fixed levels before observing any new data."
+}

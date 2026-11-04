@@ -1,0 +1,20 @@
+diff --git a/README.md b/README.md
+--- a/README.md
++++ b/README.md
+@@ -27,14 +27,14 @@
+ * **The TAN Paradigm**: Conceived the integration of continuous-time biological leaky integration with dynamic, sliding-window temporal self-attention.
+ * **Rectified Surprise Gating**: Formulated the local deviation novelty signal $S_t = \max(0, x_t - \operatorname{mean}(H_t) - \varepsilon)$, enabling the neuron to autonomously gate information flow without gradient-based weight updates.
+ * **Mechanistic Boundary Theory (TAN-I)**: Discovered and mathematically formulated the *Natural State Collision* phenomenon—proving that the membrane potential $h_t$ is not Markov-sufficient, and establishing that the neuron retains rich historical trajectory memory.
+-* **Relational Architectural Ladder (TAN-II)**: Constructed the conceptual ladder charting the necessary architectural transitions from temporal saliency filtering to opponent E-I competition, vector-space metric addressing, Winner-Take-All symbol selection, and algebraic composition.
++* **Relational Architectural Ladder (TAN-II)**: Constructed a ladder of sufficient mechanisms within the tested model families, spanning temporal saliency filtering, opponent E-I competition, metric addressing, Winner-Take-All symbol selection, and algebraic composition.
+ 
+ ### 2. Algorithmic Implementation & Experimental Design
+ * **Model Implementation**: Developed the foundational TAN codebase (`tan.py`, `lif.py`), along with comparative biological and neural baselines (LIF, Adaptive LIF, RNN, GRU).
+ * **Sensorimotor Benchmarks**: Designed the 50-seed phototaxis navigation and sensory habituation task suites, demonstrating autonomous gradient ascent and noise suppression.
+ * **Large-Scale Empirical Verification**:
+   * **Phase P1-A (60,000 trials, 420,000 evaluations)**: Discovered that 1D metric compatibility $-(q - k)^2$ is mathematically and empirically sufficient for 100% hard key selection, proving that higher-dimensional vector spaces are not strictly required for 1D selective addressing.
+-  * **Phase P1-B (96,000 episodes)**: Designed and executed the continuous dynamical carrier and spiking readout stress-testing suite, empirically characterizing the capacity limits of single-unit channels and establishing the necessity of distributed multi-channel circuits for multi-item binding.
++  * **Phase P1-B (96,000 episodes)**: Designed and executed the continuous dynamical carrier and spiking readout stress-testing suite, empirically characterizing the limitations of the specified dynamical carrier and single-unit readouts for multi-item binding; the closure does not establish a universal requirement for distributed or population coding.
+ 
+ ---
+ 

@@ -1,0 +1,54 @@
+{
+  "baseline": "75a595f3c0c5aa3f50d7700b8c142906aca442b0",
+  "frozen_at_utc": "2026-11-04T19:12:53.644722+00:00",
+  "status": "Before any V7 scientific train/test data generation; deterministic fixtures only",
+  "sha256": {
+    "model.py": "cd6bb3335dc19d9d4813a33666e5cfc49a06c46d9aea6d993bacdf4cfbee81fb",
+    "data.py": "2752daf0328c053e05d5082d748a7ccff9b92917ed5a6c40bef1dcd39a050394",
+    "common.py": "ced597cb2a764df4649cfd95950da3734238ef6c883eda07940e1f0c2297a710",
+    "runner.py": "c34af45fc1a6832a9583d7701b28cfe583388c1c935300663a8a4758c440de20",
+    "evaluate.py": "e2818096abd13495db928278c14b06108af695bb14e94f20a02060227cd4efa9",
+    "audit_gradients.py": "73c2cc5a290bdd10dee9d9b04d31bffc6d6f1e5fc527ba7b38d3f04927c82bbb",
+    "check_contracts.py": "a9cdf3222af3fa831dff33c0f45b500251182a267213fb90470dba50bc631f21",
+    "check_gradients.py": "169da612305d1cd3030bf8476d502e5e70ed1cbbc3d4e7aac2e3bda58bb1a0c1",
+    "PROTOCOL.md": "71b0f33939d125fec7aeda51f3a9b3111ad64a14f86473ae3304760ed5a6c14f",
+    "SEEDS.json": "444e865c9ee5a9d87d46c3265fc10ed6b582ecd9dbdcec0c158146d237555a26",
+    "CONTRASTS.json": "549599e4c7c86b9810779ca6c02bc108b78d9785707ce11ac915de3ccf997f50",
+    "SOURCE_AUDIT.json": "17390bc4cd22376e5503a423789c429d45dc8dbbfc47c78055dce07cf077b4dc",
+    "verify.py": "4e385644a861c10aa9c7dcfb415e45005c95cce60a8f8c025e0eb1bd3ade5eaf"
+  },
+  "historical_manifests_verified": [
+    {
+      "phase": 1,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "entries": 49
+    },
+    {
+      "phase": 2,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "entries": 61
+    },
+    {
+      "phase": 3,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "entries": 92
+    },
+    {
+      "phase": 4,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "entries": 599
+    },
+    {
+      "phase": 5,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "entries": 562
+    },
+    {
+      "phase": 6,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "entries": 639
+    }
+  ],
+  "verification_tooling": "Independent verifier included in freeze; reporting may be added without changing scientific sources.",
+  "predata_note": "Trailing blank line normalized in verifier before scientific data; no behavior changed."
+}

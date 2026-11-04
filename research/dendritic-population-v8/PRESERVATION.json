@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "baseline": "0c74816da453003490f313c8ee7939e16840e4f2",
+  "historical_manifests": [
+    {
+      "phase": 1,
+      "manifest_sha256": "68d3a5465314fa36d711a42e9802abe0ac0e25937343173034b8fcc4ae9340ea",
+      "entries": 49
+    },
+    {
+      "phase": 2,
+      "manifest_sha256": "e8c8bf0c8e602ecd78b0954a1194e23e7934d724c01ac42f8af79dc8834e6374",
+      "entries": 61
+    },
+    {
+      "phase": 3,
+      "manifest_sha256": "936e6dea7731feefeacb0630c0bf729e018f81a7f538b44d4336ea6d644ba077",
+      "entries": 92
+    },
+    {
+      "phase": 4,
+      "manifest_sha256": "17629e159024595ac7c1e3caecfd113c79d52f34eb160d09b74e1b1fd6002ca0",
+      "entries": 599
+    },
+    {
+      "phase": 5,
+      "manifest_sha256": "20985ca1d2aceabe58d7ecba5d0a0c7f2a54e5009525d428c1312b47fe125332",
+      "entries": 562
+    },
+    {
+      "phase": 6,
+      "manifest_sha256": "9c7fdff8b8016da017b1d4f0a277012ad0cbf415191c3e64c5342f023324a85d",
+      "entries": 639
+    },
+    {
+      "phase": 7,
+      "manifest_sha256": "e16b9fa34e6c438f1fb515a457efe498f839b8d3c3a95b68eae43c04c65506fd",
+      "entries": 1203
+    }
+  ],
+  "unchanged_manifest_entries": 3205,
+  "recorded_origin_main": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "main_check_scope": "Existing local remote-tracking reference; no network fetch, push or main modification in V8",
+  "changes_outside_v8": [],
+  "predata_commit": "cd5cd4ef1cc65fd098b3a73d36d68e7a49307d17",
+  "checkpoint_commit": "3ec9ce117ad3ce1a20d6e5ef4f2395916f120821",
+  "commit_gate_checks": {
+    "predata_tree_has_no_results": true,
+    "checkpoint_tree_has_416_initial_and_416_final_weights": true,
+    "checkpoint_tree_has_all_locked_training_artifacts": true,
+    "checkpoint_tree_has_no_test_data_or_marker": true,
+    "committed_train_lock_matches_delivered_bytes": true,
+    "all_frozen_sources_unchanged": true,
+    "all_audits_passed": true
+  }
+}

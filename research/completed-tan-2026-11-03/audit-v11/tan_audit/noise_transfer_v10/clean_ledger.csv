@@ -1,0 +1,9 @@
+history_id,condition,S,arm,underlying_model,underlying_onset_count,count_type,P_C0,P_C1,P_C2,P_C3,P_C4,P_C5,P_D1,observed_total_count,observed_onset_count,observed_late_count,R,generated_total_count,generated_onset_count,generated_late_count,sum_abs_current,sum_current_squared,sum_candidate_squared,peak_abs_current,peak_candidate,peak_abs_candidate,peak_membrane,peak_abs_membrane
+0,step,1,TAN,TAN,4,actual,0.0,0.0,0.0,0.0,1.0,0.0,1.0,5.0,4.0,1.0,0.025,5,4,1,7.065072779866092,6.4391308956594235,10.117739746057824,1.1333665076019794,1.6427238624876161,1.6427238624876161,0.9760526289683278,0.9760526289683278
+0,step,1,LIF,LIF,2,actual,0.0,0.0,1.0,0.0,0.0,0.0,1.0,22.0,2.0,20.0,0.5,22,2,20,67.5,101.25,212.13,1.5,2.7,2.7,1.5,1.5
+0,step,1,LIF_THINNED,LIF,2,expectation,0.22828208608913347,0.49901332041798185,0.2727045934928847,0.0,0.0,0.0,0.7717179139108665,11.488647581441263,1.0444225074037512,10.444225074037512,0.2611056268509378,22,2,20,67.5,101.25,212.13,1.5,2.7,2.7,1.5,1.5
+0,step,1,ZERO_OUTPUT,,-1,actual,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,
+0,catch,0,TAN,TAN,0,actual,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0,catch,0,LIF,LIF,0,actual,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0,catch,0,LIF_THINNED,LIF,0,expectation,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0,catch,0,ZERO_OUTPUT,,-1,actual,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,

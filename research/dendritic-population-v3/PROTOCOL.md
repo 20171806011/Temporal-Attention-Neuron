@@ -1,0 +1,29 @@
+# V3 development-first training/readout diagnosis
+
+## Objective and unchanged dynamics
+
+Establish a minimal task that BOTH native-spiking circuits can learn before comparing architectures on memory or temporal binding. V1/V2 artifacts remain immutable. Model.py retains V2's forward equations, dimensions, parameter layout, initialization distributions and native strict >.5 threshold/reset; deterministic fixture parity is checked. No new biological claim. The task is intentionally easier: identify which of input channels 0 or 1 is sustained. It does NOT require delayed XOR, unseen bindings, memory or recurrence.
+
+There are 24 updates. A balanced binary label selects channel 0/1, amplitude uniform [.8,1.2], onset uniform {2,3,4}, sustained through step 23. Common readout cue channel 4 is one at steps 16–23. Distractor channel 5 at steps 7–9 is uniform [0,.5]. Independent Gaussian input noise SD .03 is clipped below zero. No label input is passed to the model; label selects stimulus class and supervises training. Decoder is unchanged: unique maximum of two native output spike counts at steps 16–23; ties abstain and are incorrect.
+
+Three paired seeds s=0,1,2: training 128 histories seed 2026110500+10s, validation 128 seed +1; initialization seed 2026110550+s. No v1/v2 data is read. Test is 512 histories seed +2, generated ONLY if the development gate passes and selected checkpoints are hash-locked. Test code must refuse to execute otherwise.
+
+## Training and controlled comparisons
+
+Implement explicit NumPy BPTT with surrogate spike derivative 1/(1+5*abs(candidate-.5))^2, while ALL forward spikes stay hard/binary. Differentiate through native reset including the spike term; branch ReLU uses its positive-side derivative. Check the analytic chain rule against central differences in a locally anchored differentiable graph for all 176 parameters, both arms, both losses. Also check that hard-forward finite differences on a non-boundary fixture return only regularizer derivatives, and zero surrogate derivatives eliminate all data gradients. A surrogate update is not the exact gradient of the hard-spike objective or proof of a globally defined surrogate loss.
+
+Factorial development controls: classification CE from .5*counts versus RATE mean squared error of count/8 to target .75 for correct output and .125 for incorrect output. Both add .0001 mean squared parameters. Both losses, arms and seeds receive learning rates .01 and .03: 24 total candidate runs. Same initial theta for every candidate of a seed. Adam beta1=.9 beta2=.999 epsilon=1e-8, 200 full-batch updates, global gradient norm clipping at 1, parameter clipping [-2,2]. Final checkpoint only, no best-epoch choice or adaptive early stop. Save every final checkpoint, loss/gradient norm/update norms and training accuracy at every update; final validation metrics, spike traffic, timing and initial metrics. Training ceiling 300 seconds CPU wall time, single BLAS/OpenMP thread; no installs, GPU, paid compute or external data. If budget fails, preserve logs and do not test.
+
+The two circuits match 20 continuous float64 states, 6 stored previous-hidden-spike values, 2 output counters, 176 trainable parameters, matrices and dense matrix multiply counts, data, readout and all candidate/update counts. DEND has 8 cells and POINT 20; branch rectification differs from native branch threshold/reset. Therefore scalar operations, anatomy, exact wall time, effective gain and energy are NOT fully matched. Report measured costs. Adam adds two vectors of 176 floats and training caches; these are training resources, not neuronal inference states.
+
+## Selection, gate and fresh test
+
+Select ONE SHARED (loss, learning rate) configuration across BOTH arms and ALL three seeds. Maximize minimum validation accuracy across the six trained circuits, then mean accuracy, then minimize mean validation RATE error (without parameter penalty), then smaller learning rate, then RATE before CE. All candidates use validation once at the end. Do not choose separate configurations by arm. Gate: every one of the six selected final checkpoints must achieve >=90% unconditional validation accuracy and >=90% coverage. If gate fails, do not generate test data; report failure and leave any additional development for a separately recorded protocol.
+
+Only after committing SELECTION.json and selected hashes, generate fresh test data once. Primary sanity criterion: every selected arm/seed scores >=90% test accuracy and coverage. Report every seed, initial versus trained accuracy, output event rates, silence/saturation, counts and complete trajectories. This is a learnability check, not an architectural-advantage test. Descriptively report mean DEND-minus-POINT and a 2,000-draw paired hierarchical bootstrap (resample three seed pairs, then examples within each label stratum; seed 2026110599). Three seeds support only exploratory uncertainty; zero differences/degenerate intervals never prove equivalence. No post-test tuning or additional test runs.
+
+## Interpretation and audit
+
+Same-task loss comparison isolates the tested loss under identical optimizer/initialization/budget; zero-surrogate fixture isolates gradient transmission. Changing both task and optimizer from v2 prevents attributing a v2-to-v3 improvement to one cause. Do not call a sustained-identity result a solution to delayed XOR or a recurrence advantage. Keep all negative candidates and control results.
+
+Verify frozen hashes, selection ordering/gate, independent data regeneration, native forward scalar equations, exact spikes/predictions, state residuals, losses, resource metrics and bootstrap. Verify analytic gradients before training and at selected checkpoints. Replay Adam updates from saved per-step gradients (norm clipping and parameter clipping included). Independent hard dynamics checks and local derivative checks remain same-workflow verification, not outside replication.

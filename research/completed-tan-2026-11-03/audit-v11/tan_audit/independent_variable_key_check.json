@@ -1,0 +1,42 @@
+{
+  "witnesses": [
+    {
+      "domain": "narrow",
+      "attempt_id": 0,
+      "exact_rational_state_equality": true,
+      "exact_separation": "1/5",
+      "conservative_membrane_upper": 0.14851016995906716,
+      "conservative_gate_upper": 0.08396464157545566,
+      "exact_pair_rounded": {
+        "k2": 1.912058465613998,
+        "v1": -0.068238822482351,
+        "v2": -0.1687875292842718
+      },
+      "u": 6.441431875412568e-05,
+      "A": 0.05264511676142363
+    },
+    {
+      "domain": "full",
+      "attempt_id": 1280,
+      "exact_rational_state_equality": true,
+      "exact_separation": "6/5",
+      "conservative_membrane_upper": 0.5334692055018946,
+      "conservative_gate_upper": 0.12360066055680154,
+      "exact_pair_rounded": {
+        "k2": 2.246026561838554,
+        "v1": -1.6047912145471426,
+        "v2": 1.8838973168514808
+      },
+      "u": 0.00020519717693189013,
+      "A": 0.07749656384770429
+    }
+  ],
+  "ledger_attempts_checked": 2560,
+  "accepted_rows_checked": 1882,
+  "accepted_by_domain": {
+    "narrow": 988,
+    "full": 894
+  },
+  "primary_output_rewritten": false,
+  "qualification": "Exact rational witnesses reconstruct transformed histories from decimal anchors; rounded primary JSON pairs remain approximate."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "independent_generator": true,
+  "generator_rejections": 21,
+  "input_count": 1590,
+  "ledger_rows": 6360,
+  "role_outputs": 12720,
+  "metrics_cells": 24,
+  "quantization_events": 22260,
+  "exact_bounds": {
+    "RAW32": "42715712/165082665",
+    "PHASE32": "10155109/858678891",
+    "CACHE32": "1/85",
+    "ENDPOINT_ONLY": "128/13107"
+  },
+  "all_query_outputs_independently_reconstructed": true,
+  "all_resources_verified": true,
+  "bootstrap_replicates": 2000,
+  "binary_scaled_vs_exact_input_rounding_disagreements": [],
+  "max_exact_dequant_float_residual": 5.684341886080802e-14,
+  "full_rational_online_oracle_rows": 6360,
+  "full_rational_online_payload_differences": [],
+  "max_chronological_pre_final_errors": {
+    "RAW32": [
+      0.24204680682373736,
+      6.217248937900877e-15
+    ],
+    "PHASE32": [
+      0.0017400329691104055,
+      6.217248937900877e-15
+    ],
+    "ENDPOINT_ONLY": [
+      8.881784197001252e-15,
+      6.217248937900877e-15
+    ]
+  },
+  "max_error_decomposition_residual": 3.055325090151051e-14,
+  "first_slot_counts": {
+    "0": 217,
+    "1": 146,
+    "2": 98,
+    "3": 51
+  },
+  "writer_slots": [
+    "arm",
+    "phase",
+    "words"
+  ],
+  "query_arguments": [
+    "self",
+    "q"
+  ],
+  "original_sources_preserved": true,
+  "seconds": 5.442472359999556,
+  "limitation": "Persistent payload bits are logical code capacity, not Python memory, total circuit state, transient workspace, latency, energy or neuronal implementation."
+}

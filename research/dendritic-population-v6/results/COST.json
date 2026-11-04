@@ -1,0 +1,61 @@
+{
+  "cells": [
+    {
+      "arm": "DEND",
+      "recipe": "RATE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.52698266799996
+    },
+    {
+      "arm": "DEND",
+      "recipe": "CE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 17.530541949000053
+    },
+    {
+      "arm": "POINT",
+      "recipe": "RATE_0.01",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.369492967999804
+    },
+    {
+      "arm": "POINT",
+      "recipe": "CE_0.03",
+      "trajectories": 20,
+      "parameter_updates": 4000,
+      "forward_dense_MAC_terms": 1916928000,
+      "backward_dense_MAC_terms": 2949120000,
+      "checkpoint_training_forward_batches": 180,
+      "checkpoint_forward_dense_MAC_terms": 86261760,
+      "test_forward_dense_MAC_terms": 38338560,
+      "recorded_training_seconds": 18.52069250000011
+    }
+  ],
+  "unique_training_trajectories": 80,
+  "updates": 16000,
+  "training_phase_wall_seconds": 72.27069772599998,
+  "test_artifact_phase_wall_seconds": 12.27874968599997,
+  "test_inference_seconds": 0.5210185800007139,
+  "test_model_episodes": 40960,
+  "unique_test_histories": 10240,
+  "checkpoint_training_forward_batches": 720,
+  "note": "Dense matrix MAC terms exclude scalar activation/reset, losses,Adam,I/O,data generation,audits and posthoc; not FLOP/energy/hardware equivalence. Checkpoint passes include final training metrics."
+}

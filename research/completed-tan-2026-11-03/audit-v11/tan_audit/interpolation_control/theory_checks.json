@@ -1,0 +1,490 @@
+{
+  "domain": {
+    "key_lower": "3/10",
+    "key_upper": "5/2",
+    "value_abs_bound": "3",
+    "minimum_spacing": "1/20"
+  },
+  "tight_support_bounds": {
+    "abs_slope": "120",
+    "abs_intercept": "297",
+    "center": "7/5",
+    "abs_center_value": "129"
+  },
+  "exact_corner_checks": [
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "a": "0",
+      "b": "-3",
+      "center_value": "-3"
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "a": "120",
+      "b": "-39",
+      "center_value": "129"
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "a": "-120",
+      "b": "39",
+      "center_value": "-129"
+    },
+    {
+      "keys": [
+        "3/10",
+        "7/20"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "a": "0",
+      "b": "3",
+      "center_value": "3"
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "a": "0",
+      "b": "-3",
+      "center_value": "-3"
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "a": "120",
+      "b": "-297",
+      "center_value": "-129"
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "a": "-120",
+      "b": "297",
+      "center_value": "129"
+    },
+    {
+      "keys": [
+        "49/20",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "a": "0",
+      "b": "3",
+      "center_value": "3"
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "-3"
+      ],
+      "a": "0",
+      "b": "-3",
+      "center_value": "-3"
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "-3",
+        "3"
+      ],
+      "a": "30/11",
+      "b": "-42/11",
+      "center_value": "0"
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "-3"
+      ],
+      "a": "-30/11",
+      "b": "42/11",
+      "center_value": "0"
+    },
+    {
+      "keys": [
+        "3/10",
+        "5/2"
+      ],
+      "values": [
+        "3",
+        "3"
+      ],
+      "a": "0",
+      "b": "3",
+      "center_value": "3"
+    }
+  ],
+  "perturbation_bound_saturating_case": {
+    "actual_error": "1235001/100000000",
+    "bound": "1235001/100000000"
+  },
+  "quantized_normalized_states_16bits": {
+    "max_normalized_rounding_error": "1/65535",
+    "no_query_noise_error_bound": "199/21845"
+  },
+  "floating_spacing": {
+    "naive_gap": 0.04999999999999982,
+    "naive_pass": false,
+    "valid_keys": [
+      2.4499999999999993,
+      2.4999999999999996
+    ],
+    "valid_gap": 0.050000000000000266
+  },
+  "arithmetic_bounds": [
+    {
+      "format": "binary32",
+      "unit_roundoff": 5.960464477539063e-08,
+      "coefficient_a_error_bound": 2.1457675956072086e-05,
+      "coefficient_b_error_bound": 8.958579815044082e-05,
+      "query_evaluation_roundoff_bound": 5.346537916395513e-05,
+      "exact_input_exact_query_total_error_bound": 0.00019669536720457617
+    },
+    {
+      "format": "binary64",
+      "unit_roundoff": 1.1102230246251565e-16,
+      "coefficient_a_error_bound": 3.996802888650565e-14,
+      "coefficient_b_error_bound": 1.6686652060116108e-13,
+      "query_evaluation_roundoff_bound": 9.958700530887659e-14,
+      "exact_input_exact_query_total_error_bound": 3.663735981263018e-13
+    }
+  ],
+  "novelty_search": {
+    "file_count": 218,
+    "searched_files": [
+      "CURRENT_RESEARCH_STATE.md",
+      "ERRATA.md",
+      "[non-scientific workflow filename omitted]",
+      "P0_REWORK_REPORT.md",
+      "README.md",
+      "RESEARCH_CHRONOLOGY.md",
+      "REVIEW_README.md",
+      "VALIDATION_REPORT.md",
+      "p1_experiments/P1A_FINAL_BASELINE_MANIFEST.md",
+      "p1_experiments/P1A_SCIENTIFIC_REPORT.md",
+      "p1_experiments/REPLAY_PROTOCOL_AMENDMENT_1.md",
+      "p1_experiments/THEORETICAL_PROPOSITION_1D_METRIC.md",
+      "p1_experiments/archive_run1/P1A_SCIENTIFIC_REPORT.md",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "p1_experiments/models.py",
+      "p1_experiments/oracle_and_evaluator.py",
+      "p1_experiments/p1b/P1B_FINAL_SCIENTIFIC_CLOSURE_REPORT.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_1.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_2.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_3.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_4.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_5.md",
+      "p1_experiments/p1b/P1B_PRE_REGISTRATION_PROTOCOL_V2_6.md",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "p1_experiments/p1b/models_p1b.py",
+      "p1_experiments/p1b/models_p1b_v2.py",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "[non-scientific workflow filename omitted]",
+      "p1_experiments/p1b/run_confirmatory_p1b.py",
+      "p1_experiments/p1b/runner_p1b.py",
+      "p1_experiments/p1b/test_p1b_g1_fixtures.py",
+      "p1_experiments/results/dry_run_20260919_144333/P1A_SCIENTIFIC_REPORT.md",
+      "p1_experiments/results/dry_run_20260919_145112/P1A_SCIENTIFIC_REPORT.md",
+      "p1_experiments/results/dry_run_20260919_145837/P1A_SCIENTIFIC_REPORT.md",
+      "p1_experiments/results/run_p1a_rev2/P1A_SCIENTIFIC_REPORT.md",
+      "p1_experiments/run_p1a_experiment.py",
+      "p1_experiments/task_generator.py",
+      "p1_experiments/test_audit_failure_modes.py",
+      "release/FINAL_MANUSCRIPT_RELEASE_MANIFEST.md",
+      "requirements.txt",
+      "scripts/check_a01_query_rotation.py",
+      "scripts/check_a02_phase2_branch.py",
+      "scripts/check_a03_statistics.py",
+      "scripts/check_a05_softmax.py",
+      "scripts/check_composition_carrier.py",
+      "scripts/generate_findings.py",
+      "scripts/generate_manifest_after.py",
+      "scripts/generate_master_claim_ledger.py",
+      "scripts/generate_numerical_checks.py",
+      "scripts/run_audit_replay.py",
+      "scripts/update_manifest_before.py",
+      "snapshot/CHANGELOG.md",
+      "snapshot/PHASE1_NATURAL_COLLISION_REPORT.md",
+      "snapshot/README.md",
+      "snapshot/audit_v3_amended/AUDIT_AMENDMENT.md",
+      "snapshot/audit_v3_amended/PER_SEED_AUDIT.md",
+      "snapshot/audit_v3_amended/POOLED_PROBE1_V3.md",
+      "snapshot/code/RESEARCH_ARCHIVE_INDEX.md",
+      "snapshot/code/analysis/effective_dimension_velocity_ampcontrol.py",
+      "snapshot/code/analysis/mutual_information.py",
+      "snapshot/code/analysis/plotting.py",
+      "snapshot/code/analysis/probe1_v3_amended_audit.py",
+      "snapshot/code/analysis/statistics.py",
+      "snapshot/code/experiments/ablation.py",
+      "snapshot/code/experiments/baseline_comparison.py",
+      "snapshot/code/experiments/effective_dimension.py",
+      "snapshot/code/experiments/habituation.py",
+      "snapshot/code/experiments/information_analysis.py",
+      "snapshot/code/experiments/natural_collision.py",
+      "snapshot/code/experiments/probe2/identifiability/AUDIT_OUTPUT.txt",
+      "snapshot/code/experiments/probe2/identifiability/AUDIT_REPORT.md",
+      "snapshot/code/experiments/probe2/identifiability/README.md",
+      "snapshot/code/experiments/probe2/identifiability/THEORY_PRECHECK.md",
+      "snapshot/code/experiments/probe2/identifiability/probe2_identifiability_audit.py",
+      "snapshot/code/experiments/robustness.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_binding_probe.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_geometry.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_hard_binding.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_routing_probe.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_shortcut_audit.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_theory_audit.py",
+      "snapshot/code/experiments/sprint4_2/sprint4_2_vector_qk.py",
+      "snapshot/code/experiments/sprint4_3/sprint4_3a_composition_probe.py",
+      "snapshot/code/experiments/statistical_validation.py",
+      "snapshot/code/experiments/temporal_distractor.py",
+      "snapshot/code/model/baselines.py",
+      "snapshot/code/model/lif.py",
+      "snapshot/code/model/tan.py",
+      "snapshot/code/requirements.txt",
+      "snapshot/docs/ARCHIVE_INTEGRITY.md",
+      "snapshot/docs/CLAIM_LEDGER.md",
+      "snapshot/docs/NEXT_AGENT_BRIEF.md",
+      "snapshot/docs/PHASE4_COMPLETION_REPORT.md",
+      "snapshot/docs/REPRODUCIBILITY_LEDGER.md",
+      "snapshot/docs/RESEARCH_AUDIT_AND_PLAN_2026-09-17.md",
+      "snapshot/docs/TANII_SPRINT4_1CD_RESULTS.md",
+      "snapshot/docs/TANII_SPRINT4_1CD_THEORY.md",
+      "snapshot/docs/TANII_SPRINT4_2B_AMENDMENT_2.md",
+      "snapshot/docs/TANII_SPRINT4_2B_AMENDMENT_3.md",
+      "snapshot/docs/TANII_SPRINT4_2B_CLAIM_LEDGER.md",
+      "snapshot/docs/TANII_SPRINT4_2B_PREREGISTRATION.md",
+      "snapshot/docs/TANII_SPRINT4_2B_RESULTS.md",
+      "snapshot/docs/TANII_SPRINT4_2C_AMENDMENT_4.md",
+      "snapshot/docs/TANII_SPRINT4_2C_CLAIM_LEDGER.md",
+      "snapshot/docs/TANII_SPRINT4_2C_PREREGISTRATION.md",
+      "snapshot/docs/TANII_SPRINT4_2C_RESULTS.md",
+      "snapshot/docs/TANII_SPRINT4_2D_AMENDMENT_5.md",
+      "snapshot/docs/TANII_SPRINT4_2D_CLAIM_LEDGER.md",
+      "snapshot/docs/TANII_SPRINT4_2D_PREREGISTRATION.md",
+      "snapshot/docs/TANII_SPRINT4_2D_RESULTS.md",
+      "snapshot/docs/TANII_SPRINT4_2_AMENDMENT_1.md",
+      "snapshot/docs/TANII_SPRINT4_2_CLAIM_LEDGER.md",
+      "snapshot/docs/TANII_SPRINT4_2_PREREGISTRATION.md",
+      "snapshot/docs/TANII_SPRINT4_2_RESULTS.md",
+      "snapshot/docs/TANII_SPRINT4_2_THEORY.md",
+      "snapshot/docs/TANII_SPRINT4_3A_AMENDMENT_6.md",
+      "snapshot/docs/TANII_SPRINT4_3A_CLAIM_LEDGER.md",
+      "snapshot/docs/TANII_SPRINT4_3A_PREREGISTRATION.md",
+      "snapshot/docs/TANII_SPRINT4_3A_RESULTS.md",
+      "snapshot/docs/TAN_I_PAPER_COMPLETION_REPORT.md",
+      "snapshot/docs/TAN_RESEARCH_DOSSIER.md",
+      "snapshot/manuscript/main.tex",
+      "snapshot/manuscript/sections/abstract.tex",
+      "snapshot/manuscript/sections/analysis.tex",
+      "snapshot/manuscript/sections/conclusion.tex",
+      "snapshot/manuscript/sections/discussion.tex",
+      "snapshot/manuscript/sections/experiments.tex",
+      "snapshot/manuscript/sections/introduction.tex",
+      "snapshot/manuscript/sections/model.tex",
+      "snapshot/manuscript/sections/related_work.tex",
+      "snapshot/paper/README.md",
+      "snapshot/paper/main.tex",
+      "snapshot/paper/scripts/_final_layouts.py",
+      "snapshot/paper/scripts/_final_tables2.py",
+      "snapshot/paper/scripts/_fix_stray.py",
+      "snapshot/paper/scripts/_fix_typography.py",
+      "snapshot/paper/scripts/_patch_tables.py",
+      "snapshot/paper/scripts/_rebuild_tables.py",
+      "snapshot/paper/scripts/_scan_stray.py",
+      "snapshot/paper/scripts/_wrap_tables.py",
+      "snapshot/paper/scripts/make_figs_tables.py",
+      "snapshot/paper/scripts/qa_pdf.py",
+      "snapshot/paper/sections/background.tex",
+      "snapshot/paper/sections/conclusion.tex",
+      "snapshot/paper/sections/discussion.tex",
+      "snapshot/paper/sections/introduction.tex",
+      "snapshot/paper/sections/limitations.tex",
+      "snapshot/paper/sections/methods.tex",
+      "snapshot/paper/sections/model.tex",
+      "snapshot/paper/sections/results.tex",
+      "snapshot/paper/supplementary/S1_equations.tex",
+      "snapshot/paper/supplementary/S2_phase1_collisions.tex",
+      "snapshot/paper/supplementary/S3_phase2_methodology.tex",
+      "snapshot/paper/supplementary/S4_probe1_perseed.tex",
+      "snapshot/paper/supplementary/S5_probe1_amended_audit.tex",
+      "snapshot/paper/supplementary/S6_probe2_full_audit.tex",
+      "snapshot/paper/supplementary/S7_probe2_precheck.tex",
+      "snapshot/paper/supplementary/S8_reproducibility.tex",
+      "snapshot/paper/tables/tab_claims.tex",
+      "snapshot/paper/tables/tab_params.tex",
+      "snapshot/paper/tables/tab_phase1.tex",
+      "snapshot/paper/tables/tab_phase2.tex",
+      "snapshot/paper/tables/tab_probe1.tex",
+      "snapshot/paper/tables/tab_probe2.tex",
+      "snapshot/paper2/README.md",
+      "snapshot/paper2/main.tex",
+      "snapshot/paper2/scripts/make_figures.py",
+      "snapshot/paper2/scripts/make_p1a_figure.py",
+      "snapshot/paper2/scripts/qa_paper2.py",
+      "snapshot/paper2/sections/s10_ledger.tex",
+      "snapshot/paper2/sections/s1_introduction.tex",
+      "snapshot/paper2/sections/s2_framework.tex",
+      "snapshot/paper2/sections/s3_state_geometry.tex",
+      "snapshot/paper2/sections/s4_competition.tex",
+      "snapshot/paper2/sections/s5_routing_geometry.tex",
+      "snapshot/paper2/sections/s6_binding.tex",
+      "snapshot/paper2/sections/s7_wta.tex",
+      "snapshot/paper2/sections/s8_composition.tex",
+      "snapshot/paper2/sections/s9_ladder.tex",
+      "snapshot/scripts/generate_figures.py",
+      "snapshot/sprint4_1cd_ei_dynamics.py"
+    ],
+    "patterns": [
+      "interpolat",
+      "lagrange",
+      "vandermonde",
+      "divided.difference",
+      "polyfit",
+      "polyval",
+      "v2\\s*-\\s*v1",
+      "values\\[1\\]\\s*-\\s*values\\[0\\]",
+      "插值"
+    ],
+    "hits": [
+      {
+        "path": "P0_REWORK_REPORT.md",
+        "line": 115,
+        "text": "- **Root Cause Analysis:** Using PowerShell execution strings (`powershell -c \"...\"` or here-strings) caused PowerShell to perform variable interpolation on `$` characters before passing to commands."
+      },
+      {
+        "path": "P0_REWORK_REPORT.md",
+        "line": 117,
+        "text": "  - Completely banned PowerShell string interpolation for file generation or modification."
+      },
+      {
+        "path": "snapshot/code/experiments/effective_dimension.py",
+        "line": 392,
+        "text": "        slope = np.polyfit(np.arange(len(seg)), seg, 1)[0]"
+      },
+      {
+        "path": "snapshot/code/experiments/natural_collision.py",
+        "line": 974,
+        "text": "        sl, ic = np.polyfit(xx, yy, 1)"
+      },
+      {
+        "path": "snapshot/docs/TANII_SPRINT4_1CD_THEORY.md",
+        "line": 236,
+        "text": "2. FWHM:主峰半高全宽(线性插值到 (R_max+R_min)/2;若主峰不成立→ None + 原因)。"
+      },
+      {
+        "path": "snapshot/docs/TANII_SPRINT4_1CD_THEORY.md",
+        "line": 237,
+        "text": "3. 峰位置 x_peak:最大候选的网格位置(±δ/2;报告网格点与局部二次插值)。"
+      },
+      {
+        "path": "snapshot/sprint4_1cd_ei_dynamics.py",
+        "line": 343,
+        "text": "        A = np.polyfit(xs[pts], fs[pts], 1)"
+      },
+      {
+        "path": "snapshot/sprint4_1cd_ei_dynamics.py",
+        "line": 345,
+        "text": "        resid = yy - np.polyval(A, xs[pts])"
+      }
+    ],
+    "reproduction_scope": "Novelty scan requires the full frozen repository; a minimal source subset changes inventory/hits but not the mathematical checks.",
+    "conclusion": "No specific two-point affine streaming memory found in inspected textual sources; matched plotting fits/interpolation and shell text. This is not a literature novelty claim."
+  },
+  "source_sha256": {
+    "p1_experiments/task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d",
+    "p1_experiments/models.py": "3762cfb8627e7574dfbcbdc8db2470489471ad247832d03fa2dae916ce3f23e5",
+    "p1_experiments/p1b/runner_p1b.py": "47609f1e70ab8de2966ee8305757f44658ef799918d5f92108ac4efe64304c26"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "ledger_rows_checked": 40960,
+  "all_bounded_metrics": true,
+  "all_linear_diagnostics": true,
+  "all_posthoc_intervals": true,
+  "exact_block_coefficient_checks": true,
+  "corner_determinants": [
+    -4.110453430218917e-06,
+    -3.992463766317291e-06,
+    -4.003973246249194e-06,
+    -3.885983582347569e-06
+  ],
+  "positive_gate_f2": true,
+  "conservative_wholebox_u_bound": 0.8431921594657951,
+  "conservative_wholebox_A_bound": 0.36660528672425874,
+  "conservative_query_u_bound": 0.8187801760522202,
+  "max_observation_reconstruction_error": 3.785860513971784e-14,
+  "target_hash": "da0bb3feaffc8258b50a81099f877d70cd948152fc5beb25099d4f5ca5f30148",
+  "source_sha256": "edf43867d342600e154a755113b8723684da40894271f1467f6ed1715154deef",
+  "cells": [
+    {
+      "scenario": "noiseless",
+      "m": 1,
+      "Ecomp": 1.1841854038667406e-10,
+      "RMSE": [
+        1.4272791540613343e-10,
+        3.199985645515644e-13
+      ],
+      "coverage": 1.0,
+      "local_joint": 1.0,
+      "linear_Ecomp": 3.7651877929560333,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "observation_reconstruction_error": 3.1530333899354446e-14
+    },
+    {
+      "scenario": "noiseless",
+      "m": 100,
+      "Ecomp": 9.09006645702368e-11,
+      "RMSE": [
+        1.0406841405234147e-10,
+        2.3169727538115376e-13
+      ],
+      "coverage": 1.0,
+      "local_joint": 1.0,
+      "linear_Ecomp": 3.7651877929398223,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "observation_reconstruction_error": 2.2370993946196904e-14
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 1,
+      "Ecomp": 0.33382785126800063,
+      "RMSE": [
+        0.2903671601247968,
+        0.28734179017946504
+      ],
+      "coverage": 0.018310546875,
+      "local_joint": 0.001708984375,
+      "linear_Ecomp": 18.035863063653025,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3223,
+        "NO_REAL_ROOT": 798,
+        "VALID": 75
+      },
+      "observation_reconstruction_error": 3.785860513971784e-14
+    },
+    {
+      "scenario": "sensor_only",
+      "m": 100,
+      "Ecomp": 0.2681650329235009,
+      "RMSE": [
+        0.3021981522219191,
+        0.16171673744966877
+      ],
+      "coverage": 0.692138671875,
+      "local_joint": 0.103515625,
+      "linear_Ecomp": 3.8079925044746994,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 1261,
+        "VALID": 2835
+      },
+      "observation_reconstruction_error": 2.2343238370581275e-14
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 1,
+      "Ecomp": 0.33456814061232476,
+      "RMSE": [
+        0.2918182328277049,
+        0.28690305496482504
+      ],
+      "coverage": 0.023681640625,
+      "local_joint": 0.002197265625,
+      "linear_Ecomp": 13.248156087818739,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3497,
+        "NO_REAL_ROOT": 502,
+        "VALID": 97
+      },
+      "observation_reconstruction_error": 3.1530333899354446e-14
+    },
+    {
+      "scenario": "membrane_process_only",
+      "m": 100,
+      "Ecomp": 0.334075536547314,
+      "RMSE": [
+        0.31171984714136164,
+        0.2649279166765756
+      ],
+      "coverage": 0.17041015625,
+      "local_joint": 0.0185546875,
+      "linear_Ecomp": 4.34379222392444,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3398,
+        "VALID": 698
+      },
+      "observation_reconstruction_error": 2.3425705819590803e-14
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 1,
+      "Ecomp": 0.3346673969168025,
+      "RMSE": [
+        0.2900833559943575,
+        0.28828911900097276
+      ],
+      "coverage": 0.014404296875,
+      "local_joint": 0.001220703125,
+      "linear_Ecomp": 21.747329072877317,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3066,
+        "NO_REAL_ROOT": 971,
+        "VALID": 59
+      },
+      "observation_reconstruction_error": 3.785860513971784e-14
+    },
+    {
+      "scenario": "sensor_and_membrane",
+      "m": 100,
+      "Ecomp": 0.33198207346192543,
+      "RMSE": [
+        0.3089662738166222,
+        0.2651967429754671
+      ],
+      "coverage": 0.1630859375,
+      "local_joint": 0.01611328125,
+      "linear_Ecomp": 4.364054613639677,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 3428,
+        "VALID": 668
+      },
+      "observation_reconstruction_error": 2.3453461395206432e-14
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 1,
+      "Ecomp": 1.1841854038667406e-10,
+      "RMSE": [
+        1.4272791540613343e-10,
+        3.199985645515644e-13
+      ],
+      "coverage": 1.0,
+      "local_joint": 1.0,
+      "linear_Ecomp": 3.7651877929560333,
+      "status_counts": {
+        "VALID": 4096
+      },
+      "observation_reconstruction_error": 3.1530333899354446e-14
+    },
+    {
+      "scenario": "gate_process_only",
+      "m": 100,
+      "Ecomp": 0.1173511947907071,
+      "RMSE": [
+        0.16539447740391264,
+        0.0874633404922348
+      ],
+      "coverage": 0.9111328125,
+      "local_joint": 0.332763671875,
+      "linear_Ecomp": 3.7726117495159937,
+      "status_counts": {
+        "OUT_OF_DOMAIN": 364,
+        "VALID": 3732
+      },
+      "observation_reconstruction_error": 2.4202861936828413e-14
+    }
+  ]
+}

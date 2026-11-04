@@ -1,0 +1,69 @@
+{
+  "n_per_native_condition": 2048,
+  "alpha_TV": 0.025,
+  "alpha_CP": 0.025,
+  "alpha_CP_cell": 0.00625,
+  "joint_confidence_at_least": 0.95,
+  "TV_radius": 0.047398916395406346,
+  "F6_entropy_modulus_bits": 0.3853001400875786,
+  "subsets_per_distribution": 62,
+  "native_conditional_distributions": 4,
+  "native_arms": {
+    "TAN": {
+      "error_cells": {
+        "miss": {
+          "errors": 0,
+          "n": 2048,
+          "upper_probability": 0.0024750442291897527,
+          "method": "exact_zero_error_expm1",
+          "binomial_cdf_at_upper": 0.006250000000000002,
+          "cdf_minus_alpha_cell": 1.734723475976807e-18
+        },
+        "FPR": {
+          "errors": 1,
+          "n": 2048,
+          "upper_probability": 0.003498836715834498,
+          "method": "one_sided_beta_quantile",
+          "binomial_cdf_at_upper": 0.0062499999999998486,
+          "cdf_minus_alpha_cell": -1.5178830414797062e-16
+        }
+      },
+      "error_upper_balanced": 0.0029869404725121253,
+      "b_bits": 0.029354617688222957,
+      "Hhat_C_given_S": 0.9180759689177704,
+      "I_signal_D_lower_bound": 0.970645382311777,
+      "Delta_signal_lower_bound": 0.0,
+      "Delta_signal_upper_bound": 0.029354617688222957,
+      "Delta_path_raw_lower_bound": 0.5034212111419688,
+      "Delta_path_lower_bound": 0.5034212111419688
+    },
+    "LIF": {
+      "error_cells": {
+        "miss": {
+          "errors": 0,
+          "n": 2048,
+          "upper_probability": 0.0024750442291897527,
+          "method": "exact_zero_error_expm1",
+          "binomial_cdf_at_upper": 0.006250000000000002,
+          "cdf_minus_alpha_cell": 1.734723475976807e-18
+        },
+        "FPR": {
+          "errors": 41,
+          "n": 2048,
+          "upper_probability": 0.029122948850363324,
+          "method": "one_sided_beta_quantile",
+          "binomial_cdf_at_upper": 0.006249999999999972,
+          "cdf_minus_alpha_cell": -2.862293735361732e-17
+        }
+      },
+      "error_upper_balanced": 0.01579899653977654,
+      "b_bits": 0.11715368662796816,
+      "Hhat_C_given_S": 0.6268431383038529,
+      "I_signal_D_lower_bound": 0.8828463133720319,
+      "Delta_signal_lower_bound": 0.0,
+      "Delta_signal_upper_bound": 0.11715368662796816,
+      "Delta_path_raw_lower_bound": 0.12438931158830607,
+      "Delta_path_lower_bound": 0.12438931158830607
+    }
+  }
+}

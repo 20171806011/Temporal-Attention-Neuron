@@ -1,0 +1,121 @@
+{
+  "id": "TAN-local-bounded-WHQ-1",
+  "scope": "New local two-fixed-key mechanistic test, not P1B/v11 reproduction, not weight editing, no Codex",
+  "source_commit": "85213f0d417d54e4f48b301ed1c0e4200ef3c421",
+  "source_model_blob": "1193e5406b93e8b42b3290d7e2b9428beb5916e4",
+  "source_access": "Complete model source read via GitHub connector in two slices; direct raw retrieval unavailable. Executable comparator is a documented transcription, not imported repository module.",
+  "L": 2,
+  "keys": [
+    1.8,
+    2.2
+  ],
+  "key_bandwidth": 0.08,
+  "values_uniform": [
+    -0.5,
+    0.5
+  ],
+  "write_event_slots": [
+    0,
+    4
+  ],
+  "slot_ms": 20.0,
+  "event_ms": 10.0,
+  "encoding_ms": 100.0,
+  "dt_ms": 0.1,
+  "write_tau_ms": 1.0,
+  "write_rate_cap_per_ms": 0.25,
+  "hold_tau_ms": 2000.0,
+  "read_tau_ms": 10.0,
+  "query_ms": 10.0,
+  "read_bias": 0.5,
+  "read_gain": 0.6,
+  "sample_steps": [
+    10,
+    100
+  ],
+  "query_key_jitter_bound": 0.01,
+  "query_order": "two sequential queries in independent randomized order; no state cloning between role queries",
+  "delays_ms": [
+    0,
+    50,
+    200
+  ],
+  "primary_delays_ms": [
+    0,
+    50
+  ],
+  "stress_delay_ms": 200,
+  "conditions": [
+    {
+      "id": "clean",
+      "fractional_bits": null,
+      "process_bound": 0.0,
+      "measurement_bound": 0.0
+    },
+    {
+      "id": "finite_bounded",
+      "fractional_bits": 20,
+      "process_bound": 2e-05,
+      "measurement_bound": 0.001
+    }
+  ],
+  "noise_contract": "Per-step independent uniform bounded increments to normalized u, m0=2A0/5-1,m1=2A1/5-1; no process noise in refractory coordinate. Increment is after deterministic threshold/reset update and before storage quantization. Voltage measurements use candidate pre-reset voltage (or 0 in refractory) at steps10/100 before this step process noise, plus bounded measurement error. Identical streams across models.",
+  "state": "u,A0,A1,r: 4 signed int32 fixed-point codes in finite_bounded, float64 states in clean. Original comparator uses u,A0,r and inert A1 only for equal envelope. New models repurpose A0 and add A1 as content modes; r remains refractory timer. Intermediate arithmetic is float64, not physical fixed-bit circuit.",
+  "models": [
+    "original_M1",
+    "bounded_WHQ",
+    "rate_limited_EMA"
+  ],
+  "modified_write": "m_i += dt*(event*g_i*psi(v-m_i) - (1-event*g_i)*m_i/tauH). WHQ psi=.25*tanh(error/.25); EMA psi=clip(error/1ms,-.25,.25).",
+  "modified_query": "during cue Iquery=.5+.6*dot(g(query),m); during encoding/hold Iquery=0; original u/r leak-threshold-reset equation reused. m states leak at tauH in cue. Query reads two voltage samples with fixed analytic filter, no access to memory state.",
+  "native_original_readout": {
+    "gain": 0.1326308169898006,
+    "bias": -0.02681648355488859,
+    "sample_step": 100
+  },
+  "original_diagnostic": "Auxiliary affine-only readout from [1, observed_q, sample10, sample100], fitted once on independent 128 clean 0ms histories; no clipping or tuning. Not the original P1B decoder and not the repaired model.",
+  "splits": {
+    "calibration": {
+      "n": 128,
+      "seed": 2026110201
+    },
+    "validation": {
+      "n": 32,
+      "seed": 2026110202
+    },
+    "test": {
+      "n": 256,
+      "seed": 2026110203
+    }
+  },
+  "randomness": "numpy.random.RandomState, split seed for values/order/query jitter; noise seed = split_seed+10000+delay_steps. Same noise across model/negative-control variants. Noise/parameters never tuned.",
+  "negative_control": {
+    "id": "wrong_address",
+    "delay_ms": 50,
+    "condition": "finite_bounded",
+    "models": [
+      "bounded_WHQ",
+      "rate_limited_EMA"
+    ],
+    "description": "Replace each requested key by the other fixed center plus same query jitter, target unchanged. Same samples/time/current bounds; no new state."
+  },
+  "endpoints": {
+    "rmse": "all queried target values; always include both queries per history",
+    "history_complete": "both absolute errors strictly below .05; silence is not substituted for a completed analog query",
+    "local_rmse_target": 0.03,
+    "local_history_abs_target": 0.05,
+    "completion_fraction_target": 0.9,
+    "zero_predictor": "always zero, same test values",
+    "retention": "diagnostic m_i versus keyed target after encoding, delay and both queries; NOT exposed to decoder",
+    "bounds": "all histories attempted; boundary/candidate/spike/quantization logs; no posthoc exclusion"
+  },
+  "decision": "Local success only if bounded_WHQ finite_bounded has RMSE<=.03 and history completion>=.90 at BOTH 0 and50ms and beats paired zero RMSE; 200ms stress and wrong-query reported regardless. Compare EMA descriptively, no claim of TAN-specific advantage unless measured. No original P1B threshold changed.",
+  "statistics": {
+    "bootstrap": 1000,
+    "seed": 2026110210,
+    "unit": "entire history with both queries; resample together across conditions for paired contrasts; fixed sample, no optional stopping"
+  },
+  "safety_stop": "Source scalar/vector agreement or decoder identity fails -> stop; nonfinite/out-of-int32 -> stop; any clip/spike in repaired branch reported as failure of subthreshold interpretation not silently dropped. No hyperparameter search.",
+  "budget": "Small CPU arrays only, no gradients, no neural training, no GPU, no purchases, no repo modifications",
+  "resource_caveat": "Two hard-wired centers and bandwidth are an explicit finite key prior shared with EMA; no new continuous-key binding. Explicit write/cue timing controls, longer hold lifetime, analog samples and +1 persistent state are charged. No physical energy equivalence claim."
+}

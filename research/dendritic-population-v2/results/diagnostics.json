@@ -1,0 +1,263 @@
+{
+  "status": "post-test descriptive; no tuning or new training",
+  "rows": [
+    {
+      "seed": 0,
+      "arm": "DEND",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            0.0,
+            0.0
+          ],
+          "episodes": 512
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 1.0,
+      "cross_cut_changes_output_counts_fraction": 0.0,
+      "parameter_change_norms": {
+        "input": 1.1352390018609881,
+        "recurrent": 1.1617155229534537,
+        "biases": 0.689118020089671,
+        "output": 0.4928074394652079
+      },
+      "max_absolute_state": 3.642748230202231
+    },
+    {
+      "seed": 0,
+      "arm": "POINT",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            0.0,
+            0.0
+          ],
+          "episodes": 512
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 0.787109375,
+      "cross_cut_changes_output_counts_fraction": 0.0,
+      "parameter_change_norms": {
+        "input": 0.08728520332265517,
+        "recurrent": 0.08746812515430426,
+        "biases": 0.06638917137270973,
+        "output": 0.039607539957091646
+      },
+      "max_absolute_state": 1.2285421286873883
+    },
+    {
+      "seed": 1,
+      "arm": "DEND",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            0.0,
+            0.0
+          ],
+          "episodes": 512
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 1.0,
+      "cross_cut_changes_output_counts_fraction": 0.998046875,
+      "parameter_change_norms": {
+        "input": 0.26376523701433136,
+        "recurrent": 0.30358422387168243,
+        "biases": 0.16734438207060914,
+        "output": 0.11256310248885505
+      },
+      "max_absolute_state": 3.274438052208687
+    },
+    {
+      "seed": 1,
+      "arm": "POINT",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            1.0,
+            1.0
+          ],
+          "episodes": 6
+        },
+        {
+          "counts": [
+            1.0,
+            2.0
+          ],
+          "episodes": 317
+        },
+        {
+          "counts": [
+            1.0,
+            3.0
+          ],
+          "episodes": 19
+        },
+        {
+          "counts": [
+            1.0,
+            4.0
+          ],
+          "episodes": 1
+        },
+        {
+          "counts": [
+            2.0,
+            2.0
+          ],
+          "episodes": 29
+        },
+        {
+          "counts": [
+            2.0,
+            3.0
+          ],
+          "episodes": 115
+        },
+        {
+          "counts": [
+            2.0,
+            4.0
+          ],
+          "episodes": 25
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 1.0,
+      "cross_cut_changes_output_counts_fraction": 0.634765625,
+      "parameter_change_norms": {
+        "input": 0.6885140291190144,
+        "recurrent": 0.7510835025461652,
+        "biases": 0.3019077137231571,
+        "output": 0.24415453553835384
+      },
+      "max_absolute_state": 1.9975832090447185
+    },
+    {
+      "seed": 2,
+      "arm": "DEND",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            8.0,
+            8.0
+          ],
+          "episodes": 512
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 1.0,
+      "cross_cut_changes_output_counts_fraction": 0.84375,
+      "parameter_change_norms": {
+        "input": 0.0655270599814133,
+        "recurrent": 0.05808662457118461,
+        "biases": 0.040360469326844554,
+        "output": 0.02381596846902356
+      },
+      "max_absolute_state": 1.9054434329705454
+    },
+    {
+      "seed": 2,
+      "arm": "POINT",
+      "readout_count_histogram": [
+        {
+          "counts": [
+            0.0,
+            0.0
+          ],
+          "episodes": 15
+        },
+        {
+          "counts": [
+            0.0,
+            1.0
+          ],
+          "episodes": 8
+        },
+        {
+          "counts": [
+            1.0,
+            0.0
+          ],
+          "episodes": 5
+        },
+        {
+          "counts": [
+            1.0,
+            1.0
+          ],
+          "episodes": 120
+        },
+        {
+          "counts": [
+            1.0,
+            2.0
+          ],
+          "episodes": 19
+        },
+        {
+          "counts": [
+            2.0,
+            0.0
+          ],
+          "episodes": 3
+        },
+        {
+          "counts": [
+            2.0,
+            1.0
+          ],
+          "episodes": 214
+        },
+        {
+          "counts": [
+            2.0,
+            2.0
+          ],
+          "episodes": 76
+        },
+        {
+          "counts": [
+            2.0,
+            3.0
+          ],
+          "episodes": 3
+        },
+        {
+          "counts": [
+            3.0,
+            1.0
+          ],
+          "episodes": 1
+        },
+        {
+          "counts": [
+            3.0,
+            2.0
+          ],
+          "episodes": 36
+        },
+        {
+          "counts": [
+            3.0,
+            3.0
+          ],
+          "episodes": 7
+        },
+        {
+          "counts": [
+            4.0,
+            3.0
+          ],
+          "episodes": 5
+        }
+      ],
+      "cross_cut_changes_hidden_spikes_fraction": 1.0,
+      "cross_cut_changes_output_counts_fraction": 0.765625,
+      "parameter_change_norms": {
+        "input": 0.13927090853991195,
+        "recurrent": 0.1642658956487084,
+        "biases": 0.08350666524287549,
+        "output": 0.05505107558608114
+      },
+      "max_absolute_state": 1.2654659041982272
+    }
+  ]
+}

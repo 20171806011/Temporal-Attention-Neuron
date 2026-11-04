@@ -1,0 +1,113 @@
+{
+  "training": [
+    {
+      "stage": "A",
+      "role": "fixed",
+      "arm": "DEND",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.342819721990963
+    },
+    {
+      "stage": "A",
+      "role": "fixed",
+      "arm": "POINT",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.742158521003148
+    },
+    {
+      "stage": "search",
+      "role": "candidate",
+      "arm": "DEND",
+      "trajectories": 30,
+      "updates": 6000,
+      "batch_forward_calls": 6000,
+      "batch_backward_calls": 6000,
+      "forward_dense_MAC_terms": 2875392000,
+      "backward_dense_MAC_terms": 4423680000,
+      "recorded_training_seconds": 24.148155794006016
+    },
+    {
+      "stage": "search",
+      "role": "candidate",
+      "arm": "POINT",
+      "trajectories": 30,
+      "updates": 6000,
+      "batch_forward_calls": 6000,
+      "batch_backward_calls": 6000,
+      "forward_dense_MAC_terms": 2875392000,
+      "backward_dense_MAC_terms": 4423680000,
+      "recorded_training_seconds": 26.008323701003974
+    },
+    {
+      "stage": "B",
+      "role": "fixed",
+      "arm": "DEND",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.103775940999185
+    },
+    {
+      "stage": "B",
+      "role": "fixed",
+      "arm": "POINT",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.573212833005528
+    },
+    {
+      "stage": "B",
+      "role": "selected",
+      "arm": "DEND",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.080949457002134
+    },
+    {
+      "stage": "B",
+      "role": "selected",
+      "arm": "POINT",
+      "trajectories": 10,
+      "updates": 2000,
+      "batch_forward_calls": 2000,
+      "batch_backward_calls": 2000,
+      "forward_dense_MAC_terms": 958464000,
+      "backward_dense_MAC_terms": 1474560000,
+      "recorded_training_seconds": 8.5800560280004
+    }
+  ],
+  "unique_trajectories": 120,
+  "aliases": 0,
+  "total_updates": 24000,
+  "training_phase_wall_seconds": 101.16004836199863,
+  "test_artifact_phase_wall_seconds": 15.640760851001687,
+  "unique_test_model_evaluations": 120,
+  "test_model_episodes": 61440,
+  "unique_test_histories": 10240,
+  "test_forward_dense_MAC_terms": 230031360,
+  "measured_test_inference_seconds": 0.7693016699959117,
+  "validation_forward_calls": 60,
+  "validation_forward_dense_MAC_terms": 28753920,
+  "limits": "Dense MAC terms count matrix products, excluding scalar activation/reset, Adam, data generation, compression, audits, and hardware effects. Forward 72+72+12=156; backward 12+12+72+72+72=240 per episode/time step. Wall time is observed serial CPU timing, not matched compute or energy evidence."
+}

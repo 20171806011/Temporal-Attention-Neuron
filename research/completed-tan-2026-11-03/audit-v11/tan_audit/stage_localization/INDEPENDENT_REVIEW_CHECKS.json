@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "primary_artifacts_unchanged": true,
+  "repository_status_verified": true,
+  "repository_status_unchanged": true,
+  "repository_status_availability": "available",
+  "repository_porcelain": "",
+  "primary_sha256": {
+    "PREREGISTRATION.md": "8ffcda523dfc042f9d64473c361ecc39c6f69b1f9d2b2af7994bbd35dea6c1ff",
+    "run_probe.py": "31021b95d5bc76f9a0798c406e63337f4a2d9056bd9fbac8dd6c8ae20eb6f5f2",
+    "INPUTS_SHA256": "d8c79ae6f1181ee535a8f8ac4bc64d358acc578ec33464088a9302df91ee4a1e",
+    "inputs.jsonl": "3233ad20c7cc95c7581a9756fedb1a5669409a1fe9be5968dd341d7e8ea693ed",
+    "split_and_donor_ledger.json": "c16562b2c8b4f74021e19c4a20eef03ddcf5aadf8fca8ae330dc8c1558feaf1c",
+    "native_observations.jsonl": "7e5fb06bad928e0a0f1fa7a6fc6b5623574ff3de233a7759221d775c4e0bde02",
+    "A_invisibility_checks.json": "43d15099120a7883171ba5f55035b24647c8675f3564904ded9b256db06ecf83",
+    "allowed_features.npz": "616a129bb8aa0c9c624a6eb317211c9865ba179cbb819ef728c94137ef67d1c2",
+    "frozen_models.json": "6c51d7552cfa8554fe9db4fbdfbdedd0f47c6d3bfb4a93bcf18d82acc36cb660",
+    "predictions.jsonl": "4aa8a80b809d0233fec3bc5d459fbac76c94e4fc4f37d616f6d9aff0ff10a1fd",
+    "test_history_losses.json": "a386716bd6bc0ee21a9d4dff0dab1dc63e4fad54e939b8215bbaac95c363086e",
+    "results.json": "f4b43e845a8642d9f5b7b72af4d035bb378d225a3e6dfbe482b51cebf9f7583f",
+    "run.log": "f54269dd8f88eb42496fc87a6472ccfe4ce0eb23455f79450c0c9ac2ead054f0"
+  },
+  "independent_script_sha256": "83bee1e627153ad7338f285bbdcda48658d136fd1b9189a111e5236957c519f2",
+  "source_sha256": {
+    "Temporal-Attention-Neuron/p1_experiments/p1b/models_p1b_v2.py": "6b31fe0ef8b18acdd1c7364879c18cc70c587f088841fa3aacf1f67b6771191f",
+    "Temporal-Attention-Neuron/p1_experiments/task_generator.py": "674cf9f49f5cd7f4975b87d29cd413e801fe40bd10fc56b966e663c9e6fc989d"
+  },
+  "independently_regenerated_histories": 3584,
+  "query_rows_checked": 21504,
+  "paired_prediction_rows_checked": 10752,
+  "arms": 8,
+  "raw_and_clipped_scalar_predictions_checked": 344064,
+  "metric_cells_checked": 576,
+  "paired_bootstrap_contrasts_checked": 12,
+  "bootstrap_replicates_per_contrast": 2000,
+  "positive_history_counts": {
+    "N2_train": 266,
+    "N2_validation": 66,
+    "N2_test": 119,
+    "N3_train": 112,
+    "N3_validation": 21,
+    "N3_test": 54
+  },
+  "test_positive_recipients_with_nonpositive_donors_by_N": {
+    "2": 94,
+    "3": 50
+  },
+  "native_max_residuals": {
+    "u_cue": 0.0,
+    "A_cue": 0.0,
+    "r_cue": 0.0,
+    "q": 0.0,
+    "target": 0.0,
+    "u_readout": 0.0,
+    "native_prediction": 0.0,
+    "r_deadline_minus": 0.0,
+    "spike_count": 0.0,
+    "oracle_prediction": 0.0
+  },
+  "feature_max_residuals": {
+    "QUERY_ONLY": 0.0,
+    "NATIVE_OUTPUT_Q": 0.0,
+    "CUE_U_Q": 0.0,
+    "CUE_U_A_Q": 0.0,
+    "SHUFFLED_STATE_Q": 0.0
+  },
+  "structural_checkpoints": 96,
+  "structural_A_intervention_windows": 192,
+  "native_deadline_spikes": 103,
+  "native_deadline_refractory": 2237,
+  "cue_r_all_zero": true,
+  "solver_checks": {
+    "QUERY_ONLY": {
+      "n_terms": 5,
+      "training_rows": 12288,
+      "transform_max_residuals": {
+        "raw_mean": 0.0,
+        "raw_scale": 0.0,
+        "exponents": 0.0,
+        "expanded_mean": 0.0,
+        "expanded_scale": 0.0
+      },
+      "augmented_least_squares_coefficient_error": 3.1086244689504383e-15,
+      "frozen_normal_equation_residual": 1.3877787807814457e-17,
+      "independently_refit_prediction_error": 4.093947403305265e-15,
+      "augmented_condition": 6.867231220677551,
+      "regularized_gram_condition": 47.15886463824922
+    },
+    "NATIVE_OUTPUT_Q": {
+      "n_terms": 15,
+      "training_rows": 12288,
+      "transform_max_residuals": {
+        "raw_mean": 0.0,
+        "raw_scale": 0.0,
+        "exponents": 0.0,
+        "expanded_mean": 0.0,
+        "expanded_scale": 0.0
+      },
+      "augmented_least_squares_coefficient_error": 2.1382895454280515e-13,
+      "frozen_normal_equation_residual": 3.200564813177209e-16,
+      "independently_refit_prediction_error": 2.615685446016869e-13,
+      "augmented_condition": 70.44767957922889,
+      "regularized_gram_condition": 4962.875558098508
+    },
+    "CUE_U_Q": {
+      "n_terms": 15,
+      "training_rows": 12288,
+      "transform_max_residuals": {
+        "raw_mean": 0.0,
+        "raw_scale": 0.0,
+        "exponents": 0.0,
+        "expanded_mean": 2.220446049250313e-16,
+        "expanded_scale": 0.0
+      },
+      "augmented_least_squares_coefficient_error": 8.282263763703668e-14,
+      "frozen_normal_equation_residual": 2.636779683484747e-16,
+      "independently_refit_prediction_error": 1.2878587085651816e-13,
+      "augmented_condition": 50.72908120090687,
+      "regularized_gram_condition": 2573.439679488023
+    },
+    "CUE_U_A_Q": {
+      "n_terms": 35,
+      "training_rows": 12288,
+      "transform_max_residuals": {
+        "raw_mean": 0.0,
+        "raw_scale": 0.0,
+        "exponents": 0.0,
+        "expanded_mean": 2.220446049250313e-16,
+        "expanded_scale": 0.0
+      },
+      "augmented_least_squares_coefficient_error": 8.327782907713299e-13,
+      "frozen_normal_equation_residual": 1.1518563880486e-15,
+      "independently_refit_prediction_error": 9.07718344933528e-13,
+      "augmented_condition": 117.36726202933427,
+      "regularized_gram_condition": 13775.074196262001
+    },
+    "SHUFFLED_STATE_Q": {
+      "n_terms": 35,
+      "training_rows": 12288,
+      "transform_max_residuals": {
+        "raw_mean": 0.0,
+        "raw_scale": 0.0,
+        "exponents": 0.0,
+        "expanded_mean": 1.1102230246251565e-16,
+        "expanded_scale": 0.0
+      },
+      "augmented_least_squares_coefficient_error": 4.94770890924201e-13,
+      "frozen_normal_equation_residual": 1.474514954580286e-16,
+      "independently_refit_prediction_error": 3.6626257582383914e-13,
+      "augmented_condition": 104.72438446114059,
+      "regularized_gram_condition": 10967.196700761178
+    }
+  },
+  "saved_prediction_max_residuals": {
+    "FROZEN_NATIVE": 0.0,
+    "QUERY_ONLY": 2.220446049250313e-16,
+    "NATIVE_OUTPUT_Q": 8.881784197001252e-16,
+    "CUE_U_Q": 3.552713678800501e-15,
+    "CUE_U_A_Q": 5.329070518200751e-15,
+    "SHUFFLED_STATE_Q": 1.7763568394002505e-15,
+    "ZERO": 0.0,
+    "CORRECT_HISTORY_ORACLE": 0.0
+  },
+  "metric_max_residual": 0.0,
+  "history_loss_max_residual": 0.0,
+  "bootstrap_max_residual": 0.0,
+  "validation_or_test_used_for_refit": false,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "wall_seconds": 1.4875760719996833,
+  "maxrss_kib": 192412,
+  "limitations": [
+    "Manual source inspection complements output reconstruction; saved artifacts cannot alone prove historical execution ordering.",
+    "Recipient bootstrap does not preserve donor-cycle dependence for shuffled-state contrasts.",
+    "All-positive recipient shuffling is not restricted to all-positive donors.",
+    "Intervals condition on the one frozen trained model and do not include training-sample variation.",
+    "Predictive state content is not established query-specific key binding; no state-only or shuffled-query arm was run.",
+    "15 versus 35 terms, regularization geometry, direct q and state access prevent unique causal attribution.",
+    "No probe failure can establish absence of retained information."
+  ]
+}

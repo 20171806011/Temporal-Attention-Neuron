@@ -1,0 +1,40 @@
+% S4
+\section{Supplementary S4: Probe 1 complete per-seed results}
+
+Probe-1 v3 (frozen): target at step 5 with class
+$c_T$ (lo $\sim\mathcal{U}(0.55,1.05)$, hi $\sim\mathcal{U}(0.95,1.45)$),
+three distractors (same mixture) or silence, query at step 9 (retrieval
+cue, not in the label), catch trials with no target (one third); label
+three-way (lo/hi/absent); linear 3-class softmax on the response
+trajectory $[u_9..u_{13}, y_9..y_{13}]$; train 4000 / test 2000 per seed;
+seeds 20260904/05/06.  The full 24-cell per-seed audit table is in
+Table~\ref{tab:probe1} (main text).  Per-seed balanced 3-class accuracy:
+
+\begin{center}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+seed & cond. & B1 & B2 & B3 & B4 \\
+\midrule
+20260904 & clean & 0.346 & 0.868 & 0.333 & 0.328 \\
+20260904 & distractor & 0.352 & 0.847 & 0.371 & 0.427 \\
+20260905 & clean & 0.318 & 0.857 & 0.322 & 0.329 \\
+20260905 & distractor & 0.306 & 0.841 & 0.355 & 0.398 \\
+20260906 & clean & 0.329 & 0.877 & 0.470$^{*}$ & 0.329 \\
+20260906 & distractor & 0.361 & 0.840 & 0.285 & 0.342 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$^{*}$ B3 20260906 clean $= 0.470$ accompanies lo-class blindness in the
+readout; this cell is INVALID\_\allowbreak{}FOR\_\allowbreak{}INTERPRETATION (the nominal value is
+retained in the archive but is not treated as healthy 3-class decoding).
+At-chance cells with collapsed class coverage are flagged
+PASS\_\allowbreak{}WITH\_\allowbreak{}FLAG and excluded from claims.  Pooled contrasts (n = 6000
+test trials): B4 $-$ B3 distractor $+0.0570$ (95\% CI
+$[+0.0387,+0.0758]$); per-seed differences $+0.056/+0.043/+0.056$.  B4
+absolute distractor-condition bal3: 0.427 / 0.398 / 0.342 (attenuates;
+seed 20260906 $\approx$ chance).  B2 is the strongest model in every
+seed (fixed-position memory baseline).  B1 $\approx$ chance.  Shuffled-
+label controls return to chance under the amended permutation-null
+audit.

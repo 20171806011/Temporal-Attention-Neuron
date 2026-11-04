@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-02",
+  "purpose": "Fill omitted query endpoint ranges only; no decoder, fit, new test arm or performance re-evaluation.",
+  "targets_sha256": "4944142f2f3f2fb25b488c21a8c7cfc9224a85021703a56b84aeea6d27bc5c30",
+  "noise_seed": 20261106,
+  "n_histories": 4096,
+  "arms": {
+    "baseline": {
+      "tau_m": 10,
+      "tau_A": 15,
+      "cells": {
+        "noiseless": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5480083815032467,
+            "min": 0.5365269454951764,
+            "max": 0.5607103320799843
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.089683873928537,
+            "min": 0.08336875636377324,
+            "max": 0.09617725221839174
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5480083815032467,
+            "min": 0.5365269454951764,
+            "max": 0.5607103320799843
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.089683873928537,
+            "min": 0.08336875636377324,
+            "max": 0.09617725221839174
+          },
+          "physical_branch_departures": 0
+        },
+        "membrane_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5480085446679499,
+            "min": 0.5365197349147358,
+            "max": 0.5607062988855939
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.089683873928537,
+            "min": 0.08336875636377324,
+            "max": 0.09617725221839174
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_and_membrane": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5480085446679499,
+            "min": 0.5365197349147358,
+            "max": 0.5607062988855939
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.089683873928537,
+            "min": 0.08336875636377324,
+            "max": 0.09617725221839174
+          },
+          "physical_branch_departures": 0
+        },
+        "gate_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5480083895219015,
+            "min": 0.5365274016250631,
+            "max": 0.5607094075801179
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0896839707748231,
+            "min": 0.08337057118294047,
+            "max": 0.09617129518017895
+          },
+          "physical_branch_departures": 0
+        }
+      },
+      "f1_over_f2": 0.0047425015911935165,
+      "d100": 0.04387200979431237
+    },
+    "gate_only": {
+      "tau_m": 10,
+      "tau_A": 150,
+      "cells": {
+        "noiseless": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5162077119201359,
+            "min": 0.5139404662550715,
+            "max": 0.5187934941915234
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5162077119201359,
+            "min": 0.5139404662550715,
+            "max": 0.5187934941915234
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "membrane_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5162078750848391,
+            "min": 0.513944580888976,
+            "max": 0.5187912383663723
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_and_membrane": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5162078750848391,
+            "min": 0.513944580888976,
+            "max": 0.5187912383663723
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "gate_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.5162077224804077,
+            "min": 0.5139408727217845,
+            "max": 0.5187934020730358
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.04942011834307672,
+            "min": 0.04509827139822329,
+            "max": 0.053811576220647486
+          },
+          "physical_branch_departures": 0
+        }
+      },
+      "f1_over_f2": 0.5865418897514582,
+      "d100": 0.06101291203942187
+    },
+    "uniform": {
+      "tau_m": 100,
+      "tau_A": 150,
+      "cells": {
+        "noiseless": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.08180917210876593,
+            "min": 0.07989633786990036,
+            "max": 0.08401770540940377
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.08180917210876593,
+            "min": 0.07989633786990036,
+            "max": 0.08401770540940377
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "membrane_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.08180948292484819,
+            "min": 0.07990261307187763,
+            "max": 0.08401164665526648
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "sensor_and_membrane": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.08180948292484819,
+            "min": 0.07990261307187763,
+            "max": 0.08401164665526648
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.0494199496631032,
+            "min": 0.04509025711647144,
+            "max": 0.05380437864431027
+          },
+          "physical_branch_departures": 0
+        },
+        "gate_process_only": {
+          "endpoint_u_after_state_innovation": {
+            "mean": 0.0818091736161693,
+            "min": 0.07989639628147138,
+            "max": 0.08401772337622106
+          },
+          "endpoint_A_after_state_innovation": {
+            "mean": 0.04942011834307672,
+            "min": 0.04509827139822329,
+            "max": 0.053811576220647486
+          },
+          "physical_branch_departures": 0
+        }
+      },
+      "f1_over_f2": 0.5865418897514582,
+      "d100": 0.009208211958237782
+    }
+  },
+  "endpoint_semantics": "Physical state immediately after the 100th query drift and state innovation; sensor noise is observation-only and excluded.",
+  "original_outputs_modified": false,
+  "reset_carryover": "Not simulated; associated energy and throughput costs excluded."
+}

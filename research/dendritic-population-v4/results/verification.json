@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "mode": "complete",
+  "checks": 57138,
+  "development": {
+    "trajectories": 110,
+    "updates": 20000,
+    "sampled_objective_values": 130
+  },
+  "replication": {
+    "trajectories": 30,
+    "updates": 6000,
+    "sampled_objective_values": 30
+  },
+  "test_model_episodes": 20480,
+  "test_scalar_state_updates": 9830400,
+  "max_state_candidate_residual": 1.3322676295501878e-15,
+  "seconds": 13.714028981998126,
+  "scope": "Separate native equations/RNG/metrics/gates/bootstrap; complete stored-gradient Adam and probe-derived SPSA update reconstruction; independent first-step training objective checks. Other gradient values checked by separate gradient audit, not claimed independently recomputed here. Same workflow, not external replication."
+}

@@ -1,0 +1,783 @@
+{
+  "scope": "New local two-fixed-key mechanistic test, not P1B/v11 reproduction, not weight editing, no Codex",
+  "test_histories": 256,
+  "source_fidelity": {
+    "histories": 8,
+    "max_abs_discrepancy": 4.85722573273506e-16,
+    "reference": "inspected source recurrence, copied scalar step; no complete file download",
+    "spike_counts_match": true
+  },
+  "analytic_decoder": {
+    "bounded_sample_noise_worst_gain": 3.9451009224471023,
+    "elimination_factor": 0.4047319726783238,
+    "hold_decay": 0.99995,
+    "independent_unit_sample_noise_gain": 3.0297396724300807,
+    "lambda": 0.99,
+    "max_identity_error": 1.3322676295501878e-15,
+    "signal_denominator": 0.35606997141330016
+  },
+  "zero_predictor": {
+    "history_completion_fraction": 0.01171875,
+    "rmse": 0.2794538192428779
+  },
+  "decision": {
+    "local_success": true,
+    "no_general_online_binding_claim": true,
+    "no_original_P1B_label_changed": true,
+    "subthreshold_interpretation_valid": true
+  },
+  "paired_contrasts": [
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_EMA",
+      "delay_ms": 0,
+      "paired_history_percentile_95": [
+        1.5324102206062778e-06,
+        2.088630570509179e-06
+      ],
+      "postselection": false,
+      "rmse_difference": 1.8085175535302589e-06
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_zero",
+      "delay_ms": 0,
+      "paired_history_percentile_95": [
+        -0.28127479729595517,
+        -0.25930773734246826
+      ],
+      "postselection": false,
+      "rmse_difference": -0.26993538300231523
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_EMA",
+      "delay_ms": 50,
+      "paired_history_percentile_95": [
+        1.8211978083362747e-06,
+        2.437562185697573e-06
+      ],
+      "postselection": false,
+      "rmse_difference": 2.12225668612398e-06
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_zero",
+      "delay_ms": 50,
+      "paired_history_percentile_95": [
+        -0.27531569729319527,
+        -0.2537422506881095
+      ],
+      "postselection": false,
+      "rmse_difference": -0.2641892538241385
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_EMA",
+      "delay_ms": 200,
+      "paired_history_percentile_95": [
+        1.787783168512129e-06,
+        2.294787974089184e-06
+      ],
+      "postselection": false,
+      "rmse_difference": 2.033395830491891e-06
+    },
+    {
+      "bootstrap_replicates": 1000,
+      "contrast": "WHQ_minus_zero",
+      "delay_ms": 200,
+      "paired_history_percentile_95": [
+        -0.2558084467768264,
+        -0.23578353067520452
+      ],
+      "postselection": false,
+      "rmse_difference": -0.24555541950643936
+    }
+  ],
+  "rows": [
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.01171875,
+        "history_count": 256,
+        "mae": 0.23787822827038763,
+        "max_abs_error": 0.5343286731461696,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.45154109203116355,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.109375,
+        "query_count": 512,
+        "rmse": 0.2782512752651468,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.01171875,
+        "history_count": 256,
+        "mae": 0.2381137045857286,
+        "max_abs_error": 0.6156154410228427,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.45154109203116355,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.09765625,
+        "query_count": 512,
+        "rmse": 0.2786560440017794,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.006452654064080774,
+        "max_abs_error": 0.024295090572604372,
+        "max_membrane_drive": 0.7938151676323524,
+        "mean_integral_abs_membrane_drive": 10.20823216476657,
+        "mean_memory_total_variation": 0.4954586325859003,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.011010854737985756,
+          "cue_start": 0.008782412642040832,
+          "encoding_end": 0.008782412642040832
+        },
+        "rmse": 0.009329058254981367,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.006450923758166108,
+        "max_abs_error": 0.024288675478056743,
+        "max_membrane_drive": 0.7938191218060293,
+        "mean_integral_abs_membrane_drive": 10.208233913642193,
+        "mean_memory_total_variation": 0.4954635611845254,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.011008855156830281,
+          "cue_start": 0.008780627203782634,
+          "encoding_end": 0.008780627203782634
+        },
+        "rmse": 0.009327210631180418,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.23873241204424847,
+        "max_abs_error": 0.5230348187958688,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.46659711969786977,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.11328125,
+        "query_count": 512,
+        "rmse": 0.27901021827397077,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.24354655589262406,
+        "max_abs_error": 0.58094099960823,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.46659711969786977,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.099609375,
+        "query_count": 512,
+        "rmse": 0.2852894572113406,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.012207697711088818,
+        "max_abs_error": 0.035976268179460646,
+        "max_membrane_drive": 0.7865606661896564,
+        "mean_integral_abs_membrane_drive": 10.203090767363951,
+        "mean_memory_total_variation": 0.5068821265713196,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.017090643947726573,
+          "cue_start": 0.01461607587140141,
+          "encoding_end": 0.008782412642040832
+        },
+        "rmse": 0.015230650133537043,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.012206010127634205,
+        "max_abs_error": 0.03597001147807216,
+        "max_membrane_drive": 0.7865645227320275,
+        "mean_integral_abs_membrane_drive": 10.203092473058614,
+        "mean_memory_total_variation": 0.5068871399726149,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.01708847729602716,
+          "cue_start": 0.014613943708160895,
+          "encoding_end": 0.008780627203782634
+        },
+        "rmse": 0.015228509416424297,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.2387571049435433,
+        "max_abs_error": 0.5230348187958688,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.4671476660104955,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.111328125,
+        "query_count": 512,
+        "rmse": 0.2790316861236179,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.24356115531789335,
+        "max_abs_error": 0.5827166620407458,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751929262287334,
+        "mean_memory_total_variation": 0.4671476660104955,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.099609375,
+        "query_count": 512,
+        "rmse": 0.2853355840275654,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.73046875,
+        "history_count": 256,
+        "mae": 0.028634199574814667,
+        "max_abs_error": 0.06931761144265175,
+        "max_membrane_drive": 0.7658542930015418,
+        "mean_integral_abs_membrane_drive": 10.188415783263672,
+        "mean_memory_total_variation": 0.539487968811857,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.86328125,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.035613802198062025,
+          "cue_start": 0.0331918964464847,
+          "encoding_end": 0.008782412642040832
+        },
+        "rmse": 0.03378938971920991,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "clean",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.73046875,
+        "history_count": 256,
+        "mae": 0.02863263393319268,
+        "max_abs_error": 0.0693118068395775,
+        "max_membrane_drive": 0.7658578708768967,
+        "mean_integral_abs_membrane_drive": 10.188417365707819,
+        "mean_memory_total_variation": 0.5394932242636572,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.86328125,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.03561168095289479,
+          "cue_start": 0.0331897592958123,
+          "encoding_end": 0.008780627203782634
+        },
+        "rmse": 0.03378725683661249,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 254,
+        "history_completion_fraction": 0.01171875,
+        "history_count": 256,
+        "mae": 0.23787864821071597,
+        "max_abs_error": 0.5341935645420994,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.75229257877446,
+        "mean_memory_total_variation": 0.45151335741082843,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.109375,
+        "query_count": 512,
+        "rmse": 0.2782544796154113,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 254,
+        "history_completion_fraction": 0.01171875,
+        "history_count": 256,
+        "mae": 0.23787943175908993,
+        "max_abs_error": 0.6188089822441878,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.75229257877446,
+        "mean_memory_total_variation": 0.45151335741082843,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.103515625,
+        "query_count": 512,
+        "rmse": 0.2785287945247544,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.00674437177475818,
+        "max_abs_error": 0.02769203567141365,
+        "max_membrane_drive": 0.7938650931463337,
+        "mean_integral_abs_membrane_drive": 10.20807284400708,
+        "mean_memory_total_variation": 0.49553117709206307,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.011034957213429009,
+          "cue_start": 0.008805019749920427,
+          "encoding_end": 0.008805019749920427
+        },
+        "rmse": 0.009518436240562632,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 0,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.006742898647790128,
+        "max_abs_error": 0.02768452884001016,
+        "max_membrane_drive": 0.7938696707674953,
+        "mean_integral_abs_membrane_drive": 10.20807513393698,
+        "mean_memory_total_variation": 0.49553976279684653,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.011032962055491289,
+          "cue_start": 0.008803239303928545,
+          "encoding_end": 0.008803239303928545
+        },
+        "rmse": 0.0095166277230091,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 252,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.23873952843587215,
+        "max_abs_error": 0.5229772732100996,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751671747771994,
+        "mean_memory_total_variation": 0.46658190218110884,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.11328125,
+        "query_count": 512,
+        "rmse": 0.2790137527763842,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 252,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.24358478730196914,
+        "max_abs_error": 0.5819637044880612,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.751671747771994,
+        "mean_memory_total_variation": 0.46658190218110884,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.099609375,
+        "query_count": 512,
+        "rmse": 0.2854480600833422,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.01222563564147048,
+        "max_abs_error": 0.03781760619585456,
+        "max_membrane_drive": 0.786686712692189,
+        "mean_integral_abs_membrane_drive": 10.203219336571491,
+        "mean_memory_total_variation": 0.5069289523819918,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.017089304445598762,
+          "cue_start": 0.014623623311870709,
+          "encoding_end": 0.008783928422405036
+        },
+        "rmse": 0.015264565418739374,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 1.0,
+        "history_count": 256,
+        "mae": 0.012223953210795481,
+        "max_abs_error": 0.03780743824781657,
+        "max_membrane_drive": 0.7866912902966186,
+        "mean_integral_abs_membrane_drive": 10.203220423979943,
+        "mean_memory_total_variation": 0.5069366321987401,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 1.0,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.01708713839402956,
+          "cue_start": 0.014621494565022668,
+          "encoding_end": 0.00878216674431887
+        },
+        "rmse": 0.01526244316205325,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 256,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.23875828331806265,
+        "max_abs_error": 0.5229641449351181,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.75147333589627,
+        "mean_memory_total_variation": 0.46774493393798694,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.111328125,
+        "query_count": 512,
+        "rmse": 0.2790393668254841,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 256,
+        "history_completion_fraction": 0.0078125,
+        "history_count": 256,
+        "mae": 0.24344733660985313,
+        "max_abs_error": 0.5839796437691636,
+        "max_membrane_drive": 2.2099872692871765,
+        "mean_integral_abs_membrane_drive": 46.75147333589627,
+        "mean_memory_total_variation": 0.46774493393798694,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.099609375,
+        "query_count": 512,
+        "rmse": 0.285128542486724,
+        "selective_rejection": false,
+        "spikes_total": 512
+      },
+      "model": "original_M1_aux_affine",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.70703125,
+        "history_count": 256,
+        "mae": 0.02874009072495215,
+        "max_abs_error": 0.0722935901836505,
+        "max_membrane_drive": 0.7656263456171963,
+        "mean_integral_abs_membrane_drive": 10.18863791062924,
+        "mean_memory_total_variation": 0.5395504775083055,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.849609375,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.03563937214492128,
+          "cue_start": 0.033219016358813365,
+          "encoding_end": 0.00880324001476415
+        },
+        "rmse": 0.03389839973643851,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 200,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.70703125,
+        "history_count": 256,
+        "mae": 0.028738604503900242,
+        "max_abs_error": 0.07228608335223602,
+        "max_membrane_drive": 0.7656292066150319,
+        "mean_integral_abs_membrane_drive": 10.188639736090446,
+        "mean_memory_total_variation": 0.5395588213958976,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.849609375,
+        "query_count": 512,
+        "retention_rmse": {
+          "after_both_queries": 0.03563728382139096,
+          "cue_start": 0.03321692343347272,
+          "encoding_end": 0.008801483099596549
+        },
+        "rmse": 0.033896366340608025,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": false,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.1015625,
+        "history_count": 256,
+        "mae": 0.3136657479530115,
+        "max_abs_error": 0.973333762232246,
+        "max_membrane_drive": 0.7879885921729572,
+        "mean_integral_abs_membrane_drive": 10.20357843221037,
+        "mean_memory_total_variation": 0.5069289523819918,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.126953125,
+        "query_count": 512,
+        "rmse": 0.38921883557289794,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "bounded_WHQ",
+      "negative_control": true,
+      "split": "test"
+    },
+    {
+      "condition": "finite_bounded",
+      "delay_ms": 50,
+      "metrics": {
+        "attempt_fraction": 1.0,
+        "boundary_clip_history_count": 0,
+        "history_completion_fraction": 0.1015625,
+        "history_count": 256,
+        "mae": 0.3136667424097026,
+        "max_abs_error": 0.9733465817306767,
+        "max_membrane_drive": 0.7879914531714501,
+        "mean_integral_abs_membrane_drive": 10.20357947871673,
+        "mean_memory_total_variation": 0.5069366321987401,
+        "output_finite_fraction": 1.0,
+        "per_query_completion_fraction": 0.126953125,
+        "query_count": 512,
+        "rmse": 0.38922041593023693,
+        "selective_rejection": false,
+        "spikes_total": 0
+      },
+      "model": "rate_limited_EMA",
+      "negative_control": true,
+      "split": "test"
+    }
+  ]
+}
