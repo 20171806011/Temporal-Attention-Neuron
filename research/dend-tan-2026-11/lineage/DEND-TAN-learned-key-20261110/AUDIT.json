@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "checks": 309438,
+  "blocks": 12,
+  "fits": 36,
+  "updates": 21600,
+  "updates_per_fit": 600,
+  "evaluations": 168,
+  "forward_sample_steps": 101081088,
+  "dense_forward_macs": 15768649728,
+  "dense_backward_macs": 23887872000,
+  "max_numeric_error": 5.329070518200751e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 51671040,
+  "wall_seconds": 24.78996109997388,
+  "cpu_seconds": 18.71875,
+  "optimizer_updates": 21600,
+  "training_sample_steps": 99532800,
+  "first_last_training_replays": 72,
+  "evaluation_sample_steps": 1548288,
+  "duplicate_opposite_label_pairs": 9216,
+  "deletion_cases": 108,
+  "swap_cases": 24,
+  "oracle_cases": 36,
+  "oracle_margin_min": 0.9180334315372971,
+  "oracle_margin_bound": 0.6605887450304572,
+  "primary_effects": [
+    {
+      "effect": "learn_minus_mean",
+      "blocks": 12,
+      "values": [
+        0.3125,
+        0.2890625,
+        0.5234375,
+        0.609375,
+        0.6015625,
+        0.7265625,
+        0.5078125,
+        0.484375,
+        0.359375,
+        0.5234375,
+        0.828125,
+        0.5078125
+      ],
+      "mean": 0.5227864583333334,
+      "sample_sd": 0.15838240694977032,
+      "minimum": 0.2890625,
+      "maximum": 0.828125,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.4270833333333333,
+        0.6236979166666666
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "learn_swap_counterfactual_joint_gain",
+      "blocks": 12,
+      "values": [
+        0.796875,
+        0.984375,
+        1.0,
+        0.984375,
+        0.984375,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.828125,
+        1.0,
+        1.0
+      ],
+      "mean": 0.96484375,
+      "sample_sd": 0.07179621423056308,
+      "minimum": 0.796875,
+      "maximum": 1.0,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.9153645833333334,
+        0.9973958333333334
+      ],
+      "direction": "positive"
+    }
+  ],
+  "scope": "Independent stimulus generation, initial weights, all stored objectives and Adam updates, first/last native forwards, all evaluation raw replays, resource and FIFO/matcher invariants, exact deletion equivalences, swap prefix and bank identity, and paired bootstraps. Scientific parameter gradients are not independently regenerated at each update."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": 14548,
+  "models": 36,
+  "neural_training_updates": 0,
+  "baseline_captures": 72,
+  "probe_fits": 396,
+  "forward_sample_steps": 1327104,
+  "dense_forward_macs": 207028224,
+  "benchmark_batches": 6912,
+  "shuffle_invariance_checks": 576,
+  "matched_test_models": 32,
+  "source_scalar_attention_models": 18,
+  "source_scalar_episodes": 36,
+  "max_numeric_error": 3.2529534621517087e-14,
+  "max_coefficient_error": 3.091971123581061e-14,
+  "max_normal_equation_residual": 7.702172233337023e-15,
+  "wall_seconds": 11.43710270000156,
+  "cpu_seconds": 8.875,
+  "cap_seconds": 300,
+  "scope": "Independent data and time orders, exact native query raster/counts/resources, augmented SVD fits, direct and folded affine scores, count/synchrony/native invariance, equal-count ranks, fixed-count BA, positive benchmark samples and medians, resource and timing ledgers, pre-test fit and source locks, 36 original scalar TAN episode checks."
+}

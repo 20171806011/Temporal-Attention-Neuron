@@ -1,0 +1,385 @@
+{
+  "status": "COMPLETE_ENGINEERING_ONLY",
+  "failure": null,
+  "utc_start": "2026-11-11T17:50:40.569816+00:00",
+  "utc_finish": "2026-11-11T17:52:10.558668+00:00",
+  "wall_seconds": 89.98658630007412,
+  "outside_stage_seconds": 30.469934199587442,
+  "completed_trial_observation_and_bookkeeping_seconds": 30.463617300032638,
+  "cumulative_stage_seconds": {
+    "science": 25.776049500331283,
+    "audit": 33.7406026001554
+  },
+  "peak_working_set_bytes": 76955648,
+  "artifact_bytes": 94941435,
+  "edges": [
+    {
+      "variant": "A",
+      "directory": "edge_A",
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:50:40.573827+00:00",
+        "status": "ok",
+        "percentages": [
+          50
+        ],
+        "utc_finish": "2026-11-11T17:50:43.252316+00:00"
+      },
+      "utc_start": "2026-11-11T17:50:43.252316+00:00",
+      "monotonic_start": 524909.0199989,
+      "science_utc_start": "2026-11-11T17:50:43.252316+00:00",
+      "science_monotonic_start": 524909.020003,
+      "science_seconds": 0.16860119998455048,
+      "science_utc_finish": "2026-11-11T17:50:43.420426+00:00",
+      "science_monotonic_finish": 524909.1886042,
+      "audit_utc_start": "2026-11-11T17:50:43.420426+00:00",
+      "audit_monotonic_start": 524909.1886722,
+      "audit_seconds": 0.45233760005794466,
+      "audit_utc_finish": "2026-11-11T17:50:43.873460+00:00",
+      "audit_monotonic_finish": 524909.6410098,
+      "monotonic_finish": 524909.6411348,
+      "utc_finish": "2026-11-11T17:50:43.873460+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:50:43.873460+00:00",
+        "status": "ok",
+        "percentages": [
+          63
+        ],
+        "utc_finish": "2026-11-11T17:50:45.539586+00:00"
+      },
+      "peak_working_set_bytes": 48242688,
+      "trial_bytes": 634057
+    },
+    {
+      "variant": "B",
+      "directory": "edge_B",
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:50:45.542772+00:00",
+        "status": "ok",
+        "percentages": [
+          54
+        ],
+        "utc_finish": "2026-11-11T17:50:47.175868+00:00"
+      },
+      "utc_start": "2026-11-11T17:50:47.175868+00:00",
+      "monotonic_start": 524912.9438728,
+      "science_utc_start": "2026-11-11T17:50:47.175868+00:00",
+      "science_monotonic_start": 524912.9438761,
+      "science_seconds": 0.13433230004739016,
+      "science_utc_finish": "2026-11-11T17:50:47.310790+00:00",
+      "science_monotonic_finish": 524913.0782084,
+      "audit_utc_start": "2026-11-11T17:50:47.310790+00:00",
+      "audit_monotonic_start": 524913.078241,
+      "audit_seconds": 0.48609070002567023,
+      "audit_utc_finish": "2026-11-11T17:50:47.796080+00:00",
+      "audit_monotonic_finish": 524913.5643317,
+      "monotonic_finish": 524913.5644024,
+      "utc_finish": "2026-11-11T17:50:47.796080+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:50:47.796080+00:00",
+        "status": "ok",
+        "percentages": [
+          57
+        ],
+        "utc_finish": "2026-11-11T17:50:49.406067+00:00"
+      },
+      "peak_working_set_bytes": 48365568,
+      "trial_bytes": 634057
+    },
+    {
+      "variant": "C",
+      "directory": "edge_C",
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:50:49.407070+00:00",
+        "status": "ok",
+        "percentages": [
+          57
+        ],
+        "utc_finish": "2026-11-11T17:50:51.010861+00:00"
+      },
+      "utc_start": "2026-11-11T17:50:51.010861+00:00",
+      "monotonic_start": 524916.7785645,
+      "science_utc_start": "2026-11-11T17:50:51.010861+00:00",
+      "science_monotonic_start": 524916.7785669,
+      "science_seconds": 0.0960468000266701,
+      "science_utc_finish": "2026-11-11T17:50:51.106666+00:00",
+      "science_monotonic_finish": 524916.8746137,
+      "audit_utc_start": "2026-11-11T17:50:51.106666+00:00",
+      "audit_monotonic_start": 524916.8746468,
+      "audit_seconds": 0.4367470999713987,
+      "audit_utc_finish": "2026-11-11T17:50:51.543187+00:00",
+      "audit_monotonic_finish": 524917.3113939,
+      "monotonic_finish": 524917.3114557,
+      "utc_finish": "2026-11-11T17:50:51.543187+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:50:51.543187+00:00",
+        "status": "ok",
+        "percentages": [
+          70
+        ],
+        "utc_finish": "2026-11-11T17:50:53.210172+00:00"
+      },
+      "peak_working_set_bytes": 48365568,
+      "trial_bytes": 1386713
+    }
+  ],
+  "trials": [
+    {
+      "repeat": 1,
+      "variant": "A",
+      "directory": "r1_A",
+      "packet_size": 32,
+      "zip_mode": 8,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:50:53.212507+00:00",
+        "status": "ok",
+        "percentages": [
+          66
+        ],
+        "utc_finish": "2026-11-11T17:50:54.840382+00:00"
+      },
+      "utc_start": "2026-11-11T17:50:54.840382+00:00",
+      "monotonic_start": 524920.6085791,
+      "science_utc_start": "2026-11-11T17:50:54.840382+00:00",
+      "science_monotonic_start": 524920.6085805,
+      "science_seconds": 6.7655642000027,
+      "science_utc_finish": "2026-11-11T17:51:01.606035+00:00",
+      "science_monotonic_finish": 524927.3741447,
+      "audit_utc_start": "2026-11-11T17:51:01.607027+00:00",
+      "audit_monotonic_start": 524927.3741815,
+      "independent_block_seconds": 3.8205914000282064,
+      "baseline_comparison_seconds": 1.1493098000064492,
+      "audit_seconds": 4.992087499937043,
+      "audit_utc_finish": "2026-11-11T17:51:06.599206+00:00",
+      "audit_monotonic_finish": 524932.366269,
+      "monotonic_finish": 524932.3663552,
+      "utc_finish": "2026-11-11T17:51:06.599206+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:51:06.599206+00:00",
+        "status": "ok",
+        "percentages": [
+          26
+        ],
+        "utc_finish": "2026-11-11T17:51:08.275738+00:00"
+      },
+      "peak_working_set_bytes": 72294400,
+      "trial_bytes": 7576338
+    },
+    {
+      "repeat": 1,
+      "variant": "B",
+      "directory": "r1_B",
+      "packet_size": 256,
+      "zip_mode": 8,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:51:08.281167+00:00",
+        "status": "ok",
+        "percentages": [
+          29
+        ],
+        "utc_finish": "2026-11-11T17:51:09.856476+00:00"
+      },
+      "utc_start": "2026-11-11T17:51:09.856476+00:00",
+      "monotonic_start": 524935.6236948,
+      "science_utc_start": "2026-11-11T17:51:09.856476+00:00",
+      "science_monotonic_start": 524935.6236962,
+      "science_seconds": 3.8314801000524312,
+      "science_utc_finish": "2026-11-11T17:51:13.687320+00:00",
+      "science_monotonic_finish": 524939.4551763,
+      "audit_utc_start": "2026-11-11T17:51:13.687320+00:00",
+      "audit_monotonic_start": 524939.4552144,
+      "independent_block_seconds": 4.134331300039776,
+      "baseline_comparison_seconds": 1.344215500052087,
+      "audit_seconds": 5.505985700059682,
+      "audit_utc_finish": "2026-11-11T17:51:19.193895+00:00",
+      "audit_monotonic_finish": 524944.9612001,
+      "monotonic_finish": 524944.961233,
+      "utc_finish": "2026-11-11T17:51:19.193895+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:51:19.193895+00:00",
+        "status": "ok",
+        "percentages": [
+          7
+        ],
+        "utc_finish": "2026-11-11T17:51:20.831131+00:00"
+      },
+      "peak_working_set_bytes": 76435456,
+      "trial_bytes": 7559280
+    },
+    {
+      "repeat": 1,
+      "variant": "C",
+      "directory": "r1_C",
+      "packet_size": 256,
+      "zip_mode": 0,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:51:20.843199+00:00",
+        "status": "ok",
+        "percentages": [
+          1
+        ],
+        "utc_finish": "2026-11-11T17:51:22.457168+00:00"
+      },
+      "utc_start": "2026-11-11T17:51:22.457168+00:00",
+      "monotonic_start": 524948.2249093,
+      "science_utc_start": "2026-11-11T17:51:22.457168+00:00",
+      "science_monotonic_start": 524948.2249107,
+      "science_seconds": 2.7834429000504315,
+      "science_utc_finish": "2026-11-11T17:51:25.240884+00:00",
+      "science_monotonic_finish": 524951.0083536,
+      "audit_utc_start": "2026-11-11T17:51:25.240884+00:00",
+      "audit_monotonic_start": 524951.008391,
+      "independent_block_seconds": 4.839193399995565,
+      "baseline_comparison_seconds": 1.2062276999931782,
+      "audit_seconds": 6.08576060004998,
+      "audit_utc_finish": "2026-11-11T17:51:31.326986+00:00",
+      "audit_monotonic_finish": 524957.0941516,
+      "monotonic_finish": 524957.0941813,
+      "utc_finish": "2026-11-11T17:51:31.326986+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:51:31.326986+00:00",
+        "status": "ok",
+        "percentages": [
+          60
+        ],
+        "utc_finish": "2026-11-11T17:51:33.050090+00:00"
+      },
+      "peak_working_set_bytes": 76918784,
+      "trial_bytes": 30893915
+    },
+    {
+      "repeat": 2,
+      "variant": "C",
+      "directory": "r2_C",
+      "packet_size": 256,
+      "zip_mode": 0,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:51:33.056191+00:00",
+        "status": "ok",
+        "percentages": [
+          65
+        ],
+        "utc_finish": "2026-11-11T17:51:34.665618+00:00"
+      },
+      "utc_start": "2026-11-11T17:51:34.665618+00:00",
+      "monotonic_start": 524960.432431,
+      "science_utc_start": "2026-11-11T17:51:34.665618+00:00",
+      "science_monotonic_start": 524960.4324333,
+      "science_seconds": 3.130562800099142,
+      "science_utc_finish": "2026-11-11T17:51:37.795988+00:00",
+      "science_monotonic_finish": 524963.5629961,
+      "audit_utc_start": "2026-11-11T17:51:37.795988+00:00",
+      "audit_monotonic_start": 524963.5630552,
+      "independent_block_seconds": 4.030212200013921,
+      "baseline_comparison_seconds": 1.01160870003514,
+      "audit_seconds": 5.104516799910925,
+      "audit_utc_finish": "2026-11-11T17:51:42.901175+00:00",
+      "audit_monotonic_finish": 524968.667572,
+      "monotonic_finish": 524968.6676391,
+      "utc_finish": "2026-11-11T17:51:42.901175+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:51:42.901175+00:00",
+        "status": "ok",
+        "percentages": [
+          43
+        ],
+        "utc_finish": "2026-11-11T17:51:44.507202+00:00"
+      },
+      "peak_working_set_bytes": 76955648,
+      "trial_bytes": 30893918
+    },
+    {
+      "repeat": 2,
+      "variant": "B",
+      "directory": "r2_B",
+      "packet_size": 256,
+      "zip_mode": 8,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:51:44.518352+00:00",
+        "status": "ok",
+        "percentages": [
+          60
+        ],
+        "utc_finish": "2026-11-11T17:51:46.128044+00:00"
+      },
+      "utc_start": "2026-11-11T17:51:46.128044+00:00",
+      "monotonic_start": 524971.8954534,
+      "science_utc_start": "2026-11-11T17:51:46.128044+00:00",
+      "science_monotonic_start": 524971.8954552,
+      "science_seconds": 3.548131800023839,
+      "science_utc_finish": "2026-11-11T17:51:49.677142+00:00",
+      "science_monotonic_finish": 524975.443587,
+      "audit_utc_start": "2026-11-11T17:51:49.677142+00:00",
+      "audit_monotonic_start": 524975.443624,
+      "independent_block_seconds": 4.346673000021838,
+      "baseline_comparison_seconds": 0.9579697999870405,
+      "audit_seconds": 5.346601900062524,
+      "audit_utc_finish": "2026-11-11T17:51:55.023404+00:00",
+      "audit_monotonic_finish": 524980.7902259,
+      "monotonic_finish": 524980.790273,
+      "utc_finish": "2026-11-11T17:51:55.023404+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:51:55.023404+00:00",
+        "status": "ok",
+        "percentages": [
+          73
+        ],
+        "utc_finish": "2026-11-11T17:51:56.668647+00:00"
+      },
+      "peak_working_set_bytes": 76955648,
+      "trial_bytes": 7559298
+    },
+    {
+      "repeat": 2,
+      "variant": "A",
+      "directory": "r2_A",
+      "packet_size": 32,
+      "zip_mode": 8,
+      "stage": "complete",
+      "load_before": {
+        "utc_start": "2026-11-11T17:51:56.672668+00:00",
+        "status": "ok",
+        "percentages": [
+          49
+        ],
+        "utc_finish": "2026-11-11T17:51:58.321225+00:00"
+      },
+      "utc_start": "2026-11-11T17:51:58.321225+00:00",
+      "monotonic_start": 524984.0874506,
+      "science_utc_start": "2026-11-11T17:51:58.321225+00:00",
+      "science_monotonic_start": 524984.0874525,
+      "science_seconds": 5.317887400044128,
+      "science_utc_finish": "2026-11-11T17:52:03.639064+00:00",
+      "science_monotonic_finish": 524989.4053399,
+      "audit_utc_start": "2026-11-11T17:52:03.639064+00:00",
+      "audit_monotonic_start": 524989.4053869,
+      "independent_block_seconds": 4.326475900015794,
+      "baseline_comparison_seconds": 0.9486791000235826,
+      "audit_seconds": 5.330474700080231,
+      "audit_utc_finish": "2026-11-11T17:52:08.969844+00:00",
+      "audit_monotonic_finish": 524994.7358616,
+      "monotonic_finish": 524994.7358963,
+      "utc_finish": "2026-11-11T17:52:08.969844+00:00",
+      "load_after": {
+        "utc_start": "2026-11-11T17:52:08.969844+00:00",
+        "status": "ok",
+        "percentages": [
+          57
+        ],
+        "utc_finish": "2026-11-11T17:52:10.554641+00:00"
+      },
+      "peak_working_set_bytes": 76955648,
+      "trial_bytes": 7576353
+    }
+  ],
+  "formal_training_fits": 0,
+  "formal_evaluations": 0,
+  "formal_data_generated": false
+}

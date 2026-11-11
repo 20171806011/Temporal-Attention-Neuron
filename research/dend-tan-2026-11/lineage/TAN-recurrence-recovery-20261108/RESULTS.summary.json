@@ -1,0 +1,180 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "groups",
+    "restoration_contrasts",
+    "inference"
+  ],
+  "retained_top_level_keys": [
+    "restoration_contrasts",
+    "inference"
+  ],
+  "omitted_top_level_keys": [
+    "groups"
+  ],
+  "data": {
+    "restoration_contrasts": [
+      {
+        "arm": "DEND",
+        "h": 24,
+        "lr": 0.01,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.4107142857142857,
+          0.2142857142857143,
+          0.4285714285714286
+        ],
+        "mean": 0.3511904761904762,
+        "min": 0.2142857142857143,
+        "max": 0.4285714285714286,
+        "n": 3,
+        "ci95": [
+          0.2142857142857143,
+          0.4285714285714286
+        ]
+      },
+      {
+        "arm": "DEND",
+        "h": 24,
+        "lr": 0.0025,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.017857142857142905,
+          0.3546626984126984,
+          0.4241071428571428
+        ],
+        "mean": 0.265542328042328,
+        "min": 0.017857142857142905,
+        "max": 0.4241071428571428,
+        "n": 3,
+        "ci95": [
+          0.017857142857142905,
+          0.4241071428571428
+        ]
+      },
+      {
+        "arm": "DEND",
+        "h": 96,
+        "lr": 0.01,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "arm": "DEND",
+        "h": 96,
+        "lr": 0.0025,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": true,
+        "values": [
+          0.46875,
+          0.36656746031746035,
+          0.4419642857142857
+        ],
+        "mean": 0.42576058201058203,
+        "min": 0.36656746031746035,
+        "max": 0.46875,
+        "n": 3,
+        "ci95": [
+          0.3665674603174603,
+          0.46875
+        ]
+      },
+      {
+        "arm": "POINT",
+        "h": 24,
+        "lr": 0.01,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.02777777777777779,
+          0.004464285714285698,
+          0.02777777777777779
+        ],
+        "mean": 0.02000661375661376,
+        "min": 0.004464285714285698,
+        "max": 0.02777777777777779,
+        "n": 3,
+        "ci95": [
+          0.004464285714285698,
+          0.02777777777777779
+        ]
+      },
+      {
+        "arm": "POINT",
+        "h": 24,
+        "lr": 0.0025,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "arm": "POINT",
+        "h": 96,
+        "lr": 0.01,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": false,
+        "values": [
+          0.10714285714285715,
+          0.0,
+          0.0
+        ],
+        "mean": 0.03571428571428572,
+        "min": 0.0,
+        "max": 0.10714285714285715,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.10714285714285715
+        ]
+      },
+      {
+        "arm": "POINT",
+        "h": 96,
+        "lr": 0.0025,
+        "comparison": "resumption_benefit_L24_R48",
+        "primary": true,
+        "values": [
+          0.1116071428571429,
+          0.0535714285714286,
+          0.11011904761904756
+        ],
+        "mean": 0.09176587301587302,
+        "min": 0.0535714285714286,
+        "max": 0.1116071428571429,
+        "n": 3,
+        "ci95": [
+          0.0535714285714286,
+          0.1116071428571429
+        ]
+      }
+    ],
+    "inference": "Three original fitted-model blocks, new stimuli. Two primary contrasts at h96/lr.0025 chosen prospectively for this new mechanism assay after observing the prior fit study. All 24 fitted models retained. Pointwise unadjusted block bootstrap."
+  }
+}

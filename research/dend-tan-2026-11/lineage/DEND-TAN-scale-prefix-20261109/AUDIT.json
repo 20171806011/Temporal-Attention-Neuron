@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "checks": 9509,
+  "blocks": 12,
+  "examples_per_block": 256,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 620544,
+  "path_sample_steps": 774144,
+  "dense_forward_macs": 96804864,
+  "max_numeric_error": 5.329070518200751e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 51990528,
+  "evaluations": 84,
+  "mixed_cases": 24,
+  "sham_pairs": 12,
+  "wall_seconds": 6.097715899988543,
+  "cpu_seconds": 3.578125,
+  "input_array_bytes": 5308416,
+  "retained_raw_array_bytes": 23918592,
+  "boundary_bank_bytes": 5554176,
+  "primary_effects": [
+    {
+      "effect": "prefix_total_effect",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 12,
+      "negative": 0,
+      "ci97_5": [
+        0.0,
+        0.0
+      ],
+      "direction": "undetermined"
+    },
+    {
+      "effect": "trace_source_effect",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 12,
+      "negative": 0,
+      "ci97_5": [
+        0.0,
+        0.0
+      ],
+      "direction": "undetermined"
+    }
+  ],
+  "boundary_by_block": [
+    {
+      "seed": 0,
+      "native_graded_changed": 256,
+      "native_spike_changed": 4,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.4239572619217302,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 1,
+      "native_graded_changed": 256,
+      "native_spike_changed": 4,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.575696584783097,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 2,
+      "native_graded_changed": 256,
+      "native_spike_changed": 2,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.5617096806338562,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 3,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.23292981365002213,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 4,
+      "native_graded_changed": 256,
+      "native_spike_changed": 2,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.4769921308409737,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 5,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.08016343739669896,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 6,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.16747238334424708,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 7,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.13225468665507922,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 8,
+      "native_graded_changed": 256,
+      "native_spike_changed": 2,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.31848721004302816,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 9,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.0007851731341179113,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 10,
+      "native_graded_changed": 256,
+      "native_spike_changed": 2,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.5147260507204163,
+      "max_trace_difference": 0.0
+    },
+    {
+      "seed": 11,
+      "native_graded_changed": 256,
+      "native_spike_changed": 0,
+      "trace_fast_changed": 0,
+      "trace_slow_changed": 0,
+      "max_native_graded_difference": 0.13557018166174206,
+      "max_trace_difference": 0.0
+    }
+  ],
+  "scope": "Independent source provenance, stimulus regeneration, all native replays, exact crossed entry origins and sham control, read/write timing and clamp, resource ledgers, and primary block bootstrap."
+}

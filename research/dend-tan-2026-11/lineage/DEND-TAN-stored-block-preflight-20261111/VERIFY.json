@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "timing_status": "FEASIBLE",
+  "checks": 1796,
+  "selected_examples_per_block": 256,
+  "completed_trials": 4,
+  "trials": [
+    {
+      "directory": "trials/n512_r1",
+      "examples": 512,
+      "checks": 16257,
+      "max_numeric_error": 1.7763568394002505e-15,
+      "work": {
+        "main_sample_steps": 147456,
+        "branch_sample_steps": 24864,
+        "replay_sample_steps": 40800,
+        "online_sample_steps": 172320,
+        "native_macs": 33246720,
+        "shared_calls": 16,
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 552,
+        "spot_native_macs": 1164384,
+        "evicted_comparisons": 2432,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1331,
+        "isolated_native_macs": 567060,
+        "isolated_evicted_comparisons": 64
+      },
+      "audit_work": {
+        "shared": {
+          "main_sample_steps": 147456,
+          "branch_sample_steps": 24864,
+          "replay_sample_steps": 40800,
+          "online_sample_steps": 172320,
+          "native_macs": 33246720
+        },
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 552,
+        "isolated_pairs": 32,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1331,
+        "isolated_evicted_comparisons": 64,
+        "guard_comparisons": 2432,
+        "blocked_triggers": 192,
+        "missing_opposite_label_pairs": 512
+      }
+    },
+    {
+      "directory": "trials/n512_r2",
+      "examples": 512,
+      "checks": 16257,
+      "max_numeric_error": 1.7763568394002505e-15,
+      "work": {
+        "main_sample_steps": 147456,
+        "branch_sample_steps": 24864,
+        "replay_sample_steps": 40800,
+        "online_sample_steps": 172320,
+        "native_macs": 33246720,
+        "shared_calls": 16,
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 552,
+        "spot_native_macs": 1164384,
+        "evicted_comparisons": 2432,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1331,
+        "isolated_native_macs": 567060,
+        "isolated_evicted_comparisons": 64
+      },
+      "audit_work": {
+        "shared": {
+          "main_sample_steps": 147456,
+          "branch_sample_steps": 24864,
+          "replay_sample_steps": 40800,
+          "online_sample_steps": 172320,
+          "native_macs": 33246720
+        },
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 552,
+        "isolated_pairs": 32,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1331,
+        "isolated_evicted_comparisons": 64,
+        "guard_comparisons": 2432,
+        "blocked_triggers": 192,
+        "missing_opposite_label_pairs": 512
+      }
+    },
+    {
+      "directory": "trials/n256_r1",
+      "examples": 256,
+      "checks": 16258,
+      "max_numeric_error": 1.7763568394002505e-15,
+      "work": {
+        "main_sample_steps": 73728,
+        "branch_sample_steps": 12528,
+        "replay_sample_steps": 20304,
+        "online_sample_steps": 86256,
+        "native_macs": 16623360,
+        "shared_calls": 8,
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 980,
+        "spot_native_macs": 1231152,
+        "evicted_comparisons": 1216,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1333,
+        "isolated_native_macs": 567372,
+        "isolated_evicted_comparisons": 64
+      },
+      "audit_work": {
+        "shared": {
+          "main_sample_steps": 73728,
+          "branch_sample_steps": 12528,
+          "replay_sample_steps": 20304,
+          "online_sample_steps": 86256,
+          "native_macs": 16623360
+        },
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 980,
+        "isolated_pairs": 32,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1333,
+        "isolated_evicted_comparisons": 64,
+        "guard_comparisons": 1216,
+        "blocked_triggers": 96,
+        "missing_opposite_label_pairs": 256
+      }
+    },
+    {
+      "directory": "trials/n256_r2",
+      "examples": 256,
+      "checks": 16258,
+      "max_numeric_error": 1.7763568394002505e-15,
+      "work": {
+        "main_sample_steps": 73728,
+        "branch_sample_steps": 12528,
+        "replay_sample_steps": 20304,
+        "online_sample_steps": 86256,
+        "native_macs": 16623360,
+        "shared_calls": 8,
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 980,
+        "spot_native_macs": 1231152,
+        "evicted_comparisons": 1216,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1333,
+        "isolated_native_macs": 567372,
+        "isolated_evicted_comparisons": 64
+      },
+      "audit_work": {
+        "shared": {
+          "main_sample_steps": 73728,
+          "branch_sample_steps": 12528,
+          "replay_sample_steps": 20304,
+          "online_sample_steps": 86256,
+          "native_macs": 16623360
+        },
+        "spot_calls": 24,
+        "spot_online_sample_steps": 6912,
+        "spot_replay_sample_steps": 980,
+        "isolated_pairs": 32,
+        "isolated_calls": 64,
+        "isolated_online_sample_steps": 2304,
+        "isolated_replay_sample_steps": 1333,
+        "isolated_evicted_comparisons": 64,
+        "guard_comparisons": 1216,
+        "blocked_triggers": 96,
+        "missing_opposite_label_pairs": 256
+      }
+    }
+  ],
+  "cumulative_stage_seconds": {
+    "science": 13.501170000061393,
+    "audit": 23.209608100005426
+  },
+  "artifact_bytes_at_verification": 173418627,
+  "frozen_source_files": 28,
+  "frozen_reference_files": 102,
+  "formal_training_fits": 0,
+  "formal_evaluations": 0,
+  "scientific_data_generated": false,
+  "scope": "Saved hashes, frozen same-size references, complete 24-path and 32-pair ledgers, fixed gap, all-audit and artifact budgets; no model invocation.",
+  "wall_seconds": 0.40514689998235554,
+  "audit_seconds_including_verification": 23.61475499998778
+}

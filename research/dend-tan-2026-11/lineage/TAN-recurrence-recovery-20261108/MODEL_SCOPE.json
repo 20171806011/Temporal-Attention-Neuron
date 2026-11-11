@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-08T02:15:01.188201+00:00",
+  "latest_repository_HEAD": "7dcddee41490d8d917936891989eeb7ddb67e0da",
+  "older_working_copy_HEAD": "18ce89c68fc86f7fc4bd8e6087213af2f79f5130",
+  "original_habituation_git_blob": "692be3cfed27b1a76943a620454fa0afc0ef24d4",
+  "sources": [
+    {
+      "copy": "model_scope_sources/original_tan.py",
+      "source_path": "REDACTED_LOCAL_PATH",
+      "sha256": "bcf8a3bbc390bdc672c1d80c669410e550011450a94db8c5330706be4c78ddfa",
+      "git_blob": "d4e0ba873955b6e6b1f10bd36403f79c2666de51",
+      "verified_matches_latest_HEAD_tree": true
+    },
+    {
+      "copy": "model_scope_sources/population_v10_model.py",
+      "source_path": "REDACTED_LOCAL_PATH",
+      "sha256": "409dd9157881fff29fc751a2646b4afdb4b72befc5438c90b56b249cf966b2b8",
+      "git_blob": "19f22cde11f30af913b214c834ccaab242e6b84c",
+      "verified_matches_latest_HEAD_tree": true
+    },
+    {
+      "copy": "model_scope_sources/repository_README.md",
+      "source_path": "REDACTED_LOCAL_PATH",
+      "sha256": "c58e442dab8a2c7b9eecd6a0417dd751eba298b56a8bc947c377ca11f0504c7b",
+      "git_blob": "9891dd7431a09f17236586f30978f20b75e2a12e",
+      "verified_matches_latest_HEAD_tree": true
+    }
+  ],
+  "current_model_sha256": "1b3f72f6ad3d54d4bcbbbb2ea43c5f6b65dcf12f83095435d8469be5144c2418",
+  "current_native_engine_sha256": "d4b616d4a8b905b376e36fc77f100639760864d61d9b704bb896758d7e1afe2d",
+  "conclusion": "The current DEND/POINT population models do not implement the original TAN temporal-attention mechanism. No architecture was modified during this read-only comparison."
+}

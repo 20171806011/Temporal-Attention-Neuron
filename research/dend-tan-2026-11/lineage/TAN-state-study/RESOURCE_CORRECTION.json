@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "utc": "2026-11-07T23:09:04.483583+00:00",
+  "affected_rows": 15,
+  "corrections": [
+    {
+      "id": "s0_POINT_retrained_write_cut_local",
+      "blocked_branch_events_mean": 1.8828125,
+      "original_branch_event_deliveries": 12.8515625,
+      "corrected_branch_event_deliveries": 10.96875,
+      "original_consumed_internal_event_deliveries": 61.9375,
+      "corrected_consumed_internal_event_deliveries": 60.0546875
+    },
+    {
+      "id": "s0_POINT_retrained_hold_cut_local",
+      "blocked_branch_events_mean": 0.298828125,
+      "original_branch_event_deliveries": 13.2734375,
+      "corrected_branch_event_deliveries": 12.974609375,
+      "original_consumed_internal_event_deliveries": 66.9296875,
+      "corrected_consumed_internal_event_deliveries": 66.630859375
+    },
+    {
+      "id": "s0_POINT_retrained_query_cut_local",
+      "blocked_branch_events_mean": 0.759765625,
+      "original_branch_event_deliveries": 12.60546875,
+      "corrected_branch_event_deliveries": 11.845703125,
+      "original_consumed_internal_event_deliveries": 62.69921875,
+      "corrected_consumed_internal_event_deliveries": 61.939453125
+    },
+    {
+      "id": "s1_POINT_retrained_write_cut_local",
+      "blocked_branch_events_mean": 2.228515625,
+      "original_branch_event_deliveries": 17.669921875,
+      "corrected_branch_event_deliveries": 15.44140625,
+      "original_consumed_internal_event_deliveries": 55.388671875,
+      "corrected_consumed_internal_event_deliveries": 53.16015625
+    },
+    {
+      "id": "s1_POINT_retrained_hold_cut_local",
+      "blocked_branch_events_mean": 0.26171875,
+      "original_branch_event_deliveries": 17.642578125,
+      "corrected_branch_event_deliveries": 17.380859375,
+      "original_consumed_internal_event_deliveries": 60.533203125,
+      "corrected_consumed_internal_event_deliveries": 60.271484375
+    },
+    {
+      "id": "s1_POINT_retrained_query_cut_local",
+      "blocked_branch_events_mean": 2.296875,
+      "original_branch_event_deliveries": 17.7265625,
+      "corrected_branch_event_deliveries": 15.4296875,
+      "original_consumed_internal_event_deliveries": 54.015625,
+      "corrected_consumed_internal_event_deliveries": 51.71875
+    },
+    {
+      "id": "s2_POINT_retrained_write_cut_local",
+      "blocked_branch_events_mean": 1.447265625,
+      "original_branch_event_deliveries": 12.55078125,
+      "corrected_branch_event_deliveries": 11.103515625,
+      "original_consumed_internal_event_deliveries": 48.26953125,
+      "corrected_consumed_internal_event_deliveries": 46.822265625
+    },
+    {
+      "id": "s2_POINT_retrained_hold_cut_local",
+      "blocked_branch_events_mean": 0.06640625,
+      "original_branch_event_deliveries": 12.6015625,
+      "corrected_branch_event_deliveries": 12.53515625,
+      "original_consumed_internal_event_deliveries": 52.890625,
+      "corrected_consumed_internal_event_deliveries": 52.82421875
+    },
+    {
+      "id": "s2_POINT_retrained_query_cut_local",
+      "blocked_branch_events_mean": 2.302734375,
+      "original_branch_event_deliveries": 12.494140625,
+      "corrected_branch_event_deliveries": 10.19140625,
+      "original_consumed_internal_event_deliveries": 45.298828125,
+      "corrected_consumed_internal_event_deliveries": 42.99609375
+    },
+    {
+      "id": "s3_POINT_retrained_write_cut_local",
+      "blocked_branch_events_mean": 1.279296875,
+      "original_branch_event_deliveries": 9.986328125,
+      "corrected_branch_event_deliveries": 8.70703125,
+      "original_consumed_internal_event_deliveries": 37.251953125,
+      "corrected_consumed_internal_event_deliveries": 35.97265625
+    },
+    {
+      "id": "s3_POINT_retrained_hold_cut_local",
+      "blocked_branch_events_mean": 0.0390625,
+      "original_branch_event_deliveries": 10.1953125,
+      "corrected_branch_event_deliveries": 10.15625,
+      "original_consumed_internal_event_deliveries": 43.6015625,
+      "corrected_consumed_internal_event_deliveries": 43.5625
+    },
+    {
+      "id": "s3_POINT_retrained_query_cut_local",
+      "blocked_branch_events_mean": 0.716796875,
+      "original_branch_event_deliveries": 10.216796875,
+      "corrected_branch_event_deliveries": 9.5,
+      "original_consumed_internal_event_deliveries": 40.029296875,
+      "corrected_consumed_internal_event_deliveries": 39.3125
+    },
+    {
+      "id": "s4_POINT_retrained_write_cut_local",
+      "blocked_branch_events_mean": 1.919921875,
+      "original_branch_event_deliveries": 12.876953125,
+      "corrected_branch_event_deliveries": 10.95703125,
+      "original_consumed_internal_event_deliveries": 58.564453125,
+      "corrected_consumed_internal_event_deliveries": 56.64453125
+    },
+    {
+      "id": "s4_POINT_retrained_hold_cut_local",
+      "blocked_branch_events_mean": 0.12890625,
+      "original_branch_event_deliveries": 13.498046875,
+      "corrected_branch_event_deliveries": 13.369140625,
+      "original_consumed_internal_event_deliveries": 66.271484375,
+      "corrected_consumed_internal_event_deliveries": 66.142578125
+    },
+    {
+      "id": "s4_POINT_retrained_query_cut_local",
+      "blocked_branch_events_mean": 1.044921875,
+      "original_branch_event_deliveries": 13.05859375,
+      "corrected_branch_event_deliveries": 12.013671875,
+      "original_consumed_internal_event_deliveries": 61.65234375,
+      "corrected_consumed_internal_event_deliveries": 60.607421875
+    }
+  ],
+  "scope": "Only POINT branch-to-soma cut rows overcounted delivered branch events. Native emitted events, dynamics, predictions, primary effects, training, and all fair-comparison resource rows are unchanged. Two separate forwards agree on all spikes; corrected delivery totals exclude the two blocked ticks."
+}

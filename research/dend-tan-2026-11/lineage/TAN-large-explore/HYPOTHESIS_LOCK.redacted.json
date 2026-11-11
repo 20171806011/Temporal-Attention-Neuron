@@ -1,0 +1,1967 @@
+{
+  "utc": "2026-11-07T23:46:44.300506+00:00",
+  "gates": {
+    "H1": false,
+    "H2": false,
+    "H3": false,
+    "H4": false
+  },
+  "selected": [],
+  "run_validation": false,
+  "include_rd0": false,
+  "exploration_metrics": {
+    "H1": [
+      0.3953373015873016,
+      0.4955357142857143,
+      0.5
+    ],
+    "H2_DEND_hold_events": [
+      477.859375,
+      489.49609375,
+      367.3203125
+    ],
+    "H2_POINT_hold_events": [
+      166.9921875,
+      152.35546875,
+      113.96484375
+    ],
+    "H3": [
+      0.020337301587301626,
+      0.008928571428571397,
+      0.0
+    ],
+    "H4": [
+      -0.007440476190476164,
+      -0.004464285714285698,
+      0.0
+    ]
+  },
+  "baseline_rows": [
+    {
+      "id": "s0_DEND_h24_full_d0_clean_baseline",
+      "model_id": "s0_DEND_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9513888888888888,
+      "accuracy": 0.9453125,
+      "coverage": 0.9921875,
+      "passed": true,
+      "class_recall": [
+        0.9027777777777778,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.1875,
+        0.9375,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          130,
+          12,
+          2
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0078125,
+      "branch_events": 0.0,
+      "hidden_events": 409.90234375,
+      "output_events": 17.47265625,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 18737.4375,
+      "output_deliveries": 780.7265625,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 19518.1640625,
+      "graded_local_transfers": 1152,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s0_DEND_h24_full_d8_clean_baseline",
+      "model_id": "s0_DEND_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9027777777777778,
+      "accuracy": 0.890625,
+      "coverage": 0.99609375,
+      "passed": true,
+      "class_recall": [
+        0.8055555555555556,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.25,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          116,
+          27,
+          1
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.00390625,
+      "branch_events": 0.0,
+      "hidden_events": 570.49609375,
+      "output_events": 23.078125,
+      "hold_events": 162.55859375,
+      "hold_hidden_events": 157.1953125,
+      "recurrent_deliveries": 26438.625,
+      "output_deliveries": 1101.609375,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 27540.234375,
+      "graded_local_transfers": 1536,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s0_DEND_h24_full_d24_clean_baseline",
+      "model_id": "s0_DEND_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.8988095238095238,
+      "accuracy": 0.890625,
+      "coverage": 0.99609375,
+      "passed": false,
+      "class_recall": [
+        0.8333333333333334,
+        0.9642857142857143
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.8125,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          120,
+          23,
+          1
+        ],
+        [
+          4,
+          108,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.00390625,
+      "branch_events": 0.0,
+      "hidden_events": 892.6953125,
+      "output_events": 34.0078125,
+      "hold_events": 494.15234375,
+      "hold_hidden_events": 477.859375,
+      "recurrent_deliveries": 41899.125,
+      "output_deliveries": 1745.796875,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 43644.921875,
+      "graded_local_transfers": 2304,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s0_DEND_h24_full_d48_clean_baseline",
+      "model_id": "s0_DEND_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.8824404761904762,
+      "accuracy": 0.88671875,
+      "coverage": 0.984375,
+      "passed": false,
+      "class_recall": [
+        0.9166666666666666,
+        0.8482142857142857
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        0.5,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.75,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          132,
+          8,
+          4
+        ],
+        [
+          17,
+          95,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.015625,
+      "branch_events": 0.0,
+      "hidden_events": 1376.99609375,
+      "output_events": 50.09375,
+      "hold_events": 995.109375,
+      "hold_hidden_events": 962.4609375,
+      "recurrent_deliveries": 65147.8125,
+      "output_deliveries": 2714.4921875,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 67862.3046875,
+      "graded_local_transfers": 3456,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    },
+    {
+      "id": "s1_DEND_h24_full_d0_clean_baseline",
+      "model_id": "s1_DEND_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9821428571428572,
+      "accuracy": 0.984375,
+      "coverage": 0.9921875,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        0.9642857142857143
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        0.875,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          2,
+          108,
+          2
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0078125,
+      "branch_events": 0.0,
+      "hidden_events": 393.0234375,
+      "output_events": 21.31640625,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 17897.0625,
+      "output_deliveries": 745.7109375,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 18642.7734375,
+      "graded_local_transfers": 1152,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s1_DEND_h24_full_d8_clean_baseline",
+      "model_id": "s1_DEND_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 556.87109375,
+      "output_events": 30.6640625,
+      "hold_events": 174.73046875,
+      "hold_hidden_events": 166.02734375,
+      "recurrent_deliveries": 25769.25,
+      "output_deliveries": 1073.71875,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 26842.96875,
+      "graded_local_transfers": 1536,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s1_DEND_h24_full_d24_clean_baseline",
+      "model_id": "s1_DEND_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9955357142857143,
+      "accuracy": 0.99609375,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        0.9910714285714286
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          1,
+          111,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 879.07421875,
+      "output_events": 48.375,
+      "hold_events": 516.015625,
+      "hold_hidden_events": 489.49609375,
+      "recurrent_deliveries": 41235.75,
+      "output_deliveries": 1718.15625,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 42953.90625,
+      "graded_local_transfers": 2304,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s1_DEND_h24_full_d48_clean_baseline",
+      "model_id": "s1_DEND_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9910714285714286,
+      "accuracy": 0.9921875,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        0.9821428571428571
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        0.9375,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          2,
+          110,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 1361.0703125,
+      "output_events": 75.2265625,
+      "hold_events": 1024.8984375,
+      "hold_hidden_events": 971.47265625,
+      "recurrent_deliveries": 64371.375,
+      "output_deliveries": 2682.140625,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 67053.515625,
+      "graded_local_transfers": 3456,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    },
+    {
+      "id": "s2_DEND_h24_full_d0_clean_baseline",
+      "model_id": "s2_DEND_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 275.4921875,
+      "output_events": 26.6640625,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 12473.25,
+      "output_deliveries": 519.71875,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 12992.96875,
+      "graded_local_transfers": 1152,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s2_DEND_h24_full_d8_clean_baseline",
+      "model_id": "s2_DEND_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 397.6015625,
+      "output_events": 36.484375,
+      "hold_events": 132.2890625,
+      "hold_hidden_events": 123.234375,
+      "recurrent_deliveries": 18382.875,
+      "output_deliveries": 765.953125,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 19148.828125,
+      "graded_local_transfers": 1536,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s2_DEND_h24_full_d24_clean_baseline",
+      "model_id": "s2_DEND_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 643.28515625,
+      "output_events": 56.29296875,
+      "hold_events": 395.94140625,
+      "hold_hidden_events": 367.3203125,
+      "recurrent_deliveries": 30173.25,
+      "output_deliveries": 1257.21875,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 31430.46875,
+      "graded_local_transfers": 2304,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s2_DEND_h24_full_d48_clean_baseline",
+      "model_id": "s2_DEND_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "DEND",
+      "mode": "full",
+      "config": {
+        "id": 0,
+        "loss": "RATE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 1.0,
+      "accuracy": 1.0,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 0.0,
+      "hidden_events": 1008.86328125,
+      "output_events": 86.09375,
+      "hold_events": 790.66015625,
+      "hold_hidden_events": 732.6171875,
+      "recurrent_deliveries": 47719.6875,
+      "output_deliveries": 1988.3203125,
+      "branch_deliveries": 0.0,
+      "internal_deliveries": 49708.0078125,
+      "graded_local_transfers": 3456,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    },
+    {
+      "id": "s0_POINT_h24_full_d0_clean_baseline",
+      "model_id": "s0_POINT_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9796626984126984,
+      "accuracy": 0.98046875,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        0.9861111111111112,
+        0.9732142857142857
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        0.8125,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          142,
+          2,
+          0
+        ],
+        [
+          3,
+          109,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 167.38671875,
+      "hidden_events": 101.96484375,
+      "output_events": 19.2890625,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 4509.9375,
+      "output_deliveries": 187.9140625,
+      "branch_deliveries": 167.38671875,
+      "internal_deliveries": 4865.23828125,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s0_POINT_h24_full_d8_clean_baseline",
+      "model_id": "s0_POINT_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9920634920634921,
+      "accuracy": 0.9921875,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        0.9930555555555556,
+        0.9910714285714286
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          143,
+          1,
+          0
+        ],
+        [
+          1,
+          111,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 266.890625,
+      "hidden_events": 158.45703125,
+      "output_events": 27.00390625,
+      "hold_events": 129.30859375,
+      "hold_hidden_events": 45.27734375,
+      "recurrent_deliveries": 7206.9375,
+      "output_deliveries": 300.2890625,
+      "branch_deliveries": 266.890625,
+      "internal_deliveries": 7774.1171875,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s0_POINT_h24_full_d24_clean_baseline",
+      "model_id": "s0_POINT_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9920634920634921,
+      "accuracy": 0.9921875,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        0.9930555555555556,
+        0.9910714285714286
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          143,
+          1,
+          0
+        ],
+        [
+          1,
+          111,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 485.6015625,
+      "hidden_events": 282.1875,
+      "output_events": 42.8046875,
+      "hold_events": 481.03125,
+      "hold_hidden_events": 166.9921875,
+      "recurrent_deliveries": 13158.1875,
+      "output_deliveries": 548.2578125,
+      "branch_deliveries": 485.6015625,
+      "internal_deliveries": 14192.046875,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s0_POINT_h24_full_d48_clean_baseline",
+      "model_id": "s0_POINT_h24_full",
+      "seed": 0,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9831349206349207,
+      "accuracy": 0.984375,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        0.9930555555555556,
+        0.9732142857142857
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        0.875,
+        0.9375,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          143,
+          1,
+          0
+        ],
+        [
+          3,
+          109,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 819.03515625,
+      "hidden_events": 470.34375,
+      "output_events": 66.5625,
+      "hold_events": 1027.6796875,
+      "hold_hidden_events": 356.1015625,
+      "recurrent_deliveries": 22191.5625,
+      "output_deliveries": 924.6484375,
+      "branch_deliveries": 819.03515625,
+      "internal_deliveries": 23935.24609375,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    },
+    {
+      "id": "s1_POINT_h24_full_d0_clean_baseline",
+      "model_id": "s1_POINT_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9965277777777778,
+      "accuracy": 0.99609375,
+      "coverage": 0.99609375,
+      "passed": true,
+      "class_recall": [
+        0.9930555555555556,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          143,
+          0,
+          1
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.00390625,
+      "branch_events": 200.78125,
+      "hidden_events": 129.3515625,
+      "output_events": 19.01953125,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 5779.875,
+      "output_deliveries": 240.828125,
+      "branch_deliveries": 200.78125,
+      "internal_deliveries": 6221.484375,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s1_POINT_h24_full_d8_clean_baseline",
+      "model_id": "s1_POINT_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9930555555555556,
+      "accuracy": 0.9921875,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        0.9861111111111112,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          142,
+          2,
+          0
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 281.33203125,
+      "hidden_events": 177.890625,
+      "output_events": 26.3515625,
+      "hold_events": 117.80078125,
+      "hold_hidden_events": 42.87890625,
+      "recurrent_deliveries": 8079.375,
+      "output_deliveries": 336.640625,
+      "branch_deliveries": 281.33203125,
+      "internal_deliveries": 8697.34765625,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s1_POINT_h24_full_d24_clean_baseline",
+      "model_id": "s1_POINT_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9955357142857143,
+      "accuracy": 0.99609375,
+      "coverage": 1.0,
+      "passed": true,
+      "class_recall": [
+        1.0,
+        0.9910714285714286
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          1,
+          111,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.0,
+      "branch_events": 473.03515625,
+      "hidden_events": 291.20703125,
+      "output_events": 42.00390625,
+      "hold_events": 424.1640625,
+      "hold_hidden_events": 152.35546875,
+      "recurrent_deliveries": 13505.625,
+      "output_deliveries": 562.734375,
+      "branch_deliveries": 473.03515625,
+      "internal_deliveries": 14541.39453125,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s1_POINT_h24_full_d48_clean_baseline",
+      "model_id": "s1_POINT_h24_full",
+      "seed": 1,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.8660714285714286,
+      "accuracy": 0.8828125,
+      "coverage": 0.984375,
+      "passed": false,
+      "class_recall": [
+        1.0,
+        0.7321428571428571
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        0.6875,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        1.0,
+        0.75,
+        0.375,
+        0.9375,
+        0.5625,
+        0.9375
+      ],
+      "confusion": [
+        [
+          144,
+          0,
+          0
+        ],
+        [
+          26,
+          82,
+          4
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.015625,
+      "branch_events": 769.23046875,
+      "hidden_events": 463.71875,
+      "output_events": 64.703125,
+      "hold_events": 912.91796875,
+      "hold_hidden_events": 324.46484375,
+      "recurrent_deliveries": 21765.5625,
+      "output_deliveries": 906.8984375,
+      "branch_deliveries": 769.23046875,
+      "internal_deliveries": 23441.69140625,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    },
+    {
+      "id": "s2_POINT_h24_full_d0_clean_baseline",
+      "model_id": "s2_POINT_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 0,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9791666666666667,
+      "accuracy": 0.9765625,
+      "coverage": 0.98828125,
+      "passed": true,
+      "class_recall": [
+        0.9583333333333334,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        0.8125,
+        0.875,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          138,
+          3,
+          3
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.01171875,
+      "branch_events": 130.23828125,
+      "hidden_events": 94.31640625,
+      "output_events": 21.57421875,
+      "hold_events": 0.0,
+      "hold_hidden_events": 0.0,
+      "recurrent_deliveries": 4326.375,
+      "output_deliveries": 180.265625,
+      "branch_deliveries": 130.23828125,
+      "internal_deliveries": 4636.87890625,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 1776,
+      "forward_macs": 35712,
+      "backward_macs": 64512,
+      "steps": 24
+    },
+    {
+      "id": "s2_POINT_h24_full_d8_clean_baseline",
+      "model_id": "s2_POINT_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 8,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9479166666666667,
+      "accuracy": 0.94140625,
+      "coverage": 0.96875,
+      "passed": true,
+      "class_recall": [
+        0.8958333333333334,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        0.875,
+        0.5625,
+        0.75,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          129,
+          7,
+          8
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.03125,
+      "branch_events": 182.546875,
+      "hidden_events": 132.4140625,
+      "output_events": 31.87109375,
+      "hold_events": 95.01171875,
+      "hold_hidden_events": 35.88671875,
+      "recurrent_deliveries": 6140.25,
+      "output_deliveries": 255.84375,
+      "branch_deliveries": 182.546875,
+      "internal_deliveries": 6578.640625,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 2368,
+      "forward_macs": 47616,
+      "backward_macs": 86016,
+      "steps": 32
+    },
+    {
+      "id": "s2_POINT_h24_full_d24_clean_baseline",
+      "model_id": "s2_POINT_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 24,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9652777777777778,
+      "accuracy": 0.9609375,
+      "coverage": 0.98046875,
+      "passed": true,
+      "class_recall": [
+        0.9305555555555556,
+        1.0
+      ],
+      "pattern_recall": [
+        1.0,
+        0.9375,
+        1.0,
+        1.0,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        0.9375,
+        0.8125,
+        0.8125,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          134,
+          5,
+          5
+        ],
+        [
+          0,
+          112,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.01953125,
+      "branch_events": 292.3671875,
+      "hidden_events": 211.71875,
+      "output_events": 50.4296875,
+      "hold_events": 298.9921875,
+      "hold_hidden_events": 113.96484375,
+      "recurrent_deliveries": 9946.6875,
+      "output_deliveries": 414.4453125,
+      "branch_deliveries": 292.3671875,
+      "internal_deliveries": 10653.5,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 3552,
+      "forward_macs": 71424,
+      "backward_macs": 129024,
+      "steps": 48
+    },
+    {
+      "id": "s2_POINT_h24_full_d48_clean_baseline",
+      "model_id": "s2_POINT_h24_full",
+      "seed": 2,
+      "h": 24,
+      "arm": "POINT",
+      "mode": "full",
+      "config": {
+        "id": 1,
+        "loss": "CE",
+        "lr": 0.01,
+        "ret": [
+          0.95,
+          0.85
+        ]
+      },
+      "delay": 48,
+      "condition": "clean",
+      "intervention": {
+        "name": "baseline",
+        "kind": "none"
+      },
+      "balanced_accuracy": 0.9781746031746033,
+      "accuracy": 0.9765625,
+      "coverage": 0.99609375,
+      "passed": true,
+      "class_recall": [
+        0.9652777777777778,
+        0.9910714285714286
+      ],
+      "pattern_recall": [
+        1.0,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        0.9375,
+        1.0,
+        0.875,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "confusion": [
+        [
+          139,
+          4,
+          1
+        ],
+        [
+          1,
+          111,
+          0
+        ]
+      ],
+      "silent_fraction": 0.0,
+      "nonsilent_tie_fraction": 0.00390625,
+      "branch_events": 466.44140625,
+      "hidden_events": 335.44921875,
+      "output_events": 76.93359375,
+      "hold_events": 618.53515625,
+      "hold_hidden_events": 236.45703125,
+      "recurrent_deliveries": 15886.3125,
+      "output_deliveries": 661.9296875,
+      "branch_deliveries": 466.44140625,
+      "internal_deliveries": 17014.68359375,
+      "graded_local_transfers": 0,
+      "parameters": 1562,
+      "continuous_slots": 74,
+      "persistent_continuous_variables": 74,
+      "state_updates": 5328,
+      "forward_macs": 107136,
+      "backward_macs": 193536,
+      "steps": 72
+    }
+  ],
+  "hypotheses_sha256": "4017692c764e076cf97fcbca55736a71d5e97ba2e5199e76c5c78a54af7a1d6c",
+  "selection_code_sha256": "6fa6c68e1940e7233a8236753c7eef124b0fbbfecbc5ed9395941d8d1dcd52c0",
+  "exploration_freeze": "274faeb905d4614f3d299023cdd86650c08898f41017ba28cb68166155a15c47",
+  "exploration_rows_sha256": "72335e22209703a9e9d4f58b716ed593b295dca9208154dd3f966b4da4397f79",
+  "audit_sha256": "0d2eaae5724c37808ebd46caf3755a0aa69786f45c715970584d4adda6affeeb",
+  "confirmation_data_generated": false
+}

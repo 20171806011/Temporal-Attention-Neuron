@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "fixture_only": true,
+  "checks": 8257,
+  "max_numeric_error": 3.552713678800501e-15,
+  "checked_episodes": 2060,
+  "logical_paths": 27,
+  "work": {
+    "shared": {
+      "prefix_sample_steps": 45682,
+      "main_sample_steps": 74160,
+      "branch_sample_steps": 13367,
+      "online_sample_steps": 87527,
+      "replay_sample_steps": 21409,
+      "native_macs": 16994016
+    },
+    "separate": {
+      "prefix_sample_steps": 137046,
+      "main_sample_steps": 222480,
+      "branch_sample_steps": 0,
+      "online_sample_steps": 222480,
+      "replay_sample_steps": 39948,
+      "native_macs": 40938768
+    }
+  },
+  "retained_raw_array_bytes": 468114400,
+  "timing_repeats": 3,
+  "isolated_pairs": 8,
+  "cap_seconds": 60,
+  "peak_working_set_bytes": 151932928,
+  "wall_seconds": 11.821980100008659,
+  "cpu_seconds": 9.53125,
+  "scope": "Independently reconstructed factorial and boundary inputs, every archived trace, exact discrete outputs and first-read semantics, later-write branch isolation, logical work and fixed timing scope."
+}

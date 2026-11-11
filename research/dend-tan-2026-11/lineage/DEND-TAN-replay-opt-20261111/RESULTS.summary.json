@@ -1,0 +1,702 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "study_status",
+    "equivalence_supported",
+    "inference",
+    "latency_effects",
+    "block_rows",
+    "model_rows",
+    "schedule_rows",
+    "cost_rows",
+    "microbench"
+  ],
+  "retained_top_level_keys": [
+    "study_status",
+    "equivalence_supported",
+    "inference",
+    "latency_effects",
+    "block_rows"
+  ],
+  "omitted_top_level_keys": [
+    "model_rows",
+    "schedule_rows",
+    "cost_rows",
+    "microbench"
+  ],
+  "data": {
+    "study_status": "FROZEN_REPLAY_OPT",
+    "equivalence_supported": true,
+    "inference": {
+      "blocks": 12,
+      "examples_per_block": 512,
+      "bootstrap_seed": 4084900001,
+      "bootstrap_draws": 50000,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "independent_latency_match": true
+    },
+    "latency_effects": [
+      {
+        "effect": "cached_batch",
+        "scope": "batch",
+        "mode": "cached",
+        "contrast": "cached_minus_full",
+        "blocks": 12,
+        "values": [
+          0.9659187562647278,
+          1.3532979076747629,
+          4.0876749966021935,
+          2.7754395790301105,
+          3.2390374969205973,
+          4.107737492934879,
+          4.698285418271552,
+          4.39907916249164,
+          2.4753562587041715,
+          3.5406812518582833,
+          3.2793500007149605,
+          3.0547708326290985
+        ],
+        "mean": 3.164719096174748,
+        "ci95": [
+          2.5230283350487697,
+          3.76285161825207
+        ],
+        "minimum": 0.9659187562647278,
+        "maximum": 4.698285418271552,
+        "faster_blocks": 0,
+        "tied_blocks": 0,
+        "slower_blocks": 12,
+        "direction": "slower"
+      },
+      {
+        "effect": "sparse_batch",
+        "scope": "batch",
+        "mode": "sparse",
+        "contrast": "sparse_minus_full",
+        "blocks": 12,
+        "values": [
+          1.2974791728386965,
+          4.5238395759952255,
+          4.4677645807193285,
+          4.46181875061787,
+          4.498060414334759,
+          4.705704170191893,
+          8.953168750546563,
+          5.377710407628911,
+          4.132141676867226,
+          4.414004158509973,
+          4.751172923230721,
+          5.267714584382096
+        ],
+        "mean": 4.737548263821939,
+        "ci95": [
+          3.8659960769918045,
+          5.719061084053263
+        ],
+        "minimum": 1.2974791728386965,
+        "maximum": 8.953168750546563,
+        "faster_blocks": 0,
+        "tied_blocks": 0,
+        "slower_blocks": 12,
+        "direction": "slower"
+      },
+      {
+        "effect": "cached_single",
+        "scope": "single",
+        "mode": "cached",
+        "contrast": "cached_minus_full",
+        "blocks": 12,
+        "values": [
+          0.04009374970337376,
+          0.04026250462629832,
+          0.25981876024161465,
+          0.007331251254072413,
+          0.28854373886133544,
+          0.386875013646204,
+          -0.39291251596296206,
+          0.06606876195291989,
+          -0.02759374910965562,
+          -0.052474999392870814,
+          0.20728124945890158,
+          -0.3596562528400682
+        ],
+        "mean": 0.038636459369930286,
+        "ci95": [
+          -0.09468837248126268,
+          0.1615458752515527
+        ],
+        "minimum": -0.39291251596296206,
+        "maximum": 0.386875013646204,
+        "faster_blocks": 4,
+        "tied_blocks": 0,
+        "slower_blocks": 8,
+        "direction": "undetermined"
+      },
+      {
+        "effect": "sparse_single",
+        "scope": "single",
+        "mode": "sparse",
+        "contrast": "sparse_minus_full",
+        "blocks": 12,
+        "values": [
+          0.17537499661557376,
+          0.8915249927667901,
+          1.8288812498212792,
+          0.8795249959803186,
+          1.1676687427097932,
+          0.8806437654129695,
+          0.6224124917935114,
+          0.8417562603426632,
+          0.6376874953275546,
+          1.043281241436489,
+          1.1881062528118491,
+          1.3774312428722624
+        ],
+        "mean": 0.9611911439909212,
+        "ci95": [
+          0.7380060783968171,
+          1.1904940580582963
+        ],
+        "minimum": 0.17537499661557376,
+        "maximum": 1.8288812498212792,
+        "faster_blocks": 0,
+        "tied_blocks": 0,
+        "slower_blocks": 12,
+        "direction": "slower"
+      }
+    ],
+    "block_rows": [
+      {
+        "seed": 0,
+        "batch": {
+          "full": 1.0622791608814925,
+          "cached": 2.0281979171462203,
+          "sparse": 2.359758333720189
+        },
+        "single": {
+          "full": 0.9599500008334871,
+          "cached": 1.000043750536861,
+          "sparse": 1.135324997449061
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 1.0131624949281104,
+            "cached": 1.9969562454207335,
+            "sparse": 2.447324997774558
+          },
+          "three0": {
+            "full": 1.1120124909211881,
+            "cached": 2.100662506563822,
+            "sparse": 2.3078624908521306
+          },
+          "three2": {
+            "full": 1.0616624967951793,
+            "cached": 1.9869749994541053,
+            "sparse": 2.324087512533879
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 1,
+        "batch": {
+          "full": 3.666739588273534,
+          "cached": 5.020037495948297,
+          "sparse": 8.19057916426876
+        },
+        "single": {
+          "full": 3.170424999552779,
+          "cached": 3.2106875041790772,
+          "sparse": 4.061949992319569
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.3693562509142794,
+            "cached": 1.9338124948262703,
+            "sparse": 4.697493746789405
+          },
+          "three0": {
+            "full": 4.265362509613624,
+            "cached": 7.06562499908614,
+            "sparse": 11.864937496284256
+          },
+          "three2": {
+            "full": 3.3655000042926986,
+            "cached": 6.06067499393248,
+            "sparse": 8.009306249732617
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 2,
+        "batch": {
+          "full": 4.042297920629305,
+          "cached": 8.129972917231498,
+          "sparse": 8.510062501348633
+        },
+        "single": {
+          "full": 3.384093743079575,
+          "cached": 3.6439125033211894,
+          "sparse": 5.212974992900854
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 5.226868757745251,
+            "cached": 7.2509250094299205,
+            "sparse": 9.617881252779625
+          },
+          "three0": {
+            "full": 3.4479312489565928,
+            "cached": 6.263637496886076,
+            "sparse": 7.838800000172341
+          },
+          "three2": {
+            "full": 3.4520937551860698,
+            "cached": 10.875356245378498,
+            "sparse": 8.073506251093931
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 3,
+        "batch": {
+          "full": 3.429699998378055,
+          "cached": 6.205139577408166,
+          "sparse": 7.891518748995925
+        },
+        "single": {
+          "full": 2.9441000006045215,
+          "cached": 2.951431251858594,
+          "sparse": 3.82362499658484
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.6607374968298245,
+            "cached": 6.423574988730252,
+            "sparse": 8.322687495819991
+          },
+          "three0": {
+            "full": 3.288656251243083,
+            "cached": 6.087743739044527,
+            "sparse": 7.750662502076011
+          },
+          "three2": {
+            "full": 3.339706247061258,
+            "cached": 6.10410000444972,
+            "sparse": 7.601206249091774
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 4,
+        "batch": {
+          "full": 3.4847520849628686,
+          "cached": 6.723789581883466,
+          "sparse": 7.982812499297627
+        },
+        "single": {
+          "full": 3.3506437575852033,
+          "cached": 3.6391874964465387,
+          "sparse": 4.518312500294996
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.861106244585244,
+            "cached": 8.176206247298978,
+            "sparse": 7.619412488566013
+          },
+          "three0": {
+            "full": 3.233487506804522,
+            "cached": 6.0321937562548555,
+            "sparse": 8.71615000141901
+          },
+          "three2": {
+            "full": 3.359662503498839,
+            "cached": 5.962968742096564,
+            "sparse": 7.61287500790786
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 5,
+        "batch": {
+          "full": 3.413379168099103,
+          "cached": 7.5211166610339815,
+          "sparse": 8.119083338290997
+        },
+        "single": {
+          "full": 4.103912495338591,
+          "cached": 4.490787508984795,
+          "sparse": 4.98455626075156
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.254937499150401,
+            "cached": 6.584512502740836,
+            "sparse": 8.508287504810141
+          },
+          "three0": {
+            "full": 3.239850004320033,
+            "cached": 7.220081246487098,
+            "sparse": 8.243993750511436
+          },
+          "three2": {
+            "full": 3.7453500008268747,
+            "cached": 8.75875623387401,
+            "sparse": 7.6049687595514115
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 6,
+        "batch": {
+          "full": 4.81806458143789,
+          "cached": 9.516349999709442,
+          "sparse": 13.771233331984453
+        },
+        "single": {
+          "full": 4.254350009432528,
+          "cached": 3.861437493469566,
+          "sparse": 4.87676250122604
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 4.429350003192667,
+            "cached": 8.074662498984253,
+            "sparse": 13.044643739704043
+          },
+          "three0": {
+            "full": 5.014543748984579,
+            "cached": 11.070924992964137,
+            "sparse": 16.819506250612903
+          },
+          "three2": {
+            "full": 5.010299992136424,
+            "cached": 9.403462507179938,
+            "sparse": 11.44955000563641
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 7,
+        "batch": {
+          "full": 3.653952089128628,
+          "cached": 8.053031251620268,
+          "sparse": 9.031662496757539
+        },
+        "single": {
+          "full": 3.005406240845332,
+          "cached": 3.071475002798252,
+          "sparse": 3.847162501187995
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.261812515120255,
+            "cached": 10.767306252091657,
+            "sparse": 9.906537503411528
+          },
+          "three0": {
+            "full": 3.4423312499711756,
+            "cached": 6.399406258424278,
+            "sparse": 8.577162494475488
+          },
+          "three2": {
+            "full": 4.257712502294453,
+            "cached": 6.99238124434487,
+            "sparse": 8.6112874923856
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 8,
+        "batch": {
+          "full": 3.999833330453839,
+          "cached": 6.475189589158011,
+          "sparse": 8.131975007321065
+        },
+        "single": {
+          "full": 3.3028249999915715,
+          "cached": 3.275231250881916,
+          "sparse": 3.940512495319126
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.5941624992119614,
+            "cached": 6.526025004859548,
+            "sparse": 8.023768754355842
+          },
+          "three0": {
+            "full": 5.025387490604771,
+            "cached": 6.258443750994047,
+            "sparse": 7.766393762722146
+          },
+          "three2": {
+            "full": 3.3799500015447848,
+            "cached": 6.641100011620438,
+            "sparse": 8.605762504885206
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 9,
+        "batch": {
+          "full": 3.830635416913234,
+          "cached": 7.3713166687715175,
+          "sparse": 8.244639575423207
+        },
+        "single": {
+          "full": 3.2703875003790017,
+          "cached": 3.217912500986131,
+          "sparse": 4.313668741815491
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.4550312520877924,
+            "cached": 7.171937493694713,
+            "sparse": 7.880637491325615
+          },
+          "three0": {
+            "full": 4.075206248671748,
+            "cached": 7.410893751512049,
+            "sparse": 8.221093739848584
+          },
+          "three2": {
+            "full": 3.961668749980163,
+            "cached": 7.531118761107791,
+            "sparse": 8.632187495095422
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 10,
+        "batch": {
+          "full": 3.3417062477383297,
+          "cached": 6.62105624845329,
+          "sparse": 8.09287917096905
+        },
+        "single": {
+          "full": 3.086693748628022,
+          "cached": 3.2939749980869237,
+          "sparse": 4.274800001439871
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.4174124921264593,
+            "cached": 7.445806248142617,
+            "sparse": 8.278912497189594
+          },
+          "three0": {
+            "full": 3.3219437464140356,
+            "cached": 6.23676874965895,
+            "sparse": 7.860381254431559
+          },
+          "three2": {
+            "full": 3.2857625046744943,
+            "cached": 6.180593747558305,
+            "sparse": 8.139343761286
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      },
+      {
+        "seed": 11,
+        "batch": {
+          "full": 3.4437020840414334,
+          "cached": 6.498472916670532,
+          "sparse": 8.71141666842353
+        },
+        "single": {
+          "full": 5.917506256082561,
+          "cached": 5.557850003242493,
+          "sparse": 7.294937498954823
+        },
+        "batch_calls": {
+          "full": 48,
+          "cached": 48,
+          "sparse": 48
+        },
+        "batch_by_history": {
+          "four": {
+            "full": 3.4180687507614493,
+            "cached": 6.388868754584109,
+            "sparse": 8.688993755640695
+          },
+          "three0": {
+            "full": 3.2045625084720086,
+            "cached": 6.299800003034761,
+            "sparse": 7.959737497003516
+          },
+          "three2": {
+            "full": 3.7084749928908423,
+            "cached": 6.806749992392724,
+            "sparse": 9.485518752626376
+          },
+          "two": {
+            "full": null,
+            "cached": null,
+            "sparse": null
+          }
+        },
+        "single_examples": {
+          "standard": 8,
+          "early": 8
+        }
+      }
+    ]
+  }
+}

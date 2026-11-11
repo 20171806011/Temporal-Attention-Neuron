@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "checks": 116467,
+  "blocks": 12,
+  "examples_per_block": 512,
+  "evaluations": 288,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 5308416,
+  "dense_forward_macs": 828112896,
+  "matcher_macs": 42467328,
+  "input_array_bytes": 84934656,
+  "retained_raw_array_bytes": 656523264,
+  "reset_count": 40448,
+  "cosine_onsets": 73728,
+  "replay_sample_steps": 900384,
+  "replay_examples": 40448,
+  "replay_wall_seconds": 17.93611020426033,
+  "replay_batches": 9026,
+  "replay_scratch_peak_bytes": 14976,
+  "evaluation_wall_seconds": 72.94893449987285,
+  "guard_wall_seconds": 0.6132731992984191,
+  "guard_batches": 4524,
+  "evicted_key_comparisons": 28224,
+  "evicted_key_log_writes": 49152,
+  "reset_scalar_writes": 1051648,
+  "replay_native_macs": 140459904,
+  "microbench_records": 384,
+  "microbench_evaluations": 768,
+  "microbench_forward_sample_steps": 27648,
+  "microbench_replay_steps": 16134,
+  "microbench_replay_native_macs": 2516904,
+  "microbench_evicted_key_comparisons": 768,
+  "duplicate_opposite_label_pairs": 18432,
+  "blocked_by_position": {
+    "orthogonal": {
+      "four": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "three0": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "three2": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "two": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "near": {
+      "four": [
+        448,
+        432,
+        32,
+        32
+      ],
+      "three0": [
+        448,
+        0,
+        0,
+        32
+      ],
+      "three2": [
+        0,
+        432,
+        32,
+        0
+      ],
+      "two": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "max_numeric_error": 4.440892098500626e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 67338240,
+  "wall_seconds": 36.51538709999295,
+  "cpu_seconds": 25.890625,
+  "primary_effects": [
+    {
+      "effect": "evicted_gain",
+      "blocks": 12,
+      "values": [
+        0.0078125,
+        0.03125,
+        0.015625,
+        0.0078125,
+        0.0,
+        0.0,
+        0.0078125,
+        0.015625,
+        0.0,
+        0.0078125,
+        0.0390625,
+        0.0078125
+      ],
+      "mean": 0.01171875,
+      "sample_sd": 0.012239835184385005,
+      "minimum": 0.0,
+      "maximum": 0.0390625,
+      "positive": 9,
+      "zero": 3,
+      "negative": 0,
+      "ci97_5": [
+        0.005208333333333333,
+        0.020182291666666668
+      ],
+      "direction": "positive",
+      "threshold": 0.0,
+      "passes": true
+    },
+    {
+      "effect": "recent_change",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.00390625,
+        0.0,
+        0.0
+      ],
+      "mean": -0.0003255208333333333,
+      "sample_sd": 0.0011276372445109878,
+      "minimum": -0.00390625,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 11,
+      "negative": 1,
+      "ci97_5": [
+        -0.0013020833333333333,
+        0.0
+      ],
+      "direction": "undetermined",
+      "threshold": -0.02,
+      "passes": true
+    }
+  ],
+  "adoption_supported": true,
+  "scope": "Independent confirmed theta provenance, paired geometry and timing schedules, visible evicted-key logs, exact strict veto and unaltered native outputs on unchanged triggers, paired cost and inference."
+}

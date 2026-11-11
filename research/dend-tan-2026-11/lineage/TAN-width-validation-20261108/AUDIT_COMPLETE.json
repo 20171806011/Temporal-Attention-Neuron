@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": 44238,
+  "optimizer_updates": 9599,
+  "new_optimizer_updates": 6000,
+  "historical_optimizer_updates": 3599,
+  "evaluations": 840,
+  "max_numeric_error": 1.4210854715202004e-14,
+  "wall_seconds": 126.52603600002476,
+  "scope": "Independent einsum equations validated against scalar-per-unit fixtures. All tuning validation and final counts, saved eight-example traces, all Adam updates/objectives, first/last training forwards, donor effects, selection and resource accounting. Not all training gradients independently derived; internal verification, not external replication.",
+  "unflushed_resource_rows_recovered": 3,
+  "execution_deviation": "Original evaluation hit 120s cap; 81 missing cases completed under separately frozen 90s cap. All original raw files unchanged."
+}

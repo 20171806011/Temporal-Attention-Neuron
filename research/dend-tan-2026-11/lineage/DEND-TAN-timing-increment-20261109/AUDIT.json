@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": 16348,
+  "models": 36,
+  "neural_training_updates": 0,
+  "rank_fits": 612,
+  "class_fits": 72,
+  "baseline_captures": 72,
+  "forward_sample_steps": 1327104,
+  "dense_forward_macs": 207028224,
+  "shuffle_invariance_checks": 1152,
+  "matched_test_models": 35,
+  "source_scalar_attention_models": 18,
+  "source_scalar_episodes": 36,
+  "max_numeric_error": 2.298161660974074e-14,
+  "max_coefficient_error": 1.9206858326015208e-14,
+  "max_normal_equation_residual": 6.869504964868156e-15,
+  "wall_seconds": 15.151375700021163,
+  "cpu_seconds": 12.453125,
+  "cap_seconds": 300,
+  "scope": "Independent fresh data and time orders, 72 exact native pulse and resource replays, complete within-quartet count matching, 612 weighted and 72 intercept-augmented SVD fits, all test scores and metrics including prior locked [4,4] probe, count/synchrony/native invariance, frozen source and pre-test fit locks, 36 original scalar TAN episode checks."
+}

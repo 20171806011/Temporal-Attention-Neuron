@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "checks": 27341,
+  "blocks": 12,
+  "examples_per_block": 512,
+  "evaluations": 144,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 1732608,
+  "path_sample_steps": 2654208,
+  "dense_forward_macs": 270286848,
+  "matcher_macs": 13860864,
+  "boundary_bank_bytes": 15925248,
+  "input_array_bytes": 21233664,
+  "retained_raw_array_bytes": 104030208,
+  "max_numeric_error": 3.552713678800501e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 65867776,
+  "wall_seconds": 25.191849900002126,
+  "cpu_seconds": 19.6875,
+  "duplicate_opposite_label_pairs": 4608,
+  "oracle_margin_min": 0.7994530038017171,
+  "oracle_margin_bound": 0.6605887450304572,
+  "primary_effects": [
+    {
+      "effect": "native_effect",
+      "blocks": 12,
+      "values": [
+        0.076171875,
+        0.109375,
+        0.078125,
+        0.11328125,
+        0.115234375,
+        0.0625,
+        0.13671875,
+        0.14453125,
+        0.126953125,
+        0.12109375,
+        0.072265625,
+        0.080078125
+      ],
+      "mean": 0.10302734375,
+      "sample_sd": 0.02781060715995731,
+      "minimum": 0.0625,
+      "maximum": 0.14453125,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.08610026041666667,
+        0.11995442708333333
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "value_effect",
+      "blocks": 12,
+      "values": [
+        0.021484375,
+        0.00390625,
+        0.0,
+        0.015625,
+        0.009765625,
+        0.0,
+        0.01953125,
+        0.00390625,
+        0.001953125,
+        0.0078125,
+        -0.009765625,
+        0.005859375
+      ],
+      "mean": 0.006673177083333333,
+      "sample_sd": 0.008909891247113682,
+      "minimum": -0.009765625,
+      "maximum": 0.021484375,
+      "positive": 9,
+      "zero": 2,
+      "negative": 1,
+      "ci97_5": [
+        0.0013020833333333333,
+        0.01220703125
+      ],
+      "direction": "positive"
+    }
+  ],
+  "scope": "Independent sealed-weight provenance, regenerated stimuli, all frozen native replays, natural and mixed boundary sources, common cue and fixed keys, exact deleted-label counts, original natural trajectories, resource ledgers and paired bootstrap effects."
+}

@@ -1,0 +1,116 @@
+{
+  "utc": "2026-11-07T23:03:18.523111+00:00",
+  "source_commit": "7dcddee41490d8d917936891989eeb7ddb67e0da",
+  "source_checkout": "REDACTED_LOCAL_PATH",
+  "source_worktree_clean": true,
+  "tracked_agent_instructions": [],
+  "preserved_locks": [
+    ".git/info/sparse-checkout.lock.stale-20261107-preserved",
+    ".git/index.lock.stale-20261107-preserved"
+  ],
+  "sources": [
+    {
+      "target": "vendor/v9_model.py",
+      "source": "research/dendritic-population-v9/model.py",
+      "sha256": "b36abaa82642cc760e91b6d5607170d437c4e8e95830ef70e60c93a1d410abc1"
+    },
+    {
+      "target": "vendor/v9_data.py",
+      "source": "research/dendritic-population-v9/data.py",
+      "sha256": "e13d6e7e351a5aea8100498498a85b0cd8bdaf80ef617b32fc862f358af763ad"
+    },
+    {
+      "target": "vendor/v10_model.py",
+      "source": "research/dendritic-population-v10/model.py",
+      "sha256": "409dd9157881fff29fc751a2646b4afdb4b72befc5438c90b56b249cf966b2b8"
+    },
+    {
+      "target": "vendor/v10_data.py",
+      "source": "research/dendritic-population-v10/data.py",
+      "sha256": "46e6bfa22f2fe87901da9f2d37c7896e723eeb8ecd0d4a3a7f0f1fe0d32d29c2"
+    },
+    {
+      "target": "vendor/v9_metrics.csv",
+      "source": "research/dendritic-population-v9/results/per_seed_metrics.csv",
+      "sha256": "441021b346e9b69c965deb00d693e4d039da5fe3dd1eab12871e5f467b3046ad"
+    },
+    {
+      "target": "weights/s0_DEND_intact.npy",
+      "source": "research/dendritic-population-v9/results/s0_DEND_intact.npy",
+      "sha256": "08d062a919b29e5d425121c6fa4989faf9a667075a672abc792e3af5171003da"
+    },
+    {
+      "target": "weights/s0_DEND_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s0_DEND_retrained.npy",
+      "sha256": "85e92d507f50d4b4388b3ba1d5f965d9b15532e62f18703455970e3b46171c2e"
+    },
+    {
+      "target": "weights/s0_POINT_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s0_POINT_retrained.npy",
+      "sha256": "bce16a61bccb3f9982d7859fba2eeeda81749796bf75e0c0141a7237be71418c"
+    },
+    {
+      "target": "weights/s1_DEND_intact.npy",
+      "source": "research/dendritic-population-v9/results/s1_DEND_intact.npy",
+      "sha256": "d1627db7ceaa162edd0bb6041420c6c945b2dade1d5a5ba74be1c4dc31b7416c"
+    },
+    {
+      "target": "weights/s1_DEND_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s1_DEND_retrained.npy",
+      "sha256": "d33bf87ad847fd44d048bddaa720888f8341bfbd34dced7278c5aa7cef21e95a"
+    },
+    {
+      "target": "weights/s1_POINT_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s1_POINT_retrained.npy",
+      "sha256": "570963eac5fbe5d7e618f37f94f598c8ea3902346d93640d6511757e05b6b5da"
+    },
+    {
+      "target": "weights/s2_DEND_intact.npy",
+      "source": "research/dendritic-population-v9/results/s2_DEND_intact.npy",
+      "sha256": "3374ce153b75fd6d770d41910163640f9bb0cc8a4488d8191ea9ac2aec7831f9"
+    },
+    {
+      "target": "weights/s2_DEND_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s2_DEND_retrained.npy",
+      "sha256": "86174c1bdb1bf0b44db705ece78e3a9328017f3360a37ac133c460ae298082e0"
+    },
+    {
+      "target": "weights/s2_POINT_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s2_POINT_retrained.npy",
+      "sha256": "ae12d3c58a8b49f23ae882252d5c100816dd0d4b0d90cd8b108e80993e797d2d"
+    },
+    {
+      "target": "weights/s3_DEND_intact.npy",
+      "source": "research/dendritic-population-v9/results/s3_DEND_intact.npy",
+      "sha256": "804a851f6cb60f1d84ebe2bac99af873c735b9f30ef0b62940ceb1d7f46da877"
+    },
+    {
+      "target": "weights/s3_DEND_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s3_DEND_retrained.npy",
+      "sha256": "c2cfaf0baa66acc60970af5f755870914d797f3e1904966f969782d22a65ac33"
+    },
+    {
+      "target": "weights/s3_POINT_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s3_POINT_retrained.npy",
+      "sha256": "71869301bdcdf0c3146cbbac5d3892805e4966ac65d48f451789fe82828e3a0e"
+    },
+    {
+      "target": "weights/s4_DEND_intact.npy",
+      "source": "research/dendritic-population-v9/results/s4_DEND_intact.npy",
+      "sha256": "4abe935c4c4d38f28db2d0af70c4acd0948de873baeba4088d0b450c42853b49"
+    },
+    {
+      "target": "weights/s4_DEND_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s4_DEND_retrained.npy",
+      "sha256": "e94ae9c111fd763182642aee45a2d88125d9e5085977fdfa4bd4e419e3b44fc4"
+    },
+    {
+      "target": "weights/s4_POINT_retrained.npy",
+      "source": "research/dendritic-population-v9/results/s4_POINT_retrained.npy",
+      "sha256": "c82ce5b4f2390ceda0f850a9ab3273981910c3f2ff027925b96d5391f1141536"
+    }
+  ],
+  "model_change": "train_model.py is vendored V10 with branch retention rd and common hidden/output retention rs passed through forward and backward. Default equations unchanged.",
+  "historical_limits": "V9 cross-cell cuts and no-cross training already completed. V10A has no isolated hold phase. P1-B remains CLOSED with failed preregistered floors.",
+  "old_repository": "REDACTED_LOCAL_PATH"
+}

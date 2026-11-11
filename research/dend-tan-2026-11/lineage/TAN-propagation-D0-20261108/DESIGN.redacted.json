@@ -1,0 +1,27 @@
+{
+  "fits": 48,
+  "updates": 150,
+  "learning_rate": 0.0025,
+  "arms": [
+    "TAN_FULL",
+    "TAN_NOATT"
+  ],
+  "gains": [
+    1.0,
+    4.0
+  ],
+  "couplings": [
+    0.5,
+    2.0
+  ],
+  "regularizers": [
+    0.0001,
+    0.0
+  ],
+  "seeds": 3,
+  "train_n": 64,
+  "test_n": 256,
+  "delay": 0,
+  "science_cap_seconds": 840,
+  "audit_cap_seconds": 300
+}

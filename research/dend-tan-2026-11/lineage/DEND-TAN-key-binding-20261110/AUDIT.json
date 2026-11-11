@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "checks": 301878,
+  "blocks": 12,
+  "fits": 36,
+  "updates": 21600,
+  "updates_per_fit": 600,
+  "evaluations": 156,
+  "forward_sample_steps": 100970496,
+  "dense_forward_macs": 15751397376,
+  "dense_backward_macs": 23887872000,
+  "max_numeric_error": 8.881784197001252e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 51527680,
+  "wall_seconds": 12.638310500013176,
+  "cpu_seconds": 7.578125,
+  "optimizer_updates": 21600,
+  "training_sample_steps": 99532800,
+  "first_last_training_replays": 72,
+  "evaluation_sample_steps": 1437696,
+  "duplicate_opposite_label_pairs": 9216,
+  "keyed_cases": 108,
+  "deletion_cases": 108,
+  "swap_cases": 12,
+  "primary_effects": [
+    {
+      "effect": "key_minus_mean",
+      "blocks": 12,
+      "values": [
+        0.6875,
+        0.125,
+        0.1484375,
+        0.0,
+        0.203125,
+        0.1171875,
+        0.0078125,
+        0.3984375,
+        0.359375,
+        0.078125,
+        0.5859375,
+        0.0703125
+      ],
+      "mean": 0.23177083333333334,
+      "sample_sd": 0.22623981069053226,
+      "minimum": 0.0,
+      "maximum": 0.6875,
+      "positive": 11,
+      "zero": 1,
+      "negative": 0,
+      "ci97_5": [
+        0.10416666666666667,
+        0.3815104166666667
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "swap_counterfactual_joint_gain",
+      "blocks": 12,
+      "values": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 1.0,
+      "sample_sd": 0.0,
+      "minimum": 1.0,
+      "maximum": 1.0,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        1.0,
+        1.0
+      ],
+      "direction": "positive"
+    }
+  ],
+  "scope": "Independent stimulus generation, initial weights, all stored objectives and Adam updates, first/last native forwards, all evaluation raw replays, resource and keyed memory invariants, exact deletion equivalences, swap prefix and slot identity, and paired bootstraps. Scientific parameter gradients are not independently regenerated at each update."
+}

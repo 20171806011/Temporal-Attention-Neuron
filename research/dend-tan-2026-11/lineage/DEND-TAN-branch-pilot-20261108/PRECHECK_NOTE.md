@@ -1,0 +1,3 @@
+> Historical archival document. Original language preserved. Personal paths/host metadata and unavailable media links were sanitized; consult README.md and ARCHIVE_INDEX.json.
+
+Before scientific freeze, preflight_attempt_1.py called the mixed-branch-only scalar oracle on baseline DEND. The oracle correctly rejected the unsupported arm; PRECHECK_FAILURE_1.json is retained. The wrapper now calls that oracle only for FULL/NOATT, while baseline DEND has its dedicated original forward/gradient identity check. Model and original source code were unchanged. Corrected preflight passed2988 checks, maximum forward error2.22e-15 and anchored proxy derivative error2.35e-10. No scientific samples or trained performance used.

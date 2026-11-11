@@ -1,0 +1,66 @@
+{
+  "source_freeze_sha256": "274faeb905d4614f3d299023cdd86650c08898f41017ba28cb68166155a15c47",
+  "ret": [
+    0.95,
+    0.85
+  ],
+  "losses": {
+    "DEND": "RATE",
+    "POINT": "CE"
+  },
+  "core_model_source": "REDACTED_LOCAL_PATH",
+  "core_model_sha256": "1b3f72f6ad3d54d4bcbbbb2ea43c5f6b65dcf12f83095435d8469be5144c2418",
+  "sources": [
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "destination": "legacy\\base_s0.npz",
+      "sha256": "135ac762a705b844a64f76af19d9fc5bc439465657230f066979f15f4a778702"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "df8d891babf92c65620623bbf0546530c41a8764682e0b2d3c96f67ef6ce4401",
+      "destination": "legacy\\s0_DEND.npy",
+      "sha256": "5fa302bb82fc298c3d75e4c004defc6e60d0679c78155ffe48fa03a7ca269540"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "37384e92ab55d3210e8a64c9b529108f88a8993819186b988c8e10c4241f4d65",
+      "destination": "legacy\\s0_POINT.npy",
+      "sha256": "6e0c81e93d74da204277792feadf406ea75c6cb9d1d48fcf09ec70287cb7f688"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "destination": "legacy\\base_s1.npz",
+      "sha256": "aa7da10bc8292d00b92e8c452f252df89bae8d9e44ad9269f523190d75265fef"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "86e82c2567406a049437d82b0b14e7e4d9f5b5450d6ddcd1590ce46d3a41bfd2",
+      "destination": "legacy\\s1_DEND.npy",
+      "sha256": "84adc414515cba6ac456c7fda4bf96fc2525ceae1dd6646cd8bb03c7c375d79b"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "a6eb657ecfc475556ce681dd7b34fd3363a38fac062bfead97fb4101725ca02b",
+      "destination": "legacy\\s1_POINT.npy",
+      "sha256": "05c5e1f0f1478358c5c0db54b59b5fef7b6539ee299636a4972a822c73a67f3b"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "destination": "legacy\\base_s2.npz",
+      "sha256": "00311629eb6b3756501481abb9bcf74522307c9809918c4309c47b9eb03e029c"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "f38d6f1e619aa209887c404b3e459ec3f1778efdc2628b609d71c4e08ea37864",
+      "destination": "legacy\\s2_DEND.npy",
+      "sha256": "03b144daa820623a5d4c550ea5ed99a7b30a08698af7d50e242fa6ad7142d1e6"
+    },
+    {
+      "source": "REDACTED_LOCAL_PATH",
+      "source_sha256": "5ef78023c055a871ad21aa9c5999e07508f2d5b15f8133263c666b566a9469a3",
+      "destination": "legacy\\s2_POINT.npy",
+      "sha256": "2222011d2ba45267937fa681244c9aaf3e8e3366f6bde79bf7c039cfc39a4c16"
+    }
+  ]
+}

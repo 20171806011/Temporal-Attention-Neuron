@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "completed_blocks": 12,
+  "evaluations": 288,
+  "training": {
+    "status": "PASS",
+    "checks": 51284,
+    "max_numeric_error": 4.440892098500626e-16,
+    "optimizer_updates": 7200,
+    "training_checks": 50556,
+    "first_last_training_replays": 24,
+    "final_training_replays": 12,
+    "train_lock_sha256": "6fe4911f7ab459604a90f43f7bce992cd3a6db7f88fd7492c48075e481b1c6a0",
+    "wall_seconds": 3.811238400056027,
+    "cpu_seconds": 3.734375
+  },
+  "max_numeric_error": 4.440892098500626e-15,
+  "block_checks": 78120,
+  "primary_effects": [
+    {
+      "effect": "evicted_gain",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.03125,
+        0.03125,
+        0.015625,
+        0.015625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0078125,
+      "sample_sd": 0.0124644380502729,
+      "minimum": 0.0,
+      "maximum": 0.03125,
+      "positive": 4,
+      "zero": 8,
+      "negative": 0,
+      "ci97_5": [
+        0.0013020833333333333,
+        0.015625
+      ],
+      "threshold": 0.0,
+      "passes": true,
+      "direction": "positive"
+    },
+    {
+      "effect": "recent_change",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "sample_sd": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 12,
+      "negative": 0,
+      "ci97_5": [
+        0.0,
+        0.0
+      ],
+      "threshold": -0.02,
+      "passes": true,
+      "direction": "undetermined"
+    }
+  ]
+}

@@ -1,0 +1,6258 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "study_status",
+    "model_rows",
+    "group_rows",
+    "block_rows",
+    "overall",
+    "benchmarks",
+    "contrast_signs",
+    "coverage",
+    "resources",
+    "inference"
+  ],
+  "retained_top_level_keys": [
+    "study_status",
+    "overall",
+    "contrast_signs",
+    "coverage",
+    "resources",
+    "inference",
+    "block_rows",
+    "group_rows"
+  ],
+  "omitted_top_level_keys": [
+    "model_rows",
+    "benchmarks"
+  ],
+  "data": {
+    "study_status": "FROZEN_NATIVE_PULSES_STREAMING_READOUT",
+    "overall": {
+      "native_strict_ba": {
+        "values": [
+          0.19026692708333334,
+          0.366455078125,
+          0.4618326822916667
+        ],
+        "mean": 0.3395182291666667,
+        "ci95": [
+          0.19026692708333334,
+          0.4618326822916667
+        ],
+        "available_blocks": 3
+      },
+      "native_forced_ba": {
+        "values": [
+          0.5291341145833334,
+          0.5631510416666666,
+          0.6380208333333334
+        ],
+        "mean": 0.5767686631944445,
+        "ci95": [
+          0.5291341145833334,
+          0.6380208333333334
+        ],
+        "available_blocks": 3
+      },
+      "count2_ba": {
+        "values": [
+          0.565673828125,
+          0.663818359375,
+          0.6602376302083334
+        ],
+        "mean": 0.6299099392361112,
+        "ci95": [
+          0.565673828125,
+          0.663818359375
+        ],
+        "available_blocks": 3
+      },
+      "moment2_ba": {
+        "values": [
+          0.6015625,
+          0.6556803385416666,
+          0.6515299479166666
+        ],
+        "mean": 0.636257595486111,
+        "ci95": [
+          0.6015625,
+          0.6556803385416666
+        ],
+        "available_blocks": 3
+      },
+      "shuffle_ba_mean": {
+        "values": [
+          0.5459798177083334,
+          0.6255289713541666,
+          0.65625
+        ],
+        "mean": 0.6092529296875,
+        "ci95": [
+          0.5459798177083334,
+          0.65625
+        ],
+        "available_blocks": 3
+      },
+      "offline16_ba": {
+        "values": [
+          0.63623046875,
+          0.7237141927083334,
+          0.710693359375
+        ],
+        "mean": 0.6902126736111112,
+        "ci95": [
+          0.63623046875,
+          0.7237141927083334
+        ],
+        "available_blocks": 3
+      },
+      "moment_minus_count": {
+        "values": [
+          0.035888671875,
+          -0.008138020833333334,
+          -0.008707682291666666
+        ],
+        "mean": 0.00634765625,
+        "ci95": [
+          -0.008707682291666666,
+          0.035888671875
+        ],
+        "available_blocks": 3
+      },
+      "moment_minus_shuffle": {
+        "values": [
+          0.055582682291666664,
+          0.0301513671875,
+          -0.004720052083333333
+        ],
+        "mean": 0.02700466579861111,
+        "ci95": [
+          -0.004720052083333333,
+          0.055582682291666664
+        ],
+        "available_blocks": 3
+      },
+      "moment_minus_native": {
+        "values": [
+          0.07242838541666667,
+          0.092529296875,
+          0.013509114583333334
+        ],
+        "mean": 0.05948893229166668,
+        "ci95": [
+          0.013509114583333334,
+          0.092529296875
+        ],
+        "available_blocks": 3
+      },
+      "count2_mse": {
+        "values": [
+          0.9562358645901484,
+          0.773789839328105,
+          0.7656869523519537
+        ],
+        "mean": 0.8319042187567357,
+        "ci95": [
+          0.7656869523519537,
+          0.9562358645901484
+        ],
+        "available_blocks": 3
+      },
+      "moment2_mse": {
+        "values": [
+          0.9484636221523842,
+          0.8073149286770755,
+          0.7722021276627898
+        ],
+        "mean": 0.8426602261640831,
+        "ci95": [
+          0.7722021276627898,
+          0.9484636221523842
+        ],
+        "available_blocks": 3
+      },
+      "shuffle_mse_mean": {
+        "values": [
+          0.9776963435154472,
+          0.817416572836755,
+          0.7785367973172681
+        ],
+        "mean": 0.8578832378898235,
+        "ci95": [
+          0.7785367973172681,
+          0.9776963435154472
+        ],
+        "available_blocks": 3
+      },
+      "offline16_mse": {
+        "values": [
+          0.8575608859410804,
+          0.6840262623045162,
+          0.6961747071924603
+        ],
+        "mean": 0.7459206184793522,
+        "ci95": [
+          0.6840262623045162,
+          0.8575608859410804
+        ],
+        "available_blocks": 3
+      },
+      "matched_pairs": {
+        "values": [
+          659.75,
+          423.3333333333333,
+          423.4166666666667
+        ],
+        "mean": 502.1666666666667,
+        "ci95": [
+          423.3333333333333,
+          659.75
+        ],
+        "available_blocks": 3
+      },
+      "matched_quartets": {
+        "values": [
+          225.66666666666666,
+          170.75,
+          171.41666666666666
+        ],
+        "mean": 189.27777777777774,
+        "ci95": [
+          170.75,
+          225.66666666666666
+        ],
+        "available_blocks": 3
+      },
+      "matched_count_rank": {
+        "values": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "mean": 0.5,
+        "ci95": [
+          0.5,
+          0.5
+        ],
+        "available_blocks": 3
+      },
+      "matched_moment_rank": {
+        "values": [
+          0.5597180823720385,
+          0.5533430520398123,
+          0.5453032291287967
+        ],
+        "mean": 0.5527881211802158,
+        "ci95": [
+          0.5453032291287967,
+          0.5597180823720385
+        ],
+        "available_blocks": 3
+      },
+      "matched_shuffle_rank_mean": {
+        "values": [
+          0.49799234603845227,
+          0.4988132055477973,
+          0.5024996415363056
+        ],
+        "mean": 0.4997683977075183,
+        "ci95": [
+          0.49799234603845227,
+          0.5024996415363056
+        ],
+        "available_blocks": 3
+      },
+      "matched_offline_rank": {
+        "values": [
+          0.6203338652438969,
+          0.6122881037939986,
+          0.5938115409085792
+        ],
+        "mean": 0.6088111699821582,
+        "ci95": [
+          0.5938115409085792,
+          0.6203338652438969
+        ],
+        "available_blocks": 3
+      },
+      "fixed_4_4_n": {
+        "values": [
+          653.8333333333334,
+          308.3333333333333,
+          337.25
+        ],
+        "mean": 433.1388888888889,
+        "ci95": [
+          308.3333333333333,
+          653.8333333333334
+        ],
+        "available_blocks": 3
+      },
+      "fixed_4_4_moment_ba": {
+        "values": [
+          0.5677273250762525,
+          0.5204826932728184,
+          0.4856666341374362
+        ],
+        "mean": 0.5246255508288357,
+        "ci95": [
+          0.4856666341374362,
+          0.5677273250762525
+        ],
+        "available_blocks": 3
+      },
+      "fixed_4_4_offline_ba": {
+        "values": [
+          0.5879806871415577,
+          0.5754600308087418,
+          0.5803543909645655
+        ],
+        "mean": 0.5812650363049551,
+        "ci95": [
+          0.5754600308087418,
+          0.5879806871415577
+        ],
+        "available_blocks": 3
+      },
+      "native_coverage": {
+        "values": [
+          0.3075358072916667,
+          0.53515625,
+          0.6538899739583334
+        ],
+        "mean": 0.4988606770833333,
+        "ci95": [
+          0.3075358072916667,
+          0.6538899739583334
+        ],
+        "available_blocks": 3
+      },
+      "native_silence": {
+        "values": [
+          0.0,
+          0.1416015625,
+          0.00016276041666666666
+        ],
+        "mean": 0.04725477430555555,
+        "ci95": [
+          0.0,
+          0.1416015625
+        ],
+        "available_blocks": 3
+      },
+      "native_saturated_tie": {
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "available_blocks": 3
+      },
+      "native_intermediate_tie": {
+        "values": [
+          0.6924641927083334,
+          0.3232421875,
+          0.345947265625
+        ],
+        "mean": 0.45388454861111116,
+        "ci95": [
+          0.3232421875,
+          0.6924641927083334
+        ],
+        "available_blocks": 3
+      },
+      "fit_seconds": {
+        "values": [
+          0.004029858328673678,
+          0.00384699999995064,
+          0.003494024994627883
+        ],
+        "mean": 0.0037902944410840677,
+        "ci95": [
+          0.003494024994627883,
+          0.004029858328673678
+        ],
+        "available_blocks": 3
+      },
+      "fit_collect_seconds": {
+        "values": [
+          0.04701319166633766,
+          0.0469591999911548,
+          0.04806627500996304
+        ],
+        "mean": 0.04734622222248517,
+        "ci95": [
+          0.0469591999911548,
+          0.04806627500996304
+        ],
+        "available_blocks": 3
+      },
+      "test_collect_seconds": {
+        "values": [
+          0.11244158333768912,
+          0.08449985832946065,
+          0.21918680000332338
+        ],
+        "mean": 0.1387094138901577,
+        "ci95": [
+          0.08449985832946065,
+          0.21918680000332338
+        ],
+        "available_blocks": 3
+      }
+    },
+    "contrast_signs": {
+      "moment_minus_count": {
+        "positive": 20,
+        "zero": 8,
+        "negative": 8,
+        "missing": 0
+      },
+      "moment_minus_shuffle": {
+        "positive": 26,
+        "zero": 6,
+        "negative": 4,
+        "missing": 0
+      },
+      "moment_minus_native": {
+        "positive": 25,
+        "zero": 6,
+        "negative": 5,
+        "missing": 0
+      }
+    },
+    "coverage": {
+      "matched_models": 32,
+      "unmatched_models": [
+        "s2_DEND_CE",
+        "s1_FULL_CE",
+        "s1_GAIN2_CE",
+        "s2_GAIN2_CE"
+      ],
+      "matched_pairs": 18078,
+      "matched_quartets": 6814,
+      "fixed_4_4_models": 25
+    },
+    "resources": {
+      "test_totals": {
+        "hidden_spikes": 2710190,
+        "output_spikes": 664561,
+        "recurrent_fanout": 30694128,
+        "output_fanout": 5115688
+      },
+      "total_fit_seconds": 0.1364505998790264,
+      "total_fit_collect_seconds": 1.704464000009466,
+      "total_test_collect_seconds": 4.993538900045678
+    },
+    "inference": {
+      "model_blocks": 3,
+      "models_per_block": 12,
+      "shuffle_count": 8,
+      "bootstrap_seed": 4031900001,
+      "bootstrap_draws": 20000,
+      "interval": "pointwise 95%, descriptive, complete blocks",
+      "primary": "MOMENT2 minus COUNT2 whole-test balanced accuracy",
+      "ranking": "equal matching quartets, equal pairs within quartet"
+    },
+    "block_rows": [
+      {
+        "seed": 0,
+        "models": 12,
+        "matched_models": 12,
+        "fixed_4_4_models": 11,
+        "native_strict_ba": 0.19026692708333334,
+        "native_forced_ba": 0.5291341145833334,
+        "count2_ba": 0.565673828125,
+        "moment2_ba": 0.6015625,
+        "shuffle_ba_mean": 0.5459798177083334,
+        "offline16_ba": 0.63623046875,
+        "moment_minus_count": 0.035888671875,
+        "moment_minus_shuffle": 0.055582682291666664,
+        "moment_minus_native": 0.07242838541666667,
+        "count2_mse": 0.9562358645901484,
+        "moment2_mse": 0.9484636221523842,
+        "shuffle_mse_mean": 0.9776963435154472,
+        "offline16_mse": 0.8575608859410804,
+        "matched_pairs": 659.75,
+        "matched_quartets": 225.66666666666666,
+        "matched_count_rank": 0.5,
+        "matched_moment_rank": 0.5597180823720385,
+        "matched_shuffle_rank_mean": 0.49799234603845227,
+        "matched_offline_rank": 0.6203338652438969,
+        "fixed_4_4_n": 653.8333333333334,
+        "fixed_4_4_moment_ba": 0.5677273250762525,
+        "fixed_4_4_offline_ba": 0.5879806871415577,
+        "native_coverage": 0.3075358072916667,
+        "native_silence": 0.0,
+        "native_saturated_tie": 0.0,
+        "native_intermediate_tie": 0.6924641927083334,
+        "fit_seconds": 0.004029858328673678,
+        "fit_collect_seconds": 0.04701319166633766,
+        "test_collect_seconds": 0.11244158333768912,
+        "native_forced_bench_median_ns": 46775.0,
+        "count2_bench_median_ns": 57425.0,
+        "moment2_bench_median_ns": 87325.0
+      },
+      {
+        "seed": 1,
+        "models": 12,
+        "matched_models": 10,
+        "fixed_4_4_models": 8,
+        "native_strict_ba": 0.366455078125,
+        "native_forced_ba": 0.5631510416666666,
+        "count2_ba": 0.663818359375,
+        "moment2_ba": 0.6556803385416666,
+        "shuffle_ba_mean": 0.6255289713541666,
+        "offline16_ba": 0.7237141927083334,
+        "moment_minus_count": -0.008138020833333334,
+        "moment_minus_shuffle": 0.0301513671875,
+        "moment_minus_native": 0.092529296875,
+        "count2_mse": 0.773789839328105,
+        "moment2_mse": 0.8073149286770755,
+        "shuffle_mse_mean": 0.817416572836755,
+        "offline16_mse": 0.6840262623045162,
+        "matched_pairs": 423.3333333333333,
+        "matched_quartets": 170.75,
+        "matched_count_rank": 0.5,
+        "matched_moment_rank": 0.5533430520398123,
+        "matched_shuffle_rank_mean": 0.4988132055477973,
+        "matched_offline_rank": 0.6122881037939986,
+        "fixed_4_4_n": 308.3333333333333,
+        "fixed_4_4_moment_ba": 0.5204826932728184,
+        "fixed_4_4_offline_ba": 0.5754600308087418,
+        "native_coverage": 0.53515625,
+        "native_silence": 0.1416015625,
+        "native_saturated_tie": 0.0,
+        "native_intermediate_tie": 0.3232421875,
+        "fit_seconds": 0.00384699999995064,
+        "fit_collect_seconds": 0.0469591999911548,
+        "test_collect_seconds": 0.08449985832946065,
+        "native_forced_bench_median_ns": 45675.0,
+        "count2_bench_median_ns": 55800.0,
+        "moment2_bench_median_ns": 86675.0
+      },
+      {
+        "seed": 2,
+        "models": 12,
+        "matched_models": 10,
+        "fixed_4_4_models": 6,
+        "native_strict_ba": 0.4618326822916667,
+        "native_forced_ba": 0.6380208333333334,
+        "count2_ba": 0.6602376302083334,
+        "moment2_ba": 0.6515299479166666,
+        "shuffle_ba_mean": 0.65625,
+        "offline16_ba": 0.710693359375,
+        "moment_minus_count": -0.008707682291666666,
+        "moment_minus_shuffle": -0.004720052083333333,
+        "moment_minus_native": 0.013509114583333334,
+        "count2_mse": 0.7656869523519537,
+        "moment2_mse": 0.7722021276627898,
+        "shuffle_mse_mean": 0.7785367973172681,
+        "offline16_mse": 0.6961747071924603,
+        "matched_pairs": 423.4166666666667,
+        "matched_quartets": 171.41666666666666,
+        "matched_count_rank": 0.5,
+        "matched_moment_rank": 0.5453032291287967,
+        "matched_shuffle_rank_mean": 0.5024996415363056,
+        "matched_offline_rank": 0.5938115409085792,
+        "fixed_4_4_n": 337.25,
+        "fixed_4_4_moment_ba": 0.4856666341374362,
+        "fixed_4_4_offline_ba": 0.5803543909645655,
+        "native_coverage": 0.6538899739583334,
+        "native_silence": 0.00016276041666666666,
+        "native_saturated_tie": 0.0,
+        "native_intermediate_tie": 0.345947265625,
+        "fit_seconds": 0.003494024994627883,
+        "fit_collect_seconds": 0.04806627500996304,
+        "test_collect_seconds": 0.21918680000332338,
+        "native_forced_bench_median_ns": 125700.0,
+        "count2_bench_median_ns": 154800.0,
+        "moment2_bench_median_ns": 239550.0
+      }
+    ],
+    "group_rows": [
+      {
+        "arm": "DEND",
+        "loss": "CE",
+        "model_ids": [
+          "s0_DEND_CE",
+          "s1_DEND_CE",
+          "s2_DEND_CE"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.32421875,
+              0.0,
+              0.9931640625
+            ],
+            "mean": 0.4391276041666667,
+            "ci95": [
+              0.0,
+              0.9931640625
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5419921875,
+              0.5,
+              0.994140625
+            ],
+            "mean": 0.6787109375,
+            "ci95": [
+              0.5,
+              0.994140625
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.580078125,
+              0.5,
+              0.9931640625
+            ],
+            "mean": 0.6910807291666666,
+            "ci95": [
+              0.5,
+              0.9931640625
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.580078125,
+              0.5,
+              0.9931640625
+            ],
+            "mean": 0.6910807291666666,
+            "ci95": [
+              0.5,
+              0.9931640625
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5552978515625,
+              0.5,
+              0.9931640625
+            ],
+            "mean": 0.6828206380208334,
+            "ci95": [
+              0.5,
+              0.9931640625
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.5849609375,
+              0.5,
+              0.994140625
+            ],
+            "mean": 0.6930338541666666,
+            "ci95": [
+              0.5,
+              0.994140625
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0247802734375,
+              0.0,
+              0.0
+            ],
+            "mean": 0.008260091145833334,
+            "ci95": [
+              0.0,
+              0.0247802734375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.0380859375,
+              0.0,
+              -0.0009765625
+            ],
+            "mean": 0.012369791666666666,
+            "ci95": [
+              -0.0009765625,
+              0.0380859375
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9910097397249471,
+              1.0,
+              0.042777246324396515
+            ],
+            "mean": 0.6779289953497812,
+            "ci95": [
+              0.04277724632439652,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9895814631889,
+              1.0,
+              0.036052820800061475
+            ],
+            "mean": 0.6752114279963205,
+            "ci95": [
+              0.036052820800061475,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9932739467857974,
+              1.0,
+              0.04235035505412038
+            ],
+            "mean": 0.6785414339466392,
+            "ci95": [
+              0.04235035505412038,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9707139296821922,
+              1.0,
+              0.03262644865135275
+            ],
+            "mean": 0.6677801261111815,
+            "ci95": [
+              0.03262644865135275,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              594,
+              1024,
+              0
+            ],
+            "mean": 539.3333333333334,
+            "ci95": [
+              0.0,
+              1024.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              235,
+              256,
+              0
+            ],
+            "mean": 163.66666666666666,
+            "ci95": [
+              0.0,
+              256.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              null
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5127659574468084,
+              0.5,
+              null
+            ],
+            "mean": 0.5063829787234042,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.5073803191489362,
+              0.5,
+              null
+            ],
+            "mean": 0.503690159574468,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.5127659574468084,
+              0.5,
+              null
+            ],
+            "mean": 0.5063829787234042,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "fixed_4_4_n": {
+            "values": [
+              485,
+              0,
+              0
+            ],
+            "mean": 161.66666666666666,
+            "ci95": [
+              0.0,
+              485.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5,
+              null,
+              null
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.5,
+              null,
+              null
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "native_coverage": {
+            "values": [
+              0.5263671875,
+              0.0,
+              0.9990234375
+            ],
+            "mean": 0.5084635416666666,
+            "ci95": [
+              0.0,
+              0.9990234375
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "mean": 0.3333333333333333,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.4736328125,
+              0.0,
+              0.0009765625
+            ],
+            "mean": 0.158203125,
+            "ci95": [
+              0.0,
+              0.4736328125
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.005368299956899136,
+              0.0026843000086955726,
+              0.002927800000179559
+            ],
+            "mean": 0.003660133321924756,
+            "ci95": [
+              0.0026843000086955726,
+              0.005368299956899136
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.028396200039424002,
+              0.02830030000768602,
+              0.02252510003745556
+            ],
+            "mean": 0.026407200028188527,
+            "ci95": [
+              0.02252510003745556,
+              0.028396200039424002
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.12751600000774488,
+              0.045311099966056645,
+              0.14690480002900586
+            ],
+            "mean": 0.10657730000093579,
+            "ci95": [
+              0.045311099966056645,
+              0.14690480002900586
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              83200.0,
+              46450.0,
+              119550.0
+            ],
+            "mean": 83066.66666666667,
+            "ci95": [
+              46450.0,
+              119550.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              99900.0,
+              57350.0,
+              131800.0
+            ],
+            "mean": 96350.0,
+            "ci95": [
+              57350.0,
+              131800.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              154700.0,
+              88700.0,
+              221150.0
+            ],
+            "mean": 154850.0,
+            "ci95": [
+              88700.0,
+              221150.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              99.08984375,
+              65.1474609375,
+              27.0546875
+            ],
+            "mean": 63.763997395833336,
+            "ci95": [
+              27.0546875,
+              99.08984375
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              22.119140625,
+              1.8701171875,
+              10.529296875
+            ],
+            "mean": 11.506184895833334,
+            "ci95": [
+              1.8701171875,
+              22.119140625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1119.45703125,
+              733.76953125,
+              292.23046875
+            ],
+            "mean": 715.15234375,
+            "ci95": [
+              292.23046875,
+              1119.45703125
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              186.576171875,
+              122.294921875,
+              48.705078125
+            ],
+            "mean": 119.19205729166667,
+            "ci95": [
+              48.705078125,
+              186.576171875
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "DEND",
+        "loss": "COUNT",
+        "model_ids": [
+          "s0_DEND_COUNT",
+          "s1_DEND_COUNT",
+          "s2_DEND_COUNT"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.05859375,
+              0.3525390625,
+              0.3017578125
+            ],
+            "mean": 0.23763020833333334,
+            "ci95": [
+              0.05859375,
+              0.3525390625
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5,
+              0.505859375,
+              0.56640625
+            ],
+            "mean": 0.5240885416666666,
+            "ci95": [
+              0.5,
+              0.56640625
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.521484375,
+              0.6103515625,
+              0.6689453125
+            ],
+            "mean": 0.6002604166666666,
+            "ci95": [
+              0.521484375,
+              0.6689453125
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.4833984375,
+              0.5615234375,
+              0.56640625
+            ],
+            "mean": 0.537109375,
+            "ci95": [
+              0.4833984375,
+              0.56640625
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.518798828125,
+              0.5166015625,
+              0.5604248046875
+            ],
+            "mean": 0.5319417317708334,
+            "ci95": [
+              0.5166015625,
+              0.5604248046875
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.6142578125,
+              0.732421875,
+              0.6708984375
+            ],
+            "mean": 0.6725260416666666,
+            "ci95": [
+              0.6142578125,
+              0.732421875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              -0.0380859375,
+              -0.048828125,
+              -0.1025390625
+            ],
+            "mean": -0.06315104166666667,
+            "ci95": [
+              -0.1025390625,
+              -0.0380859375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              -0.035400390625,
+              0.044921875,
+              0.0059814453125
+            ],
+            "mean": 0.005167643229166667,
+            "ci95": [
+              -0.035400390625,
+              0.044921875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              -0.0166015625,
+              0.0556640625,
+              0.0
+            ],
+            "mean": 0.013020833333333334,
+            "ci95": [
+              -0.0166015625,
+              0.0556640625
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9991323152783727,
+              0.9642673559460866,
+              0.8841377602029199
+            ],
+            "mean": 0.9491791438091264,
+            "ci95": [
+              0.8841377602029198,
+              0.9991323152783727
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9982382454863363,
+              0.9924382663762984,
+              0.9851187131189106
+            ],
+            "mean": 0.991931741660515,
+            "ci95": [
+              0.9851187131189106,
+              0.9982382454863363
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              1.0003688193328242,
+              0.9967786032676166,
+              0.9883195847535409
+            ],
+            "mean": 0.9951556691179939,
+            "ci95": [
+              0.9883195847535409,
+              1.0003688193328242
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9052405356054822,
+              0.7131711474481255,
+              0.8093451760579141
+            ],
+            "mean": 0.8092522863705073,
+            "ci95": [
+              0.7131711474481254,
+              0.9052405356054822
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              860,
+              364,
+              280
+            ],
+            "mean": 501.3333333333333,
+            "ci95": [
+              280.0,
+              860.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              256,
+              212,
+              196
+            ],
+            "mean": 221.33333333333334,
+            "ci95": [
+              196.0,
+              256.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.57080078125,
+              0.4829009433962264,
+              0.5012755102040817
+            ],
+            "mean": 0.5183257449501028,
+            "ci95": [
+              0.4829009433962264,
+              0.57080078125
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.50518798828125,
+              0.5086232311320754,
+              0.49673150510204084
+            ],
+            "mean": 0.503514241505122,
+            "ci95": [
+              0.49673150510204084,
+              0.5086232311320754
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.63232421875,
+              0.5713443396226415,
+              0.5012755102040817
+            ],
+            "mean": 0.5683146895255744,
+            "ci95": [
+              0.5012755102040817,
+              0.63232421875
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              882,
+              40,
+              419
+            ],
+            "mean": 447.0,
+            "ci95": [
+              40.0,
+              882.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5073111751389174,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5024370583796391,
+            "ci95": [
+              0.5,
+              0.5073111751389174
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.6344669685120394,
+              0.5,
+              0.5025
+            ],
+            "mean": 0.5456556561706798,
+            "ci95": [
+              0.5,
+              0.6344669685120394
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.138671875,
+              0.7958984375,
+              0.5048828125
+            ],
+            "mean": 0.4798177083333333,
+            "ci95": [
+              0.138671875,
+              0.7958984375
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.861328125,
+              0.2041015625,
+              0.4951171875
+            ],
+            "mean": 0.5201822916666666,
+            "ci95": [
+              0.2041015625,
+              0.861328125
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.00298839999595657,
+              0.003937800007406622,
+              0.0026279999874532223
+            ],
+            "mean": 0.003184733330272138,
+            "ci95": [
+              0.0026279999874532223,
+              0.003937800007406622
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.020638999994844198,
+              0.023109300003852695,
+              0.026229500013869256
+            ],
+            "mean": 0.02332593333752205,
+            "ci95": [
+              0.020638999994844198,
+              0.026229500013869256
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.10392470000078902,
+              0.04482420004205778,
+              0.11801479995483533
+            ],
+            "mean": 0.0889212333325607,
+            "ci95": [
+              0.04482420004205778,
+              0.11801479995483533
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              47100.0,
+              45700.0,
+              130700.0
+            ],
+            "mean": 74500.0,
+            "ci95": [
+              45700.0,
+              130700.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              57550.0,
+              56100.0,
+              162600.0
+            ],
+            "mean": 92083.33333333333,
+            "ci95": [
+              56100.0,
+              162600.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              88200.0,
+              86450.0,
+              245800.0
+            ],
+            "mean": 140150.0,
+            "ci95": [
+              86450.0,
+              245800.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              103.75,
+              55.2734375,
+              67.4716796875
+            ],
+            "mean": 75.49837239583333,
+            "ci95": [
+              55.2734375,
+              103.75
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              16.146484375,
+              21.4150390625,
+              19.6630859375
+            ],
+            "mean": 19.074869791666668,
+            "ci95": [
+              16.146484375,
+              21.4150390625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1176.703125,
+              617.63671875,
+              761.66015625
+            ],
+            "mean": 852.0,
+            "ci95": [
+              617.63671875,
+              1176.703125
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              196.1171875,
+              102.939453125,
+              126.943359375
+            ],
+            "mean": 142.0,
+            "ci95": [
+              102.939453125,
+              196.1171875
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "DEND",
+        "loss": "CECOM",
+        "model_ids": [
+          "s0_DEND_CECOM",
+          "s1_DEND_CECOM",
+          "s2_DEND_CECOM"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.005859375,
+              0.1494140625,
+              0.0283203125
+            ],
+            "mean": 0.061197916666666664,
+            "ci95": [
+              0.005859375,
+              0.1494140625
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.427734375,
+              0.44921875,
+              0.4970703125
+            ],
+            "mean": 0.4580078125,
+            "ci95": [
+              0.427734375,
+              0.4970703125
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.572265625,
+              0.615234375,
+              0.4970703125
+            ],
+            "mean": 0.5615234375,
+            "ci95": [
+              0.4970703125,
+              0.615234375
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.59765625,
+              0.5732421875,
+              0.5
+            ],
+            "mean": 0.5569661458333334,
+            "ci95": [
+              0.5,
+              0.59765625
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.56640625,
+              0.5089111328125,
+              0.4959716796875
+            ],
+            "mean": 0.5237630208333334,
+            "ci95": [
+              0.4959716796875,
+              0.56640625
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.62109375,
+              0.6474609375,
+              0.5263671875
+            ],
+            "mean": 0.5983072916666666,
+            "ci95": [
+              0.5263671875,
+              0.6474609375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.025390625,
+              -0.0419921875,
+              0.0029296875
+            ],
+            "mean": -0.004557291666666667,
+            "ci95": [
+              -0.0419921875,
+              0.025390625
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.03125,
+              0.0643310546875,
+              0.0040283203125
+            ],
+            "mean": 0.033203125,
+            "ci95": [
+              0.0040283203125,
+              0.0643310546875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.169921875,
+              0.1240234375,
+              0.0029296875
+            ],
+            "mean": 0.09895833333333333,
+            "ci95": [
+              0.0029296875,
+              0.169921875
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9835799345226233,
+              0.9856136521785637,
+              1.0000978004161305
+            ],
+            "mean": 0.9897637957057724,
+            "ci95": [
+              0.9835799345226232,
+              1.0000978004161305
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9617267056480989,
+              0.9791372367944084,
+              0.9992865551669391
+            ],
+            "mean": 0.9800501658698155,
+            "ci95": [
+              0.961726705648099,
+              0.9992865551669391
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9854253794101222,
+              0.9999098988934728,
+              1.0001878365640184
+            ],
+            "mean": 0.9951743716225377,
+            "ci95": [
+              0.9854253794101222,
+              1.0001878365640184
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9045528916033119,
+              0.8732202603250955,
+              0.9916194010063732
+            ],
+            "mean": 0.9231308509782602,
+            "ci95": [
+              0.8732202603250955,
+              0.9916194010063734
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              801,
+              645,
+              919
+            ],
+            "mean": 788.3333333333334,
+            "ci95": [
+              645.0,
+              919.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              256,
+              225,
+              256
+            ],
+            "mean": 245.66666666666666,
+            "ci95": [
+              225.0,
+              256.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.4912109375,
+              0.6116666666666667,
+              0.48779296875
+            ],
+            "mean": 0.5302235243055556,
+            "ci95": [
+              0.48779296875,
+              0.6116666666666667
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.5037841796875,
+              0.4951388888888889,
+              0.5008544921875
+            ],
+            "mean": 0.499925853587963,
+            "ci95": [
+              0.49513888888888885,
+              0.5037841796875
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.5888671875,
+              0.5172222222222222,
+              0.52880859375
+            ],
+            "mean": 0.5449660011574075,
+            "ci95": [
+              0.5172222222222222,
+              0.5888671875
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              895,
+              716,
+              962
+            ],
+            "mean": 857.6666666666666,
+            "ci95": [
+              716.0,
+              962.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.537299516038717,
+              0.5539211391890924,
+              0.5025414937759336
+            ],
+            "mean": 0.5312540496679142,
+            "ci95": [
+              0.5025414937759336,
+              0.5539211391890924
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.5632949364050877,
+              0.5382397680845472,
+              0.526106500691563
+            ],
+            "mean": 0.5425470683937327,
+            "ci95": [
+              0.526106500691563,
+              0.5632949364050877
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.1259765625,
+              0.30078125,
+              0.060546875
+            ],
+            "mean": 0.16243489583333334,
+            "ci95": [
+              0.060546875,
+              0.30078125
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.8740234375,
+              0.69921875,
+              0.939453125
+            ],
+            "mean": 0.8375651041666666,
+            "ci95": [
+              0.69921875,
+              0.939453125
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.0029657999984920025,
+              0.0033937999978661537,
+              0.0028608000138774514
+            ],
+            "mean": 0.003073466670078536,
+            "ci95": [
+              0.0028608000138774514,
+              0.0033937999978661537
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.030841999978292733,
+              0.022602099983487278,
+              0.024226800014730543
+            ],
+            "mean": 0.025890299992170185,
+            "ci95": [
+              0.022602099983487278,
+              0.030841999978292733
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.05657809996046126,
+              0.05352050001965836,
+              0.11159179999958724
+            ],
+            "mean": 0.07389679999323562,
+            "ci95": [
+              0.05352050001965836,
+              0.11159179999958724
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              47900.0,
+              47150.0,
+              132400.0
+            ],
+            "mean": 75816.66666666667,
+            "ci95": [
+              47150.0,
+              132400.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              58750.0,
+              57350.0,
+              168150.0
+            ],
+            "mean": 94750.0,
+            "ci95": [
+              57350.0,
+              168150.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              91200.0,
+              90150.0,
+              251150.0
+            ],
+            "mean": 144166.66666666666,
+            "ci95": [
+              90150.0,
+              251150.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              99.2666015625,
+              54.5185546875,
+              66.0830078125
+            ],
+            "mean": 73.28938802083333,
+            "ci95": [
+              54.5185546875,
+              99.2666015625
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              17.8740234375,
+              19.083984375,
+              19.3701171875
+            ],
+            "mean": 18.776041666666668,
+            "ci95": [
+              17.8740234375,
+              19.3701171875
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1125.09375,
+              629.3203125,
+              744.99609375
+            ],
+            "mean": 833.13671875,
+            "ci95": [
+              629.3203125,
+              1125.09375
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              187.515625,
+              104.88671875,
+              124.166015625
+            ],
+            "mean": 138.85611979166666,
+            "ci95": [
+              104.88671875,
+              187.515625
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "FULL",
+        "loss": "CE",
+        "model_ids": [
+          "s0_FULL_CE",
+          "s1_FULL_CE",
+          "s2_FULL_CE"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.2646484375,
+              0.748046875,
+              0.7705078125
+            ],
+            "mean": 0.5944010416666666,
+            "ci95": [
+              0.2646484375,
+              0.7705078125
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5048828125,
+              0.748046875,
+              0.7958984375
+            ],
+            "mean": 0.6829427083333334,
+            "ci95": [
+              0.5048828125,
+              0.7958984375
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.755859375,
+              0.998046875,
+              0.7802734375
+            ],
+            "mean": 0.8447265625,
+            "ci95": [
+              0.755859375,
+              0.998046875
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.71484375,
+              0.998046875,
+              0.8056640625
+            ],
+            "mean": 0.8395182291666666,
+            "ci95": [
+              0.71484375,
+              0.998046875
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5516357421875,
+              0.998046875,
+              0.8072509765625
+            ],
+            "mean": 0.78564453125,
+            "ci95": [
+              0.5516357421875,
+              0.998046875
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.791015625,
+              0.99609375,
+              0.8486328125
+            ],
+            "mean": 0.8785807291666666,
+            "ci95": [
+              0.791015625,
+              0.99609375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              -0.041015625,
+              0.0,
+              0.025390625
+            ],
+            "mean": -0.005208333333333333,
+            "ci95": [
+              -0.041015625,
+              0.025390625
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.1632080078125,
+              0.0,
+              -0.0015869140625
+            ],
+            "mean": 0.053873697916666664,
+            "ci95": [
+              -0.0015869140625,
+              0.1632080078125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.2099609375,
+              0.25,
+              0.009765625
+            ],
+            "mean": 0.15657552083333334,
+            "ci95": [
+              0.009765625,
+              0.25
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.844604822623036,
+              0.09665663871996788,
+              0.5211650315498556
+            ],
+            "mean": 0.4874754976309532,
+            "ci95": [
+              0.09665663871996788,
+              0.8446048226230362
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.8971870783360456,
+              0.2529234116956864,
+              0.5266439735850952
+            ],
+            "mean": 0.5589181545389424,
+            "ci95": [
+              0.2529234116956864,
+              0.8971870783360455
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9967793129404224,
+              0.2541920800651961,
+              0.5280230088747351
+            ],
+            "mean": 0.5929981339601179,
+            "ci95": [
+              0.2541920800651961,
+              0.9967793129404224
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.6886286786335291,
+              0.07544044330549338,
+              0.4848009007586591
+            ],
+            "mean": 0.4162900075658939,
+            "ci95": [
+              0.07544044330549338,
+              0.6886286786335291
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              194,
+              0,
+              46
+            ],
+            "mean": 80.0,
+            "ci95": [
+              0.0,
+              194.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              136,
+              0,
+              43
+            ],
+            "mean": 59.666666666666664,
+            "ci95": [
+              0.0,
+              136.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              null,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5091911764705882,
+              null,
+              0.7209302325581396
+            ],
+            "mean": 0.6150607045143639,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.4880514705882353,
+              null,
+              0.508720930232558
+            ],
+            "mean": 0.49838620041039666,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.7352941176470589,
+              null,
+              0.5697674418604651
+            ],
+            "mean": 0.6525307797537621,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "fixed_4_4_n": {
+            "values": [
+              204,
+              0,
+              0
+            ],
+            "mean": 68.0,
+            "ci95": [
+              0.0,
+              204.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.736122349894805,
+              null,
+              null
+            ],
+            "mean": 0.736122349894805,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.7929276581971192,
+              null,
+              null
+            ],
+            "mean": 0.7929276581971192,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "native_coverage": {
+            "values": [
+              0.4755859375,
+              0.75,
+              0.931640625
+            ],
+            "mean": 0.7190755208333334,
+            "ci95": [
+              0.4755859375,
+              0.931640625
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.25,
+              0.001953125
+            ],
+            "mean": 0.083984375,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.5244140625,
+              0.0,
+              0.06640625
+            ],
+            "mean": 0.19694010416666666,
+            "ci95": [
+              0.0,
+              0.5244140625
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.005043700046371669,
+              0.002797099994495511,
+              0.0038341000326909125
+            ],
+            "mean": 0.0038916333578526974,
+            "ci95": [
+              0.002797099994495511,
+              0.005043700046371669
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.09853639994980767,
+              0.08525330002885312,
+              0.09207120002247393
+            ],
+            "mean": 0.09195363333371158,
+            "ci95": [
+              0.08525330002885312,
+              0.09853639994980767
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.2728636999963783,
+              0.16765920002944767,
+              0.42763240000931546
+            ],
+            "mean": 0.2893851000117138,
+            "ci95": [
+              0.16765920002944767,
+              0.42763240000931546
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              91750.0,
+              45200.0,
+              47850.0
+            ],
+            "mean": 61600.0,
+            "ci95": [
+              45200.0,
+              91750.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              120550.0,
+              55500.0,
+              58800.0
+            ],
+            "mean": 78283.33333333333,
+            "ci95": [
+              55500.0,
+              120550.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              180050.0,
+              85000.0,
+              90950.0
+            ],
+            "mean": 118666.66666666667,
+            "ci95": [
+              85000.0,
+              180050.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              91.123046875,
+              55.0986328125,
+              30.3623046875
+            ],
+            "mean": 58.861328125,
+            "ci95": [
+              30.3623046875,
+              91.123046875
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              26.5986328125,
+              9.0146484375,
+              6.158203125
+            ],
+            "mean": 13.923828125,
+            "ci95": [
+              6.158203125,
+              26.5986328125
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1026.90234375,
+              619.23046875,
+              333.24609375
+            ],
+            "mean": 659.79296875,
+            "ci95": [
+              333.24609375,
+              1026.90234375
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              171.150390625,
+              103.205078125,
+              55.541015625
+            ],
+            "mean": 109.96549479166667,
+            "ci95": [
+              55.541015625,
+              171.150390625
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "FULL",
+        "loss": "COUNT",
+        "model_ids": [
+          "s0_FULL_COUNT",
+          "s1_FULL_COUNT",
+          "s2_FULL_COUNT"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.1044921875,
+              0.3134765625,
+              0.5
+            ],
+            "mean": 0.3059895833333333,
+            "ci95": [
+              0.1044921875,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5322265625,
+              0.5400390625,
+              0.5
+            ],
+            "mean": 0.5240885416666666,
+            "ci95": [
+              0.5,
+              0.5400390625
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.5322265625,
+              0.5390625,
+              0.5732421875
+            ],
+            "mean": 0.5481770833333334,
+            "ci95": [
+              0.5322265625,
+              0.5732421875
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.6142578125,
+              0.5400390625,
+              0.6064453125
+            ],
+            "mean": 0.5869140625,
+            "ci95": [
+              0.5400390625,
+              0.6142578125
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.513916015625,
+              0.53369140625,
+              0.56298828125
+            ],
+            "mean": 0.536865234375,
+            "ci95": [
+              0.513916015625,
+              0.56298828125
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.6494140625,
+              0.732421875,
+              0.6123046875
+            ],
+            "mean": 0.6647135416666666,
+            "ci95": [
+              0.6123046875,
+              0.732421875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.08203125,
+              0.0009765625,
+              0.033203125
+            ],
+            "mean": 0.038736979166666664,
+            "ci95": [
+              0.0009765625,
+              0.08203125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.100341796875,
+              0.00634765625,
+              0.04345703125
+            ],
+            "mean": 0.050048828125,
+            "ci95": [
+              0.00634765625,
+              0.100341796875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.08203125,
+              0.0,
+              0.1064453125
+            ],
+            "mean": 0.06282552083333333,
+            "ci95": [
+              0.0,
+              0.1064453125
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9987831772272667,
+              0.9860467028510129,
+              0.976294545664442
+            ],
+            "mean": 0.9870414752475738,
+            "ci95": [
+              0.976294545664442,
+              0.9987831772272667
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9457836939727089,
+              0.9946210919429073,
+              0.9773742413805961
+            ],
+            "mean": 0.9725930090987375,
+            "ci95": [
+              0.9457836939727088,
+              0.9946210919429074
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9999109156603401,
+              0.9947818465775256,
+              0.9856371110018802
+            ],
+            "mean": 0.9934432910799152,
+            "ci95": [
+              0.9856371110018802,
+              0.99991091566034
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.854459917128348,
+              0.8188484733661658,
+              0.9097442133828049
+            ],
+            "mean": 0.8610175346257729,
+            "ci95": [
+              0.8188484733661658,
+              0.909744213382805
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              784,
+              347,
+              476
+            ],
+            "mean": 535.6666666666666,
+            "ci95": [
+              347.0,
+              784.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              249,
+              230,
+              239
+            ],
+            "mean": 239.33333333333334,
+            "ci95": [
+              230.0,
+              249.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.6666666666666667,
+              0.333695652173913,
+              0.5758368200836821
+            ],
+            "mean": 0.525399712974754,
+            "ci95": [
+              0.333695652173913,
+              0.6666666666666666
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.5045808232931727,
+              0.49130434782608695,
+              0.5064722803347282
+            ],
+            "mean": 0.5007858171513293,
+            "ci95": [
+              0.49130434782608695,
+              0.5064722803347282
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.6666666666666667,
+              0.7478260869565219,
+              0.5758368200836821
+            ],
+            "mean": 0.6634431912356236,
+            "ci95": [
+              0.5758368200836821,
+              0.7478260869565219
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              872,
+              473,
+              0
+            ],
+            "mean": 448.3333333333333,
+            "ci95": [
+              0.0,
+              872.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.6687183048208236,
+              0.5,
+              null
+            ],
+            "mean": 0.5843591524104118,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.6687183048208236,
+              0.7451678717159425,
+              null
+            ],
+            "mean": 0.706943088268383,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "native_coverage": {
+            "values": [
+              0.1484375,
+              0.5322265625,
+              1.0
+            ],
+            "mean": 0.5602213541666666,
+            "ci95": [
+              0.1484375,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.8515625,
+              0.4677734375,
+              0.0
+            ],
+            "mean": 0.4397786458333333,
+            "ci95": [
+              0.0,
+              0.8515625
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.0026620999560691416,
+              0.0030110000516287982,
+              0.0029532999615184963
+            ],
+            "mean": 0.0028754666564054787,
+            "ci95": [
+              0.0026620999560691416,
+              0.0030110000516287982
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.08482869999716058,
+              0.07930639997357503,
+              0.08984880003845319
+            ],
+            "mean": 0.08466130000306293,
+            "ci95": [
+              0.07930639997357503,
+              0.08984880003845319
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.1489453999674879,
+              0.1380382999777794,
+              0.4471824999782257
+            ],
+            "mean": 0.24472206664116433,
+            "ci95": [
+              0.1380382999777794,
+              0.4471824999782257
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              45000.0,
+              45200.0,
+              151200.0
+            ],
+            "mean": 80466.66666666667,
+            "ci95": [
+              45000.0,
+              151200.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              55050.0,
+              55150.0,
+              207700.0
+            ],
+            "mean": 105966.66666666667,
+            "ci95": [
+              55050.0,
+              207700.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              84500.0,
+              85050.0,
+              279950.0
+            ],
+            "mean": 149833.33333333334,
+            "ci95": [
+              84500.0,
+              279950.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              80.958984375,
+              55.2578125,
+              70.11328125
+            ],
+            "mean": 68.77669270833333,
+            "ci95": [
+              55.2578125,
+              80.958984375
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              16.7001953125,
+              25.4609375,
+              20.869140625
+            ],
+            "mean": 21.010091145833332,
+            "ci95": [
+              16.7001953125,
+              25.4609375
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              919.5,
+              640.83984375,
+              793.359375
+            ],
+            "mean": 784.56640625,
+            "ci95": [
+              640.83984375,
+              919.5
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              153.25,
+              106.806640625,
+              132.2265625
+            ],
+            "mean": 130.76106770833334,
+            "ci95": [
+              106.806640625,
+              153.25
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "FULL",
+        "loss": "CECOM",
+        "model_ids": [
+          "s0_FULL_CECOM",
+          "s1_FULL_CECOM",
+          "s2_FULL_CECOM"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.267578125,
+              0.189453125,
+              0.400390625
+            ],
+            "mean": 0.2858072916666667,
+            "ci95": [
+              0.189453125,
+              0.400390625
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.6357421875,
+              0.4873046875,
+              0.572265625
+            ],
+            "mean": 0.5651041666666666,
+            "ci95": [
+              0.4873046875,
+              0.6357421875
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.509765625,
+              0.5126953125,
+              0.619140625
+            ],
+            "mean": 0.5472005208333334,
+            "ci95": [
+              0.509765625,
+              0.619140625
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.5947265625,
+              0.5595703125,
+              0.6240234375
+            ],
+            "mean": 0.5927734375,
+            "ci95": [
+              0.5595703125,
+              0.6240234375
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5595703125,
+              0.51611328125,
+              0.5992431640625
+            ],
+            "mean": 0.5583089192708334,
+            "ci95": [
+              0.51611328125,
+              0.5992431640625
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.6376953125,
+              0.6435546875,
+              0.6533203125
+            ],
+            "mean": 0.6448567708333334,
+            "ci95": [
+              0.6376953125,
+              0.6533203125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0849609375,
+              0.046875,
+              0.0048828125
+            ],
+            "mean": 0.045572916666666664,
+            "ci95": [
+              0.0048828125,
+              0.0849609375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.03515625,
+              0.04345703125,
+              0.0247802734375
+            ],
+            "mean": 0.034464518229166664,
+            "ci95": [
+              0.0247802734375,
+              0.04345703125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              -0.041015625,
+              0.072265625,
+              0.0517578125
+            ],
+            "mean": 0.027669270833333332,
+            "ci95": [
+              -0.041015625,
+              0.072265625
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9725428112863685,
+              0.9924899130416873,
+              0.9444991075735775
+            ],
+            "mean": 0.9698439439672111,
+            "ci95": [
+              0.9444991075735775,
+              0.9924899130416872
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9804393652564535,
+              0.9792291788454035,
+              0.9136730360215701
+            ],
+            "mean": 0.9577805267078091,
+            "ci95": [
+              0.9136730360215702,
+              0.9804393652564535
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.984666279258358,
+              0.9937217222869607,
+              0.9443484763514218
+            ],
+            "mean": 0.9742454926322468,
+            "ci95": [
+              0.9443484763514217,
+              0.9937217222869607
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9149330252924561,
+              0.8801795791027803,
+              0.8732500566487562
+            ],
+            "mean": 0.8894542203479977,
+            "ci95": [
+              0.8732500566487561,
+              0.9149330252924561
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              483,
+              659,
+              505
+            ],
+            "mean": 549.0,
+            "ci95": [
+              483.0,
+              659.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              235,
+              242,
+              218
+            ],
+            "mean": 231.66666666666666,
+            "ci95": [
+              218.0,
+              242.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.4691489361702128,
+              0.5113636363636364,
+              0.6376146788990826
+            ],
+            "mean": 0.5393757504776439,
+            "ci95": [
+              0.4691489361702128,
+              0.6376146788990826
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.4977393617021276,
+              0.4830191115702479,
+              0.5038704128440368
+            ],
+            "mean": 0.49487629537213745,
+            "ci95": [
+              0.48301911157024796,
+              0.5038704128440368
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.5925531914893617,
+              0.590392561983471,
+              0.6422018348623854
+            ],
+            "mean": 0.6083825294450728,
+            "ci95": [
+              0.590392561983471,
+              0.6422018348623854
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              625,
+              607,
+              400
+            ],
+            "mean": 544.0,
+            "ci95": [
+              400.0,
+              625.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5773348592453154,
+              0.5095320812072522,
+              0.5196834415584416
+            ],
+            "mean": 0.5355167940036697,
+            "ci95": [
+              0.5095320812072522,
+              0.5773348592453154
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.590645589116112,
+              0.5877103463250462,
+              0.6225649350649352
+            ],
+            "mean": 0.6003069568353644,
+            "ci95": [
+              0.5877103463250462,
+              0.6225649350649352
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.3896484375,
+              0.40625,
+              0.609375
+            ],
+            "mean": 0.4684244791666667,
+            "ci95": [
+              0.3896484375,
+              0.609375
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.6103515625,
+              0.59375,
+              0.390625
+            ],
+            "mean": 0.5315755208333334,
+            "ci95": [
+              0.390625,
+              0.6103515625
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.0027410000329837203,
+              0.004071599978487939,
+              0.0030529999639838934
+            ],
+            "mean": 0.003288533325151851,
+            "ci95": [
+              0.0027410000329837203,
+              0.004071599978487939
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.08043460000772029,
+              0.08806539996294305,
+              0.09202819998608902
+            ],
+            "mean": 0.08684273331891745,
+            "ci95": [
+              0.08043460000772029,
+              0.09202819998608902
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.14804710005410016,
+              0.13692809996427968,
+              0.36916719999862835
+            ],
+            "mean": 0.21804746667233607,
+            "ci95": [
+              0.13692809996427968,
+              0.36916719999862835
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              45600.0,
+              45650.0,
+              131700.0
+            ],
+            "mean": 74316.66666666667,
+            "ci95": [
+              45600.0,
+              131700.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              55350.0,
+              55150.0,
+              157000.0
+            ],
+            "mean": 89166.66666666667,
+            "ci95": [
+              55150.0,
+              157000.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              85300.0,
+              85350.0,
+              248300.0
+            ],
+            "mean": 139650.0,
+            "ci95": [
+              85300.0,
+              248300.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              100.4130859375,
+              56.859375,
+              63.7099609375
+            ],
+            "mean": 73.66080729166667,
+            "ci95": [
+              56.859375,
+              100.4130859375
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              20.9052734375,
+              21.04296875,
+              19.3916015625
+            ],
+            "mean": 20.446614583333332,
+            "ci95": [
+              19.3916015625,
+              21.04296875
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1132.95703125,
+              646.1953125,
+              716.51953125
+            ],
+            "mean": 831.890625,
+            "ci95": [
+              646.1953125,
+              1132.95703125
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              188.826171875,
+              107.69921875,
+              119.419921875
+            ],
+            "mean": 138.6484375,
+            "ci95": [
+              107.69921875,
+              188.826171875
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "NOATT",
+        "loss": "CE",
+        "model_ids": [
+          "s0_NOATT_CE",
+          "s1_NOATT_CE",
+          "s2_NOATT_CE"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.416015625,
+              0.75,
+              0.767578125
+            ],
+            "mean": 0.64453125,
+            "ci95": [
+              0.416015625,
+              0.767578125
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.548828125,
+              0.75,
+              0.7685546875
+            ],
+            "mean": 0.6891276041666666,
+            "ci95": [
+              0.548828125,
+              0.7685546875
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.6064453125,
+              0.94921875,
+              0.7158203125
+            ],
+            "mean": 0.7571614583333334,
+            "ci95": [
+              0.6064453125,
+              0.94921875
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.6064453125,
+              0.75,
+              0.720703125
+            ],
+            "mean": 0.6923828125,
+            "ci95": [
+              0.6064453125,
+              0.75
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5767822265625,
+              0.75,
+              0.7388916015625
+            ],
+            "mean": 0.6885579427083334,
+            "ci95": [
+              0.5767822265625,
+              0.75
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.611328125,
+              0.9560546875,
+              0.7890625
+            ],
+            "mean": 0.7854817708333334,
+            "ci95": [
+              0.611328125,
+              0.9560546875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0,
+              -0.19921875,
+              0.0048828125
+            ],
+            "mean": -0.06477864583333333,
+            "ci95": [
+              -0.19921875,
+              0.0048828125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0296630859375,
+              0.0,
+              -0.0181884765625
+            ],
+            "mean": 0.0038248697916666665,
+            "ci95": [
+              -0.0181884765625,
+              0.0296630859375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.0576171875,
+              0.0,
+              -0.0478515625
+            ],
+            "mean": 0.0032552083333333335,
+            "ci95": [
+              -0.0478515625,
+              0.0576171875
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9834153633356657,
+              0.30238131311055516,
+              0.7488022919079067
+            ],
+            "mean": 0.6781996561180424,
+            "ci95": [
+              0.30238131311055516,
+              0.9834153633356658
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9782857131990358,
+              0.4135829397379182,
+              0.7467868418865092
+            ],
+            "mean": 0.7128851649411544,
+            "ci95": [
+              0.4135829397379182,
+              0.9782857131990358
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9873578637372364,
+              0.4320463894257939,
+              0.7601380032367369
+            ],
+            "mean": 0.7265140854665889,
+            "ci95": [
+              0.4320463894257938,
+              0.9873578637372363
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9634018758536541,
+              0.2252036714420071,
+              0.6031033082378495
+            ],
+            "mean": 0.5972362851778369,
+            "ci95": [
+              0.22520367144200706,
+              0.9634018758536541
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              559,
+              28,
+              134
+            ],
+            "mean": 240.33333333333334,
+            "ci95": [
+              28.0,
+              559.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              250,
+              28,
+              106
+            ],
+            "mean": 128.0,
+            "ci95": [
+              28.0,
+              250.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.498,
+              0.9821428571428571,
+              0.46226415094339623
+            ],
+            "mean": 0.6474690026954177,
+            "ci95": [
+              0.46226415094339623,
+              0.9821428571428571
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.49175,
+              0.5223214285714286,
+              0.5053066037735849
+            ],
+            "mean": 0.5064593441150045,
+            "ci95": [
+              0.49174999999999996,
+              0.5223214285714286
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.498,
+              0.9821428571428571,
+              0.6981132075471698
+            ],
+            "mean": 0.7260853548966756,
+            "ci95": [
+              0.498,
+              0.9821428571428571
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              331,
+              0,
+              0
+            ],
+            "mean": 110.33333333333333,
+            "ci95": [
+              0.0,
+              331.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5200226244343892,
+              null,
+              null
+            ],
+            "mean": 0.5200226244343892,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.5,
+              null,
+              null
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "native_coverage": {
+            "values": [
+              0.6767578125,
+              0.80078125,
+              0.9970703125
+            ],
+            "mean": 0.8248697916666666,
+            "ci95": [
+              0.6767578125,
+              0.9970703125
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.19921875,
+              0.0
+            ],
+            "mean": 0.06640625,
+            "ci95": [
+              0.0,
+              0.19921875
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.3232421875,
+              0.0,
+              0.0029296875
+            ],
+            "mean": 0.10872395833333333,
+            "ci95": [
+              0.0,
+              0.3232421875
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.003590799984522164,
+              0.007299299992155284,
+              0.004027899994980544
+            ],
+            "mean": 0.004972666657219331,
+            "ci95": [
+              0.003590799984522164,
+              0.007299299992155284
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.04360670002643019,
+              0.05376169999362901,
+              0.052570900006685406
+            ],
+            "mean": 0.04997976667558154,
+            "ci95": [
+              0.04360670002643019,
+              0.05376169999362901
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.0835862000240013,
+              0.1051554000005126,
+              0.20505889999913052
+            ],
+            "mean": 0.1312668333412148,
+            "ci95": [
+              0.0835862000240013,
+              0.20505889999913052
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              45350.0,
+              45200.0,
+              124450.0
+            ],
+            "mean": 71666.66666666667,
+            "ci95": [
+              45200.0,
+              124450.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              55300.0,
+              55000.0,
+              152600.0
+            ],
+            "mean": 87633.33333333333,
+            "ci95": [
+              55000.0,
+              152600.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              85500.0,
+              84900.0,
+              234100.0
+            ],
+            "mean": 134833.33333333334,
+            "ci95": [
+              84900.0,
+              234100.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              100.517578125,
+              45.3544921875,
+              40.54296875
+            ],
+            "mean": 62.138346354166664,
+            "ci95": [
+              40.54296875,
+              100.517578125
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              23.08203125,
+              8.77734375,
+              6.3212890625
+            ],
+            "mean": 12.726888020833334,
+            "ci95": [
+              6.3212890625,
+              23.08203125
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1135.18359375,
+              505.59375,
+              441.87890625
+            ],
+            "mean": 694.21875,
+            "ci95": [
+              441.87890625,
+              1135.18359375
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              189.197265625,
+              84.265625,
+              73.646484375
+            ],
+            "mean": 115.703125,
+            "ci95": [
+              73.646484375,
+              189.197265625
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "NOATT",
+        "loss": "COUNT",
+        "model_ids": [
+          "s0_NOATT_COUNT",
+          "s1_NOATT_COUNT",
+          "s2_NOATT_COUNT"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.0087890625,
+              0.392578125,
+              0.4814453125
+            ],
+            "mean": 0.2942708333333333,
+            "ci95": [
+              0.0087890625,
+              0.4814453125
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.4990234375,
+              0.5849609375,
+              0.5
+            ],
+            "mean": 0.5279947916666666,
+            "ci95": [
+              0.4990234375,
+              0.5849609375
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.5087890625,
+              0.6396484375,
+              0.51171875
+            ],
+            "mean": 0.5533854166666666,
+            "ci95": [
+              0.5087890625,
+              0.6396484375
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.548828125,
+              0.669921875,
+              0.51953125
+            ],
+            "mean": 0.5794270833333334,
+            "ci95": [
+              0.51953125,
+              0.669921875
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5045166015625,
+              0.6341552734375,
+              0.4959716796875
+            ],
+            "mean": 0.5448811848958334,
+            "ci95": [
+              0.4959716796875,
+              0.6341552734375
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.548828125,
+              0.669921875,
+              0.52734375
+            ],
+            "mean": 0.58203125,
+            "ci95": [
+              0.52734375,
+              0.669921875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0400390625,
+              0.0302734375,
+              0.0078125
+            ],
+            "mean": 0.026041666666666668,
+            "ci95": [
+              0.0078125,
+              0.0400390625
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0443115234375,
+              0.0357666015625,
+              0.0235595703125
+            ],
+            "mean": 0.0345458984375,
+            "ci95": [
+              0.0235595703125,
+              0.0443115234375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.0498046875,
+              0.0849609375,
+              0.01953125
+            ],
+            "mean": 0.051432291666666664,
+            "ci95": [
+              0.01953125,
+              0.0849609375
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9997989339346726,
+              0.9539111900667967,
+              0.9999280663345842
+            ],
+            "mean": 0.9845460634453511,
+            "ci95": [
+              0.9539111900667967,
+              0.9999280663345842
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9935794487178597,
+              0.9278568796479181,
+              0.9990153993831872
+            ],
+            "mean": 0.973483909249655,
+            "ci95": [
+              0.927856879647918,
+              0.9990153993831873
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              1.0002404177679776,
+              0.9542072250334787,
+              1.0009876111307519
+            ],
+            "mean": 0.9851450846440694,
+            "ci95": [
+              0.9542072250334787,
+              1.0009876111307519
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9531066580298962,
+              0.8561600355388481,
+              0.9961876189115809
+            ],
+            "mean": 0.9351514374934418,
+            "ci95": [
+              0.856160035538848,
+              0.9961876189115809
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              984,
+              233,
+              501
+            ],
+            "mean": 572.6666666666666,
+            "ci95": [
+              233.0,
+              984.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              252,
+              147,
+              250
+            ],
+            "mean": 216.33333333333334,
+            "ci95": [
+              147.0,
+              252.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5629960317460319,
+              0.5110544217687075,
+              0.5069999999999999
+            ],
+            "mean": 0.5270168178382464,
+            "ci95": [
+              0.5069999999999999,
+              0.5629960317460319
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.5,
+              0.48852040816326536,
+              0.4903749999999998
+            ],
+            "mean": 0.49296513605442166,
+            "ci95": [
+              0.4885204081632654,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.5694444444444445,
+              0.505952380952381,
+              0.5069999999999999
+            ],
+            "mean": 0.5274656084656085,
+            "ci95": [
+              0.505952380952381,
+              0.5694444444444445
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              1003,
+              384,
+              0
+            ],
+            "mean": 462.3333333333333,
+            "ci95": [
+              0.0,
+              1003.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5550098231827112,
+              0.6060421286031041,
+              null
+            ],
+            "mean": 0.5805259758929077,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.5508339762811896,
+              0.6181818181818182,
+              null
+            ],
+            "mean": 0.5845078972315039,
+            "ci95": null,
+            "available_blocks": 2
+          },
+          "native_coverage": {
+            "values": [
+              0.0126953125,
+              0.5478515625,
+              0.9677734375
+            ],
+            "mean": 0.5094401041666666,
+            "ci95": [
+              0.0126953125,
+              0.9677734375
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.9873046875,
+              0.4521484375,
+              0.0322265625
+            ],
+            "mean": 0.4905598958333333,
+            "ci95": [
+              0.0322265625,
+              0.9873046875
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.004943599982652813,
+              0.0048890000325627625,
+              0.005204499990213662
+            ],
+            "mean": 0.005012366668476413,
+            "ci95": [
+              0.0048890000325627625,
+              0.005204499990213662
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.05162230000132695,
+              0.06595219997689128,
+              0.05335569998715073
+            ],
+            "mean": 0.05697673332178965,
+            "ci95": [
+              0.05162230000132695,
+              0.06595219997689128
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.09083679999457672,
+              0.09823319996939972,
+              0.29412520001642406
+            ],
+            "mean": 0.1610650666601335,
+            "ci95": [
+              0.09083679999457672,
+              0.29412520001642406
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              45700.0,
+              46400.0,
+              143200.0
+            ],
+            "mean": 78433.33333333333,
+            "ci95": [
+              45700.0,
+              143200.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              55750.0,
+              57200.0,
+              190450.0
+            ],
+            "mean": 101133.33333333333,
+            "ci95": [
+              55750.0,
+              190450.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              85650.0,
+              88350.0,
+              297450.0
+            ],
+            "mean": 157150.0,
+            "ci95": [
+              85650.0,
+              297450.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              100.6318359375,
+              52.2099609375,
+              71.888671875
+            ],
+            "mean": 74.91015625,
+            "ci95": [
+              52.2099609375,
+              100.6318359375
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              15.0693359375,
+              22.6728515625,
+              19.763671875
+            ],
+            "mean": 19.168619791666668,
+            "ci95": [
+              15.0693359375,
+              22.6728515625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1135.58203125,
+              592.30078125,
+              814.6640625
+            ],
+            "mean": 847.515625,
+            "ci95": [
+              592.30078125,
+              1135.58203125
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              189.263671875,
+              98.716796875,
+              135.77734375
+            ],
+            "mean": 141.25260416666666,
+            "ci95": [
+              98.716796875,
+              189.263671875
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "NOATT",
+        "loss": "CECOM",
+        "model_ids": [
+          "s0_NOATT_CECOM",
+          "s1_NOATT_CECOM",
+          "s2_NOATT_CECOM"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.2763671875,
+              0.322265625,
+              0.0966796875
+            ],
+            "mean": 0.23177083333333334,
+            "ci95": [
+              0.0966796875,
+              0.322265625
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5,
+              0.5068359375,
+              0.5
+            ],
+            "mean": 0.5022786458333334,
+            "ci95": [
+              0.5,
+              0.5068359375
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.5419921875,
+              0.49609375,
+              0.5888671875
+            ],
+            "mean": 0.5423177083333334,
+            "ci95": [
+              0.49609375,
+              0.5888671875
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.6044921875,
+              0.5869140625,
+              0.6044921875
+            ],
+            "mean": 0.5986328125,
+            "ci95": [
+              0.5869140625,
+              0.6044921875
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5426025390625,
+              0.5126953125,
+              0.5826416015625
+            ],
+            "mean": 0.5459798177083334,
+            "ci95": [
+              0.5126953125,
+              0.5826416015625
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.615234375,
+              0.6904296875,
+              0.6044921875
+            ],
+            "mean": 0.63671875,
+            "ci95": [
+              0.6044921875,
+              0.6904296875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0625,
+              0.0908203125,
+              0.015625
+            ],
+            "mean": 0.056315104166666664,
+            "ci95": [
+              0.015625,
+              0.0908203125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0618896484375,
+              0.07421875,
+              0.0218505859375
+            ],
+            "mean": 0.052652994791666664,
+            "ci95": [
+              0.0218505859375,
+              0.07421875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.1044921875,
+              0.080078125,
+              0.1044921875
+            ],
+            "mean": 0.09635416666666667,
+            "ci95": [
+              0.080078125,
+              0.1044921875
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.9967464523054252,
+              0.9980063400965156,
+              0.9860519287159837
+            ],
+            "mean": 0.9936015737059748,
+            "ci95": [
+              0.9860519287159836,
+              0.9980063400965156
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9868633920687695,
+              0.9808283575635333,
+              0.9894744838341705
+            ],
+            "mean": 0.9857220778221577,
+            "ci95": [
+              0.9808283575635333,
+              0.9894744838341705
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.9991488786785647,
+              0.9968189879021199,
+              0.9890325901774857
+            ],
+            "mean": 0.9950001522527234,
+            "ci95": [
+              0.9890325901774858,
+              0.9991488786785648
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9323059780760508,
+              0.8055551878827865,
+              0.951329533878068
+            ],
+            "mean": 0.8963968999456351,
+            "ci95": [
+              0.8055551878827863,
+              0.951329533878068
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              483,
+              427,
+              644
+            ],
+            "mean": 518.0,
+            "ci95": [
+              427.0,
+              644.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              235,
+              224,
+              252
+            ],
+            "mean": 237.0,
+            "ci95": [
+              224.0,
+              252.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5542553191489362,
+              0.5909598214285715,
+              0.5
+            ],
+            "mean": 0.5484050468591692,
+            "ci95": [
+              0.5,
+              0.5909598214285715
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.49328457446808505,
+              0.4951869419642857,
+              0.513826884920635
+            ],
+            "mean": 0.5007661337843352,
+            "ci95": [
+              0.493284574468085,
+              0.513826884920635
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.6409574468085106,
+              0.6802455357142857,
+              0.5
+            ],
+            "mean": 0.6070676608409321,
+            "ci95": [
+              0.5,
+              0.6802455357142857
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              501,
+              354,
+              719
+            ],
+            "mean": 524.6666666666666,
+            "ci95": [
+              354.0,
+              719.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.6148616105830979,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5382872035276992,
+            "ci95": [
+              0.5,
+              0.6148616105830979
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.6434626252247624,
+              0.5848003848003848,
+              0.5
+            ],
+            "mean": 0.5760876700083823,
+            "ci95": [
+              0.5,
+              0.6434626252247624
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.5107421875,
+              0.6376953125,
+              0.2978515625
+            ],
+            "mean": 0.4820963541666667,
+            "ci95": [
+              0.2978515625,
+              0.6376953125
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.4892578125,
+              0.3623046875,
+              0.7021484375
+            ],
+            "mean": 0.5179036458333334,
+            "ci95": [
+              0.3623046875,
+              0.7021484375
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.004151100001763552,
+              0.003908799961209297,
+              0.002625799970701337
+            ],
+            "mean": 0.0035618999778913953,
+            "ci95": [
+              0.002625799970701337,
+              0.004151100001763552
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.048607499978970736,
+              0.05086610000580549,
+              0.04896839999128133
+            ],
+            "mean": 0.049480666658685855,
+            "ci95": [
+              0.048607499978970736,
+              0.05086610000580549
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.18600300000980496,
+              0.0927687999792397,
+              0.23390519997337833
+            ],
+            "mean": 0.17089233332080767,
+            "ci95": [
+              0.0927687999792397,
+              0.23390519997337833
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              76200.0,
+              45100.0,
+              53750.0
+            ],
+            "mean": 58350.0,
+            "ci95": [
+              45100.0,
+              76200.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              88100.0,
+              55300.0,
+              67050.0
+            ],
+            "mean": 70150.0,
+            "ci95": [
+              55300.0,
+              88100.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              141900.0,
+              85000.0,
+              196300.0
+            ],
+            "mean": 141066.66666666666,
+            "ci95": [
+              85000.0,
+              196300.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              99.689453125,
+              53.07421875,
+              67.146484375
+            ],
+            "mean": 73.30338541666667,
+            "ci95": [
+              53.07421875,
+              99.689453125
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              16.5634765625,
+              25.8857421875,
+              20.5146484375
+            ],
+            "mean": 20.987955729166668,
+            "ci95": [
+              16.5634765625,
+              25.8857421875
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1130.75390625,
+              604.86328125,
+              757.7578125
+            ],
+            "mean": 831.125,
+            "ci95": [
+              604.86328125,
+              1130.75390625
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              188.458984375,
+              100.810546875,
+              126.29296875
+            ],
+            "mean": 138.52083333333334,
+            "ci95": [
+              100.810546875,
+              188.458984375
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "GAIN2",
+        "loss": "CE",
+        "model_ids": [
+          "s0_GAIN2_CE",
+          "s1_GAIN2_CE",
+          "s2_GAIN2_CE"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.556640625,
+              0.75,
+              0.958984375
+            ],
+            "mean": 0.7552083333333334,
+            "ci95": [
+              0.556640625,
+              0.958984375
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.6591796875,
+              0.75,
+              0.9697265625
+            ],
+            "mean": 0.79296875,
+            "ci95": [
+              0.6591796875,
+              0.9697265625
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.6591796875,
+              1.0,
+              0.9775390625
+            ],
+            "mean": 0.87890625,
+            "ci95": [
+              0.6591796875,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.845703125,
+              1.0,
+              0.9755859375
+            ],
+            "mean": 0.9404296875,
+            "ci95": [
+              0.845703125,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.66015625,
+              1.0,
+              0.972412109375
+            ],
+            "mean": 0.8775227864583334,
+            "ci95": [
+              0.66015625,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.9375,
+              1.0,
+              0.98046875
+            ],
+            "mean": 0.97265625,
+            "ci95": [
+              0.9375,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.1865234375,
+              0.0,
+              -0.001953125
+            ],
+            "mean": 0.0615234375,
+            "ci95": [
+              -0.001953125,
+              0.1865234375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.185546875,
+              0.0,
+              0.003173828125
+            ],
+            "mean": 0.06290690104166667,
+            "ci95": [
+              0.0,
+              0.185546875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.1865234375,
+              0.25,
+              0.005859375
+            ],
+            "mean": 0.1474609375,
+            "ci95": [
+              0.005859375,
+              0.25
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              0.7052168248434039,
+              0.01947298959358331,
+              0.08439979723504493
+            ],
+            "mean": 0.2696965372240107,
+            "ci95": [
+              0.01947298959358331,
+              0.7052168248434039
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.6618969883763515,
+              0.18530985917219214,
+              0.09773486185834042
+            ],
+            "mean": 0.31498056980229466,
+            "ci95": [
+              0.09773486185834042,
+              0.6618969883763515
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              0.7842801503948706,
+              0.18830611082133036,
+              0.10307530063815906
+            ],
+            "mean": 0.3585538539514534,
+            "ci95": [
+              0.10307530063815906,
+              0.7842801503948706
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.2299618706845535,
+              0.01197631114838607,
+              0.06951521508479092
+            ],
+            "mean": 0.10381779897257683,
+            "ci95": [
+              0.01197631114838607,
+              0.2299618706845535
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              127,
+              0,
+              0
+            ],
+            "mean": 42.333333333333336,
+            "ci95": [
+              0.0,
+              127.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              92,
+              0,
+              0
+            ],
+            "mean": 30.666666666666668,
+            "ci95": [
+              0.0,
+              92.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              null,
+              null
+            ],
+            "mean": 0.5,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.8532608695652174,
+              null,
+              null
+            ],
+            "mean": 0.8532608695652174,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.4833559782608696,
+              null,
+              null
+            ],
+            "mean": 0.4833559782608696,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.9836956521739131,
+              null,
+              null
+            ],
+            "mean": 0.9836956521739131,
+            "ci95": null,
+            "available_blocks": 1
+          },
+          "fixed_4_4_n": {
+            "values": [
+              0,
+              0,
+              0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              null,
+              null,
+              null
+            ],
+            "mean": null,
+            "ci95": null,
+            "available_blocks": 0
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              null,
+              null,
+              null
+            ],
+            "mean": null,
+            "ci95": null,
+            "available_blocks": 0
+          },
+          "native_coverage": {
+            "values": [
+              0.685546875,
+              0.75,
+              0.9892578125
+            ],
+            "mean": 0.8082682291666666,
+            "ci95": [
+              0.685546875,
+              0.9892578125
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.25,
+              0.0
+            ],
+            "mean": 0.08333333333333333,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              0.314453125,
+              0.0,
+              0.0107421875
+            ],
+            "mean": 0.1083984375,
+            "ci95": [
+              0.0,
+              0.314453125
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.008168699976522475,
+              0.0032887999550439417,
+              0.0025596999912522733
+            ],
+            "mean": 0.0046723999742728966,
+            "ci95": [
+              0.0025596999912522733,
+              0.008168699976522475
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.0306173000135459,
+              0.02067869994789362,
+              0.019868000003043562
+            ],
+            "mean": 0.02372133332149436,
+            "ci95": [
+              0.019868000003043562,
+              0.0306173000135459
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.04172110004583374,
+              0.05264780001016334,
+              0.11442270001862198
+            ],
+            "mean": 0.06959720002487302,
+            "ci95": [
+              0.04172110004583374,
+              0.11442270001862198
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              46450.0,
+              49600.0,
+              126950.0
+            ],
+            "mean": 74333.33333333333,
+            "ci95": [
+              46450.0,
+              126950.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              57600.0,
+              58550.0,
+              157700.0
+            ],
+            "mean": 91283.33333333333,
+            "ci95": [
+              57600.0,
+              157700.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              87400.0,
+              90700.0,
+              245000.0
+            ],
+            "mean": 141033.33333333334,
+            "ci95": [
+              87400.0,
+              245000.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              106.0654296875,
+              60.3740234375,
+              39.48828125
+            ],
+            "mean": 68.642578125,
+            "ci95": [
+              39.48828125,
+              106.0654296875
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              8.8876953125,
+              12.509765625,
+              14.1103515625
+            ],
+            "mean": 11.8359375,
+            "ci95": [
+              8.8876953125,
+              14.1103515625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1202.8125,
+              684.234375,
+              435.31640625
+            ],
+            "mean": 774.12109375,
+            "ci95": [
+              435.31640625,
+              1202.8125
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              200.46875,
+              114.0390625,
+              72.552734375
+            ],
+            "mean": 129.02018229166666,
+            "ci95": [
+              72.552734375,
+              200.46875
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "GAIN2",
+        "loss": "COUNT",
+        "model_ids": [
+          "s0_GAIN2_COUNT",
+          "s1_GAIN2_COUNT",
+          "s2_GAIN2_COUNT"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.0,
+              0.1796875,
+              0.0078125
+            ],
+            "mean": 0.0625,
+            "ci95": [
+              0.0,
+              0.1796875
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5,
+              0.4150390625,
+              0.5
+            ],
+            "mean": 0.4716796875,
+            "ci95": [
+              0.4150390625,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.5,
+              0.5849609375,
+              0.5048828125
+            ],
+            "mean": 0.5299479166666666,
+            "ci95": [
+              0.5,
+              0.5849609375
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.5,
+              0.6083984375,
+              0.3935546875
+            ],
+            "mean": 0.5006510416666666,
+            "ci95": [
+              0.3935546875,
+              0.6083984375
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5,
+              0.5328369140625,
+              0.5673828125
+            ],
+            "mean": 0.5334065755208334,
+            "ci95": [
+              0.5,
+              0.5673828125
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.4951171875,
+              0.607421875,
+              0.7724609375
+            ],
+            "mean": 0.625,
+            "ci95": [
+              0.4951171875,
+              0.7724609375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0,
+              0.0234375,
+              -0.111328125
+            ],
+            "mean": -0.029296875,
+            "ci95": [
+              -0.111328125,
+              0.0234375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0,
+              0.0755615234375,
+              -0.173828125
+            ],
+            "mean": -0.032755533854166664,
+            "ci95": [
+              -0.173828125,
+              0.0755615234375
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.0,
+              0.193359375,
+              -0.1064453125
+            ],
+            "mean": 0.028971354166666668,
+            "ci95": [
+              -0.1064453125,
+              0.193359375
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              1.0,
+              0.9872778319461855,
+              0.9998842995041408
+            ],
+            "mean": 0.9957207104834421,
+            "ci95": [
+              0.9872778319461855,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              1.0,
+              0.9835743810868147,
+              0.9972216832528317
+            ],
+            "mean": 0.9935986881132154,
+            "ci95": [
+              0.9835743810868148,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              1.0,
+              0.9971504637864266,
+              1.0000327914829115
+            ],
+            "mean": 0.9990610850897793,
+            "ci95": [
+              0.9971504637864266,
+              1.0000327914829115
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              1.0019800793775446,
+              0.955197628802847,
+              0.6476172966226416
+            ],
+            "mean": 0.868265001601011,
+            "ci95": [
+              0.6476172966226416,
+              1.0019800793775446
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              1024,
+              705,
+              1002
+            ],
+            "mean": 910.3333333333334,
+            "ci95": [
+              705.0,
+              1024.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              256,
+              231,
+              256
+            ],
+            "mean": 247.66666666666666,
+            "ci95": [
+              231.0,
+              256.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5,
+              0.4978354978354979,
+              0.49755859375
+            ],
+            "mean": 0.498464697195166,
+            "ci95": [
+              0.49755859375,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.5,
+              0.5137987012987014,
+              0.50616455078125
+            ],
+            "mean": 0.5066544173599837,
+            "ci95": [
+              0.5,
+              0.5137987012987014
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.4951171875,
+              0.5021645021645023,
+              0.8388671875
+            ],
+            "mean": 0.6120496257215008,
+            "ci95": [
+              0.4951171875,
+              0.8388671875
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              1024,
+              596,
+              1013
+            ],
+            "mean": 877.6666666666666,
+            "ci95": [
+              596.0,
+              1024.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5,
+              0.4943661971830986,
+              0.3951492188230892
+            ],
+            "mean": 0.4631718053353959,
+            "ci95": [
+              0.3951492188230892,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.4951171875,
+              0.5,
+              0.7785788349393457
+            ],
+            "mean": 0.5912320074797819,
+            "ci95": [
+              0.4951171875,
+              0.7785788349393457
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.0,
+              0.41796875,
+              0.0107421875
+            ],
+            "mean": 0.14290364583333334,
+            "ci95": [
+              0.0,
+              0.41796875
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              1.0,
+              0.58203125,
+              0.9892578125
+            ],
+            "mean": 0.8570963541666666,
+            "ci95": [
+              0.58203125,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.00268320000031963,
+              0.004222900024615228,
+              0.005942500021774322
+            ],
+            "mean": 0.004282866682236393,
+            "ci95": [
+              0.00268320000031963,
+              0.005942500021774322
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.023542099981568754,
+              0.025325900001917034,
+              0.027793099987320602
+            ],
+            "mean": 0.025553699990268797,
+            "ci95": [
+              0.023542099981568754,
+              0.027793099987320602
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.04823939997004345,
+              0.038138700008857995,
+              0.11966140003642067
+            ],
+            "mean": 0.0686798333384407,
+            "ci95": [
+              0.038138700008857995,
+              0.11966140003642067
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              45350.0,
+              45500.0,
+              93000.0
+            ],
+            "mean": 61283.333333333336,
+            "ci95": [
+              45350.0,
+              93000.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              55600.0,
+              55450.0,
+              141600.0
+            ],
+            "mean": 84216.66666666667,
+            "ci95": [
+              55450.0,
+              141600.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              85400.0,
+              86900.0,
+              177100.0
+            ],
+            "mean": 116466.66666666667,
+            "ci95": [
+              85400.0,
+              177100.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              127.8935546875,
+              83.3125,
+              82.18359375
+            ],
+            "mean": 97.79654947916667,
+            "ci95": [
+              82.18359375,
+              127.8935546875
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              20.0,
+              33.4072265625,
+              19.0302734375
+            ],
+            "mean": 24.145833333333332,
+            "ci95": [
+              19.0302734375,
+              33.4072265625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1462.72265625,
+              963.84375,
+              938.203125
+            ],
+            "mean": 1121.58984375,
+            "ci95": [
+              938.203125,
+              1462.72265625
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              243.787109375,
+              160.640625,
+              156.3671875
+            ],
+            "mean": 186.931640625,
+            "ci95": [
+              156.3671875,
+              243.787109375
+            ],
+            "available_blocks": 3
+          }
+        }
+      },
+      {
+        "arm": "GAIN2",
+        "loss": "CECOM",
+        "model_ids": [
+          "s0_GAIN2_CECOM",
+          "s1_GAIN2_CECOM",
+          "s2_GAIN2_CECOM"
+        ],
+        "metrics": {
+          "native_strict_ba": {
+            "values": [
+              0.0,
+              0.25,
+              0.2353515625
+            ],
+            "mean": 0.16178385416666666,
+            "ci95": [
+              0.0,
+              0.25
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_ba": {
+            "values": [
+              0.5,
+              0.5205078125,
+              0.4921875
+            ],
+            "mean": 0.5042317708333334,
+            "ci95": [
+              0.4921875,
+              0.5205078125
+            ],
+            "available_blocks": 3
+          },
+          "count2_ba": {
+            "values": [
+              0.5,
+              0.5205078125,
+              0.4921875
+            ],
+            "mean": 0.5042317708333334,
+            "ci95": [
+              0.4921875,
+              0.5205078125
+            ],
+            "available_blocks": 3
+          },
+          "moment2_ba": {
+            "values": [
+              0.5283203125,
+              0.5205078125,
+              0.5087890625
+            ],
+            "mean": 0.5192057291666666,
+            "ci95": [
+              0.5087890625,
+              0.5283203125
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_ba_mean": {
+            "values": [
+              0.5020751953125,
+              0.5032958984375,
+              0.4986572265625
+            ],
+            "mean": 0.5013427734375,
+            "ci95": [
+              0.4986572265625,
+              0.5032958984375
+            ],
+            "available_blocks": 3
+          },
+          "offline16_ba": {
+            "values": [
+              0.5283203125,
+              0.5087890625,
+              0.548828125
+            ],
+            "mean": 0.5286458333333334,
+            "ci95": [
+              0.5087890625,
+              0.548828125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_count": {
+            "values": [
+              0.0283203125,
+              0.0,
+              0.0166015625
+            ],
+            "mean": 0.014973958333333334,
+            "ci95": [
+              0.0,
+              0.0283203125
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_shuffle": {
+            "values": [
+              0.0262451171875,
+              0.0172119140625,
+              0.0101318359375
+            ],
+            "mean": 0.017862955729166668,
+            "ci95": [
+              0.0101318359375,
+              0.0262451171875
+            ],
+            "available_blocks": 3
+          },
+          "moment_minus_native": {
+            "values": [
+              0.0283203125,
+              0.0,
+              0.0166015625
+            ],
+            "mean": 0.014973958333333334,
+            "ci95": [
+              0.0,
+              0.0283203125
+            ],
+            "available_blocks": 3
+          },
+          "count2_mse": {
+            "values": [
+              1.0,
+              0.9993541443863037,
+              1.0002055527944618
+            ],
+            "mean": 0.9998532323935884,
+            "ci95": [
+              0.9993541443863037,
+              1.0002055527944618
+            ],
+            "available_blocks": 3
+          },
+          "moment2_mse": {
+            "values": [
+              0.9879813715780508,
+              0.9982775412618258,
+              0.9980429216652669
+            ],
+            "mean": 0.9947672781683812,
+            "ci95": [
+              0.9879813715780509,
+              0.9982775412618258
+            ],
+            "available_blocks": 3
+          },
+          "shuffle_mse_mean": {
+            "values": [
+              1.000904158218853,
+              1.001085545981138,
+              1.0003088985414559
+            ],
+            "mean": 1.0007662009138156,
+            "ci95": [
+              1.0003088985414559,
+              1.001085545981138
+            ],
+            "available_blocks": 3
+          },
+          "offline16_mse": {
+            "values": [
+              0.9714451913259456,
+              0.9933624092916591,
+              0.9849573170687325
+            ],
+            "mean": 0.9832549725621124,
+            "ci95": [
+              0.9714451913259458,
+              0.9933624092916591
+            ],
+            "available_blocks": 3
+          },
+          "matched_pairs": {
+            "values": [
+              1024,
+              648,
+              574
+            ],
+            "mean": 748.6666666666666,
+            "ci95": [
+              574.0,
+              1024.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_quartets": {
+            "values": [
+              256,
+              254,
+              241
+            ],
+            "mean": 250.33333333333334,
+            "ci95": [
+              241.0,
+              256.0
+            ],
+            "available_blocks": 3
+          },
+          "matched_count_rank": {
+            "values": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "mean": 0.5,
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "available_blocks": 3
+          },
+          "matched_moment_rank": {
+            "values": [
+              0.5283203125,
+              0.5118110236220473,
+              0.5627593360995851
+            ],
+            "mean": 0.5342968907405441,
+            "ci95": [
+              0.5118110236220473,
+              0.5627593360995851
+            ],
+            "available_blocks": 3
+          },
+          "matched_shuffle_rank_mean": {
+            "values": [
+              0.50079345703125,
+              0.49021899606299213,
+              0.49267375518672196
+            ],
+            "mean": 0.49456206942698805,
+            "ci95": [
+              0.49021899606299213,
+              0.50079345703125
+            ],
+            "available_blocks": 3
+          },
+          "matched_offline_rank": {
+            "values": [
+              0.5283203125,
+              0.5255905511811024,
+              0.5762448132780082
+            ],
+            "mean": 0.5433852256530368,
+            "ci95": [
+              0.5255905511811024,
+              0.5762448132780082
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_n": {
+            "values": [
+              1024,
+              530,
+              534
+            ],
+            "mean": 696.0,
+            "ci95": [
+              530.0,
+              1024.0
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_moment_ba": {
+            "values": [
+              0.5283203125,
+              0.5,
+              0.49662565066715303
+            ],
+            "mean": 0.5083153210557176,
+            "ci95": [
+              0.4966256506671531,
+              0.5283203125
+            ],
+            "available_blocks": 3
+          },
+          "fixed_4_4_offline_ba": {
+            "values": [
+              0.5283203125,
+              0.5295800573621952,
+              0.5523760750915494
+            ],
+            "mean": 0.5367588149845816,
+            "ci95": [
+              0.5283203125,
+              0.5523760750915494
+            ],
+            "available_blocks": 3
+          },
+          "native_coverage": {
+            "values": [
+              0.0,
+              0.482421875,
+              0.478515625
+            ],
+            "mean": 0.3203125,
+            "ci95": [
+              0.0,
+              0.482421875
+            ],
+            "available_blocks": 3
+          },
+          "native_silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_saturated_tie": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "available_blocks": 3
+          },
+          "native_intermediate_tie": {
+            "values": [
+              1.0,
+              0.517578125,
+              0.521484375
+            ],
+            "mean": 0.6796875,
+            "ci95": [
+              0.517578125,
+              1.0
+            ],
+            "available_blocks": 3
+          },
+          "fit_seconds": {
+            "values": [
+              0.0030516000115312636,
+              0.002659599995240569,
+              0.0033109000069089234
+            ],
+            "mean": 0.0030073666712269187,
+            "ci95": [
+              0.002659599995240569,
+              0.0033109000069089234
+            ],
+            "available_blocks": 3
+          },
+          "fit_collect_seconds": {
+            "values": [
+              0.022485500026959926,
+              0.02028900000732392,
+              0.027309600031003356
+            ],
+            "mean": 0.02336136668842907,
+            "ci95": [
+              0.02028900000732392,
+              0.027309600031003356
+            ],
+            "available_blocks": 3
+          },
+          "test_collect_seconds": {
+            "values": [
+              0.04103750002104789,
+              0.040772999986074865,
+              0.042574700026307255
+            ],
+            "mean": 0.04146173334447667,
+            "ci95": [
+              0.040772999986074865,
+              0.042574700026307255
+            ],
+            "available_blocks": 3
+          },
+          "native_forced_bench_median_ns": {
+            "values": [
+              47550.0,
+              46500.0,
+              45400.0
+            ],
+            "mean": 46483.333333333336,
+            "ci95": [
+              45400.0,
+              47550.0
+            ],
+            "available_blocks": 3
+          },
+          "count2_bench_median_ns": {
+            "values": [
+              57300.0,
+              56700.0,
+              55800.0
+            ],
+            "mean": 56600.0,
+            "ci95": [
+              55800.0,
+              57300.0
+            ],
+            "available_blocks": 3
+          },
+          "moment2_bench_median_ns": {
+            "values": [
+              87250.0,
+              87150.0,
+              85800.0
+            ],
+            "mean": 86733.33333333333,
+            "ci95": [
+              85800.0,
+              87250.0
+            ],
+            "available_blocks": 3
+          },
+          "hidden_spikes": {
+            "values": [
+              126.9716796875,
+              75.7607421875,
+              72.0126953125
+            ],
+            "mean": 91.58170572916667,
+            "ci95": [
+              72.0126953125,
+              126.9716796875
+            ],
+            "available_blocks": 3
+          },
+          "output_spikes": {
+            "values": [
+              20.0,
+              27.384765625,
+              20.7919921875
+            ],
+            "mean": 22.7255859375,
+            "ci95": [
+              20.0,
+              27.384765625
+            ],
+            "available_blocks": 3
+          },
+          "recurrent_fanout": {
+            "values": [
+              1451.66015625,
+              868.76953125,
+              818.9765625
+            ],
+            "mean": 1046.46875,
+            "ci95": [
+              818.9765625,
+              1451.66015625
+            ],
+            "available_blocks": 3
+          },
+          "output_fanout": {
+            "values": [
+              241.943359375,
+              144.794921875,
+              136.49609375
+            ],
+            "mean": 174.41145833333334,
+            "ci95": [
+              136.49609375,
+              241.943359375
+            ],
+            "available_blocks": 3
+          }
+        }
+      }
+    ]
+  }
+}

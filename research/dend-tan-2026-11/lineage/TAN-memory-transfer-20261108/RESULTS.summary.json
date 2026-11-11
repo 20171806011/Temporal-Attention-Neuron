@@ -1,0 +1,77 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "old",
+    "new",
+    "primary_paired",
+    "secondary_paired",
+    "inference_limits"
+  ],
+  "retained_top_level_keys": [
+    "primary_paired",
+    "secondary_paired",
+    "inference_limits"
+  ],
+  "omitted_top_level_keys": [
+    "old",
+    "new"
+  ],
+  "data": {
+    "primary_paired": {
+      "ba24_full_minus_rd0": {
+        "values": [
+          -0.0022321428571429047,
+          0.2611607142857143,
+          0.07688492063492058,
+          0.024553571428571508,
+          0.015625
+        ],
+        "mean": 0.0751984126984127,
+        "min": -0.0022321428571429047,
+        "max": 0.2611607142857143,
+        "ci95": [
+          0.01026785714285714,
+          0.17162698412698413
+        ],
+        "n": 5
+      },
+      "vp_contrast_rd0_minus_full": {
+        "values": [
+          0.9853670634920635,
+          0.4818948412698413,
+          0.8345734126984127,
+          0.9402281746031745,
+          0.9722222222222222
+        ],
+        "mean": 0.8428571428571427,
+        "min": 0.4818948412698413,
+        "max": 0.9853670634920635,
+        "ci95": [
+          0.653125,
+          0.9710813492063493
+        ],
+        "n": 5
+      }
+    },
+    "secondary_paired": {
+      "ba24_DEND_minus_POINT": {
+        "values": [
+          0.0024801587301587213,
+          0.004464285714285698,
+          -0.0017361111111110494,
+          0.0029761904761904656,
+          0.019593253968253954
+        ],
+        "mean": 0.005555555555555558,
+        "min": -0.0017361111111110494,
+        "max": 0.019593253968253954,
+        "ci95": [
+          0.00044642857142860313,
+          0.012946428571428558
+        ],
+        "n": 5
+      }
+    },
+    "inference_limits": "n=3 historical and n=5 new paired seed blocks; 20,000 percentile bootstrap resamples; pointwise unadjusted intervals; task and inherited fixed recipes, not architecture impossibility or energy."
+  }
+}

@@ -1,0 +1,2467 @@
+{
+  "status": "POSTHOC_SAVED_RECORDS_ONLY",
+  "new_training_runs": 0,
+  "new_neural_runs": 0,
+  "aggregates": {
+    "CE": {
+      "balanced_accuracy": 0.61328125,
+      "coverage": 0.7242838541666666,
+      "silence": 0.13932291666666666,
+      "common_loss": 0.583099365234375,
+      "mean_sum": 4.9951171875,
+      "mean_signed_margin": 2.1930338541666665,
+      "fraction_4_4": 0.07454427083333333,
+      "fraction_sum8": 0.11100260416666667,
+      "diagnostic_clipping_fraction": 0.10714285714285715,
+      "categories": {
+        "all_silent": 1,
+        "all_saturated": 0,
+        "all_intermediate_tie": 0,
+        "some_decisions": 11
+      },
+      "note": "Equal-weight descriptive average over12 models (4 architectures x3 paired blocks), not12 independent training blocks and not a new inferential endpoint."
+    },
+    "COUNT": {
+      "balanced_accuracy": 0.2275390625,
+      "coverage": 0.4319661458333333,
+      "silence": 0.0,
+      "common_loss": 0.032826741536458336,
+      "mean_sum": 8.333658854166666,
+      "mean_signed_margin": 0.037434895833333336,
+      "fraction_4_4": 0.5361328125,
+      "fraction_sum8": 0.5514322916666666,
+      "diagnostic_clipping_fraction": 0.22222222222222224,
+      "categories": {
+        "all_silent": 0,
+        "all_saturated": 0,
+        "all_intermediate_tie": 1,
+        "some_decisions": 11
+      },
+      "note": "Equal-weight descriptive average over12 models (4 architectures x3 paired blocks), not12 independent training blocks and not a new inferential endpoint."
+    },
+    "CECOM": {
+      "balanced_accuracy": 0.1767578125,
+      "coverage": 0.3447265625,
+      "silence": 0.0,
+      "common_loss": 0.010874430338541666,
+      "mean_sum": 8.044596354166666,
+      "mean_signed_margin": 0.008138020833333334,
+      "fraction_4_4": 0.6536458333333334,
+      "fraction_sum8": 0.6829427083333334,
+      "diagnostic_clipping_fraction": 0.07936507936507936,
+      "categories": {
+        "all_silent": 0,
+        "all_saturated": 0,
+        "all_intermediate_tie": 1,
+        "some_decisions": 11
+      },
+      "note": "Equal-weight descriptive average over12 models (4 architectures x3 paired blocks), not12 independent training blocks and not a new inferential endpoint."
+    }
+  },
+  "rows": [
+    {
+      "id": "s0_DEND_CE",
+      "seed": 0,
+      "arm": "DEND",
+      "loss": "CE",
+      "balanced_accuracy": 0.34765625,
+      "coverage": 0.60546875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0189208984375,
+      "mean_sum": 8.60546875,
+      "mean_signed_margin": 0.08984375,
+      "fraction_4_4": 0.39453125,
+      "fraction_sum8": 0.39453125,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 101
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 57
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 98
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.05145386224946238,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.975957485542533e-06
+    },
+    {
+      "id": "s0_DEND_COUNT",
+      "seed": 0,
+      "arm": "DEND",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.0546875,
+      "coverage": 0.1328125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.004150390625,
+      "mean_sum": 8.1328125,
+      "mean_signed_margin": -0.0234375,
+      "fraction_4_4": 0.8671875,
+      "fraction_sum8": 0.8671875,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 222
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 34
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.09306024570148826,
+      "last_common_norm": 0.01126363060707392,
+      "last_l2_norm": 4.959657878027067e-06
+    },
+    {
+      "id": "s0_DEND_CECOM",
+      "seed": 0,
+      "arm": "DEND",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.00390625,
+      "coverage": 0.15234375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0047607421875,
+      "mean_sum": 7.84765625,
+      "mean_signed_margin": -0.14453125,
+      "fraction_4_4": 0.84765625,
+      "fraction_sum8": 0.84765625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 25
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 14
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 217
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.19047619047619047,
+      "last_discriminative_norm": 0.043322549906534086,
+      "last_common_norm": 0.09042509247402976,
+      "last_l2_norm": 4.97846179054086e-06
+    },
+    {
+      "id": "s0_FULL_CE",
+      "seed": 0,
+      "arm": "FULL",
+      "loss": "CE",
+      "balanced_accuracy": 0.28125,
+      "coverage": 0.4921875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.076416015625,
+      "mean_sum": 9.2265625,
+      "mean_signed_margin": 0.0703125,
+      "fraction_4_4": 0.18359375,
+      "fraction_sum8": 0.18359375,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 10
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 47
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 31
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 64
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 83
+        },
+        {
+          "count": [
+            5,
+            6
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            6,
+            5
+          ],
+          "n": 1
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.0958305184673793,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.217806373335962e-06
+    },
+    {
+      "id": "s0_FULL_COUNT",
+      "seed": 0,
+      "arm": "FULL",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.109375,
+      "coverage": 0.1796875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.005615234375,
+      "mean_sum": 8.0390625,
+      "mean_signed_margin": 0.0390625,
+      "fraction_4_4": 0.8203125,
+      "fraction_sum8": 0.8203125,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 18
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 210
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 28
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.030065617135560826,
+      "last_common_norm": 0.024421411926532532,
+      "last_l2_norm": 5.053306175330804e-06
+    },
+    {
+      "id": "s0_FULL_CECOM",
+      "seed": 0,
+      "arm": "FULL",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.234375,
+      "coverage": 0.34375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0107421875,
+      "mean_sum": 7.90625,
+      "mean_signed_margin": 0.125,
+      "fraction_4_4": 0.65625,
+      "fraction_sum8": 0.65625,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 56
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 168
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 32
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.0468878581434542,
+      "last_common_norm": 0.04018644830032206,
+      "last_l2_norm": 5.100452229767409e-06
+    },
+    {
+      "id": "s0_NOATT_CE",
+      "seed": 0,
+      "arm": "NOATT",
+      "loss": "CE",
+      "balanced_accuracy": 0.42578125,
+      "coverage": 0.68359375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0213623046875,
+      "mean_sum": 8.68359375,
+      "mean_signed_margin": 0.16796875,
+      "fraction_4_4": 0.31640625,
+      "fraction_sum8": 0.31640625,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 81
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 53
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 122
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.0952501486846508,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.982724706481935e-06
+    },
+    {
+      "id": "s0_NOATT_COUNT",
+      "seed": 0,
+      "arm": "NOATT",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.0,
+      "coverage": 0.0078125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.000732421875,
+      "mean_sum": 8.0,
+      "mean_signed_margin": -0.0078125,
+      "fraction_4_4": 0.98828125,
+      "fraction_sum8": 0.98828125,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 253
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 1
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.042300827418469654,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.9997365823834515e-06
+    },
+    {
+      "id": "s0_NOATT_CECOM",
+      "seed": 0,
+      "arm": "NOATT",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.27734375,
+      "coverage": 0.48828125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0152587890625,
+      "mean_sum": 7.57421875,
+      "mean_signed_margin": 0.06640625,
+      "fraction_4_4": 0.51171875,
+      "fraction_sum8": 0.51171875,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 117
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 131
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 8
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.22934995999173552,
+      "last_common_norm": 0.19597898944815104,
+      "last_l2_norm": 4.9892603721441706e-06
+    },
+    {
+      "id": "s0_GAIN2_CE",
+      "seed": 0,
+      "arm": "GAIN2",
+      "loss": "CE",
+      "balanced_accuracy": 0.5546875,
+      "coverage": 0.6796875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.6201171875,
+      "mean_sum": 3.5859375,
+      "mean_signed_margin": 0.6328125,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            1,
+            1
+          ],
+          "n": 8
+        },
+        {
+          "count": [
+            1,
+            2
+          ],
+          "n": 30
+        },
+        {
+          "count": [
+            1,
+            3
+          ],
+          "n": 68
+        },
+        {
+          "count": [
+            2,
+            1
+          ],
+          "n": 65
+        },
+        {
+          "count": [
+            2,
+            2
+          ],
+          "n": 74
+        },
+        {
+          "count": [
+            2,
+            3
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            3,
+            1
+          ],
+          "n": 2
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 1.7529101555964595,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.875109896387476e-06
+    },
+    {
+      "id": "s0_GAIN2_COUNT",
+      "seed": 0,
+      "arm": "GAIN2",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.0,
+      "coverage": 0.0,
+      "silence": 0.0,
+      "category": "all_intermediate_tie",
+      "common_loss": 0.0,
+      "mean_sum": 8.0,
+      "mean_signed_margin": 0.0,
+      "fraction_4_4": 1.0,
+      "fraction_sum8": 1.0,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 256
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.015887470658560075,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.796905446087015e-06
+    },
+    {
+      "id": "s0_GAIN2_CECOM",
+      "seed": 0,
+      "arm": "GAIN2",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.0,
+      "coverage": 0.0,
+      "silence": 0.0,
+      "category": "all_intermediate_tie",
+      "common_loss": 0.0,
+      "mean_sum": 8.0,
+      "mean_signed_margin": 0.0,
+      "fraction_4_4": 1.0,
+      "fraction_sum8": 1.0,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 256
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.0038822633489772286,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.772397668568971e-06
+    },
+    {
+      "id": "s1_DEND_CE",
+      "seed": 1,
+      "arm": "DEND",
+      "loss": "CE",
+      "balanced_accuracy": 0.0,
+      "coverage": 0.0,
+      "silence": 1.0,
+      "category": "all_silent",
+      "common_loss": 2.0,
+      "mean_sum": 0.0,
+      "mean_signed_margin": 0.0,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            0,
+            0
+          ],
+          "n": 256
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.0,
+      "last_discriminative_norm": 0.003348175761505943,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.955265544244732e-06
+    },
+    {
+      "id": "s1_DEND_COUNT",
+      "seed": 1,
+      "arm": "DEND",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.3515625,
+      "coverage": 0.8203125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.051513671875,
+      "mean_sum": 7.1796875,
+      "mean_signed_margin": -0.125,
+      "fraction_4_4": 0.00390625,
+      "fraction_sum8": 0.04296875,
+      "patterns": [
+        {
+          "count": [
+            3,
+            3
+          ],
+          "n": 40
+        },
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 9
+        },
+        {
+          "count": [
+            4,
+            2
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 119
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5,
+            2
+          ],
+          "n": 41
+        },
+        {
+          "count": [
+            5,
+            3
+          ],
+          "n": 10
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 15
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            6,
+            3
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 10
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.42083747630182394,
+      "last_common_norm": 0.37974688458347583,
+      "last_l2_norm": 4.960554079071093e-06
+    },
+    {
+      "id": "s1_DEND_CECOM",
+      "seed": 1,
+      "arm": "DEND",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.1328125,
+      "coverage": 0.29296875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.007080078125,
+      "mean_sum": 7.859375,
+      "mean_signed_margin": -0.0078125,
+      "fraction_4_4": 0.70703125,
+      "fraction_sum8": 0.8046875,
+      "patterns": [
+        {
+          "count": [
+            2,
+            3
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 34
+        },
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 181
+        },
+        {
+          "count": [
+            5,
+            3
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 8
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.08695345058515835,
+      "last_common_norm": 0.01096181890518601,
+      "last_l2_norm": 4.9130798308499005e-06
+    },
+    {
+      "id": "s1_FULL_CE",
+      "seed": 1,
+      "arm": "FULL",
+      "loss": "CE",
+      "balanced_accuracy": 0.75,
+      "coverage": 0.75,
+      "silence": 0.25,
+      "category": "some_decisions",
+      "common_loss": 0.9810791015625,
+      "mean_sum": 2.63671875,
+      "mean_signed_margin": 2.62890625,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            0,
+            0
+          ],
+          "n": 64
+        },
+        {
+          "count": [
+            0,
+            3
+          ],
+          "n": 31
+        },
+        {
+          "count": [
+            0,
+            4
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            0,
+            5
+          ],
+          "n": 13
+        },
+        {
+          "count": [
+            2,
+            0
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            2,
+            1
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 68
+        },
+        {
+          "count": [
+            4,
+            0
+          ],
+          "n": 56
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.23809523809523808,
+      "last_discriminative_norm": 0.04858017591912336,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.711296458843137e-06
+    },
+    {
+      "id": "s1_FULL_COUNT",
+      "seed": 1,
+      "arm": "FULL",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.3671875,
+      "coverage": 0.58203125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.018310546875,
+      "mean_sum": 7.9453125,
+      "mean_signed_margin": 0.1640625,
+      "fraction_4_4": 0.4140625,
+      "fraction_sum8": 0.515625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 42
+        },
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 26
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 31
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 106
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 37
+        },
+        {
+          "count": [
+            4,
+            6
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            4,
+            7
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 1
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.1152185284756316,
+      "last_common_norm": 0.07659525464445098,
+      "last_l2_norm": 5.018682736584349e-06
+    },
+    {
+      "id": "s1_FULL_CECOM",
+      "seed": 1,
+      "arm": "FULL",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.1953125,
+      "coverage": 0.41015625,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0113525390625,
+      "mean_sum": 8.01953125,
+      "mean_signed_margin": -0.06640625,
+      "fraction_4_4": 0.58984375,
+      "fraction_sum8": 0.63671875,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 41
+        },
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 12
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 151
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 49
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.1007744424123922,
+      "last_common_norm": 0.04862226676497806,
+      "last_l2_norm": 4.812436707199557e-06
+    },
+    {
+      "id": "s1_NOATT_CE",
+      "seed": 1,
+      "arm": "NOATT",
+      "loss": "CE",
+      "balanced_accuracy": 0.75,
+      "coverage": 0.828125,
+      "silence": 0.171875,
+      "category": "some_decisions",
+      "common_loss": 1.0887451171875,
+      "mean_sum": 2.35546875,
+      "mean_signed_margin": 2.19921875,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            0,
+            0
+          ],
+          "n": 44
+        },
+        {
+          "count": [
+            0,
+            4
+          ],
+          "n": 9
+        },
+        {
+          "count": [
+            0,
+            5
+          ],
+          "n": 55
+        },
+        {
+          "count": [
+            1,
+            0
+          ],
+          "n": 46
+        },
+        {
+          "count": [
+            2,
+            0
+          ],
+          "n": 60
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 42
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.34241472522994515,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.898993541252599e-06
+    },
+    {
+      "id": "s1_NOATT_COUNT",
+      "seed": 1,
+      "arm": "NOATT",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.390625,
+      "coverage": 0.55859375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0286865234375,
+      "mean_sum": 8.62890625,
+      "mean_signed_margin": 0.23828125,
+      "fraction_4_4": 0.34375,
+      "fraction_sum8": 0.38671875,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 11
+        },
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 11
+        },
+        {
+          "count": [
+            3,
+            6
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 88
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 33
+        },
+        {
+          "count": [
+            4,
+            6
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 86
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 25
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.155484852156555,
+      "last_common_norm": 0.29335567472892937,
+      "last_l2_norm": 4.900201728808712e-06
+    },
+    {
+      "id": "s1_NOATT_CECOM",
+      "seed": 1,
+      "arm": "NOATT",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.30859375,
+      "coverage": 0.6640625,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.027099609375,
+      "mean_sum": 8.5859375,
+      "mean_signed_margin": -0.140625,
+      "fraction_4_4": 0.31640625,
+      "fraction_sum8": 0.37890625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 15
+        },
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 16
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 81
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 123
+        },
+        {
+          "count": [
+            4,
+            6
+          ],
+          "n": 16
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 5
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.04731078041497617,
+      "last_common_norm": 0.14647659722784884,
+      "last_l2_norm": 5.1460985295378225e-06
+    },
+    {
+      "id": "s1_GAIN2_CE",
+      "seed": 1,
+      "arm": "GAIN2",
+      "loss": "CE",
+      "balanced_accuracy": 0.75,
+      "coverage": 0.75,
+      "silence": 0.25,
+      "category": "some_decisions",
+      "common_loss": 0.5281982421875,
+      "mean_sum": 5.52734375,
+      "mean_signed_margin": 5.23046875,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.046875,
+      "patterns": [
+        {
+          "count": [
+            0,
+            0
+          ],
+          "n": 64
+        },
+        {
+          "count": [
+            0,
+            6
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            0,
+            7
+          ],
+          "n": 23
+        },
+        {
+          "count": [
+            0,
+            8
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            1,
+            8
+          ],
+          "n": 38
+        },
+        {
+          "count": [
+            6,
+            0
+          ],
+          "n": 16
+        },
+        {
+          "count": [
+            7,
+            0
+          ],
+          "n": 102
+        },
+        {
+          "count": [
+            8,
+            0
+          ],
+          "n": 10
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.14285714285714285,
+      "last_discriminative_norm": 0.1223683731897378,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.416402019779408e-06
+    },
+    {
+      "id": "s1_GAIN2_COUNT",
+      "seed": 1,
+      "arm": "GAIN2",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.17578125,
+      "coverage": 0.41015625,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0128173828125,
+      "mean_sum": 8.41015625,
+      "mean_signed_margin": -0.05859375,
+      "fraction_4_4": 0.58984375,
+      "fraction_sum8": 0.58984375,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 151
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 42
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 63
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.0,
+      "last_discriminative_norm": 0.11189030826408727,
+      "last_common_norm": 0.1461603433059843,
+      "last_l2_norm": 4.6883515188179225e-06
+    },
+    {
+      "id": "s1_GAIN2_CECOM",
+      "seed": 1,
+      "arm": "GAIN2",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.20703125,
+      "coverage": 0.421875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0107421875,
+      "mean_sum": 8.34375,
+      "mean_signed_margin": -0.03125,
+      "fraction_4_4": 0.578125,
+      "fraction_sum8": 0.65625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            5
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 148
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 88
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.4857835442126465,
+      "last_common_norm": 0.31255497150998934,
+      "last_l2_norm": 4.62389991115607e-06
+    },
+    {
+      "id": "s2_DEND_CE",
+      "seed": 2,
+      "arm": "DEND",
+      "loss": "CE",
+      "balanced_accuracy": 0.9921875,
+      "coverage": 0.9921875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.2772216796875,
+      "mean_sum": 5.23046875,
+      "mean_signed_margin": 5.04296875,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0234375,
+      "patterns": [
+        {
+          "count": [
+            0,
+            4
+          ],
+          "n": 85
+        },
+        {
+          "count": [
+            0,
+            5
+          ],
+          "n": 38
+        },
+        {
+          "count": [
+            1,
+            4
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1,
+            5
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            3,
+            2
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            3,
+            3
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            4,
+            1
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            2
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5,
+            0
+          ],
+          "n": 21
+        },
+        {
+          "count": [
+            5,
+            1
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            6,
+            0
+          ],
+          "n": 62
+        },
+        {
+          "count": [
+            6,
+            1
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            7,
+            0
+          ],
+          "n": 26
+        },
+        {
+          "count": [
+            8,
+            0
+          ],
+          "n": 6
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.33171614860911164,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.790422630595203e-06
+    },
+    {
+      "id": "s2_DEND_COUNT",
+      "seed": 2,
+      "arm": "DEND",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.296875,
+      "coverage": 0.515625,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.025634765625,
+      "mean_sum": 8.25,
+      "mean_signed_margin": 0.0859375,
+      "fraction_4_4": 0.4140625,
+      "fraction_sum8": 0.4140625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 53
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 106
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 70
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            5,
+            5
+          ],
+          "n": 18
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 2
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.19047619047619047,
+      "last_discriminative_norm": 0.6609301022432768,
+      "last_common_norm": 0.2826389868469058,
+      "last_l2_norm": 4.928383482152507e-06
+    },
+    {
+      "id": "s2_DEND_CECOM",
+      "seed": 2,
+      "arm": "DEND",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.015625,
+      "coverage": 0.0234375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.000732421875,
+      "mean_sum": 7.9765625,
+      "mean_signed_margin": 0.0078125,
+      "fraction_4_4": 0.9765625,
+      "fraction_sum8": 0.9765625,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 6
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 250
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.09523809523809523,
+      "last_discriminative_norm": 0.023710223465784986,
+      "last_common_norm": 0.021172205393005888,
+      "last_l2_norm": 4.7069483839359245e-06
+    },
+    {
+      "id": "s2_FULL_CE",
+      "seed": 2,
+      "arm": "FULL",
+      "loss": "CE",
+      "balanced_accuracy": 0.7734375,
+      "coverage": 0.91015625,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.7330322265625,
+      "mean_sum": 3.30859375,
+      "mean_signed_margin": 2.22265625,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            0,
+            2
+          ],
+          "n": 24
+        },
+        {
+          "count": [
+            0,
+            3
+          ],
+          "n": 58
+        },
+        {
+          "count": [
+            0,
+            4
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            1,
+            0
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            1,
+            1
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            1,
+            2
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            2,
+            0
+          ],
+          "n": 13
+        },
+        {
+          "count": [
+            2,
+            1
+          ],
+          "n": 32
+        },
+        {
+          "count": [
+            2,
+            2
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            3,
+            1
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            4,
+            0
+          ],
+          "n": 19
+        },
+        {
+          "count": [
+            4,
+            1
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            5,
+            0
+          ],
+          "n": 29
+        },
+        {
+          "count": [
+            6,
+            0
+          ],
+          "n": 10
+        },
+        {
+          "count": [
+            7,
+            0
+          ],
+          "n": 4
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.27662402760586063,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.581738772226091e-06
+    },
+    {
+      "id": "s2_FULL_COUNT",
+      "seed": 2,
+      "arm": "FULL",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.5,
+      "coverage": 1.0,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.165771484375,
+      "mean_sum": 10.171875,
+      "mean_signed_margin": 0.125,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 35
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 164
+        },
+        {
+          "count": [
+            7,
+            4
+          ],
+          "n": 35
+        },
+        {
+          "count": [
+            8,
+            4
+          ],
+          "n": 22
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.9047619047619048,
+      "last_discriminative_norm": 0.3334196126278942,
+      "last_common_norm": 0.3513846681442969,
+      "last_l2_norm": 4.812960843312363e-06
+    },
+    {
+      "id": "s2_FULL_CECOM",
+      "seed": 2,
+      "arm": "FULL",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.4375,
+      "coverage": 0.61328125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0196533203125,
+      "mean_sum": 7.70703125,
+      "mean_signed_margin": 0.39453125,
+      "fraction_4_4": 0.38671875,
+      "fraction_sum8": 0.453125,
+      "patterns": [
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 100
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 11
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 99
+        },
+        {
+          "count": [
+            5,
+            3
+          ],
+          "n": 17
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 17
+        },
+        {
+          "count": [
+            6,
+            3
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 7
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.4994429330877222,
+      "last_common_norm": 0.1981742778559338,
+      "last_l2_norm": 4.9409278417321195e-06
+    },
+    {
+      "id": "s2_NOATT_CE",
+      "seed": 2,
+      "arm": "NOATT",
+      "loss": "CE",
+      "balanced_accuracy": 0.76953125,
+      "coverage": 1.0,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.58935546875,
+      "mean_sum": 3.7421875,
+      "mean_signed_margin": 1.4921875,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            0,
+            3
+          ],
+          "n": 34
+        },
+        {
+          "count": [
+            0,
+            4
+          ],
+          "n": 98
+        },
+        {
+          "count": [
+            0,
+            5
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            0,
+            6
+          ],
+          "n": 8
+        },
+        {
+          "count": [
+            1,
+            0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1,
+            2
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1,
+            3
+          ],
+          "n": 17
+        },
+        {
+          "count": [
+            1,
+            4
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            2,
+            0
+          ],
+          "n": 11
+        },
+        {
+          "count": [
+            2,
+            1
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            2,
+            3
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            2,
+            4
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 51
+        },
+        {
+          "count": [
+            3,
+            1
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            4,
+            0
+          ],
+          "n": 4
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.14285714285714285,
+      "last_discriminative_norm": 1.4765814368960655,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.600388193440361e-06
+    },
+    {
+      "id": "s2_NOATT_COUNT",
+      "seed": 2,
+      "arm": "NOATT",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.4765625,
+      "coverage": 0.96875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0804443359375,
+      "mean_sum": 9.25390625,
+      "mean_signed_margin": 0.00390625,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.0,
+      "patterns": [
+        {
+          "count": [
+            3,
+            3
+          ],
+          "n": 8
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 18
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 107
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 121
+        },
+        {
+          "count": [
+            7,
+            4
+          ],
+          "n": 2
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.9523809523809523,
+      "last_discriminative_norm": 1.3422239148963884,
+      "last_common_norm": 1.3077415186632113,
+      "last_l2_norm": 4.761510452820903e-06
+    },
+    {
+      "id": "s2_NOATT_CECOM",
+      "seed": 2,
+      "arm": "NOATT",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.05859375,
+      "coverage": 0.2421875,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.0079345703125,
+      "mean_sum": 8.23046875,
+      "mean_signed_margin": -0.12109375,
+      "fraction_4_4": 0.7578125,
+      "fraction_sum8": 0.7578125,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 194
+        },
+        {
+          "count": [
+            5,
+            4
+          ],
+          "n": 59
+        },
+        {
+          "count": [
+            6,
+            4
+          ],
+          "n": 1
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.14285714285714285,
+      "last_discriminative_norm": 0.5011446086949314,
+      "last_common_norm": 1.1795967331184631,
+      "last_l2_norm": 4.83026728336203e-06
+    },
+    {
+      "id": "s2_GAIN2_CE",
+      "seed": 2,
+      "arm": "GAIN2",
+      "loss": "CE",
+      "balanced_accuracy": 0.96484375,
+      "coverage": 1.0,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.062744140625,
+      "mean_sum": 7.0390625,
+      "mean_signed_margin": 6.5390625,
+      "fraction_4_4": 0.0,
+      "fraction_sum8": 0.3671875,
+      "patterns": [
+        {
+          "count": [
+            0,
+            6
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            0,
+            7
+          ],
+          "n": 55
+        },
+        {
+          "count": [
+            0,
+            8
+          ],
+          "n": 64
+        },
+        {
+          "count": [
+            1,
+            4
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1,
+            6
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            2,
+            3
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            2,
+            4
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            2,
+            5
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            3,
+            0
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            3,
+            1
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            3,
+            4
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            4,
+            1
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            4,
+            2
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5,
+            0
+          ],
+          "n": 12
+        },
+        {
+          "count": [
+            5,
+            1
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            6,
+            0
+          ],
+          "n": 10
+        },
+        {
+          "count": [
+            6,
+            1
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            7,
+            0
+          ],
+          "n": 48
+        },
+        {
+          "count": [
+            8,
+            0
+          ],
+          "n": 30
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.23809523809523808,
+      "last_discriminative_norm": 3.07403951109145,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 5.295902486467969e-06
+    },
+    {
+      "id": "s2_GAIN2_COUNT",
+      "seed": 2,
+      "arm": "GAIN2",
+      "loss": "COUNT",
+      "balanced_accuracy": 0.0078125,
+      "coverage": 0.0078125,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.000244140625,
+      "mean_sum": 7.9921875,
+      "mean_signed_margin": 0.0078125,
+      "fraction_4_4": 0.9921875,
+      "fraction_sum8": 0.9921875,
+      "patterns": [
+        {
+          "count": [
+            4,
+            3
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 254
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.19047619047619047,
+      "last_discriminative_norm": 0.0977130138238231,
+      "last_common_norm": 0.0,
+      "last_l2_norm": 4.790196008029219e-06
+    },
+    {
+      "id": "s2_GAIN2_CECOM",
+      "seed": 2,
+      "arm": "GAIN2",
+      "loss": "CECOM",
+      "balanced_accuracy": 0.25,
+      "coverage": 0.484375,
+      "silence": 0.0,
+      "category": "some_decisions",
+      "common_loss": 0.01513671875,
+      "mean_sum": 8.484375,
+      "mean_signed_margin": 0.015625,
+      "fraction_4_4": 0.515625,
+      "fraction_sum8": 0.515625,
+      "patterns": [
+        {
+          "count": [
+            4,
+            4
+          ],
+          "n": 132
+        },
+        {
+          "count": [
+            4,
+            5
+          ],
+          "n": 124
+        }
+      ],
+      "diagnostic_clipping_fraction": 0.047619047619047616,
+      "last_discriminative_norm": 0.3235622711985424,
+      "last_common_norm": 0.3529874693827002,
+      "last_l2_norm": 4.781762980921974e-06
+    }
+  ],
+  "paired_differences": {
+    "COUNT": [
+      {
+        "seed": 0,
+        "arm": "DEND",
+        "ba_delta": -0.29296875,
+        "coverage_delta": -0.47265625
+      },
+      {
+        "seed": 0,
+        "arm": "FULL",
+        "ba_delta": -0.171875,
+        "coverage_delta": -0.3125
+      },
+      {
+        "seed": 0,
+        "arm": "NOATT",
+        "ba_delta": -0.42578125,
+        "coverage_delta": -0.67578125
+      },
+      {
+        "seed": 0,
+        "arm": "GAIN2",
+        "ba_delta": -0.5546875,
+        "coverage_delta": -0.6796875
+      },
+      {
+        "seed": 1,
+        "arm": "DEND",
+        "ba_delta": 0.3515625,
+        "coverage_delta": 0.8203125
+      },
+      {
+        "seed": 1,
+        "arm": "FULL",
+        "ba_delta": -0.3828125,
+        "coverage_delta": -0.16796875
+      },
+      {
+        "seed": 1,
+        "arm": "NOATT",
+        "ba_delta": -0.359375,
+        "coverage_delta": -0.26953125
+      },
+      {
+        "seed": 1,
+        "arm": "GAIN2",
+        "ba_delta": -0.57421875,
+        "coverage_delta": -0.33984375
+      },
+      {
+        "seed": 2,
+        "arm": "DEND",
+        "ba_delta": -0.6953125,
+        "coverage_delta": -0.4765625
+      },
+      {
+        "seed": 2,
+        "arm": "FULL",
+        "ba_delta": -0.2734375,
+        "coverage_delta": 0.08984375
+      },
+      {
+        "seed": 2,
+        "arm": "NOATT",
+        "ba_delta": -0.29296875,
+        "coverage_delta": -0.03125
+      },
+      {
+        "seed": 2,
+        "arm": "GAIN2",
+        "ba_delta": -0.95703125,
+        "coverage_delta": -0.9921875
+      }
+    ],
+    "CECOM": [
+      {
+        "seed": 0,
+        "arm": "DEND",
+        "ba_delta": -0.34375,
+        "coverage_delta": -0.453125
+      },
+      {
+        "seed": 0,
+        "arm": "FULL",
+        "ba_delta": -0.046875,
+        "coverage_delta": -0.1484375
+      },
+      {
+        "seed": 0,
+        "arm": "NOATT",
+        "ba_delta": -0.1484375,
+        "coverage_delta": -0.1953125
+      },
+      {
+        "seed": 0,
+        "arm": "GAIN2",
+        "ba_delta": -0.5546875,
+        "coverage_delta": -0.6796875
+      },
+      {
+        "seed": 1,
+        "arm": "DEND",
+        "ba_delta": 0.1328125,
+        "coverage_delta": 0.29296875
+      },
+      {
+        "seed": 1,
+        "arm": "FULL",
+        "ba_delta": -0.5546875,
+        "coverage_delta": -0.33984375
+      },
+      {
+        "seed": 1,
+        "arm": "NOATT",
+        "ba_delta": -0.44140625,
+        "coverage_delta": -0.1640625
+      },
+      {
+        "seed": 1,
+        "arm": "GAIN2",
+        "ba_delta": -0.54296875,
+        "coverage_delta": -0.328125
+      },
+      {
+        "seed": 2,
+        "arm": "DEND",
+        "ba_delta": -0.9765625,
+        "coverage_delta": -0.96875
+      },
+      {
+        "seed": 2,
+        "arm": "FULL",
+        "ba_delta": -0.3359375,
+        "coverage_delta": -0.296875
+      },
+      {
+        "seed": 2,
+        "arm": "NOATT",
+        "ba_delta": -0.7109375,
+        "coverage_delta": -0.7578125
+      },
+      {
+        "seed": 2,
+        "arm": "GAIN2",
+        "ba_delta": -0.71484375,
+        "coverage_delta": -0.515625
+      }
+    ]
+  }
+}

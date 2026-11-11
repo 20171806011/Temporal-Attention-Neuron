@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "arms": [
+    {
+      "arm": "DEND",
+      "wall_seconds": 0.3568542000139132,
+      "configurations": 27,
+      "archived_bytes": 210987,
+      "archive_storage_bound_bytes": 2767586
+    },
+    {
+      "arm": "FULL",
+      "wall_seconds": 0.5202001000288874,
+      "configurations": 30,
+      "archived_bytes": 396302,
+      "archive_storage_bound_bytes": 3378914
+    },
+    {
+      "arm": "NOATT",
+      "wall_seconds": 0.22686300001805648,
+      "configurations": 30,
+      "archived_bytes": 393101,
+      "archive_storage_bound_bytes": 3378914
+    },
+    {
+      "arm": "GAIN2",
+      "wall_seconds": 0.20050999999511987,
+      "configurations": 27,
+      "archived_bytes": 198678,
+      "archive_storage_bound_bytes": 2767586
+    }
+  ],
+  "wall_seconds": 1.3461536000249907,
+  "forecast_seconds": 123.47969140100759,
+  "formula": "2 * 9 * sum(arm wall seconds) + 100",
+  "cap_seconds": 840,
+  "fixture_fit_rows": 128,
+  "fixture_test_rows": 256,
+  "fixture_seed_fit": 4099900401,
+  "fixture_seed_test": 4099900402,
+  "fixture_seed_weights": 4099900403,
+  "projected_storage_bound_bytes": 177745864,
+  "storage_cap_bytes": 1610612736,
+  "metadata_allowance_bytes": 67108864,
+  "free_bytes_before_fixture": 275360190464,
+  "current_working_set_bytes": 47529984,
+  "peak_working_set_bytes": 54079488
+}

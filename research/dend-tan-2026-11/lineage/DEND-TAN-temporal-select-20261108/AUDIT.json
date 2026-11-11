@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checks": 130225,
+  "optimizer_updates": 9600,
+  "evaluations": 144,
+  "source_injection_oracle_models": 12,
+  "unchanged_DEND_conditions": 36,
+  "mathematical_negative_control_conditions": 48,
+  "max_numeric_error": 3.552713678800501e-15,
+  "wall_seconds": 14.626416199986124,
+  "scope": "Independent temporal data and input reconstruction, native hybrid equations on all evaluations and first/last training counts; exact duplicate-input/opposite-label controls; actual original TAN premembrane injection on first two nominal episodes of every final FULL/NOATT model; original DEND replay for all DEND tests; all stored objectives, Adam updates and ledgers. Scientific gradients not independently rederived; anchored-surrogate contract checked separately."
+}

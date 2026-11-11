@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "checks": 291036,
+  "blocks": 12,
+  "fits": 36,
+  "updates": 21600,
+  "updates_per_fit": 600,
+  "evaluations": 72,
+  "forward_sample_steps": 50429952,
+  "dense_forward_macs": 7867072512,
+  "dense_backward_macs": 11943936000,
+  "max_numeric_error": 3.203468046386604e-11,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 50425856,
+  "wall_seconds": 8.494465199997649,
+  "cpu_seconds": 5.671875,
+  "optimizer_updates": 21600,
+  "initial_forward_identity_blocks": 12,
+  "first_gradient_directions": 72,
+  "max_first_gradient_direction_error": 3.203468046386604e-11,
+  "initial_dyn_detach_clipped_gradient_distances": [
+    1.4269518070128186e-05,
+    0.00026605672741104424,
+    0.00014794358631691615,
+    0.00028129315115044807,
+    1.4002447758728184e-05,
+    5.98599591113619e-05,
+    1.5204067481101617e-06,
+    0.00012882678977482878,
+    5.68107887455033e-06,
+    7.860831069820537e-05,
+    0.0004898029992167185,
+    0.00010551449722787473
+  ],
+  "training_sample_steps": 49766400,
+  "evaluation_sample_steps": 663552,
+  "audited_blank_archive_steps": 12096,
+  "primary_effects": [
+    {
+      "effect": "dyn_minus_mean_at_mean",
+      "blocks": 12,
+      "values": [
+        -0.2421875,
+        0.0390625,
+        0.046875,
+        0.0078125,
+        0.03125,
+        -0.0234375,
+        -0.015625,
+        -0.015625,
+        0.015625,
+        0.0078125,
+        -0.0078125,
+        0.0234375
+      ],
+      "mean": -0.011067708333333334,
+      "sample_sd": 0.07621663045122773,
+      "minimum": -0.2421875,
+      "maximum": 0.046875,
+      "positive": 7,
+      "zero": 0,
+      "negative": 5,
+      "ci97_5": [
+        -0.068359375,
+        0.021484375
+      ],
+      "direction": "undetermined"
+    },
+    {
+      "effect": "dyn_minus_detach_at_mean",
+      "blocks": 12,
+      "values": [
+        -0.25,
+        0.0,
+        0.0,
+        0.25,
+        0.0078125,
+        -0.015625,
+        0.1171875,
+        -0.0234375,
+        0.0,
+        -0.015625,
+        -0.0078125,
+        0.109375
+      ],
+      "mean": 0.014322916666666666,
+      "sample_sd": 0.1165386075115011,
+      "minimum": -0.25,
+      "maximum": 0.25,
+      "positive": 4,
+      "zero": 3,
+      "negative": 5,
+      "ci97_5": [
+        -0.059244791666666664,
+        0.08658854166666667
+      ],
+      "direction": "undetermined"
+    }
+  ],
+  "scope": "Independent stimulus and initialization regeneration, every stored objective, clipped norm and Adam update, both boundary hard forwards, two initial anchored directional checks per fit, all native evaluation replays and resources, and both paired primary bootstraps. Full gradients at later updates are reconstructed from the stored clipped gradients rather than recomputed."
+}

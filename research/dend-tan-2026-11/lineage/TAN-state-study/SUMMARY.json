@@ -1,0 +1,239 @@
+{
+  "primary": {
+    "mean": 0.964453125,
+    "ci95": [
+      0.93515625,
+      0.992578125
+    ],
+    "values": [
+      0.947265625,
+      1.0,
+      0.966796875,
+      0.91015625,
+      0.998046875
+    ],
+    "n": 5
+  },
+  "cells": [
+    {
+      "h": 2,
+      "arm": "DEND",
+      "n": 5,
+      "mean_balanced_accuracy": 0.9870535714285713,
+      "mean_coverage": 0.997265625,
+      "passes": 5,
+      "failure_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "parameters": 44.0,
+      "continuous_states": 8.0,
+      "continuous_state_updates": 192.0,
+      "spiking_cells": 4.0,
+      "dense_forward_macs": 864.0,
+      "input_macs": 576.0,
+      "branch_events": 0.0,
+      "hidden_events": 12.06796875,
+      "output_events": 22.4546875,
+      "total_events": 34.52265625,
+      "recurrent_event_deliveries": 44.0703125,
+      "hidden_output_deliveries": 22.03515625,
+      "consumed_internal_event_deliveries": 66.10546875,
+      "scheduled_graded_local_transfers": 96.0
+    },
+    {
+      "h": 2,
+      "arm": "POINT",
+      "n": 5,
+      "mean_balanced_accuracy": 0.9410218253968253,
+      "mean_coverage": 0.994140625,
+      "passes": 4,
+      "failure_wilson95": [
+        0.036224108632430085,
+        0.6244653702374747
+      ],
+      "parameters": 44.0,
+      "continuous_states": 8.0,
+      "continuous_state_updates": 192.0,
+      "spiking_cells": 8.0,
+      "dense_forward_macs": 864.0,
+      "input_macs": 576.0,
+      "branch_events": 26.34296875,
+      "hidden_events": 15.532421875,
+      "output_events": 18.712890625,
+      "total_events": 60.58828125,
+      "recurrent_event_deliveries": 58.11875,
+      "hidden_output_deliveries": 29.059375,
+      "consumed_internal_event_deliveries": 113.52109375,
+      "scheduled_graded_local_transfers": 0.0
+    },
+    {
+      "h": 6,
+      "arm": "DEND",
+      "n": 5,
+      "mean_balanced_accuracy": 0.9979662698412699,
+      "mean_coverage": 0.999609375,
+      "passes": 5,
+      "failure_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "parameters": 176.0,
+      "continuous_states": 20.0,
+      "continuous_state_updates": 480.0,
+      "spiking_cells": 8.0,
+      "dense_forward_macs": 3744.0,
+      "input_macs": 1728.0,
+      "branch_events": 0.0,
+      "hidden_events": 54.83359375,
+      "output_events": 20.54296875,
+      "total_events": 75.3765625,
+      "recurrent_event_deliveries": 621.2203125,
+      "hidden_output_deliveries": 103.53671875,
+      "consumed_internal_event_deliveries": 724.75703125,
+      "scheduled_graded_local_transfers": 288.0
+    },
+    {
+      "h": 6,
+      "arm": "POINT",
+      "n": 5,
+      "mean_balanced_accuracy": 0.9917162698412699,
+      "mean_coverage": 0.99765625,
+      "passes": 5,
+      "failure_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "parameters": 176.0,
+      "continuous_states": 20.0,
+      "continuous_state_updates": 480.0,
+      "spiking_cells": 20.0,
+      "dense_forward_macs": 3744.0,
+      "input_macs": 1728.0,
+      "branch_events": 50.449609375,
+      "hidden_events": 36.60625,
+      "output_events": 20.302734375,
+      "total_events": 107.35859375,
+      "recurrent_event_deliveries": 413.0578125,
+      "hidden_output_deliveries": 68.84296875,
+      "consumed_internal_event_deliveries": 532.350390625,
+      "scheduled_graded_local_transfers": 0.0
+    }
+  ],
+  "frontier": [
+    {
+      "ba_gate": 0.9,
+      "arm": "DEND",
+      "eligible": [
+        {
+          "h": 2,
+          "gate_passes": 5
+        },
+        {
+          "h": 6,
+          "gate_passes": 5
+        }
+      ],
+      "minimum_sampled_h": 2
+    },
+    {
+      "ba_gate": 0.9,
+      "arm": "POINT",
+      "eligible": [
+        {
+          "h": 2,
+          "gate_passes": 4
+        },
+        {
+          "h": 6,
+          "gate_passes": 5
+        }
+      ],
+      "minimum_sampled_h": 2
+    },
+    {
+      "ba_gate": 0.95,
+      "arm": "DEND",
+      "eligible": [
+        {
+          "h": 2,
+          "gate_passes": 5
+        },
+        {
+          "h": 6,
+          "gate_passes": 5
+        }
+      ],
+      "minimum_sampled_h": 2
+    },
+    {
+      "ba_gate": 0.95,
+      "arm": "POINT",
+      "eligible": [
+        {
+          "h": 6,
+          "gate_passes": 5
+        }
+      ],
+      "minimum_sampled_h": 6
+    }
+  ],
+  "resources": {
+    "tuning_training": {
+      "fits": 32,
+      "episodes_per_forward": 128,
+      "updates": 200,
+      "forward_dense_macs": 1887436800,
+      "backward_dense_macs": 2831155200
+    },
+    "final_training": {
+      "fits": 20,
+      "episodes_per_forward": 128,
+      "updates": 200,
+      "forward_dense_macs": 1179648000,
+      "backward_dense_macs": 1769472000
+    },
+    "validation": {
+      "fits": 32,
+      "episodes_per_forward": 256,
+      "updates": 1,
+      "forward_dense_macs": 18874368,
+      "backward_dense_macs": 0
+    },
+    "test": {
+      "fits": 20,
+      "episodes_per_forward": 512,
+      "updates": 1,
+      "forward_dense_macs": 23592960,
+      "backward_dense_macs": 0
+    },
+    "final_training_diagnostics": {
+      "fits": 20,
+      "episodes_per_forward": 128,
+      "updates": 1,
+      "forward_dense_macs": 5898240,
+      "backward_dense_macs": 0
+    },
+    "mechanism": {
+      "evaluations": 660,
+      "episodes_each": 512,
+      "forward_dense_macs": 1265172480,
+      "historical_baseline_replay_macs": 28753920
+    }
+  },
+  "scientific_wall_seconds": 96.07657509998535,
+  "scientific_cpu_seconds": 89.109375,
+  "scientific_peak_working_set_bytes": 91856896,
+  "independent_verification": {
+    "status": "PASS",
+    "checks": 60986,
+    "max_continuous_residual": 3.552713678800501e-15,
+    "mechanism_evaluations": 660,
+    "reconstructed_adam_updates": 10400,
+    "final_test_models": 20,
+    "distinct_base_episodes": 6528,
+    "seconds": 99.05118450001464,
+    "scope": "Independently coded internal replay; no scientific model/engine imports. Not external replication. Full mechanism/test count replay; first 32 retained mechanism state/spike trajectories; full held-out native trajectories; all Adam updates; sampled training forwards; independently regenerated data, selection, metrics, costs and intervals."
+  },
+  "resource_correction_rows": 15
+}

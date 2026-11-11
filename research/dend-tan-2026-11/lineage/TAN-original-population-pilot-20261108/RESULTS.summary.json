@@ -1,0 +1,5568 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "groups",
+    "attention_effects",
+    "secondary_cross_architecture",
+    "inference"
+  ],
+  "retained_top_level_keys": [
+    "attention_effects",
+    "inference",
+    "groups"
+  ],
+  "omitted_top_level_keys": [
+    "secondary_cross_architecture"
+  ],
+  "data": {
+    "attention_effects": [
+      {
+        "lr": 0.01,
+        "delay": 0,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.01,
+        "delay": 24,
+        "primary": true,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.01,
+        "delay": 48,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.01,
+        "delay": 96,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.0025,
+        "delay": 0,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.0025,
+        "delay": 24,
+        "primary": true,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.0025,
+        "delay": 48,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "lr": 0.0025,
+        "delay": 96,
+        "primary": false,
+        "comparison": "TAN_FULL_minus_TAN_NOATT",
+        "values": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mean": 0.0,
+        "min": 0.0,
+        "max": 0.0,
+        "n": 3,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "inference": "Three independently fitted paired blocks; 20000 pointwise unadjusted bootstrap samples. Two fixed-rate D24 primary effects. No tuning, recipe/seed selection or held-out-pattern generalization claim.",
+    "groups": {
+      "TAN_FULL_lr0.01": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        }
+      },
+      "TAN_FULL_lr0.0025": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "ba90_count": 0
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "ba90_count": 0
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "ba90_count": 0
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.2890625,
+              0.0,
+              0.0
+            ],
+            "mean": 0.09635416666666667,
+            "min": 0.0,
+            "max": 0.2890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.2890625
+            ]
+          },
+          "ba90_count": 0
+        }
+      },
+      "TAN_NOATT_lr0.01": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "ba90_count": 0
+        }
+      },
+      "TAN_NOATT_lr0.0025": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "ba90_count": 0
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "ba90_count": 0
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "ba90_count": 0
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "silence": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              0.01953125,
+              0.0,
+              0.0
+            ],
+            "mean": 0.006510416666666667,
+            "min": 0.0,
+            "max": 0.01953125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.01953125
+            ]
+          },
+          "ba90_count": 0
+        }
+      },
+      "DEND_lr0.01": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.96875,
+              0.9910714285714286
+            ],
+            "mean": 0.9836309523809524,
+            "min": 0.96875,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.96875,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.97265625,
+              0.9921875
+            ],
+            "mean": 0.9856770833333334,
+            "min": 0.97265625,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.97265625,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.99609375,
+              1.0,
+              1.0
+            ],
+            "mean": 0.9986979166666666,
+            "min": 0.99609375,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.99609375,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              55.08984375,
+              32.265625,
+              60.01171875
+            ],
+            "mean": 49.122395833333336,
+            "min": 32.265625,
+            "max": 60.01171875,
+            "n": 3,
+            "ci95": [
+              32.265625,
+              60.01171875
+            ]
+          },
+          "output_events": {
+            "values": [
+              18.26953125,
+              18.26953125,
+              20.0625
+            ],
+            "mean": 18.8671875,
+            "min": 18.26953125,
+            "max": 20.0625,
+            "n": 3,
+            "ci95": [
+              18.26953125,
+              20.0625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              718.484375,
+              421.75,
+              789.4140625
+            ],
+            "mean": 643.2161458333334,
+            "min": 421.75,
+            "max": 789.4140625,
+            "n": 3,
+            "ci95": [
+              421.75,
+              789.4140625
+            ]
+          },
+          "ba90_count": 3
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.9732142857142857,
+              0.9910714285714286
+            ],
+            "mean": 0.9851190476190478,
+            "min": 0.9732142857142857,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.9732142857142857,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.9765625,
+              0.9921875
+            ],
+            "mean": 0.9869791666666666,
+            "min": 0.9765625,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.9765625,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              127.3125,
+              98.23046875,
+              145.01171875
+            ],
+            "mean": 123.51822916666667,
+            "min": 98.23046875,
+            "max": 145.01171875,
+            "n": 3,
+            "ci95": [
+              98.23046875,
+              145.01171875
+            ]
+          },
+          "output_events": {
+            "values": [
+              41.01171875,
+              41.765625,
+              43.92578125
+            ],
+            "mean": 42.234375,
+            "min": 41.01171875,
+            "max": 43.92578125,
+            "n": 3,
+            "ci95": [
+              41.01171875,
+              43.92578125
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              74.765625,
+              61.6640625,
+              82.6015625
+            ],
+            "mean": 73.01041666666667,
+            "min": 61.6640625,
+            "max": 82.6015625,
+            "n": 3,
+            "ci95": [
+              61.6640625,
+              82.6015625
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              22.33203125,
+              22.796875,
+              23.51171875
+            ],
+            "mean": 22.880208333333332,
+            "min": 22.33203125,
+            "max": 23.51171875,
+            "n": 3,
+            "ci95": [
+              22.33203125,
+              23.51171875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              1735.3984375,
+              1340.0078125,
+              1975.96875
+            ],
+            "mean": 1683.7916666666667,
+            "min": 1340.0078125,
+            "max": 1975.96875,
+            "n": 3,
+            "ci95": [
+              1340.0078125,
+              1975.96875
+            ]
+          },
+          "ba90_count": 3
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.9732142857142857,
+              0.9642857142857143
+            ],
+            "mean": 0.9761904761904763,
+            "min": 0.9642857142857143,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.9642857142857143,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.9765625,
+              0.96875
+            ],
+            "mean": 0.9791666666666666,
+            "min": 0.96875,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.96875,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              0.99609375
+            ],
+            "mean": 0.9986979166666666,
+            "min": 0.99609375,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.99609375,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              201.96875,
+              171.640625,
+              233.37109375
+            ],
+            "mean": 202.32682291666666,
+            "min": 171.640625,
+            "max": 233.37109375,
+            "n": 3,
+            "ci95": [
+              171.640625,
+              233.37109375
+            ]
+          },
+          "output_events": {
+            "values": [
+              64.80859375,
+              65.765625,
+              67.34375
+            ],
+            "mean": 65.97265625,
+            "min": 64.80859375,
+            "max": 67.34375,
+            "n": 3,
+            "ci95": [
+              64.80859375,
+              67.34375
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              149.421875,
+              132.44921875,
+              169.05859375
+            ],
+            "mean": 150.30989583333334,
+            "min": 132.44921875,
+            "max": 169.05859375,
+            "n": 3,
+            "ci95": [
+              132.44921875,
+              169.05859375
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              46.09765625,
+              46.796875,
+              47.44921875
+            ],
+            "mean": 46.78125,
+            "min": 46.09765625,
+            "max": 47.44921875,
+            "n": 3,
+            "ci95": [
+              46.09765625,
+              47.44921875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              2781.734375,
+              2363.8671875,
+              3208.1875
+            ],
+            "mean": 2784.5963541666665,
+            "min": 2363.8671875,
+            "max": 3208.1875,
+            "n": 3,
+            "ci95": [
+              2363.8671875,
+              3208.1875
+            ]
+          },
+          "ba90_count": 3
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.9732142857142857,
+              0.625
+            ],
+            "mean": 0.8630952380952381,
+            "min": 0.625,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.625,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.9765625,
+              0.671875
+            ],
+            "mean": 0.8802083333333334,
+            "min": 0.671875,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.671875,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              0.95703125
+            ],
+            "mean": 0.9856770833333334,
+            "min": 0.95703125,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.95703125,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              356.06640625,
+              335.19921875,
+              413.90234375
+            ],
+            "mean": 368.3893229166667,
+            "min": 335.19921875,
+            "max": 413.90234375,
+            "n": 3,
+            "ci95": [
+              335.19921875,
+              413.90234375
+            ]
+          },
+          "output_events": {
+            "values": [
+              112.71484375,
+              113.765625,
+              114.3125
+            ],
+            "mean": 113.59765625,
+            "min": 112.71484375,
+            "max": 114.3125,
+            "n": 3,
+            "ci95": [
+              112.71484375,
+              114.3125
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              303.5390625,
+              291.74609375,
+              347.640625
+            ],
+            "mean": 314.30859375,
+            "min": 291.74609375,
+            "max": 347.640625,
+            "n": 3,
+            "ci95": [
+              291.74609375,
+              347.640625
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              94.00390625,
+              94.796875,
+              94.3046875
+            ],
+            "mean": 94.36848958333333,
+            "min": 94.00390625,
+            "max": 94.796875,
+            "n": 3,
+            "ci95": [
+              94.00390625,
+              94.796875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              4939.4296875,
+              4645.703125,
+              5734.0390625
+            ],
+            "mean": 5106.390625,
+            "min": 4645.703125,
+            "max": 5734.0390625,
+            "n": 3,
+            "ci95": [
+              4645.703125,
+              5734.0390625
+            ]
+          },
+          "ba90_count": 2
+        }
+      },
+      "DEND_lr0.0025": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.9930555555555556,
+              0.8015873015873016,
+              0.9776785714285714
+            ],
+            "mean": 0.9241071428571429,
+            "min": 0.8015873015873016,
+            "max": 0.9930555555555556,
+            "n": 3,
+            "ci95": [
+              0.8015873015873017,
+              0.9930555555555557
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.8125,
+              0.98046875
+            ],
+            "mean": 0.9283854166666666,
+            "min": 0.8125,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.8125,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              0.83984375,
+              0.99609375
+            ],
+            "mean": 0.9453125,
+            "min": 0.83984375,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.83984375,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.16015625,
+              0.0
+            ],
+            "mean": 0.053385416666666664,
+            "min": 0.0,
+            "max": 0.16015625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.16015625
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              56.71875,
+              47.39453125,
+              64.1796875
+            ],
+            "mean": 56.09765625,
+            "min": 47.39453125,
+            "max": 64.1796875,
+            "n": 3,
+            "ci95": [
+              47.39453125,
+              64.1796875
+            ]
+          },
+          "output_events": {
+            "values": [
+              19.44140625,
+              11.44921875,
+              15.59375
+            ],
+            "mean": 15.494791666666666,
+            "min": 11.44921875,
+            "max": 19.44140625,
+            "n": 3,
+            "ci95": [
+              11.44921875,
+              19.44140625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              739.6484375,
+              617.640625,
+              838.25
+            ],
+            "mean": 731.8463541666666,
+            "min": 617.640625,
+            "max": 838.25,
+            "n": 3,
+            "ci95": [
+              617.640625,
+              838.25
+            ]
+          },
+          "ba90_count": 2
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.7857142857142857,
+              0.9910714285714286
+            ],
+            "mean": 0.9226190476190478,
+            "min": 0.7857142857142857,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.7857142857142857,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.8125,
+              0.9921875
+            ],
+            "mean": 0.9322916666666666,
+            "min": 0.8125,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.8125,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              0.86328125,
+              1.0
+            ],
+            "mean": 0.9544270833333334,
+            "min": 0.86328125,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.86328125,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.13671875,
+              0.0
+            ],
+            "mean": 0.045572916666666664,
+            "min": 0.0,
+            "max": 0.13671875,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.13671875
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              137.6953125,
+              131.1171875,
+              166.79296875
+            ],
+            "mean": 145.20182291666666,
+            "min": 131.1171875,
+            "max": 166.79296875,
+            "n": 3,
+            "ci95": [
+              131.1171875,
+              166.79296875
+            ]
+          },
+          "output_events": {
+            "values": [
+              42.09765625,
+              26.17578125,
+              34.515625
+            ],
+            "mean": 34.263020833333336,
+            "min": 26.17578125,
+            "max": 42.09765625,
+            "n": 3,
+            "ci95": [
+              26.17578125,
+              42.09765625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              79.75390625,
+              77.66796875,
+              95.8671875
+            ],
+            "mean": 84.4296875,
+            "min": 77.66796875,
+            "max": 95.8671875,
+            "n": 3,
+            "ci95": [
+              77.66796875,
+              95.8671875
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              22.9296875,
+              14.140625,
+              17.73046875
+            ],
+            "mean": 18.266927083333332,
+            "min": 14.140625,
+            "max": 22.9296875,
+            "n": 3,
+            "ci95": [
+              14.140625,
+              22.9296875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              1871.953125,
+              1782.2109375,
+              2266.9609375
+            ],
+            "mean": 1973.7083333333333,
+            "min": 1782.2109375,
+            "max": 2266.9609375,
+            "n": 3,
+            "ci95": [
+              1782.2109375,
+              2266.9609375
+            ]
+          },
+          "ba90_count": 2
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.9910714285714286,
+              0.7822420634920635,
+              0.9107142857142857
+            ],
+            "mean": 0.8946759259259259,
+            "min": 0.7822420634920635,
+            "max": 0.9910714285714286,
+            "n": 3,
+            "ci95": [
+              0.7822420634920636,
+              0.9910714285714285
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.9921875,
+              0.80859375,
+              0.921875
+            ],
+            "mean": 0.9075520833333334,
+            "min": 0.80859375,
+            "max": 0.9921875,
+            "n": 3,
+            "ci95": [
+              0.80859375,
+              0.9921875
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              0.94921875,
+              0.9765625
+            ],
+            "mean": 0.9752604166666666,
+            "min": 0.94921875,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.94921875,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.05078125,
+              0.0
+            ],
+            "mean": 0.016927083333333332,
+            "min": 0.0,
+            "max": 0.05078125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.05078125
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              221.546875,
+              224.84765625,
+              281.93359375
+            ],
+            "mean": 242.77604166666666,
+            "min": 221.546875,
+            "max": 281.93359375,
+            "n": 3,
+            "ci95": [
+              221.546875,
+              281.93359375
+            ]
+          },
+          "output_events": {
+            "values": [
+              62.53125,
+              43.6953125,
+              54.27734375
+            ],
+            "mean": 53.501302083333336,
+            "min": 43.6953125,
+            "max": 62.53125,
+            "n": 3,
+            "ci95": [
+              43.6953125,
+              62.53125
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              164.26953125,
+              168.7265625,
+              208.92578125
+            ],
+            "mean": 180.640625,
+            "min": 164.26953125,
+            "max": 208.92578125,
+            "n": 3,
+            "ci95": [
+              164.26953125,
+              208.92578125
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              43.87890625,
+              31.0,
+              37.875
+            ],
+            "mean": 37.584635416666664,
+            "min": 31.0,
+            "max": 43.87890625,
+            "n": 3,
+            "ci95": [
+              31.0,
+              43.87890625
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              3047.3515625,
+              3089.515625,
+              3874.8828125
+            ],
+            "mean": 3337.25,
+            "min": 3047.3515625,
+            "max": 3874.8828125,
+            "n": 3,
+            "ci95": [
+              3047.3515625,
+              3874.8828125
+            ]
+          },
+          "ba90_count": 2
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.7901785714285714,
+              0.7202380952380952,
+              0.5
+            ],
+            "mean": 0.6701388888888888,
+            "min": 0.5,
+            "max": 0.7901785714285714,
+            "n": 3,
+            "ci95": [
+              0.5,
+              0.7901785714285715
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.81640625,
+              0.7421875,
+              0.5625
+            ],
+            "mean": 0.70703125,
+            "min": 0.5625,
+            "max": 0.81640625,
+            "n": 3,
+            "ci95": [
+              0.5625,
+              0.81640625
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.9921875,
+              0.87109375,
+              1.0
+            ],
+            "mean": 0.9544270833333334,
+            "min": 0.87109375,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.87109375,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.12890625,
+              0.0
+            ],
+            "mean": 0.04296875,
+            "min": 0.0,
+            "max": 0.12890625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.12890625
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              385.26953125,
+              427.5234375,
+              527.11328125
+            ],
+            "mean": 446.6354166666667,
+            "min": 385.26953125,
+            "max": 527.11328125,
+            "n": 3,
+            "ci95": [
+              385.26953125,
+              527.11328125
+            ]
+          },
+          "output_events": {
+            "values": [
+              106.6796875,
+              76.04296875,
+              95.87890625
+            ],
+            "mean": 92.8671875,
+            "min": 76.04296875,
+            "max": 106.6796875,
+            "n": 3,
+            "ci95": [
+              76.04296875,
+              106.6796875
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              327.0703125,
+              369.94921875,
+              447.97265625
+            ],
+            "mean": 381.6640625,
+            "min": 327.0703125,
+            "max": 447.97265625,
+            "n": 3,
+            "ci95": [
+              327.0703125,
+              447.97265625
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              87.61328125,
+              64.2265625,
+              79.15625
+            ],
+            "mean": 76.99869791666667,
+            "min": 64.2265625,
+            "max": 87.61328125,
+            "n": 3,
+            "ci95": [
+              64.2265625,
+              87.61328125
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              5336.078125,
+              5926.15625,
+              7296.734375
+            ],
+            "mean": 6186.322916666667,
+            "min": 5336.078125,
+            "max": 7296.734375,
+            "n": 3,
+            "ci95": [
+              5336.078125,
+              7296.734375
+            ]
+          },
+          "ba90_count": 0
+        }
+      },
+      "POINT_lr0.01": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.875,
+              0.9479166666666667,
+              0.9786706349206349
+            ],
+            "mean": 0.9338624338624338,
+            "min": 0.875,
+            "max": 0.9786706349206349,
+            "n": 3,
+            "ci95": [
+              0.875,
+              0.9786706349206349
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.859375,
+              0.94140625,
+              0.98046875
+            ],
+            "mean": 0.9270833333333334,
+            "min": 0.859375,
+            "max": 0.98046875,
+            "n": 3,
+            "ci95": [
+              0.859375,
+              0.98046875
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.9765625,
+              0.98828125,
+              0.98828125
+            ],
+            "mean": 0.984375,
+            "min": 0.9765625,
+            "max": 0.98828125,
+            "n": 3,
+            "ci95": [
+              0.9765625,
+              0.98828125
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.00390625
+            ],
+            "mean": 0.0013020833333333333,
+            "min": 0.0,
+            "max": 0.00390625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.00390625
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              49.37109375,
+              42.703125,
+              34.5546875
+            ],
+            "mean": 42.209635416666664,
+            "min": 34.5546875,
+            "max": 49.37109375,
+            "n": 3,
+            "ci95": [
+              34.5546875,
+              49.37109375
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              24.9609375,
+              29.21484375,
+              24.796875
+            ],
+            "mean": 26.32421875,
+            "min": 24.796875,
+            "max": 29.21484375,
+            "n": 3,
+            "ci95": [
+              24.796875,
+              29.21484375
+            ]
+          },
+          "output_events": {
+            "values": [
+              10.35546875,
+              14.48828125,
+              14.203125
+            ],
+            "mean": 13.015625,
+            "min": 10.35546875,
+            "max": 14.48828125,
+            "n": 3,
+            "ci95": [
+              10.35546875,
+              14.48828125
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              376.29296875,
+              424.8046875,
+              353.2734375
+            ],
+            "mean": 384.7903645833333,
+            "min": 353.2734375,
+            "max": 424.8046875,
+            "n": 3,
+            "ci95": [
+              353.2734375,
+              424.8046875
+            ]
+          },
+          "ba90_count": 2
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.8819444444444444,
+              0.8983134920634921,
+              0.9732142857142857
+            ],
+            "mean": 0.9178240740740741,
+            "min": 0.8819444444444444,
+            "max": 0.9732142857142857,
+            "n": 3,
+            "ci95": [
+              0.8819444444444443,
+              0.9732142857142857
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.8828125,
+              0.89453125,
+              0.9765625
+            ],
+            "mean": 0.91796875,
+            "min": 0.8828125,
+            "max": 0.9765625,
+            "n": 3,
+            "ci95": [
+              0.8828125,
+              0.9765625
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.953125,
+              0.953125,
+              0.984375
+            ],
+            "mean": 0.9635416666666666,
+            "min": 0.953125,
+            "max": 0.984375,
+            "n": 3,
+            "ci95": [
+              0.953125,
+              0.984375
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.00390625
+            ],
+            "mean": 0.0013020833333333333,
+            "min": 0.0,
+            "max": 0.00390625,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.00390625
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              64.08984375,
+              74.68359375,
+              87.28515625
+            ],
+            "mean": 75.35286458333333,
+            "min": 64.08984375,
+            "max": 87.28515625,
+            "n": 3,
+            "ci95": [
+              64.08984375,
+              87.28515625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              31.59765625,
+              54.34375,
+              63.65234375
+            ],
+            "mean": 49.864583333333336,
+            "min": 31.59765625,
+            "max": 63.65234375,
+            "n": 3,
+            "ci95": [
+              31.59765625,
+              63.65234375
+            ]
+          },
+          "output_events": {
+            "values": [
+              23.3671875,
+              31.2734375,
+              32.49609375
+            ],
+            "mean": 29.045572916666668,
+            "min": 23.3671875,
+            "max": 32.49609375,
+            "n": 3,
+            "ci95": [
+              23.3671875,
+              32.49609375
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              7.25390625,
+              30.65234375,
+              44.04296875
+            ],
+            "mean": 27.31640625,
+            "min": 7.25390625,
+            "max": 44.04296875,
+            "n": 3,
+            "ci95": [
+              7.25390625,
+              44.04296875
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              3.69921875,
+              24.359375,
+              34.75
+            ],
+            "mean": 20.936197916666668,
+            "min": 3.69921875,
+            "max": 34.75,
+            "n": 3,
+            "ci95": [
+              3.69921875,
+              34.75
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              10.0625,
+              17.82421875,
+              18.0390625
+            ],
+            "mean": 15.30859375,
+            "min": 10.0625,
+            "max": 18.0390625,
+            "n": 3,
+            "ci95": [
+              10.0625,
+              18.0390625
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              483.37890625,
+              811.37890625,
+              949.21484375
+            ],
+            "mean": 747.9908854166666,
+            "min": 483.37890625,
+            "max": 949.21484375,
+            "n": 3,
+            "ci95": [
+              483.37890625,
+              949.21484375
+            ]
+          },
+          "ba90_count": 1
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.5,
+              0.6071428571428571,
+              0.9330357142857143
+            ],
+            "mean": 0.6800595238095238,
+            "min": 0.5,
+            "max": 0.9330357142857143,
+            "n": 3,
+            "ci95": [
+              0.5,
+              0.9330357142857143
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.5625,
+              0.65625,
+              0.94140625
+            ],
+            "mean": 0.7200520833333334,
+            "min": 0.5625,
+            "max": 0.94140625,
+            "n": 3,
+            "ci95": [
+              0.5625,
+              0.94140625
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              0.9609375,
+              0.9453125
+            ],
+            "mean": 0.96875,
+            "min": 0.9453125,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.9453125,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0546875
+            ],
+            "mean": 0.018229166666666668,
+            "min": 0.0,
+            "max": 0.0546875,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0546875
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              84.88671875,
+              107.25390625,
+              150.68359375
+            ],
+            "mean": 114.27473958333333,
+            "min": 84.88671875,
+            "max": 150.68359375,
+            "n": 3,
+            "ci95": [
+              84.88671875,
+              150.68359375
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              40.85546875,
+              81.765625,
+              112.45703125
+            ],
+            "mean": 78.359375,
+            "min": 40.85546875,
+            "max": 112.45703125,
+            "n": 3,
+            "ci95": [
+              40.85546875,
+              112.45703125
+            ]
+          },
+          "output_events": {
+            "values": [
+              35.37890625,
+              51.12109375,
+              53.3828125
+            ],
+            "mean": 46.627604166666664,
+            "min": 35.37890625,
+            "max": 53.3828125,
+            "n": 3,
+            "ci95": [
+              35.37890625,
+              53.3828125
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              23.94921875,
+              63.99609375,
+              107.69140625
+            ],
+            "mean": 65.21223958333333,
+            "min": 23.94921875,
+            "max": 107.69140625,
+            "n": 3,
+            "ci95": [
+              23.94921875,
+              107.69140625
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              11.33203125,
+              51.984375,
+              83.7890625
+            ],
+            "mean": 49.03515625,
+            "min": 11.33203125,
+            "max": 83.7890625,
+            "n": 3,
+            "ci95": [
+              11.33203125,
+              83.7890625
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              22.15625,
+              37.59765625,
+              39.66015625
+            ],
+            "mean": 33.138020833333336,
+            "min": 22.15625,
+            "max": 39.66015625,
+            "n": 3,
+            "ci95": [
+              22.15625,
+              39.66015625
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              633.29296875,
+              1222.87890625,
+              1695.49609375
+            ],
+            "mean": 1183.8893229166667,
+            "min": 633.29296875,
+            "max": 1695.49609375,
+            "n": 3,
+            "ci95": [
+              633.29296875,
+              1695.49609375
+            ]
+          },
+          "ba90_count": 1
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.5,
+              0.5,
+              0.9151785714285714
+            ],
+            "mean": 0.6383928571428571,
+            "min": 0.5,
+            "max": 0.9151785714285714,
+            "n": 3,
+            "ci95": [
+              0.5,
+              0.9151785714285715
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.5625,
+              0.5625,
+              0.92578125
+            ],
+            "mean": 0.68359375,
+            "min": 0.5625,
+            "max": 0.92578125,
+            "n": 3,
+            "ci95": [
+              0.5625,
+              0.92578125
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              0.9296875
+            ],
+            "mean": 0.9765625,
+            "min": 0.9296875,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.9296875,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0703125
+            ],
+            "mean": 0.0234375,
+            "min": 0.0,
+            "max": 0.0703125,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0703125
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              127.50390625,
+              161.375,
+              281.4765625
+            ],
+            "mean": 190.11848958333334,
+            "min": 127.50390625,
+            "max": 281.4765625,
+            "n": 3,
+            "ci95": [
+              127.50390625,
+              281.4765625
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              60.02734375,
+              133.9921875,
+              214.12890625
+            ],
+            "mean": 136.04947916666666,
+            "min": 60.02734375,
+            "max": 214.12890625,
+            "n": 3,
+            "ci95": [
+              60.02734375,
+              214.12890625
+            ]
+          },
+          "output_events": {
+            "values": [
+              55.0078125,
+              86.5859375,
+              94.62890625
+            ],
+            "mean": 78.74088541666667,
+            "min": 55.0078125,
+            "max": 94.62890625,
+            "n": 3,
+            "ci95": [
+              55.0078125,
+              94.62890625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              67.3125,
+              119.3671875,
+              238.578125
+            ],
+            "mean": 141.75260416666666,
+            "min": 67.3125,
+            "max": 238.578125,
+            "n": 3,
+            "ci95": [
+              67.3125,
+              238.578125
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              30.49609375,
+              104.078125,
+              185.4375
+            ],
+            "mean": 106.67057291666667,
+            "min": 30.49609375,
+            "max": 185.4375,
+            "n": 3,
+            "ci95": [
+              30.49609375,
+              185.4375
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              41.98046875,
+              71.29296875,
+              81.01171875
+            ],
+            "mean": 64.76171875,
+            "min": 41.98046875,
+            "max": 81.01171875,
+            "n": 3,
+            "ci95": [
+              41.98046875,
+              81.01171875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              937.97265625,
+              2011.015625,
+              3247.78125
+            ],
+            "mean": 2065.58984375,
+            "min": 937.97265625,
+            "max": 3247.78125,
+            "n": 3,
+            "ci95": [
+              937.97265625,
+              3247.78125
+            ]
+          },
+          "ba90_count": 1
+        }
+      },
+      "POINT_lr0.0025": {
+        "0": {
+          "balanced_accuracy": {
+            "values": [
+              0.25,
+              0.7137896825396826,
+              0.6631944444444444
+            ],
+            "mean": 0.5423280423280423,
+            "min": 0.25,
+            "max": 0.7137896825396826,
+            "n": 3,
+            "ci95": [
+              0.25,
+              0.7137896825396824
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.28125,
+              0.68359375,
+              0.62109375
+            ],
+            "mean": 0.5286458333333334,
+            "min": 0.28125,
+            "max": 0.68359375,
+            "n": 3,
+            "ci95": [
+              0.28125,
+              0.68359375
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.28125,
+              0.765625,
+              0.7734375
+            ],
+            "mean": 0.6067708333333334,
+            "min": 0.28125,
+            "max": 0.7734375,
+            "n": 3,
+            "ci95": [
+              0.28125,
+              0.7734375
+            ]
+          },
+          "silence": {
+            "values": [
+              0.71875,
+              0.1875,
+              0.0078125
+            ],
+            "mean": 0.3046875,
+            "min": 0.0078125,
+            "max": 0.71875,
+            "n": 3,
+            "ci95": [
+              0.0078125,
+              0.71875
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              32.76171875,
+              17.53125,
+              16.73828125
+            ],
+            "mean": 22.34375,
+            "min": 16.73828125,
+            "max": 32.76171875,
+            "n": 3,
+            "ci95": [
+              16.73828125,
+              32.76171875
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              20.4453125,
+              16.75,
+              11.4765625
+            ],
+            "mean": 16.223958333333332,
+            "min": 11.4765625,
+            "max": 20.4453125,
+            "n": 3,
+            "ci95": [
+              11.4765625,
+              20.4453125
+            ]
+          },
+          "output_events": {
+            "values": [
+              2.171875,
+              5.51953125,
+              7.1796875
+            ],
+            "mean": 4.95703125,
+            "min": 2.171875,
+            "max": 7.1796875,
+            "n": 3,
+            "ci95": [
+              2.171875,
+              7.1796875
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              304.23046875,
+              234.5859375,
+              160.94921875
+            ],
+            "mean": 233.25520833333334,
+            "min": 160.94921875,
+            "max": 304.23046875,
+            "n": 3,
+            "ci95": [
+              160.94921875,
+              304.23046875
+            ]
+          },
+          "ba90_count": 0
+        },
+        "24": {
+          "balanced_accuracy": {
+            "values": [
+              0.46726190476190477,
+              0.5431547619047619,
+              0.5669642857142857
+            ],
+            "mean": 0.5257936507936507,
+            "min": 0.46726190476190477,
+            "max": 0.5669642857142857,
+            "n": 3,
+            "ci95": [
+              0.4672619047619048,
+              0.5669642857142857
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.5234375,
+              0.59765625,
+              0.58984375
+            ],
+            "mean": 0.5703125,
+            "min": 0.5234375,
+            "max": 0.59765625,
+            "n": 3,
+            "ci95": [
+              0.5234375,
+              0.59765625
+            ]
+          },
+          "coverage": {
+            "values": [
+              0.80859375,
+              0.8515625,
+              0.734375
+            ],
+            "mean": 0.7981770833333334,
+            "min": 0.734375,
+            "max": 0.8515625,
+            "n": 3,
+            "ci95": [
+              0.734375,
+              0.8515625
+            ]
+          },
+          "silence": {
+            "values": [
+              0.01953125,
+              0.04296875,
+              0.0
+            ],
+            "mean": 0.020833333333333332,
+            "min": 0.0,
+            "max": 0.04296875,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.04296875
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              44.859375,
+              26.8671875,
+              30.05859375
+            ],
+            "mean": 33.928385416666664,
+            "min": 26.8671875,
+            "max": 44.859375,
+            "n": 3,
+            "ci95": [
+              26.8671875,
+              44.859375
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              29.625,
+              25.546875,
+              22.203125
+            ],
+            "mean": 25.791666666666668,
+            "min": 22.203125,
+            "max": 29.625,
+            "n": 3,
+            "ci95": [
+              22.203125,
+              29.625
+            ]
+          },
+          "output_events": {
+            "values": [
+              5.4921875,
+              9.23046875,
+              16.515625
+            ],
+            "mean": 10.412760416666666,
+            "min": 5.4921875,
+            "max": 16.515625,
+            "n": 3,
+            "ci95": [
+              5.4921875,
+              16.515625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              8.4296875,
+              5.23828125,
+              5.5
+            ],
+            "mean": 6.389322916666667,
+            "min": 5.23828125,
+            "max": 8.4296875,
+            "n": 3,
+            "ci95": [
+              5.23828125,
+              8.4296875
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              6.359375,
+              5.04296875,
+              5.78125
+            ],
+            "mean": 5.727864583333333,
+            "min": 5.04296875,
+            "max": 6.359375,
+            "n": 3,
+            "ci95": [
+              5.04296875,
+              6.359375
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              1.73828125,
+              3.0,
+              8.73046875
+            ],
+            "mean": 4.489583333333333,
+            "min": 1.73828125,
+            "max": 8.73046875,
+            "n": 3,
+            "ci95": [
+              1.73828125,
+              8.73046875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              434.5078125,
+              368.7734375,
+              316.51171875
+            ],
+            "mean": 373.2643229166667,
+            "min": 316.51171875,
+            "max": 434.5078125,
+            "n": 3,
+            "ci95": [
+              316.51171875,
+              434.5078125
+            ]
+          },
+          "ba90_count": 0
+        },
+        "48": {
+          "balanced_accuracy": {
+            "values": [
+              0.5,
+              0.5,
+              0.4965277777777778
+            ],
+            "mean": 0.49884259259259256,
+            "min": 0.4965277777777778,
+            "max": 0.5,
+            "n": 3,
+            "ci95": [
+              0.49652777777777785,
+              0.5
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.5625,
+              0.5625,
+              0.55859375
+            ],
+            "mean": 0.5611979166666666,
+            "min": 0.55859375,
+            "max": 0.5625,
+            "n": 3,
+            "ci95": [
+              0.55859375,
+              0.5625
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              0.98828125
+            ],
+            "mean": 0.99609375,
+            "min": 0.98828125,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.98828125,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              59.99609375,
+              35.55859375,
+              42.875
+            ],
+            "mean": 46.143229166666664,
+            "min": 35.55859375,
+            "max": 59.99609375,
+            "n": 3,
+            "ci95": [
+              35.55859375,
+              59.99609375
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              41.87890625,
+              33.609375,
+              33.17578125
+            ],
+            "mean": 36.221354166666664,
+            "min": 33.17578125,
+            "max": 41.87890625,
+            "n": 3,
+            "ci95": [
+              33.17578125,
+              41.87890625
+            ]
+          },
+          "output_events": {
+            "values": [
+              9.1171875,
+              14.28515625,
+              25.796875
+            ],
+            "mean": 16.399739583333332,
+            "min": 9.1171875,
+            "max": 25.796875,
+            "n": 3,
+            "ci95": [
+              9.1171875,
+              25.796875
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              21.98828125,
+              14.7890625,
+              14.27734375
+            ],
+            "mean": 17.018229166666668,
+            "min": 14.27734375,
+            "max": 21.98828125,
+            "n": 3,
+            "ci95": [
+              14.27734375,
+              21.98828125
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              17.1640625,
+              14.01953125,
+              13.4921875
+            ],
+            "mean": 14.891927083333334,
+            "min": 13.4921875,
+            "max": 17.1640625,
+            "n": 3,
+            "ci95": [
+              13.4921875,
+              17.1640625
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              4.5703125,
+              6.8984375,
+              17.4765625
+            ],
+            "mean": 9.6484375,
+            "min": 4.5703125,
+            "max": 17.4765625,
+            "n": 3,
+            "ci95": [
+              4.5703125,
+              17.4765625
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              629.45703125,
+              488.37109375,
+              476.3828125
+            ],
+            "mean": 531.4036458333334,
+            "min": 476.3828125,
+            "max": 629.45703125,
+            "n": 3,
+            "ci95": [
+              476.3828125,
+              629.45703125
+            ]
+          },
+          "ba90_count": 0
+        },
+        "96": {
+          "balanced_accuracy": {
+            "values": [
+              0.5,
+              0.5,
+              0.4895833333333333
+            ],
+            "mean": 0.49652777777777773,
+            "min": 0.4895833333333333,
+            "max": 0.5,
+            "n": 3,
+            "ci95": [
+              0.4895833333333333,
+              0.5
+            ]
+          },
+          "accuracy": {
+            "values": [
+              0.5625,
+              0.5625,
+              0.55078125
+            ],
+            "mean": 0.55859375,
+            "min": 0.55078125,
+            "max": 0.5625,
+            "n": 3,
+            "ci95": [
+              0.55078125,
+              0.5625
+            ]
+          },
+          "coverage": {
+            "values": [
+              1.0,
+              1.0,
+              0.98046875
+            ],
+            "mean": 0.9934895833333334,
+            "min": 0.98046875,
+            "max": 1.0,
+            "n": 3,
+            "ci95": [
+              0.98046875,
+              1.0
+            ]
+          },
+          "silence": {
+            "values": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean": 0.0,
+            "min": 0.0,
+            "max": 0.0,
+            "n": 3,
+            "ci95": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_layer_events": {
+            "values": [
+              91.88671875,
+              52.8203125,
+              72.52734375
+            ],
+            "mean": 72.41145833333333,
+            "min": 52.8203125,
+            "max": 91.88671875,
+            "n": 3,
+            "ci95": [
+              52.8203125,
+              91.88671875
+            ]
+          },
+          "hidden_events": {
+            "values": [
+              67.74609375,
+              50.0546875,
+              57.43359375
+            ],
+            "mean": 58.411458333333336,
+            "min": 50.0546875,
+            "max": 67.74609375,
+            "n": 3,
+            "ci95": [
+              50.0546875,
+              67.74609375
+            ]
+          },
+          "output_events": {
+            "values": [
+              15.30078125,
+              23.47265625,
+              40.44140625
+            ],
+            "mean": 26.404947916666668,
+            "min": 15.30078125,
+            "max": 40.44140625,
+            "n": 3,
+            "ci95": [
+              15.30078125,
+              40.44140625
+            ]
+          },
+          "hold_first_layer_events": {
+            "values": [
+              53.75,
+              32.4140625,
+              43.7578125
+            ],
+            "mean": 43.307291666666664,
+            "min": 32.4140625,
+            "max": 53.75,
+            "n": 3,
+            "ci95": [
+              32.4140625,
+              53.75
+            ]
+          },
+          "hold_hidden_events": {
+            "values": [
+              42.94921875,
+              30.8203125,
+              37.71875
+            ],
+            "mean": 37.162760416666664,
+            "min": 30.8203125,
+            "max": 42.94921875,
+            "n": 3,
+            "ci95": [
+              30.8203125,
+              42.94921875
+            ]
+          },
+          "hold_output_events": {
+            "values": [
+              10.85546875,
+              16.1640625,
+              32.10546875
+            ],
+            "mean": 19.708333333333332,
+            "min": 10.85546875,
+            "max": 32.10546875,
+            "n": 3,
+            "ci95": [
+              10.85546875,
+              32.10546875
+            ]
+          },
+          "internal_deliveries": {
+            "values": [
+              1020.91796875,
+              738.0546875,
+              847.50390625
+            ],
+            "mean": 868.8255208333334,
+            "min": 738.0546875,
+            "max": 1020.91796875,
+            "n": 3,
+            "ci95": [
+              738.0546875,
+              1020.91796875
+            ]
+          },
+          "ba90_count": 0
+        }
+      }
+    }
+  }
+}

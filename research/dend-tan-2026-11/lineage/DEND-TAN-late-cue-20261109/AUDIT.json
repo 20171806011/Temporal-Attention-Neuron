@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": 201619,
+  "fits": 24,
+  "optimizer_updates": 14400,
+  "updates_per_fit": 600,
+  "source_injection_oracle_episodes": 24,
+  "forward_sample_steps": 27156480,
+  "dense_forward_macs": 4236410880,
+  "dense_backward_macs": 6193152000,
+  "max_numeric_error": 8.881784197001252e-15,
+  "cap_seconds": 300,
+  "evaluations": 168,
+  "evaluation_sample_steps": 1351680,
+  "source_injection_oracle_models": 12,
+  "mathematical_negative_control_conditions": 96,
+  "duplicate_opposite_label_count_pairs": 7680,
+  "independent_test_information_checks": 33,
+  "max_negative_control_residual": 0.0,
+  "wall_seconds": 17.212495799991302,
+  "cpu_seconds": 11.0625,
+  "scope": "Independent late-cue generator and exact information boundaries, all native evaluation replays, first and last training forwards, all clipped Adam updates and count CE/L2 objectives, exact duplicate input negative controls, original TAN premembrane scalar source, provenance and cost. Scientific parameter gradients are not independently regenerated at every update."
+}

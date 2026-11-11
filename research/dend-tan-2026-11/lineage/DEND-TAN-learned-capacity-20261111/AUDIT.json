@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "checks": 21990,
+  "blocks": 12,
+  "examples_per_block": 512,
+  "evaluations": 144,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 2654208,
+  "dense_forward_macs": 414056448,
+  "input_array_bytes": 21233664,
+  "retained_raw_array_bytes": 86556672,
+  "matched_cases": 12,
+  "matched_read_steps": 18432,
+  "fallback_reads": 0,
+  "max_numeric_error": 3.552713678800501e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 70115328,
+  "wall_seconds": 13.218743100005668,
+  "cpu_seconds": 8.53125,
+  "max_matched_norm_residual": 8.881784197001252e-16,
+  "max_matched_direction_residual": 2.220446049250313e-16,
+  "duplicate_opposite_label_pairs": 4608,
+  "oracle_margin_min": 0.7648241421262197,
+  "oracle_margin_bound": 0.6605887450304572,
+  "primary_effects": [
+    {
+      "effect": "capacity_gain",
+      "blocks": 12,
+      "values": [
+        0.13671875,
+        0.14453125,
+        0.265625,
+        0.2421875,
+        0.2421875,
+        0.29296875,
+        0.19140625,
+        0.1875,
+        0.2109375,
+        0.2109375,
+        0.28515625,
+        0.2265625
+      ],
+      "mean": 0.2197265625,
+      "sample_sd": 0.049861229880599274,
+      "minimum": 0.13671875,
+      "maximum": 0.29296875,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.1884765625,
+        0.25
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "matched_hard_gain",
+      "blocks": 12,
+      "values": [
+        -0.02734375,
+        0.1015625,
+        0.0,
+        0.03125,
+        0.015625,
+        0.01171875,
+        0.03125,
+        0.01171875,
+        0.0234375,
+        0.03125,
+        0.01171875,
+        0.01953125
+      ],
+      "mean": 0.021809895833333332,
+      "sample_sd": 0.029956278682716452,
+      "minimum": -0.02734375,
+      "maximum": 0.1015625,
+      "positive": 10,
+      "zero": 1,
+      "negative": 1,
+      "ci97_5": [
+        0.005533854166666667,
+        0.042317708333333336
+      ],
+      "direction": "positive"
+    }
+  ],
+  "scope": "Independent checkpoint provenance, four-record stimuli, all frozen native evaluations, FIFO states and slot scores, deleted-label duplicate inputs and counts, fixed oracle margin, hard-read and norm matching, resource ledgers and paired primary bootstraps."
+}

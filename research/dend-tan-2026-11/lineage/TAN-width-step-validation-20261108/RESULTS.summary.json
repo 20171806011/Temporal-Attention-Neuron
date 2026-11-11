@@ -1,0 +1,172 @@
+{
+  "archive_kind": "Explicit top-level summary projection, not the complete original result",
+  "original_top_level_keys": [
+    "groups",
+    "effects",
+    "inference"
+  ],
+  "retained_top_level_keys": [
+    "effects",
+    "inference"
+  ],
+  "omitted_top_level_keys": [
+    "groups"
+  ],
+  "data": {
+    "effects": [
+      {
+        "arm": "DEND",
+        "delay": 24,
+        "comparison": "h96_low_minus_high",
+        "primary": true,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 3,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "arm": "DEND",
+        "delay": 24,
+        "comparison": "width_x_rate_interaction",
+        "primary": true,
+        "values": [
+          1.0009920634920635,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0003306878306877,
+        "min": 1.0,
+        "max": 1.0009920634920635,
+        "n": 3,
+        "ci95": [
+          1.0,
+          1.0009920634920635
+        ]
+      },
+      {
+        "arm": "DEND",
+        "delay": 96,
+        "comparison": "h96_low_minus_high",
+        "primary": false,
+        "values": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "n": 3,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "arm": "DEND",
+        "delay": 96,
+        "comparison": "width_x_rate_interaction",
+        "primary": false,
+        "values": [
+          1.398313492063492,
+          1.0,
+          1.0
+        ],
+        "mean": 1.132771164021164,
+        "min": 1.0,
+        "max": 1.398313492063492,
+        "n": 3,
+        "ci95": [
+          1.0,
+          1.398313492063492
+        ]
+      },
+      {
+        "arm": "POINT",
+        "delay": 24,
+        "comparison": "h96_low_minus_high",
+        "primary": true,
+        "values": [
+          0.5,
+          0.5,
+          1.0
+        ],
+        "mean": 0.6666666666666666,
+        "min": 0.5,
+        "max": 1.0,
+        "n": 3,
+        "ci95": [
+          0.5,
+          1.0
+        ]
+      },
+      {
+        "arm": "POINT",
+        "delay": 24,
+        "comparison": "width_x_rate_interaction",
+        "primary": true,
+        "values": [
+          0.583829365079365,
+          0.654265873015873,
+          1.0659722222222223
+        ],
+        "mean": 0.7680224867724869,
+        "min": 0.583829365079365,
+        "max": 1.0659722222222223,
+        "n": 3,
+        "ci95": [
+          0.583829365079365,
+          1.0659722222222223
+        ]
+      },
+      {
+        "arm": "POINT",
+        "delay": 96,
+        "comparison": "h96_low_minus_high",
+        "primary": false,
+        "values": [
+          0.5044642857142857,
+          0.5,
+          0.9598214285714286
+        ],
+        "mean": 0.6547619047619048,
+        "min": 0.5,
+        "max": 0.9598214285714286,
+        "n": 3,
+        "ci95": [
+          0.5,
+          0.9598214285714285
+        ]
+      },
+      {
+        "arm": "POINT",
+        "delay": 96,
+        "comparison": "width_x_rate_interaction",
+        "primary": false,
+        "values": [
+          0.6428571428571429,
+          0.9756944444444444,
+          1.2048611111111112
+        ],
+        "mean": 0.9411375661375662,
+        "min": 0.6428571428571429,
+        "max": 1.2048611111111112,
+        "n": 3,
+        "ci95": [
+          0.6428571428571429,
+          1.2048611111111112
+        ]
+      }
+    ],
+    "inference": "Three paired seed blocks. 20000 pointwise unadjusted percentile bootstrap resamples; all factorial cells reported; no selection."
+  }
+}

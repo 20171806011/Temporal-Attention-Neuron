@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-08T00:24:55.743264+00:00",
+  "reason": "The original auditor compared all probe scores at absolute 1e-8. Near-constant fit features with std floor 1e-8 amplify independent SVD/dual and native summation roundoff. Old native features differ by <=1.07e-14; all old probe classifications unchanged.",
+  "original_auditor_sha256": "ccf742431cb5f4e8d172160e5a26cea64cdc231f5b2afed359db6438928185f2",
+  "revised_auditor_sha256": "e35f5bebd3f9a10af167735e51f6d663414b3d128af5309765166621b0ebb619",
+  "failed_audit_seconds": 3.9526331999804825,
+  "numeric_diagnostic_reserved_seconds": 10,
+  "scientific_changes": false,
+  "new_fits_so_far": 0,
+  "new_test_data_generated": false,
+  "action": "Preserve original freeze, code, failure and scientific outputs. Only audit score comparison uses an explicit triangle-inequality propagation bound from independently checked coefficients/features; exact prediction equality remains required. Other absolute tolerances unchanged. Count failed audit and a conservative 10-second diagnostic allowance toward the 180-second audit cap. No scientific reruns or new seed selection."
+}

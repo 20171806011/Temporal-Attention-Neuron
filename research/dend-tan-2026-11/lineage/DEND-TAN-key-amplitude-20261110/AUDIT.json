@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "checks": 14247,
+  "blocks": 12,
+  "examples_per_block": 256,
+  "evaluations": 96,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 884736,
+  "dense_forward_macs": 138018816,
+  "input_array_bytes": 5308416,
+  "retained_raw_array_bytes": 45358080,
+  "matched_cases": 36,
+  "matched_read_steps": 27648,
+  "fallback_reads": 0,
+  "max_numeric_error": 5.329070518200751e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 50847744,
+  "wall_seconds": 6.139969799958635,
+  "cpu_seconds": 3.0625,
+  "max_matched_norm_residual": 1.3322676295501878e-15,
+  "max_matched_direction_residual": 2.220446049250313e-16,
+  "primary_effects": [
+    {
+      "effect": "equal_norm_direction_effect",
+      "blocks": 12,
+      "values": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.984375,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mean": 0.9986979166666666,
+      "sample_sd": 0.004510548978043952,
+      "minimum": 0.984375,
+      "maximum": 1.0,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.9947916666666666,
+        1.0
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "selected_direction_minus_matched_mean",
+      "blocks": 12,
+      "values": [
+        0.96875,
+        0.96875,
+        0.90625,
+        0.8125,
+        0.9375,
+        0.9375,
+        0.953125,
+        0.984375,
+        0.9375,
+        0.984375,
+        0.9375,
+        0.9375
+      ],
+      "mean": 0.9388020833333334,
+      "sample_sd": 0.04589812268186681,
+      "minimum": 0.8125,
+      "maximum": 0.984375,
+      "positive": 12,
+      "zero": 0,
+      "negative": 0,
+      "ci97_5": [
+        0.90625,
+        0.9622395833333334
+      ],
+      "direction": "positive"
+    }
+  ],
+  "scope": "Independent checkpoint provenance, stimulus regeneration, all native evaluations, unchanged slot and prefix states, independently derived norm and direction sources, exact fallback flags and branch convention, raw scores, resources and both primary bootstraps."
+}

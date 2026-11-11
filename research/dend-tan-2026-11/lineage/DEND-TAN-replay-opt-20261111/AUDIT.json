@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "checks": 46688,
+  "blocks": 12,
+  "examples_per_block": 512,
+  "evaluations": 144,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 2654208,
+  "dense_forward_macs": 414056448,
+  "matcher_macs": 21233664,
+  "cache_count": 12,
+  "cache_build_steps": 432,
+  "cache_build_native_macs": 67392,
+  "input_array_bytes": 42467328,
+  "retained_raw_array_bytes": 371515392,
+  "cache_bytes": 92352,
+  "microbench_records": 192,
+  "microbench_evaluations": 576,
+  "microbench_forward_sample_steps": 20736,
+  "microbench_replay_steps": 13440,
+  "microbench_replay_native_macs": 1840896,
+  "mode_totals": {
+    "full": {
+      "triggers": 9216,
+      "steps": 230400,
+      "input_rows": 230400,
+      "nonzero_steps": 36864,
+      "native_macs": 35942400,
+      "resources": [
+        441624.0,
+        181056.0,
+        4980096.0,
+        830016.0
+      ],
+      "replay_wall_seconds": 2.02497800020501,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 30000
+    },
+    "cached": {
+      "triggers": 9216,
+      "steps": 207360,
+      "input_rows": 207360,
+      "nonzero_steps": 36864,
+      "native_macs": 32348160,
+      "resources": [
+        436632.0,
+        172224.0,
+        4966272.0,
+        827712.0
+      ],
+      "replay_wall_seconds": 3.847856199601665,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 16128
+    },
+    "sparse": {
+      "triggers": 9216,
+      "steps": 207360,
+      "input_rows": 36864,
+      "nonzero_steps": 36864,
+      "native_macs": 20072448,
+      "resources": [
+        436632.0,
+        172224.0,
+        4966272.0,
+        827712.0
+      ],
+      "replay_wall_seconds": 4.753805800166447,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 16128
+    }
+  },
+  "max_numeric_error": 3.552713678800501e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 61734912,
+  "wall_seconds": 27.98767299996689,
+  "cpu_seconds": 21.453125,
+  "equivalence_supported": true,
+  "latency_effects": [
+    {
+      "effect": "cached_batch",
+      "scope": "batch",
+      "mode": "cached",
+      "blocks": 12,
+      "values": [
+        0.9659187562647278,
+        1.3532979076747629,
+        4.0876749966021935,
+        2.7754395790301105,
+        3.2390374969205973,
+        4.107737492934879,
+        4.698285418271552,
+        4.39907916249164,
+        2.4753562587041715,
+        3.5406812518582833,
+        3.2793500007149605,
+        3.0547708326290985
+      ],
+      "mean": 3.164719096174748,
+      "sample_sd": 1.1493646735782597,
+      "minimum": 0.9659187562647278,
+      "maximum": 4.698285418271552,
+      "faster_blocks": 0,
+      "tied_blocks": 0,
+      "slower_blocks": 12,
+      "ci95": [
+        2.5230283350487697,
+        3.76285161825207
+      ],
+      "direction": "slower"
+    },
+    {
+      "effect": "sparse_batch",
+      "scope": "batch",
+      "mode": "sparse",
+      "blocks": 12,
+      "values": [
+        1.2974791728386965,
+        4.5238395759952255,
+        4.4677645807193285,
+        4.46181875061787,
+        4.498060414334759,
+        4.705704170191893,
+        8.953168750546563,
+        5.377710407628911,
+        4.132141676867226,
+        4.414004158509973,
+        4.751172923230721,
+        5.267714584382096
+      ],
+      "mean": 4.737548263821939,
+      "sample_sd": 1.6793031230875786,
+      "minimum": 1.2974791728386965,
+      "maximum": 8.953168750546563,
+      "faster_blocks": 0,
+      "tied_blocks": 0,
+      "slower_blocks": 12,
+      "ci95": [
+        3.8659960769918045,
+        5.719061084053263
+      ],
+      "direction": "slower"
+    },
+    {
+      "effect": "cached_single",
+      "scope": "single",
+      "mode": "cached",
+      "blocks": 12,
+      "values": [
+        0.04009374970337376,
+        0.04026250462629832,
+        0.25981876024161465,
+        0.007331251254072413,
+        0.28854373886133544,
+        0.386875013646204,
+        -0.39291251596296206,
+        0.06606876195291989,
+        -0.02759374910965562,
+        -0.052474999392870814,
+        0.20728124945890158,
+        -0.3596562528400682
+      ],
+      "mean": 0.038636459369930286,
+      "sample_sd": 0.2374836014649403,
+      "minimum": -0.39291251596296206,
+      "maximum": 0.386875013646204,
+      "faster_blocks": 4,
+      "tied_blocks": 0,
+      "slower_blocks": 8,
+      "ci95": [
+        -0.09468837248126268,
+        0.1615458752515527
+      ],
+      "direction": "undetermined"
+    },
+    {
+      "effect": "sparse_single",
+      "scope": "single",
+      "mode": "sparse",
+      "blocks": 12,
+      "values": [
+        0.17537499661557376,
+        0.8915249927667901,
+        1.8288812498212792,
+        0.8795249959803186,
+        1.1676687427097932,
+        0.8806437654129695,
+        0.6224124917935114,
+        0.8417562603426632,
+        0.6376874953275546,
+        1.043281241436489,
+        1.1881062528118491,
+        1.3774312428722624
+      ],
+      "mean": 0.9611911439909212,
+      "sample_sd": 0.41519021889198937,
+      "minimum": 0.17537499661557376,
+      "maximum": 1.8288812498212792,
+      "faster_blocks": 0,
+      "tied_blocks": 0,
+      "slower_blocks": 12,
+      "ci95": [
+        0.7380060783968171,
+        1.1904940580582963
+      ],
+      "direction": "slower"
+    }
+  ],
+  "scope": "Independent visible input reconstruction, cached states, mode equivalence, actually executed operations, isolated timing scope and descriptive paired block timing effects."
+}

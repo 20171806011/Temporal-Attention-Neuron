@@ -1,0 +1,117 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-11-11T18:18:41.444777+00:00",
+  "failure": null,
+  "phases": {
+    "training": {
+      "phase": "training",
+      "utc_start": "2026-11-11T18:12:48.011616+00:00",
+      "monotonic_start": 526233.7563967,
+      "load_before": {
+        "utc_start": "2026-11-11T18:12:46.433156+00:00",
+        "status": "ok",
+        "percentages": [
+          19
+        ],
+        "utc_finish": "2026-11-11T18:12:48.011616+00:00"
+      },
+      "cap_seconds": 600,
+      "prior_interface_audit_seconds": 0.0,
+      "status": "COMPLETE",
+      "utc_finish": "2026-11-11T18:16:42.108939+00:00",
+      "monotonic_finish": 526467.8494554,
+      "wall_seconds": 234.0930586999748,
+      "cpu_seconds": 223.890625,
+      "peak_working_set_bytes": 59904000,
+      "artifact_bytes": 53196271,
+      "progress": {
+        "seed": 11,
+        "fits": 12
+      },
+      "load_after": {
+        "utc_start": "2026-11-11T18:16:42.121954+00:00",
+        "status": "ok",
+        "percentages": [
+          59
+        ],
+        "utc_finish": "2026-11-11T18:16:44.926692+00:00"
+      }
+    },
+    "evaluation": {
+      "phase": "evaluation",
+      "utc_start": "2026-11-11T18:16:46.386977+00:00",
+      "monotonic_start": 526472.1275199,
+      "load_before": {
+        "utc_start": "2026-11-11T18:16:44.928807+00:00",
+        "status": "ok",
+        "percentages": [
+          42
+        ],
+        "utc_finish": "2026-11-11T18:16:46.386977+00:00"
+      },
+      "cap_seconds": 180,
+      "prior_interface_audit_seconds": 0.0,
+      "status": "COMPLETE",
+      "utc_finish": "2026-11-11T18:17:28.623750+00:00",
+      "monotonic_finish": 526514.3635561,
+      "wall_seconds": 42.23603620007634,
+      "cpu_seconds": 40.265625,
+      "peak_working_set_bytes": 78204928,
+      "artifact_bytes": 423915643,
+      "progress": {
+        "seed": 11,
+        "completed_blocks": 12,
+        "evaluations": 288
+      },
+      "load_after": {
+        "utc_start": "2026-11-11T18:17:28.692189+00:00",
+        "status": "ok",
+        "percentages": [
+          9
+        ],
+        "utc_finish": "2026-11-11T18:17:30.288914+00:00"
+      }
+    },
+    "audit": {
+      "phase": "audit",
+      "utc_start": "2026-11-11T18:17:31.867673+00:00",
+      "monotonic_start": 526517.6066867,
+      "load_before": {
+        "utc_start": "2026-11-11T18:17:30.291240+00:00",
+        "status": "ok",
+        "percentages": [
+          20
+        ],
+        "utc_finish": "2026-11-11T18:17:31.867673+00:00"
+      },
+      "cap_seconds": 300,
+      "prior_interface_audit_seconds": 5.060829999973066,
+      "status": "COMPLETE",
+      "utc_finish": "2026-11-11T18:18:39.532306+00:00",
+      "monotonic_finish": 526585.2703629,
+      "wall_seconds": 67.6636761999689,
+      "cpu_seconds": 54.265625,
+      "peak_working_set_bytes": 78204928,
+      "artifact_bytes": 426224845,
+      "progress": {
+        "seed": null,
+        "section": "primary_inference",
+        "completed_audit_blocks": 12
+      },
+      "load_after": {
+        "utc_start": "2026-11-11T18:18:39.579099+00:00",
+        "status": "ok",
+        "percentages": [
+          64
+        ],
+        "utc_finish": "2026-11-11T18:18:41.442798+00:00"
+      }
+    }
+  },
+  "interface_audit_seconds": 5.060829999973066,
+  "cumulative_audit_seconds": 72.72450619994197,
+  "wall_seconds": 355.0056594000198,
+  "outside_stage_seconds": 11.012888299999759,
+  "peak_working_set_bytes": 78204928,
+  "artifact_bytes": 426225795
+}

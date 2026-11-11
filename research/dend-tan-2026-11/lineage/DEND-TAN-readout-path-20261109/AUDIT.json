@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checks": 52436,
+  "models": 36,
+  "neural_training_updates": 0,
+  "probe_fits": 72,
+  "baseline_captures": 72,
+  "patch_conditions": 1026,
+  "forward_sample_steps": 2119680,
+  "self_controls": 72,
+  "early_prefix_controls": 36,
+  "donor_suffix_controls": 216,
+  "retained_t19_prefix_controls": 360,
+  "source_scalar_attention_models": 18,
+  "source_scalar_episodes": 36,
+  "max_numeric_error": 4.1244785364824565e-14,
+  "max_coefficient_error": 1.5654144647214707e-14,
+  "max_normal_equation_residual": 2.6367796834847468e-15,
+  "wall_seconds": 55.39030770002864,
+  "cpu_seconds": 25.046875,
+  "cap_seconds": 300,
+  "scope": "Independent data, full and continued native forward, donor maps, raw pulses, resource ledger, ridge fits and all metrics, fit-before-test locks, recipient prefix and exact donor suffix controls, original scalar TAN checks."
+}

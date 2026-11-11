@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "checks": 44093,
+  "blocks": 12,
+  "examples_per_block": 512,
+  "evaluations": 216,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 3981312,
+  "dense_forward_macs": 621084672,
+  "matcher_macs": 31850496,
+  "input_array_bytes": 21233664,
+  "retained_raw_array_bytes": 286101504,
+  "reset_count": 49216,
+  "selective_onsets": 36864,
+  "reset_scalar_writes": 1279616,
+  "max_numeric_error": 5.329070518200751e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 69214208,
+  "wall_seconds": 41.69944460003171,
+  "cpu_seconds": 32.546875,
+  "duplicate_opposite_label_pairs": 13824,
+  "oracle_recent_cosine_min": 0.9899259843199846,
+  "oracle_older_cosine_max": 0.1457544969414798,
+  "primary_effects": [
+    {
+      "effect": "recent_gain",
+      "blocks": 12,
+      "values": [
+        0.05078125,
+        -0.328125,
+        0.0625,
+        0.05859375,
+        0.09375,
+        0.0546875,
+        0.15234375,
+        0.1640625,
+        0.13671875,
+        -0.0625,
+        0.09375,
+        0.046875
+      ],
+      "mean": 0.043619791666666664,
+      "sample_sd": 0.13150924466924513,
+      "minimum": -0.328125,
+      "maximum": 0.1640625,
+      "positive": 10,
+      "zero": 0,
+      "negative": 2,
+      "ci97_5": [
+        -0.051106770833333336,
+        0.10710042317708476
+      ],
+      "direction": "undetermined",
+      "threshold": 0.0,
+      "passes": false
+    },
+    {
+      "effect": "older_change",
+      "blocks": 12,
+      "values": [
+        -0.01953125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": -0.0016276041666666667,
+      "sample_sd": 0.005638186222554938,
+      "minimum": -0.01953125,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 11,
+      "negative": 1,
+      "ci97_5": [
+        -0.006510416666666667,
+        0.0
+      ],
+      "direction": "undetermined",
+      "threshold": -0.02,
+      "passes": true
+    }
+  ],
+  "adoption_supported": false,
+  "scope": "Independent source provenance, stimuli and frozen native replays, observed read edges, cosine gate and ORACLE bounds, pre-update native state reset and unchanged memory, exact deleted-label counts, prior native trajectories, resource ledgers and paired bootstraps."
+}

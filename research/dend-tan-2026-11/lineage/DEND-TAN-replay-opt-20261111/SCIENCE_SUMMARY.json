@@ -1,0 +1,79 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-11-11T16:45:46.737125+00:00",
+  "blocks": 12,
+  "examples_per_block": 512,
+  "fits": 0,
+  "updates": 0,
+  "evaluations": 144,
+  "forward_sample_steps": 2654208,
+  "dense_forward_macs": 414056448,
+  "matcher_macs": 21233664,
+  "wall_seconds": 80.07227100001182,
+  "cpu_seconds": 77.65625,
+  "cap_seconds": 180,
+  "peak_working_set_bytes": 89784320,
+  "artifact_bytes_at_science_end": 83185077,
+  "cache_count": 12,
+  "cache_bytes": 92352,
+  "cache_build_steps": 432,
+  "cache_build_native_macs": 67392,
+  "cache_build_wall_seconds": 0.012946199916768819,
+  "microbench_records": 192,
+  "microbench_evaluations": 576,
+  "microbench_forward_sample_steps": 20736,
+  "input_array_bytes": 42467328,
+  "retained_raw_array_bytes": 371515392,
+  "microbench_replay_steps": 13440,
+  "microbench_replay_native_macs": 1840896,
+  "mode_totals": {
+    "full": {
+      "triggers": 9216,
+      "steps": 230400,
+      "input_rows": 230400,
+      "nonzero_steps": 36864,
+      "native_macs": 35942400,
+      "resources": [
+        441624.0,
+        181056.0,
+        4980096.0,
+        830016.0
+      ],
+      "replay_wall_seconds": 2.02497800020501,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 30000
+    },
+    "cached": {
+      "triggers": 9216,
+      "steps": 207360,
+      "input_rows": 207360,
+      "nonzero_steps": 36864,
+      "native_macs": 32348160,
+      "resources": [
+        436632.0,
+        172224.0,
+        4966272.0,
+        827712.0
+      ],
+      "replay_wall_seconds": 3.847856199601665,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 16128
+    },
+    "sparse": {
+      "triggers": 9216,
+      "steps": 207360,
+      "input_rows": 36864,
+      "nonzero_steps": 36864,
+      "native_macs": 20072448,
+      "resources": [
+        436632.0,
+        172224.0,
+        4966272.0,
+        827712.0
+      ],
+      "replay_wall_seconds": 4.753805800166447,
+      "replay_batches": 576,
+      "replay_scratch_peak_bytes": 16128
+    }
+  }
+}

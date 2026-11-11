@@ -1,0 +1,1243 @@
+{
+  "utc": "2026-11-11T16:20:32.957632+00:00",
+  "files": {
+    "ANALYSIS_LOG.txt": {
+      "bytes": 138,
+      "sha256": "b6764678758104c276d67a90fbac2376939f8e61613c4b449858f18b7837effb"
+    },
+    "AUDIT.json": {
+      "bytes": 2656,
+      "sha256": "b2b2cec2f76683a57c741797d1bc382b0a6a5cf3c6bf954f557091151fcfcb75"
+    },
+    "audit.py": {
+      "bytes": 33989,
+      "sha256": "c7ea4f50086f5e94a4217f5ac803b04bf839a1c1231a54dc8eb35ca4cd884603"
+    },
+    "AUDIT_LOG.txt": {
+      "bytes": 2668,
+      "sha256": "c5d7189381e419398e301fff821e2784c49cff9e5dc29d1b3d49db8503d96d16"
+    },
+    "BLOCK_RESULTS.csv": {
+      "bytes": 16419,
+      "sha256": "37090fcd43ee74d409beac0799bb1525db55f4e2f24319416ebaabe5eb8a981b"
+    },
+    "capacity_data.py": {
+      "bytes": 2013,
+      "sha256": "a0ff397933170e7bc52525a9c530e6e1c7479fdb073f14fafd602fc19db0bf57"
+    },
+    "capacity_metrics.py": {
+      "bytes": 1928,
+      "sha256": "3e7a6cad4fd2451ee36e152072484b8e4d791cabb956a03c67f8f9a671b44e6b"
+    },
+    "capacity_model.py": {
+      "bytes": 6922,
+      "sha256": "731fe6f2fcfe25be0984d1a1123c51004c6a115b5bb1ffce37deddccc90318af"
+    },
+    "DELIVERY_CHECKS.json": {
+      "bytes": 178,
+      "sha256": "65f47e7c72efd325a8d529cfe20de402e23f5c37959b1f1cb25e69b9b5fe2b30"
+    },
+    "ENVIRONMENT.json": {
+      "bytes": 285,
+      "sha256": "ff9af010d965a27b76d219b0ca175c95fc49b38d351448ec9f01d46417306a08"
+    },
+    "EVAL_ROWS.csv": {
+      "bytes": 420708,
+      "sha256": "dfd71bb09aa977bbae2badc55672a031f56d8e35d8a723aea1513bc6a3228fbf"
+    },
+    "evaluate/ROWS.json": {
+      "bytes": 624233,
+      "sha256": "7588e48ce5f9b8339c779860d731e310fd70877c5d5d40654bcd79a13eec5b79"
+    },
+    "evaluate/s0_LEARN_full_eviction_late_native.npz": {
+      "bytes": 629704,
+      "sha256": "47e9f01bf57e38a02283750c412cb2d3ca876d478f3aaaf1aa88bfdc05be11cb"
+    },
+    "evaluate/s0_LEARN_full_eviction_warm.npz": {
+      "bytes": 613661,
+      "sha256": "a3c8b2ba12c5bd366764c06d3a67e0663444488167b6997af12cd4cc14909538"
+    },
+    "evaluate/s0_LEARN_full_eviction_zero.npz": {
+      "bytes": 636709,
+      "sha256": "89935d803f933574cdc4f464042140a60466588baf247957131de33ddcee3a4e"
+    },
+    "evaluate/s0_LEARN_full_match_zero.npz": {
+      "bytes": 636709,
+      "sha256": "89935d803f933574cdc4f464042140a60466588baf247957131de33ddcee3a4e"
+    },
+    "evaluate/s0_LEARN_full_original.npz": {
+      "bytes": 631847,
+      "sha256": "2b043c3595f6f35cb209a23c21f75408ac5280b8ee025515a39e9d809eb11eff"
+    },
+    "evaluate/s0_LEARN_late_eviction_warm.npz": {
+      "bytes": 426185,
+      "sha256": "a3e6d9f9c061f059ace6acd1d52525dc64cb905d464a15b5e6bf3c4ccc846b84"
+    },
+    "evaluate/s0_LEARN_late_eviction_zero.npz": {
+      "bytes": 426185,
+      "sha256": "a3e6d9f9c061f059ace6acd1d52525dc64cb905d464a15b5e6bf3c4ccc846b84"
+    },
+    "evaluate/s0_LEARN_late_match_zero.npz": {
+      "bytes": 446475,
+      "sha256": "ea27dbce828c5354beae8d6a8864568a8ed2d750debe3d7d94ae4c011bdc6719"
+    },
+    "evaluate/s0_LEARN_late_original.npz": {
+      "bytes": 426185,
+      "sha256": "a3e6d9f9c061f059ace6acd1d52525dc64cb905d464a15b5e6bf3c4ccc846b84"
+    },
+    "evaluate/s0_ORACLE_full_eviction_warm.npz": {
+      "bytes": 620850,
+      "sha256": "09a292106288b47334d79c3baffb47cb27fc2a44dc88186b340b0d66db16edb1"
+    },
+    "evaluate/s0_ORACLE_full_eviction_zero.npz": {
+      "bytes": 630501,
+      "sha256": "0b411c64a12f3d8e931e113b47ada09111a5fe1d26ad88cf00fbc632905ada34"
+    },
+    "evaluate/s0_ORACLE_full_match_zero.npz": {
+      "bytes": 630501,
+      "sha256": "0b411c64a12f3d8e931e113b47ada09111a5fe1d26ad88cf00fbc632905ada34"
+    },
+    "evaluate/s0_ORACLE_full_original.npz": {
+      "bytes": 642735,
+      "sha256": "4dfbc0da2d44f1baa793b9e3145147bb02daebbc4e848aefaedc81bb8803f28c"
+    },
+    "evaluate/s0_ORACLE_late_eviction_warm.npz": {
+      "bytes": 437146,
+      "sha256": "790b78fa82aca451129ef9a89e80e542c21b93e85a7542efd21c2dd90019de79"
+    },
+    "evaluate/s0_ORACLE_late_eviction_zero.npz": {
+      "bytes": 437146,
+      "sha256": "790b78fa82aca451129ef9a89e80e542c21b93e85a7542efd21c2dd90019de79"
+    },
+    "evaluate/s0_ORACLE_late_match_zero.npz": {
+      "bytes": 453185,
+      "sha256": "790f92ac8f9c71a2a94b9d74bb5125c79ef192c1fba41439008a13d1896a97d5"
+    },
+    "evaluate/s0_ORACLE_late_original.npz": {
+      "bytes": 437146,
+      "sha256": "790b78fa82aca451129ef9a89e80e542c21b93e85a7542efd21c2dd90019de79"
+    },
+    "evaluate/s10_LEARN_full_eviction_late_native.npz": {
+      "bytes": 660048,
+      "sha256": "db90f8490d4dda4921904322a5a1c7cadd945e918ba531258a57fd1e026b742c"
+    },
+    "evaluate/s10_LEARN_full_eviction_warm.npz": {
+      "bytes": 643717,
+      "sha256": "6c009d08ca7b77bb248a0fd92ec2f74d0f2dd28170f25133995d3c963b774e1a"
+    },
+    "evaluate/s10_LEARN_full_eviction_zero.npz": {
+      "bytes": 655199,
+      "sha256": "d18751fe1b0b55d53b9d3471d56e93d8a7fc787226f617f2bb5bf22ee25b0204"
+    },
+    "evaluate/s10_LEARN_full_match_zero.npz": {
+      "bytes": 655199,
+      "sha256": "d18751fe1b0b55d53b9d3471d56e93d8a7fc787226f617f2bb5bf22ee25b0204"
+    },
+    "evaluate/s10_LEARN_full_original.npz": {
+      "bytes": 661174,
+      "sha256": "e396224de2cdb0370ac869fe471f968cf667bc3b7d24ac64d4f826dde5bab632"
+    },
+    "evaluate/s10_LEARN_late_eviction_warm.npz": {
+      "bytes": 428927,
+      "sha256": "39b509964a2d4cb483fabd932595e004cfea1d7443c19492cdafc839c57c6851"
+    },
+    "evaluate/s10_LEARN_late_eviction_zero.npz": {
+      "bytes": 428927,
+      "sha256": "39b509964a2d4cb483fabd932595e004cfea1d7443c19492cdafc839c57c6851"
+    },
+    "evaluate/s10_LEARN_late_match_zero.npz": {
+      "bytes": 445141,
+      "sha256": "586805c3146972a7d543c7f1b5d9947697c9639dcb4ba6443c7e9b6d4404e646"
+    },
+    "evaluate/s10_LEARN_late_original.npz": {
+      "bytes": 428927,
+      "sha256": "39b509964a2d4cb483fabd932595e004cfea1d7443c19492cdafc839c57c6851"
+    },
+    "evaluate/s10_ORACLE_full_eviction_warm.npz": {
+      "bytes": 649277,
+      "sha256": "e974ea32c9522da10d4138283bed81e09c57f47d87f0497d98c59258e9e8bebe"
+    },
+    "evaluate/s10_ORACLE_full_eviction_zero.npz": {
+      "bytes": 650394,
+      "sha256": "bf737fcab7e150367f52bb120630c52b4981ea09b94f5add51dde84a968c23b5"
+    },
+    "evaluate/s10_ORACLE_full_match_zero.npz": {
+      "bytes": 650394,
+      "sha256": "bf737fcab7e150367f52bb120630c52b4981ea09b94f5add51dde84a968c23b5"
+    },
+    "evaluate/s10_ORACLE_full_original.npz": {
+      "bytes": 656458,
+      "sha256": "44c762061a79e238e414790b05d922291cac867f9b90ace9d274e3af8b6c0904"
+    },
+    "evaluate/s10_ORACLE_late_eviction_warm.npz": {
+      "bytes": 433208,
+      "sha256": "724c501ca02c06c5678bad03b449da5a2a8ef6284efc06eda9300d685d51fd80"
+    },
+    "evaluate/s10_ORACLE_late_eviction_zero.npz": {
+      "bytes": 433208,
+      "sha256": "724c501ca02c06c5678bad03b449da5a2a8ef6284efc06eda9300d685d51fd80"
+    },
+    "evaluate/s10_ORACLE_late_match_zero.npz": {
+      "bytes": 446970,
+      "sha256": "c351c86ee0c5604e6a9d227b4c3f6026c6ab4512a2d51851a58beb1cb59ae9a9"
+    },
+    "evaluate/s10_ORACLE_late_original.npz": {
+      "bytes": 433208,
+      "sha256": "724c501ca02c06c5678bad03b449da5a2a8ef6284efc06eda9300d685d51fd80"
+    },
+    "evaluate/s11_LEARN_full_eviction_late_native.npz": {
+      "bytes": 645014,
+      "sha256": "14dec450a3a6b87427da1ad273a5bb28ec8ccae3eebbb55031a15f7402b6d8a3"
+    },
+    "evaluate/s11_LEARN_full_eviction_warm.npz": {
+      "bytes": 633389,
+      "sha256": "3f508db0b34457fc534f8adf2b0f42ba79d74a82ff62fae4eadc3892a248f9a0"
+    },
+    "evaluate/s11_LEARN_full_eviction_zero.npz": {
+      "bytes": 641287,
+      "sha256": "6b4b5861200ab74f43480fcd4227af9cb41679e9cb3d4a6ddd1351e901169058"
+    },
+    "evaluate/s11_LEARN_full_match_zero.npz": {
+      "bytes": 641287,
+      "sha256": "6b4b5861200ab74f43480fcd4227af9cb41679e9cb3d4a6ddd1351e901169058"
+    },
+    "evaluate/s11_LEARN_full_original.npz": {
+      "bytes": 648778,
+      "sha256": "be61afeb60c6b173cba1c79efcb15baed669a94395e3e351f4129dc5d807a7b7"
+    },
+    "evaluate/s11_LEARN_late_eviction_warm.npz": {
+      "bytes": 431131,
+      "sha256": "c804e82863b76e058d02d7a7e98e11429de3c0ccef48fa0473a4a5d580612b0e"
+    },
+    "evaluate/s11_LEARN_late_eviction_zero.npz": {
+      "bytes": 431131,
+      "sha256": "c804e82863b76e058d02d7a7e98e11429de3c0ccef48fa0473a4a5d580612b0e"
+    },
+    "evaluate/s11_LEARN_late_match_zero.npz": {
+      "bytes": 443781,
+      "sha256": "8d91005637d85d6dbe23b0b61f0d4dbf05695b683f969970154f98c13c3601b3"
+    },
+    "evaluate/s11_LEARN_late_original.npz": {
+      "bytes": 431131,
+      "sha256": "c804e82863b76e058d02d7a7e98e11429de3c0ccef48fa0473a4a5d580612b0e"
+    },
+    "evaluate/s11_ORACLE_full_eviction_warm.npz": {
+      "bytes": 635909,
+      "sha256": "8fc796e17877a7a35fdde652eb50d787b5c2907ab0272bca698778ba9a3054f3"
+    },
+    "evaluate/s11_ORACLE_full_eviction_zero.npz": {
+      "bytes": 644468,
+      "sha256": "bcb419c1a8d9723a11112d6b78f7d506441e3b7563c5e35bf4de0896e80c5228"
+    },
+    "evaluate/s11_ORACLE_full_match_zero.npz": {
+      "bytes": 644468,
+      "sha256": "bcb419c1a8d9723a11112d6b78f7d506441e3b7563c5e35bf4de0896e80c5228"
+    },
+    "evaluate/s11_ORACLE_full_original.npz": {
+      "bytes": 651241,
+      "sha256": "0b6b7c7d5cb9b1476763a3ea5f65780ceec0675a8e2574a3accd07780aee6dfd"
+    },
+    "evaluate/s11_ORACLE_late_eviction_warm.npz": {
+      "bytes": 431389,
+      "sha256": "3aee9fb4efc5307df5d736770035c6b0e720b7385fa44274354486d1423cfc21"
+    },
+    "evaluate/s11_ORACLE_late_eviction_zero.npz": {
+      "bytes": 431389,
+      "sha256": "3aee9fb4efc5307df5d736770035c6b0e720b7385fa44274354486d1423cfc21"
+    },
+    "evaluate/s11_ORACLE_late_match_zero.npz": {
+      "bytes": 443521,
+      "sha256": "49154d358fe6a87e3157c069c259d413d02be24b6e66adcf74e549f10204b65c"
+    },
+    "evaluate/s11_ORACLE_late_original.npz": {
+      "bytes": 431389,
+      "sha256": "3aee9fb4efc5307df5d736770035c6b0e720b7385fa44274354486d1423cfc21"
+    },
+    "evaluate/s1_LEARN_full_eviction_late_native.npz": {
+      "bytes": 646657,
+      "sha256": "b0a1efa037150dc52601bfe8a7db7fd74084392495ea26e2b2942bf1d47f0cba"
+    },
+    "evaluate/s1_LEARN_full_eviction_warm.npz": {
+      "bytes": 612989,
+      "sha256": "4f67cf5258037e848e978918155001cfb27dae424da342c127c1e4580667bd76"
+    },
+    "evaluate/s1_LEARN_full_eviction_zero.npz": {
+      "bytes": 629124,
+      "sha256": "ea12483af3f9bcbddcef020719474eb17049ddc72a0460677a930a958152e697"
+    },
+    "evaluate/s1_LEARN_full_match_zero.npz": {
+      "bytes": 629124,
+      "sha256": "ea12483af3f9bcbddcef020719474eb17049ddc72a0460677a930a958152e697"
+    },
+    "evaluate/s1_LEARN_full_original.npz": {
+      "bytes": 653189,
+      "sha256": "48a35b21a93a85ad1ca4bebae2fa0ddaefe099d144ba4a29d8d137dc97e7d897"
+    },
+    "evaluate/s1_LEARN_late_eviction_warm.npz": {
+      "bytes": 425824,
+      "sha256": "c1e6d38e7534cae615a5b2fb35de8ce126f13135eab54cff3b9fcd0179fe8799"
+    },
+    "evaluate/s1_LEARN_late_eviction_zero.npz": {
+      "bytes": 425824,
+      "sha256": "c1e6d38e7534cae615a5b2fb35de8ce126f13135eab54cff3b9fcd0179fe8799"
+    },
+    "evaluate/s1_LEARN_late_match_zero.npz": {
+      "bytes": 433751,
+      "sha256": "7703f1d5c015203c182ffb711a3b89a75b4b54ca4009f829c85b89b1538d13ce"
+    },
+    "evaluate/s1_LEARN_late_original.npz": {
+      "bytes": 425824,
+      "sha256": "c1e6d38e7534cae615a5b2fb35de8ce126f13135eab54cff3b9fcd0179fe8799"
+    },
+    "evaluate/s1_ORACLE_full_eviction_warm.npz": {
+      "bytes": 619237,
+      "sha256": "1f4a47720b6998e0bb38a9d302ff4a734ebcab3cf2beabfa494bffc3627597e1"
+    },
+    "evaluate/s1_ORACLE_full_eviction_zero.npz": {
+      "bytes": 635850,
+      "sha256": "4ae503630861bdb0f9c08db428c10e8ffd64d93c0aaad6be34f197da7c7d69a8"
+    },
+    "evaluate/s1_ORACLE_full_match_zero.npz": {
+      "bytes": 635850,
+      "sha256": "4ae503630861bdb0f9c08db428c10e8ffd64d93c0aaad6be34f197da7c7d69a8"
+    },
+    "evaluate/s1_ORACLE_full_original.npz": {
+      "bytes": 655007,
+      "sha256": "5e6875998792682641757325e3b81c6dc32ff55aafaa36448058fe4ef0dbef33"
+    },
+    "evaluate/s1_ORACLE_late_eviction_warm.npz": {
+      "bytes": 415086,
+      "sha256": "4fe7d0291177cf52123ef3f2c265397c132cadf8e1fa1d6dbcd811eaadeae9c5"
+    },
+    "evaluate/s1_ORACLE_late_eviction_zero.npz": {
+      "bytes": 415086,
+      "sha256": "4fe7d0291177cf52123ef3f2c265397c132cadf8e1fa1d6dbcd811eaadeae9c5"
+    },
+    "evaluate/s1_ORACLE_late_match_zero.npz": {
+      "bytes": 424281,
+      "sha256": "1f63fce5514e32e89a644e1889de5d22422800a407ff619116b9d8009d4f3bc7"
+    },
+    "evaluate/s1_ORACLE_late_original.npz": {
+      "bytes": 415086,
+      "sha256": "4fe7d0291177cf52123ef3f2c265397c132cadf8e1fa1d6dbcd811eaadeae9c5"
+    },
+    "evaluate/s2_LEARN_full_eviction_late_native.npz": {
+      "bytes": 619886,
+      "sha256": "356922fd4a9d8faffbc5ddf121dbbdba8a041cd369fddc37c809e455fb921392"
+    },
+    "evaluate/s2_LEARN_full_eviction_warm.npz": {
+      "bytes": 599495,
+      "sha256": "b777429ee482e018dc7ae0a73740c790425136b16e0f1faeb9ff74a091dfceae"
+    },
+    "evaluate/s2_LEARN_full_eviction_zero.npz": {
+      "bytes": 611257,
+      "sha256": "d284590fa8987c12b2cf8af12e0324cdf5a14f7c1a50b9507f33f9d16452a76e"
+    },
+    "evaluate/s2_LEARN_full_match_zero.npz": {
+      "bytes": 611257,
+      "sha256": "d284590fa8987c12b2cf8af12e0324cdf5a14f7c1a50b9507f33f9d16452a76e"
+    },
+    "evaluate/s2_LEARN_full_original.npz": {
+      "bytes": 624181,
+      "sha256": "881ba9375c34808e950c9fee582231f0670d43dd0bb80ba56699d58a3086e22b"
+    },
+    "evaluate/s2_LEARN_late_eviction_warm.npz": {
+      "bytes": 414555,
+      "sha256": "a06743cff309238915fee436749a991f5b387fb3e8448d23b7e8b443a0a3d2fb"
+    },
+    "evaluate/s2_LEARN_late_eviction_zero.npz": {
+      "bytes": 414555,
+      "sha256": "a06743cff309238915fee436749a991f5b387fb3e8448d23b7e8b443a0a3d2fb"
+    },
+    "evaluate/s2_LEARN_late_match_zero.npz": {
+      "bytes": 426260,
+      "sha256": "34c5cf5b38c50b8d4667ca5aba18b0395b0cc42baa309c6a64987563fd2e61fc"
+    },
+    "evaluate/s2_LEARN_late_original.npz": {
+      "bytes": 414555,
+      "sha256": "a06743cff309238915fee436749a991f5b387fb3e8448d23b7e8b443a0a3d2fb"
+    },
+    "evaluate/s2_ORACLE_full_eviction_warm.npz": {
+      "bytes": 587425,
+      "sha256": "bedf9bb87438e7dc2f73b9cbe6423c2acb4d2299fc19e34f60ea3153960376c8"
+    },
+    "evaluate/s2_ORACLE_full_eviction_zero.npz": {
+      "bytes": 595750,
+      "sha256": "c45ae4b1d12ec14e13cd7e41c40f669ad876a16d9a67f36d38a1ca16c1b73058"
+    },
+    "evaluate/s2_ORACLE_full_match_zero.npz": {
+      "bytes": 595750,
+      "sha256": "c45ae4b1d12ec14e13cd7e41c40f669ad876a16d9a67f36d38a1ca16c1b73058"
+    },
+    "evaluate/s2_ORACLE_full_original.npz": {
+      "bytes": 604654,
+      "sha256": "99725f78c843122a88719b3371a67db7d16411e9304711a2abd9fe21bb487b7c"
+    },
+    "evaluate/s2_ORACLE_late_eviction_warm.npz": {
+      "bytes": 411922,
+      "sha256": "b69de53130d5ecba0d02ecffb0f196b439a6c91d8c2fec491a91d88fc1887f5c"
+    },
+    "evaluate/s2_ORACLE_late_eviction_zero.npz": {
+      "bytes": 411922,
+      "sha256": "b69de53130d5ecba0d02ecffb0f196b439a6c91d8c2fec491a91d88fc1887f5c"
+    },
+    "evaluate/s2_ORACLE_late_match_zero.npz": {
+      "bytes": 426571,
+      "sha256": "ddd359fa61fa29dca5ef04e3bfd0a524b0badd7e2de452357f1edd3e7d791554"
+    },
+    "evaluate/s2_ORACLE_late_original.npz": {
+      "bytes": 411922,
+      "sha256": "b69de53130d5ecba0d02ecffb0f196b439a6c91d8c2fec491a91d88fc1887f5c"
+    },
+    "evaluate/s3_LEARN_full_eviction_late_native.npz": {
+      "bytes": 609251,
+      "sha256": "356126eab1ce1e844130b0fe2374c27b59a8c8405cc052b1a0417a12c37628fa"
+    },
+    "evaluate/s3_LEARN_full_eviction_warm.npz": {
+      "bytes": 588188,
+      "sha256": "1046f90c5489dba019b6d89ca1a2db237a3b383d8fbe86bed2204e4ef854783e"
+    },
+    "evaluate/s3_LEARN_full_eviction_zero.npz": {
+      "bytes": 600141,
+      "sha256": "3e29b58f3f7b102eb0cfb934af9cf2701d5718b5b40cc4ac737c44106b85aa3d"
+    },
+    "evaluate/s3_LEARN_full_match_zero.npz": {
+      "bytes": 600141,
+      "sha256": "3e29b58f3f7b102eb0cfb934af9cf2701d5718b5b40cc4ac737c44106b85aa3d"
+    },
+    "evaluate/s3_LEARN_full_original.npz": {
+      "bytes": 611568,
+      "sha256": "a0751e6e6a1099112dca85f47fb6a8499b9fe09a76ec8ca9cd2113d7cd10020a"
+    },
+    "evaluate/s3_LEARN_late_eviction_warm.npz": {
+      "bytes": 414537,
+      "sha256": "44190fe3c35db066c9fd809313ba05576b2478a48a204f066257896e4e7ded8e"
+    },
+    "evaluate/s3_LEARN_late_eviction_zero.npz": {
+      "bytes": 414537,
+      "sha256": "44190fe3c35db066c9fd809313ba05576b2478a48a204f066257896e4e7ded8e"
+    },
+    "evaluate/s3_LEARN_late_match_zero.npz": {
+      "bytes": 427099,
+      "sha256": "b1dddd8af4ef541abb9323677d0f81f6d3955ce5358891bf02f39c2bfceae453"
+    },
+    "evaluate/s3_LEARN_late_original.npz": {
+      "bytes": 414537,
+      "sha256": "44190fe3c35db066c9fd809313ba05576b2478a48a204f066257896e4e7ded8e"
+    },
+    "evaluate/s3_ORACLE_full_eviction_warm.npz": {
+      "bytes": 603687,
+      "sha256": "76b2769a4566d62c57f875545bd7cf1d8c15de45e3fd6cc244afcc408b38cf5f"
+    },
+    "evaluate/s3_ORACLE_full_eviction_zero.npz": {
+      "bytes": 626091,
+      "sha256": "0306577ecdbf541d833ab242e5e6167443fdf8220cf2ded99a1b5ffcf354fc7e"
+    },
+    "evaluate/s3_ORACLE_full_match_zero.npz": {
+      "bytes": 626091,
+      "sha256": "0306577ecdbf541d833ab242e5e6167443fdf8220cf2ded99a1b5ffcf354fc7e"
+    },
+    "evaluate/s3_ORACLE_full_original.npz": {
+      "bytes": 629941,
+      "sha256": "48496acec4277aa6b3de9d24e7bf782ca5498afb0cdf4906dfdbf9f7835902f8"
+    },
+    "evaluate/s3_ORACLE_late_eviction_warm.npz": {
+      "bytes": 406109,
+      "sha256": "3ec51e5c07b15cd5f71c7145c536f649baef47a67eb208212acd17f833fe7441"
+    },
+    "evaluate/s3_ORACLE_late_eviction_zero.npz": {
+      "bytes": 406109,
+      "sha256": "3ec51e5c07b15cd5f71c7145c536f649baef47a67eb208212acd17f833fe7441"
+    },
+    "evaluate/s3_ORACLE_late_match_zero.npz": {
+      "bytes": 426161,
+      "sha256": "f91d98c204e3f5752f4e6ebce67cb35b407bf0043aeb83a28d89fbbead1cbe23"
+    },
+    "evaluate/s3_ORACLE_late_original.npz": {
+      "bytes": 406109,
+      "sha256": "3ec51e5c07b15cd5f71c7145c536f649baef47a67eb208212acd17f833fe7441"
+    },
+    "evaluate/s4_LEARN_full_eviction_late_native.npz": {
+      "bytes": 651280,
+      "sha256": "addc5cb9769ee903e922a2b7b8b4a5f1dbf0fca24c75d9b0d5f83ae3a7188538"
+    },
+    "evaluate/s4_LEARN_full_eviction_warm.npz": {
+      "bytes": 636141,
+      "sha256": "9396fd61fbbd743b5a29a4a1df3beafc6316bce1fb053e4fb4e66a3ed7f69047"
+    },
+    "evaluate/s4_LEARN_full_eviction_zero.npz": {
+      "bytes": 643514,
+      "sha256": "95a199504fe943b2eb5a52b19466f22f0f02ad4e462fcfa22f2d9beb19ec6506"
+    },
+    "evaluate/s4_LEARN_full_match_zero.npz": {
+      "bytes": 643514,
+      "sha256": "95a199504fe943b2eb5a52b19466f22f0f02ad4e462fcfa22f2d9beb19ec6506"
+    },
+    "evaluate/s4_LEARN_full_original.npz": {
+      "bytes": 655307,
+      "sha256": "83f179739f24f49744f8430c747303f7e258a31af4464746ea0c5959e6d5a5cd"
+    },
+    "evaluate/s4_LEARN_late_eviction_warm.npz": {
+      "bytes": 444397,
+      "sha256": "c2a7d529149f2948c2f380fe322131adc905a364fdbdc1ac65aa521118d73dc5"
+    },
+    "evaluate/s4_LEARN_late_eviction_zero.npz": {
+      "bytes": 444397,
+      "sha256": "c2a7d529149f2948c2f380fe322131adc905a364fdbdc1ac65aa521118d73dc5"
+    },
+    "evaluate/s4_LEARN_late_match_zero.npz": {
+      "bytes": 457391,
+      "sha256": "7983ffc04379c6a952cc5bf9291e2e1d33b3b1d2534c540c6a65ca40185cd677"
+    },
+    "evaluate/s4_LEARN_late_original.npz": {
+      "bytes": 444397,
+      "sha256": "c2a7d529149f2948c2f380fe322131adc905a364fdbdc1ac65aa521118d73dc5"
+    },
+    "evaluate/s4_ORACLE_full_eviction_warm.npz": {
+      "bytes": 643554,
+      "sha256": "8e1e945c77efbae20200e2b32f7d09c9afbb6d5804cf6470b8b92a5c862ca1dd"
+    },
+    "evaluate/s4_ORACLE_full_eviction_zero.npz": {
+      "bytes": 652160,
+      "sha256": "1e243e4e6ae68b0fa0d4c076674f56e6591348e3558c58466230bc4d669a73be"
+    },
+    "evaluate/s4_ORACLE_full_match_zero.npz": {
+      "bytes": 652160,
+      "sha256": "1e243e4e6ae68b0fa0d4c076674f56e6591348e3558c58466230bc4d669a73be"
+    },
+    "evaluate/s4_ORACLE_full_original.npz": {
+      "bytes": 667335,
+      "sha256": "b0eeb81b1dcc301157683cce1ec30d4bd790d42ad8a27c37ffbdbd903c3bec60"
+    },
+    "evaluate/s4_ORACLE_late_eviction_warm.npz": {
+      "bytes": 450543,
+      "sha256": "4191030725cec22f6481d8d8631a2e3585144332b3ba5e71e86cace8bc7ddca3"
+    },
+    "evaluate/s4_ORACLE_late_eviction_zero.npz": {
+      "bytes": 450543,
+      "sha256": "4191030725cec22f6481d8d8631a2e3585144332b3ba5e71e86cace8bc7ddca3"
+    },
+    "evaluate/s4_ORACLE_late_match_zero.npz": {
+      "bytes": 461490,
+      "sha256": "43a7db531f65c5a42191c10a3d2a9f57e744db9f6597c01076b28b2234f311f9"
+    },
+    "evaluate/s4_ORACLE_late_original.npz": {
+      "bytes": 450543,
+      "sha256": "4191030725cec22f6481d8d8631a2e3585144332b3ba5e71e86cace8bc7ddca3"
+    },
+    "evaluate/s5_LEARN_full_eviction_late_native.npz": {
+      "bytes": 665498,
+      "sha256": "33d17d8150d17dfa79dff780e411ce44d6e7b2bf69b173365ccfb20e4d0586de"
+    },
+    "evaluate/s5_LEARN_full_eviction_warm.npz": {
+      "bytes": 643437,
+      "sha256": "6ecc62290f17bad926b21f0fb93d689b770e2171b3bb061a5abe0e695a627572"
+    },
+    "evaluate/s5_LEARN_full_eviction_zero.npz": {
+      "bytes": 657225,
+      "sha256": "933c0ad95fbe0c0999e63b73b3fe8a57063ca961fe93afa3b7998b4cf3da9013"
+    },
+    "evaluate/s5_LEARN_full_match_zero.npz": {
+      "bytes": 657225,
+      "sha256": "933c0ad95fbe0c0999e63b73b3fe8a57063ca961fe93afa3b7998b4cf3da9013"
+    },
+    "evaluate/s5_LEARN_full_original.npz": {
+      "bytes": 669083,
+      "sha256": "b981abea68d3f42c5db37172733e1abd162a382e798c412740d7dbd67cbd4fc0"
+    },
+    "evaluate/s5_LEARN_late_eviction_warm.npz": {
+      "bytes": 438461,
+      "sha256": "b42d53930cd05498ebe6a2d2ae4510a3ec3cd83dfd06bbeb9102ff8b9985e2a6"
+    },
+    "evaluate/s5_LEARN_late_eviction_zero.npz": {
+      "bytes": 438461,
+      "sha256": "b42d53930cd05498ebe6a2d2ae4510a3ec3cd83dfd06bbeb9102ff8b9985e2a6"
+    },
+    "evaluate/s5_LEARN_late_match_zero.npz": {
+      "bytes": 450020,
+      "sha256": "39cdd2a5af5f06bc9d03554f4d05e5d9c5e9eb94ed3317d2a53e5b7ef639d85d"
+    },
+    "evaluate/s5_LEARN_late_original.npz": {
+      "bytes": 438461,
+      "sha256": "b42d53930cd05498ebe6a2d2ae4510a3ec3cd83dfd06bbeb9102ff8b9985e2a6"
+    },
+    "evaluate/s5_ORACLE_full_eviction_warm.npz": {
+      "bytes": 643325,
+      "sha256": "bcd65e543066205b0aa4907745bdad446aead5dfc9929c99f2b477c4bc16d93c"
+    },
+    "evaluate/s5_ORACLE_full_eviction_zero.npz": {
+      "bytes": 656356,
+      "sha256": "e711551005fd77380a6fadaa0f8eb441904c3809d171002cce8dc9eb3cf1d4ab"
+    },
+    "evaluate/s5_ORACLE_full_match_zero.npz": {
+      "bytes": 656356,
+      "sha256": "e711551005fd77380a6fadaa0f8eb441904c3809d171002cce8dc9eb3cf1d4ab"
+    },
+    "evaluate/s5_ORACLE_full_original.npz": {
+      "bytes": 667451,
+      "sha256": "930ceef1d703cc95b75f09d86069d06b3d9276d2eb69a3ef85a85687df467147"
+    },
+    "evaluate/s5_ORACLE_late_eviction_warm.npz": {
+      "bytes": 436984,
+      "sha256": "f7db70ee84c2524f392dbfdfe7cd7f3eb7ba8d1c7ee5798ed2ea7f8629ffa067"
+    },
+    "evaluate/s5_ORACLE_late_eviction_zero.npz": {
+      "bytes": 436984,
+      "sha256": "f7db70ee84c2524f392dbfdfe7cd7f3eb7ba8d1c7ee5798ed2ea7f8629ffa067"
+    },
+    "evaluate/s5_ORACLE_late_match_zero.npz": {
+      "bytes": 450879,
+      "sha256": "b914b7f44a74d5fc1409fa40872abc25a0f3917ee498028526e1e8146ae7376e"
+    },
+    "evaluate/s5_ORACLE_late_original.npz": {
+      "bytes": 436984,
+      "sha256": "f7db70ee84c2524f392dbfdfe7cd7f3eb7ba8d1c7ee5798ed2ea7f8629ffa067"
+    },
+    "evaluate/s6_LEARN_full_eviction_late_native.npz": {
+      "bytes": 656315,
+      "sha256": "f36ba9b0c7b1e1f3b3161fce19c85cbc12381363707f146e25d1b0bead44d62c"
+    },
+    "evaluate/s6_LEARN_full_eviction_warm.npz": {
+      "bytes": 638988,
+      "sha256": "259acc2feb25b17036e1ad472c0d5b114e016dac07a21021043ff1ffcf9a6e3c"
+    },
+    "evaluate/s6_LEARN_full_eviction_zero.npz": {
+      "bytes": 643134,
+      "sha256": "d700e40a4149c6a9891c21426d6a500d15a6b4e8c2188e355641dd8caf033226"
+    },
+    "evaluate/s6_LEARN_full_match_zero.npz": {
+      "bytes": 643134,
+      "sha256": "d700e40a4149c6a9891c21426d6a500d15a6b4e8c2188e355641dd8caf033226"
+    },
+    "evaluate/s6_LEARN_full_original.npz": {
+      "bytes": 655413,
+      "sha256": "980f335bc9341aefd210df7843eead3d959b5abb66886a3ef9941fa3538be188"
+    },
+    "evaluate/s6_LEARN_late_eviction_warm.npz": {
+      "bytes": 430897,
+      "sha256": "7af9bb0e4d569657c73679ab6d0a3daf27c30df547af15232715c870853d311b"
+    },
+    "evaluate/s6_LEARN_late_eviction_zero.npz": {
+      "bytes": 430897,
+      "sha256": "7af9bb0e4d569657c73679ab6d0a3daf27c30df547af15232715c870853d311b"
+    },
+    "evaluate/s6_LEARN_late_match_zero.npz": {
+      "bytes": 442701,
+      "sha256": "1a4290171f267a8bee21148ff74aeec6debf2c4da31f656d71bd687c78e0cc7c"
+    },
+    "evaluate/s6_LEARN_late_original.npz": {
+      "bytes": 430897,
+      "sha256": "7af9bb0e4d569657c73679ab6d0a3daf27c30df547af15232715c870853d311b"
+    },
+    "evaluate/s6_ORACLE_full_eviction_warm.npz": {
+      "bytes": 628177,
+      "sha256": "894d2c64ec3f131e31c3966c4ee127e74827167b9477b17bc58496e0b748f022"
+    },
+    "evaluate/s6_ORACLE_full_eviction_zero.npz": {
+      "bytes": 630316,
+      "sha256": "2c3e7b49e9e635173dbe57474fa1b177b64682b7a6d17f658904c7f25673fef5"
+    },
+    "evaluate/s6_ORACLE_full_match_zero.npz": {
+      "bytes": 630316,
+      "sha256": "2c3e7b49e9e635173dbe57474fa1b177b64682b7a6d17f658904c7f25673fef5"
+    },
+    "evaluate/s6_ORACLE_full_original.npz": {
+      "bytes": 648158,
+      "sha256": "d18469cf044fdbc002fa91c79afd2a9b9c653d6da93c947dcefebbe6047a89ca"
+    },
+    "evaluate/s6_ORACLE_late_eviction_warm.npz": {
+      "bytes": 433540,
+      "sha256": "4ddaac5f8403209281da0aac6b6a4ead70dab4f7a942027199d1ff3d4780b3b3"
+    },
+    "evaluate/s6_ORACLE_late_eviction_zero.npz": {
+      "bytes": 433540,
+      "sha256": "4ddaac5f8403209281da0aac6b6a4ead70dab4f7a942027199d1ff3d4780b3b3"
+    },
+    "evaluate/s6_ORACLE_late_match_zero.npz": {
+      "bytes": 439922,
+      "sha256": "623b2c66227fa90be28ae5c10d2b06f6229390e5d667bc8d29e46429dab4afbb"
+    },
+    "evaluate/s6_ORACLE_late_original.npz": {
+      "bytes": 433540,
+      "sha256": "4ddaac5f8403209281da0aac6b6a4ead70dab4f7a942027199d1ff3d4780b3b3"
+    },
+    "evaluate/s7_LEARN_full_eviction_late_native.npz": {
+      "bytes": 655767,
+      "sha256": "75cca2dd672e717bc679d075236a9a057309ad592acac09f574d4c24af95ba88"
+    },
+    "evaluate/s7_LEARN_full_eviction_warm.npz": {
+      "bytes": 640437,
+      "sha256": "e16c1052abf44c8f39144b43568a967d6ff066c7dd37396ad467f2207939ab35"
+    },
+    "evaluate/s7_LEARN_full_eviction_zero.npz": {
+      "bytes": 651121,
+      "sha256": "d0e8e032c7861d776f118b0605e694f01c9189dedc0510b265f4da9c3b9d39af"
+    },
+    "evaluate/s7_LEARN_full_match_zero.npz": {
+      "bytes": 651121,
+      "sha256": "d0e8e032c7861d776f118b0605e694f01c9189dedc0510b265f4da9c3b9d39af"
+    },
+    "evaluate/s7_LEARN_full_original.npz": {
+      "bytes": 656583,
+      "sha256": "e41a5727ec4761a6491ce678e40189827ba0e75dbc707821b39b4e49bc084959"
+    },
+    "evaluate/s7_LEARN_late_eviction_warm.npz": {
+      "bytes": 413483,
+      "sha256": "ea413ea5980874d58555b34f73bfa2c7f2524026c255168647365aa48bd7c332"
+    },
+    "evaluate/s7_LEARN_late_eviction_zero.npz": {
+      "bytes": 413483,
+      "sha256": "ea413ea5980874d58555b34f73bfa2c7f2524026c255168647365aa48bd7c332"
+    },
+    "evaluate/s7_LEARN_late_match_zero.npz": {
+      "bytes": 429644,
+      "sha256": "7dac207af069c63b10ef6980467338a73fb8a3ff188795e549b6a1610a60d0f8"
+    },
+    "evaluate/s7_LEARN_late_original.npz": {
+      "bytes": 413483,
+      "sha256": "ea413ea5980874d58555b34f73bfa2c7f2524026c255168647365aa48bd7c332"
+    },
+    "evaluate/s7_ORACLE_full_eviction_warm.npz": {
+      "bytes": 641298,
+      "sha256": "f8e63e77c0f21223f740d587c201a04875c6d2ea4848fa59e8d725d037c63b30"
+    },
+    "evaluate/s7_ORACLE_full_eviction_zero.npz": {
+      "bytes": 650411,
+      "sha256": "fe09b9dd1deea63f2d96891ff0c43a291ac4aaabc589276c687cdacd9145064e"
+    },
+    "evaluate/s7_ORACLE_full_match_zero.npz": {
+      "bytes": 650411,
+      "sha256": "fe09b9dd1deea63f2d96891ff0c43a291ac4aaabc589276c687cdacd9145064e"
+    },
+    "evaluate/s7_ORACLE_full_original.npz": {
+      "bytes": 654548,
+      "sha256": "7e3cc8998fea4330efb0a46dd456a7bb6a9fe2346d646914745ba2f3faded1fd"
+    },
+    "evaluate/s7_ORACLE_late_eviction_warm.npz": {
+      "bytes": 411132,
+      "sha256": "93482f480b13409b202170b05a053ef2129eecdcc818a8e48b251c561bae780a"
+    },
+    "evaluate/s7_ORACLE_late_eviction_zero.npz": {
+      "bytes": 411132,
+      "sha256": "93482f480b13409b202170b05a053ef2129eecdcc818a8e48b251c561bae780a"
+    },
+    "evaluate/s7_ORACLE_late_match_zero.npz": {
+      "bytes": 429911,
+      "sha256": "2df56caa6186c727bb87cdb1b40520f8c2892cf3ceaa48c6897ab6aeac9a83ad"
+    },
+    "evaluate/s7_ORACLE_late_original.npz": {
+      "bytes": 411132,
+      "sha256": "93482f480b13409b202170b05a053ef2129eecdcc818a8e48b251c561bae780a"
+    },
+    "evaluate/s8_LEARN_full_eviction_late_native.npz": {
+      "bytes": 683173,
+      "sha256": "05320dcf3a54044bf3a842a272a0a08b5a113dd7cb8ef7b9ead7589c115cf42b"
+    },
+    "evaluate/s8_LEARN_full_eviction_warm.npz": {
+      "bytes": 662812,
+      "sha256": "3a72ba4894e79923babec3c6352e4476b68b9db285a599b3f939f93e88c97912"
+    },
+    "evaluate/s8_LEARN_full_eviction_zero.npz": {
+      "bytes": 660452,
+      "sha256": "b8b775a6dc7e0dc6f778c57331b70ebd23d29032aa42de5e3bae8dc63be70bfe"
+    },
+    "evaluate/s8_LEARN_full_match_zero.npz": {
+      "bytes": 660452,
+      "sha256": "b8b775a6dc7e0dc6f778c57331b70ebd23d29032aa42de5e3bae8dc63be70bfe"
+    },
+    "evaluate/s8_LEARN_full_original.npz": {
+      "bytes": 687365,
+      "sha256": "1b749120d052f78e11be4f7db09b24b8a397a4e80051ce9690317986922f60d7"
+    },
+    "evaluate/s8_LEARN_late_eviction_warm.npz": {
+      "bytes": 445655,
+      "sha256": "50a11dcd144bc09576499a277fa11878f722b4a87e93a505cc10a02c4da908bf"
+    },
+    "evaluate/s8_LEARN_late_eviction_zero.npz": {
+      "bytes": 445655,
+      "sha256": "50a11dcd144bc09576499a277fa11878f722b4a87e93a505cc10a02c4da908bf"
+    },
+    "evaluate/s8_LEARN_late_match_zero.npz": {
+      "bytes": 450783,
+      "sha256": "6747def2603ed91edfb8dc20ae830bda4f88db1d1ec7aa8e6f65a67982d40c0d"
+    },
+    "evaluate/s8_LEARN_late_original.npz": {
+      "bytes": 445655,
+      "sha256": "50a11dcd144bc09576499a277fa11878f722b4a87e93a505cc10a02c4da908bf"
+    },
+    "evaluate/s8_ORACLE_full_eviction_warm.npz": {
+      "bytes": 667591,
+      "sha256": "0e0c3eeeec623a9fda32684d882562192e3884161676e4b2be6ec861ed2b967e"
+    },
+    "evaluate/s8_ORACLE_full_eviction_zero.npz": {
+      "bytes": 664578,
+      "sha256": "7465ae1f5f62f0280480a1e2b56c941c2caf746066130aaec278f89a5a45a4eb"
+    },
+    "evaluate/s8_ORACLE_full_match_zero.npz": {
+      "bytes": 664578,
+      "sha256": "7465ae1f5f62f0280480a1e2b56c941c2caf746066130aaec278f89a5a45a4eb"
+    },
+    "evaluate/s8_ORACLE_full_original.npz": {
+      "bytes": 689903,
+      "sha256": "c280c976e3d050300aa9243915f1911574e53058ad693b7f82400702266f59fd"
+    },
+    "evaluate/s8_ORACLE_late_eviction_warm.npz": {
+      "bytes": 444906,
+      "sha256": "bab7a5833a3fcc1989b09bc25701f6b7c8037a0353f68fd62708ac27f14eb2cd"
+    },
+    "evaluate/s8_ORACLE_late_eviction_zero.npz": {
+      "bytes": 444906,
+      "sha256": "bab7a5833a3fcc1989b09bc25701f6b7c8037a0353f68fd62708ac27f14eb2cd"
+    },
+    "evaluate/s8_ORACLE_late_match_zero.npz": {
+      "bytes": 450561,
+      "sha256": "5b9c13cfe26b6ea4e0991ba95c3bd55ffae09bd286ccce64883406027a29eac3"
+    },
+    "evaluate/s8_ORACLE_late_original.npz": {
+      "bytes": 444906,
+      "sha256": "bab7a5833a3fcc1989b09bc25701f6b7c8037a0353f68fd62708ac27f14eb2cd"
+    },
+    "evaluate/s9_LEARN_full_eviction_late_native.npz": {
+      "bytes": 657861,
+      "sha256": "50c38b9140d36c9ed72a2136bfb3231922d4504d5818feaf2c42231978ed63cc"
+    },
+    "evaluate/s9_LEARN_full_eviction_warm.npz": {
+      "bytes": 640953,
+      "sha256": "438f4aaba59f55497b7626ef7873ae06deb8af338ce53393214b23a2cfaa3b63"
+    },
+    "evaluate/s9_LEARN_full_eviction_zero.npz": {
+      "bytes": 649972,
+      "sha256": "8888aee189adae470207cd661d555bc100d97e978533a140f8855cab7a02cea2"
+    },
+    "evaluate/s9_LEARN_full_match_zero.npz": {
+      "bytes": 649972,
+      "sha256": "8888aee189adae470207cd661d555bc100d97e978533a140f8855cab7a02cea2"
+    },
+    "evaluate/s9_LEARN_full_original.npz": {
+      "bytes": 662333,
+      "sha256": "89925dbe250e711c438bd11ec0761ada092ad546ea055dc716e0646d765b5dbb"
+    },
+    "evaluate/s9_LEARN_late_eviction_warm.npz": {
+      "bytes": 429921,
+      "sha256": "7725a7b1c6b3a6675b21686b2729f898600424bcce0d6e2fa394acc663300d03"
+    },
+    "evaluate/s9_LEARN_late_eviction_zero.npz": {
+      "bytes": 429921,
+      "sha256": "7725a7b1c6b3a6675b21686b2729f898600424bcce0d6e2fa394acc663300d03"
+    },
+    "evaluate/s9_LEARN_late_match_zero.npz": {
+      "bytes": 444412,
+      "sha256": "b7295676e09aac814b914f44b80e5c1f5e1e471576e5950e079029c5a0bcf699"
+    },
+    "evaluate/s9_LEARN_late_original.npz": {
+      "bytes": 429921,
+      "sha256": "7725a7b1c6b3a6675b21686b2729f898600424bcce0d6e2fa394acc663300d03"
+    },
+    "evaluate/s9_ORACLE_full_eviction_warm.npz": {
+      "bytes": 629422,
+      "sha256": "088073366e444ebd6892b65150570dfffa1a46e7ade8b00d3cae998beed14e5c"
+    },
+    "evaluate/s9_ORACLE_full_eviction_zero.npz": {
+      "bytes": 642037,
+      "sha256": "67172c9faa0c1fd7a533ccae0b73149d99a189bfac194eb73208b83263e023e5"
+    },
+    "evaluate/s9_ORACLE_full_match_zero.npz": {
+      "bytes": 642037,
+      "sha256": "67172c9faa0c1fd7a533ccae0b73149d99a189bfac194eb73208b83263e023e5"
+    },
+    "evaluate/s9_ORACLE_full_original.npz": {
+      "bytes": 651160,
+      "sha256": "b4650d1434a5e2d8c56bc803f983d80bfcdef31e130d50efe0cb418077992772"
+    },
+    "evaluate/s9_ORACLE_late_eviction_warm.npz": {
+      "bytes": 429022,
+      "sha256": "f56389715b5d3c85492cdf5ed503dbfd8b30717249937fd8da098f350c6b75d5"
+    },
+    "evaluate/s9_ORACLE_late_eviction_zero.npz": {
+      "bytes": 429022,
+      "sha256": "f56389715b5d3c85492cdf5ed503dbfd8b30717249937fd8da098f350c6b75d5"
+    },
+    "evaluate/s9_ORACLE_late_match_zero.npz": {
+      "bytes": 442723,
+      "sha256": "aa59b8018cf6b1d326077a5f69e4bede5243c8f356192167bcd1b7aab6594ccb"
+    },
+    "evaluate/s9_ORACLE_late_original.npz": {
+      "bytes": 429022,
+      "sha256": "f56389715b5d3c85492cdf5ed503dbfd8b30717249937fd8da098f350c6b75d5"
+    },
+    "evaluate/test_s0.npz": {
+      "bytes": 6826,
+      "sha256": "07cc85c0aecdc29e988bd289402de2c6b0b1fb19187814257c19b1a2e433eacc"
+    },
+    "evaluate/test_s1.npz": {
+      "bytes": 6786,
+      "sha256": "bb8ce277cd01559666094fce6da857a4978e23b7f55c6e143938c21bbd3d8603"
+    },
+    "evaluate/test_s10.npz": {
+      "bytes": 6772,
+      "sha256": "8b9c5f113ba9849d28884dc6ca9d2f86eade20c64ce3776680c8d5de09e68430"
+    },
+    "evaluate/test_s11.npz": {
+      "bytes": 6803,
+      "sha256": "80f9a1406bd92c4729a7c90db0f40f1324da58770e90e717b2bf80fea4f78bc4"
+    },
+    "evaluate/test_s2.npz": {
+      "bytes": 6771,
+      "sha256": "6b427757d16e683bf579afe91f550aa252116e28c54933577034ed1fc1a6a3fb"
+    },
+    "evaluate/test_s3.npz": {
+      "bytes": 6812,
+      "sha256": "52da1d4e2681a0c5eb4f331becc0af5e9ad997f04526e5adecb1201bb902abd9"
+    },
+    "evaluate/test_s4.npz": {
+      "bytes": 6782,
+      "sha256": "a371c32817b9fb48dac074b58433a73dc682062695b2493d1184c9d17d04e886"
+    },
+    "evaluate/test_s5.npz": {
+      "bytes": 6807,
+      "sha256": "e24b62b8a42492c885dad43266002e3be184d3684c8ae134eb10e0a757b14f9e"
+    },
+    "evaluate/test_s6.npz": {
+      "bytes": 6789,
+      "sha256": "5ff81f565e7741b464cbc51f8eea337e6b66e9faaf33a2f432fd2f4a1685ae54"
+    },
+    "evaluate/test_s7.npz": {
+      "bytes": 6814,
+      "sha256": "f0e9b8afe7f748aae5e5b5c18fc2d52b14de508ebe0fa0ec30609d5dff0d589a"
+    },
+    "evaluate/test_s8.npz": {
+      "bytes": 6802,
+      "sha256": "33b465938ae81d1e3425a347acc6b94edeb671aafd0f53117e43e81387f94066"
+    },
+    "evaluate/test_s9.npz": {
+      "bytes": 6800,
+      "sha256": "718ac3f77982055d50effc62f95035dd2444c5b61c4f8404949579e3364b55ee"
+    },
+    "finalize.py": {
+      "bytes": 4052,
+      "sha256": "388cb7876abab418d0f92200710a8fe939801019177a9b8b763be9e8eee1b753"
+    },
+    "FREEZE.json": {
+      "bytes": 4717,
+      "sha256": "1f307301f7ad2781b4d4e26d23ac4fdedb6f91cd6b79e2b9a2de65747c18d4c3"
+    },
+    "independent_capacity.py": {
+      "bytes": 5301,
+      "sha256": "285b84cdd671e881015f9f11bdbf8a19094a787d96d29a5997ec7207a07e6f15"
+    },
+    "independent_capacity_data.py": {
+      "bytes": 4198,
+      "sha256": "251d3392c8ae743e2b214ce4477c4279e76246ef52c997991a84d748aaa6ffdd"
+    },
+    "independent_reset.py": {
+      "bytes": 5658,
+      "sha256": "91df83e1da652ca9c5467c33b103e7701f255087c146d5c3fa1ef0c761cf03de"
+    },
+    "independent_warm.py": {
+      "bytes": 6924,
+      "sha256": "f15232655aab7a6b41e5ffc998e7096293167a3da65e54eae7b2bceb3f911578"
+    },
+    "learned_model.py": {
+      "bytes": 7819,
+      "sha256": "f2cdb762f13f10fcf84517eb3069f1812fb2537262cde774b9d2f76f19648583"
+    },
+    "NEXT_PLAN.md": {
+      "bytes": 4231,
+      "sha256": "5040c7b9fb4b0abadf42bfa2601884ed2e482cf4c03d5c9ca2b85378ceb4625b"
+    },
+    "original_tan.py": {
+      "bytes": 5132,
+      "sha256": "bcf8a3bbc390bdc672c1d80c669410e550011450a94db8c5330706be4c78ddfa"
+    },
+    "population.py": {
+      "bytes": 5219,
+      "sha256": "1b3f72f6ad3d54d4bcbbbb2ea43c5f6b65dcf12f83095435d8469be5144c2418"
+    },
+    "PRECHECK.json": {
+      "bytes": 728,
+      "sha256": "e052540b738c26a8293e623908083fcf63fa5359d321ac850ac98ab3d1cd3bf8"
+    },
+    "preflight.py": {
+      "bytes": 9928,
+      "sha256": "3d2df710263761d44d066edab67347b32426fcd85ad18b38608365460cc47a11"
+    },
+    "PRIMARY_EFFECTS.csv": {
+      "bytes": 607,
+      "sha256": "ae6bf61f6f0b8158196381ef3f40626c3caab9848f9ed0c5f6b421db791c3e12"
+    },
+    "PROTOCOL.md": {
+      "bytes": 6091,
+      "sha256": "c576e86796c707144a43c409017550b6ced497a9f2db97d444c8530b0cfa6ed4"
+    },
+    "reference.py": {
+      "bytes": 5491,
+      "sha256": "8c492af9b31dbfee46e1ab9e9ef71dd3987cc03a7fbf5fce72002217ef3b0c96"
+    },
+    "REPORT.md": {
+      "bytes": 13836,
+      "sha256": "333ad1d8bac251d161139d2ae732051bb38c533f4dcb027c8620dad50e6467de"
+    },
+    "report.py": {
+      "bytes": 15230,
+      "sha256": "1c136ebbe7c16bcad016fd5778da3146b348d6ffc69df526b50b15aade7aa8d0"
+    },
+    "REPRODUCE.md": {
+      "bytes": 1926,
+      "sha256": "79b8fed7ba1796808303d6f4ab3b907ea9d8886acd53c3fe5f719cd985dad1b7"
+    },
+    "reset_model.py": {
+      "bytes": 7306,
+      "sha256": "02cc48e322868143dbddaf8d21603b2ce9f67071864e6a7b92667e1a3b009bb9"
+    },
+    "RESULTS.json": {
+      "bytes": 1874354,
+      "sha256": "f9bec51f0022b53f3f0757b94def35d75b6db339404cec06506cc481b656e2cf"
+    },
+    "run.py": {
+      "bytes": 15564,
+      "sha256": "8a99462d4f9568eab1ab527c23a8f4baecb50841872af0c831381a77397a2b41"
+    },
+    "RUN_STATE.json": {
+      "bytes": 99,
+      "sha256": "a003cb0aa709a498ef315c1ff8ec975af7baed92934a7321724ba7a3c6e635aa"
+    },
+    "SCIENCE_LOG.txt": {
+      "bytes": 700,
+      "sha256": "efd6c53f1a9359ac7b42e8a6e28fd0b97b4a5f12468e4f691be988a01629da1f"
+    },
+    "SCIENCE_SUMMARY.json": {
+      "bytes": 883,
+      "sha256": "8f3e053d1064454ded7b903a9712b0761b770fc3ae39411178e29538922a0da9"
+    },
+    "SECONDARY_EFFECTS.csv": {
+      "bytes": 9719,
+      "sha256": "d5e361384d0058c8199253572f830fe603920fcab3389d7efaff7996590a3eb1"
+    },
+    "SOURCE_LOCK.json": {
+      "bytes": 3572,
+      "sha256": "d9f57723eb8093d0dea56e046128929cc0fb1f6dfb814d0e34d7bbcd92663a58"
+    },
+    "summarize.py": {
+      "bytes": 20778,
+      "sha256": "5339a264f2be009486cc2c9fcccb3902b16547a15ba2935863c0ad5a11b6d91f"
+    },
+    "TIMING.json": {
+      "bytes": 612,
+      "sha256": "2094dd09dfe9df09fc6c04e7624e3251bdc7c076ef240e5482b6a21f42dba1d3"
+    },
+    "VISUAL_QA.json": {
+      "bytes": 452,
+      "sha256": "ec54833cc40bdd2db3825a3dbb6015d2bfe2c9c6cb6d3edfdd01a9816f409136"
+    },
+    "warm_model.py": {
+      "bytes": 9061,
+      "sha256": "3ee2a9c12e01ebe18da0ba878cf96bd8beccbe6382998608114d2f177a45a1a1"
+    },
+    "warm_reference/s0_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "e9905b610d679ad1efe0c0110fa8093810e3802a7d715690a31a13d7dfdf304b"
+    },
+    "warm_reference/s0_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "f171b632fe5bf4452184114d2890ebcfcb0492320137e57e2a25d7168c531e04"
+    },
+    "warm_reference/s10_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "f6c70f4109a7e404ac793ca5daddda9d087fffa36074d5524ca723a6d366e640"
+    },
+    "warm_reference/s10_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "f0a7c39dd6b52bfac399096287e24e3e74df292ec8b76babd3d901a4a70ceb49"
+    },
+    "warm_reference/s11_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "43bb1db65c095aaa6117aa1e0fc2522d153512519b5a395a284ecdce4279f128"
+    },
+    "warm_reference/s11_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "45322b63a9fe7c770d12d4669e8e30c962e59c81c75c514121b182942c64d65e"
+    },
+    "warm_reference/s1_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "6058fee5700ef1767a35d15320e19e300ef4f7f601944f3c592d1180d68a5d87"
+    },
+    "warm_reference/s1_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "3c72329c7060183a09beaafee4c8c25dc6571532bc9b4a0fceee851f8e298bb9"
+    },
+    "warm_reference/s2_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "ad67526fa27e03c283f64a9125aaa1b2bacd6027f2a5c833f0cb634cb91aad28"
+    },
+    "warm_reference/s2_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "0b195248df5a8e65b7bc4828b35b0b8c7447dd9858b2a65ec263b51dca748d2e"
+    },
+    "warm_reference/s3_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "63d410289baa32d02ea47ad544c91b2328fd9202fbaa30897dd8d9e210cca251"
+    },
+    "warm_reference/s3_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "6fd87be2c2f2d5179ab2d9e7fde6971412dfd14d551d2e3c0049e2806f2d1b01"
+    },
+    "warm_reference/s4_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "12be2a1e90b7c7e9aaae950b4980e6af661c5913d9e00c4865b34aeac851e32a"
+    },
+    "warm_reference/s4_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "ab508e0e5867b0f2be2429872919d2dd49ea14fee778f8a53521cfe7d2daf4d1"
+    },
+    "warm_reference/s5_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "384309abbb3a01487fff4be16fc1b55b5591279d7bf50f118cbde2b73951dec5"
+    },
+    "warm_reference/s5_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "8c157017478401250b84cd3863e42286a0a2d74cc2260d6aba66f27bbca5f8dd"
+    },
+    "warm_reference/s6_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "5422b2559b2bbf19237b845898e5e6883aa6edc0472d5b0f4bec4f17dbc5bd3b"
+    },
+    "warm_reference/s6_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "337cad3043238eb7aa268924001a13f867616265d38d696cae569aa05e107227"
+    },
+    "warm_reference/s7_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "505ee7bb3ca1682708d8b786f4c44c9697b04e9fc3f32e7ecba202c8c5760685"
+    },
+    "warm_reference/s7_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "a39c1aacae811510bc28cdf5269d8d9f38b5d1f1a066657372658bd83bdc66bc"
+    },
+    "warm_reference/s8_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "f792b4abf1363e49d67f50a7faa2b358142468567cdd3dc82c7d7e3f23839eb8"
+    },
+    "warm_reference/s8_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "5db6e66d90dfdbc654d1712b0e189b5d089d6025ec3ab72f948ac0a15b347671"
+    },
+    "warm_reference/s9_LEARN.npy": {
+      "bytes": 336,
+      "sha256": "fc543e141d1a3307fbbc37a8b216fc5c26a1011a30e97b5515496fdbb3ed1b07"
+    },
+    "warm_reference/s9_ORACLE.npy": {
+      "bytes": 336,
+      "sha256": "0b859ec0f6bde0fc7932c776d1dfc8aa8e04541347e9eaf1e83c2b1360849572"
+    },
+    "WARM_REFERENCE_EFFECTS.png": {
+      "bytes": 154879,
+      "sha256": "70d5a77563b5fde63a561c0c9e9df65aea1de25605f9332d4cef0ea21da296e8"
+    },
+    "WARM_REFERENCE_EFFECTS.svg": {
+      "bytes": 67786,
+      "sha256": "f0639335a0e90544ec63b9c7077a8be2b5e7f0ca36b86454950d684091180b91"
+    },
+    "weights/s0_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "d1134ce3a1dc9381644a58d5d04c68fcd2ba90801722d5a924e92a306af9b378"
+    },
+    "weights/s0_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "251dfe69f2f70a82f0c8feecec9666ae2c23ef09fbe4d99baf8f3f140447739f"
+    },
+    "weights/s10_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "c9cfab3aa6b00a5719ccfd18e61ab65d1e066f72245ca37a3548b645860d0e4e"
+    },
+    "weights/s10_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "36e7d17e7416488ad55a604c09571ffcb424570061155fe6bf2165dcf5937e6f"
+    },
+    "weights/s11_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "dbf60466222ec2d84900d52f6d4a4d0e17f50bcb5c0126061e2876687630a8a2"
+    },
+    "weights/s11_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "3438a00eef85a832e0546e0de72bfb12559328d262daddff23159a6f7b93fbf1"
+    },
+    "weights/s1_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "d5eeaa68b76b8158c26d01ed0b71f03acdbcb445fcecf4d6687d892fd0ff0357"
+    },
+    "weights/s1_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "4c129e14bd080aa1e4ed732b20529a8fa4dc0771233d0759e39c11eb51010d3d"
+    },
+    "weights/s2_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "207f27d0accc413f88a1607ab446a6ccbaf850f2a0b47288967b99645749243c"
+    },
+    "weights/s2_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "518e16d242fd986c6b3fa08c7c5147205333fe25d5e70ff21f253ca76f9b5cf7"
+    },
+    "weights/s3_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "1b8dfdb027dfc4e90142b36db98f2a3450e8b76621666b143f179142173524f3"
+    },
+    "weights/s3_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "73ff11264a4dccaa3893a9a1685a4f031994f435952a815870f24e73c685bc93"
+    },
+    "weights/s4_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "1e7a3b39fc682778d0d016d8839db4a93e0f3959c13e104dbf1e30ae6ab4d7ae"
+    },
+    "weights/s4_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "fe43e022a6396b563942887c2e006362fc2f745f4cbb0f2ef6be6f290270a285"
+    },
+    "weights/s5_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "5360831cd973bd44faa1aa31203a35ea3ff8b1e686a238f133dd809a02ff8fc1"
+    },
+    "weights/s5_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "63ce93923e9c5383dfbcd3515954113badbefe1dde0535101e8e7fccec11939b"
+    },
+    "weights/s6_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "db90852dce80c70541425008ddcddb2261dae63fd192d150d6590f7956940ef6"
+    },
+    "weights/s6_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "5df5830aacbd421a380c6b4da1248bae0e1c6cfbc042961e30b33a527f149de5"
+    },
+    "weights/s7_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "1f098bb247a77a8fd1b40414a01df6042198fb407347e2afe0a59c22731893ff"
+    },
+    "weights/s7_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "5885bf8b77302ba98084811339e93ecb58eecdc86e9e9724b273415ef5b30c8b"
+    },
+    "weights/s8_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "a86099cfd607ff8d9d3a1af53324859644220a00acbed4b1053383ccc67738ce"
+    },
+    "weights/s8_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "ae9cdb3914f58b0766608541ef45d894c119ec9841fd125b299786f97b9095ec"
+    },
+    "weights/s9_LEARN.npy": {
+      "bytes": 1568,
+      "sha256": "affe352f55ae18ac5346b3b150253b4ce1612235b536c8b7e6e6266056c1acb0"
+    },
+    "weights/s9_ORACLE.npy": {
+      "bytes": 1568,
+      "sha256": "7d11d0dfe25884e6ec5cbdec9af5cbd438e67769d60d1446f2596d773a81785b"
+    },
+    "WORK_STATUS.json": {
+      "bytes": 594,
+      "sha256": "5e25e45d88104ed5b8683f7e275bb9a08db4c7af66750bd8a8a021e1dcb9fdab"
+    }
+  },
+  "total_bytes": 114217276,
+  "excludes": "MANIFEST.json itself"
+}

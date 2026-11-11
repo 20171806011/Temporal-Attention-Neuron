@@ -1,0 +1,80 @@
+{
+  "query_steps": 8,
+  "extra_simulated_steps": 0,
+  "benchmark_batch_episodes": 1024,
+  "benchmark_warmups_per_method": 3,
+  "benchmark_repetitions_per_method": 64,
+  "benchmark_method_order": [
+    "native",
+    "count2",
+    "moment2"
+  ],
+  "benchmark_unit": "nanoseconds per whole batch, initialization, step loop and terminal prediction",
+  "moment_weights": [
+    -7,
+    -5,
+    -3,
+    -1,
+    1,
+    3,
+    5,
+    7
+  ],
+  "moment_integer_range": [
+    -32,
+    32
+  ],
+  "integer_counter_bytes": 4,
+  "learned_coefficient_bytes": 8,
+  "methods": {
+    "native": {
+      "persistent_counter_bytes": 8,
+      "learned_scalars": 0,
+      "learned_bytes": 0,
+      "raster_buffer_bytes": 0,
+      "step_integer_adds": 2,
+      "step_integer_subtracts": 0,
+      "step_integer_multiplies": 0,
+      "terminal_integer_adds": 0,
+      "terminal_integer_subtracts": 0,
+      "terminal_float_multiplies": 0,
+      "terminal_float_adds": 0,
+      "terminal_comparisons": 1
+    },
+    "count2": {
+      "persistent_counter_bytes": 8,
+      "learned_scalars": 3,
+      "learned_bytes": 24,
+      "raster_buffer_bytes": 0,
+      "step_integer_adds": 2,
+      "step_integer_subtracts": 0,
+      "step_integer_multiplies": 0,
+      "terminal_integer_adds": 1,
+      "terminal_integer_subtracts": 1,
+      "terminal_float_multiplies": 2,
+      "terminal_float_adds": 2,
+      "terminal_comparisons": 1
+    },
+    "moment2": {
+      "persistent_counter_bytes": 12,
+      "learned_scalars": 3,
+      "learned_bytes": 24,
+      "raster_buffer_bytes": 0,
+      "step_integer_adds": 3,
+      "step_integer_subtracts": 1,
+      "step_integer_multiplies": 1,
+      "terminal_integer_adds": 0,
+      "terminal_integer_subtracts": 1,
+      "terminal_float_multiplies": 2,
+      "terminal_float_adds": 2,
+      "terminal_comparisons": 1
+    }
+  },
+  "offline16": {
+    "features": 16,
+    "learned_scalars": 17,
+    "learned_bytes": 136,
+    "archived_uint8_raster_bytes": 16
+  },
+  "scope": "Per-episode persistent int32 arrays and per-model folded float64 parameters in reference readout. Native means forced class-0 ties for benchmark. Shared time schedule, transient NumPy vectors, dispatch, original network state, and audit archives are separate. Counts are not power estimates."
+}

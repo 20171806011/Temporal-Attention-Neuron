@@ -1,0 +1,123 @@
+{
+  "utc": "2026-11-11T17:50:39.351071+00:00",
+  "scope": "SYNTHETIC_ENGINEERING_ONLY",
+  "host": "REDACTED_HOST",
+  "design": {
+    "examples": 256,
+    "edge_examples": 12,
+    "edge_packet": 8,
+    "edge_order": [
+      "A",
+      "B",
+      "C"
+    ],
+    "variants": {
+      "A": {
+        "packet_size": 32,
+        "zip_mode": 8
+      },
+      "B": {
+        "packet_size": 256,
+        "zip_mode": 8
+      },
+      "C": {
+        "packet_size": 256,
+        "zip_mode": 0
+      }
+    },
+    "rounds": [
+      [
+        "A",
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "B",
+        "A"
+      ]
+    ],
+    "caps_seconds": {
+      "science": 180.0,
+      "audit": 300.0
+    },
+    "trial_admission_reserve_seconds": 25.0,
+    "edge_admission_reserve_seconds": 5.0,
+    "memory_cap_bytes": 1073741824,
+    "artifact_cap_bytes": 1610612736
+  },
+  "references": {
+    "DEND-TAN-shared-block-budget-20261111/TIMING.json": "68aec1d9d0e581cf1c29423e6467d14506abf0e71f09feb26825128a9bb7de80",
+    "DEND-TAN-shared-block-budget-20261111/TIMING_AUDIT.json": "555152ef00da78c6341e5cb582ddbf879d749d859ab66cc7d83f89ce9e222789",
+    "DEND-TAN-shared-block-budget-20261111/WORK_STATUS.json": "a8414f81198cce73a511ebc9c421839f06c82673106a775c30eef64079f41b52",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/AUDIT.json": "2dcaf5cb430167b4babfd975ab9c9cd9a93bf19dcc6ad9e64d3e9d9f9ea61bfe",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/base.npz": "62cd212c21b3c0e0c1cbae4d9a51519297b72d3d20e685aa9834a268b8ed0ddf",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/BLOCK.json": "3f767cc6e0b063419f25fd350f9d6d1eba0e772026b2a3e5829f81f6c299378b",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/MICROBENCH.json": "cd2912135d814903f43b97c903444ee3a2d6bde3bb00b92f6bd9daf2db6163af",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_four_guarded.npz": "0676cbe561ee6d5a897fcce20c61902ceda81d42c02c7a03cc7af42f7b019959",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_four_original.npz": "fb58e3b25b6f6617b57225d84969d21d5279c6b1461d10efad8cfe7e5748eab7",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_four_replay.npz": "622c267089ca45bce7f8f56915d24bab7d77311606700396ea981bf65ff3ae80",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three0_guarded.npz": "bd21335a6c56a10b46b6027f658ad1b44b11f9fe4bdc61baa49b16db3285e051",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three0_original.npz": "d504b267a4d4b027680dd68b1f7b3e0908559a670b47b50f0ad2011b3585ffb6",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three0_replay.npz": "f8018f979033de196a48267b5d3247771ae708c53da64d9820132af37c2f1f73",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three2_guarded.npz": "6416ffddc8ee27a06df89471d13750db6dda0a0e25459cc1a9caf92d70827039",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three2_original.npz": "a7247d6d9f8b6b73e17751eadb1d549e1bd145f1450b489edb8fefabb5845642",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_three2_replay.npz": "f7a05597d5aabdfe6efc1c062e1a39139cbea8c6b9f3427872d1c7623fc686c0",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_two_guarded.npz": "5e91362b090c59ed246bd2bbd52991acacbde3115b61aba5ffb8a256a66982de",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_two_original.npz": "7b192a6048ae0619562e71fd65dd68026f91f9be7973fff82f6854b58950b4c4",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/near_two_replay.npz": "303b6bd55f6fcef0e7a1c8a57a694dea41164e6a6b0fe6eb572c8571e993f4a1",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_four_guarded.npz": "bba2fdfa64983284cd0254eaeb8cd469c13e684913d9cd3d6c3afa81d6e0ba01",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_four_original.npz": "ea55992e5f6b98dc3af32acee3bdd113fdde954b91c9362ab067024ba4328e34",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_four_replay.npz": "a51b78942c450322031f6dee999bebd90b3ba5a9ef8b6dd1bd63cf36b091e939",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three0_guarded.npz": "4482dd371d63acec2e4b9f3d3b25dfccc726f50542688284b57f39eb531c2b56",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three0_original.npz": "e719f117731edb20374da16c371742089993a84f44286789f4bc12c0dd879463",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three0_replay.npz": "854749a186c95dc82207889259621d7a6bbe84b0cce3e2df981aea9bfff068d7",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three2_guarded.npz": "fee12308545be0d9f1dd45b03b77cf20dbbfa4267482be6f82894ff288bfdb03",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three2_original.npz": "b95307b5c32b584be4a6133fc5a4a7d7bb33e95815455d4a959e260f1764a2c0",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_three2_replay.npz": "d43583ac6bc665bdd6b3339698d0e02c1deaa6a4447509d01721c18e8fbfc8b7",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_two_guarded.npz": "5fb3827b3a0f7d8acf2ee0282e5cb59fce0540f23bdd3039fdfe9932445babd3",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_two_original.npz": "823b84655ce76cce80a29641cc315e2a3f230e8ca271a5438d5837288e916169",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/orthogonal_two_replay.npz": "baf241d50c2c12689365eb5fd95a191bd03ce290e580c5aeaea7a201e73a1ab7",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/ROWS.json": "ee9dfe0616e4d285bf92f35432258dbd4f677c246b49774444e81a4268eabc85",
+    "DEND-TAN-shared-block-budget-20261111/trials/n256_r1/weights.npy": "206875cc8abe4b716dd4f7e6ec6491ddfbb212e3670d061463b46d58bfe3695e",
+    "DEND-TAN-shared-block-budget-20261111/MANIFEST.json": "80d1b748ca92e911af3f3de688c9832ae313726bb6c7a84edbcb3c9d0d4f66af",
+    "DEND-TAN-shared-replay-fixture-20261111/fixture/edge.npz": "2c8d075ab1a2c62930aea529db308d981c11f097d12b92d76d16622b5e49335c",
+    "DEND-TAN-shared-replay-fixture-20261111/fixture/weights.npz": "abbc14c3b6e1fb78bfb7130e847522b6634fd331b55548d0f5dc892e3c24f81c",
+    "DEND-TAN-shared-replay-fixture-20261111/fixture/edge_expectations.json": "d2c6879778c6cf7f96ffe7918b2cdff83d8995e3d339588bf96adbc1a66015d3",
+    "DEND-TAN-shared-replay-fixture-20261111/evaluate/edge_original_separate.npz": "a34f981f2afe214c856fcc550178188555b206625925562bd806481501df4fef",
+    "DEND-TAN-shared-replay-fixture-20261111/evaluate/edge_replay_separate.npz": "ccd6051a0c6de4a7769f94f38c00bfce3f9b65571f737d249e0da02b783fc948",
+    "DEND-TAN-shared-replay-fixture-20261111/evaluate/edge_guarded_separate.npz": "33c77595ccb2236ac67135255f421b0cdfa6c2f2534030615ff69813310dd8a7",
+    "DEND-TAN-shared-replay-fixture-20261111/MANIFEST.json": "a478e97ac965402553f9089c259d4b8f58b1b27d7bf8311a753c5c4b6e18fa25",
+    "DEND-TAN-evicted-key-confirm-20261111/WORK_STATUS.json": "9a9f01adc4b041a6cd4db2cf64e0d192e21eb267d03d5a10ab24d633e1f99a4c"
+  },
+  "files": {
+    "block.py": "11e889cd7be47534bb90ed7bde2de19f6854511bc6a2ac3acf13d9a150d88d1a",
+    "block_audit.py": "c028ecde8e5406c9308486ecfc3aaaf68d726a42e98b3fc95530175a633eae3a",
+    "capacity_data.py": "a0ff397933170e7bc52525a9c530e6e1c7479fdb073f14fafd602fc19db0bf57",
+    "capacity_metrics.py": "3e7a6cad4fd2451ee36e152072484b8e4d791cabb956a03c67f8f9a671b44e6b",
+    "capacity_model.py": "731fe6f2fcfe25be0984d1a1123c51004c6a115b5bb1ffce37deddccc90318af",
+    "compare.py": "91af61362e7c4eec72af1e1364463e65a44781ac363cbfef89a4dd635d66b695",
+    "confirm_data.py": "e2de3219e477ebfee989796fabcb4591cdb175e3a27cbc664602c5ad6bae7e57",
+    "event_model.py": "0aa9b7137ec60e50a1e05d24ee5285333b3a19a2902adda7f0c71e85d8be1891",
+    "guard_model.py": "1de060c6cc46e6c7be479f515157c6ed82d54e2a19dbead055e3378440be3ff0",
+    "independent_capacity.py": "285b84cdd671e881015f9f11bdbf8a19094a787d96d29a5997ec7207a07e6f15",
+    "independent_capacity_data.py": "251d3392c8ae743e2b214ce4477c4279e76246ef52c997991a84d748aaa6ffdd",
+    "independent_event.py": "79d69829ab2cb57a57bc5d91aedb408d97ce0c82347b34f29ceb594a58d9f90a",
+    "independent_guard.py": "55734e0cf45985cb444a6dc710cc14b0ccd6f621002e70c6fef43b3a32302011",
+    "independent_reset.py": "91df83e1da652ca9c5467c33b103e7701f255087c146d5c3fa1ef0c761cf03de",
+    "independent_warm.py": "f15232655aab7a6b41e5ffc998e7096293167a3da65e54eae7b2bceb3f911578",
+    "learned_model.py": "f2cdb762f13f10fcf84517eb3069f1812fb2537262cde774b9d2f76f19648583",
+    "original_tan.py": "bcf8a3bbc390bdc672c1d80c669410e550011450a94db8c5330706be4c78ddfa",
+    "population.py": "1b3f72f6ad3d54d4bcbbbb2ea43c5f6b65dcf12f83095435d8469be5144c2418",
+    "reference.py": "8c492af9b31dbfee46e1ab9e9ef71dd3987cc03a7fbf5fce72002217ef3b0c96",
+    "reset_model.py": "02cc48e322868143dbddaf8d21603b2ce9f67071864e6a7b92667e1a3b009bb9",
+    "seal.py": "91219dd76b5f1f814a00ae57aed3a6f436568d87cec89e26dfdb80bfb0860f68",
+    "shared_model.py": "6340156040d3bd60bfdfcc1a7cf527da62157f198f8123fc6ffd3c8fae7269f3",
+    "study.py": "a7b4c85739700d69d3c1245b397a64f90fbf45edaf0ce25d8d918232bd4e53a8",
+    "warm_model.py": "3ee2a9c12e01ebe18da0ba878cf96bd8beccbe6382998608114d2f177a45a1a1",
+    "PROTOCOL.md": "9770ab68c30c99c2bf434b3d5f1bebd7472da46e13a41b2e0ceeffaf5c27deca",
+    "REPRODUCE.md": "9ba7ab1b0801ff20fc93f032134454459fb2e3cfe3b62e61a2b760673ff0c1f1"
+  },
+  "formal_training_fits": 0,
+  "formal_evaluations": 0
+}

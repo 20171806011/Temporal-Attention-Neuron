@@ -1,0 +1,1620 @@
+{
+  "status": "POSTHOC_SAVED_RECORDS_AND_COUNT_ALGEBRA",
+  "new_model_runs": 0,
+  "new_training_runs": 0,
+  "totals": {
+    "all_silent_0_0": 6,
+    "all_saturated_8_8": 11,
+    "all_other_ties": 1,
+    "variable_decision_or_tie": 6
+  },
+  "rows": [
+    {
+      "id": "s0_DEND_lr0",
+      "arm": "DEND",
+      "lr": 0.01,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 2.853495784702607e-07,
+      "last_training_regularizer_gradient_norm": 3.5190949833046524e-06
+    },
+    {
+      "id": "s0_DEND_lr1",
+      "arm": "DEND",
+      "lr": 0.0025,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.09392451335596054,
+      "last_training_regularizer_gradient_norm": 5.027175320318934e-06
+    },
+    {
+      "id": "s0_FULL_lr0",
+      "arm": "FULL",
+      "lr": 0.01,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.00011780390417079956,
+      "last_training_regularizer_gradient_norm": 3.783255979278779e-06
+    },
+    {
+      "id": "s0_FULL_lr1",
+      "arm": "FULL",
+      "lr": 0.0025,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.00130826432072502,
+      "last_training_regularizer_gradient_norm": 5.022577951223495e-06
+    },
+    {
+      "id": "s0_NOATT_lr0",
+      "arm": "NOATT",
+      "lr": 0.01,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.0006020111055993133,
+      "last_training_regularizer_gradient_norm": 5.344972277111804e-06
+    },
+    {
+      "id": "s0_NOATT_lr1",
+      "arm": "NOATT",
+      "lr": 0.0025,
+      "seed": 0,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            7.0
+          ],
+          "n": 6
+        },
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 250
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0625,
+          "coverage": 0.0625
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.03125
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.0011211916277464426,
+      "last_training_regularizer_gradient_norm": 5.175975402239146e-06
+    },
+    {
+      "id": "s0_GAIN2_lr0",
+      "arm": "GAIN2",
+      "lr": 0.01,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 1.446396187479477e-07,
+      "last_training_regularizer_gradient_norm": 3.799595114087436e-06
+    },
+    {
+      "id": "s0_GAIN2_lr1",
+      "arm": "GAIN2",
+      "lr": 0.0025,
+      "seed": 0,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 16.0,
+      "last_training_task_gradient_norm": 0.0004092546983011177,
+      "last_training_regularizer_gradient_norm": 4.378888278115502e-06
+    },
+    {
+      "id": "s1_DEND_lr0",
+      "arm": "DEND",
+      "lr": 0.01,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.984375,
+      "last_training_task_gradient_norm": 4.127902686968638e-05,
+      "last_training_regularizer_gradient_norm": 5.165225893371878e-06
+    },
+    {
+      "id": "s1_DEND_lr1",
+      "arm": "DEND",
+      "lr": 0.0025,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.984375,
+      "last_training_task_gradient_norm": 0.02790375399643195,
+      "last_training_regularizer_gradient_norm": 5.104306030260416e-06
+    },
+    {
+      "id": "s1_FULL_lr0",
+      "arm": "FULL",
+      "lr": 0.01,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.765625,
+      "last_training_task_gradient_norm": 0.0008360269036952711,
+      "last_training_regularizer_gradient_norm": 5.075106699589273e-06
+    },
+    {
+      "id": "s1_FULL_lr1",
+      "arm": "FULL",
+      "lr": 0.0025,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.765625,
+      "last_training_task_gradient_norm": 0.00481349036337063,
+      "last_training_regularizer_gradient_norm": 5.012319427423234e-06
+    },
+    {
+      "id": "s1_NOATT_lr0",
+      "arm": "NOATT",
+      "lr": 0.01,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.8125,
+      "last_training_task_gradient_norm": 2.2050794306864678e-05,
+      "last_training_regularizer_gradient_norm": 4.9098153545111695e-06
+    },
+    {
+      "id": "s1_NOATT_lr1",
+      "arm": "NOATT",
+      "lr": 0.0025,
+      "seed": 1,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 247
+        },
+        {
+          "count": [
+            1.0,
+            0.0
+          ],
+          "n": 9
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.125
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.015625,
+          "coverage": 0.015625
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.8125,
+      "last_training_task_gradient_norm": 0.1233738108992518,
+      "last_training_regularizer_gradient_norm": 4.977599440475875e-06
+    },
+    {
+      "id": "s1_GAIN2_lr0",
+      "arm": "GAIN2",
+      "lr": 0.01,
+      "seed": 1,
+      "category": "all_silent_0_0",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.421875,
+      "last_training_task_gradient_norm": 0.0003008131036968171,
+      "last_training_regularizer_gradient_norm": 5.8240314590698535e-06
+    },
+    {
+      "id": "s1_GAIN2_lr1",
+      "arm": "GAIN2",
+      "lr": 0.0025,
+      "seed": 1,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            3.0
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            0.0,
+            5.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1.0,
+            2.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            1.0,
+            3.0
+          ],
+          "n": 6
+        },
+        {
+          "count": [
+            1.0,
+            4.0
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            1.0,
+            5.0
+          ],
+          "n": 9
+        },
+        {
+          "count": [
+            1.0,
+            7.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            2.0,
+            1.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            2.0,
+            2.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            2.0,
+            3.0
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            2.0,
+            4.0
+          ],
+          "n": 8
+        },
+        {
+          "count": [
+            2.0,
+            5.0
+          ],
+          "n": 20
+        },
+        {
+          "count": [
+            2.0,
+            6.0
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            2.0,
+            7.0
+          ],
+          "n": 9
+        },
+        {
+          "count": [
+            3.0,
+            1.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            3.0,
+            2.0
+          ],
+          "n": 12
+        },
+        {
+          "count": [
+            3.0,
+            3.0
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            3.0,
+            4.0
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            3.0,
+            5.0
+          ],
+          "n": 25
+        },
+        {
+          "count": [
+            3.0,
+            6.0
+          ],
+          "n": 11
+        },
+        {
+          "count": [
+            3.0,
+            7.0
+          ],
+          "n": 7
+        },
+        {
+          "count": [
+            4.0,
+            1.0
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            4.0,
+            2.0
+          ],
+          "n": 29
+        },
+        {
+          "count": [
+            4.0,
+            3.0
+          ],
+          "n": 17
+        },
+        {
+          "count": [
+            4.0,
+            4.0
+          ],
+          "n": 10
+        },
+        {
+          "count": [
+            4.0,
+            6.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            4.0,
+            7.0
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            5.0,
+            0.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5.0,
+            1.0
+          ],
+          "n": 13
+        },
+        {
+          "count": [
+            5.0,
+            2.0
+          ],
+          "n": 26
+        },
+        {
+          "count": [
+            5.0,
+            3.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5.0,
+            4.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5.0,
+            5.0
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            6.0,
+            0.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            6.0,
+            1.0
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            6.0,
+            2.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            7.0,
+            0.0
+          ],
+          "n": 3
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.96875,
+          "coverage": 1.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.71875,
+          "coverage": 0.8125
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 1.0,
+          "coverage": 1.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.75,
+          "coverage": 0.953125
+        }
+      ],
+      "initial_training_query_spikes_mean": 0.421875,
+      "last_training_task_gradient_norm": 1.1335863078529644,
+      "last_training_regularizer_gradient_norm": 5.15901633952719e-06
+    },
+    {
+      "id": "s2_DEND_lr0",
+      "arm": "DEND",
+      "lr": 0.01,
+      "seed": 2,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 4.953125,
+      "last_training_task_gradient_norm": 1.8390192768951742e-06,
+      "last_training_regularizer_gradient_norm": 5.0486276119635116e-06
+    },
+    {
+      "id": "s2_DEND_lr1",
+      "arm": "DEND",
+      "lr": 0.0025,
+      "seed": 2,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 4.953125,
+      "last_training_task_gradient_norm": 0.027810264906813088,
+      "last_training_regularizer_gradient_norm": 5.167737005255513e-06
+    },
+    {
+      "id": "s2_FULL_lr0",
+      "arm": "FULL",
+      "lr": 0.01,
+      "seed": 2,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 7.4375,
+      "last_training_task_gradient_norm": 0.000319481268555378,
+      "last_training_regularizer_gradient_norm": 5.023746849825464e-06
+    },
+    {
+      "id": "s2_FULL_lr1",
+      "arm": "FULL",
+      "lr": 0.0025,
+      "seed": 2,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            0.0
+          ],
+          "n": 223
+        },
+        {
+          "count": [
+            0.0,
+            1.0
+          ],
+          "n": 33
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.140625
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.375,
+          "coverage": 0.375
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 7.4375,
+      "last_training_task_gradient_norm": 0.2272536932730616,
+      "last_training_regularizer_gradient_norm": 5.458449088994258e-06
+    },
+    {
+      "id": "s2_NOATT_lr0",
+      "arm": "NOATT",
+      "lr": 0.01,
+      "seed": 2,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            0.0,
+            1.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            0.0,
+            2.0
+          ],
+          "n": 12
+        },
+        {
+          "count": [
+            0.0,
+            3.0
+          ],
+          "n": 97
+        },
+        {
+          "count": [
+            0.0,
+            4.0
+          ],
+          "n": 76
+        },
+        {
+          "count": [
+            0.0,
+            5.0
+          ],
+          "n": 5
+        },
+        {
+          "count": [
+            2.0,
+            3.0
+          ],
+          "n": 1
+        },
+        {
+          "count": [
+            5.0,
+            3.0
+          ],
+          "n": 2
+        },
+        {
+          "count": [
+            8.0,
+            0.0
+          ],
+          "n": 59
+        },
+        {
+          "count": [
+            8.0,
+            1.0
+          ],
+          "n": 3
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 1.0,
+          "coverage": 1.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 1.0,
+          "coverage": 1.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 1.0,
+          "coverage": 1.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 1.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 7.03125,
+      "last_training_task_gradient_norm": 0.40726306449805294,
+      "last_training_regularizer_gradient_norm": 7.406077170273243e-06
+    },
+    {
+      "id": "s2_NOATT_lr1",
+      "arm": "NOATT",
+      "lr": 0.0025,
+      "seed": 2,
+      "category": "variable_decision_or_tie",
+      "patterns": [
+        {
+          "count": [
+            1.0,
+            1.0
+          ],
+          "n": 6
+        },
+        {
+          "count": [
+            1.0,
+            2.0
+          ],
+          "n": 3
+        },
+        {
+          "count": [
+            2.0,
+            2.0
+          ],
+          "n": 91
+        },
+        {
+          "count": [
+            2.0,
+            3.0
+          ],
+          "n": 26
+        },
+        {
+          "count": [
+            2.0,
+            4.0
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            3.0,
+            2.0
+          ],
+          "n": 4
+        },
+        {
+          "count": [
+            3.0,
+            3.0
+          ],
+          "n": 56
+        },
+        {
+          "count": [
+            3.0,
+            4.0
+          ],
+          "n": 55
+        },
+        {
+          "count": [
+            3.0,
+            5.0
+          ],
+          "n": 9
+        },
+        {
+          "count": [
+            4.0,
+            4.0
+          ],
+          "n": 2
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.015625,
+          "coverage": 0.28125
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.625,
+          "coverage": 0.640625
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.203125,
+          "coverage": 0.203125
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.03125,
+          "coverage": 0.453125
+        }
+      ],
+      "initial_training_query_spikes_mean": 7.03125,
+      "last_training_task_gradient_norm": 0.21193431590725884,
+      "last_training_regularizer_gradient_norm": 5.195915352704285e-06
+    },
+    {
+      "id": "s2_GAIN2_lr0",
+      "arm": "GAIN2",
+      "lr": 0.01,
+      "seed": 2,
+      "category": "all_saturated_8_8",
+      "patterns": [
+        {
+          "count": [
+            8.0,
+            8.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 9.015625,
+      "last_training_task_gradient_norm": 6.830693075816288e-06,
+      "last_training_regularizer_gradient_norm": 4.626856231156654e-06
+    },
+    {
+      "id": "s2_GAIN2_lr1",
+      "arm": "GAIN2",
+      "lr": 0.0025,
+      "seed": 2,
+      "category": "all_other_ties",
+      "patterns": [
+        {
+          "count": [
+            5.0,
+            5.0
+          ],
+          "n": 256
+        }
+      ],
+      "conditional_cells": [
+        {
+          "selected": 0,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 0,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 0,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        },
+        {
+          "selected": 1,
+          "first_bit": 1,
+          "n": 64,
+          "accuracy": 0.0,
+          "coverage": 0.0
+        }
+      ],
+      "initial_training_query_spikes_mean": 9.015625,
+      "last_training_task_gradient_norm": 0.00094588607345942,
+      "last_training_regularizer_gradient_norm": 5.067005184272483e-06
+    }
+  ],
+  "equal_count_CE_grid": [
+    {
+      "common_count": 0,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 1,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 2,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 3,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 4,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 5,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 6,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 7,
+      "CE_task_loss": 0.6931471805599453
+    },
+    {
+      "common_count": 8,
+      "CE_task_loss": 0.6931471805599453
+    }
+  ],
+  "interpretation": "CE(.5*counts) is invariant to a common additive count shift. This count-space fact does not establish the cause of failed native training; proxy gradients may remain nonzero and input/task/initialization effects are not separated."
+}

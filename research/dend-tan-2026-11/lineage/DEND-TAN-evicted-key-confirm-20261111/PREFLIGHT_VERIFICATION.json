@@ -1,0 +1,34 @@
+{
+  "status": "VERIFIED_INFEASIBLE",
+  "tiers": [
+    {
+      "examples": 512,
+      "science_forecast_seconds": 401.114035199862,
+      "audit_forecast_seconds": 110.67491039726883,
+      "gap_seconds": 30.01500000001397
+    },
+    {
+      "examples": 256,
+      "science_forecast_seconds": 254.87264640047215,
+      "audit_forecast_seconds": 85.88190839882009,
+      "gap_seconds": 30.01500000001397
+    }
+  ],
+  "train_forecast_seconds": 183.57113977661356,
+  "train_audit_forecast_seconds": 9.150149999186397,
+  "absent_formal_artifacts": [
+    "FREEZE.json",
+    "RUN_STATE.json",
+    "train",
+    "evaluate",
+    "TEST_START.json",
+    "TRAIN_SUMMARY.json",
+    "SCIENCE_SUMMARY.json",
+    "AUDIT.json",
+    "RESULTS.json",
+    "DELIVERY_CHECKS.json",
+    "weights"
+  ],
+  "verified_sources": 24,
+  "scope": "Read-only arithmetic, time records, source hashes, and formal-stage absence. No model rerun."
+}

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "checks": 26976,
+  "blocks": 12,
+  "examples_per_block": 256,
+  "fits": 0,
+  "updates": 0,
+  "forward_sample_steps": 2322432,
+  "dense_forward_macs": 362299392,
+  "max_numeric_error": 5.329070518200751e-15,
+  "cap_seconds": 300,
+  "peak_working_set_bytes": 50937856,
+  "evaluations": 252,
+  "identity_cases": 36,
+  "clamp_cases": 12,
+  "donor_continuation_cases": 72,
+  "crossover_cases": 120,
+  "crossover_rows": 15360,
+  "max_crossover_error": 2.220446049250313e-15,
+  "wall_seconds": 19.25507650000509,
+  "cpu_seconds": 10.28125,
+  "intervention_payload_bytes": 14204928,
+  "donor_index_bytes": 49152,
+  "input_array_bytes": 5308416,
+  "retained_raw_array_bytes": 70170624,
+  "primary_effects": [
+    {
+      "effect": "trace_transfer_effect",
+      "blocks": 12,
+      "values": [
+        0.04296875,
+        0.09765625,
+        0.00390625,
+        0.0234375,
+        0.01171875,
+        0.0078125,
+        0.0546875,
+        0.125,
+        0.015625,
+        0.1015625,
+        0.14453125,
+        0.0
+      ],
+      "mean": 0.052408854166666664,
+      "minimum": 0.0,
+      "maximum": 0.14453125,
+      "positive": 11,
+      "zero": 1,
+      "negative": 0,
+      "ci97_5": [
+        0.022786458333333332,
+        0.08561197916666667
+      ],
+      "direction": "positive"
+    },
+    {
+      "effect": "scale_nominal_minus_post_mean",
+      "blocks": 12,
+      "values": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "positive": 0,
+      "zero": 12,
+      "negative": 0,
+      "ci97_5": [
+        0.0,
+        0.0
+      ],
+      "direction": "undetermined"
+    }
+  ],
+  "scope": "Independent checkpoint provenance, stimulus and donor regeneration, every intervention replay, archived inputs to the continuation, cue crossover, exact discrete outputs and delivery counts, scope and resource ledgers, and paired bootstrap of both primary effects."
+}

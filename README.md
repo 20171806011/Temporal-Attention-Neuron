@@ -12,6 +12,8 @@ This repository contains two related research lines: the original Temporal Atten
 
 ## Start here
 
+**November 2026 update.** The [DEND+TAN research release](research/dend-tan-2026-11/) records the state-intervention, learned key--value memory, event replay, and evicted-key studies, including negative and stopped results. The [new manuscript](papers/dend-tan-event-replay-2026/manuscript.pdf) reports two fresh confirmation cohorts and provides [editable source and build instructions](papers/dend-tan-event-replay-2026/).
+
 | Read | Purpose |
 |:--|:--|
 | **[V6–V10 population paper](papers/native-spike-populations-2026/README.md)** · [PDF](papers/native-spike-populations-2026/manuscript.pdf) · [source](papers/native-spike-populations-2026/manuscript.md) | *Training Interactions, Recurrence Dependence, and Size Tradeoffs in Native-Spike Dendritic and Point Networks* |

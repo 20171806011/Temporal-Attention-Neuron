@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "arms": [
+    {
+      "arm": "DEND",
+      "wall_seconds": 0.3938581999973394,
+      "native_captures": 2,
+      "readout_fits": 11,
+      "timed_batches_per_rule": 64,
+      "archived_bytes": 113906,
+      "archive_storage_bound_bytes": 1060248
+    },
+    {
+      "arm": "FULL",
+      "wall_seconds": 0.478579799993895,
+      "native_captures": 2,
+      "readout_fits": 11,
+      "timed_batches_per_rule": 64,
+      "archived_bytes": 114004,
+      "archive_storage_bound_bytes": 1060248
+    },
+    {
+      "arm": "NOATT",
+      "wall_seconds": 0.4008174000191502,
+      "native_captures": 2,
+      "readout_fits": 11,
+      "timed_batches_per_rule": 64,
+      "archived_bytes": 113918,
+      "archive_storage_bound_bytes": 1060248
+    },
+    {
+      "arm": "GAIN2",
+      "wall_seconds": 0.2792877000174485,
+      "native_captures": 2,
+      "readout_fits": 11,
+      "timed_batches_per_rule": 64,
+      "archived_bytes": 113639,
+      "archive_storage_bound_bytes": 1060248
+    }
+  ],
+  "wall_seconds": 1.5630209000082687,
+  "forecast_seconds": 127.945775800501,
+  "formula": "2 * 9 * sum(arm wall seconds) + 100",
+  "cap_seconds": 840,
+  "fixture_fit_rows": 512,
+  "fixture_test_rows": 1024,
+  "fixture_seed_fit": 4099900801,
+  "fixture_seed_test": 4099900802,
+  "fixture_seed_weights": 4099900803,
+  "fixture_seed_fit_permutations": 4099900804,
+  "fixture_seed_test_permutations": 4099900805,
+  "projected_storage_bound_bytes": 105277792,
+  "storage_cap_bytes": 1610612736,
+  "metadata_allowance_bytes": 67108864,
+  "free_bytes_before_fixture": 274442297344,
+  "current_working_set_bytes": 47697920,
+  "peak_working_set_bytes": 55111680
+}
